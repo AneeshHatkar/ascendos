@@ -436,3 +436,14 @@ Purpose: Locked Phase 4 implementation plan covering table scope, migration orde
 
 ### `PHASE_STATUS.md`
 Change: Marked Phase 4 as started.
+
+## Phase 4.2 — Audit Logs and AI Actions Migration
+
+### `supabase/migrations/0002_audit_and_ai_actions.sql`
+Purpose: Creates the audit and proposed-action foundation for future Carnos writes.
+Includes:
+- `audit_logs`
+- `ai_actions`
+- owner-only RLS
+- indexes
+- AI action status lifecycle

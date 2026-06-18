@@ -566,3 +566,20 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Phase 4.2 — Add audit_logs and ai_actions migration.
+
+## 2026-06-17 — Phase 4.2 — Audit Logs and AI Actions Migration
+
+### Completed
+- Added migration `0002_audit_and_ai_actions.sql`.
+- Added `audit_logs` table.
+- Added `ai_actions` table.
+- Added owner-only RLS policies.
+- Added indexes for user, entity, action type, status, and timestamps.
+- Added `updated_at` trigger for `ai_actions`.
+- Preserved Carnos safety rule: AI actions are proposed and status-tracked before execution.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Phase 4.3 — Add chat sessions and chat messages migration.
