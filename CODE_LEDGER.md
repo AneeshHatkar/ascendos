@@ -179,3 +179,13 @@ Added route pages:
 - `/experiments`
 - `/privacy`
 - `/custom-trackers`
+
+## Phase 2.19 — Full Dashboard Registry
+
+### `src/lib/dashboard-registry.ts`
+Purpose: Full canonical dashboard metadata registry.
+Includes:
+- Every canonical route.
+- Dashboard title.
+- Dashboard domain category.
+- Dashboard description.

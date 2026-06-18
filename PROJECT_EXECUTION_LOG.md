@@ -166,3 +166,18 @@ This file records every implementation step for ascendOS + Carnos.
 ### Next
 - Expand dashboard registry to include every canonical dashboard.
 - Add route coverage test to prevent missing or banned routes.
+
+## 2026-06-17 — Phase 2.19 — Full Dashboard Registry
+
+### Completed
+- Expanded `DASHBOARD_REGISTRY` to include every canonical dashboard route.
+- Added typed dashboard domain categories.
+- Verified sidebar/homepage registry has full route coverage.
+- Ran `npm run lint`.
+- Ran `npm run build`.
+- Confirmed 37 static pages generated.
+
+### Next
+- Add route coverage test script.
+- Add banned legacy route test.
+- Add registry/route count validation.
