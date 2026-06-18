@@ -103,3 +103,17 @@ Includes:
 - Proof-based evolution positioning.
 - Core signal chips.
 - Canonical dashboard registry preview.
+
+## Phase 2.11 — Reusable Shell Components
+
+### `src/components/layout/app-shell.tsx`
+Purpose: Shared application shell wrapper.
+
+### `src/components/layout/app-sidebar.tsx`
+Purpose: Sidebar navigation using the dashboard registry.
+
+### `src/components/layout/app-topbar.tsx`
+Purpose: Shared top navigation/status bar.
+
+### `src/components/dashboard/dashboard-card.tsx`
+Purpose: Reusable dashboard preview card.

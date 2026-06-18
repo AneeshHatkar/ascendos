@@ -82,3 +82,18 @@ This file records every implementation step for ascendOS + Carnos.
 - Create reusable layout components.
 - Create canonical navigation shell.
 - Add placeholder pages for canonical routes.
+
+## 2026-06-17 — Phase 2.11 — Reusable Shell Components
+
+### Completed
+- Added reusable AppShell component.
+- Added reusable AppSidebar component.
+- Added reusable AppTopbar component.
+- Added reusable DashboardCard component.
+- Verified `npm run lint`.
+- Verified `npm run build`.
+- Verified `git diff --check`.
+
+### Next
+- Refactor homepage to use reusable shell components.
+- Add canonical route placeholder pages.
