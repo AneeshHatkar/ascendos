@@ -374,3 +374,15 @@ Purpose: Server component that displays local setup mode or the signed-in user's
 
 ### `src/app/command/page.tsx`
 Change: Replaced generic placeholder with a command center foundation page connected to profile status.
+
+## Phase 3.14 — Supabase Setup Guide and Env Verification
+
+### `scripts/verify-env.mjs`
+Purpose: Verifies Supabase public env var presence without breaking local setup mode.
+
+### `docs/setup/SUPABASE_SETUP.md`
+Purpose: Step-by-step guide for connecting ascendOS to a real Supabase project safely.
+
+### `package.json`
+Change:
+- Added `verify:env`.

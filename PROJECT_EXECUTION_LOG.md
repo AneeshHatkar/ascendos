@@ -454,3 +454,20 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Add profile/settings route or protected route boundary after Supabase project configuration.
+
+## 2026-06-17 — Phase 3.14 — Supabase Setup Guide and Env Verification
+
+### Completed
+- Added `scripts/verify-env.mjs`.
+- Added `npm run verify:env`.
+- Added `docs/setup/SUPABASE_SETUP.md`.
+- Documented local setup mode vs connected Supabase mode.
+- Documented required env vars, callback URLs, migration application, and auth smoke test.
+- Preserved no-secret Git policy.
+
+### Verification
+- `npm run verify:env` must pass in local setup mode.
+- `npm run check` must pass before commit.
+
+### Next
+- Add profile/settings page skeleton.

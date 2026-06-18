@@ -18,6 +18,7 @@ Upload or paste this file and say:
 - `PROJECT_EXECUTION_LOG.md`
 - `README.md`
 - `SOURCE_OF_TRUTH.md`
+- `docs/setup/SUPABASE_SETUP.md`
 - `docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_FINAL_SYNCED.json`
 - `eslint.config.mjs`
 - `middleware.ts`
@@ -29,6 +30,7 @@ Upload or paste this file and say:
 - `scripts/validate-registry-coverage.mjs`
 - `scripts/validate-route-coverage.mjs`
 - `scripts/validate-sql-migrations.mjs`
+- `scripts/verify-env.mjs`
 - `src/app/analytics/page.tsx`
 - `src/app/auth/callback/route.ts`
 - `src/app/auth/login/page.tsx`
@@ -525,6 +527,18 @@ Purpose: Server component that displays local setup mode or the signed-in user's
 
 ### `src/app/command/page.tsx`
 Change: Replaced generic placeholder with a command center foundation page connected to profile status.
+
+## Phase 3.14 — Supabase Setup Guide and Env Verification
+
+### `scripts/verify-env.mjs`
+Purpose: Verifies Supabase public env var presence without breaking local setup mode.
+
+### `docs/setup/SUPABASE_SETUP.md`
+Purpose: Step-by-step guide for connecting ascendOS to a real Supabase project safely.
+
+### `package.json`
+Change:
+- Added `verify:env`.
 ```
 
 ### `DECISIONS.md`
@@ -1054,6 +1068,23 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Add profile/settings route or protected route boundary after Supabase project configuration.
+
+## 2026-06-17 — Phase 3.14 — Supabase Setup Guide and Env Verification
+
+### Completed
+- Added `scripts/verify-env.mjs`.
+- Added `npm run verify:env`.
+- Added `docs/setup/SUPABASE_SETUP.md`.
+- Documented local setup mode vs connected Supabase mode.
+- Documented required env vars, callback URLs, migration application, and auth smoke test.
+- Preserved no-secret Git policy.
+
+### Verification
+- `npm run verify:env` must pass in local setup mode.
+- `npm run check` must pass before commit.
+
+### Next
+- Add profile/settings page skeleton.
 ```
 
 ### `README.md`
@@ -1177,6 +1208,129 @@ Flow:
 - /analytics
 - /privacy
 - /custom-trackers
+```
+
+### `docs/setup/SUPABASE_SETUP.md`
+
+```md
+# Supabase Setup Guide for ascendOS + Carnos
+
+This guide connects the local ascendOS app to a real Supabase project safely.
+
+## Current status
+
+The codebase is designed to build in two modes:
+
+1. Local setup mode
+   - No Supabase keys are present.
+   - Auth/profile UI shows safe placeholder state.
+   - `npm run check` still passes.
+
+2. Connected Supabase mode
+   - `.env.local` contains Supabase project values.
+   - Auth pages can sign up/sign in users.
+   - Database migrations can be applied.
+   - Profile and Carnos profile rows can load from Supabase.
+
+## Never commit secrets
+
+Do not commit:
+
+- `.env`
+- `.env.local`
+- service role keys
+- database passwords
+- access tokens
+
+Only `.env.example` belongs in Git.
+
+## Required env vars
+
+Create `.env.local` from `.env.example`:
+
+    cp .env.example .env.local
+
+Fill these values:
+
+    NEXT_PUBLIC_SUPABASE_URL=
+    NEXT_PUBLIC_SUPABASE_ANON_KEY=
+    NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+## Supabase project settings
+
+In Supabase:
+
+1. Create a new Supabase project.
+2. Go to Project Settings -> API.
+3. Copy the project URL into `NEXT_PUBLIC_SUPABASE_URL`.
+4. Copy the anon public key into `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
+5. Keep service role keys private.
+6. Do not put service role keys in frontend env vars.
+
+## Auth callback URL
+
+For local development, configure this redirect URL in Supabase Auth settings:
+
+    http://localhost:3000/auth/callback
+
+For production, also add:
+
+    https://YOUR_PRODUCTION_DOMAIN/auth/callback
+
+## Apply migrations
+
+The first migration is:
+
+    supabase/migrations/0001_profiles_and_carnos_profiles.sql
+
+It creates:
+
+- `public.profiles`
+- `public.carnos_profiles`
+- owner-only RLS policies
+- auth user creation trigger
+- automatic Carnos profile creation
+
+Apply it through either:
+
+1. Supabase SQL Editor by pasting the migration SQL, or
+2. Supabase CLI later after CLI setup is added.
+
+## Verification commands
+
+Before connection:
+
+    npm run verify:env
+    npm run check
+
+After `.env.local` is configured:
+
+    npm run verify:env
+    rm -rf .next
+    npm run check
+    npm run dev
+
+Then test:
+
+1. Open `/auth/signup`.
+2. Create a test account.
+3. Confirm redirect to `/command`.
+4. Confirm `/command` no longer shows local setup mode.
+5. Confirm `profiles` row exists.
+6. Confirm `carnos_profiles` row exists.
+7. Confirm sign out works through `/auth/signout`.
+
+## Safety requirement
+
+Carnos memory defaults to:
+
+    confirmation_required
+
+Do not change this default unless the user explicitly chooses a different memory mode in a future settings UI.
+
+Important Carnos writes must continue to follow:
+
+    proposed action -> user confirmation -> database write -> audit log -> timeline event
 ```
 
 ### `docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_FINAL_SYNCED.json`
@@ -14938,7 +15092,8 @@ export default nextConfig;
     "check": "npm run lint && npm run validate:routes && npm run validate:registry && npm run validate:migrations && npm run build",
     "validate:registry": "node scripts/validate-registry-coverage.mjs",
     "snapshot:code": "node scripts/generate-code-snapshot.mjs",
-    "validate:migrations": "node scripts/validate-sql-migrations.mjs"
+    "validate:migrations": "node scripts/validate-sql-migrations.mjs",
+    "verify:env": "node scripts/verify-env.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",
@@ -15315,6 +15470,46 @@ for (const file of files) {
 }
 
 console.log(`SQL migration validation passed: ${files.length} migration file(s).`);
+```
+
+### `scripts/verify-env.mjs`
+
+```js
+const requiredPublicEnv = [
+  "NEXT_PUBLIC_SUPABASE_URL",
+  "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+  "NEXT_PUBLIC_APP_URL",
+];
+
+const missing = requiredPublicEnv.filter((key) => !process.env[key]);
+
+if (missing.length > 0) {
+  console.log("Environment verification: local setup mode");
+  console.log("");
+  console.log("Missing optional local env vars:");
+  for (const key of missing) {
+    console.log(`- ${key}`);
+  }
+  console.log("");
+  console.log("This is allowed during foundation development.");
+  console.log("Create .env.local from .env.example when connecting to Supabase.");
+  process.exit(0);
+}
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+
+try {
+  const parsed = new URL(supabaseUrl);
+
+  if (!parsed.hostname.includes("supabase")) {
+    console.warn("Environment warning: NEXT_PUBLIC_SUPABASE_URL does not look like a Supabase URL.");
+  }
+} catch {
+  console.error("Environment verification failed: NEXT_PUBLIC_SUPABASE_URL is not a valid URL.");
+  process.exit(1);
+}
+
+console.log("Environment verification passed: Supabase public env vars are present.");
 ```
 
 ### `src/app/analytics/page.tsx`
