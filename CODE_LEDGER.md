@@ -211,3 +211,11 @@ Change: Corrected canonical route list to use `/knowledge`.
 
 ### `src/lib/dashboard-registry.ts`
 Change: Corrected Knowledge Vault registry entry to use `/knowledge`.
+
+## Phase 2.23–2.24 — Shared Placeholder Dashboard Component
+
+### `src/components/dashboard/placeholder-dashboard-page.tsx`
+Purpose: Shared placeholder dashboard layout used by canonical dashboard pages.
+
+### `src/app/*/page.tsx`
+Change: Refactored canonical placeholder pages to use `PlaceholderDashboardPage`.
