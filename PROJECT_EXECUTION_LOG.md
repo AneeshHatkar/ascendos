@@ -273,3 +273,18 @@ Phase 3 — Supabase/Auth foundation.
 ### Next
 - Add Supabase middleware session refresh.
 - Add auth callback route.
+
+## 2026-06-17 — Phase 3.4 — Supabase Middleware Foundation
+
+### Completed
+- Added Supabase environment presence helper.
+- Added Supabase middleware session refresh helper.
+- Added root Next.js middleware.
+- Middleware safely bypasses Supabase when env vars are not configured.
+- This preserves local development before real Supabase keys are added.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Create auth route group and login/signup pages.

@@ -256,3 +256,14 @@ Purpose: Creates the browser Supabase client.
 
 ### `src/lib/supabase/server.ts`
 Purpose: Creates the server Supabase client using Next.js cookies.
+
+## Phase 3.4 — Supabase Middleware Foundation
+
+### `src/lib/supabase/env.ts`
+Change: Added environment presence helper.
+
+### `src/lib/supabase/middleware.ts`
+Purpose: Refreshes Supabase sessions in middleware.
+
+### `middleware.ts`
+Purpose: Wires Supabase session refresh into Next.js middleware.
