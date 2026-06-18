@@ -470,3 +470,16 @@ Includes:
 - parent-goal ownership checks for milestones
 - indexes
 - AI action and chat message source links
+
+## Phase 4.5 — Daily Logs and Proof Items Migration
+
+### `supabase/migrations/0005_daily_logs_and_proof_items.sql`
+Purpose: Creates the proof-first daily execution and evidence foundation.
+Includes:
+- `daily_logs`
+- `proof_items`
+- owner-only RLS
+- parent ownership checks
+- proof/reality scoring
+- occurred_at vs logged_at semantics
+- AI action and chat message source links

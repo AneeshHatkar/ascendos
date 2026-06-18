@@ -621,3 +621,24 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Phase 4.5 — Add daily_logs and proof_items migration.
+
+## 2026-06-17 — Phase 4.5 — Daily Logs and Proof Items Migration
+
+### Completed
+- Added migration `0005_daily_logs_and_proof_items.sql`.
+- Added `daily_logs` table.
+- Added `proof_items` table.
+- Added unique user/date constraint for daily logs.
+- Added proof scoring and reality scoring fields.
+- Added mood, energy, sleep, stress, mission, actions, wins, blockers, and notes fields.
+- Added proof item evidence, quantity, unit, URL, occurred/logged semantics, and source links.
+- Added owner-only RLS policies.
+- Added parent ownership checks for daily log and goal links.
+- Added indexes for user, date, scores, domain, proof type, status, timestamps, and source links.
+- Added `updated_at` triggers.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Phase 4.6 — Add tasks and events migration.
