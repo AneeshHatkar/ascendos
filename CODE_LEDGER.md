@@ -148,3 +148,34 @@ Purpose: Placeholder Learning dashboard route.
 
 ### `src/app/analytics/page.tsx`
 Purpose: Placeholder Analytics dashboard route.
+
+## Phase 2.17 — Remaining Canonical Placeholder Routes
+
+Purpose: Adds placeholder pages for all remaining canonical dashboard routes so the app shell has complete route coverage before database and AI work begins.
+
+Added route pages:
+- `/world-class`
+- `/networking`
+- `/resume`
+- `/interviews`
+- `/projects`
+- `/research-stanford`
+- `/research-lab`
+- `/body`
+- `/nutrition`
+- `/supplements`
+- `/sleep-energy`
+- `/emotion`
+- `/hair-skincare`
+- `/life-admin`
+- `/finance`
+- `/housing`
+- `/documents`
+- `/creativity`
+- `/grimoire`
+- `/decisions`
+- `/future-simulator`
+- `/knowledge-vault`
+- `/experiments`
+- `/privacy`
+- `/custom-trackers`

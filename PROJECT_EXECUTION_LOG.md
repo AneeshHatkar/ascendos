@@ -129,3 +129,40 @@ This file records every implementation step for ascendOS + Carnos.
 ### Next
 - Add remaining canonical placeholder routes.
 - Commit route coverage in small stable batches.
+
+## 2026-06-17 — Phase 2.17 — Remaining Canonical Placeholder Routes
+
+### Completed
+- Added placeholder route pages for all remaining canonical dashboards.
+- Verified `/world-class`.
+- Verified `/networking`.
+- Verified `/resume`.
+- Verified `/interviews`.
+- Verified `/projects`.
+- Verified `/research-stanford`.
+- Verified `/research-lab`.
+- Verified `/body`.
+- Verified `/nutrition`.
+- Verified `/supplements`.
+- Verified `/sleep-energy`.
+- Verified `/emotion`.
+- Verified `/hair-skincare`.
+- Verified `/life-admin`.
+- Verified `/finance`.
+- Verified `/housing`.
+- Verified `/documents`.
+- Verified `/creativity`.
+- Verified `/grimoire`.
+- Verified `/decisions`.
+- Verified `/future-simulator`.
+- Verified `/knowledge-vault`.
+- Verified `/experiments`.
+- Verified `/privacy`.
+- Verified `/custom-trackers`.
+- Ran `npm run lint`.
+- Ran `npm run build`.
+- Confirmed 37 static pages generated.
+
+### Next
+- Expand dashboard registry to include every canonical dashboard.
+- Add route coverage test to prevent missing or banned routes.
