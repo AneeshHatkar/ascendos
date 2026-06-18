@@ -583,3 +583,23 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Phase 4.3 — Add chat sessions and chat messages migration.
+
+## 2026-06-17 — Phase 4.3 — Chat Sessions and Chat Messages Migration
+
+### Completed
+- Added migration `0003_chat_foundation.sql`.
+- Added `chat_sessions` table.
+- Added `chat_messages` table.
+- Linked `chat_messages` to `chat_sessions`.
+- Added optional AI action source links.
+- Added `source_chat_session_id` to `ai_actions`.
+- Added foreign key from `ai_actions.source_chat_message_id` to `chat_messages`.
+- Added owner-only RLS policies.
+- Added indexes for user, session, status, role, timestamps, and AI action linkage.
+- Added updated_at trigger for `chat_sessions`.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Phase 4.4 — Add goals and goal_milestones migration.

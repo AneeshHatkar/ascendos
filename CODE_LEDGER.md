@@ -447,3 +447,14 @@ Includes:
 - owner-only RLS
 - indexes
 - AI action status lifecycle
+
+## Phase 4.3 — Chat Sessions and Chat Messages Migration
+
+### `supabase/migrations/0003_chat_foundation.sql`
+Purpose: Creates the durable storage foundation for future Carnos conversations.
+Includes:
+- `chat_sessions`
+- `chat_messages`
+- chat-to-AI-action linkage
+- owner-only RLS
+- indexes
