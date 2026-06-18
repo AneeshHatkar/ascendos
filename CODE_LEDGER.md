@@ -320,3 +320,15 @@ Purpose: Generated codebase snapshot for continuity across chats.
 ### `package.json`
 Change:
 - Added `snapshot:code` script.
+
+## Phase 3.8 — Profiles and Carnos Profiles SQL Foundation
+
+### `supabase/migrations/0001_profiles_and_carnos_profiles.sql`
+Purpose: First Supabase migration for user identity and Carnos user preferences.
+Includes:
+- `profiles`
+- `carnos_profiles`
+- updated_at trigger helper
+- auth user creation trigger
+- RLS policies
+- owner-only access

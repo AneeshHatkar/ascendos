@@ -357,3 +357,26 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Continue Phase 3 auth/database foundation.
+
+## 2026-06-17 — Phase 3.8 — Profiles and Carnos Profiles SQL Foundation
+
+### Completed
+- Added first Supabase SQL migration.
+- Added `profiles` table.
+- Added `carnos_profiles` table.
+- Added updated_at trigger helper.
+- Added auth user creation trigger.
+- Added profile auto-creation from `auth.users`.
+- Added Carnos profile auto-creation from `auth.users`.
+- Enabled RLS for both tables.
+- Added owner-only select/insert/update policies.
+- Preserved confirmation-required Carnos memory default.
+
+### Verification
+- `npm run check` must pass before commit.
+- SQL migration is source-controlled but not yet applied to a live Supabase project.
+
+### Next
+- Add SQL migration validation script.
+- Add profile TypeScript types.
+- Add profile/settings page skeleton later.
