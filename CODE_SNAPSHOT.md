@@ -78,6 +78,8 @@ Upload or paste this file and say:
 - `src/lib/auth/actions.ts`
 - `src/lib/auth/session.ts`
 - `src/lib/dashboard-registry.ts`
+- `src/lib/profile/index.ts`
+- `src/lib/profile/queries.ts`
 - `src/lib/routes.ts`
 - `src/lib/supabase/browser.ts`
 - `src/lib/supabase/env.ts`
@@ -506,6 +508,14 @@ Change: Server Supabase client now uses the typed `Database` interface.
 
 ### `src/lib/supabase/middleware.ts`
 Change: Middleware Supabase client now uses the typed `Database` interface.
+
+## Phase 3.12 — Profile Repository Helpers
+
+### `src/lib/profile/queries.ts`
+Purpose: Server-side profile data access layer for reading the current user's `profiles` and `carnos_profiles` rows.
+
+### `src/lib/profile/index.ts`
+Purpose: Barrel export for profile query helpers.
 ```
 
 ### `DECISIONS.md`
@@ -1004,6 +1014,22 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Add profile repository/helper functions for reading profile and Carnos profile data.
+
+## 2026-06-17 — Phase 3.12 — Profile Repository Helpers
+
+### Completed
+- Added profile query helper layer.
+- Added `getProfileBundle()`.
+- Added `getProfile()`.
+- Added `getCarnosProfile()`.
+- Kept helpers safe when Supabase env vars are missing.
+- Centralized profile and Carnos profile reads for future dashboards/settings/auth state.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Add profile summary UI card or settings skeleton using these helpers.
 ```
 
 ### `README.md`
@@ -16597,6 +16623,72 @@ export const DASHBOARD_REGISTRY: DashboardRegistryItem[] = [
     description: "User-defined trackers, metrics, templates, and custom proof loops.",
   },
 ];
+```
+
+### `src/lib/profile/index.ts`
+
+```tsx
+export type { ProfileBundle } from "./queries";
+export { getCarnosProfile, getProfile, getProfileBundle } from "./queries";
+```
+
+### `src/lib/profile/queries.ts`
+
+```tsx
+import { getCurrentUser, type AuthUser } from "@/lib/auth/session";
+import { hasSupabaseBrowserEnv } from "@/lib/supabase/env";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
+import type { CarnosProfileRow, ProfileRow } from "@/types/database";
+
+export type ProfileBundle = {
+  user: AuthUser;
+  profile: ProfileRow | null;
+  carnosProfile: CarnosProfileRow | null;
+};
+
+export async function getProfileBundle(): Promise<ProfileBundle | null> {
+  if (!hasSupabaseBrowserEnv()) {
+    return null;
+  }
+
+  const user = await getCurrentUser();
+
+  if (!user) {
+    return null;
+  }
+
+  const supabase = await createSupabaseServerClient();
+
+  const [{ data: profile, error: profileError }, { data: carnosProfile, error: carnosProfileError }] =
+    await Promise.all([
+      supabase.from("profiles").select("*").eq("id", user.id).maybeSingle(),
+      supabase.from("carnos_profiles").select("*").eq("user_id", user.id).maybeSingle(),
+    ]);
+
+  if (profileError) {
+    throw new Error(`Failed to load profile: ${profileError.message}`);
+  }
+
+  if (carnosProfileError) {
+    throw new Error(`Failed to load Carnos profile: ${carnosProfileError.message}`);
+  }
+
+  return {
+    user,
+    profile,
+    carnosProfile,
+  };
+}
+
+export async function getProfile(): Promise<ProfileRow | null> {
+  const bundle = await getProfileBundle();
+  return bundle?.profile ?? null;
+}
+
+export async function getCarnosProfile(): Promise<CarnosProfileRow | null> {
+  const bundle = await getProfileBundle();
+  return bundle?.carnosProfile ?? null;
+}
 ```
 
 ### `src/lib/routes.ts`

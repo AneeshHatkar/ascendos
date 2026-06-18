@@ -423,3 +423,19 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Add profile repository/helper functions for reading profile and Carnos profile data.
+
+## 2026-06-17 — Phase 3.12 — Profile Repository Helpers
+
+### Completed
+- Added profile query helper layer.
+- Added `getProfileBundle()`.
+- Added `getProfile()`.
+- Added `getCarnosProfile()`.
+- Kept helpers safe when Supabase env vars are missing.
+- Centralized profile and Carnos profile reads for future dashboards/settings/auth state.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Add profile summary UI card or settings skeleton using these helpers.

@@ -358,3 +358,11 @@ Change: Server Supabase client now uses the typed `Database` interface.
 
 ### `src/lib/supabase/middleware.ts`
 Change: Middleware Supabase client now uses the typed `Database` interface.
+
+## Phase 3.12 — Profile Repository Helpers
+
+### `src/lib/profile/queries.ts`
+Purpose: Server-side profile data access layer for reading the current user's `profiles` and `carnos_profiles` rows.
+
+### `src/lib/profile/index.ts`
+Purpose: Barrel export for profile query helpers.
