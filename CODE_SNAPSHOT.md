@@ -19,7 +19,9 @@ Upload or paste this file and say:
 - `PROJECT_EXECUTION_LOG.md`
 - `README.md`
 - `SOURCE_OF_TRUTH.md`
+- `docs/database/CORE_SQL_SPINE.md`
 - `docs/phase-plans/PHASE_4_CORE_SQL_SPINE.md`
+- `docs/phase-reports/PHASE_4_CORE_SQL_SPINE_REPORT.md`
 - `docs/setup/AUTH_SMOKE_TEST.md`
 - `docs/setup/PROTECTED_ROUTES.md`
 - `docs/setup/SUPABASE_SETUP.md`
@@ -744,7 +746,16 @@ Change: Restored `profiles.onboarding_status` and `confirmation_required` compat
 Purpose: Provides typed read-only repository helpers for Phase 4 core SQL spine tables.
 
 ### `src/lib/repositories/index.ts`
-Purpose: Barrel export for repository helpers.
+Purpose: Barrel export for repository helpers.\n\n## Phase 4.11 — Phase 4 Documentation and Report
+
+### docs/database/CORE_SQL_SPINE.md
+Purpose: Documents Phase 4 core SQL spine tables, safety rules, validation commands, TypeScript types, repositories, and deferred scope.
+
+### docs/phase-reports/PHASE_4_CORE_SQL_SPINE_REPORT.md
+Purpose: Records Phase 4 completion report, fixed issues, verification gates, and next phase recommendation.
+
+### PHASE_STATUS.md
+Change: Added Phase 4 documentation-added status.\n\n
 ```
 
 ### `DECISIONS.md`
@@ -906,7 +917,23 @@ See `docs/phase-plans/PHASE_4_CORE_SQL_SPINE.md`.
 - User-owned data requires RLS.
 - Carnos must not silently write important data.
 - AI-created changes must flow through proposed actions and audit logs in later phases.
-- No memory table is added in Phase 4; memory belongs to the dedicated memory phase.
+- No memory table is added in Phase 4; memory belongs to the dedicated memory phase.\n\n## Phase 4 — Core SQL Spine — DOCUMENTATION ADDED
+
+### Status
+Documentation added. Pending final completion marker.
+
+### Completed So Far
+- Core SQL migrations added.
+- Phase 4 audit added.
+- SQL migration validator upgraded.
+- TypeScript database types updated.
+- Read-only repository helpers added.
+- Phase 4 database documentation added.
+- Phase 4 report added.
+
+### Final Gate Remaining
+- Run final full verification.
+- Mark Phase 4 complete.\n\n
 ```
 
 ### `PROJECT_EXECUTION_LOG.md`
@@ -1736,7 +1763,20 @@ The Phase 4 type rewrite was structurally correct for Phase 4 but accidentally r
 - `npm run check` must pass before commit.
 
 ### Next
-- Phase 4.11 — Add Phase 4 docs and completion audit notes.
+- Phase 4.11 — Add Phase 4 docs and completion audit notes.\n\n## 2026-06-18 — Phase 4.11 — Phase 4 Documentation and Report
+
+### Completed
+- Added docs/database/CORE_SQL_SPINE.md.
+- Added docs/phase-reports/PHASE_4_CORE_SQL_SPINE_REPORT.md.
+- Documented Phase 4 tables, migrations, safety rules, validation, and deferred scope.
+- Documented known issues fixed during Phase 4.
+- Updated PHASE_STATUS.md.
+
+### Verification
+- npm run check must pass before commit.
+
+### Next
+- Phase 4.12 — Mark Phase 4 complete.\n\n
 ```
 
 ### `README.md`
@@ -1860,6 +1900,218 @@ Flow:
 - /analytics
 - /privacy
 - /custom-trackers
+```
+
+### `docs/database/CORE_SQL_SPINE.md`
+
+```md
+# ascendOS + Carnos — Core SQL Spine
+
+## Status
+
+Phase 4 foundation.
+
+This document describes the core SQL spine created during Phase 4.
+
+## Purpose
+
+The core SQL spine provides durable storage for the first operational layer of ascendOS:
+
+- audit logs
+- AI proposed actions
+- Carnos chat sessions
+- Carnos chat messages
+- goals
+- goal milestones
+- daily logs
+- proof items
+- tasks
+- events
+
+This is not the full application logic. It is the database backbone that later phases will build on.
+
+## Source-of-truth alignment
+
+The source-of-truth requires ascendOS to be SQL-backed, typed, modular, privacy-aware, confirmation-first for important Carnos writes, proof-first, and timeline-aware.
+
+Phase 4 supports those requirements by creating typed, RLS-protected, user-owned tables.
+
+## Safety rule
+
+Carnos must not silently mutate important user data.
+
+The required future flow is:
+
+user input
+-> Carnos extraction
+-> proposed action
+-> validation
+-> user confirmation
+-> server write
+-> audit log
+-> timeline event
+-> dashboard refresh
+
+Phase 4 enables this by creating:
+
+- ai_actions
+- audit_logs
+- source links from operational records back to AI actions and chat messages
+
+## Migrations
+
+Phase 4 migrations:
+
+- 0002_audit_and_ai_actions.sql
+- 0003_chat_foundation.sql
+- 0004_goals_foundation.sql
+- 0005_daily_logs_and_proof_items.sql
+- 0006_tasks_and_events.sql
+
+## Tables
+
+### audit_logs
+
+Records important user/system/Carnos write events.
+
+Key concepts:
+
+- user ownership
+- actor type
+- action type
+- target entity
+- before/after state
+- occurred/logged timestamps
+
+### ai_actions
+
+Stores Carnos proposed actions before execution.
+
+Allowed status lifecycle:
+
+- draft
+- pending_confirmation
+- approved
+- rejected
+- executed
+- failed
+- cancelled
+
+### chat_sessions
+
+Groups Carnos conversations.
+
+### chat_messages
+
+Stores individual messages inside Carnos conversations.
+
+Allowed roles:
+
+- user
+- assistant
+- system
+- tool
+
+### goals
+
+Stores user goals across domains.
+
+### goal_milestones
+
+Stores ordered subtargets for goals.
+
+### daily_logs
+
+Stores daily reality/progress summaries with mission, top actions, wins, blockers, mood, energy, sleep, stress, proof score, and reality score.
+
+### proof_items
+
+Stores evidence of actual work, completion, output, or progress.
+
+### tasks
+
+Stores actionable execution items.
+
+### events
+
+Stores timeline and calendar-style events.
+
+## RLS baseline
+
+Every Phase 4 table is user-owned and has RLS enabled.
+
+Baseline protections:
+
+- users can select their own rows
+- users can insert their own rows
+- users can update their own mutable rows where appropriate
+- users can delete their own mutable rows where appropriate
+- child rows validate parent ownership where relevant
+
+## TypeScript typing
+
+Phase 4 updated:
+
+- src/types/database.ts
+
+The file includes:
+
+- Database
+- Json
+- Row/Insert/Update types for all Phase 4 tables
+- convenience aliases such as GoalRow, TaskRow, EventRow, ProofItemRow, and AiActionRow
+
+## Read-only repositories
+
+Phase 4 added:
+
+- src/lib/repositories/core-read.ts
+- src/lib/repositories/index.ts
+
+These helpers provide typed read-only access to core tables.
+
+No write helpers were added in Phase 4.
+
+## Validation
+
+Use:
+
+- npm run validate:migrations
+- npm run audit:phase4
+- npm run check
+
+validate:migrations checks general SQL migration safety.
+
+audit:phase4 checks Phase 4-specific table, RLS, index, source-link, and deferred-scope requirements.
+
+## Deferred from Phase 4
+
+The following are intentionally not implemented in Phase 4:
+
+- full Carnos chat intelligence
+- AI extraction engine
+- OpenAI/API integration
+- Save/Edit/Cancel confirmation UI
+- write repositories
+- full CRUD dashboards
+- memory table
+- memory retrieval
+- voice
+- RAG
+- analytics charts
+- production deployment
+
+These belong to later phases.
+
+## Current completion status
+
+Phase 4 is not marked complete until:
+
+- docs are added
+- completion report is added
+- final npm run check passes
+- PHASE_STATUS.md is updated
+- final Phase 4 commit is pushed
 ```
 
 ### `docs/phase-plans/PHASE_4_CORE_SQL_SPINE.md`
@@ -2218,6 +2470,130 @@ Phase 4 can be marked complete only when:
 - code snapshot is updated
 - `npm run check` passes
 - git status is clean
+```
+
+### `docs/phase-reports/PHASE_4_CORE_SQL_SPINE_REPORT.md`
+
+```md
+# Phase 4 Report — Core SQL Spine
+
+## Summary
+
+Phase 4 creates the database foundation for ascendOS + Carnos.
+
+It adds the durable core data model for:
+
+- safety/audit
+- Carnos proposed actions
+- Carnos chat storage
+- goals
+- milestones
+- daily execution logs
+- proof items
+- tasks
+- timeline/calendar events
+
+## Completed migrations
+
+- 0002_audit_and_ai_actions.sql
+- 0003_chat_foundation.sql
+- 0004_goals_foundation.sql
+- 0005_daily_logs_and_proof_items.sql
+- 0006_tasks_and_events.sql
+
+## Completed tables
+
+- audit_logs
+- ai_actions
+- chat_sessions
+- chat_messages
+- goals
+- goal_milestones
+- daily_logs
+- proof_items
+- tasks
+- events
+
+## Completed validation scripts
+
+- scripts/validate-sql-migrations.mjs
+- scripts/audit-phase-4.mjs
+
+## Completed typed access
+
+- src/types/database.ts
+- src/lib/repositories/core-read.ts
+- src/lib/repositories/index.ts
+
+## Safety properties
+
+Phase 4 enforces these baseline properties:
+
+- user-owned table design
+- RLS enabled on Phase 4 tables
+- owner-only access policies
+- parent ownership checks for linked child records
+- source links from important records to AI actions and chat messages
+- no premature memory_items table
+- no write helpers yet
+- no silent Carnos mutation path
+
+## Verification commands
+
+Required gate:
+
+- npm run verify:env
+- npm run validate:migrations
+- npm run audit:phase3
+- npm run audit:phase4
+- npm run snapshot:code
+- rm -rf .next || true
+- npm run check
+- git diff --check
+
+## Known fixed issues during Phase 4
+
+### Corrupted audit script copy
+
+Problem:
+The first Phase 4 audit script had brittle/corrupted parsing and failed.
+
+Fix:
+Replaced the parser with safer string-boundary table-block extraction.
+
+### SQL ownership typo
+
+Problem:
+Two migrations had referencespublic.profiles missing a space.
+
+Fix:
+Corrected to references public.profiles.
+
+### TypeScript compatibility regression
+
+Problem:
+The Phase 4 database type rewrite removed Phase 3 helper exports and compatibility fields.
+
+Fix:
+Restored ProfileRow, CarnosProfileRow, profiles.onboarding_status, and confirmation_required, then added Phase 4 table aliases.
+
+## Completion decision
+
+Phase 4 can be marked complete after this report is committed and all gates pass.
+
+## Next phase recommendation
+
+Recommended next phase:
+
+Phase 5 — Core Read UI Integration
+
+Suggested goals:
+
+- connect dashboard cards to read-only repository helpers
+- show empty states cleanly
+- preserve auth boundaries
+- do not add write flows yet
+- do not add memory yet
 ```
 
 ### `docs/setup/AUTH_SMOKE_TEST.md`

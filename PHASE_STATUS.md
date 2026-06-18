@@ -86,4 +86,20 @@ See `docs/phase-plans/PHASE_4_CORE_SQL_SPINE.md`.
 - User-owned data requires RLS.
 - Carnos must not silently write important data.
 - AI-created changes must flow through proposed actions and audit logs in later phases.
-- No memory table is added in Phase 4; memory belongs to the dedicated memory phase.
+- No memory table is added in Phase 4; memory belongs to the dedicated memory phase.\n\n## Phase 4 — Core SQL Spine — DOCUMENTATION ADDED
+
+### Status
+Documentation added. Pending final completion marker.
+
+### Completed So Far
+- Core SQL migrations added.
+- Phase 4 audit added.
+- SQL migration validator upgraded.
+- TypeScript database types updated.
+- Read-only repository helpers added.
+- Phase 4 database documentation added.
+- Phase 4 report added.
+
+### Final Gate Remaining
+- Run final full verification.
+- Mark Phase 4 complete.\n\n

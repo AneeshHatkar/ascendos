@@ -561,4 +561,13 @@ Change: Restored `profiles.onboarding_status` and `confirmation_required` compat
 Purpose: Provides typed read-only repository helpers for Phase 4 core SQL spine tables.
 
 ### `src/lib/repositories/index.ts`
-Purpose: Barrel export for repository helpers.
+Purpose: Barrel export for repository helpers.\n\n## Phase 4.11 — Phase 4 Documentation and Report
+
+### docs/database/CORE_SQL_SPINE.md
+Purpose: Documents Phase 4 core SQL spine tables, safety rules, validation commands, TypeScript types, repositories, and deferred scope.
+
+### docs/phase-reports/PHASE_4_CORE_SQL_SPINE_REPORT.md
+Purpose: Records Phase 4 completion report, fixed issues, verification gates, and next phase recommendation.
+
+### PHASE_STATUS.md
+Change: Added Phase 4 documentation-added status.\n\n

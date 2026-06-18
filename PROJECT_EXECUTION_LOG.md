@@ -822,4 +822,17 @@ The Phase 4 type rewrite was structurally correct for Phase 4 but accidentally r
 - `npm run check` must pass before commit.
 
 ### Next
-- Phase 4.11 — Add Phase 4 docs and completion audit notes.
+- Phase 4.11 — Add Phase 4 docs and completion audit notes.\n\n## 2026-06-18 — Phase 4.11 — Phase 4 Documentation and Report
+
+### Completed
+- Added docs/database/CORE_SQL_SPINE.md.
+- Added docs/phase-reports/PHASE_4_CORE_SQL_SPINE_REPORT.md.
+- Documented Phase 4 tables, migrations, safety rules, validation, and deferred scope.
+- Documented known issues fixed during Phase 4.
+- Updated PHASE_STATUS.md.
+
+### Verification
+- npm run check must pass before commit.
+
+### Next
+- Phase 4.12 — Mark Phase 4 complete.\n\n
