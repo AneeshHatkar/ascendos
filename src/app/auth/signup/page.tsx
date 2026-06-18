@@ -13,7 +13,7 @@ export default function SignupPage() {
           Start building your Carnos-backed personal operating system.
         </p>
 
-        <form action={signUpWithPassword.bind(null, {})} className="mt-8 space-y-4">
+        <form action={signUpWithPassword} className="mt-8 space-y-4">
           <label className="block">
             <span className="text-sm text-white/60">Email</span>
             <input

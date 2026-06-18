@@ -3,19 +3,17 @@
 import { redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
-export type AuthActionState = {
-  error?: string;
-};
+function redirectWithAuthError(path: string, message: string): never {
+  const params = new URLSearchParams({ error: message });
+  redirect(`${path}?${params.toString()}`);
+}
 
-export async function signInWithPassword(
-  _previousState: AuthActionState,
-  formData: FormData,
-): Promise<AuthActionState> {
+export async function signInWithPassword(formData: FormData): Promise<void> {
   const email = String(formData.get("email") ?? "");
   const password = String(formData.get("password") ?? "");
 
   if (!email || !password) {
-    return { error: "Email and password are required." };
+    redirectWithAuthError("/auth/login", "Email and password are required.");
   }
 
   const supabase = await createSupabaseServerClient();
@@ -26,21 +24,18 @@ export async function signInWithPassword(
   });
 
   if (error) {
-    return { error: error.message };
+    redirectWithAuthError("/auth/login", error.message);
   }
 
   redirect("/command");
 }
 
-export async function signUpWithPassword(
-  _previousState: AuthActionState,
-  formData: FormData,
-): Promise<AuthActionState> {
+export async function signUpWithPassword(formData: FormData): Promise<void> {
   const email = String(formData.get("email") ?? "");
   const password = String(formData.get("password") ?? "");
 
   if (!email || !password) {
-    return { error: "Email and password are required." };
+    redirectWithAuthError("/auth/signup", "Email and password are required.");
   }
 
   const supabase = await createSupabaseServerClient();
@@ -51,13 +46,13 @@ export async function signUpWithPassword(
   });
 
   if (error) {
-    return { error: error.message };
+    redirectWithAuthError("/auth/signup", error.message);
   }
 
   redirect("/command");
 }
 
-export async function signOut() {
+export async function signOut(): Promise<void> {
   const supabase = await createSupabaseServerClient();
   await supabase.auth.signOut();
   redirect("/auth/login");

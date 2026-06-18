@@ -305,3 +305,13 @@ Phase 3 — Supabase/Auth foundation.
 ### Next
 - Add protected-route helper.
 - Add profile SQL migration.
+
+## 2026-06-17 — Phase 3.5B — Auth Action Type Fix
+
+### Completed
+- Fixed login/signup server action return types.
+- Removed incorrect `.bind(null, {})` usage from form actions.
+- Added error handling note to `ERRORS_AND_FIXES.md`.
+
+### Verification
+- `npm run check` must pass before commit.

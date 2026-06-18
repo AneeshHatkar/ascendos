@@ -284,3 +284,14 @@ Purpose: Supabase auth callback route.
 
 ### `src/app/auth/signout/route.ts`
 Purpose: Signout route.
+
+## Phase 3.5B — Auth Action Type Fix
+
+### `src/lib/auth/actions.ts`
+Change: Server actions now return `Promise<void>` for direct form action compatibility.
+
+### `src/app/auth/login/page.tsx`
+Change: Login form now uses `signInWithPassword` directly.
+
+### `src/app/auth/signup/page.tsx`
+Change: Signup form now uses `signUpWithPassword` directly.
