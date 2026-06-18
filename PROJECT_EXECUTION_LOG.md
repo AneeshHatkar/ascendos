@@ -603,3 +603,21 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Phase 4.4 — Add goals and goal_milestones migration.
+
+## 2026-06-17 — Phase 4.4 — Goals and Goal Milestones Migration
+
+### Completed
+- Added migration `0004_goals_foundation.sql`.
+- Added `goals` table.
+- Added `goal_milestones` table.
+- Added owner-only RLS policies.
+- Added milestone ownership checks through parent goal ownership.
+- Added indexes for user, status, domain, priority, due dates, target dates, sort order, and source links.
+- Added `updated_at` triggers.
+- Added source links to AI actions and chat messages for future Carnos-proposed goals.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Phase 4.5 — Add daily_logs and proof_items migration.

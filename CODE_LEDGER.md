@@ -458,3 +458,15 @@ Includes:
 - chat-to-AI-action linkage
 - owner-only RLS
 - indexes
+
+## Phase 4.4 — Goals and Goal Milestones Migration
+
+### `supabase/migrations/0004_goals_foundation.sql`
+Purpose: Creates the durable SQL foundation for goals and goal milestones.
+Includes:
+- `goals`
+- `goal_milestones`
+- owner-only RLS
+- parent-goal ownership checks for milestones
+- indexes
+- AI action and chat message source links
