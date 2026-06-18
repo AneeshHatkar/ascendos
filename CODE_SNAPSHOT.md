@@ -801,6 +801,11 @@ Change: Added `audit:source` and wired it into `npm run check`.
 
 ### `PHASE_STATUS.md`
 Change: Added explicit completed baseline markers for Phase 1, Phase 2, Phase 3, and Phase 4.
+
+## Source Alignment Audit Lint Cleanup
+
+### `scripts/audit-source-alignment.mjs`
+Change: Removed unused `requireDirectory` helper.
 ```
 
 ### `DECISIONS.md`
@@ -1967,6 +1972,17 @@ The full source alignment audit checks that all previous stages are represented 
 
 ### Verification
 - `npm run audit:source` must pass.
+- `npm run check` must pass.
+
+## 2026-06-18 — Source Alignment Audit Lint Cleanup
+
+### Fixed
+- Removed unused `requireDirectory` helper from `scripts/audit-source-alignment.mjs`.
+
+### Reason
+The full source alignment audit passed, but ESLint reported one warning for an unused helper. This cleanup makes the audit baseline cleaner before Phase 5.
+
+### Verification
 - `npm run check` must pass.
 ```
 
@@ -17381,16 +17397,6 @@ function requireFile(relativePath) {
   }
 
   pass(`Found ${relativePath}`);
-}
-
-function requireDirectory(relativePath) {
-  const fullPath = path.join(root, relativePath);
-
-  if (!fs.existsSync(fullPath) || !fs.statSync(fullPath).isDirectory()) {
-    fail(`Missing required directory: ${relativePath}`);
-  }
-
-  pass(`Found directory ${relativePath}`);
 }
 
 function read(relativePath) {

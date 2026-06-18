@@ -592,3 +592,8 @@ Change: Added `audit:source` and wired it into `npm run check`.
 
 ### `PHASE_STATUS.md`
 Change: Added explicit completed baseline markers for Phase 1, Phase 2, Phase 3, and Phase 4.
+
+## Source Alignment Audit Lint Cleanup
+
+### `scripts/audit-source-alignment.mjs`
+Change: Removed unused `requireDirectory` helper.

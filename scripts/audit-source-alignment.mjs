@@ -24,16 +24,6 @@ function requireFile(relativePath) {
   pass(`Found ${relativePath}`);
 }
 
-function requireDirectory(relativePath) {
-  const fullPath = path.join(root, relativePath);
-
-  if (!fs.existsSync(fullPath) || !fs.statSync(fullPath).isDirectory()) {
-    fail(`Missing required directory: ${relativePath}`);
-  }
-
-  pass(`Found directory ${relativePath}`);
-}
-
 function read(relativePath) {
   requireFile(relativePath);
   return fs.readFileSync(path.join(root, relativePath), "utf8");

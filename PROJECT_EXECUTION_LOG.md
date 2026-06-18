@@ -882,3 +882,14 @@ The full source alignment audit checks that all previous stages are represented 
 ### Verification
 - `npm run audit:source` must pass.
 - `npm run check` must pass.
+
+## 2026-06-18 — Source Alignment Audit Lint Cleanup
+
+### Fixed
+- Removed unused `requireDirectory` helper from `scripts/audit-source-alignment.mjs`.
+
+### Reason
+The full source alignment audit passed, but ESLint reported one warning for an unused helper. This cleanup makes the audit baseline cleaner before Phase 5.
+
+### Verification
+- `npm run check` must pass.
