@@ -836,3 +836,22 @@ The Phase 4 type rewrite was structurally correct for Phase 4 but accidentally r
 
 ### Next
 - Phase 4.12 — Mark Phase 4 complete.\n\n
+
+## 2026-06-18 — Phase 4.12 — Phase 4 Complete
+
+### Completed
+- Marked Phase 4 complete in `PHASE_STATUS.md`.
+- Confirmed Phase 4 includes:
+  - core SQL migrations
+  - audit and validation scripts
+  - TypeScript database types
+  - read-only repository helpers
+  - database documentation
+  - phase report
+- Confirmed deferred items remain out of scope.
+
+### Final Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Phase 5 — Core Read UI Integration.

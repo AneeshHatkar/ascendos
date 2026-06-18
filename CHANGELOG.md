@@ -61,3 +61,26 @@ All notable changes to ascendOS will be documented here.
 - Setup/smoke-test docs.
 - Migration validation.
 - Phase 3 audit gate.
+
+## 2026-06-18 — Phase 4 Complete
+
+### Added
+- Core SQL spine migrations for audit logs, AI actions, chat sessions, chat messages, goals, milestones, daily logs, proof items, tasks, and events.
+- Phase 4 migration audit.
+- Upgraded SQL migration validator.
+- Phase 4 TypeScript database types.
+- Read-only repository helpers.
+- Core SQL spine documentation.
+- Phase 4 completion report.
+
+### Fixed
+- Phase 4 audit parser issue.
+- SQL `references public.profiles` typo.
+- Phase 3 database type compatibility after Phase 4 type expansion.
+
+### Deferred
+- Carnos write flows.
+- Memory.
+- Voice.
+- RAG.
+- Full CRUD dashboards.

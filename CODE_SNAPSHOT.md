@@ -178,6 +178,29 @@ All notable changes to ascendOS will be documented here.
 - Setup/smoke-test docs.
 - Migration validation.
 - Phase 3 audit gate.
+
+## 2026-06-18 — Phase 4 Complete
+
+### Added
+- Core SQL spine migrations for audit logs, AI actions, chat sessions, chat messages, goals, milestones, daily logs, proof items, tasks, and events.
+- Phase 4 migration audit.
+- Upgraded SQL migration validator.
+- Phase 4 TypeScript database types.
+- Read-only repository helpers.
+- Core SQL spine documentation.
+- Phase 4 completion report.
+
+### Fixed
+- Phase 4 audit parser issue.
+- SQL `references public.profiles` typo.
+- Phase 3 database type compatibility after Phase 4 type expansion.
+
+### Deferred
+- Carnos write flows.
+- Memory.
+- Voice.
+- RAG.
+- Full CRUD dashboards.
 ```
 
 ### `CODE_LEDGER.md`
@@ -756,6 +779,14 @@ Purpose: Records Phase 4 completion report, fixed issues, verification gates, an
 
 ### PHASE_STATUS.md
 Change: Added Phase 4 documentation-added status.\n\n
+
+## Phase 4.12 — Phase 4 Complete Marker
+
+### `PHASE_STATUS.md`
+Change: Marked Phase 4 — Core SQL Spine complete.
+
+### `PROJECT_EXECUTION_LOG.md`
+Change: Added Phase 4 completion entry.
 ```
 
 ### `DECISIONS.md`
@@ -934,6 +965,61 @@ Documentation added. Pending final completion marker.
 ### Final Gate Remaining
 - Run final full verification.
 - Mark Phase 4 complete.\n\n
+
+## Phase 4 — Core SQL Spine — COMPLETE
+
+### Status
+Complete.
+
+### Completed Scope
+Phase 4 created the SQL-backed core spine for ascendOS + Carnos.
+
+Completed database foundation:
+- audit logs
+- AI proposed actions
+- chat sessions
+- chat messages
+- goals
+- goal milestones
+- daily logs
+- proof items
+- tasks
+- events
+
+Completed technical foundation:
+- Phase 4 migrations
+- Phase 4 audit script
+- upgraded SQL migration validator
+- TypeScript database types
+- read-only repository helpers
+- Phase 4 database documentation
+- Phase 4 completion report
+
+### Verification Gate
+Final verification passed before completion commit:
+- npm run verify:env
+- npm run validate:migrations
+- npm run audit:phase3
+- npm run audit:phase4
+- npm run snapshot:code
+- npm run check
+- git diff --check
+
+### Deferred Scope
+The following remain intentionally deferred:
+- write repositories
+- full CRUD UI
+- Carnos AI intelligence
+- Carnos extraction engine
+- Save/Edit/Cancel confirmation UI
+- memory table
+- voice
+- RAG
+- analytics dashboards
+- production deployment
+
+### Next Recommended Phase
+Phase 5 — Core Read UI Integration.
 ```
 
 ### `PROJECT_EXECUTION_LOG.md`
@@ -1777,6 +1863,25 @@ The Phase 4 type rewrite was structurally correct for Phase 4 but accidentally r
 
 ### Next
 - Phase 4.12 — Mark Phase 4 complete.\n\n
+
+## 2026-06-18 — Phase 4.12 — Phase 4 Complete
+
+### Completed
+- Marked Phase 4 complete in `PHASE_STATUS.md`.
+- Confirmed Phase 4 includes:
+  - core SQL migrations
+  - audit and validation scripts
+  - TypeScript database types
+  - read-only repository helpers
+  - database documentation
+  - phase report
+- Confirmed deferred items remain out of scope.
+
+### Final Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Phase 5 — Core Read UI Integration.
 ```
 
 ### `README.md`
