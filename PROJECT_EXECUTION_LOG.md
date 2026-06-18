@@ -110,3 +110,22 @@ This file records every implementation step for ascendOS + Carnos.
 
 ### Next
 - Add canonical placeholder pages for the first dashboard route group.
+
+## 2026-06-17 — Phase 2.15 — Core Placeholder Routes
+
+### Completed
+- Added placeholder page for `/command`.
+- Added placeholder page for `/carnos`.
+- Added placeholder page for `/calendar`.
+- Added placeholder page for `/timeline`.
+- Added placeholder page for `/goals`.
+- Added placeholder page for `/career`.
+- Added placeholder page for `/learning`.
+- Added placeholder page for `/analytics`.
+- Verified `npm run lint`.
+- Verified `npm run build`.
+- Verified generated app routes.
+
+### Next
+- Add remaining canonical placeholder routes.
+- Commit route coverage in small stable batches.

@@ -122,3 +122,29 @@ Purpose: Reusable dashboard preview card.
 
 ### `src/app/page.tsx`
 Purpose: Uses reusable layout and dashboard card components instead of inline shell markup.
+
+## Phase 2.15 — Core Placeholder Routes
+
+### `src/app/command/page.tsx`
+Purpose: Placeholder Command dashboard route.
+
+### `src/app/carnos/page.tsx`
+Purpose: Placeholder Carnos dashboard route.
+
+### `src/app/calendar/page.tsx`
+Purpose: Placeholder Calendar dashboard route.
+
+### `src/app/timeline/page.tsx`
+Purpose: Placeholder Timeline dashboard route.
+
+### `src/app/goals/page.tsx`
+Purpose: Placeholder Goals dashboard route.
+
+### `src/app/career/page.tsx`
+Purpose: Placeholder Career dashboard route.
+
+### `src/app/learning/page.tsx`
+Purpose: Placeholder Learning dashboard route.
+
+### `src/app/analytics/page.tsx`
+Purpose: Placeholder Analytics dashboard route.
