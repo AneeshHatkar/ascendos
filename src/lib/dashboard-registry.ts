@@ -194,7 +194,7 @@ export const DASHBOARD_REGISTRY: DashboardRegistryItem[] = [
   },
   {
     title: "Knowledge Vault",
-    route: "/knowledge-vault",
+    route: "/knowledge",
     domain: "intelligence",
     description: "Notes, concepts, memories, research, references, and retrieval-ready knowledge.",
   },

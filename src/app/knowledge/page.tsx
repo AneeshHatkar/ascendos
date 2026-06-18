@@ -1,6 +1,6 @@
 import { AppShell } from "@/components/layout/app-shell";
 
-export default function KnowledgeVaultPage() {
+export default function KnowledgePage() {
   return (
     <AppShell>
       <section className="mx-auto max-w-5xl rounded-[2rem] border border-white/10 bg-white/[0.03] p-8">
@@ -11,7 +11,8 @@ export default function KnowledgeVaultPage() {
           Knowledge Vault
         </h2>
         <p className="mt-4 max-w-3xl text-lg leading-8 text-white/55">
-          Notes, concepts, memories, research, references, and retrieval-ready knowledge.
+          Notes, concepts, memories, research, references, and retrieval-ready
+          knowledge.
         </p>
 
         <div className="mt-8 rounded-3xl border border-dashed border-white/15 bg-black/20 p-6">

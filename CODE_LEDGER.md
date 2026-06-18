@@ -175,7 +175,7 @@ Added route pages:
 - `/grimoire`
 - `/decisions`
 - `/future-simulator`
-- `/knowledge-vault`
+- `/knowledge`
 - `/experiments`
 - `/privacy`
 - `/custom-trackers`
@@ -189,3 +189,25 @@ Includes:
 - Dashboard title.
 - Dashboard domain category.
 - Dashboard description.
+
+## Phase 2.21–2.22 — Route Validation and Knowledge Route Correction
+
+### `scripts/validate-route-coverage.mjs`
+Purpose: Validates canonical route coverage and blocks banned legacy routes.
+
+### `package.json`
+Change:
+- Added `validate:routes`.
+- Added `check`.
+
+### `src/app/knowledge/page.tsx`
+Purpose: Correct Knowledge Vault dashboard route.
+
+### Removed `src/app/knowledge-vault/page.tsx`
+Reason: Source-of-truth JSON uses `/knowledge`, not `/knowledge-vault`.
+
+### `src/lib/routes.ts`
+Change: Corrected canonical route list to use `/knowledge`.
+
+### `src/lib/dashboard-registry.ts`
+Change: Corrected Knowledge Vault registry entry to use `/knowledge`.

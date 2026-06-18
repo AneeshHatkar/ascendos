@@ -155,7 +155,7 @@ This file records every implementation step for ascendOS + Carnos.
 - Verified `/grimoire`.
 - Verified `/decisions`.
 - Verified `/future-simulator`.
-- Verified `/knowledge-vault`.
+- Verified `/knowledge`.
 - Verified `/experiments`.
 - Verified `/privacy`.
 - Verified `/custom-trackers`.
@@ -181,3 +181,21 @@ This file records every implementation step for ascendOS + Carnos.
 - Add route coverage test script.
 - Add banned legacy route test.
 - Add registry/route count validation.
+
+## 2026-06-17 — Phase 2.21–2.22 — Route Validation and Knowledge Route Correction
+
+### Completed
+- Added route coverage validation script.
+- Added `npm run validate:routes`.
+- Added `npm run check`.
+- Validated all 33 canonical routes exist.
+- Validated banned legacy routes are absent.
+- Corrected Knowledge Vault route from `/knowledge-vault` to `/knowledge` to align with source-of-truth JSON.
+- Removed old `/knowledge-vault` page.
+- Added corrected `/knowledge` page.
+- Ran `npm run validate:routes`.
+- Ran `npm run check`.
+
+### Next
+- Add shared placeholder page component.
+- Refactor placeholder routes to remove repeated JSX.

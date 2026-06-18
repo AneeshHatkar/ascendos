@@ -27,7 +27,7 @@ export const CANONICAL_ROUTES = [
   "/grimoire",
   "/decisions",
   "/future-simulator",
-  "/knowledge-vault",
+  "/knowledge",
   "/experiments",
   "/analytics",
   "/privacy",
