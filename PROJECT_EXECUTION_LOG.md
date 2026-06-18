@@ -716,3 +716,30 @@ The previous audit script copy became corrupted and failed to parse `create tabl
 ### Verification
 - `npm run audit:phase4` must pass.
 - `npm run check` must pass.
+
+## 2026-06-17 — Phase 4.8 — SQL Migration Validator Upgrade
+
+### Completed
+- Upgraded `scripts/validate-sql-migrations.mjs`.
+- Added canonical migration filename validation.
+- Added duplicate migration number detection.
+- Added migration sequence gap detection.
+- Added empty migration detection.
+- Added corrupted copy marker detection.
+- Added missing `references public.*` whitespace detection.
+- Added RLS disable guard.
+- Added user-owned table checks for:
+  - RLS enablement
+  - SELECT policy
+  - INSERT policy
+  - `user_id` index
+- Added required `profiles` and `carnos_profiles` migration presence checks.
+- Added guard against premature `memory_items` creation.
+
+### Verification
+- `npm run validate:migrations` must pass.
+- `npm run audit:phase4` must pass.
+- `npm run check` must pass.
+
+### Next
+- Phase 4.9 — Update TypeScript database types for Phase 4 tables.

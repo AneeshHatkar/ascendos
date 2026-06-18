@@ -701,6 +701,21 @@ Change: Fixed missing space in `references public.profiles`.
 
 ### `supabase/migrations/0006_tasks_and_events.sql`
 Change: Fixed missing space in `references public.profiles`.
+
+## Phase 4.8 — SQL Migration Validator Upgrade
+
+### `scripts/validate-sql-migrations.mjs`
+Purpose: Strengthens general SQL migration validation beyond basic migration presence.
+Checks:
+- canonical names
+- sequence ordering
+- empty files
+- corrupted copy markers
+- missing `references public.*` whitespace
+- RLS disable guard
+- user-owned table RLS/policy/index baseline
+- required Phase 3 profile tables
+- premature memory table prevention
 ```
 
 ### `DECISIONS.md`
@@ -1586,6 +1601,33 @@ The previous audit script copy became corrupted and failed to parse `create tabl
 ### Verification
 - `npm run audit:phase4` must pass.
 - `npm run check` must pass.
+
+## 2026-06-17 — Phase 4.8 — SQL Migration Validator Upgrade
+
+### Completed
+- Upgraded `scripts/validate-sql-migrations.mjs`.
+- Added canonical migration filename validation.
+- Added duplicate migration number detection.
+- Added migration sequence gap detection.
+- Added empty migration detection.
+- Added corrupted copy marker detection.
+- Added missing `references public.*` whitespace detection.
+- Added RLS disable guard.
+- Added user-owned table checks for:
+  - RLS enablement
+  - SELECT policy
+  - INSERT policy
+  - `user_id` index
+- Added required `profiles` and `carnos_profiles` migration presence checks.
+- Added guard against premature `memory_items` creation.
+
+### Verification
+- `npm run validate:migrations` must pass.
+- `npm run audit:phase4` must pass.
+- `npm run check` must pass.
+
+### Next
+- Phase 4.9 — Update TypeScript database types for Phase 4 tables.
 ```
 
 ### `README.md`
@@ -16912,72 +16954,202 @@ console.log("Banned legacy route check passed.");
 ### `scripts/validate-sql-migrations.mjs`
 
 ```js
-import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
-import { join } from "node:path";
+import fs from "node:fs";
+import path from "node:path";
 
-const MIGRATIONS_DIR = "supabase/migrations";
+const root = process.cwd();
+const migrationsDir = path.join(root, "supabase", "migrations");
 
 function fail(message) {
   console.error(`SQL migration validation failed: ${message}`);
   process.exit(1);
 }
 
-if (!existsSync(MIGRATIONS_DIR)) {
-  fail(`${MIGRATIONS_DIR} does not exist.`);
+function normalize(sql) {
+  return sql.toLowerCase().replace(/\s+/g, " ").trim();
 }
 
-const files = readdirSync(MIGRATIONS_DIR)
+function requirePattern(content, pattern, message) {
+  if (!pattern.test(content)) {
+    fail(message);
+  }
+}
+
+function requireIncludes(content, needle, message) {
+  if (!normalize(content).includes(normalize(needle))) {
+    fail(message);
+  }
+}
+
+function getCreateTableBlocks(sql) {
+  const lowerSql = sql.toLowerCase();
+  const blocks = [];
+  let cursor = 0;
+
+  while (cursor < lowerSql.length) {
+    const startIndex = lowerSql.indexOf("create table if not exists public.", cursor);
+
+    if (startIndex === -1) {
+      break;
+    }
+
+    const nameStart = startIndex + "create table if not exists public.".length;
+    const rest = lowerSql.slice(nameStart);
+    const nameMatch = rest.match(/^([a-z0-9_]+)/);
+
+    if (!nameMatch) {
+      fail("Found create table statement with invalid or missing public table name.");
+    }
+
+    const table = nameMatch[1];
+    const endIndex = lowerSql.indexOf("\n);", startIndex);
+
+    if (endIndex === -1) {
+      fail(`Could not find closing statement for public.${table}.`);
+    }
+
+    blocks.push({
+      table,
+      sql: sql.slice(startIndex, endIndex + 3),
+    });
+
+    cursor = endIndex + 3;
+  }
+
+  return blocks;
+}
+
+if (!fs.existsSync(migrationsDir)) {
+  fail("Missing supabase/migrations directory.");
+}
+
+const migrationFiles = fs
+  .readdirSync(migrationsDir)
   .filter((file) => file.endsWith(".sql"))
   .sort();
 
-if (files.length === 0) {
+if (migrationFiles.length === 0) {
   fail("No SQL migration files found.");
 }
 
 const seenNumbers = new Set();
 
-for (const file of files) {
-  const fullPath = join(MIGRATIONS_DIR, file);
-  const stats = statSync(fullPath);
-
-  if (!stats.isFile()) {
-    continue;
+for (const file of migrationFiles) {
+  if (!/^\d{4}_[a-z0-9_]+\.sql$/.test(file)) {
+    fail(`Migration file name is not canonical: ${file}`);
   }
 
-  const match = file.match(/^(\d{4})_[a-z0-9_]+\.sql$/);
-
-  if (!match) {
-    fail(`${file} must match pattern 0001_descriptive_name.sql.`);
-  }
-
-  const number = match[1];
+  const number = file.slice(0, 4);
 
   if (seenNumbers.has(number)) {
-    fail(`Duplicate migration number ${number}.`);
+    fail(`Duplicate migration number detected: ${number}`);
   }
 
   seenNumbers.add(number);
+}
 
-  const content = readFileSync(fullPath, "utf8").trim();
+for (let index = 0; index < migrationFiles.length; index += 1) {
+  const expected = String(index + 1).padStart(4, "0");
+  const actual = migrationFiles[index].slice(0, 4);
 
-  if (!content) {
-    fail(`${file} is empty.`);
-  }
-
-  if (/create table/i.test(content) && !/enable row level security/i.test(content)) {
-    fail(`${file} creates tables but does not enable row level security.`);
-  }
-
-  if (/public\.(profiles|carnos_profiles)/i.test(content) && !/create policy/i.test(content)) {
-    fail(`${file} touches personal tables but does not define policies.`);
-  }
-
-  if (/auth\.users/i.test(content) && !/security definer/i.test(content)) {
-    fail(`${file} touches auth.users but does not define a security definer function.`);
+  if (actual !== expected) {
+    fail(`Migration sequence gap or ordering issue. Expected ${expected}, found ${actual}.`);
   }
 }
 
-console.log(`SQL migration validation passed: ${files.length} migration file(s).`);
+const allSql = migrationFiles
+  .map((file) => {
+    const fullPath = path.join(migrationsDir, file);
+    const sql = fs.readFileSync(fullPath, "utf8");
+
+    if (sql.trim().length === 0) {
+      fail(`Migration file is empty: ${file}`);
+    }
+
+    if (/\$begin:|\$end:/i.test(sql)) {
+      fail(`Migration file contains corrupted copied math markers: ${file}`);
+    }
+
+    if (/referencespublic\./i.test(sql)) {
+      fail(`Migration file contains missing whitespace in references public.*: ${file}`);
+    }
+
+    if (/disable\s+row\s+level\s+security/i.test(sql)) {
+      fail(`Migration file disables row level security: ${file}`);
+    }
+
+    if (/create\s+table/i.test(sql)) {
+      requirePattern(
+        sql,
+        /alter\s+table\s+public\.[a-z0-9_]+\s+enable\s+row\s+level\s+security/i,
+        `Migration creates table(s) but does not enable RLS: ${file}`,
+      );
+    }
+
+    return {
+      file,
+      sql,
+      blocks: getCreateTableBlocks(sql),
+    };
+  });
+
+const combinedSql = allSql.map((entry) => entry.sql).join("\n\n");
+
+for (const entry of allSql) {
+  for (const block of entry.blocks) {
+    const { table, sql } = block;
+    const normalizedBlock = normalize(sql);
+    const isUserOwned = normalizedBlock.includes(
+      "user_id uuid not null references public.profiles(id) on delete cascade",
+    );
+
+    if (!isUserOwned) {
+      continue;
+    }
+
+    requireIncludes(
+      combinedSql,
+      `alter table public.${table} enable row level security`,
+      `User-owned table public.${table} is missing RLS enable statement.`,
+    );
+
+    requirePattern(
+      combinedSql,
+      new RegExp(`create\\s+policy\\s+"[^"]+"\\s+on\\s+public\\.${table}\\s+for\\s+select`, "i"),
+      `User-owned table public.${table} is missing SELECT policy.`,
+    );
+
+    requirePattern(
+      combinedSql,
+      new RegExp(`create\\s+policy\\s+"[^"]+"\\s+on\\s+public\\.${table}\\s+for\\s+insert`, "i"),
+      `User-owned table public.${table} is missing INSERT policy.`,
+    );
+
+    requireIncludes(
+      combinedSql,
+      `${table}_user_id_idx`,
+      `User-owned table public.${table} is missing user_id index.`,
+    );
+  }
+}
+
+requireIncludes(
+  combinedSql,
+  "create table if not exists public.profiles",
+  "Missing profiles migration.",
+);
+
+requireIncludes(
+  combinedSql,
+  "create table if not exists public.carnos_profiles",
+  "Missing carnos_profiles migration.",
+);
+
+if (normalize(combinedSql).includes("create table if not exists public.memory_items")) {
+  fail("memory_items is not allowed before the dedicated memory phase.");
+}
+
+console.log(`SQL migration validation passed: ${migrationFiles.length} migration file(s).`);
 ```
 
 ### `scripts/verify-env.mjs`

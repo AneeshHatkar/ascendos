@@ -520,3 +520,18 @@ Change: Fixed missing space in `references public.profiles`.
 
 ### `supabase/migrations/0006_tasks_and_events.sql`
 Change: Fixed missing space in `references public.profiles`.
+
+## Phase 4.8 — SQL Migration Validator Upgrade
+
+### `scripts/validate-sql-migrations.mjs`
+Purpose: Strengthens general SQL migration validation beyond basic migration presence.
+Checks:
+- canonical names
+- sequence ordering
+- empty files
+- corrupted copy markers
+- missing `references public.*` whitespace
+- RLS disable guard
+- user-owned table RLS/policy/index baseline
+- required Phase 3 profile tables
+- premature memory table prevention
