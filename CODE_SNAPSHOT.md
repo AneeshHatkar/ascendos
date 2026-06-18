@@ -28,6 +28,7 @@ Upload or paste this file and say:
 - `next.config.ts`
 - `package.json`
 - `postcss.config.mjs`
+- `scripts/audit-phase-3.mjs`
 - `scripts/generate-code-snapshot.mjs`
 - `scripts/validate-registry-coverage.mjs`
 - `scripts/validate-route-coverage.mjs`
@@ -571,6 +572,16 @@ Purpose: Explains when and how to apply route protection safely.
 
 ### `docs/setup/AUTH_SMOKE_TEST.md`
 Purpose: Manual checklist for validating local setup mode, connected Supabase auth, profile row creation, Carnos profile row creation, signout, and RLS behavior.
+
+## Phase 3.18 — Phase 3 Final Audit Script
+
+### `scripts/audit-phase-3.mjs`
+Purpose: Automated completion gate for Phase 3 Supabase/Auth foundation.
+
+### `package.json`
+Change:
+- Added `audit:phase3`.
+- Added Phase 3 audit to `npm run check`.
 ```
 
 ### `DECISIONS.md`
@@ -1164,6 +1175,22 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Add Phase 3 final audit checklist/script.
+
+## 2026-06-17 — Phase 3.18 — Phase 3 Final Audit Script
+
+### Completed
+- Added `scripts/audit-phase-3.mjs`.
+- Added `npm run audit:phase3`.
+- Added Phase 3 audit into `npm run check`.
+- Audit verifies Supabase/Auth foundation files, migration, types, helpers, docs, protected route boundary, and code snapshot presence.
+
+### Verification
+- `npm run audit:phase3` must pass.
+- `npm run check` must pass before commit.
+
+### Next
+- Fix any audit issues.
+- Mark Phase 3 complete after final clean verification.
 ```
 
 ### `README.md`
@@ -15408,11 +15435,12 @@ export default nextConfig;
     "start": "next start",
     "lint": "eslint",
     "validate:routes": "node scripts/validate-route-coverage.mjs",
-    "check": "npm run lint && npm run validate:routes && npm run validate:registry && npm run validate:migrations && npm run build",
+    "check": "npm run lint && npm run validate:routes && npm run validate:registry && npm run validate:migrations && npm run audit:phase3 && npm run build",
     "validate:registry": "node scripts/validate-registry-coverage.mjs",
     "snapshot:code": "node scripts/generate-code-snapshot.mjs",
     "validate:migrations": "node scripts/validate-sql-migrations.mjs",
-    "verify:env": "node scripts/verify-env.mjs"
+    "verify:env": "node scripts/verify-env.mjs",
+    "audit:phase3": "node scripts/audit-phase-3.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",
@@ -15444,6 +15472,169 @@ const config = {
 };
 
 export default config;
+```
+
+### `scripts/audit-phase-3.mjs`
+
+```js
+import { existsSync, readFileSync } from "node:fs";
+
+function fail(message) {
+  console.error(`Phase 3 audit failed: ${message}`);
+  process.exit(1);
+}
+
+function requireFile(path) {
+  if (!existsSync(path)) {
+    fail(`Missing required file: ${path}`);
+  }
+}
+
+function requireIncludes(path, snippets) {
+  requireFile(path);
+  const text = readFileSync(path, "utf8");
+
+  for (const snippet of snippets) {
+    if (!text.includes(snippet)) {
+      fail(`${path} is missing required snippet: ${snippet}`);
+    }
+  }
+}
+
+const requiredFiles = [
+  ".env.example",
+  "middleware.ts",
+  "src/lib/supabase/env.ts",
+  "src/lib/supabase/browser.ts",
+  "src/lib/supabase/server.ts",
+  "src/lib/supabase/middleware.ts",
+  "src/lib/auth/actions.ts",
+  "src/lib/auth/session.ts",
+  "src/app/auth/login/page.tsx",
+  "src/app/auth/signup/page.tsx",
+  "src/app/auth/callback/route.ts",
+  "src/app/auth/signout/route.ts",
+  "supabase/migrations/0001_profiles_and_carnos_profiles.sql",
+  "scripts/validate-sql-migrations.mjs",
+  "scripts/verify-env.mjs",
+  "scripts/generate-code-snapshot.mjs",
+  "src/types/database.ts",
+  "src/lib/profile/queries.ts",
+  "src/lib/profile/index.ts",
+  "src/components/profile/profile-summary-card.tsx",
+  "src/components/auth/protected-page.tsx",
+  "src/components/auth/index.ts",
+  "src/app/settings/page.tsx",
+  "docs/setup/SUPABASE_SETUP.md",
+  "docs/setup/AUTH_SMOKE_TEST.md",
+  "docs/setup/PROTECTED_ROUTES.md",
+  "CODE_SNAPSHOT.md",
+  "CODE_LEDGER.md",
+  "PROJECT_EXECUTION_LOG.md",
+  "ERRORS_AND_FIXES.md",
+];
+
+for (const file of requiredFiles) {
+  requireFile(file);
+}
+
+requireIncludes("package.json", [
+  '"check"',
+  '"validate:routes"',
+  '"validate:registry"',
+  '"validate:migrations"',
+  '"verify:env"',
+  '"snapshot:code"',
+]);
+
+requireIncludes(".env.example", [
+  "NEXT_PUBLIC_SUPABASE_URL=",
+  "NEXT_PUBLIC_SUPABASE_ANON_KEY=",
+  "NEXT_PUBLIC_APP_URL=http://localhost:3000",
+]);
+
+requireIncludes("supabase/migrations/0001_profiles_and_carnos_profiles.sql", [
+  "create table if not exists public.profiles",
+  "create table if not exists public.carnos_profiles",
+  "alter table public.profiles enable row level security",
+  "alter table public.carnos_profiles enable row level security",
+  "create policy",
+  "confirmation_required",
+  "handle_new_user",
+  "on_auth_user_created",
+]);
+
+requireIncludes("src/types/database.ts", [
+  "export type ProfileRow",
+  "export type CarnosProfileRow",
+  "export type Database",
+  "confirmation_required",
+]);
+
+requireIncludes("src/lib/supabase/browser.ts", [
+  "createBrowserClient<Database>",
+]);
+
+requireIncludes("src/lib/supabase/server.ts", [
+  "createServerClient<Database>",
+]);
+
+requireIncludes("src/lib/supabase/middleware.ts", [
+  "createServerClient<Database>",
+  "auth.getUser",
+]);
+
+requireIncludes("src/lib/auth/actions.ts", [
+  "signInWithPassword",
+  "signUpWithPassword",
+  "signOut",
+]);
+
+requireIncludes("src/lib/auth/session.ts", [
+  "getCurrentUser",
+  "requireCurrentUser",
+]);
+
+requireIncludes("src/lib/profile/queries.ts", [
+  "getProfileBundle",
+  "getProfile",
+  "getCarnosProfile",
+]);
+
+requireIncludes("src/components/auth/protected-page.tsx", [
+  "ProtectedPage",
+  "redirect(\"/auth/login\")",
+]);
+
+requireIncludes("src/components/profile/profile-summary-card.tsx", [
+  "ProfileSummaryCard",
+  "confirmation-required",
+]);
+
+requireIncludes("docs/setup/SUPABASE_SETUP.md", [
+  "Supabase Setup Guide",
+  "Never commit secrets",
+  "confirmation_required",
+]);
+
+requireIncludes("docs/setup/AUTH_SMOKE_TEST.md", [
+  "Auth Smoke-Test Checklist",
+  "RLS smoke test",
+  "Phase 3 completion requirement",
+]);
+
+requireIncludes("docs/setup/PROTECTED_ROUTES.md", [
+  "Protected Routes Guide",
+  "Do not apply blindly",
+]);
+
+requireIncludes("CODE_SNAPSHOT.md", [
+  "# ascendOS Code Snapshot",
+  "src/lib/auth/actions.ts",
+  "supabase/migrations/0001_profiles_and_carnos_profiles.sql",
+]);
+
+console.log("Phase 3 audit passed: Supabase/Auth foundation files are present and aligned.");
 ```
 
 ### `scripts/generate-code-snapshot.mjs`

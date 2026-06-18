@@ -518,3 +518,19 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Add Phase 3 final audit checklist/script.
+
+## 2026-06-17 — Phase 3.18 — Phase 3 Final Audit Script
+
+### Completed
+- Added `scripts/audit-phase-3.mjs`.
+- Added `npm run audit:phase3`.
+- Added Phase 3 audit into `npm run check`.
+- Audit verifies Supabase/Auth foundation files, migration, types, helpers, docs, protected route boundary, and code snapshot presence.
+
+### Verification
+- `npm run audit:phase3` must pass.
+- `npm run check` must pass before commit.
+
+### Next
+- Fix any audit issues.
+- Mark Phase 3 complete after final clean verification.

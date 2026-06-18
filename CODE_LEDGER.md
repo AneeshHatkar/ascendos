@@ -413,3 +413,13 @@ Purpose: Explains when and how to apply route protection safely.
 
 ### `docs/setup/AUTH_SMOKE_TEST.md`
 Purpose: Manual checklist for validating local setup mode, connected Supabase auth, profile row creation, Carnos profile row creation, signout, and RLS behavior.
+
+## Phase 3.18 — Phase 3 Final Audit Script
+
+### `scripts/audit-phase-3.mjs`
+Purpose: Automated completion gate for Phase 3 Supabase/Auth foundation.
+
+### `package.json`
+Change:
+- Added `audit:phase3`.
+- Added Phase 3 audit to `npm run check`.
