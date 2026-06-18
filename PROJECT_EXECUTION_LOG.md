@@ -329,3 +329,16 @@ Phase 3 — Supabase/Auth foundation.
 ### Next
 - Add auth-aware UI shell state.
 - Add protected-route wrapper after real Supabase project keys are configured.
+
+## 2026-06-17 — Phase 3.7 — Auth-Aware Topbar Status
+
+### Completed
+- Added async auth status component.
+- Topbar now shows local setup mode when Supabase env vars are missing.
+- Topbar can show login/signup or signed-in state once Supabase is configured.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Add protected-route boundary after profile migration exists.

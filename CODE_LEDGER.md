@@ -300,3 +300,11 @@ Change: Signup form now uses `signUpWithPassword` directly.
 
 ### `src/lib/auth/session.ts`
 Purpose: Provides safe current-user and required-user helpers for server-side auth checks.
+
+## Phase 3.7 — Auth-Aware Topbar Status
+
+### `src/components/layout/auth-status.tsx`
+Purpose: Displays local setup, login/signup, or signed-in status.
+
+### `src/components/layout/app-topbar.tsx`
+Change: Uses `AuthStatus`.
