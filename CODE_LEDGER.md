@@ -483,3 +483,16 @@ Includes:
 - proof/reality scoring
 - occurred_at vs logged_at semantics
 - AI action and chat message source links
+
+## Phase 4.6 — Tasks and Events Migration
+
+### `supabase/migrations/0006_tasks_and_events.sql`
+Purpose: Creates the execution and calendar/timeline foundation.
+Includes:
+- `tasks`
+- `events`
+- proof item task FK
+- owner-only RLS
+- parent ownership checks
+- occurred_at vs logged_at event semantics
+- AI action and chat message source links

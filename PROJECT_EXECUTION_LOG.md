@@ -642,3 +642,24 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Phase 4.6 — Add tasks and events migration.
+
+## 2026-06-17 — Phase 4.6 — Tasks and Events Migration
+
+### Completed
+- Added migration `0006_tasks_and_events.sql`.
+- Added `tasks` table.
+- Added `events` table.
+- Added task linkage to goals.
+- Added event linkage to tasks and goals.
+- Added proof item task foreign key now that `tasks` exists.
+- Added owner-only RLS policies.
+- Added parent ownership checks for goal/task relationships.
+- Added indexes for user, goal, task, status, priority, domain, due dates, scheduled timestamps, occurred/logged timestamps, and source links.
+- Added `updated_at` triggers.
+- Preserved occurred_at vs logged_at semantics for timeline correctness.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Phase 4.7 — RLS/index/audit-link audit.
