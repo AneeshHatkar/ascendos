@@ -242,3 +242,17 @@ Phase 2 established the frontend foundation for ascendOS:
 - Placeholder route coverage.
 
 Phase 3 begins Supabase/Auth foundation.
+
+## Phase 3.1–3.3 — Supabase Foundation
+
+### `.env.example`
+Purpose: Documents required Supabase and app environment variables.
+
+### `src/lib/supabase/env.ts`
+Purpose: Validates required public Supabase environment variables.
+
+### `src/lib/supabase/browser.ts`
+Purpose: Creates the browser Supabase client.
+
+### `src/lib/supabase/server.ts`
+Purpose: Creates the server Supabase client using Next.js cookies.

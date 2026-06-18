@@ -257,3 +257,19 @@ This file records every implementation step for ascendOS + Carnos.
 
 ### Next Phase
 Phase 3 — Supabase/Auth foundation.
+
+## 2026-06-17 — Phase 3.1–3.3 — Supabase Foundation
+
+### Completed
+- Installed Supabase client dependencies.
+- Added `.env.example`.
+- Added Supabase environment helper.
+- Added browser Supabase client helper.
+- Added server Supabase client helper.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Add Supabase middleware session refresh.
+- Add auth callback route.
