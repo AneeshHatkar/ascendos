@@ -501,3 +501,20 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Add auth smoke-test checklist and Phase 3 final audit.
+
+## 2026-06-17 — Phase 3.17 — Auth Smoke-Test Checklist
+
+### Completed
+- Added `docs/setup/AUTH_SMOKE_TEST.md`.
+- Documented local setup auth checks.
+- Documented connected Supabase signup/login/signout checks.
+- Documented profile and Carnos profile row verification.
+- Documented RLS smoke-test expectations.
+- Documented Phase 3 completion requirements.
+
+### Verification
+- `npm run verify:env` must pass.
+- `npm run check` must pass before commit.
+
+### Next
+- Add Phase 3 final audit checklist/script.

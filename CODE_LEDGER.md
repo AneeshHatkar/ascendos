@@ -408,3 +408,8 @@ Purpose: Barrel export for auth components.
 
 ### `docs/setup/PROTECTED_ROUTES.md`
 Purpose: Explains when and how to apply route protection safely.
+
+## Phase 3.17 — Auth Smoke-Test Checklist
+
+### `docs/setup/AUTH_SMOKE_TEST.md`
+Purpose: Manual checklist for validating local setup mode, connected Supabase auth, profile row creation, Carnos profile row creation, signout, and RLS behavior.
