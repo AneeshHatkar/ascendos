@@ -295,3 +295,8 @@ Change: Login form now uses `signInWithPassword` directly.
 
 ### `src/app/auth/signup/page.tsx`
 Change: Signup form now uses `signUpWithPassword` directly.
+
+## Phase 3.6 — Auth User Helper
+
+### `src/lib/auth/session.ts`
+Purpose: Provides safe current-user and required-user helpers for server-side auth checks.

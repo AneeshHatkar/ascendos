@@ -315,3 +315,17 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Verification
 - `npm run check` must pass before commit.
+
+## 2026-06-17 — Phase 3.6 — Auth User Helper
+
+### Completed
+- Added safe current-user helper.
+- Added required-user helper.
+- Helper returns null when Supabase env vars are missing so local placeholder builds do not crash.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Add auth-aware UI shell state.
+- Add protected-route wrapper after real Supabase project keys are configured.
