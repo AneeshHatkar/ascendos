@@ -663,3 +663,26 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Phase 4.7 — RLS/index/audit-link audit.
+
+## 2026-06-17 — Phase 4.7 — RLS, Index, and Source-Link Audit
+
+### Completed
+- Added `scripts/audit-phase-4.mjs`.
+- Added `audit:phase4` npm script.
+- Wired `audit:phase4` into `npm run check`.
+- Added checks for required Phase 4 migration files.
+- Added checks for required Phase 4 tables.
+- Added checks for RLS enablement.
+- Added checks for SELECT and INSERT policies.
+- Added checks for user indexes.
+- Added checks for updated_at triggers.
+- Added checks for AI action and chat message source links.
+- Added checks for daily log uniqueness.
+- Added checks for proof item task linkage.
+- Added guard to prevent `memory_items` from being created in Phase 4.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Phase 4.8 — Upgrade SQL migration validator.

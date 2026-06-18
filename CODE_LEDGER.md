@@ -496,3 +496,11 @@ Includes:
 - parent ownership checks
 - occurred_at vs logged_at event semantics
 - AI action and chat message source links
+
+## Phase 4.7 — RLS, Index, and Source-Link Audit
+
+### `scripts/audit-phase-4.mjs`
+Purpose: Audits Phase 4 core SQL spine migrations for required files, tables, RLS, policies, indexes, source links, updated_at triggers, daily log uniqueness, proof item task linkage, and forbidden premature memory table creation.
+
+### `package.json`
+Change: Added `audit:phase4` and wired it into `npm run check`.
