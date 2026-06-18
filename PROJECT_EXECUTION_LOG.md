@@ -797,3 +797,29 @@ The Phase 4 type rewrite was structurally correct for Phase 4 but accidentally r
 - `npm run audit:phase3` must pass.
 - `npm run build` must pass.
 - `npm run check` must pass.
+
+## 2026-06-18 — Phase 4.10 — Read-Only Repository Helpers
+
+### Completed
+- Added `src/lib/repositories/core-read.ts`.
+- Added `src/lib/repositories/index.ts`.
+- Added typed read-only helpers for:
+  - audit logs
+  - AI actions
+  - chat sessions
+  - chat messages
+  - goals
+  - goal milestones
+  - daily logs
+  - proof items
+  - tasks
+  - events
+- Added standard repository result shape.
+- Added limit clamping for list queries.
+- Kept Phase 4 read-only only; no mutation helpers were added.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Phase 4.11 — Add Phase 4 docs and completion audit notes.

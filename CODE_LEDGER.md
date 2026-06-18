@@ -554,3 +554,11 @@ Change: Restored Phase 3 exported aliases and added Phase 4 table aliases.
 
 ### `src/types/database.ts`
 Change: Restored `profiles.onboarding_status` and `confirmation_required` compatibility while keeping Phase 4 table typings.
+
+## Phase 4.10 — Read-Only Repository Helpers
+
+### `src/lib/repositories/core-read.ts`
+Purpose: Provides typed read-only repository helpers for Phase 4 core SQL spine tables.
+
+### `src/lib/repositories/index.ts`
+Purpose: Barrel export for repository helpers.
