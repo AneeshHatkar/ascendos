@@ -75,6 +75,7 @@ Upload or paste this file and say:
 - `src/components/layout/app-sidebar.tsx`
 - `src/components/layout/app-topbar.tsx`
 - `src/components/layout/auth-status.tsx`
+- `src/components/profile/profile-summary-card.tsx`
 - `src/lib/auth/actions.ts`
 - `src/lib/auth/session.ts`
 - `src/lib/dashboard-registry.ts`
@@ -516,6 +517,14 @@ Purpose: Server-side profile data access layer for reading the current user's `p
 
 ### `src/lib/profile/index.ts`
 Purpose: Barrel export for profile query helpers.
+
+## Phase 3.13 — Profile Status Card on Command Center
+
+### `src/components/profile/profile-summary-card.tsx`
+Purpose: Server component that displays local setup mode or the signed-in user's profile and Carnos profile state.
+
+### `src/app/command/page.tsx`
+Change: Replaced generic placeholder with a command center foundation page connected to profile status.
 ```
 
 ### `DECISIONS.md`
@@ -1030,6 +1039,21 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Add profile summary UI card or settings skeleton using these helpers.
+
+## 2026-06-17 — Phase 3.13 — Profile Status Card on Command Center
+
+### Completed
+- Added `ProfileSummaryCard`.
+- Wired profile/Carnos profile helper output into `/command`.
+- Added safe local setup state when Supabase env vars are missing.
+- Preserved confirmation-required memory messaging in UI.
+- Replaced generic command placeholder with an auth/profile-aware foundation page.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Add profile/settings route or protected route boundary after Supabase project configuration.
 ```
 
 ### `README.md`
@@ -15519,14 +15543,52 @@ export default function CarnosPage() {
 ### `src/app/command/page.tsx`
 
 ```tsx
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import { ProfileSummaryCard } from "@/components/profile/profile-summary-card";
+
+const commandModules = [
+  "Proof feed",
+  "Today queue",
+  "Carnos proposals",
+  "Timeline pulse",
+  "Goal pressure",
+  "System alerts",
+];
 
 export default function CommandPage() {
   return (
-    <PlaceholderDashboardPage
-      title="Command"
-      subtitle="Daily mission, proof actions, risks, correction, and Carnos alignment."
-    />
+    <div className="space-y-8">
+      <section className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+        <p className="text-xs uppercase tracking-[0.35em] text-cyan-200/70">
+          Command Center
+        </p>
+        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white">
+          Proof-first control room
+        </h1>
+        <p className="mt-4 max-w-3xl text-sm leading-6 text-white/60">
+          This dashboard will become the daily execution hub for ascendOS:
+          proof, goals, Carnos proposals, timeline events, risks, and next
+          actions. It is currently connected to the auth/profile foundation
+          without requiring live Supabase keys during local setup.
+        </p>
+      </section>
+
+      <ProfileSummaryCard />
+
+      <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {commandModules.map((module) => (
+          <div
+            key={module}
+            className="rounded-2xl border border-white/10 bg-black/20 p-5"
+          >
+            <p className="text-sm font-medium text-white">{module}</p>
+            <p className="mt-2 text-sm leading-6 text-white/50">
+              Pending real data wiring after the SQL spine and confirmation
+              system are established.
+            </p>
+          </div>
+        ))}
+      </section>
+    </div>
   );
 }
 ```
@@ -16284,6 +16346,97 @@ export async function AuthStatus() {
         Sign out
       </Link>
     </div>
+  );
+}
+```
+
+### `src/components/profile/profile-summary-card.tsx`
+
+```tsx
+import Link from "next/link";
+import { getProfileBundle } from "@/lib/profile";
+
+export async function ProfileSummaryCard() {
+  const bundle = await getProfileBundle();
+
+  if (!bundle) {
+    return (
+      <section className="rounded-3xl border border-amber-300/20 bg-amber-300/10 p-6">
+        <p className="text-xs uppercase tracking-[0.3em] text-amber-100/70">
+          Account foundation
+        </p>
+        <h2 className="mt-3 text-2xl font-semibold text-white">
+          Local setup mode
+        </h2>
+        <p className="mt-3 max-w-2xl text-sm leading-6 text-white/65">
+          Supabase environment variables are not configured yet, so ascendOS is
+          running safely without loading personal account data. This keeps local
+          builds stable while the foundation is still being wired.
+        </p>
+        <div className="mt-5 flex flex-wrap gap-3 text-sm">
+          <Link
+            href="/auth/login"
+            className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-white/70"
+          >
+            Login page
+          </Link>
+          <Link
+            href="/auth/signup"
+            className="rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-cyan-100"
+          >
+            Signup page
+          </Link>
+        </div>
+      </section>
+    );
+  }
+
+  const { user, profile, carnosProfile } = bundle;
+
+  return (
+    <section className="rounded-3xl border border-cyan-300/20 bg-cyan-300/10 p-6">
+      <p className="text-xs uppercase tracking-[0.3em] text-cyan-100/70">
+        Account foundation
+      </p>
+      <h2 className="mt-3 text-2xl font-semibold text-white">
+        Profile and Carnos state
+      </h2>
+
+      <div className="mt-6 grid gap-4 md:grid-cols-3">
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="text-xs uppercase tracking-[0.2em] text-white/40">
+            User
+          </p>
+          <p className="mt-2 text-sm text-white/75">
+            {user.email ?? "Signed in"}
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="text-xs uppercase tracking-[0.2em] text-white/40">
+            Profile
+          </p>
+          <p className="mt-2 text-sm text-white/75">
+            {profile?.onboarding_status ?? "Not loaded"}
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="text-xs uppercase tracking-[0.2em] text-white/40">
+            Carnos memory
+          </p>
+          <p className="mt-2 text-sm text-white/75">
+            {carnosProfile?.memory_mode ?? "Not loaded"}
+          </p>
+        </div>
+      </div>
+
+      <p className="mt-5 text-sm leading-6 text-white/60">
+        Carnos memory defaults to confirmation-required mode. This preserves the
+        project rule that important memories and data changes must be proposed,
+        reviewed, and confirmed before being written.
+      </p>
+    </section>
   );
 }
 ```

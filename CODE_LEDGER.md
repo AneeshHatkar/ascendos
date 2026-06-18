@@ -366,3 +366,11 @@ Purpose: Server-side profile data access layer for reading the current user's `p
 
 ### `src/lib/profile/index.ts`
 Purpose: Barrel export for profile query helpers.
+
+## Phase 3.13 — Profile Status Card on Command Center
+
+### `src/components/profile/profile-summary-card.tsx`
+Purpose: Server component that displays local setup mode or the signed-in user's profile and Carnos profile state.
+
+### `src/app/command/page.tsx`
+Change: Replaced generic placeholder with a command center foundation page connected to profile status.

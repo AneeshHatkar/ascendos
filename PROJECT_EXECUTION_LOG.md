@@ -439,3 +439,18 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Add profile summary UI card or settings skeleton using these helpers.
+
+## 2026-06-17 — Phase 3.13 — Profile Status Card on Command Center
+
+### Completed
+- Added `ProfileSummaryCard`.
+- Wired profile/Carnos profile helper output into `/command`.
+- Added safe local setup state when Supabase env vars are missing.
+- Preserved confirmation-required memory messaging in UI.
+- Replaced generic command placeholder with an auth/profile-aware foundation page.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Add profile/settings route or protected route boundary after Supabase project configuration.
