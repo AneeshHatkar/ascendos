@@ -31,3 +31,19 @@ All notable changes to ascendOS will be documented here.
 
 ### Removed
 - Nothing yet.
+
+## 2026-06-17 — Phase 2 Complete
+
+### Added
+- Next.js foundation.
+- Canonical dashboard routes.
+- Reusable app shell.
+- Dashboard registry.
+- Route and registry validation scripts.
+- Placeholder pages for all canonical dashboards.
+
+### Changed
+- Corrected Knowledge Vault route to `/knowledge`.
+
+### Verified
+- `npm run check` passes.

@@ -227,3 +227,33 @@ This file records every implementation step for ascendOS + Carnos.
 ### Next
 - Run final Phase 2 verification.
 - Mark Phase 2 complete.
+
+## 2026-06-17 — Phase 2 Complete — Next.js Foundation and Canonical Shell
+
+### Completed
+- Next.js App Router foundation created.
+- TypeScript, Tailwind, ESLint, and npm scripts verified.
+- Source-of-truth route policy implemented.
+- All 33 canonical dashboard routes created.
+- Incorrect `/knowledge-vault` route corrected to `/knowledge`.
+- Banned legacy route validation added.
+- Dashboard registry validation added.
+- Reusable app shell components added.
+- Reusable placeholder dashboard component added.
+- Homepage refactored to use the app shell.
+- All dashboard placeholders refactored to shared component.
+- `npm run check` passes.
+- Final route count verified.
+- Phase 2 is complete.
+
+### Final Verification
+- `npm run lint`: passed.
+- `npm run validate:routes`: passed.
+- `npm run validate:registry`: passed.
+- `npm run build`: passed.
+- Canonical dashboard routes: 33.
+- `page.tsx` files: 34.
+- Static generated pages: 37.
+
+### Next Phase
+Phase 3 — Supabase/Auth foundation.
