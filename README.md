@@ -6,7 +6,7 @@ The AI companion inside ascendOS is Carnos.
 
 ## Current Status
 
-Phase 1: repository foundation.
+Phase 2: Next.js foundation.
 
 ## Source of Truth
 
@@ -16,3 +16,28 @@ Phase 1: repository foundation.
 ## Core Promise
 
 Turn ambition into evidence; turn evidence into evolution.
+
+## Tech Stack
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- ESLint
+- npm
+- Supabase planned
+- Carnos AI layer planned
+
+## Development
+
+Run the local development server:
+
+    npm run dev
+
+Then open:
+
+    http://localhost:3000
+
+## Build Checks
+
+    npm run lint
+    npm run build

@@ -24,3 +24,28 @@ This file records every implementation step for ascendOS + Carnos.
 - Commit first foundation snapshot.
 - Create GitHub repo.
 - Push first commit.
+
+## 2026-06-17 — Phase 2 — Next.js Foundation
+
+### Completed
+- Created Next.js app foundation using temporary scaffold folder.
+- Recovered Git metadata after accidental `.git` deletion.
+- Reconnected local repo to GitHub remote.
+- Restored tracking against `origin/main`.
+- Copied Next.js app files into existing ascendOS repo.
+- Fixed `.gitignore` after create-next-app overwrite.
+- Restored ascendOS README identity after create-next-app overwrite.
+- Ran `npm run lint` successfully.
+- Ran `npm run build` successfully.
+- Renamed package from `ascendos_next_temp` to `ascendos`.
+
+### Notes
+- `node_modules/` remains ignored.
+- `next-env.d.ts` remains ignored.
+- Next.js build currently uses default starter app.
+- Default homepage will be replaced in the next UI shell chunk.
+
+### Next
+- Verify package name.
+- Commit and push Next.js foundation.
+
