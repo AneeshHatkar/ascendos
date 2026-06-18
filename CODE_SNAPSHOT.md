@@ -495,6 +495,17 @@ Change:
 
 ### `src/types/database.ts`
 Purpose: Defines TypeScript row, insert, update, enum, JSON, and Supabase-compatible database types for the first SQL migration.
+
+## Phase 3.11 — Typed Supabase Clients
+
+### `src/lib/supabase/browser.ts`
+Change: Browser Supabase client now uses the typed `Database` interface.
+
+### `src/lib/supabase/server.ts`
+Change: Server Supabase client now uses the typed `Database` interface.
+
+### `src/lib/supabase/middleware.ts`
+Change: Middleware Supabase client now uses the typed `Database` interface.
 ```
 
 ### `DECISIONS.md`
@@ -979,6 +990,20 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Wire Supabase clients to the typed `Database` interface.
+
+## 2026-06-17 — Phase 3.11 — Typed Supabase Clients
+
+### Completed
+- Wired `Database` type into Supabase browser client.
+- Wired `Database` type into Supabase server client.
+- Wired `Database` type into Supabase middleware client.
+- Future Supabase queries can now receive typed table/row support.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Add profile repository/helper functions for reading profile and Carnos profile data.
 ```
 
 ### `README.md`
@@ -16634,12 +16659,13 @@ export const BANNED_LEGACY_ROUTES = [
 "use client";
 
 import { createBrowserClient } from "@supabase/ssr";
+import type { Database } from "@/types/database";
 import { getSupabaseBrowserEnv } from "./env";
 
 export function createSupabaseBrowserClient() {
   const { supabaseUrl, supabaseAnonKey } = getSupabaseBrowserEnv();
 
-  return createBrowserClient(supabaseUrl, supabaseAnonKey);
+  return createBrowserClient<Database>(supabaseUrl, supabaseAnonKey);
 }
 ```
 
@@ -16675,6 +16701,7 @@ export function getSupabaseBrowserEnv() {
 ```tsx
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import type { Database } from "@/types/database";
 import { getSupabaseBrowserEnv, hasSupabaseBrowserEnv } from "./env";
 
 export async function updateSupabaseSession(request: NextRequest) {
@@ -16688,7 +16715,7 @@ export async function updateSupabaseSession(request: NextRequest) {
 
   const { supabaseUrl, supabaseAnonKey } = getSupabaseBrowserEnv();
 
-  const supabase = createServerClient(supabaseUrl, supabaseAnonKey, {
+  const supabase = createServerClient<Database>(supabaseUrl, supabaseAnonKey, {
     cookies: {
       getAll() {
         return request.cookies.getAll();
@@ -16720,13 +16747,14 @@ export async function updateSupabaseSession(request: NextRequest) {
 ```tsx
 import { cookies } from "next/headers";
 import { createServerClient } from "@supabase/ssr";
+import type { Database } from "@/types/database";
 import { getSupabaseBrowserEnv } from "./env";
 
 export async function createSupabaseServerClient() {
   const cookieStore = await cookies();
   const { supabaseUrl, supabaseAnonKey } = getSupabaseBrowserEnv();
 
-  return createServerClient(supabaseUrl, supabaseAnonKey, {
+  return createServerClient<Database>(supabaseUrl, supabaseAnonKey, {
     cookies: {
       getAll() {
         return cookieStore.getAll();

@@ -409,3 +409,17 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Wire Supabase clients to the typed `Database` interface.
+
+## 2026-06-17 — Phase 3.11 — Typed Supabase Clients
+
+### Completed
+- Wired `Database` type into Supabase browser client.
+- Wired `Database` type into Supabase server client.
+- Wired `Database` type into Supabase middleware client.
+- Future Supabase queries can now receive typed table/row support.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Add profile repository/helper functions for reading profile and Carnos profile data.

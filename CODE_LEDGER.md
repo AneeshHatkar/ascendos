@@ -347,3 +347,14 @@ Change:
 
 ### `src/types/database.ts`
 Purpose: Defines TypeScript row, insert, update, enum, JSON, and Supabase-compatible database types for the first SQL migration.
+
+## Phase 3.11 — Typed Supabase Clients
+
+### `src/lib/supabase/browser.ts`
+Change: Browser Supabase client now uses the typed `Database` interface.
+
+### `src/lib/supabase/server.ts`
+Change: Server Supabase client now uses the typed `Database` interface.
+
+### `src/lib/supabase/middleware.ts`
+Change: Middleware Supabase client now uses the typed `Database` interface.
