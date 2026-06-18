@@ -308,3 +308,15 @@ Purpose: Displays local setup, login/signup, or signed-in status.
 
 ### `src/components/layout/app-topbar.tsx`
 Change: Uses `AuthStatus`.
+
+## Phase 3.7C — Code Snapshot Generator
+
+### `scripts/generate-code-snapshot.mjs`
+Purpose: Generates `CODE_SNAPSHOT.md`, a single markdown file containing the important project code and docs for future chat handoff.
+
+### `CODE_SNAPSHOT.md`
+Purpose: Generated codebase snapshot for continuity across chats.
+
+### `package.json`
+Change:
+- Added `snapshot:code` script.

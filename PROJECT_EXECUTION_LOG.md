@@ -342,3 +342,18 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Add protected-route boundary after profile migration exists.
+
+## 2026-06-17 — Phase 3.7C — Code Snapshot Generator
+
+### Completed
+- Added `scripts/generate-code-snapshot.mjs`.
+- Added `npm run snapshot:code`.
+- Generated `CODE_SNAPSHOT.md`.
+- Snapshot includes important source, config, docs, scripts, and SQL files.
+- Snapshot excludes `node_modules`, `.next`, `.git`, `.venv`, private env files, and package lock noise.
+
+### Purpose
+`CODE_SNAPSHOT.md` allows a future chat to understand the current implementation without needing every file pasted manually.
+
+### Next
+- Continue Phase 3 auth/database foundation.
