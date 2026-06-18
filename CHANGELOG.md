@@ -47,3 +47,17 @@ All notable changes to ascendOS will be documented here.
 
 ### Verified
 - `npm run check` passes.
+
+## Phase 3 Complete — Supabase/Auth Foundation
+
+### Added
+- Supabase/Auth foundation.
+- SQL profile foundation.
+- RLS-backed profile and Carnos profile tables.
+- Typed Supabase clients.
+- Auth pages and actions.
+- Profile helpers and UI status.
+- Protected route boundary.
+- Setup/smoke-test docs.
+- Migration validation.
+- Phase 3 audit gate.

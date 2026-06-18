@@ -1,0 +1,72 @@
+# ascendOS Phase Status
+
+## Phase 3 — Supabase/Auth Foundation — COMPLETE
+
+### Status
+Complete as of commit to be created after final verification.
+
+### Completed Scope
+- Supabase package installation.
+- Environment template.
+- Environment verification script.
+- Supabase browser client.
+- Supabase server client.
+- Supabase middleware/session refresh.
+- Auth login page.
+- Auth signup page.
+- Auth callback route.
+- Auth signout route.
+- Auth server actions.
+- Current-user session helpers.
+- Typed database foundation.
+- Typed Supabase clients.
+- `profiles` SQL migration.
+- `carnos_profiles` SQL migration.
+- RLS policies for owner-only profile data.
+- Auth user creation trigger.
+- Automatic profile creation.
+- Automatic Carnos profile creation.
+- Profile query helpers.
+- Command Center profile status card.
+- Settings page skeleton.
+- Protected route boundary.
+- Supabase setup guide.
+- Protected route guide.
+- Auth smoke-test checklist.
+- SQL migration validation script.
+- Phase 3 audit script.
+- Code snapshot generator integration.
+
+### Verification Gates
+Phase 3 is considered complete because these commands pass:
+
+- `npm run verify:env`
+- `npm run snapshot:code`
+- `npm run check`
+
+`npm run check` includes:
+
+- lint
+- route validation
+- registry validation
+- migration validation
+- Phase 3 audit
+- production build
+
+### Deferred Until Live Supabase Connection
+The following are intentionally deferred until a real Supabase project is configured:
+
+- applying migration to live Supabase
+- live signup/login test
+- live signout test
+- live RLS cross-user test
+- production auth callback configuration
+
+These are documented in:
+
+- `docs/setup/SUPABASE_SETUP.md`
+- `docs/setup/AUTH_SMOKE_TEST.md`
+- `docs/setup/PROTECTED_ROUTES.md`
+
+### Next Phase
+Phase 4 — Core SQL Spine.

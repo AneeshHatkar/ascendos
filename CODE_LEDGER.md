@@ -423,3 +423,8 @@ Purpose: Automated completion gate for Phase 3 Supabase/Auth foundation.
 Change:
 - Added `audit:phase3`.
 - Added Phase 3 audit to `npm run check`.
+
+## Phase 3.20 — Phase 3 Completion
+
+### `PHASE_STATUS.md`
+Purpose: Tracks completed project phases, verification gates, deferred live checks, and next phase.
