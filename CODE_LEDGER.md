@@ -504,3 +504,19 @@ Purpose: Audits Phase 4 core SQL spine migrations for required files, tables, RL
 
 ### `package.json`
 Change: Added `audit:phase4` and wired it into `npm run check`.
+
+## Phase 4.7a — Phase 4 Audit Script Replacement
+
+### `scripts/audit-phase-4.mjs`
+Change: Replaced brittle global ownership check with per-table create-block ownership verification and kept all Phase 4 audit gates.
+
+## Phase 4.7b — Phase 4 Audit and SQL Typo Fix
+
+### `scripts/audit-phase-4.mjs`
+Change: Replaced corrupted table-block regex parser with safer string-boundary table block extraction.
+
+### `supabase/migrations/0004_goals_foundation.sql`
+Change: Fixed missing space in `references public.profiles`.
+
+### `supabase/migrations/0006_tasks_and_events.sql`
+Change: Fixed missing space in `references public.profiles`.

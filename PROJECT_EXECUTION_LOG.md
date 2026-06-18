@@ -686,3 +686,33 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Phase 4.8 — Upgrade SQL migration validator.
+
+## 2026-06-17 — Phase 4.7a — Phase 4 Audit Script Replacement
+
+### Fixed
+- Replaced the failed Phase 4 audit script with a corrected version.
+- Added per-table create-block extraction.
+- Verified each Phase 4 table has its own user ownership reference.
+- Kept checks for RLS, policies, indexes, source links, parent ownership checks, daily log uniqueness, proof item task linkage, and forbidden premature memory table creation.
+
+### Reason
+The first Phase 4 audit script used a brittle global ownership regex and failed even though the SQL migrations included user ownership references.
+
+### Verification
+- `npm run audit:phase4` must pass.
+- `npm run check` must pass.
+
+## 2026-06-17 — Phase 4.7b — Phase 4 Audit and SQL Typo Fix
+
+### Fixed
+- Corrected `referencespublic.profiles` typos in Phase 4 migrations.
+- Replaced brittle/corrupted Phase 4 audit parser.
+- Added safer table-block extraction using string boundaries.
+- Kept checks for required tables, RLS, policies, indexes, source links, parent ownership checks, daily log uniqueness, proof item task linkage, and forbidden premature memory table creation.
+
+### Reason
+The previous audit script copy became corrupted and failed to parse `create table` blocks. The diagnostic also revealed two real SQL spacing typos that needed correction.
+
+### Verification
+- `npm run audit:phase4` must pass.
+- `npm run check` must pass.
