@@ -28,6 +28,7 @@ Upload or paste this file and say:
 - `scripts/generate-code-snapshot.mjs`
 - `scripts/validate-registry-coverage.mjs`
 - `scripts/validate-route-coverage.mjs`
+- `scripts/validate-sql-migrations.mjs`
 - `src/app/analytics/page.tsx`
 - `src/app/auth/callback/route.ts`
 - `src/app/auth/login/page.tsx`
@@ -478,6 +479,16 @@ Includes:
 - auth user creation trigger
 - RLS policies
 - owner-only access
+
+## Phase 3.9 — SQL Migration Validation
+
+### `scripts/validate-sql-migrations.mjs`
+Purpose: Validates SQL migration naming and basic safety rules.
+
+### `package.json`
+Change:
+- Added `validate:migrations`.
+- Updated `check` to include migration validation before build.
 ```
 
 ### `DECISIONS.md`
@@ -933,6 +944,20 @@ Phase 3 — Supabase/Auth foundation.
 - Add SQL migration validation script.
 - Add profile TypeScript types.
 - Add profile/settings page skeleton later.
+
+## 2026-06-17 — Phase 3.9 — SQL Migration Validation
+
+### Completed
+- Added SQL migration validation script.
+- Added `npm run validate:migrations`.
+- Added migration validation into `npm run check`.
+- Validation checks migration naming, emptiness, RLS presence, personal table policies, and auth trigger safety.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Add TypeScript database row types for profiles and Carnos profiles.
 ```
 
 ### `README.md`
@@ -14814,9 +14839,10 @@ export default nextConfig;
     "start": "next start",
     "lint": "eslint",
     "validate:routes": "node scripts/validate-route-coverage.mjs",
-    "check": "npm run lint && npm run validate:routes && npm run validate:registry && npm run build",
+    "check": "npm run lint && npm run validate:routes && npm run validate:registry && npm run validate:migrations && npm run build",
     "validate:registry": "node scripts/validate-registry-coverage.mjs",
-    "snapshot:code": "node scripts/generate-code-snapshot.mjs"
+    "snapshot:code": "node scripts/generate-code-snapshot.mjs",
+    "validate:migrations": "node scripts/validate-sql-migrations.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",
@@ -15122,6 +15148,77 @@ if (presentBannedRoutes.length > 0) {
 
 console.log(`Route coverage valid: ${canonicalRoutes.length} canonical routes present.`);
 console.log("Banned legacy route check passed.");
+```
+
+### `scripts/validate-sql-migrations.mjs`
+
+```js
+import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
+import { join } from "node:path";
+
+const MIGRATIONS_DIR = "supabase/migrations";
+
+function fail(message) {
+  console.error(`SQL migration validation failed: ${message}`);
+  process.exit(1);
+}
+
+if (!existsSync(MIGRATIONS_DIR)) {
+  fail(`${MIGRATIONS_DIR} does not exist.`);
+}
+
+const files = readdirSync(MIGRATIONS_DIR)
+  .filter((file) => file.endsWith(".sql"))
+  .sort();
+
+if (files.length === 0) {
+  fail("No SQL migration files found.");
+}
+
+const seenNumbers = new Set();
+
+for (const file of files) {
+  const fullPath = join(MIGRATIONS_DIR, file);
+  const stats = statSync(fullPath);
+
+  if (!stats.isFile()) {
+    continue;
+  }
+
+  const match = file.match(/^(\d{4})_[a-z0-9_]+\.sql$/);
+
+  if (!match) {
+    fail(`${file} must match pattern 0001_descriptive_name.sql.`);
+  }
+
+  const number = match[1];
+
+  if (seenNumbers.has(number)) {
+    fail(`Duplicate migration number ${number}.`);
+  }
+
+  seenNumbers.add(number);
+
+  const content = readFileSync(fullPath, "utf8").trim();
+
+  if (!content) {
+    fail(`${file} is empty.`);
+  }
+
+  if (/create table/i.test(content) && !/enable row level security/i.test(content)) {
+    fail(`${file} creates tables but does not enable row level security.`);
+  }
+
+  if (/public\.(profiles|carnos_profiles)/i.test(content) && !/create policy/i.test(content)) {
+    fail(`${file} touches personal tables but does not define policies.`);
+  }
+
+  if (/auth\.users/i.test(content) && !/security definer/i.test(content)) {
+    fail(`${file} touches auth.users but does not define a security definer function.`);
+  }
+}
+
+console.log(`SQL migration validation passed: ${files.length} migration file(s).`);
 ```
 
 ### `src/app/analytics/page.tsx`

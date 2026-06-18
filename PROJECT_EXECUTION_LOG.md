@@ -380,3 +380,17 @@ Phase 3 — Supabase/Auth foundation.
 - Add SQL migration validation script.
 - Add profile TypeScript types.
 - Add profile/settings page skeleton later.
+
+## 2026-06-17 — Phase 3.9 — SQL Migration Validation
+
+### Completed
+- Added SQL migration validation script.
+- Added `npm run validate:migrations`.
+- Added migration validation into `npm run check`.
+- Validation checks migration naming, emptiness, RLS presence, personal table policies, and auth trigger safety.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Add TypeScript database row types for profiles and Carnos profiles.

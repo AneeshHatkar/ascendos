@@ -332,3 +332,13 @@ Includes:
 - auth user creation trigger
 - RLS policies
 - owner-only access
+
+## Phase 3.9 — SQL Migration Validation
+
+### `scripts/validate-sql-migrations.mjs`
+Purpose: Validates SQL migration naming and basic safety rules.
+
+### `package.json`
+Change:
+- Added `validate:migrations`.
+- Updated `check` to include migration validation before build.
