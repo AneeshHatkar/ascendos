@@ -267,3 +267,20 @@ Purpose: Refreshes Supabase sessions in middleware.
 
 ### `middleware.ts`
 Purpose: Wires Supabase session refresh into Next.js middleware.
+
+## Phase 3.5 — Auth Page Skeleton
+
+### `src/lib/auth/actions.ts`
+Purpose: Server actions for login, signup, and signout.
+
+### `src/app/auth/login/page.tsx`
+Purpose: Login page.
+
+### `src/app/auth/signup/page.tsx`
+Purpose: Signup page.
+
+### `src/app/auth/callback/route.ts`
+Purpose: Supabase auth callback route.
+
+### `src/app/auth/signout/route.ts`
+Purpose: Signout route.

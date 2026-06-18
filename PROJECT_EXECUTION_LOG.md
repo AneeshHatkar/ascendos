@@ -288,3 +288,20 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Create auth route group and login/signup pages.
+
+## 2026-06-17 — Phase 3.5 — Auth Page Skeleton
+
+### Completed
+- Added login page.
+- Added signup page.
+- Added auth callback route.
+- Added signout route.
+- Added server auth actions for login, signup, and signout.
+- These are skeletons and require real Supabase env keys before live auth can be tested.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Add protected-route helper.
+- Add profile SQL migration.
