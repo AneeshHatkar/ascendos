@@ -386,3 +386,14 @@ Purpose: Step-by-step guide for connecting ascendOS to a real Supabase project s
 ### `package.json`
 Change:
 - Added `verify:env`.
+
+## Phase 3.15 — Settings Page Skeleton
+
+### `src/app/settings/page.tsx`
+Purpose: Settings foundation page for profile, Carnos preferences, memory controls, and privacy/security controls.
+
+### `src/lib/navigation/dashboard-registry.ts`
+Change: Added Settings route.
+
+### `scripts/validate-route-coverage.mjs`
+Change: Added `/settings` to route validation.

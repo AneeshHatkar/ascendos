@@ -67,6 +67,7 @@ Upload or paste this file and say:
 - `src/app/research-lab/page.tsx`
 - `src/app/research-stanford/page.tsx`
 - `src/app/resume/page.tsx`
+- `src/app/settings/page.tsx`
 - `src/app/sleep-energy/page.tsx`
 - `src/app/supplements/page.tsx`
 - `src/app/timeline/page.tsx`
@@ -539,6 +540,17 @@ Purpose: Step-by-step guide for connecting ascendOS to a real Supabase project s
 ### `package.json`
 Change:
 - Added `verify:env`.
+
+## Phase 3.15 — Settings Page Skeleton
+
+### `src/app/settings/page.tsx`
+Purpose: Settings foundation page for profile, Carnos preferences, memory controls, and privacy/security controls.
+
+### `src/lib/navigation/dashboard-registry.ts`
+Change: Added Settings route.
+
+### `scripts/validate-route-coverage.mjs`
+Change: Added `/settings` to route validation.
 ```
 
 ### `DECISIONS.md`
@@ -1085,6 +1097,21 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Add profile/settings page skeleton.
+
+## 2026-06-17 — Phase 3.15 — Settings Page Skeleton
+
+### Completed
+- Added `/settings` page.
+- Added profile/Carnos status summary to settings.
+- Added placeholder sections for profile, Carnos preferences, memory controls, and security/privacy.
+- Added Settings to dashboard registry.
+- Added `/settings` to route validation.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Add protected route boundary and decide which routes become auth-required after Supabase is connected.
 ```
 
 ### `README.md`
@@ -16274,6 +16301,73 @@ export default function ResumePage() {
       title="Resume"
       subtitle="Resume versions, role targeting, keyword alignment, and application proof."
     />
+  );
+}
+```
+
+### `src/app/settings/page.tsx`
+
+```tsx
+import { ProfileSummaryCard } from "@/components/profile/profile-summary-card";
+
+const settingsSections = [
+  {
+    title: "Profile",
+    description:
+      "Display name, timezone, onboarding state, and identity settings will live here.",
+  },
+  {
+    title: "Carnos Preferences",
+    description:
+      "Companion name, persona mode, voice setting, memory mode, and safety mode will live here.",
+  },
+  {
+    title: "Memory Controls",
+    description:
+      "Future controls for approved memories, memory candidates, export, deletion, and privacy levels.",
+  },
+  {
+    title: "Security and Privacy",
+    description:
+      "Future controls for account privacy, data export, delete flows, and audit visibility.",
+  },
+];
+
+export default function SettingsPage() {
+  return (
+    <div className="space-y-8">
+      <section className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+        <p className="text-xs uppercase tracking-[0.35em] text-cyan-200/70">
+          Settings
+        </p>
+        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white">
+          Profile, privacy, and Carnos controls
+        </h1>
+        <p className="mt-4 max-w-3xl text-sm leading-6 text-white/60">
+          This page will become the control center for account identity, Carnos
+          preferences, approved memory, export/delete controls, and privacy
+          boundaries. Mutations are intentionally not wired yet because
+          important Carnos and profile changes must use validated server actions
+          and clear confirmation rules.
+        </p>
+      </section>
+
+      <ProfileSummaryCard />
+
+      <section className="grid gap-4 md:grid-cols-2">
+        {settingsSections.map((section) => (
+          <div
+            key={section.title}
+            className="rounded-2xl border border-white/10 bg-black/20 p-5"
+          >
+            <p className="text-sm font-medium text-white">{section.title}</p>
+            <p className="mt-2 text-sm leading-6 text-white/50">
+              {section.description}
+            </p>
+          </div>
+        ))}
+      </section>
+    </div>
   );
 }
 ```

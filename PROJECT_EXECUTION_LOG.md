@@ -471,3 +471,18 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Add profile/settings page skeleton.
+
+## 2026-06-17 — Phase 3.15 — Settings Page Skeleton
+
+### Completed
+- Added `/settings` page.
+- Added profile/Carnos status summary to settings.
+- Added placeholder sections for profile, Carnos preferences, memory controls, and security/privacy.
+- Added Settings to dashboard registry.
+- Added `/settings` to route validation.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Add protected route boundary and decide which routes become auth-required after Supabase is connected.
