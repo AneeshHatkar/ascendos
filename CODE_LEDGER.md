@@ -535,3 +535,22 @@ Checks:
 - user-owned table RLS/policy/index baseline
 - required Phase 3 profile tables
 - premature memory table prevention
+
+## Phase 4.9 — TypeScript Database Types Update
+
+### `src/types/database.ts`
+Purpose: Provides typed Supabase table contracts for Phase 3 and Phase 4 tables.
+Includes:
+- Row, Insert, Update, and Relationship types
+- typed status/lifecycle unions
+- Json helper type
+
+## Phase 4.9a — Database Type Alias Fix
+
+### `src/types/database.ts`
+Change: Restored Phase 3 exported aliases and added Phase 4 table aliases.
+
+## Phase 4.9b — Phase 3 Database Type Compatibility Fix
+
+### `src/types/database.ts`
+Change: Restored `profiles.onboarding_status` and `confirmation_required` compatibility while keeping Phase 4 table typings.

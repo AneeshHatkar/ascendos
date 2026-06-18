@@ -743,3 +743,57 @@ The previous audit script copy became corrupted and failed to parse `create tabl
 
 ### Next
 - Phase 4.9 — Update TypeScript database types for Phase 4 tables.
+
+## 2026-06-17 — Phase 4.9 — TypeScript Database Types Update
+
+### Completed
+- Updated `src/types/database.ts`.
+- Added typed table definitions for all Phase 4 core SQL spine tables:
+  - `audit_logs`
+  - `ai_actions`
+  - `chat_sessions`
+  - `chat_messages`
+  - `goals`
+  - `goal_milestones`
+  - `daily_logs`
+  - `proof_items`
+  - `tasks`
+  - `events`
+- Added Row, Insert, Update, and Relationship typing.
+- Preserved Phase 3 `profiles` and `carnos_profiles` typing.
+- Added typed lifecycle/status unions for AI actions, chat messages, goals, milestones, proof items, tasks, and events.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Phase 4.10 — Add read-only repository helpers.
+
+## 2026-06-18 — Phase 4.9a — Database Type Alias Fix
+
+### Fixed
+- Restored `ProfileRow` export required by Phase 3 profile query code.
+- Restored `CarnosProfileRow` export required by Phase 3 profile query code.
+- Added Row, Insert, and Update aliases for all Phase 4 core SQL spine tables.
+
+### Reason
+The Phase 4 database type rewrite replaced the previous Phase 3 helper exports, causing build and `audit:phase3` to fail.
+
+### Verification
+- `npm run audit:phase3` must pass.
+- `npm run check` must pass.
+
+## 2026-06-18 — Phase 4.9b — Phase 3 Database Type Compatibility Fix
+
+### Fixed
+- Restored `profiles.onboarding_status` typing.
+- Restored the `confirmation_required` Carnos memory-mode literal expected by Phase 3 audit.
+- Preserved the new Phase 4 database table typings and aliases.
+
+### Reason
+The Phase 4 type rewrite was structurally correct for Phase 4 but accidentally removed two Phase 3 compatibility details used by existing code and audit checks.
+
+### Verification
+- `npm run audit:phase3` must pass.
+- `npm run build` must pass.
+- `npm run check` must pass.
