@@ -158,3 +158,48 @@ The following remain intentionally deferred:
 
 ### Next Recommended Phase
 Phase 5 — Core Read UI Integration.
+
+## Completed Phase Baseline
+
+### Phase 1 — Repository and Source Foundation
+Status: Complete.
+
+Confirmed foundation:
+- repository initialized
+- source-of-truth files added
+- project logs added
+- code ledger added
+- decision log added
+- changelog added
+
+### Phase 2 — Next.js Route Shell
+Status: Complete.
+
+Confirmed foundation:
+- canonical route shell added
+- route registry added
+- route validation added
+- banned legacy route check added
+
+### Phase 3 — Supabase/Auth Foundation
+Status: Complete.
+
+Confirmed foundation:
+- Supabase clients added
+- auth pages/actions added
+- session helpers added
+- protected route helper added
+- profiles and Carnos profiles migration added
+- Phase 3 audit added
+
+### Phase 4 — Core SQL Spine
+Status: Complete.
+
+Confirmed foundation:
+- core SQL migrations added
+- Phase 4 audit added
+- SQL migration validator upgraded
+- database TypeScript types added
+- read-only repository helpers added
+- database documentation added
+- Phase 4 report added

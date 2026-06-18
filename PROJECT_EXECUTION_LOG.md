@@ -855,3 +855,30 @@ The Phase 4 type rewrite was structurally correct for Phase 4 but accidentally r
 
 ### Next
 - Phase 5 — Core Read UI Integration.
+
+## 2026-06-18 — Full Source Alignment Audit
+
+### Completed
+- Added `scripts/audit-source-alignment.mjs`.
+- Added `audit:source` npm script.
+- Wired `audit:source` into `npm run check`.
+- Added checks for source-of-truth files, Phase 1 foundation, Phase 2 routes, Phase 3 auth/Supabase foundation, Phase 4 SQL spine, TypeScript types, read-only repository boundaries, and phase logs.
+
+### Purpose
+Verify that Phases 1–4 remain aligned with the FINAL_SYNCED DOCX/JSON before starting the next implementation phase.
+
+### Next
+- Run full gate.
+- Commit if passing.
+
+## 2026-06-18 — Source Alignment Audit Phase Marker Fix
+
+### Fixed
+- Added explicit Phase 1–4 completed baseline markers to `PHASE_STATUS.md`.
+
+### Reason
+The full source alignment audit checks that all previous stages are represented in phase status tracking. The code, route, auth, SQL, type, and repository checks passed, but `PHASE_STATUS.md` did not contain an explicit `Phase 1` marker.
+
+### Verification
+- `npm run audit:source` must pass.
+- `npm run check` must pass.

@@ -579,3 +579,16 @@ Change: Marked Phase 4 — Core SQL Spine complete.
 
 ### `PROJECT_EXECUTION_LOG.md`
 Change: Added Phase 4 completion entry.
+
+## Full Source Alignment Audit
+
+### `scripts/audit-source-alignment.mjs`
+Purpose: Audits Phases 1–4 against FINAL_SYNCED source-of-truth files and implementation gates.
+
+### `package.json`
+Change: Added `audit:source` and wired it into `npm run check`.
+
+## Source Alignment Audit Phase Marker Fix
+
+### `PHASE_STATUS.md`
+Change: Added explicit completed baseline markers for Phase 1, Phase 2, Phase 3, and Phase 4.
