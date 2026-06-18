@@ -213,3 +213,17 @@ This file records every implementation step for ascendOS + Carnos.
 ### Next
 - Add registry coverage validation.
 - Perform final Phase 2 verification.
+
+## 2026-06-17 — Phase 2.26 — Registry Coverage Validation
+
+### Completed
+- Added registry coverage validation script.
+- Added `npm run validate:registry`.
+- Updated `npm run check` to run lint, route validation, registry validation, and build.
+- Confirmed 33 registry routes match 33 canonical routes.
+- Confirmed banned legacy route check passes.
+- Confirmed 37 static pages generated.
+
+### Next
+- Run final Phase 2 verification.
+- Mark Phase 2 complete.

@@ -219,3 +219,13 @@ Purpose: Shared placeholder dashboard layout used by canonical dashboard pages.
 
 ### `src/app/*/page.tsx`
 Change: Refactored canonical placeholder pages to use `PlaceholderDashboardPage`.
+
+## Phase 2.26 — Registry Coverage Validation
+
+### `scripts/validate-registry-coverage.mjs`
+Purpose: Validates dashboard registry coverage against canonical routes.
+
+### `package.json`
+Change:
+- Added `validate:registry`.
+- Updated `check` to include registry validation.
