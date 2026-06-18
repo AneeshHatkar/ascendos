@@ -117,3 +117,8 @@ Purpose: Shared top navigation/status bar.
 
 ### `src/components/dashboard/dashboard-card.tsx`
 Purpose: Reusable dashboard preview card.
+
+## Phase 2.13 — Homepage Component Refactor
+
+### `src/app/page.tsx`
+Purpose: Uses reusable layout and dashboard card components instead of inline shell markup.

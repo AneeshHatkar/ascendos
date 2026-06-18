@@ -97,3 +97,16 @@ This file records every implementation step for ascendOS + Carnos.
 ### Next
 - Refactor homepage to use reusable shell components.
 - Add canonical route placeholder pages.
+
+## 2026-06-17 — Phase 2.13 — Homepage Component Refactor
+
+### Completed
+- Refactored homepage to use `AppShell`.
+- Refactored dashboard preview cards to use `DashboardCard`.
+- Preserved core ascendOS positioning and canonical route count.
+- Verified `npm run lint`.
+- Verified `npm run build`.
+- Verified `git diff --check`.
+
+### Next
+- Add canonical placeholder pages for the first dashboard route group.
