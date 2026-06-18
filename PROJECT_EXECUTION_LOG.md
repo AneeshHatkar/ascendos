@@ -67,3 +67,18 @@ This file records every implementation step for ascendOS + Carnos.
 - Commit and push app shell structure.
 - Replace default starter homepage with ascendOS landing shell.
 
+## 2026-06-17 — Phase 2.9 — ascendOS Homepage Shell
+
+### Completed
+- Replaced default Next.js starter homepage with ascendOS landing shell.
+- Added Carnos Command Foundation hero section.
+- Added core signal chips for Mission, Proof, Calendar, Timeline, Carnos, and Audit.
+- Displayed canonical dashboard registry preview on the homepage.
+- Verified `npm run lint`.
+- Verified `npm run build`.
+- Verified `git diff --check`.
+
+### Next
+- Create reusable layout components.
+- Create canonical navigation shell.
+- Add placeholder pages for canonical routes.

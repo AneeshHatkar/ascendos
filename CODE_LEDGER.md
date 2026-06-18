@@ -92,3 +92,14 @@ Purpose: Future SQL migrations, seed data, and RLS policy files.
 ### `tests/*`
 Purpose: Future unit, schema, API, RLS, AI fixture, and e2e smoke tests.
 
+## Phase 2.9 — ascendOS Homepage Shell
+
+### `src/app/page.tsx`
+Purpose: Replaces default Next.js starter page with the first ascendOS shell screen.
+Includes:
+- ascendOS identity.
+- Carnos Command Foundation label.
+- Core promise.
+- Proof-based evolution positioning.
+- Core signal chips.
+- Canonical dashboard registry preview.
