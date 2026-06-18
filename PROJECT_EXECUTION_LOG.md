@@ -48,3 +48,22 @@ This file records every implementation step for ascendOS + Carnos.
 ### Next
 - Verify package name.
 - Commit and push Next.js foundation.
+
+## 2026-06-17 — Phase 2.6–2.7 — App Shell Structure and Route Registry
+
+### Completed
+- Created component folder structure.
+- Created domain library folder structure.
+- Created schema and type folders.
+- Created Supabase migration/seed/RLS folders.
+- Created test folder structure.
+- Added `.gitkeep` files for empty tracked directories.
+- Added canonical route constants in `src/lib/routes.ts`.
+- Added initial dashboard registry in `src/lib/dashboard-registry.ts`.
+- Ran `npm run lint` successfully.
+- Ran `npm run build` successfully.
+
+### Next
+- Commit and push app shell structure.
+- Replace default starter homepage with ascendOS landing shell.
+

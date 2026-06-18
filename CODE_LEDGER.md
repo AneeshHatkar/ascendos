@@ -65,3 +65,30 @@ Purpose: Merged project ignore rules with Next.js ignore rules.
 
 ### `README.md`
 Purpose: Restored ascendOS project identity and added Next.js development commands.
+
+## Phase 2.6–2.7 — App Shell Structure and Route Registry
+
+### `src/components/*`
+Purpose: Holds reusable UI, layout, dashboard, Carnos, form, table, chart, calendar, timeline, privacy, voice, and grimoire components.
+
+### `src/lib/*`
+Purpose: Holds domain services and shared logic for routes, Supabase, AI, dates, scoring, audit, security, storage, and analytics.
+
+### `src/lib/routes.ts`
+Purpose: Canonical route constants and banned legacy route constants.
+
+### `src/lib/dashboard-registry.ts`
+Purpose: Initial dashboard registry for shell navigation and dashboard metadata.
+
+### `src/schemas`
+Purpose: Future Zod schema files.
+
+### `src/types`
+Purpose: Future shared TypeScript type definitions.
+
+### `supabase/*`
+Purpose: Future SQL migrations, seed data, and RLS policy files.
+
+### `tests/*`
+Purpose: Future unit, schema, API, RLS, AI fixture, and e2e smoke tests.
+
