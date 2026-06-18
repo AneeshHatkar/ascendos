@@ -550,3 +550,19 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Begin Phase 4 — Core SQL Spine.
+
+## 2026-06-17 — Phase 4.1 — Core SQL Spine Plan Lock
+
+### Completed
+- Added Phase 4 plan lock document.
+- Defined exact Phase 4 table scope.
+- Defined migration order.
+- Defined RLS/index expectations.
+- Defined deferred items to prevent Phase 4 scope creep.
+- Updated `PHASE_STATUS.md` to mark Phase 4 started.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Phase 4.2 — Add audit_logs and ai_actions migration.

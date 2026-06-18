@@ -428,3 +428,11 @@ Change:
 
 ### `PHASE_STATUS.md`
 Purpose: Tracks completed project phases, verification gates, deferred live checks, and next phase.
+
+## Phase 4.1 — Core SQL Spine Plan Lock
+
+### `docs/phase-plans/PHASE_4_CORE_SQL_SPINE.md`
+Purpose: Locked Phase 4 implementation plan covering table scope, migration order, RLS rules, deferred items, and completion gates.
+
+### `PHASE_STATUS.md`
+Change: Marked Phase 4 as started.

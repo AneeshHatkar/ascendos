@@ -70,3 +70,20 @@ These are documented in:
 
 ### Next Phase
 Phase 4 — Core SQL Spine.
+
+## Phase 4 — Core SQL Spine — STARTED
+
+### Status
+Started.
+
+### Scope
+Phase 4 creates the core SQL spine for audit logs, AI proposed actions, chat sessions, chat messages, goals, milestones, daily logs, proof items, tasks, and events.
+
+### Plan
+See `docs/phase-plans/PHASE_4_CORE_SQL_SPINE.md`.
+
+### Non-Negotiable Rules
+- User-owned data requires RLS.
+- Carnos must not silently write important data.
+- AI-created changes must flow through proposed actions and audit logs in later phases.
+- No memory table is added in Phase 4; memory belongs to the dedicated memory phase.
