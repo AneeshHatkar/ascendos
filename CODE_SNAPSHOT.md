@@ -83,6 +83,7 @@ Upload or paste this file and say:
 - `src/lib/supabase/env.ts`
 - `src/lib/supabase/middleware.ts`
 - `src/lib/supabase/server.ts`
+- `src/types/database.ts`
 - `supabase/migrations/0001_profiles_and_carnos_profiles.sql`
 - `tsconfig.json`
 
@@ -489,6 +490,11 @@ Purpose: Validates SQL migration naming and basic safety rules.
 Change:
 - Added `validate:migrations`.
 - Updated `check` to include migration validation before build.
+
+## Phase 3.10 — Database TypeScript Types
+
+### `src/types/database.ts`
+Purpose: Defines TypeScript row, insert, update, enum, JSON, and Supabase-compatible database types for the first SQL migration.
 ```
 
 ### `DECISIONS.md`
@@ -958,6 +964,21 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Add TypeScript database row types for profiles and Carnos profiles.
+
+## 2026-06-17 — Phase 3.10 — Database TypeScript Types
+
+### Completed
+- Added TypeScript database type foundation.
+- Added `ProfileRow`, `ProfileInsert`, and `ProfileUpdate`.
+- Added `CarnosProfileRow`, `CarnosProfileInsert`, and `CarnosProfileUpdate`.
+- Added canonical enum-style union types for profile onboarding, Carnos memory mode, and Carnos safety mode.
+- Added minimal Supabase-compatible `Database` type structure for the first migration.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Wire Supabase clients to the typed `Database` interface.
 ```
 
 ### `README.md`
@@ -16723,6 +16744,128 @@ export async function createSupabaseServerClient() {
     },
   });
 }
+```
+
+### `src/types/database.ts`
+
+```tsx
+export type Json =
+  | string
+  | number
+  | boolean
+  | null
+  | { [key: string]: Json | undefined }
+  | Json[];
+
+export type ProfileOnboardingStatus = "not_started" | "in_progress" | "complete";
+
+export type CarnosMemoryMode =
+  | "off"
+  | "confirmation_required"
+  | "approved_memory_only";
+
+export type CarnosSafetyMode = "standard" | "strict" | "private";
+
+export type ProfileRow = {
+  id: string;
+  email: string | null;
+  display_name: string | null;
+  timezone: string;
+  onboarding_status: ProfileOnboardingStatus;
+  created_at: string;
+  updated_at: string;
+};
+
+export type ProfileInsert = {
+  id: string;
+  email?: string | null;
+  display_name?: string | null;
+  timezone?: string;
+  onboarding_status?: ProfileOnboardingStatus;
+  created_at?: string;
+  updated_at?: string;
+};
+
+export type ProfileUpdate = {
+  email?: string | null;
+  display_name?: string | null;
+  timezone?: string;
+  onboarding_status?: ProfileOnboardingStatus;
+  updated_at?: string;
+};
+
+export type CarnosProfileRow = {
+  id: string;
+  user_id: string;
+  companion_name: string;
+  memory_mode: CarnosMemoryMode;
+  persona_mode: string;
+  voice_enabled: boolean;
+  safety_mode: CarnosSafetyMode;
+  preferences: Json;
+  created_at: string;
+  updated_at: string;
+};
+
+export type CarnosProfileInsert = {
+  id?: string;
+  user_id: string;
+  companion_name?: string;
+  memory_mode?: CarnosMemoryMode;
+  persona_mode?: string;
+  voice_enabled?: boolean;
+  safety_mode?: CarnosSafetyMode;
+  preferences?: Json;
+  created_at?: string;
+  updated_at?: string;
+};
+
+export type CarnosProfileUpdate = {
+  companion_name?: string;
+  memory_mode?: CarnosMemoryMode;
+  persona_mode?: string;
+  voice_enabled?: boolean;
+  safety_mode?: CarnosSafetyMode;
+  preferences?: Json;
+  updated_at?: string;
+};
+
+export type Database = {
+  public: {
+    Tables: {
+      profiles: {
+        Row: ProfileRow;
+        Insert: ProfileInsert;
+        Update: ProfileUpdate;
+        Relationships: [
+          {
+            foreignKeyName: "profiles_id_fkey";
+            columns: ["id"];
+            referencedRelation: "users";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      carnos_profiles: {
+        Row: CarnosProfileRow;
+        Insert: CarnosProfileInsert;
+        Update: CarnosProfileUpdate;
+        Relationships: [
+          {
+            foreignKeyName: "carnos_profiles_user_id_fkey";
+            columns: ["user_id"];
+            referencedRelation: "profiles";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+    };
+    Views: Record<string, never>;
+    Functions: Record<string, never>;
+    Enums: Record<string, never>;
+    CompositeTypes: Record<string, never>;
+  };
+};
 ```
 
 ### `supabase/migrations/0001_profiles_and_carnos_profiles.sql`

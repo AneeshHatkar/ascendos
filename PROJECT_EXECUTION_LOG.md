@@ -394,3 +394,18 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Add TypeScript database row types for profiles and Carnos profiles.
+
+## 2026-06-17 — Phase 3.10 — Database TypeScript Types
+
+### Completed
+- Added TypeScript database type foundation.
+- Added `ProfileRow`, `ProfileInsert`, and `ProfileUpdate`.
+- Added `CarnosProfileRow`, `CarnosProfileInsert`, and `CarnosProfileUpdate`.
+- Added canonical enum-style union types for profile onboarding, Carnos memory mode, and Carnos safety mode.
+- Added minimal Supabase-compatible `Database` type structure for the first migration.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Wire Supabase clients to the typed `Database` interface.

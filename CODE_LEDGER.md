@@ -342,3 +342,8 @@ Purpose: Validates SQL migration naming and basic safety rules.
 Change:
 - Added `validate:migrations`.
 - Updated `check` to include migration validation before build.
+
+## Phase 3.10 — Database TypeScript Types
+
+### `src/types/database.ts`
+Purpose: Defines TypeScript row, insert, update, enum, JSON, and Supabase-compatible database types for the first SQL migration.
