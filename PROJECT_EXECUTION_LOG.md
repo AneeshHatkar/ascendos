@@ -48,4 +48,3 @@ This file records every implementation step for ascendOS + Carnos.
 ### Next
 - Verify package name.
 - Commit and push Next.js foundation.
-

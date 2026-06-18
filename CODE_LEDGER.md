@@ -65,4 +65,3 @@ Purpose: Merged project ignore rules with Next.js ignore rules.
 
 ### `README.md`
 Purpose: Restored ascendOS project identity and added Next.js development commands.
-
