@@ -18,6 +18,7 @@ Upload or paste this file and say:
 - `PROJECT_EXECUTION_LOG.md`
 - `README.md`
 - `SOURCE_OF_TRUTH.md`
+- `docs/setup/PROTECTED_ROUTES.md`
 - `docs/setup/SUPABASE_SETUP.md`
 - `docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_FINAL_SYNCED.json`
 - `eslint.config.mjs`
@@ -72,6 +73,8 @@ Upload or paste this file and say:
 - `src/app/supplements/page.tsx`
 - `src/app/timeline/page.tsx`
 - `src/app/world-class/page.tsx`
+- `src/components/auth/index.ts`
+- `src/components/auth/protected-page.tsx`
 - `src/components/dashboard/dashboard-card.tsx`
 - `src/components/dashboard/placeholder-dashboard-page.tsx`
 - `src/components/layout/app-shell.tsx`
@@ -551,6 +554,17 @@ Change: Added Settings route.
 
 ### `scripts/validate-route-coverage.mjs`
 Change: Added `/settings` to route validation.
+
+## Phase 3.16 — Protected Route Boundary
+
+### `src/components/auth/protected-page.tsx`
+Purpose: Reusable server component for protecting private routes while preserving local setup mode.
+
+### `src/components/auth/index.ts`
+Purpose: Barrel export for auth components.
+
+### `docs/setup/PROTECTED_ROUTES.md`
+Purpose: Explains when and how to apply route protection safely.
 ```
 
 ### `DECISIONS.md`
@@ -1112,6 +1126,21 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Add protected route boundary and decide which routes become auth-required after Supabase is connected.
+
+## 2026-06-17 — Phase 3.16 — Protected Route Boundary
+
+### Completed
+- Added reusable `ProtectedPage` server component.
+- Added safe local setup placeholder behavior when Supabase env vars are missing.
+- Added redirect to `/auth/login` when Supabase is configured but no user is signed in.
+- Added protected route guide.
+- Did not apply protection globally yet to avoid breaking local setup mode.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Add auth smoke-test checklist and Phase 3 final audit.
 ```
 
 ### `README.md`
@@ -1235,6 +1264,65 @@ Flow:
 - /analytics
 - /privacy
 - /custom-trackers
+```
+
+### `docs/setup/PROTECTED_ROUTES.md`
+
+```md
+# Protected Routes Guide
+
+ascendOS will eventually protect private dashboards and personal data routes behind Supabase Auth.
+
+## Current status
+
+The project now has a reusable protected route boundary:
+
+    src/components/auth/protected-page.tsx
+
+It is intentionally not applied globally yet because the project still supports local setup mode without Supabase keys.
+
+## Behavior
+
+When Supabase env vars are missing:
+
+- The protected boundary renders a safe local setup placeholder.
+- The app still builds.
+- No personal data is loaded.
+
+When Supabase env vars are present:
+
+- The protected boundary checks the current Supabase user.
+- If no user is signed in, it redirects to `/auth/login`.
+- If a user is signed in, it renders the protected page content.
+
+## Usage example
+
+    import { ProtectedPage } from "@/components/auth";
+
+    export default function PrivateDashboardPage() {
+      return (
+        <ProtectedPage>
+          <YourPrivateDashboard />
+        </ProtectedPage>
+      );
+    }
+
+## Do not apply blindly
+
+Do not wrap every route until Supabase is configured and auth smoke tests pass.
+
+Recommended order:
+
+1. Confirm `.env.local` is configured.
+2. Apply migration.
+3. Test signup/login/signout.
+4. Confirm `profiles` and `carnos_profiles` rows are created.
+5. Start protecting truly private routes.
+6. Leave public/portfolio routes unprotected if needed.
+
+## Privacy rule
+
+Any route that reads personal SQL data should eventually be protected or explicitly designed as safe/public.
 ```
 
 ### `docs/setup/SUPABASE_SETUP.md`
@@ -16429,6 +16517,71 @@ export default function WorldClassPage() {
       subtitle="Long-range excellence path, identity standards, constraints, and compounding proof."
     />
   );
+}
+```
+
+### `src/components/auth/index.ts`
+
+```tsx
+export { ProtectedPage } from "./protected-page";
+```
+
+### `src/components/auth/protected-page.tsx`
+
+```tsx
+import Link from "next/link";
+import { redirect } from "next/navigation";
+import { getCurrentUser } from "@/lib/auth/session";
+import { hasSupabaseBrowserEnv } from "@/lib/supabase/env";
+
+type ProtectedPageProps = {
+  children: React.ReactNode;
+  fallbackTitle?: string;
+  fallbackDescription?: string;
+};
+
+export async function ProtectedPage({
+  children,
+  fallbackTitle = "Local setup mode",
+  fallbackDescription = "Supabase is not configured yet, so this protected area is visible only as a local development placeholder.",
+}: ProtectedPageProps) {
+  if (!hasSupabaseBrowserEnv()) {
+    return (
+      <section className="rounded-3xl border border-amber-300/20 bg-amber-300/10 p-8">
+        <p className="text-xs uppercase tracking-[0.35em] text-amber-100/70">
+          Protected route placeholder
+        </p>
+        <h1 className="mt-4 text-3xl font-semibold tracking-tight text-white">
+          {fallbackTitle}
+        </h1>
+        <p className="mt-4 max-w-3xl text-sm leading-6 text-white/65">
+          {fallbackDescription}
+        </p>
+        <div className="mt-6 flex flex-wrap gap-3 text-sm">
+          <Link
+            href="/auth/login"
+            className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-white/70"
+          >
+            Login
+          </Link>
+          <Link
+            href="/auth/signup"
+            className="rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-cyan-100"
+          >
+            Sign up
+          </Link>
+        </div>
+      </section>
+    );
+  }
+
+  const user = await getCurrentUser();
+
+  if (!user) {
+    redirect("/auth/login");
+  }
+
+  return <>{children}</>;
 }
 ```
 

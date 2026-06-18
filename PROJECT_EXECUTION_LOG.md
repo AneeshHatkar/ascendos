@@ -486,3 +486,18 @@ Phase 3 — Supabase/Auth foundation.
 
 ### Next
 - Add protected route boundary and decide which routes become auth-required after Supabase is connected.
+
+## 2026-06-17 — Phase 3.16 — Protected Route Boundary
+
+### Completed
+- Added reusable `ProtectedPage` server component.
+- Added safe local setup placeholder behavior when Supabase env vars are missing.
+- Added redirect to `/auth/login` when Supabase is configured but no user is signed in.
+- Added protected route guide.
+- Did not apply protection globally yet to avoid breaking local setup mode.
+
+### Verification
+- `npm run check` must pass before commit.
+
+### Next
+- Add auth smoke-test checklist and Phase 3 final audit.

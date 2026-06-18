@@ -397,3 +397,14 @@ Change: Added Settings route.
 
 ### `scripts/validate-route-coverage.mjs`
 Change: Added `/settings` to route validation.
+
+## Phase 3.16 — Protected Route Boundary
+
+### `src/components/auth/protected-page.tsx`
+Purpose: Reusable server component for protecting private routes while preserving local setup mode.
+
+### `src/components/auth/index.ts`
+Purpose: Barrel export for auth components.
+
+### `docs/setup/PROTECTED_ROUTES.md`
+Purpose: Explains when and how to apply route protection safely.
