@@ -663,4 +663,10 @@ Purpose: Connects the Carnos dashboard to read-only chat session, chat message, 
 ## Phase 5.8 — Calendar Page Read Integration
 
 ### src/app/calendar/page.tsx
-Purpose: Connects the calendar dashboard to read-only task and event repository helpers and renders calendar metrics, read warnings, combined task/event list, and empty state.
+Purpose: Connects the calendar dashboard to read-only task and event repository helpers and renders calendar metrics, read warnings, combined task/event list, and empty state.\n\n## Phase 5.9 — Proof and Daily Log Read Surfaces
+
+### src/app/world-class/page.tsx
+Purpose: Connects the world-class path dashboard to read-only proof item and daily log repository helpers and renders proof/reality metrics plus recent proof records.
+
+### src/app/analytics/page.tsx
+Purpose: Connects the analytics dashboard to read-only proof item and daily log repository helpers and renders lightweight proof/daily-log summary metrics plus recent daily logs.\n\n
