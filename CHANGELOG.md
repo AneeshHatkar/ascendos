@@ -84,3 +84,14 @@ All notable changes to ascendOS will be documented here.
 - Voice.
 - RAG.
 - Full CRUD dashboards.
+
+## Phase 5 Complete — Core Read UI Integration
+
+- Added shared dashboard read UI components.
+- Added authenticated dashboard shell helper.
+- Connected `/command`, `/goals`, `/timeline`, `/carnos`, `/calendar`, `/world-class`, `/analytics`, `/career`, `/learning`, and `/body` to authenticated read-only data surfaces.
+- Added reusable domain-filtered read dashboard.
+- Added Phase 5 audit gate.
+- Added Phase 5 report.
+- Extended source alignment audit through Phase 5.
+- Preserved no-write, no-memory, no-generation, no-Python, and no-ML boundaries.

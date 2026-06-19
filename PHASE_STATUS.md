@@ -222,3 +222,33 @@ See docs/phase-plans/PHASE_5_CORE_READ_UI_INTEGRATION.md.
 - No Carnos AI generation.
 - No memory table or retrieval.
 - No voice, RAG, or production deployment.
+
+## Phase 5 complete — Core Read UI Integration
+
+Status: complete
+
+Completed:
+- Shared dashboard read UI components.
+- Authenticated dashboard shell helper.
+- `/command` read integration.
+- `/goals` read integration.
+- `/timeline` read integration.
+- `/carnos` read integration.
+- `/calendar` read integration.
+- `/world-class` proof/daily-log read surface.
+- `/analytics` proof/daily-log read surface.
+- `/career`, `/learning`, and `/body` domain-filtered read surfaces.
+- Phase 5 audit script.
+- Phase 5 report.
+- Source alignment audit updated through Phase 5.
+
+Boundary:
+- No write repositories.
+- No create/edit/delete UI.
+- No Carnos generation.
+- No memory implementation.
+- No Python/ML layer.
+- No production deployment.
+
+Verification:
+- `npm run check` passes.

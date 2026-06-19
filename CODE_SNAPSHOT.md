@@ -214,6 +214,17 @@ All notable changes to ascendOS will be documented here.
 - Voice.
 - RAG.
 - Full CRUD dashboards.
+
+## Phase 5 Complete — Core Read UI Integration
+
+- Added shared dashboard read UI components.
+- Added authenticated dashboard shell helper.
+- Connected `/command`, `/goals`, `/timeline`, `/carnos`, `/calendar`, `/world-class`, `/analytics`, `/career`, `/learning`, and `/body` to authenticated read-only data surfaces.
+- Added reusable domain-filtered read dashboard.
+- Added Phase 5 audit gate.
+- Added Phase 5 report.
+- Extended source alignment audit through Phase 5.
+- Preserved no-write, no-memory, no-generation, no-Python, and no-ML boundaries.
 ```
 
 ### `CODE_LEDGER.md`
@@ -930,6 +941,20 @@ Change: Records Phase 5.13 source alignment audit update.
 
 ### CODE_LEDGER.md
 Change: Records Phase 5.13 source alignment audit update.
+
+## Phase 5.14 — Phase 5 Complete
+
+### PHASE_STATUS.md
+Change: Marks Phase 5 complete.
+
+### CHANGELOG.md
+Change: Adds Phase 5 completion entry.
+
+### PROJECT_EXECUTION_LOG.md
+Change: Records final Phase 5 completion and preserved boundaries.
+
+### CODE_LEDGER.md
+Change: Records Phase 5 completion marker.
 ```
 
 ### `DECISIONS.md`
@@ -1227,6 +1252,36 @@ See docs/phase-plans/PHASE_5_CORE_READ_UI_INTEGRATION.md.
 - No Carnos AI generation.
 - No memory table or retrieval.
 - No voice, RAG, or production deployment.
+
+## Phase 5 complete — Core Read UI Integration
+
+Status: complete
+
+Completed:
+- Shared dashboard read UI components.
+- Authenticated dashboard shell helper.
+- `/command` read integration.
+- `/goals` read integration.
+- `/timeline` read integration.
+- `/carnos` read integration.
+- `/calendar` read integration.
+- `/world-class` proof/daily-log read surface.
+- `/analytics` proof/daily-log read surface.
+- `/career`, `/learning`, and `/body` domain-filtered read surfaces.
+- Phase 5 audit script.
+- Phase 5 report.
+- Source alignment audit updated through Phase 5.
+
+Boundary:
+- No write repositories.
+- No create/edit/delete UI.
+- No Carnos generation.
+- No memory implementation.
+- No Python/ML layer.
+- No production deployment.
+
+Verification:
+- `npm run check` passes.
 ```
 
 ### `PROJECT_EXECUTION_LOG.md`
@@ -2389,6 +2444,50 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 
 ### Next
 - Phase 5.14 — Mark Phase 5 complete.
+
+## 2026-06-18 — Phase 5.14 — Phase 5 Complete
+
+### Completed
+- Marked Phase 5 complete in `PHASE_STATUS.md`.
+- Added Phase 5 completion entry to `CHANGELOG.md`.
+- Confirmed Phase 5 read UI integration is fully gated by `audit:phase5`.
+- Confirmed source alignment audit now covers Phases 1–5.
+
+### Final Phase 5 Result
+Phase 5 successfully connected the Phase 4 SQL spine to authenticated read-only UI surfaces across the core app.
+
+Connected dynamic read pages:
+- `/command`
+- `/goals`
+- `/timeline`
+- `/carnos`
+- `/calendar`
+- `/world-class`
+- `/analytics`
+- `/career`
+- `/learning`
+- `/body`
+
+### Boundary Preserved
+- No write repository.
+- No create/edit/delete product UI.
+- No Carnos generation.
+- No memory implementation.
+- No Python/ML layer.
+- No production deployment.
+
+### Verification
+- `npm run verify:env`
+- `npm run validate:migrations`
+- `npm run audit:phase3`
+- `npm run audit:phase4`
+- `npm run audit:phase5`
+- `npm run audit:source`
+- `npm run snapshot:code`
+- `npm run check`
+
+### Next
+- Phase 6 — Safe Write / Proposed Action Flow.
 ```
 
 ### `README.md`
