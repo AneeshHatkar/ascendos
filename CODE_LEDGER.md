@@ -687,3 +687,11 @@ Purpose: Body-domain read-only dashboard surface.
 
 ### src/components/dashboard/index.ts
 Change: Exports DomainReadPage.
+
+## Phase 5.11 — Phase 5 Audit Script
+
+### scripts/audit-phase-5.mjs
+Purpose: Audits Phase 5 read UI integration and confirms no write, memory, Carnos generation, or execution code entered the phase.
+
+### package.json
+Change: Added `audit:phase5` and wired it into `npm run check`.

@@ -1097,3 +1097,24 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 
 ### Next
 - Phase 5.11 — Add Phase 5 audit script.
+
+## 2026-06-18 — Phase 5.11 — Phase 5 Audit Script
+
+### Completed
+- Added `scripts/audit-phase-5.mjs`.
+- Added `audit:phase5` package script.
+- Wired `audit:phase5` into `npm run check`.
+- Audit checks shared dashboard components, connected read pages, no-write boundaries, no-memory boundaries, no-generation boundaries, Phase 5 logs, and repository read-only integrity.
+
+### Boundary
+- No app feature behavior was changed.
+- No write repository was added.
+- No memory implementation was added.
+- No Carnos generation was added.
+
+### Verification
+- `npm run audit:phase5` must pass.
+- `npm run check` must pass.
+
+### Next
+- Phase 5.12 — Add Phase 5 documentation/report.

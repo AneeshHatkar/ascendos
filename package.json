@@ -8,14 +8,15 @@
     "start": "next start",
     "lint": "eslint",
     "validate:routes": "node scripts/validate-route-coverage.mjs",
-    "check": "npm run lint && npm run validate:routes && npm run validate:registry && npm run validate:migrations && npm run audit:phase3 && npm run audit:phase4 && npm run audit:source && npm run build",
+    "check": "npm run lint && npm run validate:routes && npm run validate:registry && npm run validate:migrations && npm run audit:phase3 && npm run audit:phase4 && npm run audit:phase5 && npm run audit:source && npm run build",
     "validate:registry": "node scripts/validate-registry-coverage.mjs",
     "snapshot:code": "node scripts/generate-code-snapshot.mjs",
     "validate:migrations": "node scripts/validate-sql-migrations.mjs",
     "verify:env": "node scripts/verify-env.mjs",
     "audit:phase3": "node scripts/audit-phase-3.mjs",
     "audit:phase4": "node scripts/audit-phase-4.mjs",
-    "audit:source": "node scripts/audit-source-alignment.mjs"
+    "audit:source": "node scripts/audit-source-alignment.mjs",
+    "audit:phase5": "node scripts/audit-phase-5.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",
