@@ -636,3 +636,11 @@ Purpose: Provides a reusable authenticated dashboard shell with signed-out and u
 
 ### src/components/dashboard/index.ts
 Change: Exports AuthenticatedDashboardShell.
+
+## Phase 5.4 — Command Dashboard Read Integration
+
+### src/app/command/page.tsx
+Purpose: Connects the command dashboard to read-only repository helpers for goals, tasks, events, proof items, daily logs, and AI actions.
+
+### src/components/dashboard/authenticated-dashboard-shell.tsx
+Change: Allows async server-rendered dashboard children so pages can load read data inside the authenticated shell.

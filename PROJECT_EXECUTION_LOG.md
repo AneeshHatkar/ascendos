@@ -949,3 +949,24 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 
 ### Next
 - Phase 5.4 — Connect command dashboard to core read data.
+
+## 2026-06-18 — Phase 5.4 — Command Dashboard Read Integration
+
+### Completed
+- Updated `/command` to use the authenticated dashboard shell.
+- Connected `/command` to Phase 4 read-only repositories.
+- Added metric tiles for goals, tasks, events, proof items, daily logs, and AI actions.
+- Added empty/read-only state for users with no records.
+- Updated authenticated dashboard shell to support async server-rendered children.
+
+### Boundary
+- No write repository was added.
+- No create/edit/delete form was added.
+- No memory implementation was added.
+- No Carnos generation or action execution was added.
+
+### Verification
+- npm run check must pass.
+
+### Next
+- Phase 5.5 — Connect goals page to read repository.

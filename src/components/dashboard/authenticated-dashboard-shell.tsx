@@ -9,7 +9,7 @@ import {
 type AuthenticatedDashboardShellProps = {
   title: string;
   description: string;
-  children: (authState: Extract<DashboardAuthState, { status: "authenticated" }>) => ReactNode;
+  children: (authState: Extract<DashboardAuthState, { status: "authenticated" }>) => ReactNode | Promise<ReactNode>;
 };
 
 export async function AuthenticatedDashboardShell({
@@ -34,5 +34,5 @@ export async function AuthenticatedDashboardShell({
     );
   }
 
-  return <>{children(authState)}</>;
+  return <>{await children(authState)}</>;
 }

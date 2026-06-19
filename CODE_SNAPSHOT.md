@@ -854,6 +854,14 @@ Purpose: Provides a reusable authenticated dashboard shell with signed-out and u
 
 ### src/components/dashboard/index.ts
 Change: Exports AuthenticatedDashboardShell.
+
+## Phase 5.4 — Command Dashboard Read Integration
+
+### src/app/command/page.tsx
+Purpose: Connects the command dashboard to read-only repository helpers for goals, tasks, events, proof items, daily logs, and AI actions.
+
+### src/components/dashboard/authenticated-dashboard-shell.tsx
+Change: Allows async server-rendered dashboard children so pages can load read data inside the authenticated shell.
 ```
 
 ### `DECISIONS.md`
@@ -2107,6 +2115,27 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 
 ### Next
 - Phase 5.4 — Connect command dashboard to core read data.
+
+## 2026-06-18 — Phase 5.4 — Command Dashboard Read Integration
+
+### Completed
+- Updated `/command` to use the authenticated dashboard shell.
+- Connected `/command` to Phase 4 read-only repositories.
+- Added metric tiles for goals, tasks, events, proof items, daily logs, and AI actions.
+- Added empty/read-only state for users with no records.
+- Updated authenticated dashboard shell to support async server-rendered children.
+
+### Boundary
+- No write repository was added.
+- No create/edit/delete form was added.
+- No memory implementation was added.
+- No Carnos generation or action execution was added.
+
+### Verification
+- npm run check must pass.
+
+### Next
+- Phase 5.5 — Connect goals page to read repository.
 ```
 
 ### `README.md`
@@ -18791,52 +18820,219 @@ export default function CarnosPage() {
 ### `src/app/command/page.tsx`
 
 ```tsx
-import { ProfileSummaryCard } from "@/components/profile/profile-summary-card";
+import {
+  AuthenticatedDashboardShell,
+  EmptyState,
+  MetricTile,
+  SectionCard,
+  StatusPill,
+} from "@/components/dashboard";
+import {
+  listAiActions,
+  listDailyLogs,
+  listEvents,
+  listGoals,
+  listProofItems,
+  listTasks,
+} from "@/lib/repositories";
 
-const commandModules = [
-  "Proof feed",
-  "Today queue",
-  "Carnos proposals",
-  "Timeline pulse",
-  "Goal pressure",
-  "System alerts",
-];
+type ReadRepository = (
+  userId: string,
+  options?: { limit?: number },
+) => Promise<unknown>;
+
+type CommandMetric = {
+  label: string;
+  value: number;
+  description: string;
+  error?: string;
+};
+
+function extractRows(result: unknown): unknown[] {
+  if (Array.isArray(result)) {
+    return result;
+  }
+
+  if (
+    result &&
+    typeof result === "object" &&
+    "data" in result &&
+    Array.isArray((result as { data?: unknown }).data)
+  ) {
+    return (result as { data: unknown[] }).data;
+  }
+
+  return [];
+}
+
+function extractError(result: unknown): string | undefined {
+  if (
+    result &&
+    typeof result === "object" &&
+    "error" in result &&
+    (typeof (result as { error?: unknown }).error === "string" ||
+      (result as { error?: unknown }).error === null)
+  ) {
+    return (result as { error?: string | null }).error ?? undefined;
+  }
+
+  return undefined;
+}
+
+async function readMetric(
+  label: string,
+  description: string,
+  read: ReadRepository,
+  userId: string,
+): Promise<CommandMetric> {
+  try {
+    const result = await read(userId, { limit: 100 });
+    const rows = extractRows(result);
+
+    return {
+      label,
+      value: rows.length,
+      description,
+      error: extractError(result),
+    };
+  } catch (error) {
+    return {
+      label,
+      value: 0,
+      description,
+      error: error instanceof Error ? error.message : "Read failed.",
+    };
+  }
+}
 
 export default function CommandPage() {
   return (
-    <div className="space-y-8">
-      <section className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
-        <p className="text-xs uppercase tracking-[0.35em] text-cyan-200/70">
-          Command Center
-        </p>
-        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white">
-          Proof-first control room
-        </h1>
-        <p className="mt-4 max-w-3xl text-sm leading-6 text-white/60">
-          This dashboard will become the daily execution hub for ascendOS:
-          proof, goals, Carnos proposals, timeline events, risks, and next
-          actions. It is currently connected to the auth/profile foundation
-          without requiring live Supabase keys during local setup.
-        </p>
-      </section>
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
+      <AuthenticatedDashboardShell
+        title="Command Dashboard"
+        description="Read-only operating view across your current ascendOS SQL spine."
+      >
+        {async ({ user }) => {
+          const metrics = await Promise.all([
+            readMetric(
+              "Goals",
+              "Tracked dreams, outcomes, and active ladders from the goals table.",
+              listGoals as ReadRepository,
+              user.id,
+            ),
+            readMetric(
+              "Tasks",
+              "Execution items available from the tasks table.",
+              listTasks as ReadRepository,
+              user.id,
+            ),
+            readMetric(
+              "Events",
+              "Scheduled timeline/calendar records from the events table.",
+              listEvents as ReadRepository,
+              user.id,
+            ),
+            readMetric(
+              "Proof",
+              "Recent proof artifacts available from the proof_items table.",
+              listProofItems as ReadRepository,
+              user.id,
+            ),
+            readMetric(
+              "Daily Logs",
+              "Daily operating records available from the daily_logs table.",
+              listDailyLogs as ReadRepository,
+              user.id,
+            ),
+            readMetric(
+              "AI Actions",
+              "Carnos proposed-action records available from the ai_actions table.",
+              listAiActions as ReadRepository,
+              user.id,
+            ),
+          ]);
 
-      <ProfileSummaryCard />
+          const readErrors = metrics.filter((metric) => metric.error);
+          const totalRows = metrics.reduce((sum, metric) => sum + metric.value, 0);
 
-      <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {commandModules.map((module) => (
-          <div
-            key={module}
-            className="rounded-2xl border border-white/10 bg-black/20 p-5"
-          >
-            <p className="text-sm font-medium text-white">{module}</p>
-            <p className="mt-2 text-sm leading-6 text-white/50">
-              Pending real data wiring after the SQL spine and confirmation
-              system are established.
-            </p>
-          </div>
-        ))}
-      </section>
-    </div>
+          return (
+            <>
+              <section className="rounded-3xl border border-slate-800 bg-slate-950/80 p-6 shadow-sm shadow-black/20">
+                <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300/80">
+                      ascendOS command
+                    </p>
+                    <h1 className="mt-3 text-3xl font-semibold tracking-tight text-slate-50">
+                      System Read Overview
+                    </h1>
+                    <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-400">
+                      This page is now connected to the Phase 4 read-only repository layer.
+                      It summarizes the current authenticated user&apos;s SQL-backed records
+                      without creating, editing, deleting, generating, or executing anything.
+                    </p>
+                  </div>
+
+                  <StatusPill
+                    label="Read-only mode"
+                    tone={readErrors.length > 0 ? "warning" : "success"}
+                  />
+                </div>
+              </section>
+
+              <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                {metrics.map((metric) => (
+                  <MetricTile
+                    key={metric.label}
+                    label={metric.label}
+                    value={metric.value}
+                    description={
+                      metric.error
+                        ? `Read warning: ${metric.error}`
+                        : metric.description
+                    }
+                    className={metric.error ? "border-amber-800/80" : ""}
+                  />
+                ))}
+              </section>
+
+              <SectionCard
+                title="Read integration status"
+                description="Phase 5.4 proves the command dashboard can safely read from the Phase 4 SQL spine."
+                eyebrow="Phase 5.4"
+              >
+                {totalRows === 0 ? (
+                  <EmptyState
+                    title="No dashboard records yet"
+                    description="The read layer is wired, but there are no records to display yet or Supabase has not been populated for this user. Write flows are intentionally disabled in this phase."
+                  />
+                ) : (
+                  <div className="grid gap-3 text-sm text-slate-300 md:grid-cols-2">
+                    <div className="rounded-xl border border-slate-800 bg-slate-950/60 p-4">
+                      <p className="font-medium text-slate-100">Total readable records</p>
+                      <p className="mt-2 text-2xl font-semibold text-slate-50">
+                        {totalRows}
+                      </p>
+                      <p className="mt-2 text-slate-400">
+                        Combined count from the first read batch across core tables.
+                      </p>
+                    </div>
+
+                    <div className="rounded-xl border border-slate-800 bg-slate-950/60 p-4">
+                      <p className="font-medium text-slate-100">Mutation boundary</p>
+                      <p className="mt-2 text-slate-400">
+                        No writes, memory, Carnos generation, or action execution are
+                        enabled from this dashboard.
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </SectionCard>
+            </>
+          );
+        }}
+      </AuthenticatedDashboardShell>
+    </main>
   );
 }
 ```
@@ -19537,7 +19733,7 @@ import {
 type AuthenticatedDashboardShellProps = {
   title: string;
   description: string;
-  children: (authState: Extract<DashboardAuthState, { status: "authenticated" }>) => ReactNode;
+  children: (authState: Extract<DashboardAuthState, { status: "authenticated" }>) => ReactNode | Promise<ReactNode>;
 };
 
 export async function AuthenticatedDashboardShell({
@@ -19562,7 +19758,7 @@ export async function AuthenticatedDashboardShell({
     );
   }
 
-  return <>{children(authState)}</>;
+  return <>{await children(authState)}</>;
 }
 ```
 
