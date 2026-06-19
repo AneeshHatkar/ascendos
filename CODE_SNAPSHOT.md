@@ -919,6 +919,17 @@ Change: Added `audit:phase5` and wired it into `npm run check`.\n\n## Phase 5.12
 
 ### docs/phase-reports/PHASE_5_CORE_READ_UI_INTEGRATION_REPORT.md
 Purpose: Documents Phase 5 read UI integration scope, completed surfaces, explicit non-scope, verification gates, and remaining closure steps.\n\n
+
+## Phase 5.13 — Source Alignment Audit Update
+
+### scripts/audit-source-alignment.mjs
+Purpose: Extends full source alignment audit coverage through Phase 5 read UI integration and updates the success message to Phases 1–5.
+
+### PROJECT_EXECUTION_LOG.md
+Change: Records Phase 5.13 source alignment audit update.
+
+### CODE_LEDGER.md
+Change: Records Phase 5.13 source alignment audit update.
 ```
 
 ### `DECISIONS.md`
@@ -2358,6 +2369,26 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 
 ### Next
 - Phase 5.13 — Update source alignment audit for Phase 5.\n\n
+
+## 2026-06-18 — Phase 5.13 — Source Alignment Audit Update
+
+### Completed
+- Updated `scripts/audit-source-alignment.mjs` to include Phase 5 checks.
+- Added source alignment checks for Phase 5 plan, report, audit script, authenticated read pages, and domain read pages.
+- Updated source alignment success message from Phases 1–4 to Phases 1–5.
+
+### Boundary
+- Audit-only change.
+- No application behavior was changed.
+- No write path was added.
+
+### Verification
+- `npm run audit:source` must pass.
+- `npm run audit:phase5` must pass.
+- `npm run check` must pass.
+
+### Next
+- Phase 5.14 — Mark Phase 5 complete.
 ```
 
 ### `README.md`
@@ -18648,6 +18679,7 @@ for (const scriptName of [
   "verify:env",
   "audit:phase3",
   "audit:phase4",
+  "audit:phase5",
   "snapshot:code",
 ]) {
   if (!scripts[scriptName]) {
@@ -18663,6 +18695,7 @@ for (const requiredInCheck of [
   "validate:migrations",
   "audit:phase3",
   "audit:phase4",
+  "audit:phase5",
   "build",
 ]) {
   if (!scripts.check.includes(requiredInCheck)) {
@@ -18810,6 +18843,62 @@ for (const forbidden of [
 
 pass("Phase 4 SQL spine tables, RLS, indexes, and forbidden markers look correct");
 
+
+console.log("\n=== Phase 5 read UI integration ===");
+
+for (const file of [
+  "docs/phase-plans/PHASE_5_CORE_READ_UI_INTEGRATION.md",
+  "docs/phase-reports/PHASE_5_CORE_READ_UI_INTEGRATION_REPORT.md",
+  "scripts/audit-phase-5.mjs",
+  "src/lib/dashboard/auth.ts",
+  "src/components/dashboard/authenticated-dashboard-shell.tsx",
+  "src/components/dashboard/domain-read-page.tsx",
+]) {
+  requireFile(file);
+}
+
+const phase5SourceMarkers = [
+  ["src/app/command/page.tsx", "AuthenticatedDashboardShell"],
+  ["src/app/goals/page.tsx", "listGoals"],
+  ["src/app/timeline/page.tsx", "listAuditLogs"],
+  ["src/app/carnos/page.tsx", "Generation disabled"],
+  ["src/app/calendar/page.tsx", "listEvents"],
+  ["src/app/world-class/page.tsx", "listProofItems"],
+  ["src/app/analytics/page.tsx", "listDailyLogs"],
+  ["src/app/career/page.tsx", "DomainReadPage"],
+  ["src/app/learning/page.tsx", "DomainReadPage"],
+  ["src/app/body/page.tsx", "DomainReadPage"],
+];
+
+for (const [file, marker] of phase5SourceMarkers) {
+  const content = read(file);
+  requireIncludes(content, marker, `${file} missing Phase 5 marker: ${marker}`);
+}
+
+const phase5Report = read("docs/phase-reports/PHASE_5_CORE_READ_UI_INTEGRATION_REPORT.md");
+
+for (const phrase of [
+  "Phase 5 Report",
+  "Core Read UI Integration",
+  "read-only",
+  "Explicit Non-Scope",
+  "Remaining Phase 5 Work",
+]) {
+  requireIncludes(phase5Report, phrase, `Phase 5 report missing: ${phrase}`);
+}
+
+const phase5Audit = read("scripts/audit-phase-5.mjs");
+
+for (const phrase of [
+  "Phase 5 audit passed",
+  "no-write/no-memory/no-generation",
+  "Read repository remains read-only",
+]) {
+  requireIncludes(phase5Audit, phrase, `Phase 5 audit missing: ${phrase}`);
+}
+
+pass("Phase 5 read UI integration files, report, and audit gate are present");
+
 console.log("\n=== Type contracts ===");
 const dbTypes = read("src/types/database.ts");
 
@@ -18886,7 +18975,7 @@ requireIncludes(codeLedger, "Phase 4.12", "CODE_LEDGER.md missing Phase 4.12 ent
 
 pass("Logs and phase markers are present");
 
-console.log("\nSource alignment audit passed: Phases 1–4 are structurally aligned with the FINAL_SYNCED DOCX/JSON and current code gates.");
+console.log("\nSource alignment audit passed: Phases 1–5 are structurally aligned with the FINAL_SYNCED DOCX/JSON and current code gates.");
 ```
 
 ### `scripts/generate-code-snapshot.mjs`

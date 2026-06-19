@@ -698,3 +698,14 @@ Change: Added `audit:phase5` and wired it into `npm run check`.\n\n## Phase 5.12
 
 ### docs/phase-reports/PHASE_5_CORE_READ_UI_INTEGRATION_REPORT.md
 Purpose: Documents Phase 5 read UI integration scope, completed surfaces, explicit non-scope, verification gates, and remaining closure steps.\n\n
+
+## Phase 5.13 — Source Alignment Audit Update
+
+### scripts/audit-source-alignment.mjs
+Purpose: Extends full source alignment audit coverage through Phase 5 read UI integration and updates the success message to Phases 1–5.
+
+### PROJECT_EXECUTION_LOG.md
+Change: Records Phase 5.13 source alignment audit update.
+
+### CODE_LEDGER.md
+Change: Records Phase 5.13 source alignment audit update.

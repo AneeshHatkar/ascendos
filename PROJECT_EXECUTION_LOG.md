@@ -1135,3 +1135,23 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 
 ### Next
 - Phase 5.13 — Update source alignment audit for Phase 5.\n\n
+
+## 2026-06-18 — Phase 5.13 — Source Alignment Audit Update
+
+### Completed
+- Updated `scripts/audit-source-alignment.mjs` to include Phase 5 checks.
+- Added source alignment checks for Phase 5 plan, report, audit script, authenticated read pages, and domain read pages.
+- Updated source alignment success message from Phases 1–4 to Phases 1–5.
+
+### Boundary
+- Audit-only change.
+- No application behavior was changed.
+- No write path was added.
+
+### Verification
+- `npm run audit:source` must pass.
+- `npm run audit:phase5` must pass.
+- `npm run check` must pass.
+
+### Next
+- Phase 5.14 — Mark Phase 5 complete.
