@@ -625,3 +625,14 @@ Purpose: Reusable display-only metric card.
 
 ### src/components/dashboard/index.ts
 Purpose: Barrel exports for shared dashboard components.
+
+## Phase 5.3 — Authenticated Dashboard Shell Helper
+
+### src/lib/dashboard/auth.ts
+Purpose: Provides a safe server-side dashboard auth state helper for read-only dashboard pages.
+
+### src/components/dashboard/authenticated-dashboard-shell.tsx
+Purpose: Provides a reusable authenticated dashboard shell with signed-out and unavailable empty states.
+
+### src/components/dashboard/index.ts
+Change: Exports AuthenticatedDashboardShell.

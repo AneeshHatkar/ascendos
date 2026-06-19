@@ -84,6 +84,7 @@ Upload or paste this file and say:
 - `src/app/world-class/page.tsx`
 - `src/components/auth/index.ts`
 - `src/components/auth/protected-page.tsx`
+- `src/components/dashboard/authenticated-dashboard-shell.tsx`
 - `src/components/dashboard/dashboard-card.tsx`
 - `src/components/dashboard/data-list.tsx`
 - `src/components/dashboard/empty-state.tsx`
@@ -99,6 +100,7 @@ Upload or paste this file and say:
 - `src/components/profile/profile-summary-card.tsx`
 - `src/lib/auth/actions.ts`
 - `src/lib/auth/session.ts`
+- `src/lib/dashboard/auth.ts`
 - `src/lib/dashboard-registry.ts`
 - `src/lib/profile/index.ts`
 - `src/lib/profile/queries.ts`
@@ -841,6 +843,17 @@ Purpose: Reusable display-only metric card.
 
 ### src/components/dashboard/index.ts
 Purpose: Barrel exports for shared dashboard components.
+
+## Phase 5.3 — Authenticated Dashboard Shell Helper
+
+### src/lib/dashboard/auth.ts
+Purpose: Provides a safe server-side dashboard auth state helper for read-only dashboard pages.
+
+### src/components/dashboard/authenticated-dashboard-shell.tsx
+Purpose: Provides a reusable authenticated dashboard shell with signed-out and unavailable empty states.
+
+### src/components/dashboard/index.ts
+Change: Exports AuthenticatedDashboardShell.
 ```
 
 ### `DECISIONS.md`
@@ -2074,6 +2087,26 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 
 ### Next
 - Phase 5.3 — Add authenticated dashboard shell helper.
+
+## 2026-06-18 — Phase 5.3 — Authenticated Dashboard Shell Helper
+
+### Completed
+- Added dashboard auth state helper.
+- Added authenticated dashboard shell component.
+- Exported the authenticated dashboard shell from the dashboard component barrel.
+
+### Boundary
+- No page data wiring was added.
+- No repository calls were added to dashboard pages.
+- No write flow was added.
+- No memory implementation was added.
+- No Carnos generation was added.
+
+### Verification
+- npm run check must pass.
+
+### Next
+- Phase 5.4 — Connect command dashboard to core read data.
 ```
 
 ### `README.md`
@@ -19490,6 +19523,49 @@ export async function ProtectedPage({
 }
 ```
 
+### `src/components/dashboard/authenticated-dashboard-shell.tsx`
+
+```tsx
+import type { ReactNode } from "react";
+
+import { EmptyState, SectionCard } from "@/components/dashboard";
+import {
+  getDashboardAuthState,
+  type DashboardAuthState,
+} from "@/lib/dashboard/auth";
+
+type AuthenticatedDashboardShellProps = {
+  title: string;
+  description: string;
+  children: (authState: Extract<DashboardAuthState, { status: "authenticated" }>) => ReactNode;
+};
+
+export async function AuthenticatedDashboardShell({
+  title,
+  description,
+  children,
+}: AuthenticatedDashboardShellProps) {
+  const authState = await getDashboardAuthState();
+
+  if (authState.status !== "authenticated") {
+    return (
+      <SectionCard title={title} description={description} eyebrow="Read-only dashboard">
+        <EmptyState
+          title={
+            authState.status === "signed_out"
+              ? "Sign in required"
+              : "Dashboard reads unavailable"
+          }
+          description={authState.message}
+        />
+      </SectionCard>
+    );
+  }
+
+  return <>{children(authState)}</>;
+}
+```
+
 ### `src/components/dashboard/dashboard-card.tsx`
 
 ```tsx
@@ -19619,6 +19695,7 @@ export function EmptyState({
 ### `src/components/dashboard/index.ts`
 
 ```tsx
+export { AuthenticatedDashboardShell } from "./authenticated-dashboard-shell";
 export { DataList } from "./data-list";
 export type { DataListItem } from "./data-list";
 export { EmptyState } from "./empty-state";
@@ -20138,6 +20215,61 @@ export async function requireCurrentUser(): Promise<AuthUser> {
   }
 
   return user;
+}
+```
+
+### `src/lib/dashboard/auth.ts`
+
+```tsx
+import type { User } from "@supabase/supabase-js";
+
+import { createSupabaseServerClient } from "@/lib/supabase/server";
+
+export type DashboardAuthState =
+  | {
+      status: "authenticated";
+      user: User;
+      message?: never;
+    }
+  | {
+      status: "signed_out";
+      user: null;
+      message: string;
+    }
+  | {
+      status: "unavailable";
+      user: null;
+      message: string;
+    };
+
+export async function getDashboardAuthState(): Promise<DashboardAuthState> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const {
+      data: { user },
+      error,
+    } = await supabase.auth.getUser();
+
+    if (error || !user) {
+      return {
+        status: "signed_out",
+        user: null,
+        message: "Sign in to view your personal ascendOS dashboard data.",
+      };
+    }
+
+    return {
+      status: "authenticated",
+      user,
+    };
+  } catch {
+    return {
+      status: "unavailable",
+      user: null,
+      message:
+        "Dashboard reads are unavailable until Supabase environment variables are configured.",
+    };
+  }
 }
 ```
 

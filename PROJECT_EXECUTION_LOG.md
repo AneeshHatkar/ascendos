@@ -929,3 +929,23 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 
 ### Next
 - Phase 5.3 — Add authenticated dashboard shell helper.
+
+## 2026-06-18 — Phase 5.3 — Authenticated Dashboard Shell Helper
+
+### Completed
+- Added dashboard auth state helper.
+- Added authenticated dashboard shell component.
+- Exported the authenticated dashboard shell from the dashboard component barrel.
+
+### Boundary
+- No page data wiring was added.
+- No repository calls were added to dashboard pages.
+- No write flow was added.
+- No memory implementation was added.
+- No Carnos generation was added.
+
+### Verification
+- npm run check must pass.
+
+### Next
+- Phase 5.4 — Connect command dashboard to core read data.

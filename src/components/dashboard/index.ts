@@ -1,3 +1,4 @@
+export { AuthenticatedDashboardShell } from "./authenticated-dashboard-shell";
 export { DataList } from "./data-list";
 export type { DataListItem } from "./data-list";
 export { EmptyState } from "./empty-state";
