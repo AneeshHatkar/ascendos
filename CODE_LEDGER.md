@@ -781,4 +781,20 @@ Runtime impact:
 - Type/registry foundation only.
 
 Write impact:
-- No writes are executed in this step.
+- No writes are executed in this step.\n\n## 2026-06-19 23:51 UTC — Phase 6.3 Proposed Action Contracts
+
+Added:
+- `src/lib/actions/proposed-action-contracts.ts`
+
+Role:
+- Defines typed payload contracts for proposed write actions.
+- Defines source, domain, priority, task status, goal status, and proof type enums.
+- Defines required fields for each proposed action type.
+- Defines forbidden client payload fields such as `user_id`, `owner_id`, and service-role-like fields.
+- Defines `PROPOSED_ACTION_CONTRACT_VERSION`.
+
+Runtime impact:
+- Type foundation only.
+
+Write impact:
+- No writes are executed in this step.\n

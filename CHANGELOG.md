@@ -122,4 +122,14 @@ No runtime write code was added yet.
 
 Added the Phase 6 proposed action type registry.
 
-This establishes the first safe-write foundation layer by defining which action names are allowed before contracts, validation, lifecycle, execution, and UI are added.
+This establishes the first safe-write foundation layer by defining which action names are allowed before contracts, validation, lifecycle, execution, and UI are added.\n\n## 2026-06-19 23:51 UTC — Added Proposed Action Contracts
+
+Added typed proposed action contracts for Phase 6 safe write flows.
+
+Supported contracts:
+- create task
+- create goal
+- create daily log
+- create proof item
+
+This prepares the project for validation and controlled action execution.\n

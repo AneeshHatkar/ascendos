@@ -295,3 +295,9 @@ Phase 6.2 update at 2026-06-19 23:44 UTC:
 - Added canonical proposed action types for tasks, goals, daily logs, and proof items.
 - Phase 6 remains in progress.
 - Next step: Phase 6.3 — Proposed Action Contracts.
+
+Phase 6.3 update at 2026-06-19 23:51 UTC:
+- Created `src/lib/actions/proposed-action-contracts.ts`.
+- Added typed proposed action payload contracts.
+- Phase 6 remains in progress.
+- Next step: Phase 6.4 — Action Result Types.
