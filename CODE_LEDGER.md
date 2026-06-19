@@ -694,4 +694,7 @@ Change: Exports DomainReadPage.
 Purpose: Audits Phase 5 read UI integration and confirms no write, memory, Carnos generation, or execution code entered the phase.
 
 ### package.json
-Change: Added `audit:phase5` and wired it into `npm run check`.
+Change: Added `audit:phase5` and wired it into `npm run check`.\n\n## Phase 5.12 — Phase 5 Documentation Report
+
+### docs/phase-reports/PHASE_5_CORE_READ_UI_INTEGRATION_REPORT.md
+Purpose: Documents Phase 5 read UI integration scope, completed surfaces, explicit non-scope, verification gates, and remaining closure steps.\n\n

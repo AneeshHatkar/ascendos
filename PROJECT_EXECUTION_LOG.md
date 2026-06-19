@@ -1117,4 +1117,21 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - `npm run check` must pass.
 
 ### Next
-- Phase 5.12 — Add Phase 5 documentation/report.
+- Phase 5.12 — Add Phase 5 documentation/report.\n\n## 2026-06-18 — Phase 5.12 — Phase 5 Documentation Report
+
+### Completed
+- Added `docs/phase-reports/PHASE_5_CORE_READ_UI_INTEGRATION_REPORT.md`.
+- Documented Phase 5 purpose, completed scope, files added, files updated, explicit non-scope, verification gates, and remaining Phase 5 work.
+- Confirmed Phase 5 remains read-only and does not include memory, Carnos generation, write repositories, Python, or ML.
+
+### Boundary
+- Documentation only.
+- No application behavior was changed.
+- No write path was added.
+
+### Verification
+- `npm run audit:phase5` must pass.
+- `npm run check` must pass.
+
+### Next
+- Phase 5.13 — Update source alignment audit for Phase 5.\n\n
