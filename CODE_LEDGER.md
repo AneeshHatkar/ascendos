@@ -644,3 +644,8 @@ Purpose: Connects the command dashboard to read-only repository helpers for goal
 
 ### src/components/dashboard/authenticated-dashboard-shell.tsx
 Change: Allows async server-rendered dashboard children so pages can load read data inside the authenticated shell.
+
+## Phase 5.5 — Goals Page Read Integration
+
+### src/app/goals/page.tsx
+Purpose: Connects the goals dashboard to the read-only `listGoals` repository helper and renders goal metrics, record list, read warnings, and empty state.

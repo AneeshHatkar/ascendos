@@ -970,3 +970,24 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 
 ### Next
 - Phase 5.5 — Connect goals page to read repository.
+
+## 2026-06-18 — Phase 5.5 — Goals Page Read Integration
+
+### Completed
+- Updated `/goals` to use the authenticated dashboard shell.
+- Connected `/goals` to the read-only `listGoals` repository helper.
+- Added read-only metric tiles for total, active, and completed goals.
+- Added read-only goal record list and empty state.
+
+### Boundary
+- No goal creation form was added.
+- No edit/delete controls were added.
+- No write repository was added.
+- No Carnos generation was added.
+- No memory implementation was added.
+
+### Verification
+- npm run check must pass.
+
+### Next
+- Phase 5.6 — Connect timeline page to read repositories.
