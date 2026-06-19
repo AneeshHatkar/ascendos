@@ -654,3 +654,8 @@ Purpose: Connects the goals dashboard to the read-only `listGoals` repository he
 
 ### src/app/timeline/page.tsx
 Purpose: Connects the timeline dashboard to read-only event, proof item, and audit log repository helpers and renders timeline metrics, read warnings, combined record list, and empty state.
+
+## Phase 5.7 — Carnos Page Read Integration
+
+### src/app/carnos/page.tsx
+Purpose: Connects the Carnos dashboard to read-only chat session, chat message, and AI action repository helpers while explicitly preserving the no-generation, no-memory, no-execution, no-mutation Phase 5 boundary.

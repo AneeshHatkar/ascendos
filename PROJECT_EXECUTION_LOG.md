@@ -1012,3 +1012,25 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 
 ### Next
 - Phase 5.7 — Connect Carnos page to chat/action reads.
+
+## 2026-06-18 — Phase 5.7 — Carnos Page Read Integration
+
+### Completed
+- Updated `/carnos` to use the authenticated dashboard shell.
+- Connected `/carnos` to read-only `listChatSessions`, `listChatMessages`, and `listAiActions` helpers.
+- Added read-only metric tiles for sessions, messages, AI actions, and pending actions.
+- Added safety boundary section that explicitly states generation, memory, execution, and mutation are disabled.
+- Added read-only lists and empty states for sessions, actions, and messages.
+
+### Boundary
+- No Carnos generation was added.
+- No memory implementation was added.
+- No action execution was added.
+- No Save/Edit/Cancel mutation flow was added.
+- No write repository was added.
+
+### Verification
+- npm run check must pass.
+
+### Next
+- Phase 5.8 — Connect calendar page to tasks/events.
