@@ -95,3 +95,10 @@ All notable changes to ascendOS will be documented here.
 - Added Phase 5 report.
 - Extended source alignment audit through Phase 5.
 - Preserved no-write, no-memory, no-generation, no-Python, and no-ML boundaries.
+
+## Phase 5.15 Python/ML Intelligence Architecture Patch
+
+- Added future Python/ML Intelligence Worker architecture.
+- Added all planned ML intelligence features, route placement, phase placement, safety boundaries, privacy boundaries, evaluation requirements, score definitions, and output contracts.
+- Added Python/ML boundary audit.
+- No runtime ML, database write behavior, or existing Phase 1-5 behavior was changed.

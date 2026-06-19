@@ -252,3 +252,20 @@ Boundary:
 
 Verification:
 - `npm run check` passes.
+
+## Phase 5.15 — Python/ML Intelligence Architecture Patch
+
+Status: In progress.
+
+Scope:
+- Source-of-truth Python/ML architecture only.
+- No active Python runtime.
+- No direct SQL writes from Python.
+- No memory implementation.
+- No Carnos generation.
+
+Next:
+- Update DOCX source of truth.
+- Update source alignment audit.
+- Verify all gates.
+- Phase 6 — Safe Write / Proposed Action Flow.

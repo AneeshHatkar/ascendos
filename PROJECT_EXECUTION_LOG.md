@@ -1199,3 +1199,25 @@ Connected dynamic read pages:
 
 ### Next
 - Phase 6 — Safe Write / Proposed Action Flow.
+
+## 2026-06-19 — Phase 5.15 — Python/ML Intelligence Architecture Patch
+
+### Completed
+- Added Python/ML Intelligence Worker as a future source-of-truth layer.
+- Added all planned Python/ML features, route placement, phase placement, safety rules, privacy rules, evaluation rules, cold-start rules, score definitions, and output contracts.
+- Updated JSON source-of-truth file.
+- Added Python/ML architecture doc and Phase 5.15 plan.
+- Added audit:pythonml boundary gate.
+
+### Boundary
+- No active Python runtime was added.
+- No ML model was added.
+- No database writes from Python were added.
+- No memory implementation was added.
+- No Carnos generation was added.
+- No npm build dependency on Python was added.
+
+### Next
+- Update DOCX source of truth.
+- Update source alignment audit.
+- Start Phase 6 — Safe Write / Proposed Action Flow.

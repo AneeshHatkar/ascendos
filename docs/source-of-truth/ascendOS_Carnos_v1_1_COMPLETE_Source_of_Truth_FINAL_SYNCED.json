@@ -13664,5 +13664,120 @@
       "Grimoire layer remains practical: mode -> mission -> proof -> reversion.",
       "All real user data is SQL-backed, user-owned, RLS-protected, auditable, and export/delete capable."
     ]
-  }
+  },
+  "python_ml_intelligence_worker": {
+    "name": "Python/ML Intelligence Worker",
+    "status": "planned_source_of_truth_layer",
+    "current_patch": "Phase 5.15",
+    "runtime_status": "not_active_yet",
+    "future_path": "apps/worker-python",
+    "core_rule": "Python/ML advises. The app validates. The user confirms. The server writes. SQL records. Audit logs.",
+    "write_boundary": "Python/ML must never directly mutate SQL.",
+    "write_flow": "proposal -> validation -> Save/Edit/Cancel -> server write -> audit log -> timeline event -> dashboard refresh",
+    "allowed_outputs": [
+      "scores",
+      "rankings",
+      "recommendations",
+      "summaries",
+      "classifications",
+      "risk predictions",
+      "trend detection",
+      "pattern detection",
+      "semantic retrieval results",
+      "life trajectory simulations",
+      "Carnos response-support signals",
+      "proposed action drafts"
+    ],
+    "forbidden_behaviors": [
+      "Python/ML must never directly mutate SQL.",
+      "Python/ML must never bypass Save/Edit/Cancel confirmation.",
+      "Python/ML must never silently create memory.",
+      "Python/ML must never execute actions directly.",
+      "Python/ML must never delete or update user data directly.",
+      "Python/ML must never collect hidden personal data.",
+      "Python/ML must never make npm build depend on Python.",
+      "Python/ML must never provide medical diagnosis, prescription, legal advice, tax advice, or investment advice.",
+      "Python/ML must never claim fake accuracy or fake production metrics."
+    ],
+    "core_features": [
+      "Daily Priority Engine",
+      "Goal Risk Predictor",
+      "Proof-of-Work Scorer",
+      "Career Readiness Engine",
+      "Learning Optimizer",
+      "Semantic Memory Retrieval",
+      "Carnos Context Pack Builder",
+      "Persona Router",
+      "Life Trajectory Simulator",
+      "Burnout / Drift Detector",
+      "Health/Energy Pattern Detector",
+      "Project Momentum Analyzer",
+      "Resume/JD Fit Optimizer",
+      "Networking and Referral Prioritizer",
+      "Interview Weakness Detector",
+      "Research/PhD Readiness Engine",
+      "Decision Quality Analyzer",
+      "Custom Tracker Intelligence"
+    ],
+    "safety_and_trust_features": [
+      "ML Explainability Contract",
+      "ML Output Audit Log",
+      "Feedback Loop",
+      "Cold-Start Mode",
+      "Privacy Controls",
+      "Health Boundary",
+      "Finance Boundary",
+      "Versioned ML Output Schemas",
+      "Human Override",
+      "Evaluation Tests",
+      "No Fake Metrics Rule",
+      "Direct SQL Write Blocker",
+      "Data Freshness Check",
+      "Score Definitions"
+    ],
+    "score_definitions": {
+      "proof_score": "Measures real progress quality using completed tasks, proof items, goal movement, concrete outputs, and evidence references.",
+      "goal_risk_score": "Measures the risk that a goal will slip based on deadlines, missed milestones, low proof, task carryover, and stale progress.",
+      "career_readiness_score": "Measures readiness for target roles using resume strength, project quality, interview prep, applications, referrals, and skill gaps.",
+      "learning_readiness_score": "Measures study readiness using weak topics, recent study history, spaced repetition timing, energy, and role relevance.",
+      "burnout_risk_score": "Measures overload risk using sleep, energy, missed routines, negative drift, proof decline, and task carryover.",
+      "project_momentum_score": "Measures project health using commits, tests, docs, phase completion, issue closure, and portfolio value.",
+      "research_readiness_score": "Measures research trajectory using literature review, experiment quality, writing output, paper ideas, and advisor-fit work."
+    },
+    "phase_placement": {
+      "phase_5_15": "Python/ML Intelligence Architecture Patch. Source-of-truth only. No active Python runtime.",
+      "phase_6": "Safe Write / Proposed Action Flow. Builds the write safety gate future ML must use.",
+      "phase_7": "Carnos Chat + Action Proposal Layer. Adds Carnos proposal contracts compatible with future ML.",
+      "phase_8": "Real Creation Flows. Creates real user data.",
+      "phase_9": "Calendar / Timeline / Time Integration. Adds time data needed for priority, overload, and trajectory intelligence.",
+      "phase_10": "Memory System Foundation. Adds safe memory and retrieval foundation.",
+      "phase_11": "Python/ML Worker Foundation. Adds apps/worker-python scaffold, contracts, tests, no-write guard, and first simple scorers.",
+      "phase_13": "Advanced Analytics / World-Class Progress Engine. Activates serious scoring, ranking, simulation, prediction, retrieval, and recommendations.",
+      "phase_14": "Privacy / Export / Delete / Settings / Hardening. Adds ML privacy controls and output deletion/export.",
+      "phase_15": "Productionization. Deploys and hardens worker, queues, monitoring, fallbacks, cost controls, and evaluations."
+    },
+    "versioned_output_contracts": [
+      "score_result_v1",
+      "recommendation_result_v1",
+      "context_pack_v1",
+      "proposed_action_draft_v1",
+      "evidence_ref_v1",
+      "model_output_audit_v1",
+      "user_feedback_v1"
+    ]
+  },
+  "architecture_decisions": [
+    "Phase 5.15 adds Python/ML as a future separate intelligence worker layer. The worker may score, rank, recommend, retrieve, simulate, summarize, classify, and draft proposed actions, but it must never directly mutate SQL, silently create memory, execute actions, bypass validation, or bypass Save/Edit/Cancel."
+  ],
+  "non_negotiable_rules": [
+    "Python/ML must never directly mutate SQL.",
+    "Python/ML must never bypass Save/Edit/Cancel confirmation.",
+    "Python/ML must never silently create memory.",
+    "Python/ML must never execute actions directly.",
+    "Python/ML must never delete or update user data directly.",
+    "Python/ML must never collect hidden personal data.",
+    "Python/ML must never make npm build depend on Python.",
+    "Python/ML must never provide medical diagnosis, prescription, legal advice, tax advice, or investment advice.",
+    "Python/ML must never claim fake accuracy or fake production metrics."
+  ]
 }

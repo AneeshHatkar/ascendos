@@ -19,8 +19,10 @@ Upload or paste this file and say:
 - `PROJECT_EXECUTION_LOG.md`
 - `README.md`
 - `SOURCE_OF_TRUTH.md`
+- `docs/architecture/PYTHON_ML_INTELLIGENCE_WORKER.md`
 - `docs/database/CORE_SQL_SPINE.md`
 - `docs/phase-plans/PHASE_4_CORE_SQL_SPINE.md`
+- `docs/phase-plans/PHASE_5_15_PYTHON_ML_INTELLIGENCE_ARCHITECTURE_PATCH.md`
 - `docs/phase-plans/PHASE_5_CORE_READ_UI_INTEGRATION.md`
 - `docs/phase-reports/PHASE_4_CORE_SQL_SPINE_REPORT.md`
 - `docs/phase-reports/PHASE_5_CORE_READ_UI_INTEGRATION_REPORT.md`
@@ -37,6 +39,7 @@ Upload or paste this file and say:
 - `scripts/audit-phase-3.mjs`
 - `scripts/audit-phase-4.mjs`
 - `scripts/audit-phase-5.mjs`
+- `scripts/audit-python-ml-boundary.mjs`
 - `scripts/audit-source-alignment.mjs`
 - `scripts/generate-code-snapshot.mjs`
 - `scripts/validate-registry-coverage.mjs`
@@ -225,6 +228,13 @@ All notable changes to ascendOS will be documented here.
 - Added Phase 5 report.
 - Extended source alignment audit through Phase 5.
 - Preserved no-write, no-memory, no-generation, no-Python, and no-ML boundaries.
+
+## Phase 5.15 Python/ML Intelligence Architecture Patch
+
+- Added future Python/ML Intelligence Worker architecture.
+- Added all planned ML intelligence features, route placement, phase placement, safety boundaries, privacy boundaries, evaluation requirements, score definitions, and output contracts.
+- Added Python/ML boundary audit.
+- No runtime ML, database write behavior, or existing Phase 1-5 behavior was changed.
 ```
 
 ### `CODE_LEDGER.md`
@@ -955,6 +965,23 @@ Change: Records final Phase 5 completion and preserved boundaries.
 
 ### CODE_LEDGER.md
 Change: Records Phase 5 completion marker.
+
+## Phase 5.15 — Python/ML Intelligence Architecture Patch
+
+### docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_FINAL_SYNCED.json
+Change: Added `python_ml_intelligence_worker` with full structured roadmap and safety rules.
+
+### docs/architecture/PYTHON_ML_INTELLIGENCE_WORKER.md
+Purpose: Documents the future Python/ML worker layer and non-mutating contract.
+
+### docs/phase-plans/PHASE_5_15_PYTHON_ML_INTELLIGENCE_ARCHITECTURE_PATCH.md
+Purpose: Locks scope/non-scope for Phase 5.15 before Phase 6.
+
+### scripts/audit-python-ml-boundary.mjs
+Purpose: Verifies Python/ML is documented as non-mutating, planned, and not active runtime yet.
+
+### package.json
+Change: Added `audit:pythonml` and wired it into `npm run check`.
 ```
 
 ### `DECISIONS.md`
@@ -1282,6 +1309,23 @@ Boundary:
 
 Verification:
 - `npm run check` passes.
+
+## Phase 5.15 — Python/ML Intelligence Architecture Patch
+
+Status: In progress.
+
+Scope:
+- Source-of-truth Python/ML architecture only.
+- No active Python runtime.
+- No direct SQL writes from Python.
+- No memory implementation.
+- No Carnos generation.
+
+Next:
+- Update DOCX source of truth.
+- Update source alignment audit.
+- Verify all gates.
+- Phase 6 — Safe Write / Proposed Action Flow.
 ```
 
 ### `PROJECT_EXECUTION_LOG.md`
@@ -2488,6 +2532,28 @@ Connected dynamic read pages:
 
 ### Next
 - Phase 6 — Safe Write / Proposed Action Flow.
+
+## 2026-06-19 — Phase 5.15 — Python/ML Intelligence Architecture Patch
+
+### Completed
+- Added Python/ML Intelligence Worker as a future source-of-truth layer.
+- Added all planned Python/ML features, route placement, phase placement, safety rules, privacy rules, evaluation rules, cold-start rules, score definitions, and output contracts.
+- Updated JSON source-of-truth file.
+- Added Python/ML architecture doc and Phase 5.15 plan.
+- Added audit:pythonml boundary gate.
+
+### Boundary
+- No active Python runtime was added.
+- No ML model was added.
+- No database writes from Python were added.
+- No memory implementation was added.
+- No Carnos generation was added.
+- No npm build dependency on Python was added.
+
+### Next
+- Update DOCX source of truth.
+- Update source alignment audit.
+- Start Phase 6 — Safe Write / Proposed Action Flow.
 ```
 
 ### `README.md`
@@ -2611,6 +2677,206 @@ Flow:
 - /analytics
 - /privacy
 - /custom-trackers
+```
+
+### `docs/architecture/PYTHON_ML_INTELLIGENCE_WORKER.md`
+
+```md
+# Python/ML Intelligence Worker Architecture
+
+Status: Phase 5.15 source-of-truth patch
+Runtime status: not active yet
+Future path: apps/worker-python
+
+## Basic Rule
+
+Python/ML advises. The app validates. The user confirms. The server writes. SQL records. Audit logs.
+
+Python/ML must never directly mutate SQL.
+
+Any write-affecting output must pass through:
+
+proposal -> validation -> Save/Edit/Cancel -> server write -> audit log -> timeline event -> dashboard refresh
+
+## Allowed Python/ML Outputs
+
+- scores
+- rankings
+- recommendations
+- summaries
+- classifications
+- risk predictions
+- trend detection
+- pattern detection
+- semantic retrieval results
+- life trajectory simulations
+- Carnos response-support signals
+- proposed action drafts
+
+## Forbidden Python/ML Behavior
+
+- Python/ML must never directly mutate SQL.
+- Python/ML must never bypass Save/Edit/Cancel confirmation.
+- Python/ML must never silently create memory.
+- Python/ML must never execute actions directly.
+- Python/ML must never delete or update user data directly.
+- Python/ML must never collect hidden personal data.
+- Python/ML must never make npm build depend on Python.
+- Python/ML must never provide medical diagnosis, prescription, legal advice, tax advice, or investment advice.
+- Python/ML must never claim fake accuracy or fake production metrics.
+
+## Core Python/ML Features
+
+### 1. Daily Priority Engine
+Where: /command, /calendar, /goals, /carnos, /world-class
+Phase placement: planned in Phase 5.15, prepared by Phase 6-9, scaffolded in Phase 11, activated in Phase 13.
+Purpose: ranks what the user should do today using impact, urgency, energy, proof history, deadlines, and long-term goals.
+
+### 2. Goal Risk Predictor
+Where: /goals, /command, /world-class, /analytics, /carnos
+Phase placement: planned in Phase 5.15, supported by Phase 8 creation flows, scaffolded in Phase 11, activated in Phase 13.
+Purpose: predicts which goals are slipping before they fail and recommends recovery actions.
+
+### 3. Proof-of-Work Scorer
+Where: /world-class, /analytics, /timeline, /command, /carnos
+Phase placement: planned in Phase 5.15, supported by Phase 8 proof/daily logs, scaffolded in Phase 11, activated in Phase 13.
+Purpose: scores real progress versus fake busyness using proof items, daily logs, tasks, goals, commits, and career actions.
+
+### 4. Career Readiness Engine
+Where: /career, /resume, /networking, /interviews, /projects, /command, /carnos
+Phase placement: planned in Phase 5.15, supported by Phase 8-10 career data, scaffolded in Phase 11, activated in Phase 13.
+Purpose: scores readiness for ML Engineer, Data Engineer, SWE, research, job search, referrals, interviews, and portfolio strength.
+
+### 5. Learning Optimizer
+Where: /learning, /interviews, /projects, /career, /carnos
+Phase placement: planned in Phase 5.15, supported by Phase 8-10 learning/interview records, scaffolded in Phase 11, activated in Phase 13.
+Purpose: recommends what to study next based on weakness, role targets, project needs, spaced repetition, and energy.
+
+### 6. Semantic Memory Retrieval
+Where: /carnos, /knowledge, /timeline, /decisions, /research-lab
+Phase placement: planned in Phase 5.15, requires Phase 10 memory foundation, scaffolded in Phase 11, activated across Phase 11-13.
+Purpose: retrieves relevant logs, decisions, reflections, tasks, documents, and memories by meaning instead of exact keyword search.
+
+### 7. Carnos Context Pack Builder
+Where: /carnos, /command, /future-simulator, /world-class
+Phase placement: planned in Phase 5.15, prepared in Phase 7, supported by Phase 10 memory, scaffolded in Phase 11, activated in Phase 13.
+Purpose: builds structured background context Carnos needs before replying.
+
+### 8. Persona Router
+Where: /carnos, /emotion, /command, /world-class
+Phase placement: planned in Phase 5.15, simple rule version in Phase 7, ML version in Phase 11-13.
+Purpose: selects Carnos mode such as strict mentor, strategist, coach, analyst, planner, supportive friend, career mentor, or execution commander.
+
+### 9. Life Trajectory Simulator
+Where: /future-simulator, /world-class, /analytics, /carnos, /command
+Phase placement: planned in Phase 5.15, supported by Phase 8-10 logs/history, scaffolded in Phase 11, activated in Phase 13.
+Purpose: projects 7, 30, 90, and 180-day outcomes if current behavior continues.
+
+### 10. Burnout / Drift Detector
+Where: /emotion, /sleep-energy, /body, /command, /analytics, /carnos
+Phase placement: planned in Phase 5.15, supported by Phase 8-10 sleep/energy/task/proof data, scaffolded in Phase 11, activated in Phase 13.
+Purpose: detects overload, avoidance, low proof, skipped routines, poor sleep, and goal drift early.
+
+### 11. Health/Energy Pattern Detector
+Where: /body, /nutrition, /supplements, /sleep-energy, /emotion, /analytics, /carnos
+Phase placement: planned in Phase 5.15, supported by Phase 8-10 body/nutrition/sleep/supplement logs, scaffolded in Phase 11, activated in Phase 13.
+Purpose: finds patterns between sleep, gym, food, supplements, mood, energy, and productivity without giving medical advice.
+
+### 12. Project Momentum Analyzer
+Where: /projects, /research-lab, /world-class, /command, /carnos
+Phase placement: planned in Phase 5.15, supported by Phase 8-10 project/proof records, scaffolded in Phase 11, activated in Phase 13.
+Purpose: scores project progress, tests, documentation, GitHub readiness, resume value, and scope creep risk.
+
+### 13. Resume/JD Fit Optimizer
+Where: /resume, /career, /networking, /interviews, /carnos
+Phase placement: planned in Phase 5.15, supported by Phase 8-10 career/resume/application data, scaffolded in Phase 11, activated in Phase 13.
+Purpose: compares resume versions to job descriptions, detects gaps, scores fit, and recommends safer edits.
+
+### 14. Networking and Referral Prioritizer
+Where: /networking, /career, /calendar, /command, /carnos
+Phase placement: planned in Phase 5.15, supported by Phase 8-10 contacts/outreach/application status, scaffolded in Phase 11, activated in Phase 13.
+Purpose: ranks who to contact next based on company relevance, relationship strength, follow-up timing, role fit, and application status.
+
+### 15. Interview Weakness Detector
+Where: /interviews, /learning, /career, /carnos
+Phase placement: planned in Phase 5.15, supported by Phase 8-10 interview practice records, scaffolded in Phase 11, activated in Phase 13.
+Purpose: detects weak interview topics, recommends practice sets, and scores role-specific interview readiness.
+
+### 16. Research/PhD Readiness Engine
+Where: /research-lab, /research-stanford, /projects, /learning, /carnos
+Phase placement: planned in Phase 5.15, supported by Phase 8-10 research logs/papers/projects/outreach, scaffolded in Phase 11, activated in Phase 13.
+Purpose: scores research depth, paper ideas, literature gaps, experiment quality, publication trajectory, and advisor-fit readiness.
+
+### 17. Decision Quality Analyzer
+Where: /decisions, /timeline, /future-simulator, /carnos
+Phase placement: planned in Phase 5.15, supported by Phase 8-10 decision records/outcomes, scaffolded in Phase 11, activated in Phase 13.
+Purpose: analyzes decisions for evidence quality, bias, regret, delayed action, similar past decisions, and outcome quality.
+
+### 18. Custom Tracker Intelligence
+Where: /custom-trackers, /analytics, /carnos
+Phase placement: planned in Phase 5.15, supported by Phase 8-10 custom tracker schema/records, scaffolded in Phase 11, activated in Phase 13.
+Purpose: adds trends, streak risk, anomaly detection, correlations, and recommendations to any custom tracker.
+
+## Safety and Trust Features
+
+- ML Explainability Contract
+- ML Output Audit Log
+- Feedback Loop
+- Cold-Start Mode
+- Privacy Controls
+- Health Boundary
+- Finance Boundary
+- Versioned ML Output Schemas
+- Human Override
+- Evaluation Tests
+- No Fake Metrics Rule
+- Direct SQL Write Blocker
+- Data Freshness Check
+- Score Definitions
+
+## Score Definitions
+
+- proof_score: Measures real progress quality using completed tasks, proof items, goal movement, concrete outputs, and evidence references.
+- goal_risk_score: Measures the risk that a goal will slip based on deadlines, missed milestones, low proof, task carryover, and stale progress.
+- career_readiness_score: Measures readiness for target roles using resume strength, project quality, interview prep, applications, referrals, and skill gaps.
+- learning_readiness_score: Measures study readiness using weak topics, recent study history, spaced repetition timing, energy, and role relevance.
+- burnout_risk_score: Measures overload risk using sleep, energy, missed routines, negative drift, proof decline, and task carryover.
+- project_momentum_score: Measures project health using commits, tests, docs, phase completion, issue closure, and portfolio value.
+- research_readiness_score: Measures research trajectory using literature review, experiment quality, writing output, paper ideas, and advisor-fit work.
+
+## Phase Placement
+
+- Phase 5.15: Python/ML Intelligence Architecture Patch. Source-of-truth only. No active Python runtime.
+- Phase 6: Safe Write / Proposed Action Flow. Builds the write safety gate future ML must use.
+- Phase 7: Carnos Chat + Action Proposal Layer. Adds Carnos proposal contracts compatible with future ML.
+- Phase 8: Real Creation Flows. Creates real user data.
+- Phase 9: Calendar / Timeline / Time Integration. Adds time data needed for priority, overload, and trajectory intelligence.
+- Phase 10: Memory System Foundation. Adds safe memory and retrieval foundation.
+- Phase 11: Python/ML Worker Foundation. Adds apps/worker-python scaffold, contracts, tests, no-write guard, and first simple scorers.
+- Phase 13: Advanced Analytics / World-Class Progress Engine. Activates serious scoring, ranking, simulation, prediction, retrieval, and recommendations.
+- Phase 14: Privacy / Export / Delete / Settings / Hardening. Adds ML privacy controls and output deletion/export.
+- Phase 15: Productionization. Deploys and hardens worker, queues, monitoring, fallbacks, cost controls, and evaluations.
+
+## Versioned Output Contracts
+
+- score_result_v1
+- recommendation_result_v1
+- context_pack_v1
+- proposed_action_draft_v1
+- evidence_ref_v1
+- model_output_audit_v1
+- user_feedback_v1
+
+## Loopholes Closed
+
+- Python cannot directly write SQL.
+- Python cannot silently create memory.
+- Carnos cannot bypass Save/Edit/Cancel.
+- Health output stays pattern analysis only, not medical advice.
+- Finance output stays budgeting and pattern analysis only, not investment, legal, or tax advice.
+- ML outputs need evidence, confidence, reason codes, freshness, and user override.
+- No fake ML accuracy or fake production metrics are allowed.
+- The current Next.js build must not depend on Python.
 ```
 
 ### `docs/database/CORE_SQL_SPINE.md`
@@ -3181,6 +3447,63 @@ Phase 4 can be marked complete only when:
 - code snapshot is updated
 - `npm run check` passes
 - git status is clean
+```
+
+### `docs/phase-plans/PHASE_5_15_PYTHON_ML_INTELLIGENCE_ARCHITECTURE_PATCH.md`
+
+```md
+# Phase 5.15 — Python/ML Intelligence Architecture Patch
+
+Status: planned architecture patch before Phase 6
+Runtime impact: none
+
+## Purpose
+
+Add the full future Python/ML intelligence plan to ascendOS + Carnos without breaking Phase 1-5 or activating Python runtime.
+
+## What This Adds
+
+- Python/ML Intelligence Worker architecture.
+- Full ML feature roadmap.
+- Route placement for every future feature.
+- Phase placement for every future feature.
+- Safety rules.
+- Privacy rules.
+- Health and finance boundaries.
+- ML explainability contract.
+- ML output audit requirement.
+- Feedback loop requirement.
+- Cold-start behavior.
+- Human override rule.
+- No fake metrics rule.
+- Versioned output schema requirement.
+- Score definition requirement.
+
+## What This Does Not Add Yet
+
+- No active Python service.
+- No ML model.
+- No database writes from Python.
+- No direct Supabase write key for Python.
+- No memory implementation.
+- No Carnos generation.
+- No job queue.
+- No deployment changes.
+- No npm build dependency on Python.
+
+## Core Rule
+
+Python/ML advises. The app validates. The user confirms. The server writes. SQL records. Audit logs.
+
+Python/ML must never directly mutate SQL.
+
+Any write-affecting output must pass through:
+
+proposal -> validation -> Save/Edit/Cancel -> server write -> audit log -> timeline event -> dashboard refresh
+
+## Next Phase
+
+After this patch passes all gates, proceed to Phase 6 — Safe Write / Proposed Action Flow.
 ```
 
 ### `docs/phase-plans/PHASE_5_CORE_READ_UI_INTEGRATION.md`
@@ -17792,7 +18115,122 @@ Important Carnos writes must continue to follow:
       "Grimoire layer remains practical: mode -> mission -> proof -> reversion.",
       "All real user data is SQL-backed, user-owned, RLS-protected, auditable, and export/delete capable."
     ]
-  }
+  },
+  "python_ml_intelligence_worker": {
+    "name": "Python/ML Intelligence Worker",
+    "status": "planned_source_of_truth_layer",
+    "current_patch": "Phase 5.15",
+    "runtime_status": "not_active_yet",
+    "future_path": "apps/worker-python",
+    "core_rule": "Python/ML advises. The app validates. The user confirms. The server writes. SQL records. Audit logs.",
+    "write_boundary": "Python/ML must never directly mutate SQL.",
+    "write_flow": "proposal -> validation -> Save/Edit/Cancel -> server write -> audit log -> timeline event -> dashboard refresh",
+    "allowed_outputs": [
+      "scores",
+      "rankings",
+      "recommendations",
+      "summaries",
+      "classifications",
+      "risk predictions",
+      "trend detection",
+      "pattern detection",
+      "semantic retrieval results",
+      "life trajectory simulations",
+      "Carnos response-support signals",
+      "proposed action drafts"
+    ],
+    "forbidden_behaviors": [
+      "Python/ML must never directly mutate SQL.",
+      "Python/ML must never bypass Save/Edit/Cancel confirmation.",
+      "Python/ML must never silently create memory.",
+      "Python/ML must never execute actions directly.",
+      "Python/ML must never delete or update user data directly.",
+      "Python/ML must never collect hidden personal data.",
+      "Python/ML must never make npm build depend on Python.",
+      "Python/ML must never provide medical diagnosis, prescription, legal advice, tax advice, or investment advice.",
+      "Python/ML must never claim fake accuracy or fake production metrics."
+    ],
+    "core_features": [
+      "Daily Priority Engine",
+      "Goal Risk Predictor",
+      "Proof-of-Work Scorer",
+      "Career Readiness Engine",
+      "Learning Optimizer",
+      "Semantic Memory Retrieval",
+      "Carnos Context Pack Builder",
+      "Persona Router",
+      "Life Trajectory Simulator",
+      "Burnout / Drift Detector",
+      "Health/Energy Pattern Detector",
+      "Project Momentum Analyzer",
+      "Resume/JD Fit Optimizer",
+      "Networking and Referral Prioritizer",
+      "Interview Weakness Detector",
+      "Research/PhD Readiness Engine",
+      "Decision Quality Analyzer",
+      "Custom Tracker Intelligence"
+    ],
+    "safety_and_trust_features": [
+      "ML Explainability Contract",
+      "ML Output Audit Log",
+      "Feedback Loop",
+      "Cold-Start Mode",
+      "Privacy Controls",
+      "Health Boundary",
+      "Finance Boundary",
+      "Versioned ML Output Schemas",
+      "Human Override",
+      "Evaluation Tests",
+      "No Fake Metrics Rule",
+      "Direct SQL Write Blocker",
+      "Data Freshness Check",
+      "Score Definitions"
+    ],
+    "score_definitions": {
+      "proof_score": "Measures real progress quality using completed tasks, proof items, goal movement, concrete outputs, and evidence references.",
+      "goal_risk_score": "Measures the risk that a goal will slip based on deadlines, missed milestones, low proof, task carryover, and stale progress.",
+      "career_readiness_score": "Measures readiness for target roles using resume strength, project quality, interview prep, applications, referrals, and skill gaps.",
+      "learning_readiness_score": "Measures study readiness using weak topics, recent study history, spaced repetition timing, energy, and role relevance.",
+      "burnout_risk_score": "Measures overload risk using sleep, energy, missed routines, negative drift, proof decline, and task carryover.",
+      "project_momentum_score": "Measures project health using commits, tests, docs, phase completion, issue closure, and portfolio value.",
+      "research_readiness_score": "Measures research trajectory using literature review, experiment quality, writing output, paper ideas, and advisor-fit work."
+    },
+    "phase_placement": {
+      "phase_5_15": "Python/ML Intelligence Architecture Patch. Source-of-truth only. No active Python runtime.",
+      "phase_6": "Safe Write / Proposed Action Flow. Builds the write safety gate future ML must use.",
+      "phase_7": "Carnos Chat + Action Proposal Layer. Adds Carnos proposal contracts compatible with future ML.",
+      "phase_8": "Real Creation Flows. Creates real user data.",
+      "phase_9": "Calendar / Timeline / Time Integration. Adds time data needed for priority, overload, and trajectory intelligence.",
+      "phase_10": "Memory System Foundation. Adds safe memory and retrieval foundation.",
+      "phase_11": "Python/ML Worker Foundation. Adds apps/worker-python scaffold, contracts, tests, no-write guard, and first simple scorers.",
+      "phase_13": "Advanced Analytics / World-Class Progress Engine. Activates serious scoring, ranking, simulation, prediction, retrieval, and recommendations.",
+      "phase_14": "Privacy / Export / Delete / Settings / Hardening. Adds ML privacy controls and output deletion/export.",
+      "phase_15": "Productionization. Deploys and hardens worker, queues, monitoring, fallbacks, cost controls, and evaluations."
+    },
+    "versioned_output_contracts": [
+      "score_result_v1",
+      "recommendation_result_v1",
+      "context_pack_v1",
+      "proposed_action_draft_v1",
+      "evidence_ref_v1",
+      "model_output_audit_v1",
+      "user_feedback_v1"
+    ]
+  },
+  "architecture_decisions": [
+    "Phase 5.15 adds Python/ML as a future separate intelligence worker layer. The worker may score, rank, recommend, retrieve, simulate, summarize, classify, and draft proposed actions, but it must never directly mutate SQL, silently create memory, execute actions, bypass validation, or bypass Save/Edit/Cancel."
+  ],
+  "non_negotiable_rules": [
+    "Python/ML must never directly mutate SQL.",
+    "Python/ML must never bypass Save/Edit/Cancel confirmation.",
+    "Python/ML must never silently create memory.",
+    "Python/ML must never execute actions directly.",
+    "Python/ML must never delete or update user data directly.",
+    "Python/ML must never collect hidden personal data.",
+    "Python/ML must never make npm build depend on Python.",
+    "Python/ML must never provide medical diagnosis, prescription, legal advice, tax advice, or investment advice.",
+    "Python/ML must never claim fake accuracy or fake production metrics."
+  ]
 }
 ```
 
@@ -17879,7 +18317,7 @@ export default nextConfig;
     "start": "next start",
     "lint": "eslint",
     "validate:routes": "node scripts/validate-route-coverage.mjs",
-    "check": "npm run lint && npm run validate:routes && npm run validate:registry && npm run validate:migrations && npm run audit:phase3 && npm run audit:phase4 && npm run audit:phase5 && npm run audit:source && npm run build",
+    "check": "npm run lint && npm run validate:routes && npm run validate:registry && npm run validate:migrations && npm run audit:phase3 && npm run audit:phase4 && npm run audit:phase5 && npm run audit:source && npm run audit:pythonml && npm run build",
     "validate:registry": "node scripts/validate-registry-coverage.mjs",
     "snapshot:code": "node scripts/generate-code-snapshot.mjs",
     "validate:migrations": "node scripts/validate-sql-migrations.mjs",
@@ -17887,7 +18325,8 @@ export default nextConfig;
     "audit:phase3": "node scripts/audit-phase-3.mjs",
     "audit:phase4": "node scripts/audit-phase-4.mjs",
     "audit:source": "node scripts/audit-source-alignment.mjs",
-    "audit:phase5": "node scripts/audit-phase-5.mjs"
+    "audit:phase5": "node scripts/audit-phase-5.mjs",
+    "audit:pythonml": "node scripts/audit-python-ml-boundary.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",
@@ -18638,6 +19077,131 @@ pass("Phase 5 dynamic read pages use authenticated dashboard shell path");
 console.log("\nPhase 5 audit passed: read UI integration is present and still respects no-write/no-memory/no-generation boundaries.");
 ```
 
+### `scripts/audit-python-ml-boundary.mjs`
+
+```js
+import fs from "node:fs";
+import path from "node:path";
+
+const root = process.cwd();
+
+function fail(message) {
+  console.error(`Python/ML boundary audit failed: ${message}`);
+  process.exit(1);
+}
+
+function ok(message) {
+  console.log(`✓ ${message}`);
+}
+
+function readFile(relativePath) {
+  const fullPath = path.join(root, relativePath);
+  if (!fs.existsSync(fullPath)) {
+    fail(`Missing required file: ${relativePath}`);
+  }
+  ok(`Found ${relativePath}`);
+  return fs.readFileSync(fullPath, "utf8");
+}
+
+function normalize(value) {
+  return value.toLowerCase().replace(/\s+/g, " ").trim();
+}
+
+function requireText(content, phrase, label) {
+  if (!normalize(content).includes(normalize(phrase))) {
+    fail(`${label} missing required phrase: ${phrase}`);
+  }
+}
+
+function forbidPath(relativePath, message) {
+  if (fs.existsSync(path.join(root, relativePath))) {
+    fail(message);
+  }
+}
+
+console.log("=== Python/ML boundary audit ===");
+
+const jsonText = readFile("docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_FINAL_SYNCED.json");
+const sourceTruth = JSON.parse(jsonText);
+
+if (!sourceTruth.python_ml_intelligence_worker) {
+  fail("JSON source of truth missing python_ml_intelligence_worker");
+}
+
+const worker = JSON.stringify(sourceTruth.python_ml_intelligence_worker);
+
+for (const phrase of [
+  "Python/ML Intelligence Worker",
+  "Daily Priority Engine",
+  "Goal Risk Predictor",
+  "Proof-of-Work Scorer",
+  "Career Readiness Engine",
+  "Learning Optimizer",
+  "Semantic Memory Retrieval",
+  "Carnos Context Pack Builder",
+  "Persona Router",
+  "Life Trajectory Simulator",
+  "Burnout / Drift Detector",
+  "Health/Energy Pattern Detector",
+  "Project Momentum Analyzer",
+  "Resume/JD Fit Optimizer",
+  "Networking and Referral Prioritizer",
+  "Interview Weakness Detector",
+  "Research/PhD Readiness Engine",
+  "Decision Quality Analyzer",
+  "Custom Tracker Intelligence",
+  "ML Explainability Contract",
+  "ML Output Audit Log",
+  "Feedback Loop",
+  "Cold-Start Mode",
+  "Privacy Controls",
+  "Versioned ML Output Schemas",
+  "Human Override",
+  "Evaluation Tests",
+  "No Fake Metrics Rule",
+  "Direct SQL Write Blocker",
+  "Data Freshness Check",
+  "Score Definitions",
+  "Python/ML must never directly mutate SQL.",
+  "Python/ML must never bypass Save/Edit/Cancel confirmation.",
+  "Python/ML must never silently create memory."
+]) {
+  requireText(worker, phrase, "JSON python_ml_intelligence_worker");
+}
+
+const archDoc = readFile("docs/architecture/PYTHON_ML_INTELLIGENCE_WORKER.md");
+
+for (const phrase of [
+  "Python/ML must never directly mutate SQL",
+  "proposal -> validation -> Save/Edit/Cancel -> server write -> audit log -> timeline event -> dashboard refresh",
+  "Health output stays pattern analysis only",
+  "Finance output stays budgeting and pattern analysis only",
+  "No fake ML accuracy",
+  "The current Next.js build must not depend on Python"
+]) {
+  requireText(archDoc, phrase, "Python/ML architecture doc");
+}
+
+const phasePlan = readFile("docs/phase-plans/PHASE_5_15_PYTHON_ML_INTELLIGENCE_ARCHITECTURE_PATCH.md");
+
+for (const phrase of [
+  "Runtime impact: none",
+  "No active Python service",
+  "No database writes from Python",
+  "No npm build dependency on Python",
+  "proceed to Phase 6"
+]) {
+  requireText(phasePlan, phrase, "Phase 5.15 plan");
+}
+
+forbidPath("apps/worker-python", "apps/worker-python must not exist yet; Phase 5.15 is architecture-only.");
+forbidPath("src/lib/repositories/core-write.ts", "core-write repository must not exist before Phase 6 safe-write work.");
+forbidPath("src/lib/memory", "memory implementation must not exist before the memory phase.");
+
+console.log("");
+console.log("Python/ML boundary audit passed.");
+```
+
 ### `scripts/audit-source-alignment.mjs`
 
 ```js
@@ -18998,6 +19562,90 @@ for (const phrase of [
 
 pass("Phase 5 read UI integration files, report, and audit gate are present");
 
+
+console.log("\n=== Phase 5.15 Python/ML intelligence architecture patch ===");
+
+for (const file of [
+  "docs/architecture/PYTHON_ML_INTELLIGENCE_WORKER.md",
+  "docs/phase-plans/PHASE_5_15_PYTHON_ML_INTELLIGENCE_ARCHITECTURE_PATCH.md",
+  "scripts/audit-python-ml-boundary.mjs"
+]) {
+  requireFile(file);
+}
+
+const pythonMlJsonText = fs.readFileSync(path.join(root, "docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_FINAL_SYNCED.json"), "utf8");
+const pythonMlJson = JSON.parse(pythonMlJsonText);
+
+if (!pythonMlJson.python_ml_intelligence_worker) {
+  fail("Source JSON missing python_ml_intelligence_worker");
+}
+
+const pythonMlBlock = JSON.stringify(pythonMlJson.python_ml_intelligence_worker);
+
+for (const phrase of [
+  "Python/ML Intelligence Worker",
+  "Daily Priority Engine",
+  "Goal Risk Predictor",
+  "Proof-of-Work Scorer",
+  "Career Readiness Engine",
+  "Learning Optimizer",
+  "Semantic Memory Retrieval",
+  "Carnos Context Pack Builder",
+  "Persona Router",
+  "Life Trajectory Simulator",
+  "Burnout / Drift Detector",
+  "Health/Energy Pattern Detector",
+  "Project Momentum Analyzer",
+  "Resume/JD Fit Optimizer",
+  "Networking and Referral Prioritizer",
+  "Interview Weakness Detector",
+  "Research/PhD Readiness Engine",
+  "Decision Quality Analyzer",
+  "Custom Tracker Intelligence",
+  "ML Explainability Contract",
+  "ML Output Audit Log",
+  "Feedback Loop",
+  "Cold-Start Mode",
+  "Privacy Controls",
+  "Versioned ML Output Schemas",
+  "Human Override",
+  "Evaluation Tests",
+  "No Fake Metrics Rule",
+  "Direct SQL Write Blocker",
+  "Data Freshness Check",
+  "Score Definitions",
+  "Python/ML must never directly mutate SQL.",
+  "Python/ML must never bypass Save/Edit/Cancel confirmation.",
+  "Python/ML must never silently create memory."
+]) {
+  if (!pythonMlBlock.includes(phrase)) {
+    fail(`python_ml_intelligence_worker missing required phrase: ${phrase}`);
+  }
+}
+
+const pythonMlDoc = fs.readFileSync(path.join(root, "docs/architecture/PYTHON_ML_INTELLIGENCE_WORKER.md"), "utf8");
+
+for (const phrase of [
+  "Python/ML must never directly mutate SQL",
+  "proposal -> validation -> Save/Edit/Cancel -> server write -> audit log -> timeline event -> dashboard refresh",
+  "Health output stays pattern analysis only",
+  "Finance output stays budgeting and pattern analysis only",
+  "No fake ML accuracy",
+  "The current Next.js build must not depend on Python"
+]) {
+  if (!pythonMlDoc.includes(phrase)) {
+    fail(`Python/ML architecture doc missing required phrase: ${phrase}`);
+  }
+}
+
+if (fs.existsSync(path.join(root, "apps/worker-python"))) {
+  fail("apps/worker-python should not exist before Phase 11.");
+}
+
+if (fs.existsSync(path.join(root, "src/lib/memory"))) {
+  fail("memory implementation should not exist before the memory phase.");
+}
+
 console.log("\n=== Type contracts ===");
 const dbTypes = read("src/types/database.ts");
 
@@ -19074,7 +19722,7 @@ requireIncludes(codeLedger, "Phase 4.12", "CODE_LEDGER.md missing Phase 4.12 ent
 
 pass("Logs and phase markers are present");
 
-console.log("\nSource alignment audit passed: Phases 1–5 are structurally aligned with the FINAL_SYNCED DOCX/JSON and current code gates.");
+console.log("\nSource alignment audit passed: Phases 1–5 plus Phase 5.15 are structurally aligned with the FINAL_SYNCED DOCX/JSON and current code gates.");
 ```
 
 ### `scripts/generate-code-snapshot.mjs`

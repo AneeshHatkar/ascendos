@@ -355,6 +355,90 @@ for (const phrase of [
 
 pass("Phase 5 read UI integration files, report, and audit gate are present");
 
+
+console.log("\n=== Phase 5.15 Python/ML intelligence architecture patch ===");
+
+for (const file of [
+  "docs/architecture/PYTHON_ML_INTELLIGENCE_WORKER.md",
+  "docs/phase-plans/PHASE_5_15_PYTHON_ML_INTELLIGENCE_ARCHITECTURE_PATCH.md",
+  "scripts/audit-python-ml-boundary.mjs"
+]) {
+  requireFile(file);
+}
+
+const pythonMlJsonText = fs.readFileSync(path.join(root, "docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_FINAL_SYNCED.json"), "utf8");
+const pythonMlJson = JSON.parse(pythonMlJsonText);
+
+if (!pythonMlJson.python_ml_intelligence_worker) {
+  fail("Source JSON missing python_ml_intelligence_worker");
+}
+
+const pythonMlBlock = JSON.stringify(pythonMlJson.python_ml_intelligence_worker);
+
+for (const phrase of [
+  "Python/ML Intelligence Worker",
+  "Daily Priority Engine",
+  "Goal Risk Predictor",
+  "Proof-of-Work Scorer",
+  "Career Readiness Engine",
+  "Learning Optimizer",
+  "Semantic Memory Retrieval",
+  "Carnos Context Pack Builder",
+  "Persona Router",
+  "Life Trajectory Simulator",
+  "Burnout / Drift Detector",
+  "Health/Energy Pattern Detector",
+  "Project Momentum Analyzer",
+  "Resume/JD Fit Optimizer",
+  "Networking and Referral Prioritizer",
+  "Interview Weakness Detector",
+  "Research/PhD Readiness Engine",
+  "Decision Quality Analyzer",
+  "Custom Tracker Intelligence",
+  "ML Explainability Contract",
+  "ML Output Audit Log",
+  "Feedback Loop",
+  "Cold-Start Mode",
+  "Privacy Controls",
+  "Versioned ML Output Schemas",
+  "Human Override",
+  "Evaluation Tests",
+  "No Fake Metrics Rule",
+  "Direct SQL Write Blocker",
+  "Data Freshness Check",
+  "Score Definitions",
+  "Python/ML must never directly mutate SQL.",
+  "Python/ML must never bypass Save/Edit/Cancel confirmation.",
+  "Python/ML must never silently create memory."
+]) {
+  if (!pythonMlBlock.includes(phrase)) {
+    fail(`python_ml_intelligence_worker missing required phrase: ${phrase}`);
+  }
+}
+
+const pythonMlDoc = fs.readFileSync(path.join(root, "docs/architecture/PYTHON_ML_INTELLIGENCE_WORKER.md"), "utf8");
+
+for (const phrase of [
+  "Python/ML must never directly mutate SQL",
+  "proposal -> validation -> Save/Edit/Cancel -> server write -> audit log -> timeline event -> dashboard refresh",
+  "Health output stays pattern analysis only",
+  "Finance output stays budgeting and pattern analysis only",
+  "No fake ML accuracy",
+  "The current Next.js build must not depend on Python"
+]) {
+  if (!pythonMlDoc.includes(phrase)) {
+    fail(`Python/ML architecture doc missing required phrase: ${phrase}`);
+  }
+}
+
+if (fs.existsSync(path.join(root, "apps/worker-python"))) {
+  fail("apps/worker-python should not exist before Phase 11.");
+}
+
+if (fs.existsSync(path.join(root, "src/lib/memory"))) {
+  fail("memory implementation should not exist before the memory phase.");
+}
+
 console.log("\n=== Type contracts ===");
 const dbTypes = read("src/types/database.ts");
 
@@ -431,4 +515,4 @@ requireIncludes(codeLedger, "Phase 4.12", "CODE_LEDGER.md missing Phase 4.12 ent
 
 pass("Logs and phase markers are present");
 
-console.log("\nSource alignment audit passed: Phases 1–5 are structurally aligned with the FINAL_SYNCED DOCX/JSON and current code gates.");
+console.log("\nSource alignment audit passed: Phases 1–5 plus Phase 5.15 are structurally aligned with the FINAL_SYNCED DOCX/JSON and current code gates.");

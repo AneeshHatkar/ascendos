@@ -723,3 +723,20 @@ Change: Records final Phase 5 completion and preserved boundaries.
 
 ### CODE_LEDGER.md
 Change: Records Phase 5 completion marker.
+
+## Phase 5.15 — Python/ML Intelligence Architecture Patch
+
+### docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_FINAL_SYNCED.json
+Change: Added `python_ml_intelligence_worker` with full structured roadmap and safety rules.
+
+### docs/architecture/PYTHON_ML_INTELLIGENCE_WORKER.md
+Purpose: Documents the future Python/ML worker layer and non-mutating contract.
+
+### docs/phase-plans/PHASE_5_15_PYTHON_ML_INTELLIGENCE_ARCHITECTURE_PATCH.md
+Purpose: Locks scope/non-scope for Phase 5.15 before Phase 6.
+
+### scripts/audit-python-ml-boundary.mjs
+Purpose: Verifies Python/ML is documented as non-mutating, planned, and not active runtime yet.
+
+### package.json
+Change: Added `audit:pythonml` and wired it into `npm run check`.
