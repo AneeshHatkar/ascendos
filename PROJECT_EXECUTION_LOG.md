@@ -1034,3 +1034,24 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 
 ### Next
 - Phase 5.8 — Connect calendar page to tasks/events.
+
+## 2026-06-18 — Phase 5.8 — Calendar Page Read Integration
+
+### Completed
+- Updated `/calendar` to use the authenticated dashboard shell.
+- Connected `/calendar` to read-only `listTasks` and `listEvents` helpers.
+- Added read-only metric tiles for tasks, events, and upcoming records.
+- Added combined task/event list and empty state.
+
+### Boundary
+- No task/event creation form was added.
+- No edit/delete/reschedule controls were added.
+- No reminder, sync, or execution logic was added.
+- No write repository was added.
+- No Carnos generation or memory implementation was added.
+
+### Verification
+- npm run check must pass.
+
+### Next
+- Phase 5.9 — Connect proof/daily log surfaces.

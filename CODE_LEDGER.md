@@ -659,3 +659,8 @@ Purpose: Connects the timeline dashboard to read-only event, proof item, and aud
 
 ### src/app/carnos/page.tsx
 Purpose: Connects the Carnos dashboard to read-only chat session, chat message, and AI action repository helpers while explicitly preserving the no-generation, no-memory, no-execution, no-mutation Phase 5 boundary.
+
+## Phase 5.8 — Calendar Page Read Integration
+
+### src/app/calendar/page.tsx
+Purpose: Connects the calendar dashboard to read-only task and event repository helpers and renders calendar metrics, read warnings, combined task/event list, and empty state.
