@@ -670,3 +670,20 @@ Purpose: Connects the world-class path dashboard to read-only proof item and dai
 
 ### src/app/analytics/page.tsx
 Purpose: Connects the analytics dashboard to read-only proof item and daily log repository helpers and renders lightweight proof/daily-log summary metrics plus recent daily logs.\n\n
+
+## Phase 5.10 — Core Domain Filtered Reads
+
+### src/components/dashboard/domain-read-page.tsx
+Purpose: Reusable read-only domain dashboard that reads goals, tasks, events, and proof items, then filters records by domain-like fields.
+
+### src/app/career/page.tsx
+Purpose: Career-domain read-only dashboard surface.
+
+### src/app/learning/page.tsx
+Purpose: Learning-domain read-only dashboard surface.
+
+### src/app/body/page.tsx
+Purpose: Body-domain read-only dashboard surface.
+
+### src/components/dashboard/index.ts
+Change: Exports DomainReadPage.

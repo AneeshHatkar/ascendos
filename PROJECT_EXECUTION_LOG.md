@@ -1075,3 +1075,25 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 
 ### Next
 - Phase 5.10 — Connect core domain pages to filtered reads.\n\n
+
+## 2026-06-18 — Phase 5.10 — Core Domain Filtered Reads
+
+### Completed
+- Added reusable `DomainReadPage` component for filtered read-only domain dashboards.
+- Updated `/career` to show career-domain reads.
+- Updated `/learning` to show learning-domain reads.
+- Updated `/body` to show body-domain reads.
+- Domain pages read goals, tasks, events, and proof items, then filter by domain-like fields.
+
+### Boundary
+- No create/edit/delete forms were added.
+- No write repository was added.
+- No Carnos generation was added.
+- No memory implementation was added.
+- No analytics engine was added.
+
+### Verification
+- npm run check must pass.
+
+### Next
+- Phase 5.11 — Add Phase 5 audit script.
