@@ -893,3 +893,20 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 
 ### Verification
 - `npm run check` must pass.
+
+## 2026-06-18 — Phase 5.1 — Core Read UI Integration Plan Lock
+
+### Completed
+- Added Phase 5 plan lock document.
+- Defined exact Phase 5 scope.
+- Defined read-only boundaries.
+- Defined prioritized pages.
+- Defined shared dashboard components.
+- Defined completion gates.
+- Updated PHASE_STATUS.md to mark Phase 5 started.
+
+### Verification
+- npm run check must pass before commit.
+
+### Next
+- Phase 5.2 — Add shared dashboard UI components.

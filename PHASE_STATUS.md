@@ -203,3 +203,22 @@ Confirmed foundation:
 - read-only repository helpers added
 - database documentation added
 - Phase 4 report added
+
+## Phase 5 — Core Read UI Integration — STARTED
+
+### Status
+Started.
+
+### Scope
+Phase 5 connects the Phase 4 SQL-backed read layer to key dashboard pages using typed read-only repositories.
+
+### Plan
+See docs/phase-plans/PHASE_5_CORE_READ_UI_INTEGRATION.md.
+
+### Non-Negotiable Rules
+- Read-only only.
+- No write repositories.
+- No create/edit/delete forms.
+- No Carnos AI generation.
+- No memory table or retrieval.
+- No voice, RAG, or production deployment.

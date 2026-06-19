@@ -597,3 +597,11 @@ Change: Added explicit completed baseline markers for Phase 1, Phase 2, Phase 3,
 
 ### `scripts/audit-source-alignment.mjs`
 Change: Removed unused `requireDirectory` helper.
+
+## Phase 5.1 — Core Read UI Integration Plan Lock
+
+### docs/phase-plans/PHASE_5_CORE_READ_UI_INTEGRATION.md
+Purpose: Locked Phase 5 implementation plan covering read-only UI integration, priority pages, shared components, auth shell, audits, deferred scope, and completion gates.
+
+### PHASE_STATUS.md
+Change: Marked Phase 5 as started.
