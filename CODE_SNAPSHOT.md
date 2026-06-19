@@ -85,7 +85,13 @@ Upload or paste this file and say:
 - `src/components/auth/index.ts`
 - `src/components/auth/protected-page.tsx`
 - `src/components/dashboard/dashboard-card.tsx`
+- `src/components/dashboard/data-list.tsx`
+- `src/components/dashboard/empty-state.tsx`
+- `src/components/dashboard/index.ts`
+- `src/components/dashboard/metric-tile.tsx`
 - `src/components/dashboard/placeholder-dashboard-page.tsx`
+- `src/components/dashboard/section-card.tsx`
+- `src/components/dashboard/status-pill.tsx`
 - `src/components/layout/app-shell.tsx`
 - `src/components/layout/app-sidebar.tsx`
 - `src/components/layout/app-topbar.tsx`
@@ -815,6 +821,26 @@ Purpose: Locked Phase 5 implementation plan covering read-only UI integration, p
 
 ### PHASE_STATUS.md
 Change: Marked Phase 5 as started.
+
+## Phase 5.2 — Shared Dashboard UI Components
+
+### src/components/dashboard/section-card.tsx
+Purpose: Reusable display-only dashboard section container.
+
+### src/components/dashboard/empty-state.tsx
+Purpose: Reusable display-only empty state component.
+
+### src/components/dashboard/data-list.tsx
+Purpose: Reusable display-only list renderer for read pages.
+
+### src/components/dashboard/status-pill.tsx
+Purpose: Reusable display-only status label.
+
+### src/components/dashboard/metric-tile.tsx
+Purpose: Reusable display-only metric card.
+
+### src/components/dashboard/index.ts
+Purpose: Barrel exports for shared dashboard components.
 ```
 
 ### `DECISIONS.md`
@@ -2029,6 +2055,25 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 
 ### Next
 - Phase 5.2 — Add shared dashboard UI components.
+
+## 2026-06-18 — Phase 5.2 — Shared Dashboard UI Components
+
+### Completed
+- Added shared display-only dashboard UI components.
+- Added SectionCard, EmptyState, DataList, StatusPill, and MetricTile.
+- Added dashboard component barrel export.
+
+### Boundary
+- No Supabase reads were added in this step.
+- No write flows were added.
+- No memory implementation was added.
+- No Carnos generation was added.
+
+### Verification
+- npm run check must pass.
+
+### Next
+- Phase 5.3 — Add authenticated dashboard shell helper.
 ```
 
 ### `README.md`
@@ -19476,6 +19521,162 @@ export function DashboardCard({
 }
 ```
 
+### `src/components/dashboard/data-list.tsx`
+
+```tsx
+import type { ReactNode } from "react";
+
+export type DataListItem = {
+  id: string;
+  title: string;
+  description?: string;
+  meta?: ReactNode;
+  leading?: ReactNode;
+  trailing?: ReactNode;
+};
+
+type DataListProps = {
+  items: DataListItem[];
+  emptyState: ReactNode;
+  className?: string;
+};
+
+export function DataList({ items, emptyState, className = "" }: DataListProps) {
+  if (items.length === 0) {
+    return <>{emptyState}</>;
+  }
+
+  return (
+    <div className={["divide-y divide-slate-800/80", className].join(" ")}>
+      {items.map((item) => (
+        <article key={item.id} className="flex items-start gap-4 py-4 first:pt-0 last:pb-0">
+          {item.leading ? <div className="shrink-0">{item.leading}</div> : null}
+          <div className="min-w-0 flex-1">
+            <div className="flex items-start justify-between gap-4">
+              <div className="min-w-0">
+                <h3 className="truncate text-sm font-medium text-slate-100">
+                  {item.title}
+                </h3>
+                {item.description ? (
+                  <p className="mt-1 line-clamp-2 text-sm leading-6 text-slate-400">
+                    {item.description}
+                  </p>
+                ) : null}
+              </div>
+              {item.trailing ? <div className="shrink-0">{item.trailing}</div> : null}
+            </div>
+            {item.meta ? <div className="mt-2 text-xs text-slate-500">{item.meta}</div> : null}
+          </div>
+        </article>
+      ))}
+    </div>
+  );
+}
+```
+
+### `src/components/dashboard/empty-state.tsx`
+
+```tsx
+import type { ReactNode } from "react";
+
+type EmptyStateProps = {
+  title: string;
+  description: string;
+  icon?: ReactNode;
+  footer?: ReactNode;
+  className?: string;
+};
+
+export function EmptyState({
+  title,
+  description,
+  icon,
+  footer,
+  className = "",
+}: EmptyStateProps) {
+  return (
+    <div
+      className={[
+        "rounded-xl border border-dashed border-slate-800 bg-slate-950/50 px-5 py-8 text-center",
+        className,
+      ].join(" ")}
+    >
+      {icon ? (
+        <div className="mx-auto mb-3 flex size-10 items-center justify-center rounded-full border border-slate-800 bg-slate-900 text-slate-300">
+          {icon}
+        </div>
+      ) : null}
+      <h3 className="text-sm font-semibold text-slate-100">{title}</h3>
+      <p className="mx-auto mt-2 max-w-xl text-sm leading-6 text-slate-400">
+        {description}
+      </p>
+      {footer ? <div className="mt-4">{footer}</div> : null}
+    </div>
+  );
+}
+```
+
+### `src/components/dashboard/index.ts`
+
+```tsx
+export { DataList } from "./data-list";
+export type { DataListItem } from "./data-list";
+export { EmptyState } from "./empty-state";
+export { MetricTile } from "./metric-tile";
+export { SectionCard } from "./section-card";
+export { StatusPill } from "./status-pill";
+```
+
+### `src/components/dashboard/metric-tile.tsx`
+
+```tsx
+import type { ReactNode } from "react";
+
+type MetricTileProps = {
+  label: string;
+  value: string | number;
+  description?: string;
+  icon?: ReactNode;
+  className?: string;
+};
+
+export function MetricTile({
+  label,
+  value,
+  description,
+  icon,
+  className = "",
+}: MetricTileProps) {
+  return (
+    <div
+      className={[
+        "rounded-xl border border-slate-800 bg-slate-950/60 p-4",
+        className,
+      ].join(" ")}
+    >
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-500">
+            {label}
+          </p>
+          <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-50">
+            {value}
+          </p>
+        </div>
+        {icon ? (
+          <div className="flex size-9 items-center justify-center rounded-lg border border-slate-800 bg-slate-900 text-slate-300">
+            {icon}
+          </div>
+        ) : null}
+      </div>
+      {description ? (
+        <p className="mt-3 text-sm leading-6 text-slate-400">{description}</p>
+      ) : null}
+    </div>
+  );
+}
+```
+
 ### `src/components/dashboard/placeholder-dashboard-page.tsx`
 
 ```tsx
@@ -19511,6 +19712,96 @@ export function PlaceholderDashboardPage({
         </div>
       </section>
     </AppShell>
+  );
+}
+```
+
+### `src/components/dashboard/section-card.tsx`
+
+```tsx
+import type { ReactNode } from "react";
+
+type SectionCardProps = {
+  title: string;
+  description?: string;
+  eyebrow?: string;
+  action?: ReactNode;
+  children: ReactNode;
+  className?: string;
+};
+
+export function SectionCard({
+  title,
+  description,
+  eyebrow,
+  action,
+  children,
+  className = "",
+}: SectionCardProps) {
+  return (
+    <section
+      className={[
+        "rounded-2xl border border-slate-800/80 bg-slate-950/70 p-5 shadow-sm shadow-black/20",
+        "backdrop-blur",
+        className,
+      ].join(" ")}
+    >
+      <div className="mb-4 flex items-start justify-between gap-4">
+        <div className="min-w-0">
+          {eyebrow ? (
+            <p className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300/80">
+              {eyebrow}
+            </p>
+          ) : null}
+          <h2 className="text-lg font-semibold text-slate-50">{title}</h2>
+          {description ? (
+            <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-400">
+              {description}
+            </p>
+          ) : null}
+        </div>
+        {action ? <div className="shrink-0">{action}</div> : null}
+      </div>
+      {children}
+    </section>
+  );
+}
+```
+
+### `src/components/dashboard/status-pill.tsx`
+
+```tsx
+type StatusTone = "neutral" | "success" | "warning" | "danger" | "info";
+
+type StatusPillProps = {
+  label: string;
+  tone?: StatusTone;
+  className?: string;
+};
+
+const toneClasses: Record<StatusTone, string> = {
+  neutral: "border-slate-700 bg-slate-900 text-slate-300",
+  success: "border-emerald-700/70 bg-emerald-950/70 text-emerald-300",
+  warning: "border-amber-700/70 bg-amber-950/70 text-amber-300",
+  danger: "border-rose-700/70 bg-rose-950/70 text-rose-300",
+  info: "border-cyan-700/70 bg-cyan-950/70 text-cyan-300",
+};
+
+export function StatusPill({
+  label,
+  tone = "neutral",
+  className = "",
+}: StatusPillProps) {
+  return (
+    <span
+      className={[
+        "inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-medium",
+        toneClasses[tone],
+        className,
+      ].join(" ")}
+    >
+      {label}
+    </span>
   );
 }
 ```

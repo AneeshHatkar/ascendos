@@ -605,3 +605,23 @@ Purpose: Locked Phase 5 implementation plan covering read-only UI integration, p
 
 ### PHASE_STATUS.md
 Change: Marked Phase 5 as started.
+
+## Phase 5.2 — Shared Dashboard UI Components
+
+### src/components/dashboard/section-card.tsx
+Purpose: Reusable display-only dashboard section container.
+
+### src/components/dashboard/empty-state.tsx
+Purpose: Reusable display-only empty state component.
+
+### src/components/dashboard/data-list.tsx
+Purpose: Reusable display-only list renderer for read pages.
+
+### src/components/dashboard/status-pill.tsx
+Purpose: Reusable display-only status label.
+
+### src/components/dashboard/metric-tile.tsx
+Purpose: Reusable display-only metric card.
+
+### src/components/dashboard/index.ts
+Purpose: Barrel exports for shared dashboard components.
