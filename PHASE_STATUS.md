@@ -289,3 +289,9 @@ Boundaries:
 - No Carnos generation.
 - No direct chat-to-database writes.
 - No unaudited writes.
+
+Phase 6.2 update at 2026-06-19 23:44 UTC:
+- Created `src/lib/actions/action-types.ts`.
+- Added canonical proposed action types for tasks, goals, daily logs, and proof items.
+- Phase 6 remains in progress.
+- Next step: Phase 6.3 — Proposed Action Contracts.

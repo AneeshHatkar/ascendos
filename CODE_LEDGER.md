@@ -759,3 +759,26 @@ Write impact:
 
 Python/ML impact:
 - None. Python/ML remains architecture-only and non-mutating.
+
+## 2026-06-19 23:44 UTC — Phase 6.2 Action Types
+
+Added:
+- `src/lib/actions/action-types.ts`
+
+Role:
+- Defines the canonical proposed action type list for Phase 6.
+- Exports `ProposedActionType`.
+- Exports labels and descriptions for supported action types.
+- Exports `isProposedActionType` for safe runtime checks.
+
+Supported action types:
+- `create_task`
+- `create_goal`
+- `create_daily_log`
+- `create_proof_item`
+
+Runtime impact:
+- Type/registry foundation only.
+
+Write impact:
+- No writes are executed in this step.

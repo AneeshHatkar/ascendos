@@ -117,3 +117,9 @@ This starts the controlled write foundation for ascendOS:
 - dashboard refresh
 
 No runtime write code was added yet.
+
+## 2026-06-19 23:44 UTC — Added Proposed Action Type Registry
+
+Added the Phase 6 proposed action type registry.
+
+This establishes the first safe-write foundation layer by defining which action names are allowed before contracts, validation, lifecycle, execution, and UI are added.

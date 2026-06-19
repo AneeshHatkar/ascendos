@@ -1236,3 +1236,31 @@ Purpose:
 - Prevent uncontrolled freeform writes, Carnos direct writes, Python/ML direct SQL mutation, hidden memory, and premature runtime intelligence.
 
 No application runtime code was added in this step.
+
+## 2026-06-19 23:44 UTC — Phase 6.2 Completed: Proposed Action Types
+
+Completed Phase 6.2 by creating the central proposed action type registry.
+
+Created:
+- `src/lib/actions/action-types.ts`
+
+Added allowed proposed action types:
+- `create_task`
+- `create_goal`
+- `create_daily_log`
+- `create_proof_item`
+
+Purpose:
+- Establish the fixed list of allowed write-affecting action types.
+- Prevent random/freeform action names from entering the write pipeline.
+- Prepare the foundation for Phase 6.3 proposed action contracts and Phase 6.5 validation.
+
+Validation:
+- `npm run lint` passed.
+- `npm run check` passed.
+- `git diff --check` passed.
+
+No runtime write execution was added.
+No Carnos generation was added.
+No Python/ML runtime was added.
+No memory system was added.
