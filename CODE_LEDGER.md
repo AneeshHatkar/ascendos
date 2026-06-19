@@ -649,3 +649,8 @@ Change: Allows async server-rendered dashboard children so pages can load read d
 
 ### src/app/goals/page.tsx
 Purpose: Connects the goals dashboard to the read-only `listGoals` repository helper and renders goal metrics, record list, read warnings, and empty state.
+
+## Phase 5.6 — Timeline Page Read Integration
+
+### src/app/timeline/page.tsx
+Purpose: Connects the timeline dashboard to read-only event, proof item, and audit log repository helpers and renders timeline metrics, read warnings, combined record list, and empty state.

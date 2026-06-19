@@ -991,3 +991,24 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 
 ### Next
 - Phase 5.6 — Connect timeline page to read repositories.
+
+## 2026-06-18 — Phase 5.6 — Timeline Page Read Integration
+
+### Completed
+- Updated `/timeline` to use the authenticated dashboard shell.
+- Connected `/timeline` to read-only `listEvents`, `listProofItems`, and `listAuditLogs` helpers.
+- Added read-only metric tiles for events, proof items, and audit logs.
+- Added combined timeline-style record list and empty state.
+
+### Boundary
+- No event/proof/audit creation form was added.
+- No edit/delete controls were added.
+- No write repository was added.
+- No Carnos generation or action execution was added.
+- No memory implementation was added.
+
+### Verification
+- npm run check must pass.
+
+### Next
+- Phase 5.7 — Connect Carnos page to chat/action reads.
