@@ -1221,3 +1221,18 @@ Connected dynamic read pages:
 - Update DOCX source of truth.
 - Update source alignment audit.
 - Start Phase 6 — Safe Write / Proposed Action Flow.
+
+## 2026-06-19 23:35 UTC — Phase 6.1 Started: Safe Write / Proposed Action Flow Plan Lock
+
+Started Phase 6 with the official plan lock for the Safe Write / Proposed Action Flow.
+
+Created:
+- `docs/phase-plans/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW.md`
+
+Purpose:
+- Define the safe write pipeline before any runtime write code is added.
+- Lock the required flow: proposal -> validation -> Save/Edit/Cancel -> server write -> audit log -> timeline event -> dashboard refresh.
+- Preserve Phase 1 through Phase 5.15 boundaries.
+- Prevent uncontrolled freeform writes, Carnos direct writes, Python/ML direct SQL mutation, hidden memory, and premature runtime intelligence.
+
+No application runtime code was added in this step.

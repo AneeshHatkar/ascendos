@@ -269,3 +269,23 @@ Next:
 - Update source alignment audit.
 - Verify all gates.
 - Phase 6 — Safe Write / Proposed Action Flow.
+
+## Phase 6 — Safe Write / Proposed Action Flow
+
+Status: In Progress
+
+Current step:
+- Phase 6.1 — Plan Lock
+
+Created:
+- `docs/phase-plans/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW.md`
+
+Phase 6 goal:
+- Build the safe write pipeline: proposal -> validation -> Save/Edit/Cancel -> server write -> audit log -> timeline event -> dashboard refresh.
+
+Boundaries:
+- No Python/ML runtime.
+- No memory implementation.
+- No Carnos generation.
+- No direct chat-to-database writes.
+- No unaudited writes.

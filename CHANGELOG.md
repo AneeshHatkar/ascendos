@@ -102,3 +102,18 @@ All notable changes to ascendOS will be documented here.
 - Added all planned ML intelligence features, route placement, phase placement, safety boundaries, privacy boundaries, evaluation requirements, score definitions, and output contracts.
 - Added Python/ML boundary audit.
 - No runtime ML, database write behavior, or existing Phase 1-5 behavior was changed.
+
+## 2026-06-19 23:35 UTC — Phase 6 Safe Write Plan Started
+
+Added the Phase 6 plan for the Safe Write / Proposed Action Flow.
+
+This starts the controlled write foundation for ascendOS:
+- proposed actions
+- validation
+- Save/Edit/Cancel confirmation
+- server-side writes
+- audit logging
+- timeline linkage
+- dashboard refresh
+
+No runtime write code was added yet.

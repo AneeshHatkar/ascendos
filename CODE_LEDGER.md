@@ -740,3 +740,22 @@ Purpose: Verifies Python/ML is documented as non-mutating, planned, and not acti
 
 ### package.json
 Change: Added `audit:pythonml` and wired it into `npm run check`.
+
+## 2026-06-19 23:35 UTC — Phase 6.1 Plan Lock
+
+Added:
+- `docs/phase-plans/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW.md`
+
+Role:
+- Official Phase 6 implementation plan.
+- Defines safe proposed-action write flow, scope, non-scope, acceptance criteria, and safety boundaries.
+- Establishes the required confirmation chain for future write-capable features.
+
+Runtime impact:
+- None.
+
+Write impact:
+- None.
+
+Python/ML impact:
+- None. Python/ML remains architecture-only and non-mutating.
