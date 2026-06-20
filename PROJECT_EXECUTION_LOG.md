@@ -1719,3 +1719,10 @@ Purpose:
 - Wired CarnosPanelV1 into `/carnos` using dashboard summary data plus existing read-only Carnos records.
 - Preserved the Phase 6.16 compatibility marker and PendingUpdatesDrawer review path.
 - No lifecycle mutation callbacks, autonomous action execution, Python/ML execution, memory, voice, internet tools, or background jobs were added.
+
+## Phase 7.13 - Cross-Dashboard Links
+
+- Added CrossDashboardLinks as a source-approved navigation loop across core Phase 7 dashboards.
+- Wired links into Command, Timeline, Calendar, Goals, and Carnos dashboard surfaces.
+- Kept links limited to canonical routes only; no non-canonical proof route was introduced.
+- No writes, autonomous actions, generation, memory, Python/ML execution, voice, internet tools, or background jobs were added.

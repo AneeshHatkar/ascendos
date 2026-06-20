@@ -1,4 +1,5 @@
 import { OperatingDashboardCard, OperatingDashboardGrid } from "@/components/dashboard";
+import { CrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
 import { getDashboardCardsForSurface, type DashboardDataResult } from "@/lib/dashboard";
 
 interface CommandDashboardV1Props {
@@ -33,6 +34,8 @@ export function CommandDashboardV1({ data }: CommandDashboardV1Props) {
           </div>
         </div>
       </section>
+
+      <CrossDashboardLinks activeRoute="/command" />
 
       <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
         {[

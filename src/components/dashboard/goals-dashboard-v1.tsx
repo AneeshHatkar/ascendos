@@ -1,4 +1,5 @@
 import { OperatingDashboardCard, OperatingDashboardGrid } from "@/components/dashboard";
+import { CrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
 import { getDashboardCardsForSurface, type DashboardDataResult } from "@/lib/dashboard";
 
 interface GoalsDashboardV1Props {
@@ -36,6 +37,8 @@ export function GoalsDashboardV1({ data }: GoalsDashboardV1Props) {
           </div>
         </div>
       </div>
+
+      <CrossDashboardLinks activeRoute="/goals" />
 
       <div className="grid gap-4 md:grid-cols-4">
         <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">

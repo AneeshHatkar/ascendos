@@ -511,3 +511,11 @@ Status: Implemented and awaiting validation.
 Boundary: Carnos panel is visibility-only; no generation, memory, action execution, or lifecycle callbacks are attached.
 
 Next step after commit: Phase 7.13 Cross-dashboard links.
+
+## Phase 7.13 - Cross-Dashboard Links
+
+Status: Implemented and awaiting validation.
+
+Boundary: navigation only; all links point to existing canonical routes.
+
+Next step after commit: Phase 7.14 Empty/loading/error/privacy states.

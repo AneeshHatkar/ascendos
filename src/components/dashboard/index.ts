@@ -14,3 +14,4 @@ export * from "./calendar-dashboard-v1";
 export * from "./goals-dashboard-v1";
 export * from "./proof-dashboard-v1";
 export * from "./carnos-panel-v1";
+export * from "./cross-dashboard-links";

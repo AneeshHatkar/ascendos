@@ -260,3 +260,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 ## Phase 7.12 - Carnos Panel v1
 
 - Added a read-only Carnos operating panel to the Carnos dashboard with companion state and confirmation visibility.
+
+## Phase 7.13 - Cross-Dashboard Links
+
+- Added canonical cross-dashboard navigation across the Phase 7 operating dashboard surfaces.
