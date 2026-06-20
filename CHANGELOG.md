@@ -160,4 +160,8 @@ This preserves the required Phase 6 flow: proposal first, confirmation later, ex
 
 Added a safe lifecycle helper for proposed actions.
 
-The helper supports approval, rejection, cancellation, and failure marking while preserving the Phase 6 rule that target records are not written until a later explicit execution step.\n
+The helper supports approval, rejection, cancellation, and failure marking while preserving the Phase 6 rule that target records are not written until a later explicit execution step.\n\n\n## 2026-06-20 05:18 UTC — Added Execution Dispatcher Boundary
+
+Added the Phase 6 execution dispatcher boundary.
+
+The dispatcher verifies ownership, approval status, and action type, but intentionally does not execute target-table writes until the specific Phase 6.11–6.14 action flows are implemented.\n

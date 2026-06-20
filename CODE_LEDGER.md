@@ -894,4 +894,21 @@ Runtime impact:
 
 Write impact:
 - Writes only to `ai_actions`.
+- Does not write to target domain tables.\n\n\n## 2026-06-20 05:18 UTC — Phase 6.10 Execution Dispatcher Boundary
+
+Added:
+- `src/lib/actions/execution-dispatcher.ts`
+
+Role:
+- Defines `ExecuteApprovedActionInput`.
+- Defines `ExecuteApprovedActionData`.
+- Adds `executeApprovedAction`.
+- Adds dispatcher routing for `create_task`, `create_goal`, `create_daily_log`, and `create_proof_item`.
+- Adds `markDispatcherReadyForActionType` as a typed readiness helper.
+
+Runtime impact:
+- Adds safe dispatcher boundary.
+
+Write impact:
+- Reads from `ai_actions`.
 - Does not write to target domain tables.\n
