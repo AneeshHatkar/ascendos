@@ -847,4 +847,18 @@ Runtime impact:
 
 Write impact:
 - Adds an audit-write helper only.
-- Does not execute proposed actions by itself.\n
+- Does not execute proposed actions by itself.\n\n\n## 2026-06-20 04:31 UTC — Phase 6.7 Timeline Helper Boundary
+
+Added:
+- `src/lib/timeline/write-timeline-event.ts`
+
+Role:
+- Defines timeline helper input/result types.
+- Provides `writeTimelineEvent`.
+- Returns `status: "skipped"` because the current SQL spine has no `timeline_events` table.
+
+Runtime impact:
+- Safe helper boundary only.
+
+Write impact:
+- No timeline write is executed in this step.\n

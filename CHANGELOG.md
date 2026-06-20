@@ -148,4 +148,8 @@ This prevents invalid or unsafe proposed action payloads from reaching future ex
 
 Added a reusable audit logging helper for Phase 6 safe-write workflows.
 
-This prepares future confirmed writes to create traceable audit records.\n
+This prepares future confirmed writes to create traceable audit records.\n\n\n## 2026-06-20 04:31 UTC — Added Timeline Helper Boundary
+
+Added a safe timeline helper boundary for Phase 6.
+
+Because the current SQL spine does not include a `timeline_events` table, the helper intentionally returns a controlled skipped result instead of inventing schema or writing to a non-existent table.\n
