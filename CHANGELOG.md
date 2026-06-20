@@ -122,7 +122,9 @@ No runtime write code was added yet.
 
 Added the Phase 6 proposed action type registry.
 
-This establishes the first safe-write foundation layer by defining which action names are allowed before contracts, validation, lifecycle, execution, and UI are added.\n\n## 2026-06-19 23:51 UTC — Added Proposed Action Contracts
+This establishes the first safe-write foundation layer by defining which action names are allowed before contracts, validation, lifecycle, execution, and UI are added.
+
+## 2026-06-19 23:51 UTC — Added Proposed Action Contracts
 
 Added typed proposed action contracts for Phase 6 safe write flows.
 
@@ -132,7 +134,8 @@ Supported contracts:
 - create daily log
 - create proof item
 
-This prepares the project for validation and controlled action execution.\n
+This prepares the project for validation and controlled action execution.
+
 
 ## 2026-06-19 23:58 UTC — Added Action Result Types
 
@@ -144,55 +147,91 @@ This prepares validation and execution code to return consistent success/error o
 
 Added proposed action validation for Phase 6 safe-write workflows.
 
-This prevents invalid or unsafe proposed action payloads from reaching future execution code.\n\n## 2026-06-20 00:09 UTC — Added Audit Logging Helper
+This prevents invalid or unsafe proposed action payloads from reaching future execution code.
+
+## 2026-06-20 00:09 UTC — Added Audit Logging Helper
 
 Added a reusable audit logging helper for Phase 6 safe-write workflows.
 
-This prepares future confirmed writes to create traceable audit records.\n\n\n## 2026-06-20 04:31 UTC — Added Timeline Helper Boundary
+This prepares future confirmed writes to create traceable audit records.
+
+
+## 2026-06-20 04:31 UTC — Added Timeline Helper Boundary
 
 Added a safe timeline helper boundary for Phase 6.
 
-Because the current SQL spine does not include a `timeline_events` table, the helper intentionally returns a controlled skipped result instead of inventing schema or writing to a non-existent table.\n\n\n## 2026-06-20 04:49 UTC — Added Proposed Action Creation Helper
+Because the current SQL spine does not include a `timeline_events` table, the helper intentionally returns a controlled skipped result instead of inventing schema or writing to a non-existent table.
+
+
+## 2026-06-20 04:49 UTC — Added Proposed Action Creation Helper
 
 Added a helper for creating validated proposed actions in `ai_actions` with `pending_confirmation` status.
 
-This preserves the required Phase 6 flow: proposal first, confirmation later, execution only after explicit approval.\n\n\n## 2026-06-20 05:05 UTC — Added Action Lifecycle Helper
+This preserves the required Phase 6 flow: proposal first, confirmation later, execution only after explicit approval.
+
+
+## 2026-06-20 05:05 UTC — Added Action Lifecycle Helper
 
 Added a safe lifecycle helper for proposed actions.
 
-The helper supports approval, rejection, cancellation, and failure marking while preserving the Phase 6 rule that target records are not written until a later explicit execution step.\n\n\n## 2026-06-20 05:18 UTC — Added Execution Dispatcher Boundary
+The helper supports approval, rejection, cancellation, and failure marking while preserving the Phase 6 rule that target records are not written until a later explicit execution step.
+
+
+## 2026-06-20 05:18 UTC — Added Execution Dispatcher Boundary
 
 Added the Phase 6 execution dispatcher boundary.
 
-The dispatcher verifies ownership, approval status, and action type, but intentionally does not execute target-table writes until the specific Phase 6.11–6.14 action flows are implemented.\n\n\n## 2026-06-20 05:24 UTC — Added Create Task Execution Flow
+The dispatcher verifies ownership, approval status, and action type, but intentionally does not execute target-table writes until the specific Phase 6.11–6.14 action flows are implemented.
+
+
+## 2026-06-20 05:24 UTC — Added Create Task Execution Flow
 
 Added the first concrete Phase 6 execution flow: approved `create_task` proposals can now create records in `tasks`.
 
-The dispatcher now routes `create_task` actions to the task flow while keeping the remaining action types intentionally unimplemented until their specific phases.\n\n\n## 2026-06-20 18:09 UTC — Added Create Goal Execution Flow
+The dispatcher now routes `create_task` actions to the task flow while keeping the remaining action types intentionally unimplemented until their specific phases.
+
+
+## 2026-06-20 18:09 UTC — Added Create Goal Execution Flow
 
 Added the Phase 6 create-goal execution flow: approved `create_goal` proposals can now create records in `goals`.
 
-The dispatcher now routes `create_goal` actions to the goal flow while keeping daily logs and proof items intentionally unimplemented until their specific phases.\n\n\n## 2026-06-20 18:13 UTC — Added Create Daily Log Execution Flow
+The dispatcher now routes `create_goal` actions to the goal flow while keeping daily logs and proof items intentionally unimplemented until their specific phases.
+
+
+## 2026-06-20 18:13 UTC — Added Create Daily Log Execution Flow
 
 Added the Phase 6 create-daily-log execution flow: approved `create_daily_log` proposals can now create records in `daily_logs`.
 
-The dispatcher now routes `create_daily_log` actions to the daily log flow while keeping proof items intentionally unimplemented until Phase 6.14.\n\n\n## 2026-06-20 18:17 UTC — Added Create Proof Item Execution Flow
+The dispatcher now routes `create_daily_log` actions to the daily log flow while keeping proof items intentionally unimplemented until Phase 6.14.
+
+
+## 2026-06-20 18:17 UTC — Added Create Proof Item Execution Flow
 
 Added the Phase 6 create-proof-item execution flow: approved `create_proof_item` proposals can now create records in `proof_items`.
 
-The dispatcher now routes all four Phase 6 write action types: tasks, goals, daily logs, and proof items.\n\n\n## 2026-06-20 18:22 UTC — Added Proposed Action Review UI
+The dispatcher now routes all four Phase 6 write action types: tasks, goals, daily logs, and proof items.
+
+
+## 2026-06-20 18:22 UTC — Added Proposed Action Review UI
 
 Added a reusable Save/Edit/Cancel UI component for reviewing proposed actions before execution.
 
-The component supports payload preview, JSON payload editing, validation issue display, Save / Confirm callback, and Cancel callback while keeping database writes outside the component.\n\n\n## 2026-06-20 18:30 UTC — Wired Proposed Action Review into Carnos Page
+The component supports payload preview, JSON payload editing, validation issue display, Save / Confirm callback, and Cancel callback while keeping database writes outside the component.
+
+
+## 2026-06-20 18:30 UTC — Wired Proposed Action Review into Carnos Page
 
 Wired the Phase 6 proposed-action review card into the Carnos dashboard as a safe confirmation-first preview surface.
 
-The page now displays the Save/Edit/Cancel UI while preserving the server-owned write boundary.\n\n\n## 2026-06-20 18:38 UTC — Added Phase 6 Audit Gate
+The page now displays the Save/Edit/Cancel UI while preserving the server-owned write boundary.
+
+
+## 2026-06-20 18:38 UTC — Added Phase 6 Audit Gate
 
 Added `scripts/audit-phase-6.mjs` and wired `npm run audit:phase6` into the main check pipeline.
 
-The audit verifies the Phase 6 safe write proposed-action flow and guards the confirmation-first boundary.\n
+The audit verifies the Phase 6 safe write proposed-action flow and guards the confirmation-first boundary.
+
 
 ## 2026-06-20 18:47 UTC — Completed Phase 6 Safe Write Proposed Action Flow
 
@@ -271,4 +310,19 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 
 ## Phase 7.15 - No-Hardcoded-Demo-Data Cleanup
 
-- Cleaned user-facing Phase 7 dashboard copy to reduce demo/placeholder language while preserving audit-required compatibility markers.\n\n## Phase 7.16 - Phase 7 Audit Gate\n\n- Expanded integration audit coverage for Phase 7 dashboard wiring, canonical links, pending updates, and dashboard state handling.\n\n\n\n## Phase 7.17 - Manual Smoke Checklist\n\n- Added Phase 7 manual browser smoke checklist for core operating dashboard verification.\n\n
+- Cleaned user-facing Phase 7 dashboard copy to reduce demo/placeholder language while preserving audit-required compatibility markers.
+
+## Phase 7.16 - Phase 7 Audit Gate
+
+- Expanded integration audit coverage for Phase 7 dashboard wiring, canonical links, pending updates, and dashboard state handling.
+
+
+
+## Phase 7.17 - Manual Smoke Checklist
+
+- Added Phase 7 manual browser smoke checklist for core operating dashboard verification.
+
+## Phase 7.18 - Phase 7 Completion
+
+- Completed Phase 7 Core Operating Dashboards and added the final Phase 7 report.
+- Strengthened integration audit boundary coverage for all Phase 7 dashboard surfaces.

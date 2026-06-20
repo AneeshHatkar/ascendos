@@ -86,7 +86,9 @@ See `docs/phase-plans/PHASE_4_CORE_SQL_SPINE.md`.
 - User-owned data requires RLS.
 - Carnos must not silently write important data.
 - AI-created changes must flow through proposed actions and audit logs in later phases.
-- No memory table is added in Phase 4; memory belongs to the dedicated memory phase.\n\n## Phase 4 — Core SQL Spine — DOCUMENTATION ADDED
+- No memory table is added in Phase 4; memory belongs to the dedicated memory phase.
+
+## Phase 4 — Core SQL Spine — DOCUMENTATION ADDED
 
 ### Status
 Documentation added. Pending final completion marker.
@@ -102,7 +104,9 @@ Documentation added. Pending final completion marker.
 
 ### Final Gate Remaining
 - Run final full verification.
-- Mark Phase 4 complete.\n\n
+- Mark Phase 4 complete.
+
+
 
 ## Phase 4 — Core SQL Spine — COMPLETE
 
@@ -534,4 +538,34 @@ Status: Implemented and awaiting validation.
 
 Boundary: copy cleanup only; no routes, mutations, generation, memory, or execution added.
 
-Next step after commit: Phase 7.16 Phase 7 audit gate.\n\n## Phase 7.16 - Phase 7 Audit Gate\n\nStatus: Implemented and awaiting validation.\n\nBoundary: audit coverage only; no product behavior or mutation path added.\n\nNext step after commit: Phase 7.17 Manual smoke checklist.\n\n\n\n## Phase 7.17 - Manual Smoke Checklist\n\nStatus: Implemented and awaiting validation.\n\nBoundary: checklist/documentation only; no product behavior, mutation path, generation, memory, or execution added.\n\nNext step after commit: Phase 7.18 Phase 7 report and completion marker.\n\n
+Next step after commit: Phase 7.16 Phase 7 audit gate.
+
+## Phase 7.16 - Phase 7 Audit Gate
+
+Status: Implemented and awaiting validation.
+
+Boundary: audit coverage only; no product behavior or mutation path added.
+
+Next step after commit: Phase 7.17 Manual smoke checklist.
+
+
+
+## Phase 7.17 - Manual Smoke Checklist
+
+Status: Implemented and awaiting validation.
+
+Boundary: checklist/documentation only; no product behavior, mutation path, generation, memory, or execution added.
+
+Next step after commit: Phase 7.18 Phase 7 report and completion marker.
+
+## Phase 7.18 - Phase 7 Completion
+
+Status: Complete.
+
+Completed phase: Phase 7 Core Operating Dashboards.
+
+Completed surfaces: /command, /timeline, /calendar, /goals, /carnos, plus component-only proof visibility.
+
+Boundary: read-only dashboard layer. No autonomous actions, generation, memory/RAG, Python/ML execution, voice execution, internet tools, background jobs, or non-canonical /proof route added.
+
+Next phase: Phase 8 Career System.

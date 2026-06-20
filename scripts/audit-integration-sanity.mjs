@@ -384,6 +384,13 @@ const boundaryFiles = [
   "src/components/dashboard/authenticated-dashboard-shell.tsx",
   "src/lib/dashboard/auth.ts",
   "src/components/dashboard/command-dashboard-v1.tsx",
+  "src/components/dashboard/timeline-dashboard-v1.tsx",
+  "src/components/dashboard/calendar-dashboard-v1.tsx",
+  "src/components/dashboard/goals-dashboard-v1.tsx",
+  "src/components/dashboard/proof-dashboard-v1.tsx",
+  "src/components/dashboard/carnos-panel-v1.tsx",
+  "src/components/dashboard/cross-dashboard-links.tsx",
+  "src/components/actions/pending-updates-drawer.tsx",
 ];
 
 for (const file of boundaryFiles) {
@@ -408,4 +415,4 @@ for (const file of boundaryFiles) {
   pass(`${file} respects protected read/UI boundary`);
 }
 
-console.log("\nIntegration sanity audit passed: Phases 1–6 plus current Phase 7 command wiring are structurally present, exported, wired, and boundary-protected.");
+console.log("\nIntegration sanity audit passed: Phases 1–6 plus Phase 7 core operating dashboard wiring are structurally present, exported, wired, and boundary-protected.");

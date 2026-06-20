@@ -561,7 +561,9 @@ Change: Restored `profiles.onboarding_status` and `confirmation_required` compat
 Purpose: Provides typed read-only repository helpers for Phase 4 core SQL spine tables.
 
 ### `src/lib/repositories/index.ts`
-Purpose: Barrel export for repository helpers.\n\n## Phase 4.11 — Phase 4 Documentation and Report
+Purpose: Barrel export for repository helpers.
+
+## Phase 4.11 — Phase 4 Documentation and Report
 
 ### docs/database/CORE_SQL_SPINE.md
 Purpose: Documents Phase 4 core SQL spine tables, safety rules, validation commands, TypeScript types, repositories, and deferred scope.
@@ -570,7 +572,9 @@ Purpose: Documents Phase 4 core SQL spine tables, safety rules, validation comma
 Purpose: Records Phase 4 completion report, fixed issues, verification gates, and next phase recommendation.
 
 ### PHASE_STATUS.md
-Change: Added Phase 4 documentation-added status.\n\n
+Change: Added Phase 4 documentation-added status.
+
+
 
 ## Phase 4.12 — Phase 4 Complete Marker
 
@@ -663,13 +667,17 @@ Purpose: Connects the Carnos dashboard to read-only chat session, chat message, 
 ## Phase 5.8 — Calendar Page Read Integration
 
 ### src/app/calendar/page.tsx
-Purpose: Connects the calendar dashboard to read-only task and event repository helpers and renders calendar metrics, read warnings, combined task/event list, and empty state.\n\n## Phase 5.9 — Proof and Daily Log Read Surfaces
+Purpose: Connects the calendar dashboard to read-only task and event repository helpers and renders calendar metrics, read warnings, combined task/event list, and empty state.
+
+## Phase 5.9 — Proof and Daily Log Read Surfaces
 
 ### src/app/world-class/page.tsx
 Purpose: Connects the world-class path dashboard to read-only proof item and daily log repository helpers and renders proof/reality metrics plus recent proof records.
 
 ### src/app/analytics/page.tsx
-Purpose: Connects the analytics dashboard to read-only proof item and daily log repository helpers and renders lightweight proof/daily-log summary metrics plus recent daily logs.\n\n
+Purpose: Connects the analytics dashboard to read-only proof item and daily log repository helpers and renders lightweight proof/daily-log summary metrics plus recent daily logs.
+
+
 
 ## Phase 5.10 — Core Domain Filtered Reads
 
@@ -694,10 +702,14 @@ Change: Exports DomainReadPage.
 Purpose: Audits Phase 5 read UI integration and confirms no write, memory, Carnos generation, or execution code entered the phase.
 
 ### package.json
-Change: Added `audit:phase5` and wired it into `npm run check`.\n\n## Phase 5.12 — Phase 5 Documentation Report
+Change: Added `audit:phase5` and wired it into `npm run check`.
+
+## Phase 5.12 — Phase 5 Documentation Report
 
 ### docs/phase-reports/PHASE_5_CORE_READ_UI_INTEGRATION_REPORT.md
-Purpose: Documents Phase 5 read UI integration scope, completed surfaces, explicit non-scope, verification gates, and remaining closure steps.\n\n
+Purpose: Documents Phase 5 read UI integration scope, completed surfaces, explicit non-scope, verification gates, and remaining closure steps.
+
+
 
 ## Phase 5.13 — Source Alignment Audit Update
 
@@ -781,7 +793,9 @@ Runtime impact:
 - Type/registry foundation only.
 
 Write impact:
-- No writes are executed in this step.\n\n## 2026-06-19 23:51 UTC — Phase 6.3 Proposed Action Contracts
+- No writes are executed in this step.
+
+## 2026-06-19 23:51 UTC — Phase 6.3 Proposed Action Contracts
 
 Added:
 - `src/lib/actions/proposed-action-contracts.ts`
@@ -797,7 +811,8 @@ Runtime impact:
 - Type foundation only.
 
 Write impact:
-- No writes are executed in this step.\n
+- No writes are executed in this step.
+
 
 ## 2026-06-19 23:58 UTC — Phase 6.4 Action Result Types
 
@@ -831,7 +846,9 @@ Runtime impact:
 - Validation helper only.
 
 Write impact:
-- No writes are executed in this step.\n\n## 2026-06-20 00:09 UTC — Phase 6.6 Audit Helper
+- No writes are executed in this step.
+
+## 2026-06-20 00:09 UTC — Phase 6.6 Audit Helper
 
 Added:
 - `src/lib/audit/write-audit-log.ts`
@@ -847,7 +864,10 @@ Runtime impact:
 
 Write impact:
 - Adds an audit-write helper only.
-- Does not execute proposed actions by itself.\n\n\n## 2026-06-20 04:31 UTC — Phase 6.7 Timeline Helper Boundary
+- Does not execute proposed actions by itself.
+
+
+## 2026-06-20 04:31 UTC — Phase 6.7 Timeline Helper Boundary
 
 Added:
 - `src/lib/timeline/write-timeline-event.ts`
@@ -861,7 +881,10 @@ Runtime impact:
 - Safe helper boundary only.
 
 Write impact:
-- No timeline write is executed in this step.\n\n\n## 2026-06-20 04:49 UTC — Phase 6.8 Proposed Action Creation Helper
+- No timeline write is executed in this step.
+
+
+## 2026-06-20 04:49 UTC — Phase 6.8 Proposed Action Creation Helper
 
 Added:
 - `src/lib/actions/create-proposed-action.ts`
@@ -878,7 +901,10 @@ Runtime impact:
 
 Write impact:
 - Writes only to `ai_actions`.
-- Does not write to target domain tables.\n\n\n## 2026-06-20 05:05 UTC — Phase 6.9 Action Lifecycle Helper
+- Does not write to target domain tables.
+
+
+## 2026-06-20 05:05 UTC — Phase 6.9 Action Lifecycle Helper
 
 Added:
 - `src/lib/actions/action-lifecycle.ts`
@@ -894,7 +920,10 @@ Runtime impact:
 
 Write impact:
 - Writes only to `ai_actions`.
-- Does not write to target domain tables.\n\n\n## 2026-06-20 05:18 UTC — Phase 6.10 Execution Dispatcher Boundary
+- Does not write to target domain tables.
+
+
+## 2026-06-20 05:18 UTC — Phase 6.10 Execution Dispatcher Boundary
 
 Added:
 - `src/lib/actions/execution-dispatcher.ts`
@@ -911,7 +940,10 @@ Runtime impact:
 
 Write impact:
 - Reads from `ai_actions`.
-- Does not write to target domain tables.\n\n\n## 2026-06-20 05:24 UTC — Phase 6.11 Create Task Flow
+- Does not write to target domain tables.
+
+
+## 2026-06-20 05:24 UTC — Phase 6.11 Create Task Flow
 
 Added:
 - `src/lib/actions/flows/create-task-flow.ts`
@@ -931,7 +963,10 @@ Write impact:
 - Writes to `tasks`.
 - Updates `ai_actions`.
 - Writes to `audit_logs`.
-- Timeline helper remains skipped until timeline schema exists.\n\n\n## 2026-06-20 18:09 UTC — Phase 6.12 Create Goal Flow
+- Timeline helper remains skipped until timeline schema exists.
+
+
+## 2026-06-20 18:09 UTC — Phase 6.12 Create Goal Flow
 
 Added:
 - `src/lib/actions/flows/create-goal-flow.ts`
@@ -951,7 +986,10 @@ Write impact:
 - Writes to `goals`.
 - Updates `ai_actions`.
 - Writes to `audit_logs`.
-- Timeline helper remains skipped until timeline schema exists.\n\n\n## 2026-06-20 18:13 UTC — Phase 6.13 Create Daily Log Flow
+- Timeline helper remains skipped until timeline schema exists.
+
+
+## 2026-06-20 18:13 UTC — Phase 6.13 Create Daily Log Flow
 
 Added:
 - `src/lib/actions/flows/create-daily-log-flow.ts`
@@ -971,7 +1009,10 @@ Write impact:
 - Writes to `daily_logs`.
 - Updates `ai_actions`.
 - Writes to `audit_logs`.
-- Timeline helper remains skipped until timeline schema exists.\n\n\n## 2026-06-20 18:17 UTC — Phase 6.14 Create Proof Item Flow
+- Timeline helper remains skipped until timeline schema exists.
+
+
+## 2026-06-20 18:17 UTC — Phase 6.14 Create Proof Item Flow
 
 Added:
 - `src/lib/actions/flows/create-proof-item-flow.ts`
@@ -992,7 +1033,10 @@ Write impact:
 - Writes to `proof_items`.
 - Updates `ai_actions`.
 - Writes to `audit_logs`.
-- Timeline helper remains skipped until timeline schema exists.\n\n\n## 2026-06-20 18:22 UTC — Phase 6.15 Save/Edit/Cancel UI Component
+- Timeline helper remains skipped until timeline schema exists.
+
+
+## 2026-06-20 18:22 UTC — Phase 6.15 Save/Edit/Cancel UI Component
 
 Added:
 - `src/components/actions/proposed-action-review-card.tsx`
@@ -1006,7 +1050,10 @@ Role:
 Write impact:
 - No direct write impact.
 - No Supabase calls.
-- No server mutations.\n\n\n## 2026-06-20 18:30 UTC — Phase 6.16 App Page Wiring
+- No server mutations.
+
+
+## 2026-06-20 18:30 UTC — Phase 6.16 App Page Wiring
 
 Updated:
 - `src/app/carnos/page.tsx`
@@ -1019,7 +1066,10 @@ Role:
 Write impact:
 - No direct write impact.
 - No Supabase mutation from the page.
-- No action execution from the page.\n\n\n## 2026-06-20 18:38 UTC — Phase 6 Audit Gate
+- No action execution from the page.
+
+
+## 2026-06-20 18:38 UTC — Phase 6 Audit Gate
 
 Added:
 - `scripts/audit-phase-6.mjs`
@@ -1034,7 +1084,8 @@ Role:
 
 Write impact:
 - No runtime write impact.
-- Adds static audit enforcement only.\n
+- Adds static audit enforcement only.
+
 
 ## 2026-06-20 18:47 UTC — Phase 6 Completion Report
 
@@ -1145,4 +1196,22 @@ Write impact:
 - Updated src/app/carnos/page.tsx copy around the Phase 6 compatibility review proposal.
 - Updated src/components/dashboard/command-dashboard-v1.tsx to remove loaded/demo-style fallback wording.
 - Updated src/components/dashboard/proof-dashboard-v1.tsx to clarify component-only proof surface status.
-- Updated src/components/dashboard/carnos-panel-v1.tsx generated fallback wording.\n\n## Phase 7.16 - Phase 7 Audit Gate\n\n- Updated scripts/audit-integration-sanity.mjs to validate Phase 7 core operating dashboard surfaces beyond the command dashboard.\n- Added audit coverage for CrossDashboardLinks, PendingUpdatesDrawer, ProofDashboardV1 component-only status, and dashboard card state rendering.\n\n\n\n## Phase 7.17 - Manual Smoke Checklist\n\n- Added docs/qa/PHASE_7_MANUAL_SMOKE_CHECKLIST.md.\n- Documented manual checks for Phase 7 core dashboard routes and safety boundaries.\n\n
+- Updated src/components/dashboard/carnos-panel-v1.tsx generated fallback wording.
+
+## Phase 7.16 - Phase 7 Audit Gate
+
+- Updated scripts/audit-integration-sanity.mjs to validate Phase 7 core operating dashboard surfaces beyond the command dashboard.
+- Added audit coverage for CrossDashboardLinks, PendingUpdatesDrawer, ProofDashboardV1 component-only status, and dashboard card state rendering.
+
+
+
+## Phase 7.17 - Manual Smoke Checklist
+
+- Added docs/qa/PHASE_7_MANUAL_SMOKE_CHECKLIST.md.
+- Documented manual checks for Phase 7 core dashboard routes and safety boundaries.
+
+## Phase 7.18 - Phase 7 Report and Completion Marker
+
+- Added docs/phase-reports/PHASE_7_CORE_OPERATING_DASHBOARDS_REPORT.md.
+- Updated scripts/audit-integration-sanity.mjs final Phase 7 boundary coverage and completion wording.
+- Updated phase logs/status to mark Phase 7 complete.

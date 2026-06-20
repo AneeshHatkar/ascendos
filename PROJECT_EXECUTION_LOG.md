@@ -822,7 +822,9 @@ The Phase 4 type rewrite was structurally correct for Phase 4 but accidentally r
 - `npm run check` must pass before commit.
 
 ### Next
-- Phase 4.11 — Add Phase 4 docs and completion audit notes.\n\n## 2026-06-18 — Phase 4.11 — Phase 4 Documentation and Report
+- Phase 4.11 — Add Phase 4 docs and completion audit notes.
+
+## 2026-06-18 — Phase 4.11 — Phase 4 Documentation and Report
 
 ### Completed
 - Added docs/database/CORE_SQL_SPINE.md.
@@ -835,7 +837,9 @@ The Phase 4 type rewrite was structurally correct for Phase 4 but accidentally r
 - npm run check must pass before commit.
 
 ### Next
-- Phase 4.12 — Mark Phase 4 complete.\n\n
+- Phase 4.12 — Mark Phase 4 complete.
+
+
 
 ## 2026-06-18 — Phase 4.12 — Phase 4 Complete
 
@@ -1054,7 +1058,9 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - npm run check must pass.
 
 ### Next
-- Phase 5.9 — Connect proof/daily log surfaces.\n\n## 2026-06-18 — Phase 5.9 — Proof and Daily Log Read Surfaces
+- Phase 5.9 — Connect proof/daily log surfaces.
+
+## 2026-06-18 — Phase 5.9 — Proof and Daily Log Read Surfaces
 
 ### Completed
 - Updated `/world-class` to read proof items and daily logs.
@@ -1074,7 +1080,9 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - npm run check must pass.
 
 ### Next
-- Phase 5.10 — Connect core domain pages to filtered reads.\n\n
+- Phase 5.10 — Connect core domain pages to filtered reads.
+
+
 
 ## 2026-06-18 — Phase 5.10 — Core Domain Filtered Reads
 
@@ -1117,7 +1125,9 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - `npm run check` must pass.
 
 ### Next
-- Phase 5.12 — Add Phase 5 documentation/report.\n\n## 2026-06-18 — Phase 5.12 — Phase 5 Documentation Report
+- Phase 5.12 — Add Phase 5 documentation/report.
+
+## 2026-06-18 — Phase 5.12 — Phase 5 Documentation Report
 
 ### Completed
 - Added `docs/phase-reports/PHASE_5_CORE_READ_UI_INTEGRATION_REPORT.md`.
@@ -1134,7 +1144,9 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - `npm run check` must pass.
 
 ### Next
-- Phase 5.13 — Update source alignment audit for Phase 5.\n\n
+- Phase 5.13 — Update source alignment audit for Phase 5.
+
+
 
 ## 2026-06-18 — Phase 5.13 — Source Alignment Audit Update
 
@@ -1263,7 +1275,9 @@ Validation:
 No runtime write execution was added.
 No Carnos generation was added.
 No Python/ML runtime was added.
-No memory system was added.\n\n## 2026-06-19 23:51 UTC — Phase 6.3 Completed: Proposed Action Contracts
+No memory system was added.
+
+## 2026-06-19 23:51 UTC — Phase 6.3 Completed: Proposed Action Contracts
 
 Completed Phase 6.3 by creating the proposed action contract definitions.
 
@@ -1286,7 +1300,8 @@ Safety boundaries:
 - No database mutation was added.
 - No Carnos generation was added.
 - No Python/ML runtime was added.
-- No memory system was added.\n
+- No memory system was added.
+
 
 ## 2026-06-19 23:58 UTC — Phase 6.4 Completed: Action Result Types
 
@@ -1346,7 +1361,9 @@ Safety boundaries:
 - No database mutation was added.
 - No Carnos generation was added.
 - No Python/ML runtime was added.
-- No memory system was added.\n\n## 2026-06-20 00:09 UTC — Phase 6.6 Completed: Audit Helper
+- No memory system was added.
+
+## 2026-06-20 00:09 UTC — Phase 6.6 Completed: Audit Helper
 
 Completed Phase 6.6 by creating the reusable audit logging helper.
 
@@ -1363,7 +1380,10 @@ Safety boundaries:
 - No UI was added.
 - No Carnos generation was added.
 - No Python/ML runtime was added.
-- No memory system was added.\n\n\n## 2026-06-20 04:31 UTC — Phase 6.7 Completed: Timeline Helper Boundary
+- No memory system was added.
+
+
+## 2026-06-20 04:31 UTC — Phase 6.7 Completed: Timeline Helper Boundary
 
 Completed Phase 6.7 by creating a safe timeline helper boundary.
 
@@ -1390,7 +1410,10 @@ Safety boundaries:
 - No UI was added.
 - No Carnos generation was added.
 - No Python/ML runtime was added.
-- No memory system was added.\n\n\n## 2026-06-20 04:49 UTC — Phase 6.8 Completed: Proposed Action Creation Helper
+- No memory system was added.
+
+
+## 2026-06-20 04:49 UTC — Phase 6.8 Completed: Proposed Action Creation Helper
 
 Completed Phase 6.8 by creating the proposed action creation helper.
 
@@ -1409,7 +1432,10 @@ Safety boundaries:
 - It does not create tasks, goals, daily logs, or proof items.
 - It does not bypass validation.
 - It does not auto-approve or auto-write target records.
-- It does not add Carnos generation, Python/ML runtime, memory, background jobs, or UI.\n\n\n## 2026-06-20 05:05 UTC — Phase 6.9 Completed: Action Lifecycle Helper
+- It does not add Carnos generation, Python/ML runtime, memory, background jobs, or UI.
+
+
+## 2026-06-20 05:05 UTC — Phase 6.9 Completed: Action Lifecycle Helper
 
 Completed Phase 6.9 by creating the action lifecycle helper.
 
@@ -1433,7 +1459,10 @@ Safety boundaries:
 - The helper does not create tasks, goals, daily logs, or proof items.
 - The helper does not auto-approve actions.
 - The helper does not bypass user ownership checks.
-- The helper does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.\n\n\n## 2026-06-20 05:18 UTC — Phase 6.10 Completed: Execution Dispatcher Boundary
+- The helper does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.
+
+
+## 2026-06-20 05:18 UTC — Phase 6.10 Completed: Execution Dispatcher Boundary
 
 Completed Phase 6.10 by creating the execution dispatcher boundary.
 
@@ -1460,7 +1489,10 @@ Safety boundaries:
 - No UI was added.
 - No Carnos generation was added.
 - No Python/ML runtime was added.
-- No memory system, background jobs, or cron jobs were added.\n\n\n## 2026-06-20 05:24 UTC — Phase 6.11 Completed: Create Task Flow
+- No memory system, background jobs, or cron jobs were added.
+
+
+## 2026-06-20 05:24 UTC — Phase 6.11 Completed: Create Task Flow
 
 Completed Phase 6.11 by creating the approved create-task execution flow.
 
@@ -1483,7 +1515,10 @@ Safety boundaries:
 - The flow checks `user_id`.
 - The flow does not execute unapproved proposals.
 - The flow does not execute goals, daily logs, or proof items.
-- The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.\n\n\n## 2026-06-20 18:09 UTC — Phase 6.12 Completed: Create Goal Flow
+- The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.
+
+
+## 2026-06-20 18:09 UTC — Phase 6.12 Completed: Create Goal Flow
 
 Completed Phase 6.12 by creating the approved create-goal execution flow.
 
@@ -1506,7 +1541,10 @@ Safety boundaries:
 - The flow checks `user_id`.
 - The flow does not execute unapproved proposals.
 - The flow does not execute tasks, daily logs, or proof items.
-- The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.\n\n\n## 2026-06-20 18:13 UTC — Phase 6.13 Completed: Create Daily Log Flow
+- The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.
+
+
+## 2026-06-20 18:13 UTC — Phase 6.13 Completed: Create Daily Log Flow
 
 Completed Phase 6.13 by creating the approved create-daily-log execution flow.
 
@@ -1529,7 +1567,10 @@ Safety boundaries:
 - The flow checks `user_id`.
 - The flow does not execute unapproved proposals.
 - The flow does not execute tasks, goals, or proof items.
-- The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.\n\n\n## 2026-06-20 18:17 UTC — Phase 6.14 Completed: Create Proof Item Flow
+- The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.
+
+
+## 2026-06-20 18:17 UTC — Phase 6.14 Completed: Create Proof Item Flow
 
 Completed Phase 6.14 by creating the approved create-proof-item execution flow.
 
@@ -1553,7 +1594,10 @@ Safety boundaries:
 - The flow checks `user_id`.
 - The flow does not execute unapproved proposals.
 - The flow blocks cross-user related-record references.
-- The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.\n\n\n## 2026-06-20 18:22 UTC — Phase 6.15 Completed: Save/Edit/Cancel UI Component
+- The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.
+
+
+## 2026-06-20 18:22 UTC — Phase 6.15 Completed: Save/Edit/Cancel UI Component
 
 Completed Phase 6.15 by adding the reusable proposed action review UI component.
 
@@ -1572,7 +1616,10 @@ Safety boundaries:
 - This component does not call Supabase.
 - This component does not execute actions by itself.
 - This component preserves the confirmation-before-write boundary.
-- This component does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or voice.\n\n\n## 2026-06-20 18:30 UTC — Phase 6.16 Completed: Wire Proposed Action Review into App Page
+- This component does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or voice.
+
+
+## 2026-06-20 18:30 UTC — Phase 6.16 Completed: Wire Proposed Action Review into App Page
 
 Completed Phase 6.16 by wiring the proposed action review component into the Carnos dashboard.
 
@@ -1588,7 +1635,10 @@ Safety boundaries:
 - No Supabase write call was added to the UI component.
 - No action execution call was added to the page.
 - No Python/ML runtime, memory, Carnos generation, background job, cron job, or voice feature was added.
-- The component remains a review surface only until server-owned action wiring is explicitly added.\n\n\n## 2026-06-20 18:38 UTC — Phase 6.17 Completed: Phase 6 Audit Gate
+- The component remains a review surface only until server-owned action wiring is explicitly added.
+
+
+## 2026-06-20 18:38 UTC — Phase 6.17 Completed: Phase 6 Audit Gate
 
 Completed Phase 6.17 by adding the Phase 6 audit script and wiring it into `npm run check`.
 
@@ -1610,7 +1660,8 @@ Safety boundaries:
 - Audit blocks missing dispatcher routes.
 - Audit blocks missing approved-only execution checks.
 - Audit blocks UI components that directly call Supabase or execute actions.
-- Audit blocks forbidden wording in the Phase 5 page scanner path.\n
+- Audit blocks forbidden wording in the Phase 5 page scanner path.
+
 
 ## 2026-06-20 18:47 UTC — Phase 6.18 Completed: Phase 6 Report and Completion Marker
 
@@ -1738,4 +1789,24 @@ Purpose:
 - Removed user-facing demo/sample/placeholder phrasing from Phase 7 dashboard surfaces where it was not required by legacy audit compatibility.
 - Preserved required Phase 6 audit compatibility markers in `/carnos` while changing the visible copy to compatibility/review language.
 - Confirmed no non-canonical proof route was introduced.
-- No writes, autonomous actions, generation, memory, Python/ML execution, voice, internet tools, or background jobs were added.\n\n## Phase 7.16 - Phase 7 Audit Gate\n\n- Expanded the integration sanity audit from command-only Phase 7 wiring into a core Phase 7 dashboard audit gate.\n- Added checks for timeline, calendar, goals, proof component, Carnos panel, cross-dashboard links, pending updates drawer, and dashboard card state handling.\n- Confirmed cross-dashboard links remain canonical-route safe and do not introduce `/proof`.\n- No writes, autonomous actions, generation, memory, Python/ML execution, voice, internet tools, or background jobs were added.\n\n\n\n## Phase 7.17 - Manual Smoke Checklist\n\n- Added docs/qa/PHASE_7_MANUAL_SMOKE_CHECKLIST.md for manual browser verification of /command, /timeline, /calendar, /goals, and /carnos.\n- Checklist confirms cross-dashboard links, active-route highlighting, empty states, read warnings, pending update drawer behavior, and no non-canonical /proof route.\n- No writes, autonomous actions, generation, memory, Python/ML execution, voice, internet tools, or background jobs were added.\n\n
+- No writes, autonomous actions, generation, memory, Python/ML execution, voice, internet tools, or background jobs were added.
+
+## Phase 7.16 - Phase 7 Audit Gate
+
+- Expanded the integration sanity audit from command-only Phase 7 wiring into a core Phase 7 dashboard audit gate.
+- Added checks for timeline, calendar, goals, proof component, Carnos panel, cross-dashboard links, pending updates drawer, and dashboard card state handling.
+- Confirmed cross-dashboard links remain canonical-route safe and do not introduce `/proof`.
+- No writes, autonomous actions, generation, memory, Python/ML execution, voice, internet tools, or background jobs were added.
+
+## Phase 7.17 - Manual Smoke Checklist
+
+- Added docs/qa/PHASE_7_MANUAL_SMOKE_CHECKLIST.md for manual browser verification of /command, /timeline, /calendar, /goals, and /carnos.
+- Checklist confirms cross-dashboard links, active-route highlighting, empty states, read warnings, pending update drawer behavior, and no non-canonical /proof route.
+- No writes, autonomous actions, generation, memory, Python/ML execution, voice, internet tools, or background jobs were added.
+
+## Phase 7.18 - Phase 7 Report and Completion Marker
+
+- Added docs/phase-reports/PHASE_7_CORE_OPERATING_DASHBOARDS_REPORT.md.
+- Marked Phase 7 Core Operating Dashboards complete.
+- Strengthened integration boundary scanning to include all Phase 7 dashboard components, CrossDashboardLinks, and PendingUpdatesDrawer.
+- Confirmed transition target: Phase 8 Career System.
