@@ -439,3 +439,9 @@ Next step after commit: Phase 7.4 shared dashboard card primitives.
 Status: Implemented and awaiting commit.
 
 Next step after commit: Phase 7.5 dashboard data aggregation helpers.
+
+## Phase 7.5 - Dashboard Data Aggregation Helpers
+
+Status: Implemented and awaiting commit.
+
+Next step after commit: Phase 7.6 Command dashboard v1.

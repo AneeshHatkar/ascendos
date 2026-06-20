@@ -1068,3 +1068,8 @@ Write impact:
 - Added src/components/dashboard/operating-dashboard-card.tsx.
 - Added src/components/dashboard/operating-dashboard-grid.tsx.
 - Updated src/components/dashboard/index.ts exports.
+
+## Phase 7.5 - Dashboard Data Aggregation Helpers
+
+- Added src/lib/dashboard/dashboard-data-helpers.ts.
+- Updated src/lib/dashboard/index.ts exports.

@@ -1646,3 +1646,9 @@ Purpose:
 
 - Added reusable Phase 7 operating dashboard card and grid primitives.
 - Kept this step component-only with no page rewrites and no runtime writes.
+
+## Phase 7.5 - Dashboard Data Aggregation Helpers
+
+- Added read-only server-side dashboard data summary helpers for Phase 7 surfaces.
+- Aggregates counts for pending updates, active goals, open tasks, proof items, and events.
+- Kept this step helper-only with no page rewrites and no writes.
