@@ -1,5 +1,6 @@
 import {
   AuthenticatedDashboardShell,
+  CalendarDashboardV1,
   DataList,
   EmptyState,
   MetricTile,
@@ -7,7 +8,9 @@ import {
   StatusPill,
   type DataListItem,
 } from "@/components/dashboard";
+import { getDashboardDataSummary } from "@/lib/dashboard";
 import { listEvents, listTasks } from "@/lib/repositories";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 type RecordValue = string | number | boolean | null | undefined;
 type CalendarRecord = Record<string, RecordValue>;
@@ -222,6 +225,9 @@ export default function CalendarPage() {
         description="Read-only view of tasks and events stored in the Phase 4 SQL spine."
       >
         {async ({ user }) => {
+          const supabase = await createSupabaseServerClient();
+          const dashboardData = await getDashboardDataSummary(supabase, user.id, "calendar");
+
           const [tasks, events] = await Promise.all([
             readCalendarGroup(
               "Tasks",
@@ -251,6 +257,8 @@ export default function CalendarPage() {
 
           return (
             <>
+              <CalendarDashboardV1 data={dashboardData} />
+
               <section className="rounded-3xl border border-slate-800 bg-slate-950/80 p-6 shadow-sm shadow-black/20">
                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                   <div>

@@ -10,3 +10,4 @@ export * from "./operating-dashboard-card";
 export * from "./operating-dashboard-grid";
 export * from "./command-dashboard-v1";
 export * from "./timeline-dashboard-v1";
+export * from "./calendar-dashboard-v1";

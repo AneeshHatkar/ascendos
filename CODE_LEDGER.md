@@ -1098,3 +1098,9 @@ Write impact:
 
 - Updated src/app/timeline/page.tsx to render TimelineDashboardV1.
 - Added getDashboardDataSummary and createSupabaseServerClient imports for read-only dashboard summary data.
+
+## Phase 7.8 - Calendar Dashboard v1
+
+- Added src/components/dashboard/calendar-dashboard-v1.tsx.
+- Exported CalendarDashboardV1 from src/components/dashboard/index.ts.
+- Updated src/app/calendar/page.tsx to render CalendarDashboardV1 above the existing read-only tasks/events list.

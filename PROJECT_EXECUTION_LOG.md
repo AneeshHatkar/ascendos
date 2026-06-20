@@ -1683,3 +1683,10 @@ Purpose:
 - Preserved Phase 5 timeline read markers and existing event/proof/audit read view.
 - Loaded Phase 7 dashboard summary data through the server Supabase client.
 - No autonomous persistence, Python/ML execution, memory, voice, internet tools, or background jobs were added.
+
+## Phase 7.8 - Calendar Dashboard v1
+
+- Created CalendarDashboardV1 and wired it into `/calendar` inside the authenticated read shell.
+- Preserved the existing Phase 5 tasks/events read view and empty state.
+- Loaded Phase 7 dashboard summary data through the server Supabase client.
+- No autonomous scheduling, persistence, Python/ML execution, memory, voice, internet tools, or background jobs were added.

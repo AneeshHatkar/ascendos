@@ -240,3 +240,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 ## Phase 7.7B - Wire Timeline Dashboard Route
 
 - Wired the Phase 7 Timeline dashboard component into `/timeline` while preserving the existing read-only timeline records view.
+
+## Phase 7.8 - Calendar Dashboard v1
+
+- Added and wired the Phase 7 Calendar dashboard component into `/calendar` while preserving the existing read-only calendar records view.

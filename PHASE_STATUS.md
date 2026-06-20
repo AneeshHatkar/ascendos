@@ -475,3 +475,9 @@ Next step after commit: Phase 7.7B wire TimelineDashboardV1 into `/timeline` saf
 Status: Implemented and awaiting validation.
 
 Next step after commit: Phase 7.8 Calendar dashboard v1.
+
+## Phase 7.8 - Calendar Dashboard v1
+
+Status: Implemented and awaiting validation.
+
+Next step after commit: Phase 7.9 Goals dashboard v1.
