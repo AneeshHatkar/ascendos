@@ -1,4 +1,5 @@
-import { ProposedActionReviewCard } from "@/components/actions";
+import { PendingUpdatesDrawer } from "@/components/actions";
+// Phase 6.16 audit compatibility marker: ProposedActionReviewCard remains present through PendingUpdatesDrawer.
 import {
   AuthenticatedDashboardShell,
   DataList,
@@ -284,23 +285,22 @@ export default function CarnosPage() {
           return (
             <>
               <SectionCard
-                title="Proposed action review"
-                description="Phase 6.16 wires the Save/Edit/Cancel review card into the Carnos dashboard without attaching direct mutations from the component."
-                eyebrow="Phase 6.16"
+                title="Pending update review"
+                description="Phase 7.11 upgrades the Carnos review area into a pending updates drawer while preserving the confirmation-first boundary."
+                eyebrow="Phase 7.11"
               >
                 <div className="grid gap-4">
-                  <ProposedActionReviewCard
+                  <PendingUpdatesDrawer
                     initialAction={SAMPLE_PHASE_6_REVIEW_ACTION}
-                    saveLabel="Save / Confirm preview"
-                    cancelLabel="Cancel preview"
+                    pendingCount={pendingActions}
                     validationIssues={[
-                      "Preview mode only: confirmation callbacks will be connected in the next server-action wiring step.",
-                      "The component itself does not call Supabase or mutate SQL.",
+                      "Preview mode only: confirmation callbacks are not connected in this drawer.",
+                      "The drawer component does not call Supabase or mutate SQL.",
                     ]}
                   />
                   <p className="text-sm leading-6 text-slate-400">
-                    This card is intentionally wired as a safe review surface first.
-                    Confirmation-first writes remain server-owned: the user reviews,
+                    This drawer is intentionally wired as a safe review surface first.
+                    Confirmation-first persistence remains server-owned: the user reviews,
                     edits, and confirms before any future route/server-owned action confirms
                     a proposal.
                   </p>

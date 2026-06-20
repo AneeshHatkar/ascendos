@@ -1705,3 +1705,10 @@ Purpose:
 - Did not create `/proof` because `/proof` is not part of the current canonical route list.
 - Preserved the existing route registry boundary.
 - No autonomous proof mutation, scoring automation, Python/ML execution, memory, voice, internet tools, or background jobs were added.
+
+## Phase 7.11 - Pending Updates / Confirmation Drawer Integration
+
+- Added PendingUpdatesDrawer as a client-side review drawer around the existing ProposedActionReviewCard.
+- Wired the drawer into `/carnos` using the existing pending AI action count.
+- Preserved the Phase 6 confirmation-first boundary and did not attach lifecycle mutation callbacks.
+- No autonomous action execution, Python/ML execution, memory, voice, internet tools, or background jobs were added.

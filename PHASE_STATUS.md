@@ -495,3 +495,11 @@ Status: Implemented and awaiting validation.
 Route note: `/proof` was not created because it is not in the current canonical route list.
 
 Next step after commit: Phase 7.11 Pending updates / confirmation drawer integration.
+
+## Phase 7.11 - Pending Updates / Confirmation Drawer Integration
+
+Status: Implemented and awaiting validation.
+
+Boundary: drawer review only; no lifecycle mutation callbacks attached.
+
+Next step after commit: Phase 7.12 Carnos panel v1.

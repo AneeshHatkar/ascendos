@@ -1116,3 +1116,9 @@ Write impact:
 - Added src/components/dashboard/proof-dashboard-v1.tsx.
 - Exported ProofDashboardV1 from src/components/dashboard/index.ts.
 - No app route was added because the current canonical route list does not include `/proof`.
+
+## Phase 7.11 - Pending Updates / Confirmation Drawer Integration
+
+- Added src/components/actions/pending-updates-drawer.tsx.
+- Exported PendingUpdatesDrawer from src/components/actions/index.ts.
+- Updated src/app/carnos/page.tsx to render the pending updates drawer in place of the earlier preview-only review card section.
