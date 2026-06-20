@@ -798,3 +798,19 @@ Runtime impact:
 
 Write impact:
 - No writes are executed in this step.\n
+
+## 2026-06-19 23:58 UTC — Phase 6.4 Action Result Types
+
+Added:
+- `src/lib/actions/action-results.ts`
+
+Role:
+- Defines standard success and error result shapes for proposed action workflows.
+- Defines action result error codes for validation, auth, confirmation, database, and unexpected failures.
+- Adds small helper constructors and type guards.
+
+Runtime impact:
+- Type/helper foundation only.
+
+Write impact:
+- No writes are executed in this step.
