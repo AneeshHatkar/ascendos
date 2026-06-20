@@ -481,3 +481,9 @@ Next step after commit: Phase 7.8 Calendar dashboard v1.
 Status: Implemented and awaiting validation.
 
 Next step after commit: Phase 7.9 Goals dashboard v1.
+
+## Phase 7.9 - Goals Dashboard v1
+
+Status: Implemented and awaiting validation.
+
+Next step after commit: Phase 7.10 Proof dashboard/card system.

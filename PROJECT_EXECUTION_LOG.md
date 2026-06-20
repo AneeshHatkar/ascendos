@@ -1690,3 +1690,10 @@ Purpose:
 - Preserved the existing Phase 5 tasks/events read view and empty state.
 - Loaded Phase 7 dashboard summary data through the server Supabase client.
 - No autonomous scheduling, persistence, Python/ML execution, memory, voice, internet tools, or background jobs were added.
+
+## Phase 7.9 - Goals Dashboard v1
+
+- Created GoalsDashboardV1 and wired it into `/goals` inside the authenticated read shell.
+- Preserved the existing Phase 5 goals read view and empty state.
+- Loaded Phase 7 dashboard summary data through the server Supabase client.
+- No autonomous goal mutation, scoring automation, Python/ML execution, memory, voice, internet tools, or background jobs were added.

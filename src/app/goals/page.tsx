@@ -2,12 +2,15 @@ import {
   AuthenticatedDashboardShell,
   DataList,
   EmptyState,
+  GoalsDashboardV1,
   MetricTile,
   SectionCard,
   StatusPill,
   type DataListItem,
 } from "@/components/dashboard";
+import { getDashboardDataSummary } from "@/lib/dashboard";
 import { listGoals } from "@/lib/repositories";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 type RecordValue = string | number | boolean | null | undefined;
 type GoalRecord = Record<string, RecordValue>;
@@ -139,6 +142,9 @@ export default function GoalsPage() {
         description="Read-only view of goals stored in the Phase 4 SQL spine."
       >
         {async ({ user }) => {
+          const supabase = await createSupabaseServerClient();
+          const dashboardData = await getDashboardDataSummary(supabase, user.id, "goals");
+
           const result = await listGoals(user.id, { limit: 100 });
           const goals = extractRows(result);
           const error = extractError(result);
@@ -153,6 +159,8 @@ export default function GoalsPage() {
 
           return (
             <>
+              <GoalsDashboardV1 data={dashboardData} />
+
               <section className="rounded-3xl border border-slate-800 bg-slate-950/80 p-6 shadow-sm shadow-black/20">
                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                   <div>

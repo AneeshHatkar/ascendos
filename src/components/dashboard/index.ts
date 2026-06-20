@@ -11,3 +11,4 @@ export * from "./operating-dashboard-grid";
 export * from "./command-dashboard-v1";
 export * from "./timeline-dashboard-v1";
 export * from "./calendar-dashboard-v1";
+export * from "./goals-dashboard-v1";
