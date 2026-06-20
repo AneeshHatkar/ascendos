@@ -503,3 +503,11 @@ Status: Implemented and awaiting validation.
 Boundary: drawer review only; no lifecycle mutation callbacks attached.
 
 Next step after commit: Phase 7.12 Carnos panel v1.
+
+## Phase 7.12 - Carnos Panel v1
+
+Status: Implemented and awaiting validation.
+
+Boundary: Carnos panel is visibility-only; no generation, memory, action execution, or lifecycle callbacks are attached.
+
+Next step after commit: Phase 7.13 Cross-dashboard links.

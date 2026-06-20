@@ -256,3 +256,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 ## Phase 7.11 - Pending Updates / Confirmation Drawer Integration
 
 - Added a read-only pending updates drawer to the Carnos dashboard while preserving confirmation-first action review boundaries.
+
+## Phase 7.12 - Carnos Panel v1
+
+- Added a read-only Carnos operating panel to the Carnos dashboard with companion state and confirmation visibility.

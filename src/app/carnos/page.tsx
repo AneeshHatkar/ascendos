@@ -2,6 +2,7 @@ import { PendingUpdatesDrawer } from "@/components/actions";
 // Phase 6.16 audit compatibility marker: ProposedActionReviewCard remains present through PendingUpdatesDrawer.
 import {
   AuthenticatedDashboardShell,
+  CarnosPanelV1,
   DataList,
   EmptyState,
   MetricTile,
@@ -10,7 +11,9 @@ import {
   type DataListItem,
 } from "@/components/dashboard";
 import type { ProposedActionContract } from "@/lib/actions/proposed-action-contracts";
+import { getDashboardDataSummary } from "@/lib/dashboard";
 import { listAiActions, listChatMessages, listChatSessions } from "@/lib/repositories";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 type RecordValue = string | number | boolean | null | undefined;
 type CarnosRecord = Record<string, RecordValue>;
@@ -244,6 +247,9 @@ export default function CarnosPage() {
         description="Read-only Carnos status view for chat and proposed-action records."
       >
         {async ({ user }) => {
+          const supabase = await createSupabaseServerClient();
+          const dashboardData = await getDashboardDataSummary(supabase, user.id, "carnos");
+
           const [sessions, actions, messages] = await Promise.all([
             readGroup(
               "Chat sessions",
@@ -284,6 +290,15 @@ export default function CarnosPage() {
 
           return (
             <>
+              <CarnosPanelV1
+                data={dashboardData}
+                sessionCount={sessions.rows.length}
+                messageCount={messages.rows.length}
+                actionCount={actions.rows.length}
+                pendingCount={pendingActions}
+                readWarningCount={readErrors.length}
+              />
+
               <SectionCard
                 title="Pending update review"
                 description="Phase 7.11 upgrades the Carnos review area into a pending updates drawer while preserving the confirmation-first boundary."

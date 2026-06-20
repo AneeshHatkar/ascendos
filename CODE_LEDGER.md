@@ -1122,3 +1122,9 @@ Write impact:
 - Added src/components/actions/pending-updates-drawer.tsx.
 - Exported PendingUpdatesDrawer from src/components/actions/index.ts.
 - Updated src/app/carnos/page.tsx to render the pending updates drawer in place of the earlier preview-only review card section.
+
+## Phase 7.12 - Carnos Panel v1
+
+- Added src/components/dashboard/carnos-panel-v1.tsx.
+- Exported CarnosPanelV1 from src/components/dashboard/index.ts.
+- Updated src/app/carnos/page.tsx to render CarnosPanelV1 above the pending update review drawer.

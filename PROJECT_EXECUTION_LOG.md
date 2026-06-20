@@ -1712,3 +1712,10 @@ Purpose:
 - Wired the drawer into `/carnos` using the existing pending AI action count.
 - Preserved the Phase 6 confirmation-first boundary and did not attach lifecycle mutation callbacks.
 - No autonomous action execution, Python/ML execution, memory, voice, internet tools, or background jobs were added.
+
+## Phase 7.12 - Carnos Panel v1
+
+- Added CarnosPanelV1 as a read-only operating panel for Carnos state, pending proposals, and safety status.
+- Wired CarnosPanelV1 into `/carnos` using dashboard summary data plus existing read-only Carnos records.
+- Preserved the Phase 6.16 compatibility marker and PendingUpdatesDrawer review path.
+- No lifecycle mutation callbacks, autonomous action execution, Python/ML execution, memory, voice, internet tools, or background jobs were added.
