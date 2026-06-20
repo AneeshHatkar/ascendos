@@ -1019,4 +1019,19 @@ Role:
 Write impact:
 - No direct write impact.
 - No Supabase mutation from the page.
-- No action execution from the page.\n
+- No action execution from the page.\n\n\n## 2026-06-20 18:38 UTC — Phase 6 Audit Gate
+
+Added:
+- `scripts/audit-phase-6.mjs`
+
+Updated:
+- `package.json`
+
+Role:
+- Adds `npm run audit:phase6`.
+- Adds Phase 6 audit to the main `npm run check` pipeline.
+- Confirms safe write proposed-action flow structure and UI boundary.
+
+Write impact:
+- No runtime write impact.
+- Adds static audit enforcement only.\n

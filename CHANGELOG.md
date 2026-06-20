@@ -188,4 +188,8 @@ The component supports payload preview, JSON payload editing, validation issue d
 
 Wired the Phase 6 proposed-action review card into the Carnos dashboard as a safe confirmation-first preview surface.
 
-The page now displays the Save/Edit/Cancel UI while preserving the server-owned write boundary.\n
+The page now displays the Save/Edit/Cancel UI while preserving the server-owned write boundary.\n\n\n## 2026-06-20 18:38 UTC — Added Phase 6 Audit Gate
+
+Added `scripts/audit-phase-6.mjs` and wired `npm run audit:phase6` into the main check pipeline.
+
+The audit verifies the Phase 6 safe write proposed-action flow and guards the confirmation-first boundary.\n

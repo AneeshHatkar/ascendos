@@ -397,3 +397,10 @@ Phase 6.16 update at 2026-06-20 18:30 UTC:
 - No direct database write or action execution was added to the page.
 - Phase 6 remains in progress.
 - Next step: Phase 6.17 — Phase 6 audit.
+
+Phase 6.17 update at 2026-06-20 18:38 UTC:
+- Created `scripts/audit-phase-6.mjs`.
+- Added `audit:phase6` to `package.json`.
+- Wired Phase 6 audit into `npm run check`.
+- Phase 6 remains in progress.
+- Next step: Phase 6.18 — Phase 6 report and completion marker.

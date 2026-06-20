@@ -1588,4 +1588,26 @@ Safety boundaries:
 - No Supabase write call was added to the UI component.
 - No action execution call was added to the page.
 - No Python/ML runtime, memory, Carnos generation, background job, cron job, or voice feature was added.
-- The component remains a review surface only until server-owned action wiring is explicitly added.\n
+- The component remains a review surface only until server-owned action wiring is explicitly added.\n\n\n## 2026-06-20 18:38 UTC — Phase 6.17 Completed: Phase 6 Audit Gate
+
+Completed Phase 6.17 by adding the Phase 6 audit script and wiring it into `npm run check`.
+
+Created:
+- `scripts/audit-phase-6.mjs`
+
+Updated:
+- `package.json`
+
+Purpose:
+- Verify Phase 6 safe write files exist.
+- Verify proposed action types, contracts, validation, lifecycle, dispatcher, and four target write flows.
+- Verify audit and timeline helper boundaries.
+- Verify Save/Edit/Cancel UI exists without direct mutation behavior.
+- Verify the Carnos page wiring stays confirmation-first and avoids forbidden audit phrases.
+
+Safety boundaries:
+- Audit blocks missing Phase 6 files.
+- Audit blocks missing dispatcher routes.
+- Audit blocks missing approved-only execution checks.
+- Audit blocks UI components that directly call Supabase or execute actions.
+- Audit blocks forbidden wording in the Phase 5 page scanner path.\n
