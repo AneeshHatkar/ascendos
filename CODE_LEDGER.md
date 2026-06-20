@@ -1088,3 +1088,8 @@ Write impact:
 
 - Added scripts/audit-integration-sanity.mjs.
 - Updated package.json with audit:integration and added it to check.
+
+## Phase 7.7 - Timeline Dashboard v1
+
+- Added src/components/dashboard/timeline-dashboard-v1.tsx.
+- Exported TimelineDashboardV1 from src/components/dashboard/index.ts.

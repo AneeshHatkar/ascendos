@@ -116,3 +116,51 @@ Fix:
 
 Result:
 - Pending rerun of `npm run audit:integration` and `npm run check`.
+## Phase 7.7 - Timeline Dashboard Data Result Status Type Error
+
+Error:
+- `next build` failed because `TimelineDashboardV1` checked `data?.status`, but `DashboardDataResult` does not expose a `status` property.
+
+Fix:
+- Replaced `data?.status === "error"` with `Boolean(data?.error)`.
+
+Result:
+- Pending rerun of `npm run check`.
+## Phase 7.7 - Timeline Dashboard Data Result Error Field Type Error
+
+Error:
+- `next build` failed because `TimelineDashboardV1` checked `data?.error`, but `DashboardDataResult` does not expose an `error` property.
+- This followed an earlier incorrect assumption about `data?.status`.
+
+Fix:
+- Removed dependency on non-existent `DashboardDataResult` error/status fields.
+- Timeline dashboard now uses the current summary-only data shape safely.
+
+Result:
+- Pending rerun of `npm run check`.
+## Phase 7.7 - Timeline Dashboard Summary Field Name Type Error
+
+Error:
+- `next build` failed because `TimelineDashboardV1` used guessed summary fields such as `events`, `proofItems`, `dailyLogs`, and `pendingActions`.
+- Actual `DashboardDataSummary` fields are snake_case: `recent_events_count`, `recent_proof_count`, `card_count`, and `pending_updates_count`.
+
+Fix:
+- Replaced guessed camelCase fields with the actual `DashboardDataSummary` field names.
+- Going forward, existing type contracts must be inspected before new components consume them.
+
+Result:
+- Pending rerun of `npm run check`.
+## Phase 7.7 - Timeline Dashboard Grid Region Prop Type Error
+
+Error:
+- `next build` failed because `OperatingDashboardGrid` requires a `region` prop.
+- `TimelineDashboardV1` used `<OperatingDashboardGrid>` without passing the required region.
+
+Fix:
+- Updated `TimelineDashboardV1` to use `<OperatingDashboardGrid region="timeline_preview">`.
+
+Prevention:
+- Existing component props must be inspected before reuse in future Phase 7 steps.
+
+Result:
+- Pending rerun of `npm run check`.

@@ -463,3 +463,9 @@ Next step after commit: Phase 7.7 Timeline dashboard v1.
 Status: Implemented and awaiting validation.
 
 Next step after commit: Resume Phase 7.7 Timeline dashboard v1.
+
+## Phase 7.7 - Timeline Dashboard v1
+
+Status: Implemented and awaiting validation.
+
+Next step after commit: Phase 7.7B wire TimelineDashboardV1 into `/timeline` safely.

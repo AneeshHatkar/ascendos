@@ -232,3 +232,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 ## Phase 7 Integration Sanity Audit Gate
 
 - Added a project-wide integration sanity audit to reduce the risk of created-but-not-wired phase gaps.
+
+## Phase 7.7 - Timeline Dashboard v1
+
+- Added Timeline dashboard v1 component for read-only operating history visibility.
