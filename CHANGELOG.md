@@ -228,3 +228,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 ## Phase 7.6B - Wire Command Dashboard v1
 
 - Wired the Command dashboard v1 component into the live `/command` route.
+
+## Phase 7 Integration Sanity Audit Gate
+
+- Added a project-wide integration sanity audit to reduce the risk of created-but-not-wired phase gaps.

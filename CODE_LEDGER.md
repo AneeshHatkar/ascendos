@@ -1083,3 +1083,8 @@ Write impact:
 
 - Updated src/app/command/page.tsx to render CommandDashboardV1.
 - Used getDashboardDataSummary for read-only Command dashboard summary data.
+
+## Phase 7 Integration Sanity Audit Gate
+
+- Added scripts/audit-integration-sanity.mjs.
+- Updated package.json with audit:integration and added it to check.

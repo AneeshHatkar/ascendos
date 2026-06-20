@@ -105,3 +105,14 @@ Fix:
 
 Result:
 - Pending rerun of `npm run check`.
+## Phase 7 Integration Audit - Barrel Export Wildcard False Positive
+
+Error:
+- The new integration sanity audit failed on `OperatingDashboardCard` even though the app build previously accepted the dashboard barrel exports.
+- Cause: the audit searched for literal export names and did not allow valid `export * from ...` barrel exports.
+
+Fix:
+- Updated `scripts/audit-integration-sanity.mjs` to accept either explicit named exports or wildcard barrel exports for Phase 7 dashboard components.
+
+Result:
+- Pending rerun of `npm run audit:integration` and `npm run check`.

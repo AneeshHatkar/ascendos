@@ -1664,3 +1664,9 @@ Purpose:
 - Wired the Phase 7 CommandDashboardV1 component into the live `/command` route.
 - Preserved authenticated dashboard shell usage and read-only dashboard data aggregation.
 - Did not add autonomous writes, Python/ML execution, memory, voice, internet tools, or background jobs.
+
+## Phase 7 Integration Sanity Audit Gate
+
+- Added a dedicated integration sanity audit to catch created-but-not-wired regressions.
+- The audit verifies Phase 1 source foundation, Phase 3 auth/Supabase, Phase 4 SQL/repository foundation, Phase 5 read routes, Phase 6 proposed-action flow, and current Phase 7 Command dashboard route wiring.
+- Added `npm run audit:integration` into `npm run check` so future checks catch route/component wiring gaps.
