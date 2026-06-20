@@ -167,7 +167,7 @@ for (const [file, needles] of Object.entries(readPageRequirements)) {
   pass(`${file} has expected route-level wiring markers`);
 }
 
-console.log("\n=== Integration sanity audit: dashboard Phase 7 partial wiring ===");
+console.log("\n=== Integration sanity audit: dashboard Phase 7 core operating surfaces ===");
 
 for (const file of [
   "docs/phase-plans/PHASE_7_CORE_OPERATING_DASHBOARDS.md",
@@ -176,12 +176,27 @@ for (const file of [
   "src/lib/dashboard/dashboard-data-helpers.ts",
   "src/components/dashboard/operating-dashboard-card.tsx",
   "src/components/dashboard/operating-dashboard-grid.tsx",
+  "src/components/dashboard/cross-dashboard-links.tsx",
   "src/components/dashboard/command-dashboard-v1.tsx",
+  "src/components/dashboard/timeline-dashboard-v1.tsx",
+  "src/components/dashboard/calendar-dashboard-v1.tsx",
+  "src/components/dashboard/goals-dashboard-v1.tsx",
+  "src/components/dashboard/proof-dashboard-v1.tsx",
+  "src/components/dashboard/carnos-panel-v1.tsx",
+  "src/components/actions/pending-updates-drawer.tsx",
+  "src/components/dashboard/index.ts",
+  "src/components/actions/index.ts",
+  "src/app/command/page.tsx",
+  "src/app/timeline/page.tsx",
+  "src/app/calendar/page.tsx",
+  "src/app/goals/page.tsx",
+  "src/app/carnos/page.tsx",
 ]) {
   requireFile(file);
 }
 
 const dashboardIndex = read("src/components/dashboard/index.ts");
+const actionsIndex = read("src/components/actions/index.ts");
 
 const dashboardBarrelRequirements = [
   {
@@ -208,6 +223,54 @@ const dashboardBarrelRequirements = [
       "export * from './command-dashboard-v1'",
     ],
   },
+  {
+    exportName: "TimelineDashboardV1",
+    acceptedMarkers: [
+      "TimelineDashboardV1",
+      'export * from "./timeline-dashboard-v1"',
+      "export * from './timeline-dashboard-v1'",
+    ],
+  },
+  {
+    exportName: "CalendarDashboardV1",
+    acceptedMarkers: [
+      "CalendarDashboardV1",
+      'export * from "./calendar-dashboard-v1"',
+      "export * from './calendar-dashboard-v1'",
+    ],
+  },
+  {
+    exportName: "GoalsDashboardV1",
+    acceptedMarkers: [
+      "GoalsDashboardV1",
+      'export * from "./goals-dashboard-v1"',
+      "export * from './goals-dashboard-v1'",
+    ],
+  },
+  {
+    exportName: "ProofDashboardV1",
+    acceptedMarkers: [
+      "ProofDashboardV1",
+      'export * from "./proof-dashboard-v1"',
+      "export * from './proof-dashboard-v1'",
+    ],
+  },
+  {
+    exportName: "CarnosPanelV1",
+    acceptedMarkers: [
+      "CarnosPanelV1",
+      'export * from "./carnos-panel-v1"',
+      "export * from './carnos-panel-v1'",
+    ],
+  },
+  {
+    exportName: "CrossDashboardLinks",
+    acceptedMarkers: [
+      "CrossDashboardLinks",
+      'export * from "./cross-dashboard-links"',
+      "export * from './cross-dashboard-links'",
+    ],
+  },
 ];
 
 for (const requirement of dashboardBarrelRequirements) {
@@ -220,19 +283,53 @@ for (const requirement of dashboardBarrelRequirements) {
   }
 }
 
-const commandPage = read("src/app/command/page.tsx");
 requireIncludes(
-  commandPage,
-  "CommandDashboardV1",
-  "/command route is not wired to CommandDashboardV1",
-);
-requireIncludes(
-  commandPage,
-  "getDashboardDataSummary",
-  "/command route is not loading Phase 7 dashboard data summary",
+  actionsIndex,
+  "PendingUpdatesDrawer",
+  "Actions barrel export missing PendingUpdatesDrawer",
 );
 
-pass("Phase 7 command dashboard component is exported and wired into /command");
+const commandPage = read("src/app/command/page.tsx");
+requireIncludes(commandPage, "CommandDashboardV1", "/command route is not wired to CommandDashboardV1");
+requireIncludes(commandPage, "getDashboardDataSummary", "/command route is not loading Phase 7 dashboard data summary");
+
+const timelinePage = read("src/app/timeline/page.tsx");
+requireIncludes(timelinePage, "TimelineDashboardV1", "/timeline route is not wired to TimelineDashboardV1");
+requireIncludes(timelinePage, "getDashboardDataSummary", "/timeline route is not loading Phase 7 dashboard data summary");
+
+const calendarPage = read("src/app/calendar/page.tsx");
+requireIncludes(calendarPage, "CalendarDashboardV1", "/calendar route is not wired to CalendarDashboardV1");
+requireIncludes(calendarPage, "getDashboardDataSummary", "/calendar route is not loading Phase 7 dashboard data summary");
+
+const goalsPage = read("src/app/goals/page.tsx");
+requireIncludes(goalsPage, "GoalsDashboardV1", "/goals route is not wired to GoalsDashboardV1");
+requireIncludes(goalsPage, "getDashboardDataSummary", "/goals route is not loading Phase 7 dashboard data summary");
+
+const carnosPage = read("src/app/carnos/page.tsx");
+requireIncludes(carnosPage, "CarnosPanelV1", "/carnos route is not wired to CarnosPanelV1");
+requireIncludes(carnosPage, "PendingUpdatesDrawer", "/carnos route is not wired to PendingUpdatesDrawer");
+requireIncludes(carnosPage, "getDashboardDataSummary", "/carnos route is not loading Phase 7 dashboard data summary");
+
+const crossDashboardLinks = read("src/components/dashboard/cross-dashboard-links.tsx");
+for (const route of ["/command", "/timeline", "/calendar", "/goals", "/carnos"]) {
+  requireIncludes(crossDashboardLinks, route, `Cross-dashboard links missing canonical route: ${route}`);
+}
+forbidIncludes(crossDashboardLinks, "/proof", "Cross-dashboard links must not introduce non-canonical /proof route");
+
+const dashboardCard = read("src/components/dashboard/operating-dashboard-card.tsx");
+for (const marker of ["loading", "error", "privacy_redacted", "DashboardLoadingState"]) {
+  requireIncludes(dashboardCard, marker, `OperatingDashboardCard missing state marker: ${marker}`);
+}
+
+const proofDashboard = read("src/components/dashboard/proof-dashboard-v1.tsx");
+requireIncludes(proofDashboard, "ProofDashboardV1", "ProofDashboardV1 component missing");
+requireIncludes(
+  proofDashboard,
+  "component-only surface",
+  "ProofDashboardV1 must document that proof remains component-only without /proof route",
+);
+
+pass("Phase 7 core operating dashboard surfaces are exported, wired, state-aware, and canonical-route safe");
 
 console.log("\n=== Integration sanity audit: Phase 6 safe action flow wiring ===");
 

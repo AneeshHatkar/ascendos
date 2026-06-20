@@ -534,4 +534,4 @@ Status: Implemented and awaiting validation.
 
 Boundary: copy cleanup only; no routes, mutations, generation, memory, or execution added.
 
-Next step after commit: Phase 7.16 Phase 7 audit gate.
+Next step after commit: Phase 7.16 Phase 7 audit gate.\n\n## Phase 7.16 - Phase 7 Audit Gate\n\nStatus: Implemented and awaiting validation.\n\nBoundary: audit coverage only; no product behavior or mutation path added.\n\nNext step after commit: Phase 7.17 Manual smoke checklist.\n\n
