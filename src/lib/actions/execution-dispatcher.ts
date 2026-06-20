@@ -6,6 +6,10 @@ import {
   executeCreateTaskAction,
   type ExecuteCreateTaskActionData,
 } from "./flows/create-task-flow";
+import {
+  executeCreateGoalAction,
+  type ExecuteCreateGoalActionData,
+} from "./flows/create-goal-flow";
 import type { Database } from "@/types/database";
 
 export interface ExecuteApprovedActionInput {
@@ -23,7 +27,8 @@ export interface ExecuteApprovedActionReadyData {
 
 export type ExecuteApprovedActionData =
   | ExecuteApprovedActionReadyData
-  | ExecuteCreateTaskActionData;
+  | ExecuteCreateTaskActionData
+  | ExecuteCreateGoalActionData;
 
 interface LoadedAction {
   id: string;
@@ -99,6 +104,10 @@ export async function executeApprovedAction(
 
   if (action.action_type === "create_task") {
     return executeCreateTaskAction(input);
+  }
+
+  if (action.action_type === "create_goal") {
+    return executeCreateGoalAction(input);
   }
 
   return dispatchApprovedAction(action);

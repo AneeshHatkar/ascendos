@@ -168,4 +168,8 @@ The dispatcher verifies ownership, approval status, and action type, but intenti
 
 Added the first concrete Phase 6 execution flow: approved `create_task` proposals can now create records in `tasks`.
 
-The dispatcher now routes `create_task` actions to the task flow while keeping the remaining action types intentionally unimplemented until their specific phases.\n
+The dispatcher now routes `create_task` actions to the task flow while keeping the remaining action types intentionally unimplemented until their specific phases.\n\n\n## 2026-06-20 18:09 UTC — Added Create Goal Execution Flow
+
+Added the Phase 6 create-goal execution flow: approved `create_goal` proposals can now create records in `goals`.
+
+The dispatcher now routes `create_goal` actions to the goal flow while keeping daily logs and proof items intentionally unimplemented until their specific phases.\n

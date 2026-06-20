@@ -931,4 +931,24 @@ Write impact:
 - Writes to `tasks`.
 - Updates `ai_actions`.
 - Writes to `audit_logs`.
+- Timeline helper remains skipped until timeline schema exists.\n\n\n## 2026-06-20 18:09 UTC — Phase 6.12 Create Goal Flow
+
+Added:
+- `src/lib/actions/flows/create-goal-flow.ts`
+
+Updated:
+- `src/lib/actions/execution-dispatcher.ts`
+
+Role:
+- Adds `executeCreateGoalAction`.
+- Dispatches approved `create_goal` actions to the goal creation flow.
+- Inserts into `goals`.
+- Updates source `ai_actions` to `executed`.
+- Writes audit metadata.
+- Calls timeline helper boundary.
+
+Write impact:
+- Writes to `goals`.
+- Updates `ai_actions`.
+- Writes to `audit_logs`.
 - Timeline helper remains skipped until timeline schema exists.\n

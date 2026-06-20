@@ -1483,4 +1483,27 @@ Safety boundaries:
 - The flow checks `user_id`.
 - The flow does not execute unapproved proposals.
 - The flow does not execute goals, daily logs, or proof items.
+- The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.\n\n\n## 2026-06-20 18:09 UTC — Phase 6.12 Completed: Create Goal Flow
+
+Completed Phase 6.12 by creating the approved create-goal execution flow.
+
+Created:
+- `src/lib/actions/flows/create-goal-flow.ts`
+
+Updated:
+- `src/lib/actions/execution-dispatcher.ts`
+
+Purpose:
+- Load an approved `create_goal` proposal from `ai_actions`.
+- Validate ownership, status, action type, and payload.
+- Insert a goal into `goals`.
+- Mark the source `ai_actions` record as `executed`.
+- Record an audit log.
+- Call the timeline helper boundary.
+
+Safety boundaries:
+- Only approved `create_goal` actions can execute.
+- The flow checks `user_id`.
+- The flow does not execute unapproved proposals.
+- The flow does not execute tasks, daily logs, or proof items.
 - The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.\n

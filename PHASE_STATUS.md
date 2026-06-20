@@ -357,3 +357,11 @@ Phase 6.11 update at 2026-06-20 05:24 UTC:
 - Goals, daily logs, and proof items remain unimplemented until their phases.
 - Phase 6 remains in progress.
 - Next step: Phase 6.12 — Create Goal Flow.
+
+Phase 6.12 update at 2026-06-20 18:09 UTC:
+- Created `src/lib/actions/flows/create-goal-flow.ts`.
+- Updated dispatcher to execute approved `create_goal` actions.
+- Added target-table write flow for `goals`.
+- Daily logs and proof items remain unimplemented until their phases.
+- Phase 6 remains in progress.
+- Next step: Phase 6.13 — Create Daily Log Flow.
