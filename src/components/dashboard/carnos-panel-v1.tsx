@@ -44,7 +44,7 @@ export function CarnosPanelV1({
               </p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white/70">
-              Generated: {data?.generated_at ?? "Not loaded yet"}
+              Generated: {data?.generated_at ?? "Awaiting summary"}
             </div>
           </div>
         </div>

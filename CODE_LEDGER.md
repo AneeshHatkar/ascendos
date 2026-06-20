@@ -1139,3 +1139,10 @@ Write impact:
 
 - Updated src/components/dashboard/operating-dashboard-card.tsx to handle all DashboardCardStatus values.
 - Updated src/lib/dashboard/dashboard-card-registry.ts with error/privacy metadata for confirmation and Carnos cards.
+
+## Phase 7.15 - No-Hardcoded-Demo-Data Cleanup
+
+- Updated src/app/carnos/page.tsx copy around the Phase 6 compatibility review proposal.
+- Updated src/components/dashboard/command-dashboard-v1.tsx to remove loaded/demo-style fallback wording.
+- Updated src/components/dashboard/proof-dashboard-v1.tsx to clarify component-only proof surface status.
+- Updated src/components/dashboard/carnos-panel-v1.tsx generated fallback wording.

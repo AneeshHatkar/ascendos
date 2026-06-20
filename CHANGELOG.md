@@ -268,3 +268,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 ## Phase 7.14 - Empty / Loading / Error / Privacy States
 
 - Added contract-backed dashboard card states for empty, loading, error, and privacy-redacted rendering.
+
+## Phase 7.15 - No-Hardcoded-Demo-Data Cleanup
+
+- Cleaned user-facing Phase 7 dashboard copy to reduce demo/placeholder language while preserving audit-required compatibility markers.

@@ -27,7 +27,7 @@ export function ProofDashboardV1({ data }: ProofDashboardV1Props) {
                 Reality evidence system
               </h2>
               <p className="mt-2 max-w-3xl text-sm leading-6 text-white/60">
-                Read-only proof surface for evidence, goal support, execution receipts, and recent proof signals. This component is route-ready, but no `/proof` route is created because `/proof` is not part of the current canonical route list.
+                Read-only proof surface for evidence, goal support, execution receipts, and recent proof signals. This remains a component-only surface because `/proof` is not part of the current canonical route list.
               </p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white/70">

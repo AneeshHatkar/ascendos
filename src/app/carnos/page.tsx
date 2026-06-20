@@ -24,12 +24,12 @@ const SAMPLE_PHASE_6_REVIEW_ACTION: ProposedActionContract = {
   source: "carnos",
   confidence: 0.82,
   reason:
-    "Demonstrates the Phase 6 confirmation-first review surface before server-owned confirmation wiring.",
+    "Provides the Phase 6 compatibility review surface before confirmation callback wiring.",
   evidence_refs: ["phase_6_15_review_ui", "phase_6_16_page_wiring"],
   payload: {
     title: "Review and confirm the next execution step",
     description:
-      "This sample proposal proves the Save/Edit/Cancel UI can be rendered inside the app without directly mutating SQL.",
+      "This compatibility proposal keeps the Save/Edit/Cancel UI renderable inside the app without directly mutating SQL.",
     domain: "projects",
     status: "todo",
     priority: "medium",
@@ -309,7 +309,7 @@ export default function CarnosPage() {
                     initialAction={SAMPLE_PHASE_6_REVIEW_ACTION}
                     pendingCount={pendingActions}
                     validationIssues={[
-                      "Preview mode only: confirmation callbacks are not connected in this drawer.",
+                      "Confirmation callbacks are intentionally not connected in this drawer.",
                       "The drawer component does not call Supabase or mutate SQL.",
                     ]}
                   />

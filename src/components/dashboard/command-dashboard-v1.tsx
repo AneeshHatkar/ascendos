@@ -30,7 +30,7 @@ export function CommandDashboardV1({ data }: CommandDashboardV1Props) {
             </p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-xs text-slate-300">
-            Generated: {data?.generated_at ?? 'Not loaded yet'}
+            Generated: {data?.generated_at ?? 'Awaiting summary'}
           </div>
         </div>
       </section>
@@ -70,7 +70,7 @@ export function CommandDashboardV1({ data }: CommandDashboardV1Props) {
             {summary ? (
               <div className='space-y-3 text-sm text-slate-300'>
                 <p>
-                  This card is registered for the Command surface and is ready for SQL-backed detail wiring in later
+                  This card is registered for the Command surface and will use deeper SQL-backed detail wiring in later
                   Phase 7 dashboard steps.
                 </p>
                 <p className='text-xs text-slate-500'>

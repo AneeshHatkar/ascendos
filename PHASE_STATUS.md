@@ -527,3 +527,11 @@ Status: Implemented and awaiting validation.
 Boundary: display-state handling only; no mutations, generation, memory, or execution added.
 
 Next step after commit: Phase 7.15 No-hardcoded-demo-data cleanup.
+
+## Phase 7.15 - No-Hardcoded-Demo-Data Cleanup
+
+Status: Implemented and awaiting validation.
+
+Boundary: copy cleanup only; no routes, mutations, generation, memory, or execution added.
+
+Next step after commit: Phase 7.16 Phase 7 audit gate.

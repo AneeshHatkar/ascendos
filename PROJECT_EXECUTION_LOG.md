@@ -1732,3 +1732,10 @@ Purpose:
 - Upgraded OperatingDashboardCard to render explicit loading, error, empty, and privacy-redacted states from the dashboard card contract.
 - Added error and privacy metadata to pending update and Carnos operating cards.
 - Preserved the read-only dashboard boundary and did not add writes, generation, memory, Python/ML execution, voice, internet tools, or background jobs.
+
+## Phase 7.15 - No-Hardcoded-Demo-Data Cleanup
+
+- Removed user-facing demo/sample/placeholder phrasing from Phase 7 dashboard surfaces where it was not required by legacy audit compatibility.
+- Preserved required Phase 6 audit compatibility markers in `/carnos` while changing the visible copy to compatibility/review language.
+- Confirmed no non-canonical proof route was introduced.
+- No writes, autonomous actions, generation, memory, Python/ML execution, voice, internet tools, or background jobs were added.
