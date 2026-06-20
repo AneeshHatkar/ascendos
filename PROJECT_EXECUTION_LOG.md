@@ -1390,4 +1390,23 @@ Safety boundaries:
 - No UI was added.
 - No Carnos generation was added.
 - No Python/ML runtime was added.
-- No memory system was added.\n
+- No memory system was added.\n\n\n## 2026-06-20 04:49 UTC — Phase 6.8 Completed: Proposed Action Creation Helper
+
+Completed Phase 6.8 by creating the proposed action creation helper.
+
+Created:
+- `src/lib/actions/create-proposed-action.ts`
+
+Purpose:
+- Validate an incoming proposed action contract.
+- Store a valid proposed action in `ai_actions`.
+- Save it with `status = pending_confirmation`.
+- Preserve payload, validation result, source context, and optional chat references.
+
+Safety boundaries:
+- The helper only creates a pending proposal.
+- It does not execute the proposed action.
+- It does not create tasks, goals, daily logs, or proof items.
+- It does not bypass validation.
+- It does not auto-approve or auto-write target records.
+- It does not add Carnos generation, Python/ML runtime, memory, background jobs, or UI.\n

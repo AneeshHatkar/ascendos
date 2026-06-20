@@ -326,3 +326,11 @@ Phase 6.7 update at 2026-06-20 04:31 UTC:
 - Added a safe skipped-result helper boundary instead of inventing schema.
 - Phase 6 remains in progress.
 - Next step: Phase 6.8 — Proposed Action Creation Helper.
+
+Phase 6.8 update at 2026-06-20 04:49 UTC:
+- Created `src/lib/actions/create-proposed-action.ts`.
+- Added helper to validate and store proposed actions in `ai_actions`.
+- Stored proposed actions use `pending_confirmation`.
+- No target-table execution was added.
+- Phase 6 remains in progress.
+- Next step: Phase 6.9 — Action Lifecycle Helper.

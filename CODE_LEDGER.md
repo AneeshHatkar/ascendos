@@ -861,4 +861,21 @@ Runtime impact:
 - Safe helper boundary only.
 
 Write impact:
-- No timeline write is executed in this step.\n
+- No timeline write is executed in this step.\n\n\n## 2026-06-20 04:49 UTC — Phase 6.8 Proposed Action Creation Helper
+
+Added:
+- `src/lib/actions/create-proposed-action.ts`
+
+Role:
+- Defines `CreateProposedActionInput`.
+- Defines `CreateProposedActionData`.
+- Adds `createProposedAction`.
+- Validates proposed action contracts before storage.
+- Inserts valid proposals into `ai_actions` as `pending_confirmation`.
+
+Runtime impact:
+- Adds safe proposed-action persistence helper.
+
+Write impact:
+- Writes only to `ai_actions`.
+- Does not write to target domain tables.\n

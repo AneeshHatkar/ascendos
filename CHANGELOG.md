@@ -152,4 +152,8 @@ This prepares future confirmed writes to create traceable audit records.\n\n\n##
 
 Added a safe timeline helper boundary for Phase 6.
 
-Because the current SQL spine does not include a `timeline_events` table, the helper intentionally returns a controlled skipped result instead of inventing schema or writing to a non-existent table.\n
+Because the current SQL spine does not include a `timeline_events` table, the helper intentionally returns a controlled skipped result instead of inventing schema or writing to a non-existent table.\n\n\n## 2026-06-20 04:49 UTC — Added Proposed Action Creation Helper
+
+Added a helper for creating validated proposed actions in `ai_actions` with `pending_confirmation` status.
+
+This preserves the required Phase 6 flow: proposal first, confirmation later, execution only after explicit approval.\n
