@@ -25,3 +25,14 @@ Changed auth server actions to return `Promise<void>` and redirect with error qu
 
 ### Prevention
 Do not commit after failed `npm run check`; fix first unless intentionally creating a broken checkpoint.
+## Phase 7.4 - StatusPill Prop Mismatch
+
+Error:
+- `npm run build` failed because `OperatingDashboardCard` passed children into `StatusPill`, but the existing `StatusPillProps` contract does not accept children.
+
+Fix:
+- Removed `StatusPill` usage from `OperatingDashboardCard`.
+- Replaced it with a local status badge span to avoid changing existing Phase 5 shared component contracts.
+
+Result:
+- Pending rerun of `npm run check`.

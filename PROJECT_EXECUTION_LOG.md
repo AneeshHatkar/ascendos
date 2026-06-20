@@ -1641,3 +1641,8 @@ Purpose:
 
 - Added the Phase 7 dashboard card registry for Command, Timeline, Calendar, Goals, Proof, and Carnos surfaces.
 - Kept the step registry-only with no page rewrites and no runtime writes.
+
+## Phase 7.4 - Shared Dashboard Card Primitives
+
+- Added reusable Phase 7 operating dashboard card and grid primitives.
+- Kept this step component-only with no page rewrites and no runtime writes.
