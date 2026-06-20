@@ -40,6 +40,9 @@ export const PHASE_7_DASHBOARD_CARD_REGISTRY: DashboardCardContract[] = [
     sourceTables: ["ai_actions"],
     emptyStateTitle: "No pending updates.",
     emptyStateDescription: "Confirmed updates will appear here before execution.",
+    errorStateTitle: "Pending updates unavailable.",
+    errorStateDescription: "The pending update card could not read ai_actions state.",
+    privacyNote: "Only confirmation-relevant action metadata should appear here.",
   },
   {
     id: "timeline-recent-events",
@@ -100,6 +103,9 @@ export const PHASE_7_DASHBOARD_CARD_REGISTRY: DashboardCardContract[] = [
     sourceTables: ["chat_sessions", "chat_messages", "ai_actions"],
     emptyStateTitle: "No Carnos operating context yet.",
     emptyStateDescription: "Chat and proposed actions will appear here as the system develops.",
+    errorStateTitle: "Carnos operating context unavailable.",
+    errorStateDescription: "The Carnos panel could not read its source tables.",
+    privacyNote: "Carnos context must remain visibility-only until later privacy and memory phases.",
   },
 ];
 

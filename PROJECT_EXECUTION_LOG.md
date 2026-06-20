@@ -1726,3 +1726,9 @@ Purpose:
 - Wired links into Command, Timeline, Calendar, Goals, and Carnos dashboard surfaces.
 - Kept links limited to canonical routes only; no non-canonical proof route was introduced.
 - No writes, autonomous actions, generation, memory, Python/ML execution, voice, internet tools, or background jobs were added.
+
+## Phase 7.14 - Empty / Loading / Error / Privacy States
+
+- Upgraded OperatingDashboardCard to render explicit loading, error, empty, and privacy-redacted states from the dashboard card contract.
+- Added error and privacy metadata to pending update and Carnos operating cards.
+- Preserved the read-only dashboard boundary and did not add writes, generation, memory, Python/ML execution, voice, internet tools, or background jobs.

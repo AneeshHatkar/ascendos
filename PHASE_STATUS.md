@@ -519,3 +519,11 @@ Status: Implemented and awaiting validation.
 Boundary: navigation only; all links point to existing canonical routes.
 
 Next step after commit: Phase 7.14 Empty/loading/error/privacy states.
+
+## Phase 7.14 - Empty / Loading / Error / Privacy States
+
+Status: Implemented and awaiting validation.
+
+Boundary: display-state handling only; no mutations, generation, memory, or execution added.
+
+Next step after commit: Phase 7.15 No-hardcoded-demo-data cleanup.

@@ -264,3 +264,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 ## Phase 7.13 - Cross-Dashboard Links
 
 - Added canonical cross-dashboard navigation across the Phase 7 operating dashboard surfaces.
+
+## Phase 7.14 - Empty / Loading / Error / Privacy States
+
+- Added contract-backed dashboard card states for empty, loading, error, and privacy-redacted rendering.

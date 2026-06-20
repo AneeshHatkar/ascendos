@@ -1134,3 +1134,8 @@ Write impact:
 - Added src/components/dashboard/cross-dashboard-links.tsx.
 - Exported CrossDashboardLinks from src/components/dashboard/index.ts.
 - Updated command-dashboard-v1, timeline-dashboard-v1, calendar-dashboard-v1, goals-dashboard-v1, and carnos-panel-v1 to render canonical cross-dashboard navigation.
+
+## Phase 7.14 - Empty / Loading / Error / Privacy States
+
+- Updated src/components/dashboard/operating-dashboard-card.tsx to handle all DashboardCardStatus values.
+- Updated src/lib/dashboard/dashboard-card-registry.ts with error/privacy metadata for confirmation and Carnos cards.
