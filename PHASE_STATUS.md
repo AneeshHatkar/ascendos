@@ -313,3 +313,9 @@ Phase 6.5 update at 2026-06-20 00:05 UTC:
 - Added envelope, metadata, forbidden-field, and payload validation for proposed actions.
 - Phase 6 remains in progress.
 - Next step: Phase 6.6 — Audit Helper.
+
+Phase 6.6 update at 2026-06-20 00:09 UTC:
+- Created `src/lib/audit/write-audit-log.ts`.
+- Added reusable server-side audit logging helper.
+- Phase 6 remains in progress.
+- Next step: Phase 6.7 — Timeline Helper.

@@ -831,4 +831,20 @@ Runtime impact:
 - Validation helper only.
 
 Write impact:
-- No writes are executed in this step.
+- No writes are executed in this step.\n\n## 2026-06-20 00:09 UTC — Phase 6.6 Audit Helper
+
+Added:
+- `src/lib/audit/write-audit-log.ts`
+
+Role:
+- Defines `WriteAuditLogInput`.
+- Defines `WriteAuditLogResult`.
+- Adds `writeAuditLog` helper for inserting into `audit_logs`.
+- Returns structured success/error results.
+
+Runtime impact:
+- Server-side helper foundation.
+
+Write impact:
+- Adds an audit-write helper only.
+- Does not execute proposed actions by itself.\n
