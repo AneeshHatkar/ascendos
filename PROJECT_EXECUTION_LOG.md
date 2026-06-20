@@ -1409,4 +1409,28 @@ Safety boundaries:
 - It does not create tasks, goals, daily logs, or proof items.
 - It does not bypass validation.
 - It does not auto-approve or auto-write target records.
-- It does not add Carnos generation, Python/ML runtime, memory, background jobs, or UI.\n
+- It does not add Carnos generation, Python/ML runtime, memory, background jobs, or UI.\n\n\n## 2026-06-20 05:05 UTC — Phase 6.9 Completed: Action Lifecycle Helper
+
+Completed Phase 6.9 by creating the action lifecycle helper.
+
+Created:
+- `src/lib/actions/action-lifecycle.ts`
+
+Purpose:
+- Read an existing `ai_actions` proposal.
+- Validate legal lifecycle transitions.
+- Update only the proposal lifecycle status.
+- Support approval, rejection, cancellation, and failure marking.
+
+Allowed transitions:
+- `pending_confirmation` → `approved`
+- `pending_confirmation` → `rejected`
+- `draft`, `pending_confirmation`, or `approved` → `cancelled`
+- `approved` → `failed`
+
+Safety boundaries:
+- The helper does not execute target writes.
+- The helper does not create tasks, goals, daily logs, or proof items.
+- The helper does not auto-approve actions.
+- The helper does not bypass user ownership checks.
+- The helper does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.\n

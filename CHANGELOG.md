@@ -156,4 +156,8 @@ Because the current SQL spine does not include a `timeline_events` table, the he
 
 Added a helper for creating validated proposed actions in `ai_actions` with `pending_confirmation` status.
 
-This preserves the required Phase 6 flow: proposal first, confirmation later, execution only after explicit approval.\n
+This preserves the required Phase 6 flow: proposal first, confirmation later, execution only after explicit approval.\n\n\n## 2026-06-20 05:05 UTC — Added Action Lifecycle Helper
+
+Added a safe lifecycle helper for proposed actions.
+
+The helper supports approval, rejection, cancellation, and failure marking while preserving the Phase 6 rule that target records are not written until a later explicit execution step.\n

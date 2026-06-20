@@ -334,3 +334,10 @@ Phase 6.8 update at 2026-06-20 04:49 UTC:
 - No target-table execution was added.
 - Phase 6 remains in progress.
 - Next step: Phase 6.9 — Action Lifecycle Helper.
+
+Phase 6.9 update at 2026-06-20 05:05 UTC:
+- Created `src/lib/actions/action-lifecycle.ts`.
+- Added controlled lifecycle transitions for `ai_actions`.
+- No target-table execution was added.
+- Phase 6 remains in progress.
+- Next step: Phase 6.10 — Execution Dispatcher.

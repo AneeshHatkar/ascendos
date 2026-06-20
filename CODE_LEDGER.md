@@ -878,4 +878,20 @@ Runtime impact:
 
 Write impact:
 - Writes only to `ai_actions`.
+- Does not write to target domain tables.\n\n\n## 2026-06-20 05:05 UTC — Phase 6.9 Action Lifecycle Helper
+
+Added:
+- `src/lib/actions/action-lifecycle.ts`
+
+Role:
+- Defines lifecycle transition types.
+- Defines allowed lifecycle transition rules.
+- Adds `updateActionLifecycle`.
+- Updates `ai_actions.status` and matching lifecycle timestamps.
+
+Runtime impact:
+- Adds controlled proposal lifecycle update helper.
+
+Write impact:
+- Writes only to `ai_actions`.
 - Does not write to target domain tables.\n
