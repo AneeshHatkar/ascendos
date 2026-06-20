@@ -271,4 +271,4 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 
 ## Phase 7.15 - No-Hardcoded-Demo-Data Cleanup
 
-- Cleaned user-facing Phase 7 dashboard copy to reduce demo/placeholder language while preserving audit-required compatibility markers.\n\n## Phase 7.16 - Phase 7 Audit Gate\n\n- Expanded integration audit coverage for Phase 7 dashboard wiring, canonical links, pending updates, and dashboard state handling.\n\n
+- Cleaned user-facing Phase 7 dashboard copy to reduce demo/placeholder language while preserving audit-required compatibility markers.\n\n## Phase 7.16 - Phase 7 Audit Gate\n\n- Expanded integration audit coverage for Phase 7 dashboard wiring, canonical links, pending updates, and dashboard state handling.\n\n\n\n## Phase 7.17 - Manual Smoke Checklist\n\n- Added Phase 7 manual browser smoke checklist for core operating dashboard verification.\n\n
