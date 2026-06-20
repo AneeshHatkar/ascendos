@@ -36,3 +36,13 @@ Fix:
 
 Result:
 - Pending rerun of `npm run check`.
+## Phase 7.6 - Command Dashboard Apostrophe Lint
+
+Error:
+- `npm run lint` failed in `src/components/dashboard/command-dashboard-v1.tsx` because JSX text used an unescaped apostrophe in `Today's`.
+
+Fix:
+- Replaced `Today's` with `Today&apos;s`.
+
+Result:
+- Pending rerun of `npm run check`.

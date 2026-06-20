@@ -1652,3 +1652,9 @@ Purpose:
 - Added read-only server-side dashboard data summary helpers for Phase 7 surfaces.
 - Aggregates counts for pending updates, active goals, open tasks, proof items, and events.
 - Kept this step helper-only with no page rewrites and no writes.
+
+## Phase 7.6 - Command Dashboard v1
+
+- Added the first Command dashboard v1 component using Phase 7 card registry, card primitives, and dashboard summary data contracts.
+- Preserved read-only dashboard behavior and the proposed-action confirmation boundary.
+- Did not activate Python/ML runtime execution, memory, voice, background jobs, or autonomous writes.

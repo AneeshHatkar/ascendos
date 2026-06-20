@@ -8,3 +8,4 @@ export { SectionCard } from "./section-card";
 export { StatusPill } from "./status-pill";
 export * from "./operating-dashboard-card";
 export * from "./operating-dashboard-grid";
+export * from "./command-dashboard-v1";
