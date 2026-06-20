@@ -248,3 +248,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 ## Phase 7.9 - Goals Dashboard v1
 
 - Added and wired the Phase 7 Goals dashboard component into `/goals` while preserving the existing read-only goal records view.
+
+## Phase 7.10 - Proof Dashboard/Card System
+
+- Added the Phase 7 Proof dashboard/card system as a read-only exported component without adding a non-canonical route.
