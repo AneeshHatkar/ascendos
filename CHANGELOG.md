@@ -224,3 +224,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 ## Phase 7.6 - Command Dashboard v1
 
 - Added the initial Command dashboard v1 component for Phase 7.
+
+## Phase 7.6B - Wire Command Dashboard v1
+
+- Wired the Command dashboard v1 component into the live `/command` route.

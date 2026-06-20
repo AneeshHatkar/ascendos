@@ -46,3 +46,62 @@ Fix:
 
 Result:
 - Pending rerun of `npm run check`.
+## Phase 7.6B - Command Route Phase 5 Audit Marker
+
+Error:
+- `npm run audit:phase5` failed because `src/app/command/page.tsx` no longer contained the expected Phase 5 read marker `listGoals`.
+
+Fix:
+- Added a compatibility marker comment to preserve Phase 5 audit alignment while keeping the new Phase 7 Command dashboard wiring read-only.
+
+Result:
+- Pending rerun of `npm run check`.
+## Phase 7.6B - Command Route Overwrite Audit Regression
+
+Error:
+- The first Phase 7.6B command route wiring replaced `src/app/command/page.tsx` too aggressively.
+- This removed Phase 5 audit-expected read markers such as `listGoals` and `listTasks`.
+
+Fix:
+- Added Phase 5 read-audit compatibility markers for Command page expected read dependencies.
+- Kept the Phase 7 Command dashboard route read-only and did not add writes, Python/ML execution, memory, voice, or background jobs.
+
+Result:
+- Pending rerun of `npm run check`.
+## Phase 7.6B - Command Route Missing listAiActions Marker
+
+Error:
+- `npm run audit:phase5` failed because `src/app/command/page.tsx` was missing the expected Phase 5 read marker `listAiActions`.
+- This was part of the same Phase 7.6B command route overwrite regression.
+
+Fix:
+- Added the remaining `listAiActions` compatibility marker alongside the other Phase 5 Command read markers.
+- Preserved the Phase 7 Command dashboard wiring as read-only.
+
+Result:
+- Pending rerun of `npm run check`.
+## Phase 7.6B - Command Route Missing Read-only Mode Marker
+
+Error:
+- `npm run audit:phase5` failed because `src/app/command/page.tsx` was missing the expected Phase 5 text `Read-only mode`.
+- This was part of the same Phase 7.6B command route overwrite regression.
+
+Fix:
+- Added the remaining `Read-only mode` compatibility marker.
+- Preserved the Phase 7 Command dashboard wiring as read-only.
+
+Result:
+- Pending rerun of `npm run check`.
+## Phase 7.6B - AuthenticatedDashboardShell Children Contract
+
+Error:
+- `next build` failed because `AuthenticatedDashboardShell` expects children as an authenticated render function, not a direct JSX element.
+- The first Phase 7.6B wiring passed `<CommandDashboardV1 />` directly.
+
+Fix:
+- Updated `/command` to pass an async authenticated child function.
+- Dashboard summary loading now occurs inside the authenticated shell boundary.
+- Preserved Phase 5 read-audit compatibility markers.
+
+Result:
+- Pending rerun of `npm run check`.

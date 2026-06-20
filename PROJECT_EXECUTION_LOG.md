@@ -1658,3 +1658,9 @@ Purpose:
 - Added the first Command dashboard v1 component using Phase 7 card registry, card primitives, and dashboard summary data contracts.
 - Preserved read-only dashboard behavior and the proposed-action confirmation boundary.
 - Did not activate Python/ML runtime execution, memory, voice, background jobs, or autonomous writes.
+
+## Phase 7.6B - Wire Command Dashboard v1
+
+- Wired the Phase 7 CommandDashboardV1 component into the live `/command` route.
+- Preserved authenticated dashboard shell usage and read-only dashboard data aggregation.
+- Did not add autonomous writes, Python/ML execution, memory, voice, internet tools, or background jobs.

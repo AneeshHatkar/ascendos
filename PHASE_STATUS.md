@@ -451,3 +451,9 @@ Next step after commit: Phase 7.6 Command dashboard v1.
 Status: Implemented and awaiting commit.
 
 Next step after commit: Phase 7.7 Timeline dashboard v1.
+
+## Phase 7.6B - Wire Command Dashboard v1
+
+Status: Implemented and awaiting commit.
+
+Next step after commit: Phase 7.7 Timeline dashboard v1.

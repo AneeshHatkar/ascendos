@@ -1078,3 +1078,8 @@ Write impact:
 
 - Added src/components/dashboard/command-dashboard-v1.tsx.
 - Updated src/components/dashboard/index.ts exports.
+
+## Phase 7.6B - Wire Command Dashboard v1
+
+- Updated src/app/command/page.tsx to render CommandDashboardV1.
+- Used getDashboardDataSummary for read-only Command dashboard summary data.
