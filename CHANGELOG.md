@@ -172,4 +172,8 @@ The dispatcher now routes `create_task` actions to the task flow while keeping t
 
 Added the Phase 6 create-goal execution flow: approved `create_goal` proposals can now create records in `goals`.
 
-The dispatcher now routes `create_goal` actions to the goal flow while keeping daily logs and proof items intentionally unimplemented until their specific phases.\n
+The dispatcher now routes `create_goal` actions to the goal flow while keeping daily logs and proof items intentionally unimplemented until their specific phases.\n\n\n## 2026-06-20 18:13 UTC — Added Create Daily Log Execution Flow
+
+Added the Phase 6 create-daily-log execution flow: approved `create_daily_log` proposals can now create records in `daily_logs`.
+
+The dispatcher now routes `create_daily_log` actions to the daily log flow while keeping proof items intentionally unimplemented until Phase 6.14.\n

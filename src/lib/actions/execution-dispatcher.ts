@@ -10,6 +10,10 @@ import {
   executeCreateGoalAction,
   type ExecuteCreateGoalActionData,
 } from "./flows/create-goal-flow";
+import {
+  executeCreateDailyLogAction,
+  type ExecuteCreateDailyLogActionData,
+} from "./flows/create-daily-log-flow";
 import type { Database } from "@/types/database";
 
 export interface ExecuteApprovedActionInput {
@@ -28,7 +32,8 @@ export interface ExecuteApprovedActionReadyData {
 export type ExecuteApprovedActionData =
   | ExecuteApprovedActionReadyData
   | ExecuteCreateTaskActionData
-  | ExecuteCreateGoalActionData;
+  | ExecuteCreateGoalActionData
+  | ExecuteCreateDailyLogActionData;
 
 interface LoadedAction {
   id: string;
@@ -108,6 +113,10 @@ export async function executeApprovedAction(
 
   if (action.action_type === "create_goal") {
     return executeCreateGoalAction(input);
+  }
+
+  if (action.action_type === "create_daily_log") {
+    return executeCreateDailyLogAction(input);
   }
 
   return dispatchApprovedAction(action);

@@ -951,4 +951,24 @@ Write impact:
 - Writes to `goals`.
 - Updates `ai_actions`.
 - Writes to `audit_logs`.
+- Timeline helper remains skipped until timeline schema exists.\n\n\n## 2026-06-20 18:13 UTC — Phase 6.13 Create Daily Log Flow
+
+Added:
+- `src/lib/actions/flows/create-daily-log-flow.ts`
+
+Updated:
+- `src/lib/actions/execution-dispatcher.ts`
+
+Role:
+- Adds `executeCreateDailyLogAction`.
+- Dispatches approved `create_daily_log` actions to the daily log creation flow.
+- Inserts into `daily_logs`.
+- Updates source `ai_actions` to `executed`.
+- Writes audit metadata.
+- Calls timeline helper boundary.
+
+Write impact:
+- Writes to `daily_logs`.
+- Updates `ai_actions`.
+- Writes to `audit_logs`.
 - Timeline helper remains skipped until timeline schema exists.\n

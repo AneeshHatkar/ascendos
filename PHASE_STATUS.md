@@ -365,3 +365,11 @@ Phase 6.12 update at 2026-06-20 18:09 UTC:
 - Daily logs and proof items remain unimplemented until their phases.
 - Phase 6 remains in progress.
 - Next step: Phase 6.13 — Create Daily Log Flow.
+
+Phase 6.13 update at 2026-06-20 18:13 UTC:
+- Created `src/lib/actions/flows/create-daily-log-flow.ts`.
+- Updated dispatcher to execute approved `create_daily_log` actions.
+- Added target-table write flow for `daily_logs`.
+- Proof items remain unimplemented until Phase 6.14.
+- Phase 6 remains in progress.
+- Next step: Phase 6.14 — Create Proof Item Flow.
