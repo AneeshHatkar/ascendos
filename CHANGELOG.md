@@ -208,3 +208,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 ## Phase 7.2 - Dashboard Layout Contract
 
 - Added the shared Phase 7 dashboard layout contract.
+
+## Phase 7.3 - Dashboard Card Registry
+
+- Added the shared Phase 7 dashboard card registry.

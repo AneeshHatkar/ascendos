@@ -427,3 +427,9 @@ Current next step after commit: Phase 7.2 dashboard layout contract.
 Status: Implemented and awaiting commit.
 
 Next step after commit: Phase 7.3 dashboard card registry.
+
+## Phase 7.3 - Dashboard Card Registry
+
+Status: Implemented and awaiting commit.
+
+Next step after commit: Phase 7.4 shared dashboard card primitives.

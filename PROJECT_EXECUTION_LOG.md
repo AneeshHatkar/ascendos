@@ -1636,3 +1636,8 @@ Purpose:
 
 - Added the typed dashboard layout contract for Phase 7 surfaces, regions, card statuses, priorities, and source table tracking.
 - Kept this step contract-only with no page rewrites and no runtime writes.
+
+## Phase 7.3 - Dashboard Card Registry
+
+- Added the Phase 7 dashboard card registry for Command, Timeline, Calendar, Goals, Proof, and Carnos surfaces.
+- Kept the step registry-only with no page rewrites and no runtime writes.
