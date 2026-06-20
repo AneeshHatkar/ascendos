@@ -180,4 +180,8 @@ The dispatcher now routes `create_daily_log` actions to the daily log flow while
 
 Added the Phase 6 create-proof-item execution flow: approved `create_proof_item` proposals can now create records in `proof_items`.
 
-The dispatcher now routes all four Phase 6 write action types: tasks, goals, daily logs, and proof items.\n
+The dispatcher now routes all four Phase 6 write action types: tasks, goals, daily logs, and proof items.\n\n\n## 2026-06-20 18:22 UTC — Added Proposed Action Review UI
+
+Added a reusable Save/Edit/Cancel UI component for reviewing proposed actions before execution.
+
+The component supports payload preview, JSON payload editing, validation issue display, Save / Confirm callback, and Cancel callback while keeping database writes outside the component.\n

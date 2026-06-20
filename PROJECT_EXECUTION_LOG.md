@@ -1553,4 +1553,23 @@ Safety boundaries:
 - The flow checks `user_id`.
 - The flow does not execute unapproved proposals.
 - The flow blocks cross-user related-record references.
-- The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.\n
+- The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.\n\n\n## 2026-06-20 18:22 UTC — Phase 6.15 Completed: Save/Edit/Cancel UI Component
+
+Completed Phase 6.15 by adding the reusable proposed action review UI component.
+
+Created:
+- `src/components/actions/proposed-action-review-card.tsx`
+- `src/components/actions/index.ts`
+
+Purpose:
+- Display proposed action type, source, confidence, reason, validation issues, and payload.
+- Allow payload JSON editing before save/confirmation.
+- Provide Save / Confirm and Cancel callback boundaries.
+- Keep the UI component reusable before wiring it into a route.
+
+Safety boundaries:
+- This component does not write directly to the database.
+- This component does not call Supabase.
+- This component does not execute actions by itself.
+- This component preserves the confirmation-before-write boundary.
+- This component does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or voice.\n

@@ -382,3 +382,11 @@ Phase 6.14 update at 2026-06-20 18:17 UTC:
 - All four core Phase 6 execution flows now exist.
 - Phase 6 remains in progress.
 - Next step: Phase 6.15 — Save/Edit/Cancel UI.
+
+Phase 6.15 update at 2026-06-20 18:22 UTC:
+- Created `src/components/actions/proposed-action-review-card.tsx`.
+- Created `src/components/actions/index.ts`.
+- Added reusable Save/Edit/Cancel UI for proposed actions.
+- UI does not write directly to the database.
+- Phase 6 remains in progress.
+- Next step: Phase 6.16 — Wire into app page.

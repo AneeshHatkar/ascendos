@@ -992,4 +992,18 @@ Write impact:
 - Writes to `proof_items`.
 - Updates `ai_actions`.
 - Writes to `audit_logs`.
-- Timeline helper remains skipped until timeline schema exists.\n
+- Timeline helper remains skipped until timeline schema exists.\n\n\n## 2026-06-20 18:22 UTC — Phase 6.15 Save/Edit/Cancel UI Component
+
+Added:
+- `src/components/actions/proposed-action-review-card.tsx`
+- `src/components/actions/index.ts`
+
+Role:
+- Provides the reusable client-side review card for proposed actions.
+- Supports payload preview, JSON edit mode, Save / Confirm callback, and Cancel callback.
+- Designed for Phase 6.16 route wiring.
+
+Write impact:
+- No direct write impact.
+- No Supabase calls.
+- No server mutations.\n
