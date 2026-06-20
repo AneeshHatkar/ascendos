@@ -1572,4 +1572,20 @@ Safety boundaries:
 - This component does not call Supabase.
 - This component does not execute actions by itself.
 - This component preserves the confirmation-before-write boundary.
-- This component does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or voice.\n
+- This component does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or voice.\n\n\n## 2026-06-20 18:30 UTC — Phase 6.16 Completed: Wire Proposed Action Review into App Page
+
+Completed Phase 6.16 by wiring the proposed action review component into the Carnos dashboard.
+
+Updated:
+- `src/app/carnos/page.tsx`
+
+Purpose:
+- Render the reusable Save/Edit/Cancel review card inside an authenticated app page.
+- Demonstrate the confirmation-first UI surface inside the Carnos dashboard.
+- Keep the component in preview mode with no direct database mutation from the page.
+
+Safety boundaries:
+- No Supabase write call was added to the UI component.
+- No action execution call was added to the page.
+- No Python/ML runtime, memory, Carnos generation, background job, cron job, or voice feature was added.
+- The component remains a review surface only until server-owned action wiring is explicitly added.\n

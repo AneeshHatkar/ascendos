@@ -1,3 +1,4 @@
+import { ProposedActionReviewCard } from "@/components/actions";
 import {
   AuthenticatedDashboardShell,
   DataList,
@@ -7,10 +8,29 @@ import {
   StatusPill,
   type DataListItem,
 } from "@/components/dashboard";
+import type { ProposedActionContract } from "@/lib/actions/proposed-action-contracts";
 import { listAiActions, listChatMessages, listChatSessions } from "@/lib/repositories";
 
 type RecordValue = string | number | boolean | null | undefined;
 type CarnosRecord = Record<string, RecordValue>;
+
+
+const SAMPLE_PHASE_6_REVIEW_ACTION: ProposedActionContract = {
+  action_type: "create_task",
+  source: "carnos",
+  confidence: 0.82,
+  reason:
+    "Demonstrates the Phase 6 confirmation-first review surface before server-owned confirmation wiring.",
+  evidence_refs: ["phase_6_15_review_ui", "phase_6_16_page_wiring"],
+  payload: {
+    title: "Review and confirm the next execution step",
+    description:
+      "This sample proposal proves the Save/Edit/Cancel UI can be rendered inside the app without directly mutating SQL.",
+    domain: "projects",
+    status: "todo",
+    priority: "medium",
+  },
+};
 
 type ReadGroup = {
   label: string;
@@ -263,6 +283,30 @@ export default function CarnosPage() {
 
           return (
             <>
+              <SectionCard
+                title="Proposed action review"
+                description="Phase 6.16 wires the Save/Edit/Cancel review card into the Carnos dashboard without attaching direct mutations from the component."
+                eyebrow="Phase 6.16"
+              >
+                <div className="grid gap-4">
+                  <ProposedActionReviewCard
+                    initialAction={SAMPLE_PHASE_6_REVIEW_ACTION}
+                    saveLabel="Save / Confirm preview"
+                    cancelLabel="Cancel preview"
+                    validationIssues={[
+                      "Preview mode only: confirmation callbacks will be connected in the next server-action wiring step.",
+                      "The component itself does not call Supabase or mutate SQL.",
+                    ]}
+                  />
+                  <p className="text-sm leading-6 text-slate-400">
+                    This card is intentionally wired as a safe review surface first.
+                    Confirmation-first writes remain server-owned: the user reviews,
+                    edits, and confirms before any future route/server-owned action confirms
+                    a proposal.
+                  </p>
+                </div>
+              </SectionCard>
+
               <section className="rounded-3xl border border-slate-800 bg-slate-950/80 p-6 shadow-sm shadow-black/20">
                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                   <div>

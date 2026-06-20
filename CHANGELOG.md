@@ -184,4 +184,8 @@ The dispatcher now routes all four Phase 6 write action types: tasks, goals, dai
 
 Added a reusable Save/Edit/Cancel UI component for reviewing proposed actions before execution.
 
-The component supports payload preview, JSON payload editing, validation issue display, Save / Confirm callback, and Cancel callback while keeping database writes outside the component.\n
+The component supports payload preview, JSON payload editing, validation issue display, Save / Confirm callback, and Cancel callback while keeping database writes outside the component.\n\n\n## 2026-06-20 18:30 UTC — Wired Proposed Action Review into Carnos Page
+
+Wired the Phase 6 proposed-action review card into the Carnos dashboard as a safe confirmation-first preview surface.
+
+The page now displays the Save/Edit/Cancel UI while preserving the server-owned write boundary.\n

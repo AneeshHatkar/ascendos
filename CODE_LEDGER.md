@@ -1006,4 +1006,17 @@ Role:
 Write impact:
 - No direct write impact.
 - No Supabase calls.
-- No server mutations.\n
+- No server mutations.\n\n\n## 2026-06-20 18:30 UTC — Phase 6.16 App Page Wiring
+
+Updated:
+- `src/app/carnos/page.tsx`
+
+Role:
+- Imports `ProposedActionReviewCard`.
+- Renders a sample `ProposedActionContract` in the Carnos dashboard.
+- Exposes the Save/Edit/Cancel review UI in-app without direct SQL mutation.
+
+Write impact:
+- No direct write impact.
+- No Supabase mutation from the page.
+- No action execution from the page.\n
