@@ -236,3 +236,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 ## Phase 7.7 - Timeline Dashboard v1
 
 - Added Timeline dashboard v1 component for read-only operating history visibility.
+
+## Phase 7.7B - Wire Timeline Dashboard Route
+
+- Wired the Phase 7 Timeline dashboard component into `/timeline` while preserving the existing read-only timeline records view.

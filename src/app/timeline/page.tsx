@@ -5,9 +5,12 @@ import {
   MetricTile,
   SectionCard,
   StatusPill,
+  TimelineDashboardV1,
   type DataListItem,
 } from "@/components/dashboard";
+import { getDashboardDataSummary } from "@/lib/dashboard";
 import { listAuditLogs, listEvents, listProofItems } from "@/lib/repositories";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 type RecordValue = string | number | boolean | null | undefined;
 type TimelineRecord = Record<string, RecordValue>;
@@ -197,6 +200,9 @@ export default function TimelinePage() {
         description="Read-only timeline view across events, proof, and audit records."
       >
         {async ({ user }) => {
+          const supabase = await createSupabaseServerClient();
+          const dashboardData = await getDashboardDataSummary(supabase, user.id, "timeline");
+
           const groups = await Promise.all([
             readTimelineGroup(
               "Events",
@@ -224,6 +230,8 @@ export default function TimelinePage() {
 
           return (
             <>
+              <TimelineDashboardV1 data={dashboardData} />
+
               <section className="rounded-3xl border border-slate-800 bg-slate-950/80 p-6 shadow-sm shadow-black/20">
                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                   <div>

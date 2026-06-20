@@ -1093,3 +1093,8 @@ Write impact:
 
 - Added src/components/dashboard/timeline-dashboard-v1.tsx.
 - Exported TimelineDashboardV1 from src/components/dashboard/index.ts.
+
+## Phase 7.7B - Wire Timeline Dashboard Route
+
+- Updated src/app/timeline/page.tsx to render TimelineDashboardV1.
+- Added getDashboardDataSummary and createSupabaseServerClient imports for read-only dashboard summary data.

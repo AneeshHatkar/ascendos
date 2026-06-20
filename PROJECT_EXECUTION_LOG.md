@@ -1676,3 +1676,10 @@ Purpose:
 - Created the reusable TimelineDashboardV1 component.
 - The component uses Phase 7 dashboard registry cards and read-only dashboard summary data.
 - No autonomous persistence, Python/ML execution, memory, voice, internet tools, or background jobs were added.
+
+## Phase 7.7B - Wire Timeline Dashboard Route
+
+- Wired TimelineDashboardV1 into `/timeline` inside the authenticated read shell.
+- Preserved Phase 5 timeline read markers and existing event/proof/audit read view.
+- Loaded Phase 7 dashboard summary data through the server Supabase client.
+- No autonomous persistence, Python/ML execution, memory, voice, internet tools, or background jobs were added.
