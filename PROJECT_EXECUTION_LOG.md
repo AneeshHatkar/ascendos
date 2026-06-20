@@ -1631,3 +1631,8 @@ Purpose:
 - Recorded roadmap reconciliation: old 15-phase memory is outdated; FINAL_SYNCED DOCX/JSON are source of truth; implementation proceeds with 21 chunks unless explicitly updated.
 - Locked Phase 7 scope to core operating dashboards only.
 - Excluded future phase modules from Phase 7.
+
+## Phase 7.2 - Dashboard Layout Contract
+
+- Added the typed dashboard layout contract for Phase 7 surfaces, regions, card statuses, priorities, and source table tracking.
+- Kept this step contract-only with no page rewrites and no runtime writes.

@@ -421,3 +421,9 @@ Roadmap reconciliation:
 - Implementation proceeds using the safer 21-chunk structure unless the source-of-truth files are explicitly updated.
 
 Current next step after commit: Phase 7.2 dashboard layout contract.
+
+## Phase 7.2 - Dashboard Layout Contract
+
+Status: Implemented and awaiting commit.
+
+Next step after commit: Phase 7.3 dashboard card registry.

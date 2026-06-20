@@ -1052,3 +1052,8 @@ Write impact:
 
 - Added docs/phase-plans/PHASE_7_CORE_OPERATING_DASHBOARDS.md.
 - No runtime code changed in this step.
+
+## Phase 7.2 - Dashboard Layout Contract
+
+- Added src/lib/dashboard/dashboard-layout-contract.ts.
+- Updated src/lib/dashboard/index.ts to export the contract.

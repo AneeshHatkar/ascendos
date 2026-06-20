@@ -204,3 +204,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 
 - Added the Phase 7 plan lock.
 - Locked the roadmap reconciliation and Phase 7 boundaries before implementation.
+
+## Phase 7.2 - Dashboard Layout Contract
+
+- Added the shared Phase 7 dashboard layout contract.
