@@ -176,4 +176,8 @@ The dispatcher now routes `create_goal` actions to the goal flow while keeping d
 
 Added the Phase 6 create-daily-log execution flow: approved `create_daily_log` proposals can now create records in `daily_logs`.
 
-The dispatcher now routes `create_daily_log` actions to the daily log flow while keeping proof items intentionally unimplemented until Phase 6.14.\n
+The dispatcher now routes `create_daily_log` actions to the daily log flow while keeping proof items intentionally unimplemented until Phase 6.14.\n\n\n## 2026-06-20 18:17 UTC — Added Create Proof Item Execution Flow
+
+Added the Phase 6 create-proof-item execution flow: approved `create_proof_item` proposals can now create records in `proof_items`.
+
+The dispatcher now routes all four Phase 6 write action types: tasks, goals, daily logs, and proof items.\n

@@ -373,3 +373,12 @@ Phase 6.13 update at 2026-06-20 18:13 UTC:
 - Proof items remain unimplemented until Phase 6.14.
 - Phase 6 remains in progress.
 - Next step: Phase 6.14 — Create Proof Item Flow.
+
+Phase 6.14 update at 2026-06-20 18:17 UTC:
+- Created `src/lib/actions/flows/create-proof-item-flow.ts`.
+- Updated dispatcher to execute approved `create_proof_item` actions.
+- Added target-table write flow for `proof_items`.
+- Added related-record ownership checks for daily logs, goals, and tasks.
+- All four core Phase 6 execution flows now exist.
+- Phase 6 remains in progress.
+- Next step: Phase 6.15 — Save/Edit/Cancel UI.

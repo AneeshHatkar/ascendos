@@ -971,4 +971,25 @@ Write impact:
 - Writes to `daily_logs`.
 - Updates `ai_actions`.
 - Writes to `audit_logs`.
+- Timeline helper remains skipped until timeline schema exists.\n\n\n## 2026-06-20 18:17 UTC — Phase 6.14 Create Proof Item Flow
+
+Added:
+- `src/lib/actions/flows/create-proof-item-flow.ts`
+
+Updated:
+- `src/lib/actions/execution-dispatcher.ts`
+
+Role:
+- Adds `executeCreateProofItemAction`.
+- Dispatches approved `create_proof_item` actions to the proof item creation flow.
+- Inserts into `proof_items`.
+- Updates source `ai_actions` to `executed`.
+- Writes audit metadata.
+- Calls timeline helper boundary.
+- Validates referenced daily logs, goals, and tasks stay inside user ownership.
+
+Write impact:
+- Writes to `proof_items`.
+- Updates `ai_actions`.
+- Writes to `audit_logs`.
 - Timeline helper remains skipped until timeline schema exists.\n

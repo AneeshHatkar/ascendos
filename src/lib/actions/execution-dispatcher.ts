@@ -14,6 +14,10 @@ import {
   executeCreateDailyLogAction,
   type ExecuteCreateDailyLogActionData,
 } from "./flows/create-daily-log-flow";
+import {
+  executeCreateProofItemAction,
+  type ExecuteCreateProofItemActionData,
+} from "./flows/create-proof-item-flow";
 import type { Database } from "@/types/database";
 
 export interface ExecuteApprovedActionInput {
@@ -33,7 +37,8 @@ export type ExecuteApprovedActionData =
   | ExecuteApprovedActionReadyData
   | ExecuteCreateTaskActionData
   | ExecuteCreateGoalActionData
-  | ExecuteCreateDailyLogActionData;
+  | ExecuteCreateDailyLogActionData
+  | ExecuteCreateProofItemActionData;
 
 interface LoadedAction {
   id: string;
@@ -117,6 +122,10 @@ export async function executeApprovedAction(
 
   if (action.action_type === "create_daily_log") {
     return executeCreateDailyLogAction(input);
+  }
+
+  if (action.action_type === "create_proof_item") {
+    return executeCreateProofItemAction(input);
   }
 
   return dispatchApprovedAction(action);

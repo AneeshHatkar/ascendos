@@ -1529,4 +1529,28 @@ Safety boundaries:
 - The flow checks `user_id`.
 - The flow does not execute unapproved proposals.
 - The flow does not execute tasks, goals, or proof items.
+- The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.\n\n\n## 2026-06-20 18:17 UTC — Phase 6.14 Completed: Create Proof Item Flow
+
+Completed Phase 6.14 by creating the approved create-proof-item execution flow.
+
+Created:
+- `src/lib/actions/flows/create-proof-item-flow.ts`
+
+Updated:
+- `src/lib/actions/execution-dispatcher.ts`
+
+Purpose:
+- Load an approved `create_proof_item` proposal from `ai_actions`.
+- Validate ownership, status, action type, and payload.
+- Validate referenced daily log, goal, and task ownership before insert.
+- Insert a proof item into `proof_items`.
+- Mark the source `ai_actions` record as `executed`.
+- Record an audit log.
+- Call the timeline helper boundary.
+
+Safety boundaries:
+- Only approved `create_proof_item` actions can execute.
+- The flow checks `user_id`.
+- The flow does not execute unapproved proposals.
+- The flow blocks cross-user related-record references.
 - The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.\n
