@@ -1316,3 +1316,34 @@ Safety boundaries:
 - No Carnos generation was added.
 - No Python/ML runtime was added.
 - No memory system was added.
+
+## 2026-06-20 00:05 UTC — Phase 6.5 Completed: Payload Validation
+
+Completed Phase 6.5 by creating the proposed action validation layer.
+
+Created:
+- `src/lib/actions/validate-proposed-action.ts`
+
+Added validation for:
+- proposed action envelope structure
+- supported action types
+- proposed action source
+- confidence range
+- evidence refs
+- forbidden payload fields
+- create task payloads
+- create goal payloads
+- create daily log payloads
+- create proof item payloads
+
+Purpose:
+- Block invalid proposed actions before any future write execution.
+- Prevent user-owned/server-owned fields from being injected through client payloads.
+- Prepare the safe execution dispatcher for later Phase 6 steps.
+
+Safety boundaries:
+- No runtime write execution was added.
+- No database mutation was added.
+- No Carnos generation was added.
+- No Python/ML runtime was added.
+- No memory system was added.

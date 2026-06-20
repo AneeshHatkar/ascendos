@@ -307,3 +307,9 @@ Phase 6.4 update at 2026-06-19 23:58 UTC:
 - Added standard action success/error result contracts.
 - Phase 6 remains in progress.
 - Next step: Phase 6.5 — Payload Validation.
+
+Phase 6.5 update at 2026-06-20 00:05 UTC:
+- Created `src/lib/actions/validate-proposed-action.ts`.
+- Added envelope, metadata, forbidden-field, and payload validation for proposed actions.
+- Phase 6 remains in progress.
+- Next step: Phase 6.6 — Audit Helper.

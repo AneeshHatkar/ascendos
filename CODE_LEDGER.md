@@ -814,3 +814,21 @@ Runtime impact:
 
 Write impact:
 - No writes are executed in this step.
+
+## 2026-06-20 00:05 UTC — Phase 6.5 Payload Validation
+
+Added:
+- `src/lib/actions/validate-proposed-action.ts`
+
+Role:
+- Validates proposed action envelopes and payloads.
+- Rejects unsupported action types.
+- Rejects invalid source/confidence/evidence metadata.
+- Rejects forbidden payload fields such as `user_id`, `owner_id`, and service-role-like fields.
+- Returns standard `ActionResult` objects.
+
+Runtime impact:
+- Validation helper only.
+
+Write impact:
+- No writes are executed in this step.
