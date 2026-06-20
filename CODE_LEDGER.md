@@ -911,4 +911,24 @@ Runtime impact:
 
 Write impact:
 - Reads from `ai_actions`.
-- Does not write to target domain tables.\n
+- Does not write to target domain tables.\n\n\n## 2026-06-20 05:24 UTC — Phase 6.11 Create Task Flow
+
+Added:
+- `src/lib/actions/flows/create-task-flow.ts`
+
+Updated:
+- `src/lib/actions/execution-dispatcher.ts`
+
+Role:
+- Adds `executeCreateTaskAction`.
+- Dispatches approved `create_task` actions to the task creation flow.
+- Inserts into `tasks`.
+- Updates source `ai_actions` to `executed`.
+- Writes audit metadata.
+- Calls timeline helper boundary.
+
+Write impact:
+- Writes to `tasks`.
+- Updates `ai_actions`.
+- Writes to `audit_logs`.
+- Timeline helper remains skipped until timeline schema exists.\n

@@ -349,3 +349,11 @@ Phase 6.10 update at 2026-06-20 05:18 UTC:
 - No target-table execution was added.
 - Phase 6 remains in progress.
 - Next step: Phase 6.11 — Create Task Flow.
+
+Phase 6.11 update at 2026-06-20 05:24 UTC:
+- Created `src/lib/actions/flows/create-task-flow.ts`.
+- Updated dispatcher to execute approved `create_task` actions.
+- Added first target-table write flow for `tasks`.
+- Goals, daily logs, and proof items remain unimplemented until their phases.
+- Phase 6 remains in progress.
+- Next step: Phase 6.12 — Create Goal Flow.

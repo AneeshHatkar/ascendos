@@ -2,6 +2,10 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 
 import { isProposedActionType, type ProposedActionType } from "./action-types";
 import { createActionError, createActionSuccess, type ActionResult } from "./action-results";
+import {
+  executeCreateTaskAction,
+  type ExecuteCreateTaskActionData,
+} from "./flows/create-task-flow";
 import type { Database } from "@/types/database";
 
 export interface ExecuteApprovedActionInput {
@@ -10,12 +14,16 @@ export interface ExecuteApprovedActionInput {
   ai_action_id: string;
 }
 
-export interface ExecuteApprovedActionData {
+export interface ExecuteApprovedActionReadyData {
   ai_action_id: string;
   action_type: ProposedActionType;
   status: "ready_for_execution";
   message: string;
 }
+
+export type ExecuteApprovedActionData =
+  | ExecuteApprovedActionReadyData
+  | ExecuteCreateTaskActionData;
 
 interface LoadedAction {
   id: string;
@@ -87,6 +95,10 @@ export async function executeApprovedAction(
       message: "AI action must be approved before execution dispatch.",
       issues: [`Current status: ${action.status}`],
     });
+  }
+
+  if (action.action_type === "create_task") {
+    return executeCreateTaskAction(input);
   }
 
   return dispatchApprovedAction(action);

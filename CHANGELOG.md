@@ -164,4 +164,8 @@ The helper supports approval, rejection, cancellation, and failure marking while
 
 Added the Phase 6 execution dispatcher boundary.
 
-The dispatcher verifies ownership, approval status, and action type, but intentionally does not execute target-table writes until the specific Phase 6.11–6.14 action flows are implemented.\n
+The dispatcher verifies ownership, approval status, and action type, but intentionally does not execute target-table writes until the specific Phase 6.11–6.14 action flows are implemented.\n\n\n## 2026-06-20 05:24 UTC — Added Create Task Execution Flow
+
+Added the first concrete Phase 6 execution flow: approved `create_task` proposals can now create records in `tasks`.
+
+The dispatcher now routes `create_task` actions to the task flow while keeping the remaining action types intentionally unimplemented until their specific phases.\n

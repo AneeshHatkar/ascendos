@@ -1460,4 +1460,27 @@ Safety boundaries:
 - No UI was added.
 - No Carnos generation was added.
 - No Python/ML runtime was added.
-- No memory system, background jobs, or cron jobs were added.\n
+- No memory system, background jobs, or cron jobs were added.\n\n\n## 2026-06-20 05:24 UTC — Phase 6.11 Completed: Create Task Flow
+
+Completed Phase 6.11 by creating the approved create-task execution flow.
+
+Created:
+- `src/lib/actions/flows/create-task-flow.ts`
+
+Updated:
+- `src/lib/actions/execution-dispatcher.ts`
+
+Purpose:
+- Load an approved `create_task` proposal from `ai_actions`.
+- Validate ownership, status, action type, and payload.
+- Insert a task into `tasks`.
+- Mark the source `ai_actions` record as `executed`.
+- Record an audit log.
+- Call the timeline helper boundary.
+
+Safety boundaries:
+- Only approved `create_task` actions can execute.
+- The flow checks `user_id`.
+- The flow does not execute unapproved proposals.
+- The flow does not execute goals, daily logs, or proof items.
+- The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.\n
