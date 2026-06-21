@@ -577,3 +577,11 @@ Status: Complete.
 Result: Phases 1–7 are verified as safe to build upon for Phase 8.
 
 Next step: lock expanded Phase 8 Career System plan.
+
+## Phase 8.1 - Career System Plan Lock v2
+
+Status: Implemented and awaiting validation.
+
+Boundary: planning only; no product behavior, SQL migration, mutation path, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs added.
+
+Next step after commit: Phase 8.2 Inspect current career routes, SQL, repositories, dashboard contracts, and audits.

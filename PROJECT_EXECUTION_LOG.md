@@ -1817,3 +1817,9 @@ Purpose:
 - Added scripts/audit-phase-1-7-crosswalk.mjs.
 - Verified that Phases 1–7 are foundation-complete, source-aligned by scope, audit-passing, route-safe, and safe to build upon before Phase 8.
 - Confirmed that remaining source-of-truth features belong to Phases 8–21 rather than accidental gaps in Phases 1–7.
+
+## Phase 8.1 - Career System Plan Lock v2
+
+- Added docs/phase-plans/PHASE_8_CAREER_SYSTEM.md.
+- Locked expanded 24-step Phase 8 scope for applications, application events, networking, referrals, resume versions, interviews, follow-ups, analytics, proof links, route dashboards, and audit coverage.
+- Preserved all Phase 1–7 boundaries and canonical route rules.

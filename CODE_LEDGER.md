@@ -1221,3 +1221,8 @@ Write impact:
 - Added docs/audits/PHASE_1_7_SOURCE_CROSSWALK.md.
 - Added scripts/audit-phase-1-7-crosswalk.mjs.
 - No runtime app behavior changed.
+
+## Phase 8.1 - Career System Plan Lock v2
+
+- Added docs/phase-plans/PHASE_8_CAREER_SYSTEM.md.
+- No runtime code changed.

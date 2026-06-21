@@ -330,3 +330,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 ## Phase 1-7 Source Crosswalk Verification
 
 - Added a persistent Phase 1–7 source-to-implementation crosswalk and audit script before Phase 8.
+
+## Phase 8.1 - Career System Plan Lock v2
+
+- Locked the expanded 24-step Phase 8 Career System plan.
