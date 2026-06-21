@@ -593,3 +593,11 @@ Status: Complete.
 Boundary: inspection/report only; no runtime behavior, SQL migration, route wiring, mutation path, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs added.
 
 Next step: Phase 8.3 Career SQL schema plan / migration design.
+
+## Phase 8.3 - Career SQL Schema Plan / Migration Design
+
+Status: Complete.
+
+Boundary: design/documentation only; no runtime behavior, SQL migration, route wiring, mutation path, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs added.
+
+Next step: Phase 8.4 Additive career SQL migration.

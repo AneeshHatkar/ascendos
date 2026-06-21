@@ -1231,3 +1231,9 @@ Write impact:
 
 - Added docs/phase-reports/PHASE_8_2_CAREER_INSPECTION_REPORT.md.
 - No runtime code changed.
+
+## Phase 8.3 - Career SQL Schema Plan / Migration Design
+
+- Added docs/database/CAREER_SQL_SCHEMA_DESIGN.md.
+- No runtime code changed.
+- No SQL migration added yet.

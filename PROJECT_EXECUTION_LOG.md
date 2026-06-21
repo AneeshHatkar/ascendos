@@ -1831,3 +1831,10 @@ Purpose:
 - Confirmed /networking, /resume, and /interviews are placeholder surfaces.
 - Confirmed career SQL tables, database types, repository helpers, dashboard components, and Phase 8 audits are not implemented yet.
 - Confirmed Phase 8 should proceed additively starting with SQL schema design.
+
+## Phase 8.3 - Career SQL Schema Plan / Migration Design
+
+- Added docs/database/CAREER_SQL_SCHEMA_DESIGN.md.
+- Designed additive Career System SQL tables for job applications, application events, networking contacts, networking interactions, referrals, resume versions, resume bullets, and interviews.
+- Confirmed Phase 8.4 should add supabase/migrations/0007_career_system_foundation.sql.
+- Preserved all Phase 1–7 boundaries.

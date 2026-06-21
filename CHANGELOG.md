@@ -338,3 +338,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 ## Phase 8.2 - Career Route and Data Contract Inspection
 
 - Added the Phase 8.2 inspection report documenting current career route, SQL, repository, dashboard, and audit state.
+
+## Phase 8.3 - Career SQL Schema Plan / Migration Design
+
+- Added Career SQL schema design for the upcoming additive Phase 8 career migration.
