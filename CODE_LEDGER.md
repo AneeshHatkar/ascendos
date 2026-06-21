@@ -1226,3 +1226,8 @@ Write impact:
 
 - Added docs/phase-plans/PHASE_8_CAREER_SYSTEM.md.
 - No runtime code changed.
+
+## Phase 8.2 - Career Route and Data Contract Inspection
+
+- Added docs/phase-reports/PHASE_8_2_CAREER_INSPECTION_REPORT.md.
+- No runtime code changed.

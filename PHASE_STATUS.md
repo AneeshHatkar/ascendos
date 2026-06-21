@@ -585,3 +585,11 @@ Status: Implemented and awaiting validation.
 Boundary: planning only; no product behavior, SQL migration, mutation path, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs added.
 
 Next step after commit: Phase 8.2 Inspect current career routes, SQL, repositories, dashboard contracts, and audits.
+
+## Phase 8.2 - Career Route and Data Contract Inspection
+
+Status: Complete.
+
+Boundary: inspection/report only; no runtime behavior, SQL migration, route wiring, mutation path, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs added.
+
+Next step: Phase 8.3 Career SQL schema plan / migration design.
