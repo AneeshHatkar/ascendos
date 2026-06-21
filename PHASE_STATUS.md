@@ -601,3 +601,11 @@ Status: Complete.
 Boundary: design/documentation only; no runtime behavior, SQL migration, route wiring, mutation path, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs added.
 
 Next step: Phase 8.4 Additive career SQL migration.
+
+## Phase 8.4 - Additive Career SQL Migration
+
+Status: Complete.
+
+Boundary: additive SQL migration only; no route wiring, dashboard mutation, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs added.
+
+Next step: Phase 8.5 Database types update / generated type alignment.

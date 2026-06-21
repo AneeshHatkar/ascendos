@@ -1237,3 +1237,9 @@ Write impact:
 - Added docs/database/CAREER_SQL_SCHEMA_DESIGN.md.
 - No runtime code changed.
 - No SQL migration added yet.
+
+## Phase 8.4 - Additive Career SQL Migration
+
+- Added supabase/migrations/0007_career_system_foundation.sql.
+- No TypeScript database types updated yet; that belongs to Phase 8.5.
+- No runtime UI code changed.

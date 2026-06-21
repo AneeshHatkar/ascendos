@@ -1838,3 +1838,18 @@ Purpose:
 - Designed additive Career System SQL tables for job applications, application events, networking contacts, networking interactions, referrals, resume versions, resume bullets, and interviews.
 - Confirmed Phase 8.4 should add supabase/migrations/0007_career_system_foundation.sql.
 - Preserved all Phase 1–7 boundaries.
+
+## Phase 8.4 - Additive Career SQL Migration
+
+- Added supabase/migrations/0007_career_system_foundation.sql.
+- Added user-owned, RLS-protected Career System foundation tables:
+  - job_applications
+  - job_application_events
+  - networking_contacts
+  - networking_interactions
+  - job_referrals
+  - resume_versions
+  - resume_bullets
+  - interviews
+- Added indexes, ownership policies, and updated_at triggers where appropriate.
+- No runtime route wiring, dashboard mutation, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs were added.

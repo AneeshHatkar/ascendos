@@ -342,3 +342,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 ## Phase 8.3 - Career SQL Schema Plan / Migration Design
 
 - Added Career SQL schema design for the upcoming additive Phase 8 career migration.
+
+## Phase 8.4 - Additive Career SQL Migration
+
+- Added the additive Career System SQL migration with applications, events, networking, referrals, resume, and interview tables.
