@@ -326,3 +326,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 
 - Completed Phase 7 Core Operating Dashboards and added the final Phase 7 report.
 - Strengthened integration audit boundary coverage for all Phase 7 dashboard surfaces.
+
+## Phase 1-7 Source Crosswalk Verification
+
+- Added a persistent Phase 1–7 source-to-implementation crosswalk and audit script before Phase 8.
