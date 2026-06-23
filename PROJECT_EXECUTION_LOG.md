@@ -1853,3 +1853,9 @@ Purpose:
   - interviews
 - Added indexes, ownership policies, and updated_at triggers where appropriate.
 - No runtime route wiring, dashboard mutation, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs were added.
+
+## Phase 8.5 - Database Types Update / Generated Type Alignment
+
+- Updated src/types/database.ts with Career System table contracts matching migration 0007.
+- Added row/insert/update aliases for job applications, application events, networking contacts, networking interactions, referrals, resume versions, resume bullets, and interviews.
+- Boundary: no runtime route wiring, dashboard mutation, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs were added.

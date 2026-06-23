@@ -1243,3 +1243,9 @@ Write impact:
 - Added supabase/migrations/0007_career_system_foundation.sql.
 - No TypeScript database types updated yet; that belongs to Phase 8.5.
 - No runtime UI code changed.
+
+## Phase 8.5 - Database Types Update / Generated Type Alignment
+
+- Updated src/types/database.ts.
+- Added Career System database table typings and row/insert/update aliases.
+- Runtime UI code unchanged.

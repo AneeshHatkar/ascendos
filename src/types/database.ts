@@ -6,6 +6,133 @@ export type Json =
   | { [key: string]: Json | undefined }
   | Json[];
 
+type CareerSourceFields = {
+  metadata: Json;
+  source_ai_action_id: string | null;
+  source_chat_message_id: string | null;
+  created_at: string;
+};
+
+type CareerUpdatedSourceFields = CareerSourceFields & {
+  updated_at: string;
+};
+
+type CareerResumeVersionRow = CareerUpdatedSourceFields & {
+  id: string;
+  user_id: string;
+  name: string;
+  target_role: string | null;
+  target_company: string | null;
+  target_domain: string | null;
+  file_url: string | null;
+  status: string;
+  keywords: string[];
+  notes: string | null;
+};
+
+type CareerNetworkingContactRow = CareerUpdatedSourceFields & {
+  id: string;
+  user_id: string;
+  full_name: string;
+  company: string | null;
+  role_title: string | null;
+  email: string | null;
+  linkedin_url: string | null;
+  relationship_type: string;
+  relationship_strength: string;
+  status: string;
+  last_contacted_at: string | null;
+  next_follow_up_at: string | null;
+  notes: string | null;
+};
+
+type CareerJobApplicationRow = CareerUpdatedSourceFields & {
+  id: string;
+  user_id: string;
+  company: string;
+  role_title: string;
+  job_url: string | null;
+  location: string | null;
+  work_mode: string;
+  employment_type: string;
+  sponsorship_status: string;
+  source: string | null;
+  status: string;
+  priority: string;
+  applied_at: string | null;
+  follow_up_at: string | null;
+  deadline_at: string | null;
+  resume_version_id: string | null;
+  networking_contact_id: string | null;
+  goal_id: string | null;
+  task_id: string | null;
+  notes: string | null;
+};
+
+type CareerJobApplicationEventRow = CareerSourceFields & {
+  id: string;
+  user_id: string;
+  job_application_id: string;
+  event_type: string;
+  title: string;
+  description: string | null;
+  occurred_at: string;
+};
+
+type CareerNetworkingInteractionRow = CareerSourceFields & {
+  id: string;
+  user_id: string;
+  networking_contact_id: string;
+  job_application_id: string | null;
+  interaction_type: string;
+  title: string;
+  description: string | null;
+  occurred_at: string;
+  follow_up_at: string | null;
+};
+
+type CareerJobReferralRow = CareerUpdatedSourceFields & {
+  id: string;
+  user_id: string;
+  networking_contact_id: string | null;
+  job_application_id: string | null;
+  status: string;
+  requested_at: string | null;
+  confirmed_at: string | null;
+  follow_up_at: string | null;
+  notes: string | null;
+};
+
+type CareerResumeBulletRow = CareerUpdatedSourceFields & {
+  id: string;
+  user_id: string;
+  resume_version_id: string;
+  bullet_text: string;
+  section: string;
+  skill_tags: string[];
+  metric_claim: string | null;
+  proof_item_id: string | null;
+  goal_id: string | null;
+  task_id: string | null;
+};
+
+type CareerInterviewRow = CareerUpdatedSourceFields & {
+  id: string;
+  user_id: string;
+  job_application_id: string | null;
+  company: string | null;
+  role_title: string | null;
+  round_type: string;
+  status: string;
+  scheduled_at: string | null;
+  completed_at: string | null;
+  interviewer_names: string[];
+  prep_notes: string | null;
+  performance_notes: string | null;
+  follow_up_at: string | null;
+  outcome: string;
+};
+
 export type Database = {
   public: {
     Tables: {
@@ -956,7 +1083,71 @@ export type Database = {
           },
         ];
       };
+      resume_bullets: {
+        Row: CareerResumeBulletRow;
+        Insert: Partial<CareerResumeBulletRow> & {
+          user_id: string;
+          resume_version_id: string;
+          bullet_text: string;
+        };
+        Update: Partial<CareerResumeBulletRow>;
+        Relationships: [];
+      };
+      interviews: {
+        Row: CareerInterviewRow;
+        Insert: Partial<CareerInterviewRow> & { user_id: string };
+        Update: Partial<CareerInterviewRow>;
+        Relationships: [];
+      };
+      resume_versions: {
+        Row: CareerResumeVersionRow;
+        Insert: Partial<CareerResumeVersionRow> & { user_id: string; name: string };
+        Update: Partial<CareerResumeVersionRow>;
+        Relationships: [];
+      };
+
+      job_applications: {
+        Row: CareerJobApplicationRow;
+        Insert: Partial<CareerJobApplicationRow> & { user_id: string; company: string; role_title: string };
+        Update: Partial<CareerJobApplicationRow>;
+        Relationships: [];
+      };
+      job_application_events: {
+        Row: CareerJobApplicationEventRow;
+        Insert: Partial<CareerJobApplicationEventRow> & {
+          user_id: string;
+          job_application_id: string;
+          event_type: string;
+          title: string;
+        };
+        Update: Partial<CareerJobApplicationEventRow>;
+        Relationships: [];
+      };
+
+      networking_interactions: {
+        Row: CareerNetworkingInteractionRow;
+        Insert: Partial<CareerNetworkingInteractionRow> & {
+          user_id: string;
+          networking_contact_id: string;
+          title: string;
+        };
+        Update: Partial<CareerNetworkingInteractionRow>;
+        Relationships: [];
+      };
+      job_referrals: {
+        Row: CareerJobReferralRow;
+        Insert: Partial<CareerJobReferralRow> & { user_id: string };
+        Update: Partial<CareerJobReferralRow>;
+        Relationships: [];
+      };
+      networking_contacts: {
+        Row: CareerNetworkingContactRow;
+        Insert: Partial<CareerNetworkingContactRow> & { user_id: string; full_name: string };
+        Update: Partial<CareerNetworkingContactRow>;
+        Relationships: [];
+      };
     };
+
     Views: Record<string, never>;
     Functions: Record<string, never>;
     Enums: Record<string, never>;
@@ -1013,3 +1204,35 @@ export type TaskUpdate = Tables["tasks"]["Update"];
 export type EventRow = Tables["events"]["Row"];
 export type EventInsert = Tables["events"]["Insert"];
 export type EventUpdate = Tables["events"]["Update"];
+
+export type ResumeVersionRow = Tables["resume_versions"]["Row"];
+export type ResumeVersionInsert = Tables["resume_versions"]["Insert"];
+export type ResumeVersionUpdate = Tables["resume_versions"]["Update"];
+
+export type NetworkingContactRow = Tables["networking_contacts"]["Row"];
+export type NetworkingContactInsert = Tables["networking_contacts"]["Insert"];
+export type NetworkingContactUpdate = Tables["networking_contacts"]["Update"];
+
+export type JobApplicationRow = Tables["job_applications"]["Row"];
+export type JobApplicationInsert = Tables["job_applications"]["Insert"];
+export type JobApplicationUpdate = Tables["job_applications"]["Update"];
+
+export type JobApplicationEventRow = Tables["job_application_events"]["Row"];
+export type JobApplicationEventInsert = Tables["job_application_events"]["Insert"];
+export type JobApplicationEventUpdate = Tables["job_application_events"]["Update"];
+
+export type NetworkingInteractionRow = Tables["networking_interactions"]["Row"];
+export type NetworkingInteractionInsert = Tables["networking_interactions"]["Insert"];
+export type NetworkingInteractionUpdate = Tables["networking_interactions"]["Update"];
+
+export type JobReferralRow = Tables["job_referrals"]["Row"];
+export type JobReferralInsert = Tables["job_referrals"]["Insert"];
+export type JobReferralUpdate = Tables["job_referrals"]["Update"];
+
+export type ResumeBulletRow = Tables["resume_bullets"]["Row"];
+export type ResumeBulletInsert = Tables["resume_bullets"]["Insert"];
+export type ResumeBulletUpdate = Tables["resume_bullets"]["Update"];
+
+export type InterviewRow = Tables["interviews"]["Row"];
+export type InterviewInsert = Tables["interviews"]["Insert"];
+export type InterviewUpdate = Tables["interviews"]["Update"];

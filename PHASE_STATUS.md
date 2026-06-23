@@ -609,3 +609,11 @@ Status: Complete.
 Boundary: additive SQL migration only; no route wiring, dashboard mutation, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs added.
 
 Next step: Phase 8.5 Database types update / generated type alignment.
+
+## Phase 8.5 - Database Types Update / Generated Type Alignment
+
+Status: Complete.
+
+Boundary: type alignment only; no route wiring, dashboard mutation, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs added.
+
+Next step: Phase 8.6 Career read repository helpers.

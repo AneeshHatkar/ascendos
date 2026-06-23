@@ -346,3 +346,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 ## Phase 8.4 - Additive Career SQL Migration
 
 - Added the additive Career System SQL migration with applications, events, networking, referrals, resume, and interview tables.
+
+## Phase 8.5 - Database Types Update / Generated Type Alignment
+
+- Added TypeScript database contracts for the Phase 8 Career System SQL tables.
