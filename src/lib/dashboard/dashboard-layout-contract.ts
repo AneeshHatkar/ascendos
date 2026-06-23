@@ -6,7 +6,11 @@ export type DashboardSurface =
   | "calendar"
   | "goals"
   | "proof"
-  | "carnos";
+  | "carnos"
+  | "career"
+  | "networking"
+  | "resume"
+  | "interviews";
 
 export type DashboardCardRegion =
   | "hero"
