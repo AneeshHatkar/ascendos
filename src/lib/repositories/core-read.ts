@@ -8,7 +8,15 @@ import type {
   EventRow,
   GoalMilestoneRow,
   GoalRow,
+  JobApplicationEventRow,
+  JobApplicationRow,
+  JobReferralRow,
+  NetworkingContactRow,
+  NetworkingInteractionRow,
   ProofItemRow,
+  ResumeBulletRow,
+  ResumeVersionRow,
+  InterviewRow,
   TaskRow,
 } from "@/types/database";
 
@@ -360,6 +368,338 @@ export async function listEvents(
 
     if (options.domain) {
       query = query.eq("domain", options.domain);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listJobApplications(
+  userId: string,
+  options: {
+    status?: JobApplicationRow["status"];
+    priority?: JobApplicationRow["priority"];
+    company?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<JobApplicationRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("job_applications")
+      .select("*")
+      .eq("user_id", userId)
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.priority) {
+      query = query.eq("priority", options.priority);
+    }
+
+    if (options.company) {
+      query = query.eq("company", options.company);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listJobApplicationEvents(
+  userId: string,
+  options: {
+    jobApplicationId?: string;
+    eventType?: JobApplicationEventRow["event_type"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<JobApplicationEventRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("job_application_events")
+      .select("*")
+      .eq("user_id", userId)
+      .order("occurred_at", { ascending: false })
+      .limit(limit);
+
+    if (options.jobApplicationId) {
+      query = query.eq("job_application_id", options.jobApplicationId);
+    }
+
+    if (options.eventType) {
+      query = query.eq("event_type", options.eventType);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listNetworkingContacts(
+  userId: string,
+  options: {
+    status?: NetworkingContactRow["status"];
+    company?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<NetworkingContactRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("networking_contacts")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.company) {
+      query = query.eq("company", options.company);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listNetworkingInteractions(
+  userId: string,
+  options: {
+    networkingContactId?: string;
+    jobApplicationId?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<NetworkingInteractionRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("networking_interactions")
+      .select("*")
+      .eq("user_id", userId)
+      .order("occurred_at", { ascending: false })
+      .limit(limit);
+
+    if (options.networkingContactId) {
+      query = query.eq("networking_contact_id", options.networkingContactId);
+    }
+
+    if (options.jobApplicationId) {
+      query = query.eq("job_application_id", options.jobApplicationId);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listJobReferrals(
+  userId: string,
+  options: {
+    status?: JobReferralRow["status"];
+    networkingContactId?: string;
+    jobApplicationId?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<JobReferralRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("job_referrals")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.networkingContactId) {
+      query = query.eq("networking_contact_id", options.networkingContactId);
+    }
+
+    if (options.jobApplicationId) {
+      query = query.eq("job_application_id", options.jobApplicationId);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listResumeVersions(
+  userId: string,
+  options: {
+    status?: ResumeVersionRow["status"];
+    targetRole?: string;
+    targetCompany?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ResumeVersionRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("resume_versions")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.targetRole) {
+      query = query.eq("target_role", options.targetRole);
+    }
+
+    if (options.targetCompany) {
+      query = query.eq("target_company", options.targetCompany);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listResumeBullets(
+  userId: string,
+  options: {
+    resumeVersionId?: string;
+    section?: ResumeBulletRow["section"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ResumeBulletRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("resume_bullets")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.resumeVersionId) {
+      query = query.eq("resume_version_id", options.resumeVersionId);
+    }
+
+    if (options.section) {
+      query = query.eq("section", options.section);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listInterviews(
+  userId: string,
+  options: {
+    status?: InterviewRow["status"];
+    jobApplicationId?: string;
+    outcome?: InterviewRow["outcome"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<InterviewRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("interviews")
+      .select("*")
+      .eq("user_id", userId)
+      .order("scheduled_at", { ascending: false, nullsFirst: false })
+      .limit(limit);
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.jobApplicationId) {
+      query = query.eq("job_application_id", options.jobApplicationId);
+    }
+
+    if (options.outcome) {
+      query = query.eq("outcome", options.outcome);
     }
 
     const { data, error } = await query;
