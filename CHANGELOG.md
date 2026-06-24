@@ -449,3 +449,14 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ### Notes
 - No write helpers added.
 - No dashboard UI changed.
+
+## 2026-06-24 — Phase 9 Chunk F Aggregation and Registry
+
+### Added
+- Dashboard cards for Phase 9 learning and project surfaces.
+- Learning/project aggregation helper for dashboard-ready summary data.
+- Shared learning/project summary panel UI primitive.
+
+### Notes
+- No `/learning` or `/projects` route implementation changed yet.
+- No write behavior added.

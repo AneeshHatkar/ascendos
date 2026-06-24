@@ -1985,3 +1985,24 @@ Purpose:
 ### Result
 - Phase 9 SQL tables now have typed read access.
 - Next chunk: Chunk F — dashboard aggregation, registry extension, and shared UI primitives.
+
+## 2026-06-24 — Phase 9 Chunk F Aggregation, Registry, and Shared UI Primitives
+
+### Scope
+- Added Phase 9 dashboard cards for learning and projects.
+- Added learning/projects to the dashboard surface contract.
+- Added Phase 9 learning/project dashboard aggregation helper.
+- Added a reusable learning/project summary panel primitive.
+- No route-level dashboard pages changed yet.
+
+### Files
+- `src/lib/dashboard/dashboard-layout-contract.ts`
+- `src/lib/dashboard/dashboard-card-registry.ts`
+- `src/lib/dashboard/learning-project-dashboard-data-helpers.ts`
+- `src/lib/dashboard/index.ts`
+- `src/components/dashboard/learning-project-summary-panel.tsx`
+- `src/components/dashboard/index.ts`
+
+### Result
+- Phase 9 has dashboard-ready registry cards, aggregation helpers, and reusable UI primitives.
+- Next chunk: Chunk G — Learning Academy dashboard and `/learning` route.

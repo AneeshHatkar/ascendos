@@ -1333,3 +1333,23 @@ Purpose: Adds read-only, user-scoped repository helpers for Phase 9 Learning / P
 
 ### `PROJECT_EXECUTION_LOG.md`
 Change: Added Phase 9 Chunk E read helper entry.
+
+## Phase 9 Chunk F — Aggregation, Registry, and Shared UI Primitives
+
+### `src/lib/dashboard/dashboard-layout-contract.ts`
+Purpose: Extends supported dashboard surfaces to include Phase 9 learning and projects.
+
+### `src/lib/dashboard/dashboard-card-registry.ts`
+Purpose: Adds Phase 9 dashboard cards for learning mastery and project shipping surfaces.
+
+### `src/lib/dashboard/learning-project-dashboard-data-helpers.ts`
+Purpose: Aggregates Phase 9 learning/project read-helper data into dashboard summaries.
+
+### `src/components/dashboard/learning-project-summary-panel.tsx`
+Purpose: Adds shared UI primitive for Phase 9 summary metric panels.
+
+### `src/lib/dashboard/index.ts`
+Change: Exports Phase 9 aggregation helpers.
+
+### `src/components/dashboard/index.ts`
+Change: Exports Phase 9 shared UI primitive.
