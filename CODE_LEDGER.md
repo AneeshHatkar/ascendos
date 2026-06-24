@@ -1317,3 +1317,11 @@ Purpose: Replaces Phase 9 insert/update policies with stricter parent ownership 
 
 ### `PROJECT_EXECUTION_LOG.md`
 Change: Added Phase 9 Chunk C.1 hardening entry.
+
+## Phase 9 Chunk D — Database Types
+
+### `src/types/database.ts`
+Purpose: Adds Phase 9 Learning / Project System table definitions and exported row/insert/update aliases.
+
+### `PROJECT_EXECUTION_LOG.md`
+Change: Added Phase 9 Chunk D database types entry.

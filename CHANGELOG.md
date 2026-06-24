@@ -429,3 +429,13 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ### Notes
 - No TypeScript database types changed yet.
 - This hardening was added before moving to database type updates.
+
+## 2026-06-24 — Phase 9 Chunk D Database Types
+
+### Added
+- TypeScript database table definitions for Phase 9 learning/project tables.
+- Exported row, insert, and update aliases for Phase 9 records.
+
+### Notes
+- No read helpers added yet.
+- No dashboard UI changed yet.

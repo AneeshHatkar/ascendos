@@ -1957,3 +1957,17 @@ Purpose:
 ### Result
 - Phase 9 child writes are hardened before database types and read helpers are added.
 - Next chunk: Chunk D — database types update.
+
+## 2026-06-24 — Phase 9 Chunk D Database Types
+
+### Scope
+- Updated database type definitions for Phase 9 Learning / Project System tables.
+- Added row aliases for skill paths, skills, prerequisites, learning sessions, quizzes, quiz attempts, projects, milestones, bugs, tests, releases, links, and skill progress.
+- No read helpers or UI changed yet.
+
+### Files
+- `src/types/database.ts`
+
+### Result
+- TypeScript can now reference Phase 9 SQL-backed tables.
+- Next chunk: Chunk E — learning/project read helpers.
