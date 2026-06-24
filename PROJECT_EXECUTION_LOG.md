@@ -1909,3 +1909,21 @@ Purpose:
 - Phase 9 scope is locked as 28 requirement steps executed through 12 safe chunks.
 - `/learning`, `/projects`, and `/knowledge` are confirmed as Phase 9 route surfaces.
 - Next chunk: Chunk B — schema design and source-to-scope traceability.
+
+## 2026-06-24 — Phase 9 Chunk B Schema Design and Traceability
+
+### Scope
+- Added Phase 9 learning/project schema design.
+- Added source-to-scope traceability matrix.
+- Preserved the 28-step checklist while mapping execution to 12 chunks.
+- No SQL migration created yet.
+- No application code changed.
+
+### Files
+- `docs/database/PHASE_9_LEARNING_PROJECT_SCHEMA_DESIGN.md`
+- `docs/phase-reports/PHASE_9_SOURCE_TO_SCOPE_TRACEABILITY.md`
+
+### Result
+- Phase 9 schema is designed before migration.
+- Source requirements are mapped to expected implementation files and chunks.
+- Next chunk: Chunk C — SQL migration `0008_learning_project_system_foundation.sql`.

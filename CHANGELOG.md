@@ -396,3 +396,14 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No application code changed.
 - No SQL migration added yet.
 - No dashboard route rewrites added yet.
+
+## 2026-06-24 — Phase 9 Chunk B Schema Design
+
+### Added
+- Phase 9 Learning / Project System schema design.
+- Phase 9 source-to-scope traceability matrix.
+
+### Notes
+- No SQL migration added yet.
+- No app source code changed.
+- Next step is SQL migration design implementation in `0008_learning_project_system_foundation.sql`.

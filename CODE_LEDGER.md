@@ -1290,3 +1290,14 @@ Purpose: Locks Phase 9 as 28 requirement steps executed through 12 safe implemen
 
 ### `PROJECT_EXECUTION_LOG.md`
 Change: Added Phase 9 Chunk A start entry.
+
+## Phase 9 Chunk B — Schema Design and Traceability
+
+### `docs/database/PHASE_9_LEARNING_PROJECT_SCHEMA_DESIGN.md`
+Purpose: Defines the planned Phase 9 SQL tables, relationships, indexes, RLS expectations, cross-domain links, and non-goals.
+
+### `docs/phase-reports/PHASE_9_SOURCE_TO_SCOPE_TRACEABILITY.md`
+Purpose: Maps Phase 9 source-of-truth requirements to planned implementation files and safe execution chunks.
+
+### `PROJECT_EXECUTION_LOG.md`
+Change: Added Phase 9 Chunk B execution entry.
