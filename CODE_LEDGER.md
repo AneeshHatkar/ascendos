@@ -1271,3 +1271,11 @@ Change: Added Phase 8 complete marker.
 Change: Added Phase 8 completion changelog entry.
 
 Phase 8 Career System Complete marker for final audit closeout.
+
+## Phase 1–8 Retrospective Gap Audit
+
+### `docs/phase-reports/PHASE_1_8_RETROSPECTIVE_GAP_AUDIT.md`
+Purpose: Post-Phase-8 audit artifact documenting completed scope, deferred scope, known risks, and Phase 9 guardrails.
+
+### `PROJECT_EXECUTION_LOG.md`
+Change: Added retrospective audit entry.

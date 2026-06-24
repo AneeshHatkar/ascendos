@@ -376,3 +376,11 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 - No background jobs.
 
 Phase 8.24 closeout marker: Phase 8 Career System Complete.
+
+## 2026-06-24 — Phase 1–8 Retrospective Gap Audit
+
+### Added
+- Post-Phase-8 retrospective gap audit.
+- Documented completed Phase 1–8 scope.
+- Documented deferred v1 scope.
+- Documented risks and Phase 9 guardrails.
