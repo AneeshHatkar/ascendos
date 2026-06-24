@@ -1893,3 +1893,19 @@ Purpose:
 ### Next
 - Commit retrospective audit.
 - Begin Phase 9 — Learning / Project System.
+
+## 2026-06-24 — Phase 9 Chunk A Started
+
+### Scope
+- Started Phase 9 — Learning / Project System.
+- Chunk A covers source-of-truth inspection, route inspection, and Phase 9 plan lock.
+- No application code changed in this chunk.
+
+### Files
+- `docs/phase-reports/PHASE_9_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
+- `docs/phase-plans/PHASE_9_LEARNING_PROJECT_SYSTEM.md`
+
+### Result
+- Phase 9 scope is locked as 28 requirement steps executed through 12 safe chunks.
+- `/learning`, `/projects`, and `/knowledge` are confirmed as Phase 9 route surfaces.
+- Next chunk: Chunk B — schema design and source-to-scope traceability.

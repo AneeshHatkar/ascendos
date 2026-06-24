@@ -384,3 +384,15 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - Documented completed Phase 1–8 scope.
 - Documented deferred v1 scope.
 - Documented risks and Phase 9 guardrails.
+
+## 2026-06-24 — Phase 9 Chunk A Plan Lock
+
+### Added
+- Phase 9 Learning / Project System plan.
+- Phase 9 source and route inspection report.
+- Locked 28 Phase 9 requirement steps into 12 safe execution chunks.
+
+### Notes
+- No application code changed.
+- No SQL migration added yet.
+- No dashboard route rewrites added yet.

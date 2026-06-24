@@ -1279,3 +1279,14 @@ Purpose: Post-Phase-8 audit artifact documenting completed scope, deferred scope
 
 ### `PROJECT_EXECUTION_LOG.md`
 Change: Added retrospective audit entry.
+
+## Phase 9 Chunk A — Source and Route Inspection
+
+### `docs/phase-reports/PHASE_9_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
+Purpose: Records the Phase 9 source-of-truth scope, existing routes, existing repo foundations, migrations, audits, and non-goals before implementation.
+
+### `docs/phase-plans/PHASE_9_LEARNING_PROJECT_SYSTEM.md`
+Purpose: Locks Phase 9 as 28 requirement steps executed through 12 safe implementation chunks.
+
+### `PROJECT_EXECUTION_LOG.md`
+Change: Added Phase 9 Chunk A start entry.
