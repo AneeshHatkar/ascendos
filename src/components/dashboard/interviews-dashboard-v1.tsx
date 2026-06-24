@@ -7,6 +7,7 @@ import {
 import type { InterviewRow } from "@/types/database";
 import { CareerCrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
 import { CareerProposedActionVisibilityPanel } from "@/components/dashboard/career-proposed-action-visibility-panel";
+import { CareerStateBoundaryPanel } from "@/components/dashboard/career-state-boundary-panel";
 
 interface InterviewsDashboardV1Props {
   interviews: InterviewRow[];
@@ -199,6 +200,8 @@ export function InterviewsDashboardV1({
       </SectionCard>
 
       <CareerProposedActionVisibilityPanel />
+
+      <CareerStateBoundaryPanel surface="interviews" />
 
       <SectionCard
         title="Interview boundary"

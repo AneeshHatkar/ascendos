@@ -11,6 +11,7 @@ import type {
 } from "@/types/database";
 import { CareerCrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
 import { CareerProposedActionVisibilityPanel } from "@/components/dashboard/career-proposed-action-visibility-panel";
+import { CareerStateBoundaryPanel } from "@/components/dashboard/career-state-boundary-panel";
 
 interface NetworkingDashboardV1Props {
   contacts: NetworkingContactRow[];
@@ -257,6 +258,8 @@ export function NetworkingDashboardV1({
       </SectionCard>
 
       <CareerProposedActionVisibilityPanel />
+
+      <CareerStateBoundaryPanel surface="networking" />
 
       <SectionCard
         title="Networking boundary"
