@@ -1301,3 +1301,11 @@ Purpose: Maps Phase 9 source-of-truth requirements to planned implementation fil
 
 ### `PROJECT_EXECUTION_LOG.md`
 Change: Added Phase 9 Chunk B execution entry.
+
+## Phase 9 Chunk C — SQL Migration
+
+### `supabase/migrations/0008_learning_project_system_foundation.sql`
+Purpose: Adds the Phase 9 Learning / Project System SQL foundation, including learning paths, skills, sessions, quizzes, projects, milestones, bugs, tests, releases, links, RLS policies, and indexes.
+
+### `PROJECT_EXECUTION_LOG.md`
+Change: Added Phase 9 Chunk C SQL migration entry.

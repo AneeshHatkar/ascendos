@@ -407,3 +407,15 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No SQL migration added yet.
 - No app source code changed.
 - Next step is SQL migration design implementation in `0008_learning_project_system_foundation.sql`.
+
+## 2026-06-24 — Phase 9 Chunk C SQL Migration
+
+### Added
+- Phase 9 Learning / Project System SQL migration.
+- Learning tables for skill paths, skills, prerequisites, progress, sessions, quizzes, and quiz attempts.
+- Project tables for projects, milestones, bugs, tests, releases, and links.
+- RLS, user ownership, policies, and indexes for the Phase 9 tables.
+
+### Notes
+- TypeScript database types are not updated yet.
+- No dashboard UI changed yet.

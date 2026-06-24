@@ -1927,3 +1927,18 @@ Purpose:
 - Phase 9 schema is designed before migration.
 - Source requirements are mapped to expected implementation files and chunks.
 - Next chunk: Chunk C — SQL migration `0008_learning_project_system_foundation.sql`.
+
+## 2026-06-24 — Phase 9 Chunk C SQL Migration
+
+### Scope
+- Added Phase 9 SQL migration foundation.
+- Created learning/project tables for skill paths, skills, prerequisites, progress, learning sessions, quizzes, quiz attempts, projects, milestones, bugs, tests, releases, and links.
+- Added user ownership, RLS, policies, and indexes.
+- No TypeScript database types updated yet.
+
+### Files
+- `supabase/migrations/0008_learning_project_system_foundation.sql`
+
+### Result
+- Phase 9 persistent SQL foundation is ready for migration validation.
+- Next chunk: Chunk D — database types update.
