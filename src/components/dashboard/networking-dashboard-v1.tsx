@@ -10,6 +10,7 @@ import type {
   NetworkingInteractionRow,
 } from "@/types/database";
 import { CareerCrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
+import { CareerProposedActionVisibilityPanel } from "@/components/dashboard/career-proposed-action-visibility-panel";
 
 interface NetworkingDashboardV1Props {
   contacts: NetworkingContactRow[];
@@ -254,6 +255,8 @@ export function NetworkingDashboardV1({
       >
         <ReferralList referrals={referrals} />
       </SectionCard>
+
+      <CareerProposedActionVisibilityPanel />
 
       <SectionCard
         title="Networking boundary"

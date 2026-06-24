@@ -24,6 +24,7 @@ import type {
 } from "@/types/database";
 import { CareerCrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
 import { CareerEvidenceLinkagePanel } from "@/components/dashboard/career-evidence-linkage-panel";
+import { CareerProposedActionVisibilityPanel } from "@/components/dashboard/career-proposed-action-visibility-panel";
 
 interface CareerDashboardV1Props {
   data: CareerDashboardDataResult;
@@ -364,6 +365,8 @@ export function CareerDashboardV1({
         proofItems={proofItems}
         dailyLogs={dailyLogs}
       />
+
+      <CareerProposedActionVisibilityPanel />
 
       <SectionCard
         title="Career boundary"

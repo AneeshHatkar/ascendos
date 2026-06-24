@@ -6,6 +6,7 @@ import {
 } from "@/components/dashboard";
 import type { InterviewRow } from "@/types/database";
 import { CareerCrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
+import { CareerProposedActionVisibilityPanel } from "@/components/dashboard/career-proposed-action-visibility-panel";
 
 interface InterviewsDashboardV1Props {
   interviews: InterviewRow[];
@@ -196,6 +197,8 @@ export function InterviewsDashboardV1({
           <MetricTile label="Linked applications" value={interviews.filter((item) => item.job_application_id).length} description="Interviews linked to applications." />
         </div>
       </SectionCard>
+
+      <CareerProposedActionVisibilityPanel />
 
       <SectionCard
         title="Interview boundary"

@@ -14,6 +14,7 @@ import type {
 } from "@/types/database";
 import { CareerCrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
 import { CareerEvidenceLinkagePanel } from "@/components/dashboard/career-evidence-linkage-panel";
+import { CareerProposedActionVisibilityPanel } from "@/components/dashboard/career-proposed-action-visibility-panel";
 
 interface ResumeDashboardV1Props {
   versions: ResumeVersionRow[];
@@ -196,6 +197,8 @@ export function ResumeDashboardV1({
         proofItems={proofItems}
         dailyLogs={dailyLogs}
       />
+
+      <CareerProposedActionVisibilityPanel />
 
       <SectionCard
         title="Resume boundary"

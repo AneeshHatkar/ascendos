@@ -20,3 +20,4 @@ export * from "./networking-dashboard-v1";
 export * from "./resume-dashboard-v1";
 export * from "./interviews-dashboard-v1";
 export * from "./career-evidence-linkage-panel";
+export * from "./career-proposed-action-visibility-panel";
