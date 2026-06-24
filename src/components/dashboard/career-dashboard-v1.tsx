@@ -77,20 +77,34 @@ function ApplicationList({ applications }: { applications: JobApplicationRow[] }
 
   return (
     <div className="grid gap-3">
-      {applications.slice(0, 6).map((item) => (
+      {applications.slice(0, 8).map((item) => (
         <div key={item.id} className="rounded-2xl border border-white/10 bg-black/20 p-4">
           <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-            <div>
+            <div className="min-w-0">
               <p className="text-sm font-semibold text-white">{item.role_title}</p>
               <p className="mt-1 text-sm text-slate-400">{item.company}</p>
-              <p className="mt-2 text-xs text-slate-500">
-                Applied: {formatDate(item.applied_at)} · Follow-up: {formatDate(item.follow_up_at)}
-              </p>
+              <div className="mt-3 grid gap-1 text-xs leading-5 text-slate-500 md:grid-cols-2">
+                <p>Applied: {formatDate(item.applied_at)}</p>
+                <p>Follow-up: {formatDate(item.follow_up_at)}</p>
+                <p>Deadline: {formatDate(item.deadline_at)}</p>
+                <p>Location: {item.location ?? "Not set"}</p>
+                <p>Resume version: {item.resume_version_id ?? "Not linked"}</p>
+                <p>Networking contact: {item.networking_contact_id ?? "Not linked"}</p>
+                <p>Source: {item.source ?? "Not set"}</p>
+                <p>Job URL: {item.job_url ? "Available" : "Not linked"}</p>
+              </div>
+              {item.notes ? (
+                <p className="mt-3 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-xs leading-5 text-slate-400">
+                  {item.notes}
+                </p>
+              ) : null}
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 md:justify-end">
               <StatusPill label={item.status} tone={statusTone(item.status)} />
               <StatusPill label={item.priority} tone="neutral" />
-              {item.work_mode ? <StatusPill label={item.work_mode} tone="info" /> : null}
+              <StatusPill label={item.work_mode} tone="info" />
+              <StatusPill label={item.employment_type} tone="neutral" />
+              <StatusPill label={item.sponsorship_status} tone="warning" />
             </div>
           </div>
         </div>
