@@ -1325,3 +1325,11 @@ Purpose: Adds Phase 9 Learning / Project System table definitions and exported r
 
 ### `PROJECT_EXECUTION_LOG.md`
 Change: Added Phase 9 Chunk D database types entry.
+
+## Phase 9 Chunk E — Learning and Project Read Helpers
+
+### `src/lib/repositories/core-read.ts`
+Purpose: Adds read-only, user-scoped repository helpers for Phase 9 Learning / Project System records.
+
+### `PROJECT_EXECUTION_LOG.md`
+Change: Added Phase 9 Chunk E read helper entry.

@@ -1971,3 +1971,17 @@ Purpose:
 ### Result
 - TypeScript can now reference Phase 9 SQL-backed tables.
 - Next chunk: Chunk E — learning/project read helpers.
+
+## 2026-06-24 — Phase 9 Chunk E Learning and Project Read Helpers
+
+### Scope
+- Added read-only repository helpers for Phase 9 learning and project tables.
+- Added user-scoped list functions for skill paths, skills, prerequisites, sessions, quizzes, quiz attempts, projects, milestones, bugs, tests, releases, links, and skill progress.
+- No writes, proposed actions, or dashboard UI changed.
+
+### Files
+- `src/lib/repositories/core-read.ts`
+
+### Result
+- Phase 9 SQL tables now have typed read access.
+- Next chunk: Chunk F — dashboard aggregation, registry extension, and shared UI primitives.

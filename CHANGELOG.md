@@ -439,3 +439,13 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ### Notes
 - No read helpers added yet.
 - No dashboard UI changed yet.
+
+## 2026-06-24 — Phase 9 Chunk E Read Helpers
+
+### Added
+- User-scoped read helpers for Phase 9 learning records.
+- User-scoped read helpers for Phase 9 project records.
+
+### Notes
+- No write helpers added.
+- No dashboard UI changed.

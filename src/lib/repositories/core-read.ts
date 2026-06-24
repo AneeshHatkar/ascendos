@@ -17,6 +17,19 @@ import type {
   ResumeBulletRow,
   ResumeVersionRow,
   InterviewRow,
+  LearningSessionRow,
+  ProjectBugRow,
+  ProjectLinkRow,
+  ProjectMilestoneRow,
+  ProjectReleaseRow,
+  ProjectRow,
+  ProjectTestRow,
+  QuizAttemptRow,
+  QuizRow,
+  SkillPathRow,
+  SkillPrerequisiteRow,
+  SkillProgressRow,
+  SkillRow,
   TaskRow,
 } from "@/types/database";
 
@@ -700,6 +713,609 @@ export async function listInterviews(
 
     if (options.outcome) {
       query = query.eq("outcome", options.outcome);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+
+export async function listSkillPaths(
+  userId: string,
+  options: {
+    status?: SkillPathRow["status"];
+    priority?: SkillPathRow["priority"];
+    domain?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<SkillPathRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("skill_paths")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.priority) {
+      query = query.eq("priority", options.priority);
+    }
+
+    if (options.domain) {
+      query = query.eq("domain", options.domain);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listSkills(
+  userId: string,
+  options: {
+    skillPathId?: string;
+    status?: SkillRow["status"];
+    category?: string;
+    priority?: SkillRow["priority"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<SkillRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("skills")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.skillPathId) {
+      query = query.eq("skill_path_id", options.skillPathId);
+    }
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.category) {
+      query = query.eq("category", options.category);
+    }
+
+    if (options.priority) {
+      query = query.eq("priority", options.priority);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listSkillPrerequisites(
+  userId: string,
+  options: {
+    skillId?: string;
+    prerequisiteSkillId?: string;
+    relationshipType?: SkillPrerequisiteRow["relationship_type"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<SkillPrerequisiteRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("skill_prerequisites")
+      .select("*")
+      .eq("user_id", userId)
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.skillId) {
+      query = query.eq("skill_id", options.skillId);
+    }
+
+    if (options.prerequisiteSkillId) {
+      query = query.eq("prerequisite_skill_id", options.prerequisiteSkillId);
+    }
+
+    if (options.relationshipType) {
+      query = query.eq("relationship_type", options.relationshipType);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listLearningSessions(
+  userId: string,
+  options: {
+    skillPathId?: string;
+    skillId?: string;
+    status?: LearningSessionRow["status"];
+    sessionType?: LearningSessionRow["session_type"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<LearningSessionRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("learning_sessions")
+      .select("*")
+      .eq("user_id", userId)
+      .order("started_at", { ascending: false, nullsFirst: false })
+      .limit(limit);
+
+    if (options.skillPathId) {
+      query = query.eq("skill_path_id", options.skillPathId);
+    }
+
+    if (options.skillId) {
+      query = query.eq("skill_id", options.skillId);
+    }
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.sessionType) {
+      query = query.eq("session_type", options.sessionType);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listQuizzes(
+  userId: string,
+  options: {
+    skillPathId?: string;
+    skillId?: string;
+    status?: QuizRow["status"];
+    quizType?: QuizRow["quiz_type"];
+    difficulty?: QuizRow["difficulty"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<QuizRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("quizzes")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.skillPathId) {
+      query = query.eq("skill_path_id", options.skillPathId);
+    }
+
+    if (options.skillId) {
+      query = query.eq("skill_id", options.skillId);
+    }
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.quizType) {
+      query = query.eq("quiz_type", options.quizType);
+    }
+
+    if (options.difficulty) {
+      query = query.eq("difficulty", options.difficulty);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listQuizAttempts(
+  userId: string,
+  options: {
+    quizId?: string;
+    skillId?: string;
+    learningSessionId?: string;
+    status?: QuizAttemptRow["status"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<QuizAttemptRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("quiz_attempts")
+      .select("*")
+      .eq("user_id", userId)
+      .order("attempted_at", { ascending: false })
+      .limit(limit);
+
+    if (options.quizId) {
+      query = query.eq("quiz_id", options.quizId);
+    }
+
+    if (options.skillId) {
+      query = query.eq("skill_id", options.skillId);
+    }
+
+    if (options.learningSessionId) {
+      query = query.eq("learning_session_id", options.learningSessionId);
+    }
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listProjects(
+  userId: string,
+  options: {
+    status?: ProjectRow["status"];
+    priority?: ProjectRow["priority"];
+    projectType?: ProjectRow["project_type"];
+    goalId?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ProjectRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("projects")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.priority) {
+      query = query.eq("priority", options.priority);
+    }
+
+    if (options.projectType) {
+      query = query.eq("project_type", options.projectType);
+    }
+
+    if (options.goalId) {
+      query = query.eq("goal_id", options.goalId);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listProjectMilestones(
+  userId: string,
+  options: {
+    projectId?: string;
+    status?: ProjectMilestoneRow["status"];
+    priority?: ProjectMilestoneRow["priority"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ProjectMilestoneRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("project_milestones")
+      .select("*")
+      .eq("user_id", userId)
+      .order("due_date", { ascending: true, nullsFirst: false })
+      .limit(limit);
+
+    if (options.projectId) {
+      query = query.eq("project_id", options.projectId);
+    }
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.priority) {
+      query = query.eq("priority", options.priority);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listProjectBugs(
+  userId: string,
+  options: {
+    projectId?: string;
+    status?: ProjectBugRow["status"];
+    severity?: ProjectBugRow["severity"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ProjectBugRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("project_bugs")
+      .select("*")
+      .eq("user_id", userId)
+      .order("opened_at", { ascending: false })
+      .limit(limit);
+
+    if (options.projectId) {
+      query = query.eq("project_id", options.projectId);
+    }
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.severity) {
+      query = query.eq("severity", options.severity);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listProjectTests(
+  userId: string,
+  options: {
+    projectId?: string;
+    status?: ProjectTestRow["status"];
+    testType?: ProjectTestRow["test_type"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ProjectTestRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("project_tests")
+      .select("*")
+      .eq("user_id", userId)
+      .order("run_at", { ascending: false, nullsFirst: false })
+      .limit(limit);
+
+    if (options.projectId) {
+      query = query.eq("project_id", options.projectId);
+    }
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.testType) {
+      query = query.eq("test_type", options.testType);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listProjectReleases(
+  userId: string,
+  options: {
+    projectId?: string;
+    status?: ProjectReleaseRow["status"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ProjectReleaseRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("project_releases")
+      .select("*")
+      .eq("user_id", userId)
+      .order("released_at", { ascending: false, nullsFirst: false })
+      .limit(limit);
+
+    if (options.projectId) {
+      query = query.eq("project_id", options.projectId);
+    }
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listProjectLinks(
+  userId: string,
+  options: {
+    projectId?: string;
+    linkType?: ProjectLinkRow["link_type"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ProjectLinkRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("project_links")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.projectId) {
+      query = query.eq("project_id", options.projectId);
+    }
+
+    if (options.linkType) {
+      query = query.eq("link_type", options.linkType);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listSkillProgress(
+  userId: string,
+  options: {
+    skillId?: string;
+    projectId?: string;
+    learningSessionId?: string;
+    quizAttemptId?: string;
+    status?: SkillProgressRow["status"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<SkillProgressRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("skill_progress")
+      .select("*")
+      .eq("user_id", userId)
+      .order("recorded_at", { ascending: false })
+      .limit(limit);
+
+    if (options.skillId) {
+      query = query.eq("skill_id", options.skillId);
+    }
+
+    if (options.projectId) {
+      query = query.eq("project_id", options.projectId);
+    }
+
+    if (options.learningSessionId) {
+      query = query.eq("learning_session_id", options.learningSessionId);
+    }
+
+    if (options.quizAttemptId) {
+      query = query.eq("quiz_attempt_id", options.quizAttemptId);
+    }
+
+    if (options.status) {
+      query = query.eq("status", options.status);
     }
 
     const { data, error } = await query;
