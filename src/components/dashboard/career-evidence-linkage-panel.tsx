@@ -61,7 +61,7 @@ function linkedCount<T>(items: T[], selector: (item: T) => string | null): numbe
 }
 
 function idList(values: Array<string | null>): string[] {
-  return Array.from(new Set(values.filter((value): value is string => Boolean(value))));
+  return [...new Set(values.filter((value): value is string => Boolean(value)))];
 }
 
 function EvidenceSummary({

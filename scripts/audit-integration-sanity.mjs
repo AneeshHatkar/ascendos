@@ -376,6 +376,82 @@ for (const forbidden of [
 
 pass("Phase 6 proposed-action flow exists and UI card remains non-mutating");
 
+
+console.log("\n=== Integration sanity audit: Phase 8 career system surfaces ===");
+
+for (const file of [
+  "docs/phase-plans/PHASE_8_CAREER_SYSTEM.md",
+  "docs/phase-reports/PHASE_8_2_CAREER_INSPECTION_REPORT.md",
+  "docs/database/CAREER_SQL_SCHEMA_DESIGN.md",
+  "supabase/migrations/0007_career_system_foundation.sql",
+  "src/lib/dashboard/career-dashboard-data-helpers.ts",
+  "src/components/dashboard/career-dashboard-v1.tsx",
+  "src/components/dashboard/networking-dashboard-v1.tsx",
+  "src/components/dashboard/resume-dashboard-v1.tsx",
+  "src/components/dashboard/interviews-dashboard-v1.tsx",
+  "src/components/dashboard/career-evidence-linkage-panel.tsx",
+  "src/components/dashboard/career-proposed-action-visibility-panel.tsx",
+  "src/components/dashboard/career-state-boundary-panel.tsx",
+  "src/app/career/page.tsx",
+  "src/app/networking/page.tsx",
+  "src/app/resume/page.tsx",
+  "src/app/interviews/page.tsx",
+]) {
+  requireFile(file);
+}
+
+const phase8DashboardIndex = read("src/components/dashboard/index.ts");
+
+for (const marker of [
+  'export * from "./career-dashboard-v1";',
+  'export * from "./networking-dashboard-v1";',
+  'export * from "./resume-dashboard-v1";',
+  'export * from "./interviews-dashboard-v1";',
+  'export * from "./career-evidence-linkage-panel";',
+  'export * from "./career-proposed-action-visibility-panel";',
+  'export * from "./career-state-boundary-panel";',
+]) {
+  requireIncludes(phase8DashboardIndex, marker, `Phase 8 dashboard barrel contains ${marker}`);
+}
+
+const phase8DashboardRequirements = {
+  "src/components/dashboard/career-dashboard-v1.tsx": [
+    "CareerCrossDashboardLinks",
+    "CareerEvidenceLinkagePanel",
+    "CareerProposedActionVisibilityPanel",
+    "CareerStateBoundaryPanel",
+    "Career boundary",
+  ],
+  "src/components/dashboard/networking-dashboard-v1.tsx": [
+    "CareerCrossDashboardLinks",
+    "CareerProposedActionVisibilityPanel",
+    "CareerStateBoundaryPanel",
+    "Networking boundary",
+  ],
+  "src/components/dashboard/resume-dashboard-v1.tsx": [
+    "CareerCrossDashboardLinks",
+    "CareerEvidenceLinkagePanel",
+    "CareerProposedActionVisibilityPanel",
+    "CareerStateBoundaryPanel",
+    "Resume boundary",
+  ],
+  "src/components/dashboard/interviews-dashboard-v1.tsx": [
+    "CareerCrossDashboardLinks",
+    "CareerProposedActionVisibilityPanel",
+    "CareerStateBoundaryPanel",
+    "Interview boundary",
+  ],
+};
+
+for (const [file, markers] of Object.entries(phase8DashboardRequirements)) {
+  const content = read(file);
+  for (const marker of markers) {
+    requireIncludes(content, marker, `${file} includes Phase 8 marker ${marker}`);
+  }
+}
+
+pass("Phase 8 career system surfaces are present in integration sanity audit");
+
 console.log("\n=== Integration sanity audit: protected boundaries ===");
 
 const boundaryFiles = [
