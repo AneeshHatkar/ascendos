@@ -11,6 +11,7 @@ import type { CareerDashboardDataResult } from "@/lib/dashboard";
 import { getDashboardCardsForSurface } from "@/lib/dashboard";
 import type {
   InterviewRow,
+  JobApplicationEventRow,
   JobApplicationRow,
   JobReferralRow,
   NetworkingContactRow,
@@ -20,6 +21,7 @@ import type {
 interface CareerDashboardV1Props {
   data: CareerDashboardDataResult;
   applications: JobApplicationRow[];
+  applicationEvents: JobApplicationEventRow[];
   interviews: InterviewRow[];
   referrals: JobReferralRow[];
   contacts: NetworkingContactRow[];
@@ -106,6 +108,51 @@ function ApplicationList({ applications }: { applications: JobApplicationRow[] }
               <StatusPill label={item.employment_type} tone="neutral" />
               <StatusPill label={item.sponsorship_status} tone="warning" />
             </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+
+function ApplicationEventList({ events }: { events: JobApplicationEventRow[] }) {
+  if (events.length === 0) {
+    return (
+      <EmptyState
+        title="No application events yet."
+        description="Status movement, recruiter responses, interviews, rejections, offers, and follow-ups will appear here after event records exist."
+      />
+    );
+  }
+
+  return (
+    <div className="mt-4 grid gap-3">
+      <div className="rounded-2xl border border-cyan-400/20 bg-cyan-400/5 p-4">
+        <p className="text-sm font-semibold text-cyan-100">Recent application movement</p>
+        <p className="mt-1 text-xs leading-5 text-cyan-100/70">
+          Read-only event timeline from job_application_events. This shows movement but does not execute follow-ups.
+        </p>
+      </div>
+
+      {events.slice(0, 8).map((item) => (
+        <div key={item.id} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+            <div>
+              <p className="text-sm font-semibold text-white">{item.title}</p>
+              <p className="mt-1 text-xs text-slate-500">
+                Event: {item.event_type} · Occurred: {formatDate(item.occurred_at)}
+              </p>
+              <p className="mt-1 text-xs text-slate-500">
+                Application: {item.job_application_id}
+              </p>
+              {item.description ? (
+                <p className="mt-3 rounded-xl border border-white/10 bg-black/20 p-3 text-xs leading-5 text-slate-400">
+                  {item.description}
+                </p>
+              ) : null}
+            </div>
+            <StatusPill label={item.event_type} tone={statusTone(item.event_type)} />
           </div>
         </div>
       ))}
@@ -226,6 +273,7 @@ function ReferralAndResumePanel({
 export function CareerDashboardV1({
   data,
   applications,
+  applicationEvents,
   interviews,
   referrals,
   contacts,
@@ -276,7 +324,10 @@ export function CareerDashboardV1({
         {cards.map((card) => (
           <OperatingDashboardCard key={card.id} card={card}>
             {card.id === "career-application-pipeline" ? (
-              <ApplicationList applications={applications} />
+              <div className="grid gap-4">
+                <ApplicationList applications={applications} />
+                <ApplicationEventList events={applicationEvents} />
+              </div>
             ) : card.id === "career-interview-readiness" ? (
               <InterviewList interviews={interviews} />
             ) : null}

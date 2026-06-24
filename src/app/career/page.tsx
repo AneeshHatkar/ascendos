@@ -5,6 +5,7 @@ import { AuthenticatedDashboardShell, CareerDashboardV1 } from "@/components/das
 import { getCareerDashboardDataSummary } from "@/lib/dashboard";
 import {
   listInterviews,
+  listJobApplicationEvents,
   listJobApplications,
   listJobReferrals,
   listNetworkingContacts,
@@ -18,9 +19,10 @@ export default function CareerPage() {
       description="Read-only career surface for job search, referrals, interviews, and career execution records."
     >
       {async ({ user }) => {
-        const [data, applications, interviews, referrals, contacts, resumes] = await Promise.all([
+        const [data, applications, applicationEvents, interviews, referrals, contacts, resumes] = await Promise.all([
           getCareerDashboardDataSummary(user.id),
           listJobApplications(user.id, { limit: 50 }),
+          listJobApplicationEvents(user.id, { limit: 50 }),
           listInterviews(user.id, { limit: 50 }),
           listJobReferrals(user.id, { limit: 50 }),
           listNetworkingContacts(user.id, { limit: 50 }),
@@ -29,6 +31,7 @@ export default function CareerPage() {
 
         const readErrors = [
           applications.error,
+          applicationEvents.error,
           interviews.error,
           referrals.error,
           contacts.error,
@@ -39,6 +42,7 @@ export default function CareerPage() {
           <CareerDashboardV1
             data={data}
             applications={applications.data ?? []}
+            applicationEvents={applicationEvents.data ?? []}
             interviews={interviews.data ?? []}
             referrals={referrals.data ?? []}
             contacts={contacts.data ?? []}
