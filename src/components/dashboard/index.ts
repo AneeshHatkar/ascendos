@@ -17,3 +17,4 @@ export * from "./carnos-panel-v1";
 export * from "./cross-dashboard-links";
 export * from "./career-dashboard-v1";
 export * from "./networking-dashboard-v1";
+export * from "./resume-dashboard-v1";
