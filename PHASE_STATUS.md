@@ -617,3 +617,32 @@ Status: Complete.
 Boundary: type alignment only; no route wiring, dashboard mutation, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs added.
 
 Next step: Phase 8.6 Career read repository helpers.
+
+## Phase 8 — Career System — COMPLETE
+
+### Status
+Complete.
+
+### Completed Scope
+- Career SQL foundation.
+- Career read repositories.
+- Career dashboards for `/career`, `/networking`, `/resume`, and `/interviews`.
+- Career cross-links.
+- Career evidence linkage.
+- Career proposed-action visibility with no direct execution.
+- Career empty/loading/error/privacy states.
+- Career audit gate.
+- Integration audit expansion.
+- Manual smoke checklist.
+- Phase 8 completion report.
+
+### Verification Gate
+- `npm run audit:phase8`
+- `npm run audit:integration`
+- `npm run check`
+- `npx tsc --noEmit`
+- `npm run lint`
+- `git diff --check`
+
+### Next Phase
+Phase 9 — Learning / Project System.

@@ -44,6 +44,8 @@ console.log("\n=== Phase 8 career files ===");
 const requiredFiles = [
   "docs/phase-plans/PHASE_8_CAREER_SYSTEM.md",
   "docs/phase-reports/PHASE_8_2_CAREER_INSPECTION_REPORT.md",
+  "docs/qa/PHASE_8_CAREER_MANUAL_SMOKE_CHECKLIST.md",
+  "docs/phase-reports/PHASE_8_CAREER_SYSTEM_COMPLETION_REPORT.md",
   "docs/database/CAREER_SQL_SCHEMA_DESIGN.md",
   "supabase/migrations/0007_career_system_foundation.sql",
   "src/lib/dashboard/career-dashboard-data-helpers.ts",
@@ -297,6 +299,44 @@ for (const marker of [
 ]) {
   requireIncludes(executionLog, marker, `Execution log includes ${marker}`);
   requireIncludes(phaseStatus, marker, `Phase status includes ${marker}`);
+}
+
+
+console.log("\n=== Phase 8 final closeout markers ===");
+
+const completionReport = fileText.get("docs/phase-reports/PHASE_8_CAREER_SYSTEM_COMPLETION_REPORT.md") ?? "";
+const manualChecklist = fileText.get("docs/qa/PHASE_8_CAREER_MANUAL_SMOKE_CHECKLIST.md") ?? "";
+const changelog = requireFile("CHANGELOG.md");
+const codeLedger = requireFile("CODE_LEDGER.md");
+
+for (const marker of [
+  "Phase 8 Completion Report",
+  "Career System",
+  "Verification gates",
+  "Deferred scope",
+  "Phase 9",
+]) {
+  requireIncludes(completionReport, marker, `Phase 8 completion report includes ${marker}`);
+}
+
+for (const marker of [
+  "Phase 8 Manual Smoke Checklist",
+  "/career",
+  "/networking",
+  "/resume",
+  "/interviews",
+  "Proposed-action visibility checks",
+  "Privacy and safety checks",
+]) {
+  requireIncludes(manualChecklist, marker, `Phase 8 manual smoke checklist includes ${marker}`);
+}
+
+for (const marker of [
+  "Phase 8 Career System Complete",
+  "Phase 8.24",
+]) {
+  requireIncludes(changelog, marker, `Changelog includes ${marker}`);
+  requireIncludes(codeLedger, marker, `Code ledger includes ${marker}`);
 }
 
 if (failures > 0) {

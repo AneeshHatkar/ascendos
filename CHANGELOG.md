@@ -350,3 +350,29 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 ## Phase 8.5 - Database Types Update / Generated Type Alignment
 
 - Added TypeScript database contracts for the Phase 8 Career System SQL tables.
+
+## 2026-06-24 — Phase 8 Career System Complete
+
+### Added
+- Career SQL foundation.
+- Career read repositories.
+- Career dashboard aggregation.
+- `/career`, `/networking`, `/resume`, and `/interviews` dashboards.
+- Career cross-links.
+- Career evidence linkage.
+- Career proposed-action visibility.
+- Career state/privacy boundary.
+- Phase 8 audit gate.
+- Phase 8 integration audit expansion.
+- Phase 8 manual smoke checklist.
+- Phase 8 completion report.
+
+### Preserved
+- Read-only dashboard boundary.
+- Confirmation-first proposed-action law.
+- No autonomous applications/messages.
+- No scraping.
+- No Python/ML execution.
+- No background jobs.
+
+Phase 8.24 closeout marker: Phase 8 Career System Complete.

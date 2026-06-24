@@ -1249,3 +1249,25 @@ Write impact:
 - Updated src/types/database.ts.
 - Added Career System database table typings and row/insert/update aliases.
 - Runtime UI code unchanged.
+
+## Phase 8.24 — Career System Completion Closeout
+
+### `docs/phase-reports/PHASE_8_CAREER_SYSTEM_COMPLETION_REPORT.md`
+Purpose: Final Phase 8 completion report.
+
+### `docs/qa/PHASE_8_CAREER_MANUAL_SMOKE_CHECKLIST.md`
+Purpose: Manual browser QA checklist for career routes.
+
+### `scripts/audit-phase-8.mjs`
+Change: Expanded Phase 8 audit to require closeout documents.
+
+### `PROJECT_EXECUTION_LOG.md`
+Change: Added Phase 8.24 completion closeout entry.
+
+### `PHASE_STATUS.md`
+Change: Added Phase 8 complete marker.
+
+### `CHANGELOG.md`
+Change: Added Phase 8 completion changelog entry.
+
+Phase 8 Career System Complete marker for final audit closeout.
