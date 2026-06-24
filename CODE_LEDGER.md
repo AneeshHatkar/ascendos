@@ -1309,3 +1309,11 @@ Purpose: Adds the Phase 9 Learning / Project System SQL foundation, including le
 
 ### `PROJECT_EXECUTION_LOG.md`
 Change: Added Phase 9 Chunk C SQL migration entry.
+
+## Phase 9 Chunk C.1 — Parent Ownership Hardening
+
+### `supabase/migrations/0009_phase9_parent_ownership_guards.sql`
+Purpose: Replaces Phase 9 insert/update policies with stricter parent ownership checks so child rows cannot link to another user's parent records.
+
+### `PROJECT_EXECUTION_LOG.md`
+Change: Added Phase 9 Chunk C.1 hardening entry.

@@ -419,3 +419,13 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ### Notes
 - TypeScript database types are not updated yet.
 - No dashboard UI changed yet.
+
+## 2026-06-24 — Phase 9 Chunk C.1 Parent Ownership Hardening
+
+### Added
+- Parent ownership guard migration for Phase 9 learning/project tables.
+- Stricter insert/update policies for parent-linked learning and project records.
+
+### Notes
+- No TypeScript database types changed yet.
+- This hardening was added before moving to database type updates.

@@ -1942,3 +1942,18 @@ Purpose:
 ### Result
 - Phase 9 persistent SQL foundation is ready for migration validation.
 - Next chunk: Chunk D — database types update.
+
+## 2026-06-24 — Phase 9 Chunk C.1 Parent Ownership Hardening
+
+### Scope
+- Added Phase 9 parent ownership hardening migration after the initial SQL foundation.
+- Recreated insert/update RLS policies for Phase 9 tables so parent references must belong to the authenticated user.
+- Preserved Phase 9 SQL foundation from migration `0008`.
+- No TypeScript database types updated yet.
+
+### Files
+- `supabase/migrations/0009_phase9_parent_ownership_guards.sql`
+
+### Result
+- Phase 9 child writes are hardened before database types and read helpers are added.
+- Next chunk: Chunk D — database types update.
