@@ -4,12 +4,17 @@
 import { AuthenticatedDashboardShell, CareerDashboardV1 } from "@/components/dashboard";
 import { getCareerDashboardDataSummary } from "@/lib/dashboard";
 import {
+  listDailyLogs,
+  listGoals,
   listInterviews,
   listJobApplicationEvents,
   listJobApplications,
   listJobReferrals,
   listNetworkingContacts,
+  listProofItems,
+  listResumeBullets,
   listResumeVersions,
+  listTasks,
 } from "@/lib/repositories";
 
 export default function CareerPage() {
@@ -19,7 +24,20 @@ export default function CareerPage() {
       description="Read-only career surface for job search, referrals, interviews, and career execution records."
     >
       {async ({ user }) => {
-        const [data, applications, applicationEvents, interviews, referrals, contacts, resumes] = await Promise.all([
+        const [
+          data,
+          applications,
+          applicationEvents,
+          interviews,
+          referrals,
+          contacts,
+          resumes,
+          resumeBullets,
+          goals,
+          tasks,
+          proofItems,
+          dailyLogs,
+        ] = await Promise.all([
           getCareerDashboardDataSummary(user.id),
           listJobApplications(user.id, { limit: 50 }),
           listJobApplicationEvents(user.id, { limit: 50 }),
@@ -27,6 +45,11 @@ export default function CareerPage() {
           listJobReferrals(user.id, { limit: 50 }),
           listNetworkingContacts(user.id, { limit: 50 }),
           listResumeVersions(user.id, { limit: 50 }),
+          listResumeBullets(user.id, { limit: 100 }),
+          listGoals(user.id, { domain: "career", limit: 20 }),
+          listTasks(user.id, { domain: "career", limit: 20 }),
+          listProofItems(user.id, { domain: "career", limit: 20 }),
+          listDailyLogs(user.id, { limit: 20 }),
         ]);
 
         const readErrors = [
@@ -36,6 +59,11 @@ export default function CareerPage() {
           referrals.error,
           contacts.error,
           resumes.error,
+          resumeBullets.error,
+          goals.error,
+          tasks.error,
+          proofItems.error,
+          dailyLogs.error,
         ].filter((error): error is string => Boolean(error));
 
         return (
@@ -47,6 +75,11 @@ export default function CareerPage() {
             referrals={referrals.data ?? []}
             contacts={contacts.data ?? []}
             resumes={resumes.data ?? []}
+            resumeBullets={resumeBullets.data ?? []}
+            goals={goals.data ?? []}
+            tasks={tasks.data ?? []}
+            proofItems={proofItems.data ?? []}
+            dailyLogs={dailyLogs.data ?? []}
             readErrors={readErrors}
           />
         );

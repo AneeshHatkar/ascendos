@@ -15,9 +15,15 @@ import type {
   JobApplicationRow,
   JobReferralRow,
   NetworkingContactRow,
+  ResumeBulletRow,
   ResumeVersionRow,
+  GoalRow,
+  TaskRow,
+  ProofItemRow,
+  DailyLogRow,
 } from "@/types/database";
 import { CareerCrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
+import { CareerEvidenceLinkagePanel } from "@/components/dashboard/career-evidence-linkage-panel";
 
 interface CareerDashboardV1Props {
   data: CareerDashboardDataResult;
@@ -27,6 +33,11 @@ interface CareerDashboardV1Props {
   referrals: JobReferralRow[];
   contacts: NetworkingContactRow[];
   resumes: ResumeVersionRow[];
+  resumeBullets: ResumeBulletRow[];
+  goals: GoalRow[];
+  tasks: TaskRow[];
+  proofItems: ProofItemRow[];
+  dailyLogs: DailyLogRow[];
   readErrors?: string[];
 }
 
@@ -279,6 +290,11 @@ export function CareerDashboardV1({
   referrals,
   contacts,
   resumes,
+  resumeBullets,
+  goals,
+  tasks,
+  proofItems,
+  dailyLogs,
   readErrors = [],
 }: CareerDashboardV1Props) {
   const cards = getDashboardCardsForSurface("career");
@@ -339,6 +355,15 @@ export function CareerDashboardV1({
       </OperatingDashboardGrid>
 
       <ReferralAndResumePanel referrals={referrals} contacts={contacts} resumes={resumes} />
+
+      <CareerEvidenceLinkagePanel
+        applications={applications}
+        resumeBullets={resumeBullets}
+        goals={goals}
+        tasks={tasks}
+        proofItems={proofItems}
+        dailyLogs={dailyLogs}
+      />
 
       <SectionCard
         title="Career boundary"

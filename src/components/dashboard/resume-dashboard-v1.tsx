@@ -5,14 +5,23 @@ import {
   StatusPill,
 } from "@/components/dashboard";
 import type {
+  DailyLogRow,
+  GoalRow,
+  ProofItemRow,
   ResumeBulletRow,
   ResumeVersionRow,
+  TaskRow,
 } from "@/types/database";
 import { CareerCrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
+import { CareerEvidenceLinkagePanel } from "@/components/dashboard/career-evidence-linkage-panel";
 
 interface ResumeDashboardV1Props {
   versions: ResumeVersionRow[];
   bullets: ResumeBulletRow[];
+  goals: GoalRow[];
+  tasks: TaskRow[];
+  proofItems: ProofItemRow[];
+  dailyLogs: DailyLogRow[];
   readErrors?: string[];
 }
 
@@ -125,6 +134,10 @@ function ResumeBulletList({ bullets }: { bullets: ResumeBulletRow[] }) {
 export function ResumeDashboardV1({
   versions,
   bullets,
+  goals,
+  tasks,
+  proofItems,
+  dailyLogs,
   readErrors = [],
 }: ResumeDashboardV1Props) {
   const activeVersions = versions.filter((item) => item.status === "active" || item.status === "ready").length;
@@ -175,6 +188,14 @@ export function ResumeDashboardV1({
       >
         <ResumeBulletList bullets={bullets} />
       </SectionCard>
+
+      <CareerEvidenceLinkagePanel
+        resumeBullets={bullets}
+        goals={goals}
+        tasks={tasks}
+        proofItems={proofItems}
+        dailyLogs={dailyLogs}
+      />
 
       <SectionCard
         title="Resume boundary"
