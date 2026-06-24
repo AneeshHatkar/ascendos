@@ -36,16 +36,41 @@ const CORE_DASHBOARD_LINKS: CrossDashboardLink[] = [
   },
 ];
 
+const CAREER_DASHBOARD_LINKS: CrossDashboardLink[] = [
+  {
+    label: "Career",
+    route: "/career",
+    description: "Applications, interviews, referrals, resumes, and career pressure.",
+  },
+  {
+    label: "Networking",
+    route: "/networking",
+    description: "Contacts, interactions, referrals, and follow-up loops.",
+  },
+  {
+    label: "Resume",
+    route: "/resume",
+    description: "Resume versions, bullets, keywords, metrics, and proof links.",
+  },
+  {
+    label: "Interviews",
+    route: "/interviews",
+    description: "Rounds, prep notes, outcomes, schedules, and follow-up pressure.",
+  },
+];
+
 interface CrossDashboardLinksProps {
   activeRoute: CanonicalRoute;
   title?: string;
   description?: string;
+  links?: CrossDashboardLink[];
 }
 
 export function CrossDashboardLinks({
   activeRoute,
   title = "Core dashboard links",
   description = "Move between the Phase 7 operating surfaces without leaving the source-approved route map.",
+  links = CORE_DASHBOARD_LINKS,
 }: CrossDashboardLinksProps) {
   return (
     <section className="rounded-3xl border border-white/10 bg-white/[0.03] p-5 shadow-sm shadow-black/20">
@@ -57,8 +82,8 @@ export function CrossDashboardLinks({
         <p className="max-w-3xl text-sm leading-6 text-slate-400">{description}</p>
       </div>
 
-      <div className="mt-5 grid gap-3 md:grid-cols-5">
-        {CORE_DASHBOARD_LINKS.map((item) => {
+      <div className="mt-5 grid gap-3 md:grid-cols-4">
+        {links.map((item) => {
           const isActive = item.route === activeRoute;
 
           return (
@@ -81,5 +106,16 @@ export function CrossDashboardLinks({
         })}
       </div>
     </section>
+  );
+}
+
+export function CareerCrossDashboardLinks({ activeRoute }: { activeRoute: CanonicalRoute }) {
+  return (
+    <CrossDashboardLinks
+      activeRoute={activeRoute}
+      title="Career system links"
+      description="Move between the Phase 8 career surfaces: applications, networking, resume versions, and interviews."
+      links={CAREER_DASHBOARD_LINKS}
+    />
   );
 }

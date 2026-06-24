@@ -17,6 +17,7 @@ import type {
   NetworkingContactRow,
   ResumeVersionRow,
 } from "@/types/database";
+import { CareerCrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
 
 interface CareerDashboardV1Props {
   data: CareerDashboardDataResult;
@@ -312,6 +313,8 @@ export function CareerDashboardV1({
           <MetricTile label="Follow-ups due" value={summary.follow_ups_due_count} description="Due today or earlier." />
         </div>
       </section>
+
+      <CareerCrossDashboardLinks activeRoute="/career" />
 
       {readErrors.length > 0 ? (
         <EmptyState

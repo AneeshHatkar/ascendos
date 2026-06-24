@@ -8,6 +8,7 @@ import type {
   ResumeBulletRow,
   ResumeVersionRow,
 } from "@/types/database";
+import { CareerCrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
 
 interface ResumeDashboardV1Props {
   versions: ResumeVersionRow[];
@@ -149,6 +150,8 @@ export function ResumeDashboardV1({
           <MetricTile label="Proof-linked" value={proofLinkedBullets} description="Bullets linked to proof items." />
         </div>
       </section>
+
+      <CareerCrossDashboardLinks activeRoute="/resume" />
 
       {readErrors.length > 0 ? (
         <EmptyState

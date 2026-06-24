@@ -5,6 +5,7 @@ import {
   StatusPill,
 } from "@/components/dashboard";
 import type { InterviewRow } from "@/types/database";
+import { CareerCrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
 
 interface InterviewsDashboardV1Props {
   interviews: InterviewRow[];
@@ -166,6 +167,8 @@ export function InterviewsDashboardV1({
           <MetricTile label="Follow-ups due" value={followUpsDue} description="Due today or earlier." />
         </div>
       </section>
+
+      <CareerCrossDashboardLinks activeRoute="/interviews" />
 
       {readErrors.length > 0 ? (
         <EmptyState

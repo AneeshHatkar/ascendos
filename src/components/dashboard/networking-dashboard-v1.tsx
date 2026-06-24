@@ -9,6 +9,7 @@ import type {
   NetworkingContactRow,
   NetworkingInteractionRow,
 } from "@/types/database";
+import { CareerCrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
 
 interface NetworkingDashboardV1Props {
   contacts: NetworkingContactRow[];
@@ -220,6 +221,8 @@ export function NetworkingDashboardV1({
           <MetricTile label="Follow-ups due" value={followUpsDue} description="Due today or earlier." />
         </div>
       </section>
+
+      <CareerCrossDashboardLinks activeRoute="/networking" />
 
       {readErrors.length > 0 ? (
         <EmptyState
