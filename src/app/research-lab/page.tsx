@@ -1,9 +1,19 @@
 import {
   AuthenticatedDashboardShell,
+  ResearchProofLinkagePanel,
+  ResearchStateBoundaryPanel,
   ResearchSummaryPanel,
   SectionCard,
 } from "@/components/dashboard";
 import { getDashboardCardsForSurface, getResearchStanfordDashboardDataSummary } from "@/lib/dashboard";
+import {
+  listResearchCitations,
+  listResearchClaims,
+  listResearchExperiments,
+  listResearchIdeas,
+  listResearchPapers,
+  listResearchResults,
+} from "@/lib/repositories";
 
 export default function ResearchLabPage() {
   return (
@@ -13,8 +23,33 @@ export default function ResearchLabPage() {
         description="Read-only research surface for ideas, literature, citations, claims, experiments, results, papers, venues, submissions, and feedback."
       >
         {async ({ user }) => {
-          const data = await getResearchStanfordDashboardDataSummary(user.id);
+          const [
+            data,
+            ideas,
+            citations,
+            claims,
+            experiments,
+            results,
+            papers,
+          ] = await Promise.all([
+            getResearchStanfordDashboardDataSummary(user.id),
+            listResearchIdeas(user.id, { limit: 100 }),
+            listResearchCitations(user.id, { limit: 100 }),
+            listResearchClaims(user.id, { limit: 100 }),
+            listResearchExperiments(user.id, { limit: 100 }),
+            listResearchResults(user.id, { limit: 100 }),
+            listResearchPapers(user.id, { limit: 100 }),
+          ]);
+
           const cards = getDashboardCardsForSurface("research_lab");
+          const readErrors = [
+            ideas.error,
+            citations.error,
+            claims.error,
+            experiments.error,
+            results.error,
+            papers.error,
+          ].filter((error): error is string => Boolean(error));
 
           return (
             <>
@@ -79,6 +114,17 @@ export default function ResearchLabPage() {
                   ))}
                 </div>
               </SectionCard>
+
+              <ResearchProofLinkagePanel
+                ideas={ideas.data ?? []}
+                citations={citations.data ?? []}
+                claims={claims.data ?? []}
+                experiments={experiments.data ?? []}
+                results={results.data ?? []}
+                papers={papers.data ?? []}
+              />
+
+              <ResearchStateBoundaryPanel surface="research_lab" readErrors={readErrors} />
 
               <SectionCard
                 title="Research route boundary"

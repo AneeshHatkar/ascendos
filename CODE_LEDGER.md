@@ -1498,3 +1498,14 @@ Purpose: Replaces the Research Lab placeholder with an authenticated read-only r
 
 ### `src/app/research-stanford/page.tsx`
 Purpose: Replaces the Research Stanford placeholder with an authenticated read-only route showing university, lab, professor, readiness, SOP, asset, recommendation, and registry summary state.
+
+## Phase 10 Chunk H — Research Linkage and Boundary Panels
+
+### `src/components/dashboard/research-linkage-boundary-panels.tsx`
+Purpose: Adds read-only research/proof linkage visibility, Stanford target-fit linkage visibility, and privacy/safe-write boundary panels.
+
+### `src/app/research-lab/page.tsx`
+Purpose: Wires Research Lab linkage visibility and boundary panels into the authenticated read route.
+
+### `src/app/research-stanford/page.tsx`
+Purpose: Wires Stanford/PhD linkage visibility and boundary panels into the authenticated read route.

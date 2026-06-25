@@ -639,3 +639,16 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No SQL changed.
 - No write helpers added.
 - No autonomous outreach, scraping, or submission behavior added.
+
+## 2026-06-25 — Phase 10 Chunk H Linkage and Boundary Panels
+
+### Added
+- Research proof/linkage visibility panel.
+- Stanford target-fit linkage visibility panel.
+- Research privacy and safe-write boundary panel.
+- Research route linkage/boundary wiring.
+
+### Notes
+- No SQL changed.
+- No write helpers added.
+- No autonomous outreach, scraping, paper submission, or application automation added.

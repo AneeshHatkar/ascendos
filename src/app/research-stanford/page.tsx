@@ -1,9 +1,19 @@
 import {
   AuthenticatedDashboardShell,
+  ResearchStateBoundaryPanel,
   ResearchSummaryPanel,
   SectionCard,
+  StanfordProofLinkagePanel,
 } from "@/components/dashboard";
 import { getDashboardCardsForSurface, getResearchStanfordDashboardDataSummary } from "@/lib/dashboard";
+import {
+  listPhdApplicationAssets,
+  listRecommendationTargets,
+  listSopVersions,
+  listTargetLabs,
+  listTargetProfessors,
+  listTargetUniversities,
+} from "@/lib/repositories";
 
 export default function ResearchStanfordPage() {
   return (
@@ -13,8 +23,33 @@ export default function ResearchStanfordPage() {
         description="Read-only Stanford and PhD readiness surface for universities, labs, professors, assets, SOPs, recommendations, and application proof."
       >
         {async ({ user }) => {
-          const data = await getResearchStanfordDashboardDataSummary(user.id);
+          const [
+            data,
+            universities,
+            labs,
+            professors,
+            applicationAssets,
+            sopVersions,
+            recommendationTargets,
+          ] = await Promise.all([
+            getResearchStanfordDashboardDataSummary(user.id),
+            listTargetUniversities(user.id, { limit: 100 }),
+            listTargetLabs(user.id, { limit: 100 }),
+            listTargetProfessors(user.id, { limit: 100 }),
+            listPhdApplicationAssets(user.id, { limit: 100 }),
+            listSopVersions(user.id, { limit: 100 }),
+            listRecommendationTargets(user.id, { limit: 100 }),
+          ]);
+
           const cards = getDashboardCardsForSurface("research_stanford");
+          const readErrors = [
+            universities.error,
+            labs.error,
+            professors.error,
+            applicationAssets.error,
+            sopVersions.error,
+            recommendationTargets.error,
+          ].filter((error): error is string => Boolean(error));
 
           return (
             <>
@@ -79,6 +114,17 @@ export default function ResearchStanfordPage() {
                   ))}
                 </div>
               </SectionCard>
+
+              <StanfordProofLinkagePanel
+                universities={universities.data ?? []}
+                labs={labs.data ?? []}
+                professors={professors.data ?? []}
+                applicationAssets={applicationAssets.data ?? []}
+                sopVersions={sopVersions.data ?? []}
+                recommendationTargets={recommendationTargets.data ?? []}
+              />
+
+              <ResearchStateBoundaryPanel surface="research_stanford" readErrors={readErrors} />
 
               <SectionCard
                 title="Stanford route boundary"

@@ -2247,3 +2247,24 @@ Purpose:
 
 ### Result
 - Research placeholder routes now render authenticated read-only summary surfaces backed by Phase 10 aggregation helpers and dashboard registry cards.
+
+## 2026-06-25 — Phase 10 Chunk H Linkage and Boundary Panels
+
+### Scope
+- Completed 10.18 research/proof/linkage visibility.
+- Completed 10.19 privacy and safe-write boundary panels.
+
+### Files
+- `src/components/dashboard/research-linkage-boundary-panels.tsx`
+- `src/components/dashboard/index.ts`
+- `src/app/research-lab/page.tsx`
+- `src/app/research-stanford/page.tsx`
+
+### Boundary
+- No SQL changed.
+- No write helpers added.
+- No proposed-action execution added.
+- No professor outreach, scraping, paper submission, or application automation added.
+
+### Result
+- Research routes now show read-only linkage metrics and explicit privacy/safe-write boundaries.
