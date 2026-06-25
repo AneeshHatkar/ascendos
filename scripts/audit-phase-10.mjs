@@ -47,7 +47,7 @@ const requiredFiles = [
   "docs/database/PHASE_10_STANFORD_PHD_SCHEMA_DESIGN.md",
   "docs/phase-reports/PHASE_10_SOURCE_TO_SCOPE_TRACEABILITY.md",
   "docs/qa/PHASE_10_RESEARCH_STANFORD_MANUAL_SMOKE_CHECKLIST.md",
-  "docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT_DRAFT.md",
+  "docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT.md",
   "supabase/migrations/0010_phase10_research_stanford_foundation.sql",
   "supabase/migrations/0011_phase10_parent_ownership_guards.sql",
   "src/types/database.ts",
@@ -268,7 +268,7 @@ for (const marker of [
 console.log("\n=== Phase 10 docs and logs ===");
 
 const checklist = fileText.get("docs/qa/PHASE_10_RESEARCH_STANFORD_MANUAL_SMOKE_CHECKLIST.md") ?? "";
-const completionReport = fileText.get("docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT_DRAFT.md") ?? "";
+const completionReport = fileText.get("docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT.md") ?? "";
 const executionLog = requireFile("PROJECT_EXECUTION_LOG.md");
 const codeLedger = requireFile("CODE_LEDGER.md");
 const changelog = requireFile("CHANGELOG.md");
@@ -308,4 +308,4 @@ if (failures > 0) {
   process.exit(1);
 }
 
-console.log("\nPhase 10 audit passed: research/Stanford system is structurally present, route-wired, exported, documented, and boundary-protected through Chunk J.");
+console.log("\nPhase 10 audit passed: research/Stanford system is structurally present, route-wired, exported, documented, and boundary-protected through Chunk K.");

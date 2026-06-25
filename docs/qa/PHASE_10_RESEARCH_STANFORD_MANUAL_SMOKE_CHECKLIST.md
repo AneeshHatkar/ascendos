@@ -1,6 +1,6 @@
 # Phase 10 Manual Smoke Checklist — Research / Stanford System
 
-Status: Added for final Phase 10 closeout.
+Status: Final checklist added. Manual browser QA remains to be run against authenticated local/live data.
 
 ## Global route checks
 

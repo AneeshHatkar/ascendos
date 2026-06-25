@@ -1,8 +1,8 @@
-# Phase 10 Completion Report Draft — Research / Stanford System
+# Phase 10 Completion Report — Research / Stanford System
 
-Status: Draft added in Chunk J. Final closeout remains pending Chunk K.
+Status: Complete.
 
-## Completed scope through Chunk J
+## Completed scope
 
 Phase 10 created the Research / Stanford System foundation for ascendOS + Carnos.
 
@@ -28,22 +28,49 @@ Completed:
 - Stanford/PhD detail visibility panels.
 - Research proposed-action preview visibility.
 - Research cross-dashboard links.
-- Phase 10 audit gate draft.
+- Phase 10 audit gate.
 - Phase 10 manual smoke checklist.
-- Phase 10 completion report draft.
+- Phase 10 completion report.
 
 ## Research System routes
 
 - `/research-lab`
 - `/research-stanford`
 
+## Completed table foundation
+
+Research-side tables:
+
+- `research_ideas`
+- `research_questions`
+- `research_literature_items`
+- `research_citations`
+- `research_claims`
+- `research_experiments`
+- `research_results`
+- `research_papers`
+- `research_paper_versions`
+- `research_venues`
+- `research_submissions`
+- `research_feedback`
+
+Stanford/PhD-side tables:
+
+- `target_universities`
+- `target_labs`
+- `target_professors`
+- `phd_readiness_assessments`
+- `phd_application_assets`
+- `sop_versions`
+- `recommendation_targets`
+
 ## Verification gates
 
-Final closeout must pass:
+Final closeout passed:
 
 - `npm run audit:phase10`
-- `npm run audit:integration`
 - `npm run check`
+- `npm run audit:integration`
 - `npx tsc --noEmit`
 - `npm run lint`
 - `npm run validate:migrations`
@@ -86,17 +113,6 @@ Deferred to later phases:
 - memory/RAG
 - voice
 - background jobs
-
-## Remaining Phase 10 work
-
-Chunk K remains pending:
-
-- final Phase 10 closeout audit
-- final report polish
-- final manual smoke checklist polish
-- phase status update
-- final regression checks
-- transition to Phase 11 Health / Body System
 
 ## Next phase
 

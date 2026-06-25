@@ -677,3 +677,68 @@ Verification:
 - git diff --check passed before closeout.
 
 Next step: Phase 10 — Research / Stanford System.
+
+## Phase 10 — Research / Stanford System — COMPLETE
+
+### Status
+Complete.
+
+### Completed Scope
+Phase 10 created the Research / Stanford System foundation for ascendOS + Carnos.
+
+Completed:
+- Research and Stanford source-of-truth inspection.
+- Research schema design.
+- Stanford/PhD schema design.
+- Source-to-scope traceability.
+- Research/Stanford SQL foundation.
+- Parent ownership guards and RLS hardening.
+- Database type contracts.
+- Research and Stanford read repositories.
+- Dashboard aggregation helper.
+- Dashboard registry extension.
+- Shared research summary UI primitive.
+- `/research-lab` authenticated read route.
+- `/research-stanford` authenticated read route.
+- Research proof/linkage visibility.
+- Stanford proof/target-fit linkage visibility.
+- Privacy and safe-write boundary panels.
+- Research detail visibility panels.
+- Stanford/PhD detail visibility panels.
+- Research proposed-action preview visibility.
+- Research cross-dashboard links.
+- Phase 10 audit gate.
+- Phase 10 manual smoke checklist.
+- Phase 10 completion report.
+
+### Verification Gate
+Final verification passed before completion commit:
+- `npm run audit:phase10`
+- `npm run check`
+- `npm run audit:integration`
+- `npx tsc --noEmit`
+- `npm run lint`
+- `npm run validate:migrations`
+- `git diff --check`
+
+### Boundary
+Phase 10 remains read-first and visibility-only.
+
+No direct SQL writes, autonomous Carnos writes, professor outreach, scraping, paper submission, application submission, Python/ML worker execution, memory/RAG, voice, or background jobs were added.
+
+### Deferred Scope
+Deferred to later phases:
+- live Supabase browser QA
+- write/edit/delete research UI
+- real research proposed-action persistence
+- paper generation
+- professor outreach automation
+- web search/scraping integrations
+- paper/application submission integrations
+- Python/ML worker execution
+- memory/RAG
+- voice
+- background jobs
+
+### Next Recommended Phase
+Phase 11 — Health / Body System.
