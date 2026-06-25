@@ -1453,3 +1453,8 @@ Purpose: Designs the Phase 10 Stanford/PhD readiness schema before SQL implement
 
 ### `docs/phase-reports/PHASE_10_SOURCE_TO_SCOPE_TRACEABILITY.md`
 Purpose: Maps Phase 10 scope to existing foundations, safe-link strategy, and deferred future phases.
+
+## Phase 10 Chunk C — SQL Foundation
+
+### `supabase/migrations/0010_phase10_research_stanford_foundation.sql`
+Purpose: Adds Phase 10 Research / Stanford System SQL foundation tables, RLS enablement, owner-scoped SELECT/INSERT policies, and required user indexes.

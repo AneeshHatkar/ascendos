@@ -2146,3 +2146,17 @@ Purpose:
 ### Result
 - Phase 10 Chunk B is ready for verification.
 - Next chunk after commit: Chunk C — SQL foundation migration only.
+
+## 2026-06-25 — Phase 10 Chunk C SQL Foundation
+
+### Scope
+- Completed 10.7 SQL migration.
+- Added Phase 10 Research / Stanford SQL foundation migration.
+- Added user-owned research, paper, experiment, literature, professor/lab, PhD readiness, SOP, application asset, and recommendation target tables.
+
+### Files
+- `supabase/migrations/0010_phase10_research_stanford_foundation.sql`
+
+### Result
+- Chunk C is ready for validation.
+- Next chunk after commit: Chunk C.1 — parent ownership/RLS hardening.

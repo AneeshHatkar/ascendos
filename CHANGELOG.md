@@ -554,3 +554,18 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No database types changed.
 - No old migration edited.
 - Next: Phase 10 Chunk C SQL foundation.
+
+## 2026-06-25 — Phase 10 Chunk C SQL Foundation
+
+### Added
+- Phase 10 Research / Stanford SQL foundation migration.
+- User-owned research tables.
+- User-owned Stanford/PhD readiness tables.
+- RLS, SELECT policies, INSERT policies, and user indexes for Phase 10 tables.
+
+### Notes
+- No app code changed.
+- No database types changed.
+- No read helpers changed.
+- No old migration edited.
+- Next: Phase 10 Chunk C.1 parent ownership/RLS hardening.
