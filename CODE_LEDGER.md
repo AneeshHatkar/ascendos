@@ -1386,3 +1386,17 @@ Purpose: Wires `/knowledge` to authenticated Phase 9 learning/project source rea
 
 ### `src/components/dashboard/index.ts`
 Change: Exports the Knowledge Vault alignment dashboard component.
+
+## Phase 9 Chunk J — Learning/Project Detail Panels
+
+### `src/components/dashboard/learning-project-detail-panels.tsx`
+Purpose: Adds read-only detail panels for skill path/progress, quiz/session, and project build-log views.
+
+### `src/components/dashboard/learning-academy-dashboard-v1.tsx`
+Change: Adds skill path/progress and quiz/session detail panels.
+
+### `src/components/dashboard/project-builder-dashboard-v1.tsx`
+Change: Adds project build-log detail panel.
+
+### `src/components/dashboard/index.ts`
+Change: Exports Phase 9 detail panels.

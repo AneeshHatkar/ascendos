@@ -8,6 +8,7 @@ import {
   type DataListItem,
 } from "@/components/dashboard";
 import type { LearningProjectDashboardDataResult } from "@/lib/dashboard";
+import { ProjectBuildLogDetailPanel } from "@/components/dashboard/learning-project-detail-panels";
 import type {
   ProjectBugRow,
   ProjectLinkRow,
@@ -449,6 +450,14 @@ export function ProjectBuilderDashboardV1({
       <QualityPanel bugs={bugs} tests={tests} />
 
       <ReleaseAndLinksPanel releases={releases} links={links} />
+
+      <ProjectBuildLogDetailPanel
+        projects={projects}
+        milestones={milestones}
+        bugs={bugs}
+        tests={tests}
+        releases={releases}
+      />
     </div>
   );
 }

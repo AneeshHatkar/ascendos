@@ -490,3 +490,14 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ### Notes
 - Full memory/RAG remains deferred to later phases.
 - No write behavior added.
+
+## 2026-06-24 — Phase 9 Chunk J Detail Panels
+
+### Added
+- Skill path/progress detail panel.
+- Quiz/session detail panel.
+- Project build-log detail panel.
+
+### Notes
+- No write behavior added.
+- No proposed-action execution added.

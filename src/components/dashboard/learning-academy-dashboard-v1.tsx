@@ -8,6 +8,7 @@ import {
   type DataListItem,
 } from "@/components/dashboard";
 import type { LearningProjectDashboardDataResult } from "@/lib/dashboard";
+import { SkillPathProgressDetailPanel, QuizSessionDetailPanel } from "@/components/dashboard/learning-project-detail-panels";
 import type {
   LearningSessionRow,
   QuizAttemptRow,
@@ -410,6 +411,18 @@ export function LearningAcademyDashboardV1({
       >
         <ProgressPanel progress={skillProgress} />
       </SectionCard>
+
+      <SkillPathProgressDetailPanel
+        skillPaths={skillPaths}
+        skills={skills}
+        progress={skillProgress}
+      />
+
+      <QuizSessionDetailPanel
+        sessions={learningSessions}
+        quizzes={quizzes}
+        attempts={quizAttempts}
+      />
     </div>
   );
 }

@@ -2057,3 +2057,20 @@ Purpose:
 ### Result
 - `/knowledge` now reflects Phase 9 learning/project source alignment without implementing Phase 15 memory/RAG.
 - Next chunk: Chunk J — skill path/progress, quiz/session, and project build-log detail panels.
+
+## 2026-06-24 — Phase 9 Chunk J Detail Panels
+
+### Scope
+- Added read-only detail panels for skill path/progress, quiz/session, and project build-log views.
+- Wired detail panels into the Learning Academy and Project Builder dashboards.
+- Preserved no-write behavior.
+
+### Files
+- `src/components/dashboard/learning-project-detail-panels.tsx`
+- `src/components/dashboard/learning-academy-dashboard-v1.tsx`
+- `src/components/dashboard/project-builder-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Result
+- Learning and project dashboards now include Phase 9 focused detail views.
+- Next chunk: Chunk K — proof, goals/tasks/timeline linkage, proposed-action visibility, states, and cross-links.
