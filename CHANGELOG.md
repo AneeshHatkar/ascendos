@@ -470,3 +470,13 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ### Notes
 - No write behavior added.
 - No proposed-action execution added.
+
+## 2026-06-24 — Phase 9 Chunk H Project Builder Dashboard
+
+### Added
+- Project Builder dashboard component.
+- `/projects` route wired to Phase 9 read-only project data.
+
+### Notes
+- No write behavior added.
+- No proposed-action execution added.

@@ -2023,3 +2023,20 @@ Purpose:
 ### Result
 - `/learning` now has a real Phase 9 read-only dashboard.
 - Next chunk: Chunk H — Project Builder dashboard and `/projects` route.
+
+## 2026-06-24 — Phase 9 Chunk H Project Builder Dashboard
+
+### Scope
+- Added the Project Builder dashboard component.
+- Wired `/projects` to read Phase 9 project records through authenticated, read-only repository helpers.
+- Rendered projects, milestones, bugs, tests, releases, and project links.
+- Preserved no-write behavior.
+
+### Files
+- `src/components/dashboard/project-builder-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+- `src/app/projects/page.tsx`
+
+### Result
+- `/projects` now has a real Phase 9 read-only dashboard.
+- Next chunk: Chunk I — `/knowledge` route alignment.

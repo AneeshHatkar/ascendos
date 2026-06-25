@@ -1364,3 +1364,14 @@ Purpose: Wires `/learning` to authenticated Phase 9 learning reads instead of th
 
 ### `src/components/dashboard/index.ts`
 Change: Exports the Learning Academy dashboard component.
+
+## Phase 9 Chunk H — Project Builder Dashboard
+
+### `src/components/dashboard/project-builder-dashboard-v1.tsx`
+Purpose: Adds read-only Project Builder dashboard UI for Phase 9 projects, milestones, bugs, tests, releases, and links.
+
+### `src/app/projects/page.tsx`
+Purpose: Wires `/projects` to authenticated Phase 9 project reads instead of a placeholder page.
+
+### `src/components/dashboard/index.ts`
+Change: Exports the Project Builder dashboard component.
