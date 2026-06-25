@@ -583,3 +583,16 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No read helpers changed.
 - No old migration edited.
 - Next: Phase 10 Chunk D database types.
+
+## 2026-06-25 — Phase 10 Chunk D Database Types
+
+### Added
+- Phase 10 database row types.
+- Phase 10 insert/update type aliases.
+- Exported aliases for Research / Stanford tables.
+
+### Notes
+- No SQL migration changed.
+- No read helpers added.
+- No dashboard or route code changed.
+- Next: Phase 10 Chunk E read helpers.

@@ -398,6 +398,367 @@ type CareerInterviewRow = CareerUpdatedSourceFields & {
   outcome: string;
 };
 
+type Phase10ResearchIdeaRow = {
+  id: string;
+  user_id: string;
+  title: string;
+  summary: string | null;
+  research_area: string | null;
+  status: "captured" | "exploring" | "active" | "blocked" | "converted_to_paper" | "paused" | "archived";
+  priority: "low" | "medium" | "high" | "urgent";
+  novelty_score: number | null;
+  feasibility_score: number | null;
+  impact_score: number | null;
+  proof_strength_score: number | null;
+  project_id: string | null;
+  skill_id: string | null;
+  goal_id: string | null;
+  task_id: string | null;
+  proof_item_id: string | null;
+  source: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchQuestionRow = {
+  id: string;
+  user_id: string;
+  research_idea_id: string | null;
+  question: string;
+  hypothesis: string | null;
+  variable_focus: string | null;
+  expected_outcome: string | null;
+  status: "open" | "investigating" | "supported" | "rejected" | "revised" | "archived";
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchLiteratureItemRow = {
+  id: string;
+  user_id: string;
+  title: string;
+  authors: string[];
+  publication_year: number | null;
+  venue: string | null;
+  source_url: string | null;
+  doi: string | null;
+  arxiv_id: string | null;
+  item_type: "paper" | "article" | "book" | "thesis" | "technical_report" | "documentation" | "dataset" | "benchmark" | "other";
+  reading_status: "saved" | "skimmed" | "reading" | "read" | "summarized" | "cited" | "archived";
+  relevance_score: number | null;
+  credibility_score: number | null;
+  summary: string | null;
+  key_methods: string | null;
+  key_results: string | null;
+  limitations: string | null;
+  notes: string | null;
+  related_research_idea_id: string | null;
+  related_project_id: string | null;
+  proof_item_id: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchPaperRow = {
+  id: string;
+  user_id: string;
+  title: string;
+  abstract: string | null;
+  research_area: string | null;
+  status: "idea" | "outline" | "drafting" | "internal_review" | "professor_review" | "revision" | "submission_ready" | "submitted" | "accepted" | "rejected" | "archived";
+  primary_research_idea_id: string | null;
+  project_id: string | null;
+  proof_item_id: string | null;
+  resume_bullet_id: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+  target_venue_id: string | null;
+};
+
+type Phase10ResearchPaperVersionRow = {
+  id: string;
+  user_id: string;
+  research_paper_id: string;
+  version_label: string;
+  file_url: string | null;
+  doc_url: string | null;
+  abstract_snapshot: string | null;
+  status: "draft" | "reviewed" | "revised" | "submission_candidate" | "archived";
+  page_count: number | null;
+  readiness_score: number | null;
+  main_gap: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchClaimRow = {
+  id: string;
+  user_id: string;
+  research_idea_id: string | null;
+  research_paper_id: string | null;
+  paper_version_id: string | null;
+  claim_text: string;
+  claim_type: "novelty" | "method" | "result" | "comparison" | "limitation" | "contribution" | "application" | "future_work";
+  support_status: "unsupported" | "partially_supported" | "supported" | "contradicted" | "needs_review";
+  evidence_strength: number | null;
+  literature_item_id: string | null;
+  proof_item_id: string | null;
+  project_id: string | null;
+  resume_bullet_id: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchExperimentRow = {
+  id: string;
+  user_id: string;
+  research_idea_id: string | null;
+  research_question_id: string | null;
+  project_id: string | null;
+  title: string;
+  objective: string | null;
+  method: string | null;
+  dataset: string | null;
+  baseline: string | null;
+  variables: Json;
+  metrics: Json;
+  reproducibility_status: "not_started" | "partial" | "reproducible" | "not_reproducible" | "needs_cleanup";
+  status: "planned" | "running" | "blocked" | "completed" | "failed" | "archived";
+  started_at: string | null;
+  completed_at: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchResultRow = {
+  id: string;
+  user_id: string;
+  research_experiment_id: string | null;
+  research_idea_id: string | null;
+  project_id: string | null;
+  title: string;
+  result_summary: string | null;
+  metric_name: string | null;
+  metric_value: number | null;
+  metric_unit: string | null;
+  comparison_baseline: string | null;
+  interpretation: string | null;
+  limitation: string | null;
+  figure_reference: string | null;
+  table_reference: string | null;
+  proof_item_id: string | null;
+  paper_version_id: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchCitationRow = {
+  id: string;
+  user_id: string;
+  literature_item_id: string;
+  research_idea_id: string | null;
+  research_claim_id: string | null;
+  research_paper_id: string | null;
+  paper_version_id: string | null;
+  citation_purpose: "background" | "related_work" | "method_support" | "result_comparison" | "limitation" | "future_work" | "contradiction" | "definition" | "benchmark" | "other";
+  citation_note: string | null;
+  quote_or_excerpt: string | null;
+  page_or_section: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchVenueRow = {
+  id: string;
+  user_id: string;
+  name: string;
+  venue_type: "conference" | "journal" | "workshop" | "symposium" | "preprint" | "internal_review" | "other";
+  field: string | null;
+  ranking_note: string | null;
+  deadline: string | null;
+  submission_url: string | null;
+  page_limit: number | null;
+  format_requirements: string | null;
+  fit_score: number | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchSubmissionRow = {
+  id: string;
+  user_id: string;
+  research_paper_id: string;
+  research_venue_id: string | null;
+  submitted_at: string | null;
+  status: "planned" | "preparing" | "submitted" | "under_review" | "accepted" | "rejected" | "withdrawn" | "archived";
+  decision: string | null;
+  decision_at: string | null;
+  reviewer_summary: string | null;
+  next_action: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchFeedbackRow = {
+  id: string;
+  user_id: string;
+  research_paper_id: string | null;
+  paper_version_id: string | null;
+  research_idea_id: string | null;
+  feedback_source_type: "professor" | "advisor" | "collaborator" | "reviewer" | "self_review" | "peer" | "other";
+  feedback_source_name: string | null;
+  feedback_date: string | null;
+  summary: string;
+  required_changes: string | null;
+  severity: "low" | "medium" | "high" | "critical";
+  status: "received" | "triaged" | "in_progress" | "addressed" | "rejected" | "archived";
+  task_id: string | null;
+  proof_item_id: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10TargetUniversityRow = {
+  id: string;
+  user_id: string;
+  name: string;
+  program_name: string | null;
+  department: string | null;
+  country: string | null;
+  location: string | null;
+  target_level: "dream" | "reach" | "target" | "safety" | "exploratory";
+  fit_score: number | null;
+  competitiveness: string | null;
+  application_deadline: string | null;
+  requirements_url: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10TargetLabRow = {
+  id: string;
+  user_id: string;
+  target_university_id: string | null;
+  name: string;
+  research_area: string | null;
+  lab_url: string | null;
+  fit_score: number | null;
+  fit_reason: string | null;
+  related_research_idea_id: string | null;
+  related_research_paper_id: string | null;
+  related_project_id: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10TargetProfessorRow = {
+  id: string;
+  user_id: string;
+  target_university_id: string | null;
+  target_lab_id: string | null;
+  name: string;
+  title: string | null;
+  email: string | null;
+  profile_url: string | null;
+  research_area: string | null;
+  fit_score: number | null;
+  fit_reason: string | null;
+  outreach_status: "not_started" | "researching" | "draft_needed" | "ready_to_contact" | "contacted" | "replied" | "follow_up_needed" | "not_fit" | "archived";
+  last_contacted_at: string | null;
+  related_literature_item_id: string | null;
+  related_research_idea_id: string | null;
+  related_research_paper_id: string | null;
+  related_project_id: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10PhdReadinessAssessmentRow = {
+  id: string;
+  user_id: string;
+  assessment_date: string;
+  overall_score: number | null;
+  research_score: number | null;
+  publication_score: number | null;
+  project_score: number | null;
+  proof_score: number | null;
+  recommendation_score: number | null;
+  sop_score: number | null;
+  professor_fit_score: number | null;
+  academic_context_score: number | null;
+  main_gap: string | null;
+  next_action: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10PhdApplicationAssetRow = {
+  id: string;
+  user_id: string;
+  target_university_id: string | null;
+  asset_type: "sop" | "cv" | "resume" | "transcript" | "recommendation" | "writing_sample" | "research_statement" | "portfolio" | "paper" | "test_score" | "other";
+  title: string;
+  status: "missing" | "planned" | "drafting" | "needs_review" | "ready" | "submitted" | "archived";
+  file_url: string | null;
+  doc_url: string | null;
+  quality_score: number | null;
+  due_date: string | null;
+  task_id: string | null;
+  proof_item_id: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10SopVersionRow = {
+  id: string;
+  user_id: string;
+  target_university_id: string | null;
+  version_label: string;
+  doc_url: string | null;
+  thesis: string | null;
+  research_fit_summary: string | null;
+  professor_fit_summary: string | null;
+  weakness_notes: string | null;
+  readiness_score: number | null;
+  status: "outline" | "draft" | "reviewed" | "revised" | "ready" | "submitted" | "archived";
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10RecommendationTargetRow = {
+  id: string;
+  user_id: string;
+  recommender_name: string;
+  recommender_role: string | null;
+  institution_or_company: string | null;
+  relationship_context: string | null;
+  strength_score: number | null;
+  request_status: "potential" | "preparing" | "requested" | "agreed" | "submitted" | "unavailable" | "archived";
+  requested_at: string | null;
+  due_date: string | null;
+  target_university_id: string | null;
+  related_research_paper_id: string | null;
+  related_project_id: string | null;
+  proof_item_id: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
 export type Database = {
   public: {
     Tables: {
@@ -1519,6 +1880,121 @@ export type Database = {
         Update: Partial<CareerNetworkingContactRow>;
         Relationships: [];
       };
+
+      research_ideas: {
+        Row: Phase10ResearchIdeaRow;
+        Insert: Partial<Phase10ResearchIdeaRow> & { user_id: string; title: string };
+        Update: Partial<Phase10ResearchIdeaRow>;
+        Relationships: [];
+      };
+      research_questions: {
+        Row: Phase10ResearchQuestionRow;
+        Insert: Partial<Phase10ResearchQuestionRow> & { user_id: string; question: string };
+        Update: Partial<Phase10ResearchQuestionRow>;
+        Relationships: [];
+      };
+      research_literature_items: {
+        Row: Phase10ResearchLiteratureItemRow;
+        Insert: Partial<Phase10ResearchLiteratureItemRow> & { user_id: string; title: string };
+        Update: Partial<Phase10ResearchLiteratureItemRow>;
+        Relationships: [];
+      };
+      research_papers: {
+        Row: Phase10ResearchPaperRow;
+        Insert: Partial<Phase10ResearchPaperRow> & { user_id: string; title: string };
+        Update: Partial<Phase10ResearchPaperRow>;
+        Relationships: [];
+      };
+      research_paper_versions: {
+        Row: Phase10ResearchPaperVersionRow;
+        Insert: Partial<Phase10ResearchPaperVersionRow> & { user_id: string; research_paper_id: string; version_label: string };
+        Update: Partial<Phase10ResearchPaperVersionRow>;
+        Relationships: [];
+      };
+      research_claims: {
+        Row: Phase10ResearchClaimRow;
+        Insert: Partial<Phase10ResearchClaimRow> & { user_id: string; claim_text: string };
+        Update: Partial<Phase10ResearchClaimRow>;
+        Relationships: [];
+      };
+      research_experiments: {
+        Row: Phase10ResearchExperimentRow;
+        Insert: Partial<Phase10ResearchExperimentRow> & { user_id: string; title: string };
+        Update: Partial<Phase10ResearchExperimentRow>;
+        Relationships: [];
+      };
+      research_results: {
+        Row: Phase10ResearchResultRow;
+        Insert: Partial<Phase10ResearchResultRow> & { user_id: string; title: string };
+        Update: Partial<Phase10ResearchResultRow>;
+        Relationships: [];
+      };
+      research_citations: {
+        Row: Phase10ResearchCitationRow;
+        Insert: Partial<Phase10ResearchCitationRow> & { user_id: string; literature_item_id: string };
+        Update: Partial<Phase10ResearchCitationRow>;
+        Relationships: [];
+      };
+      research_venues: {
+        Row: Phase10ResearchVenueRow;
+        Insert: Partial<Phase10ResearchVenueRow> & { user_id: string; name: string };
+        Update: Partial<Phase10ResearchVenueRow>;
+        Relationships: [];
+      };
+      research_submissions: {
+        Row: Phase10ResearchSubmissionRow;
+        Insert: Partial<Phase10ResearchSubmissionRow> & { user_id: string; research_paper_id: string };
+        Update: Partial<Phase10ResearchSubmissionRow>;
+        Relationships: [];
+      };
+      research_feedback: {
+        Row: Phase10ResearchFeedbackRow;
+        Insert: Partial<Phase10ResearchFeedbackRow> & { user_id: string; summary: string };
+        Update: Partial<Phase10ResearchFeedbackRow>;
+        Relationships: [];
+      };
+      target_universities: {
+        Row: Phase10TargetUniversityRow;
+        Insert: Partial<Phase10TargetUniversityRow> & { user_id: string; name: string };
+        Update: Partial<Phase10TargetUniversityRow>;
+        Relationships: [];
+      };
+      target_labs: {
+        Row: Phase10TargetLabRow;
+        Insert: Partial<Phase10TargetLabRow> & { user_id: string; name: string };
+        Update: Partial<Phase10TargetLabRow>;
+        Relationships: [];
+      };
+      target_professors: {
+        Row: Phase10TargetProfessorRow;
+        Insert: Partial<Phase10TargetProfessorRow> & { user_id: string; name: string };
+        Update: Partial<Phase10TargetProfessorRow>;
+        Relationships: [];
+      };
+      phd_readiness_assessments: {
+        Row: Phase10PhdReadinessAssessmentRow;
+        Insert: Partial<Phase10PhdReadinessAssessmentRow> & { user_id: string };
+        Update: Partial<Phase10PhdReadinessAssessmentRow>;
+        Relationships: [];
+      };
+      phd_application_assets: {
+        Row: Phase10PhdApplicationAssetRow;
+        Insert: Partial<Phase10PhdApplicationAssetRow> & { user_id: string; asset_type: Phase10PhdApplicationAssetRow["asset_type"]; title: string };
+        Update: Partial<Phase10PhdApplicationAssetRow>;
+        Relationships: [];
+      };
+      sop_versions: {
+        Row: Phase10SopVersionRow;
+        Insert: Partial<Phase10SopVersionRow> & { user_id: string; version_label: string };
+        Update: Partial<Phase10SopVersionRow>;
+        Relationships: [];
+      };
+      recommendation_targets: {
+        Row: Phase10RecommendationTargetRow;
+        Insert: Partial<Phase10RecommendationTargetRow> & { user_id: string; recommender_name: string };
+        Update: Partial<Phase10RecommendationTargetRow>;
+        Relationships: [];
+      };
     };
     Views: Record<string, never>;
     Functions: Record<string, never>;
@@ -1660,3 +2136,79 @@ export type ProjectLinkUpdate = Tables["project_links"]["Update"];
 export type SkillProgressRow = Tables["skill_progress"]["Row"];
 export type SkillProgressInsert = Tables["skill_progress"]["Insert"];
 export type SkillProgressUpdate = Tables["skill_progress"]["Update"];
+
+export type ResearchIdeaRow = Tables["research_ideas"]["Row"];
+export type ResearchIdeaInsert = Tables["research_ideas"]["Insert"];
+export type ResearchIdeaUpdate = Tables["research_ideas"]["Update"];
+
+export type ResearchQuestionRow = Tables["research_questions"]["Row"];
+export type ResearchQuestionInsert = Tables["research_questions"]["Insert"];
+export type ResearchQuestionUpdate = Tables["research_questions"]["Update"];
+
+export type ResearchLiteratureItemRow = Tables["research_literature_items"]["Row"];
+export type ResearchLiteratureItemInsert = Tables["research_literature_items"]["Insert"];
+export type ResearchLiteratureItemUpdate = Tables["research_literature_items"]["Update"];
+
+export type ResearchPaperRow = Tables["research_papers"]["Row"];
+export type ResearchPaperInsert = Tables["research_papers"]["Insert"];
+export type ResearchPaperUpdate = Tables["research_papers"]["Update"];
+
+export type ResearchPaperVersionRow = Tables["research_paper_versions"]["Row"];
+export type ResearchPaperVersionInsert = Tables["research_paper_versions"]["Insert"];
+export type ResearchPaperVersionUpdate = Tables["research_paper_versions"]["Update"];
+
+export type ResearchClaimRow = Tables["research_claims"]["Row"];
+export type ResearchClaimInsert = Tables["research_claims"]["Insert"];
+export type ResearchClaimUpdate = Tables["research_claims"]["Update"];
+
+export type ResearchExperimentRow = Tables["research_experiments"]["Row"];
+export type ResearchExperimentInsert = Tables["research_experiments"]["Insert"];
+export type ResearchExperimentUpdate = Tables["research_experiments"]["Update"];
+
+export type ResearchResultRow = Tables["research_results"]["Row"];
+export type ResearchResultInsert = Tables["research_results"]["Insert"];
+export type ResearchResultUpdate = Tables["research_results"]["Update"];
+
+export type ResearchCitationRow = Tables["research_citations"]["Row"];
+export type ResearchCitationInsert = Tables["research_citations"]["Insert"];
+export type ResearchCitationUpdate = Tables["research_citations"]["Update"];
+
+export type ResearchVenueRow = Tables["research_venues"]["Row"];
+export type ResearchVenueInsert = Tables["research_venues"]["Insert"];
+export type ResearchVenueUpdate = Tables["research_venues"]["Update"];
+
+export type ResearchSubmissionRow = Tables["research_submissions"]["Row"];
+export type ResearchSubmissionInsert = Tables["research_submissions"]["Insert"];
+export type ResearchSubmissionUpdate = Tables["research_submissions"]["Update"];
+
+export type ResearchFeedbackRow = Tables["research_feedback"]["Row"];
+export type ResearchFeedbackInsert = Tables["research_feedback"]["Insert"];
+export type ResearchFeedbackUpdate = Tables["research_feedback"]["Update"];
+
+export type TargetUniversityRow = Tables["target_universities"]["Row"];
+export type TargetUniversityInsert = Tables["target_universities"]["Insert"];
+export type TargetUniversityUpdate = Tables["target_universities"]["Update"];
+
+export type TargetLabRow = Tables["target_labs"]["Row"];
+export type TargetLabInsert = Tables["target_labs"]["Insert"];
+export type TargetLabUpdate = Tables["target_labs"]["Update"];
+
+export type TargetProfessorRow = Tables["target_professors"]["Row"];
+export type TargetProfessorInsert = Tables["target_professors"]["Insert"];
+export type TargetProfessorUpdate = Tables["target_professors"]["Update"];
+
+export type PhdReadinessAssessmentRow = Tables["phd_readiness_assessments"]["Row"];
+export type PhdReadinessAssessmentInsert = Tables["phd_readiness_assessments"]["Insert"];
+export type PhdReadinessAssessmentUpdate = Tables["phd_readiness_assessments"]["Update"];
+
+export type PhdApplicationAssetRow = Tables["phd_application_assets"]["Row"];
+export type PhdApplicationAssetInsert = Tables["phd_application_assets"]["Insert"];
+export type PhdApplicationAssetUpdate = Tables["phd_application_assets"]["Update"];
+
+export type SopVersionRow = Tables["sop_versions"]["Row"];
+export type SopVersionInsert = Tables["sop_versions"]["Insert"];
+export type SopVersionUpdate = Tables["sop_versions"]["Update"];
+
+export type RecommendationTargetRow = Tables["recommendation_targets"]["Row"];
+export type RecommendationTargetInsert = Tables["recommendation_targets"]["Insert"];
+export type RecommendationTargetUpdate = Tables["recommendation_targets"]["Update"];

@@ -2174,3 +2174,17 @@ Purpose:
 ### Result
 - Chunk C.1 is ready for validation.
 - Next chunk after commit: Chunk D — database types only.
+
+## 2026-06-25 — Phase 10 Chunk D Database Types
+
+### Scope
+- Completed 10.9 database types.
+- Added TypeScript row/insert/update mappings for Phase 10 Research / Stanford SQL tables.
+- Added exported aliases for research, literature, paper, experiment, result, venue, professor/lab, PhD readiness, SOP, application asset, and recommendation target tables.
+
+### Files
+- `src/types/database.ts`
+
+### Result
+- Chunk D is ready for validation.
+- Next chunk after commit: Chunk E — research, Stanford/PhD, and literature/citation read helpers.
