@@ -596,3 +596,18 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No read helpers added.
 - No dashboard or route code changed.
 - Next: Phase 10 Chunk E read helpers.
+
+## 2026-06-25 — Phase 10 Chunk E Read Helpers
+
+### Added
+- Research read helpers.
+- Stanford/PhD read helpers.
+- Literature and citation read helpers.
+- Repository barrel export for Phase 10 read helpers.
+
+### Notes
+- No SQL migration changed.
+- No database types changed.
+- No dashboard or route code changed.
+- No write helpers added.
+- Next: Phase 10 Chunk F aggregation helpers and shared primitives.

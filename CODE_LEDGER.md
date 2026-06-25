@@ -1468,3 +1468,11 @@ Purpose: Adds Phase 10 parent ownership guard functions and triggers for nullabl
 
 ### `src/types/database.ts`
 Purpose: Adds Phase 10 Research / Stanford System table mappings and exported aliases for use by read helpers and dashboards.
+
+## Phase 10 Chunk E — Read Helpers
+
+### `src/lib/repositories/research-read.ts`
+Purpose: Adds read-only server repository helpers for Phase 10 Research / Stanford / Literature / Citation data.
+
+### `src/lib/repositories/index.ts`
+Purpose: Exports Phase 10 research read helpers from the repository barrel.

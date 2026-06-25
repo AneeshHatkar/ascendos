@@ -2188,3 +2188,19 @@ Purpose:
 ### Result
 - Chunk D is ready for validation.
 - Next chunk after commit: Chunk E — research, Stanford/PhD, and literature/citation read helpers.
+
+## 2026-06-25 — Phase 10 Chunk E Read Helpers
+
+### Scope
+- Completed 10.10 research read helpers.
+- Completed 10.11 Stanford/PhD read helpers.
+- Completed 10.12 literature/citation read helpers.
+- Added read-only repository functions for Phase 10 tables.
+
+### Files
+- `src/lib/repositories/research-read.ts`
+- `src/lib/repositories/index.ts`
+
+### Result
+- Chunk E is ready for validation.
+- Next chunk after commit: Chunk F — aggregation helpers, dashboard registry extension, and shared research UI primitives.
