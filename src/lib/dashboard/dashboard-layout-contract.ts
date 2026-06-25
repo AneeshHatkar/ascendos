@@ -12,7 +12,9 @@ export type DashboardSurface =
   | "resume"
   | "interviews"
   | "learning"
-  | "projects";
+  | "projects"
+  | "research_lab"
+  | "research_stanford";
 
 export type DashboardCardRegion =
   | "hero"
@@ -69,6 +71,8 @@ export const PHASE_7_DASHBOARD_SURFACES: DashboardSurface[] = [
   "interviews",
   "learning",
   "projects",
+  "research_lab",
+  "research_stanford",
 ];
 
 export const PHASE_7_DASHBOARD_REGIONS: DashboardCardRegion[] = [

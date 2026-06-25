@@ -611,3 +611,16 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No dashboard or route code changed.
 - No write helpers added.
 - Next: Phase 10 Chunk F aggregation helpers and shared primitives.
+
+## 2026-06-25 — Phase 10 Chunk F Aggregation, Registry, Shared UI
+
+### Added
+- Research/Stanford aggregation helper.
+- Research Lab dashboard card contracts.
+- Research Stanford dashboard card contracts.
+- Shared read-only research summary panel primitive.
+
+### Notes
+- No SQL changed.
+- No write helpers added.
+- No route wiring changed.

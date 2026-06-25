@@ -1476,3 +1476,17 @@ Purpose: Adds read-only server repository helpers for Phase 10 Research / Stanfo
 
 ### `src/lib/repositories/index.ts`
 Purpose: Exports Phase 10 research read helpers from the repository barrel.
+
+## Phase 10 Chunk F — Aggregation, Registry, Shared UI
+
+### `src/lib/dashboard/research-stanford-dashboard-data-helpers.ts`
+Purpose: Aggregates Phase 10 read-helper outputs into research and Stanford dashboard summaries.
+
+### `src/lib/dashboard/dashboard-layout-contract.ts`
+Purpose: Adds `research_lab` and `research_stanford` as supported dashboard surfaces.
+
+### `src/lib/dashboard/dashboard-card-registry.ts`
+Purpose: Adds Phase 10 dashboard card contracts for research and Stanford surfaces.
+
+### `src/components/dashboard/research-summary-panel.tsx`
+Purpose: Adds a shared read-only research summary panel primitive.

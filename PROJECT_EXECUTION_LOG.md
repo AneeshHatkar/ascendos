@@ -2204,3 +2204,27 @@ Purpose:
 ### Result
 - Chunk E is ready for validation.
 - Next chunk after commit: Chunk F — aggregation helpers, dashboard registry extension, and shared research UI primitives.
+
+## 2026-06-25 — Phase 10 Chunk F Aggregation, Registry, Shared UI
+
+### Scope
+- Completed 10.13 aggregation helpers.
+- Completed 10.14 dashboard registry extension.
+- Completed 10.15 shared research UI primitives.
+
+### Files
+- `src/lib/dashboard/research-stanford-dashboard-data-helpers.ts`
+- `src/lib/dashboard/dashboard-layout-contract.ts`
+- `src/lib/dashboard/dashboard-card-registry.ts`
+- `src/lib/dashboard/index.ts`
+- `src/components/dashboard/research-summary-panel.tsx`
+- `src/components/dashboard/index.ts`
+
+### Boundary
+- No SQL changed.
+- No write helpers added.
+- No route wiring changed.
+- No autonomous Carnos behavior added.
+
+### Result
+- Research and Stanford dashboard surfaces now have read aggregation support, registry cards, and a shared summary panel primitive.
