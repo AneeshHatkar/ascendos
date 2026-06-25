@@ -30,3 +30,4 @@ export * from "./learning-project-detail-panels";
 export * from "./learning-project-linkage-panels";
 export * from "./research-summary-panel";
 export * from "./research-linkage-boundary-panels";
+export * from "./research-detail-panels";

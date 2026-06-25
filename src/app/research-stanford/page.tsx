@@ -1,6 +1,8 @@
 import {
   AuthenticatedDashboardShell,
   ResearchStateBoundaryPanel,
+  StanfordApplicationDetailPanel,
+  StanfordProfessorLabDetailPanel,
   ResearchSummaryPanel,
   SectionCard,
   StanfordProofLinkagePanel,
@@ -8,6 +10,7 @@ import {
 import { getDashboardCardsForSurface, getResearchStanfordDashboardDataSummary } from "@/lib/dashboard";
 import {
   listPhdApplicationAssets,
+  listPhdReadinessAssessments,
   listRecommendationTargets,
   listSopVersions,
   listTargetLabs,
@@ -31,6 +34,7 @@ export default function ResearchStanfordPage() {
             applicationAssets,
             sopVersions,
             recommendationTargets,
+            readinessAssessments,
           ] = await Promise.all([
             getResearchStanfordDashboardDataSummary(user.id),
             listTargetUniversities(user.id, { limit: 100 }),
@@ -39,6 +43,7 @@ export default function ResearchStanfordPage() {
             listPhdApplicationAssets(user.id, { limit: 100 }),
             listSopVersions(user.id, { limit: 100 }),
             listRecommendationTargets(user.id, { limit: 100 }),
+            listPhdReadinessAssessments(user.id, { limit: 100 }),
           ]);
 
           const cards = getDashboardCardsForSurface("research_stanford");
@@ -49,6 +54,7 @@ export default function ResearchStanfordPage() {
             applicationAssets.error,
             sopVersions.error,
             recommendationTargets.error,
+            readinessAssessments.error,
           ].filter((error): error is string => Boolean(error));
 
           return (
@@ -114,6 +120,19 @@ export default function ResearchStanfordPage() {
                   ))}
                 </div>
               </SectionCard>
+
+              <StanfordProfessorLabDetailPanel
+                universities={universities.data ?? []}
+                labs={labs.data ?? []}
+                professors={professors.data ?? []}
+              />
+
+              <StanfordApplicationDetailPanel
+                readinessAssessments={readinessAssessments.data ?? []}
+                applicationAssets={applicationAssets.data ?? []}
+                sopVersions={sopVersions.data ?? []}
+                recommendationTargets={recommendationTargets.data ?? []}
+              />
 
               <StanfordProofLinkagePanel
                 universities={universities.data ?? []}

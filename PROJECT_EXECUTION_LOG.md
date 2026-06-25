@@ -2268,3 +2268,21 @@ Purpose:
 
 ### Result
 - Research routes now show read-only linkage metrics and explicit privacy/safe-write boundaries.
+
+## 2026-06-25 — Phase 10 Chunk I Detail Visibility Panels
+
+### Scope
+- Completed 10.20 research idea detail visibility.
+- Completed 10.21 literature detail visibility.
+- Completed 10.22 claim/citation detail visibility.
+- Completed 10.23 experiment/result detail visibility.
+- Completed 10.24 paper/version detail visibility.
+- Completed 10.25 venue/submission detail visibility.
+- Completed 10.26 professor/lab detail visibility.
+- Completed 10.27 SOP/application/recommendation detail visibility.
+
+### Boundary
+- No SQL changed.
+- No write helpers added.
+- No autonomous Carnos behavior added.
+- No professor outreach, scraping, paper submission, or application automation added.

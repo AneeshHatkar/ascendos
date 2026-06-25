@@ -1509,3 +1509,11 @@ Purpose: Wires Research Lab linkage visibility and boundary panels into the auth
 
 ### `src/app/research-stanford/page.tsx`
 Purpose: Wires Stanford/PhD linkage visibility and boundary panels into the authenticated read route.
+
+## Phase 10 Chunk I — Detail Visibility Panels
+
+### `src/components/dashboard/research-detail-panels.tsx`
+Purpose: Adds compact read-only detail panels for research and Stanford/PhD Phase 10 records.
+
+### Research routes
+Purpose: Wires detail visibility panels into `/research-lab` and `/research-stanford`.

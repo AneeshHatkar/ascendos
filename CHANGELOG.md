@@ -652,3 +652,15 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No SQL changed.
 - No write helpers added.
 - No autonomous outreach, scraping, paper submission, or application automation added.
+
+## 2026-06-25 — Phase 10 Chunk I Detail Visibility Panels
+
+### Added
+- Research detail visibility panels.
+- Stanford/PhD detail visibility panels.
+- Route wiring for focused Phase 10 record detail.
+
+### Notes
+- No SQL changed.
+- No write helpers added.
+- No autonomous outreach, scraping, paper submission, or application automation added.

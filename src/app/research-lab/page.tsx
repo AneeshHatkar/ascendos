@@ -1,5 +1,10 @@
 import {
   AuthenticatedDashboardShell,
+  ResearchClaimCitationDetailPanel,
+  ResearchExperimentResultDetailPanel,
+  ResearchIdeaDetailPanel,
+  ResearchLiteratureDetailPanel,
+  ResearchPaperVenueDetailPanel,
   ResearchProofLinkagePanel,
   ResearchStateBoundaryPanel,
   ResearchSummaryPanel,
@@ -10,9 +15,15 @@ import {
   listResearchCitations,
   listResearchClaims,
   listResearchExperiments,
+  listResearchFeedback,
   listResearchIdeas,
+  listResearchLiteratureItems,
   listResearchPapers,
+  listResearchPaperVersions,
+  listResearchQuestions,
   listResearchResults,
+  listResearchSubmissions,
+  listResearchVenues,
 } from "@/lib/repositories";
 
 export default function ResearchLabPage() {
@@ -26,29 +37,47 @@ export default function ResearchLabPage() {
           const [
             data,
             ideas,
+            questions,
+            literatureItems,
             citations,
             claims,
             experiments,
             results,
             papers,
+            paperVersions,
+            venues,
+            submissions,
+            feedback,
           ] = await Promise.all([
             getResearchStanfordDashboardDataSummary(user.id),
             listResearchIdeas(user.id, { limit: 100 }),
+            listResearchQuestions(user.id, { limit: 100 }),
+            listResearchLiteratureItems(user.id, { limit: 100 }),
             listResearchCitations(user.id, { limit: 100 }),
             listResearchClaims(user.id, { limit: 100 }),
             listResearchExperiments(user.id, { limit: 100 }),
             listResearchResults(user.id, { limit: 100 }),
             listResearchPapers(user.id, { limit: 100 }),
+            listResearchPaperVersions(user.id, { limit: 100 }),
+            listResearchVenues(user.id, { limit: 100 }),
+            listResearchSubmissions(user.id, { limit: 100 }),
+            listResearchFeedback(user.id, { limit: 100 }),
           ]);
 
           const cards = getDashboardCardsForSurface("research_lab");
           const readErrors = [
             ideas.error,
+            questions.error,
+            literatureItems.error,
             citations.error,
             claims.error,
             experiments.error,
             results.error,
             papers.error,
+            paperVersions.error,
+            venues.error,
+            submissions.error,
+            feedback.error,
           ].filter((error): error is string => Boolean(error));
 
           return (
@@ -114,6 +143,28 @@ export default function ResearchLabPage() {
                   ))}
                 </div>
               </SectionCard>
+
+              <ResearchIdeaDetailPanel ideas={ideas.data ?? []} questions={questions.data ?? []} />
+
+              <ResearchLiteratureDetailPanel literatureItems={literatureItems.data ?? []} />
+
+              <ResearchClaimCitationDetailPanel
+                claims={claims.data ?? []}
+                citations={citations.data ?? []}
+              />
+
+              <ResearchExperimentResultDetailPanel
+                experiments={experiments.data ?? []}
+                results={results.data ?? []}
+              />
+
+              <ResearchPaperVenueDetailPanel
+                papers={papers.data ?? []}
+                paperVersions={paperVersions.data ?? []}
+                venues={venues.data ?? []}
+                submissions={submissions.data ?? []}
+                feedback={feedback.data ?? []}
+              />
 
               <ResearchProofLinkagePanel
                 ideas={ideas.data ?? []}
