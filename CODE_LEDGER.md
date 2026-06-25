@@ -1463,4 +1463,3 @@ Purpose: Adds Phase 10 Research / Stanford System SQL foundation tables, RLS ena
 
 ### `supabase/migrations/0011_phase10_parent_ownership_guards.sql`
 Purpose: Adds Phase 10 parent ownership guard functions and triggers for nullable cross-phase references.
-

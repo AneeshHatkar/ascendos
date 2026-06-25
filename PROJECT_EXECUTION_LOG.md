@@ -2174,4 +2174,3 @@ Purpose:
 ### Result
 - Chunk C.1 is ready for validation.
 - Next chunk after commit: Chunk D — database types only.
-
