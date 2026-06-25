@@ -59,6 +59,49 @@ const CAREER_DASHBOARD_LINKS: CrossDashboardLink[] = [
   },
 ];
 
+const RESEARCH_DASHBOARD_LINKS: CrossDashboardLink[] = [
+  {
+    label: "Research Lab",
+    route: "/research-lab",
+    description: "Ideas, literature, claims, experiments, results, papers, and proof linkage.",
+  },
+  {
+    label: "Research Stanford",
+    route: "/research-stanford",
+    description: "Universities, labs, professors, SOPs, recommendations, and PhD readiness.",
+  },
+  {
+    label: "Projects",
+    route: "/projects",
+    description: "Research-backed portfolio projects, releases, demos, and evidence.",
+  },
+  {
+    label: "Learning",
+    route: "/learning",
+    description: "Skill paths and practice loops that support research execution.",
+  },
+  {
+    label: "World-Class Proof",
+    route: "/world-class",
+    description: "Evidence and proof standards that support research claims, papers, SOPs, and applications.",
+  },
+  {
+    label: "Resume",
+    route: "/resume",
+    description: "Proof-backed resume packaging for research, projects, and PhD applications.",
+  },
+  {
+    label: "Goals",
+    route: "/goals",
+    description: "Execution goals connected to research milestones and application readiness.",
+  },
+  {
+    label: "Carnos",
+    route: "/carnos",
+    description: "Companion review surface and proposed-action visibility.",
+  },
+];
+
 interface CrossDashboardLinksProps {
   activeRoute: CanonicalRoute;
   title?: string;
@@ -116,6 +159,17 @@ export function CareerCrossDashboardLinks({ activeRoute }: { activeRoute: Canoni
       title="Career system links"
       description="Move between the Phase 8 career surfaces: applications, networking, resume versions, and interviews."
       links={CAREER_DASHBOARD_LINKS}
+    />
+  );
+}
+
+export function ResearchCrossDashboardLinks({ activeRoute }: { activeRoute: CanonicalRoute }) {
+  return (
+    <CrossDashboardLinks
+      activeRoute={activeRoute}
+      title="Research system links"
+      description="Move between Phase 10 research surfaces and the proof, project, learning, career, and Carnos context that supports research execution."
+      links={RESEARCH_DASHBOARD_LINKS}
     />
   );
 }

@@ -1517,3 +1517,20 @@ Purpose: Adds compact read-only detail panels for research and Stanford/PhD Phas
 
 ### Research routes
 Purpose: Wires detail visibility panels into `/research-lab` and `/research-stanford`.
+
+## Phase 10 Chunk J — Proposed-Action Visibility, Cross-Links, Audit Draft
+
+### `src/components/dashboard/research-proposed-action-visibility-panel.tsx`
+Purpose: Adds disabled read-only research proposed-action preview cards.
+
+### `src/components/dashboard/cross-dashboard-links.tsx`
+Purpose: Adds ResearchCrossDashboardLinks for Phase 10 routes.
+
+### `scripts/audit-phase-10.mjs`
+Purpose: Adds the Phase 10 structural audit gate.
+
+### `docs/qa/PHASE_10_RESEARCH_STANFORD_MANUAL_SMOKE_CHECKLIST.md`
+Purpose: Adds manual QA checklist for Research / Stanford System.
+
+### `docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT_DRAFT.md`
+Purpose: Adds draft closeout report for Phase 10.

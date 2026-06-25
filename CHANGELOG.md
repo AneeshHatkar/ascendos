@@ -664,3 +664,20 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No SQL changed.
 - No write helpers added.
 - No autonomous outreach, scraping, paper submission, or application automation added.
+
+## 2026-06-25 — Phase 10 Chunk J Proposed-Action Visibility, Cross-Links, Audit Draft
+
+### Added
+- Research proposed-action visibility panel.
+- Research cross-dashboard links.
+- Phase 10 audit script.
+- Phase 10 manual smoke checklist.
+- Phase 10 completion report draft.
+- `audit:phase10` package script.
+- Phase 10 audit added to `npm run check`.
+
+### Notes
+- No SQL changed.
+- No write helpers added.
+- No real proposed-action persistence added.
+- No autonomous outreach, scraping, paper submission, or application automation added.

@@ -4,8 +4,10 @@ import {
   ResearchExperimentResultDetailPanel,
   ResearchIdeaDetailPanel,
   ResearchLiteratureDetailPanel,
+  ResearchCrossDashboardLinks,
   ResearchPaperVenueDetailPanel,
   ResearchProofLinkagePanel,
+  ResearchProposedActionVisibilityPanel,
   ResearchStateBoundaryPanel,
   ResearchSummaryPanel,
   SectionCard,
@@ -82,6 +84,8 @@ export default function ResearchLabPage() {
 
           return (
             <>
+              <ResearchCrossDashboardLinks activeRoute="/research-lab" />
+
               <ResearchSummaryPanel
                 title="Research Lab"
                 subtitle="A read-only operating surface for turning research ideas into cited claims, reproducible experiments, results, and paper-ready proof."
@@ -174,6 +178,8 @@ export default function ResearchLabPage() {
                 results={results.data ?? []}
                 papers={papers.data ?? []}
               />
+
+              <ResearchProposedActionVisibilityPanel />
 
               <ResearchStateBoundaryPanel surface="research_lab" readErrors={readErrors} />
 

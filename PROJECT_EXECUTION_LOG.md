@@ -2286,3 +2286,34 @@ Purpose:
 - No write helpers added.
 - No autonomous Carnos behavior added.
 - No professor outreach, scraping, paper submission, or application automation added.
+
+## 2026-06-25 — Phase 10 Chunk J Proposed-Action Visibility, Cross-Links, Audit Draft
+
+### Scope
+- Completed 10.28 research proposed-action preview visibility.
+- Completed 10.29 cross-dashboard research links.
+- Completed 10.30 research route/source registry alignment.
+- Completed 10.31 Phase 10 audit gate draft.
+- Completed 10.32 Phase 10 manual smoke checklist.
+- Completed 10.33 Phase 10 completion report draft.
+
+### Files
+- `src/components/dashboard/research-proposed-action-visibility-panel.tsx`
+- `src/components/dashboard/cross-dashboard-links.tsx`
+- `src/components/dashboard/index.ts`
+- `src/app/research-lab/page.tsx`
+- `src/app/research-stanford/page.tsx`
+- `scripts/audit-phase-10.mjs`
+- `package.json`
+- `docs/qa/PHASE_10_RESEARCH_STANFORD_MANUAL_SMOKE_CHECKLIST.md`
+- `docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT_DRAFT.md`
+
+### Boundary
+- No SQL changed.
+- No write helpers added.
+- No real proposed-action persistence added.
+- No autonomous Carnos behavior added.
+- No professor outreach, scraping, paper submission, or application automation added.
+
+### Result
+- Phase 10 now has research proposal previews, cross-dashboard links, route/source registry alignment checks, an audit script, smoke checklist, and completion report draft.

@@ -1,5 +1,7 @@
 import {
   AuthenticatedDashboardShell,
+  ResearchCrossDashboardLinks,
+  ResearchProposedActionVisibilityPanel,
   ResearchStateBoundaryPanel,
   StanfordApplicationDetailPanel,
   StanfordProfessorLabDetailPanel,
@@ -59,6 +61,8 @@ export default function ResearchStanfordPage() {
 
           return (
             <>
+              <ResearchCrossDashboardLinks activeRoute="/research-stanford" />
+
               <ResearchSummaryPanel
                 title="Research Stanford"
                 subtitle="A read-only operating surface for mapping PhD targets, professor fit, Stanford readiness, SOP progress, recommendation targets, and application assets."
@@ -142,6 +146,8 @@ export default function ResearchStanfordPage() {
                 sopVersions={sopVersions.data ?? []}
                 recommendationTargets={recommendationTargets.data ?? []}
               />
+
+              <ResearchProposedActionVisibilityPanel />
 
               <ResearchStateBoundaryPanel surface="research_stanford" readErrors={readErrors} />
 
