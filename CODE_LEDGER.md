@@ -1417,3 +1417,20 @@ Change: Adds Phase 9 state boundary and cross-links to `/knowledge`.
 
 ### `src/components/dashboard/index.ts`
 Change: Exports Phase 9 linkage panels.
+
+## Phase 9 Chunk L — Closeout
+
+### `docs/phase-reports/PHASE_9_NO_WRITE_PRIVACY_AUDIT.md`
+Purpose: Records Phase 9 read-only, no-write, privacy, and deferred-scope audit.
+
+### `docs/phase-reports/PHASE_9_AUDIT_GATE.md`
+Purpose: Records Phase 9 implementation audit gate and completed chunks.
+
+### `docs/phase-reports/PHASE_9_MANUAL_SMOKE_CHECKLIST.md`
+Purpose: Defines browser smoke checks for `/learning`, `/projects`, and `/knowledge`.
+
+### `docs/phase-reports/PHASE_9_COMPLETION_REPORT.md`
+Purpose: Final Phase 9 closeout report.
+
+### `PHASE_STATUS.md`
+Change: Marks Phase 9 complete and sets Phase 10 as the next step.

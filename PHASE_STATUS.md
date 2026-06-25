@@ -646,3 +646,34 @@ Complete.
 
 ### Next Phase
 Phase 9 — Learning / Project System.
+
+## Phase 9 — Learning / Project System Complete
+
+Status: Complete
+
+Completed:
+- Learning/project SQL foundation.
+- Parent ownership hardening.
+- Database types.
+- Read helpers.
+- Aggregation helpers.
+- Learning Academy dashboard.
+- Project Builder dashboard.
+- Knowledge Vault alignment.
+- Detail panels.
+- Linkage panels.
+- Proposed-action preview visibility.
+- Empty/loading/error/privacy boundaries.
+- Cross-links.
+- No-write/privacy audit.
+- Audit gate.
+- Manual smoke checklist.
+- Completion report.
+
+Verification:
+- npm run check passed before closeout.
+- npx tsc --noEmit passed before closeout.
+- npm run lint passed before closeout.
+- git diff --check passed before closeout.
+
+Next step: Phase 10 — Research / Stanford System.
