@@ -624,3 +624,18 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No SQL changed.
 - No write helpers added.
 - No route wiring changed.
+
+## 2026-06-25 — Phase 10 Chunk G Route Read Surfaces
+
+### Added
+- Research Lab authenticated read-only route surface.
+- Research Stanford authenticated read-only route surface.
+- Safe-write boundary messaging for both research routes.
+
+### Changed
+- Replaced placeholder research pages with Phase 10 read surfaces.
+
+### Notes
+- No SQL changed.
+- No write helpers added.
+- No autonomous outreach, scraping, or submission behavior added.

@@ -1490,3 +1490,11 @@ Purpose: Adds Phase 10 dashboard card contracts for research and Stanford surfac
 
 ### `src/components/dashboard/research-summary-panel.tsx`
 Purpose: Adds a shared read-only research summary panel primitive.
+
+## Phase 10 Chunk G — Route Read Surfaces
+
+### `src/app/research-lab/page.tsx`
+Purpose: Replaces the Research Lab placeholder with an authenticated read-only route showing research idea, literature, citation, claim, experiment, paper, and registry summary state.
+
+### `src/app/research-stanford/page.tsx`
+Purpose: Replaces the Research Stanford placeholder with an authenticated read-only route showing university, lab, professor, readiness, SOP, asset, recommendation, and registry summary state.

@@ -1,10 +1,99 @@
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import {
+  AuthenticatedDashboardShell,
+  ResearchSummaryPanel,
+  SectionCard,
+} from "@/components/dashboard";
+import { getDashboardCardsForSurface, getResearchStanfordDashboardDataSummary } from "@/lib/dashboard";
 
 export default function ResearchLabPage() {
   return (
-    <PlaceholderDashboardPage
-      title="Research Lab"
-      subtitle="Experiments, notes, hypotheses, citations, methods, and paper-building workflows."
-    />
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
+      <AuthenticatedDashboardShell
+        title="Research Lab"
+        description="Read-only research surface for ideas, literature, citations, claims, experiments, results, papers, venues, submissions, and feedback."
+      >
+        {async ({ user }) => {
+          const data = await getResearchStanfordDashboardDataSummary(user.id);
+          const cards = getDashboardCardsForSurface("research_lab");
+
+          return (
+            <>
+              <ResearchSummaryPanel
+                title="Research Lab"
+                subtitle="A read-only operating surface for turning research ideas into cited claims, reproducible experiments, results, and paper-ready proof."
+                boundaryNote="Phase 10 route boundary: this page reads research state only. It does not create papers, mutate SQL, submit work, contact professors, or allow Carnos to write."
+                metrics={[
+                  {
+                    label: "Ideas",
+                    value: data.research.research_idea_count,
+                    detail: `${data.research.active_research_idea_count} active or exploring`,
+                  },
+                  {
+                    label: "Literature",
+                    value: data.research.literature_item_count,
+                    detail: `${data.research.cited_literature_count} cited`,
+                  },
+                  {
+                    label: "Citations",
+                    value: data.research.citation_count,
+                    detail: "Evidence links across literature, claims, papers, and versions",
+                  },
+                  {
+                    label: "Claims",
+                    value: data.research.claim_count,
+                    detail: `${data.research.supported_claim_count} supported`,
+                  },
+                  {
+                    label: "Experiments",
+                    value: data.research.experiment_count,
+                    detail: `${data.research.completed_experiment_count} completed`,
+                  },
+                  {
+                    label: "Papers",
+                    value: data.research.paper_count,
+                    detail: `${data.research.submission_ready_paper_count} submission-ready or beyond`,
+                  },
+                ]}
+              />
+
+              <SectionCard
+                title="Research cards"
+                description="Dashboard registry contracts now attached to the Research Lab surface."
+                eyebrow="Registry"
+              >
+                <div className="grid gap-3 md:grid-cols-2">
+                  {cards.map((card) => (
+                    <article
+                      key={card.id}
+                      className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+                    >
+                      <p className="text-xs uppercase tracking-[0.22em] text-cyan-300/80">
+                        {card.region} · {card.priority}
+                      </p>
+                      <h2 className="mt-2 text-base font-semibold text-white">{card.title}</h2>
+                      <p className="mt-1 text-sm text-slate-300">{card.description}</p>
+                      <p className="mt-3 text-xs text-slate-500">
+                        Sources: {card.sourceTables.join(", ")}
+                      </p>
+                    </article>
+                  ))}
+                </div>
+              </SectionCard>
+
+              <SectionCard
+                title="Research route boundary"
+                description="This route intentionally exposes visibility before action."
+                eyebrow="Safe-write law"
+              >
+                <p className="text-sm text-slate-300">
+                  Python/ML advises. The app validates. The user confirms. The server writes. SQL
+                  records. Audit logs. Phase 10 read routes do not bypass this loop.
+                </p>
+              </SectionCard>
+            </>
+          );
+        }}
+      </AuthenticatedDashboardShell>
+    </main>
   );
 }

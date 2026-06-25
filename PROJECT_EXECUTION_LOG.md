@@ -2228,3 +2228,22 @@ Purpose:
 
 ### Result
 - Research and Stanford dashboard surfaces now have read aggregation support, registry cards, and a shared summary panel primitive.
+
+## 2026-06-25 — Phase 10 Chunk G Research Route Read Surfaces
+
+### Scope
+- Completed 10.16 Research Lab route read surface.
+- Completed 10.17 Research Stanford route read surface.
+
+### Files
+- `src/app/research-lab/page.tsx`
+- `src/app/research-stanford/page.tsx`
+
+### Boundary
+- No SQL changed.
+- No write helpers added.
+- No autonomous Carnos behavior added.
+- No professor outreach, scraping, paper submission, or application automation added.
+
+### Result
+- Research placeholder routes now render authenticated read-only summary surfaces backed by Phase 10 aggregation helpers and dashboard registry cards.
