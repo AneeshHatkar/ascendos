@@ -2160,3 +2160,18 @@ Purpose:
 ### Result
 - Chunk C is ready for validation.
 - Next chunk after commit: Chunk C.1 — parent ownership/RLS hardening.
+
+## 2026-06-25 — Phase 10 Chunk C.1 Parent Ownership Guards
+
+### Scope
+- Completed 10.8 ownership/RLS hardening.
+- Added Phase 10 parent ownership guard migration.
+- Added helper functions and triggers to prevent Phase 10 rows from linking to parent records owned by another user.
+
+### Files
+- `supabase/migrations/0011_phase10_parent_ownership_guards.sql`
+
+### Result
+- Chunk C.1 is ready for validation.
+- Next chunk after commit: Chunk D — database types only.
+

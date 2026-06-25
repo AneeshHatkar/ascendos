@@ -569,3 +569,18 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No read helpers changed.
 - No old migration edited.
 - Next: Phase 10 Chunk C.1 parent ownership/RLS hardening.
+
+## 2026-06-25 — Phase 10 Chunk C.1 Parent Ownership Guards
+
+### Added
+- Phase 10 parent ownership guard migration.
+- Helper functions for parent ownership validation.
+- Insert/update triggers for Phase 10 records with nullable cross-phase references.
+
+### Notes
+- No app code changed.
+- No database types changed.
+- No read helpers changed.
+- No old migration edited.
+- Next: Phase 10 Chunk D database types.
+

@@ -1458,3 +1458,9 @@ Purpose: Maps Phase 10 scope to existing foundations, safe-link strategy, and de
 
 ### `supabase/migrations/0010_phase10_research_stanford_foundation.sql`
 Purpose: Adds Phase 10 Research / Stanford System SQL foundation tables, RLS enablement, owner-scoped SELECT/INSERT policies, and required user indexes.
+
+## Phase 10 Chunk C.1 — Parent Ownership Guards
+
+### `supabase/migrations/0011_phase10_parent_ownership_guards.sql`
+Purpose: Adds Phase 10 parent ownership guard functions and triggers for nullable cross-phase references.
+
