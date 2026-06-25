@@ -2006,3 +2006,20 @@ Purpose:
 ### Result
 - Phase 9 has dashboard-ready registry cards, aggregation helpers, and reusable UI primitives.
 - Next chunk: Chunk G — Learning Academy dashboard and `/learning` route.
+
+## 2026-06-24 — Phase 9 Chunk G Learning Academy Dashboard
+
+### Scope
+- Added the Learning Academy dashboard component.
+- Wired `/learning` to read Phase 9 learning records through authenticated, read-only repository helpers.
+- Rendered skill paths, skills, sessions, quizzes, attempts, and progress records.
+- Preserved no-write behavior.
+
+### Files
+- `src/components/dashboard/learning-academy-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+- `src/app/learning/page.tsx`
+
+### Result
+- `/learning` now has a real Phase 9 read-only dashboard.
+- Next chunk: Chunk H — Project Builder dashboard and `/projects` route.

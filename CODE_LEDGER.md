@@ -1353,3 +1353,14 @@ Change: Exports Phase 9 aggregation helpers.
 
 ### `src/components/dashboard/index.ts`
 Change: Exports Phase 9 shared UI primitive.
+
+## Phase 9 Chunk G — Learning Academy Dashboard
+
+### `src/components/dashboard/learning-academy-dashboard-v1.tsx`
+Purpose: Adds read-only Learning Academy dashboard UI for Phase 9 skill paths, skills, learning sessions, quizzes, attempts, and skill progress.
+
+### `src/app/learning/page.tsx`
+Purpose: Wires `/learning` to authenticated Phase 9 learning reads instead of the generic domain placeholder.
+
+### `src/components/dashboard/index.ts`
+Change: Exports the Learning Academy dashboard component.

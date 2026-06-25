@@ -460,3 +460,13 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ### Notes
 - No `/learning` or `/projects` route implementation changed yet.
 - No write behavior added.
+
+## 2026-06-24 — Phase 9 Chunk G Learning Academy Dashboard
+
+### Added
+- Learning Academy dashboard component.
+- `/learning` route wired to Phase 9 read-only learning data.
+
+### Notes
+- No write behavior added.
+- No proposed-action execution added.
