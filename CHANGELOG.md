@@ -540,3 +540,18 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No database types changed.
 - No old phase migration edited.
 - Next: Phase 10 Chunk B schema design.
+
+## 2026-06-25 — Phase 10 Chunk B Schema Design
+
+### Added
+- Phase 10 research schema design.
+- Phase 10 Stanford/PhD schema design.
+- Phase 10 source-to-scope traceability matrix.
+
+### Notes
+- No SQL changed.
+- No app code changed.
+- No database types changed.
+- No old migration edited.
+- Next: Phase 10 Chunk C SQL foundation.
+

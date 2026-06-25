@@ -1442,3 +1442,15 @@ Purpose: Locks the upgraded 36-step Phase 10 Research / Stanford System plan and
 
 ### `docs/phase-reports/PHASE_10_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
 Purpose: Records initial source, route, component, proposed-action, database-type, read-helper, and migration inspection for Phase 10.
+
+## Phase 10 Chunk B — Schema Design and Traceability
+
+### `docs/database/PHASE_10_RESEARCH_SCHEMA_DESIGN.md`
+Purpose: Designs the Phase 10 research-side schema before SQL implementation.
+
+### `docs/database/PHASE_10_STANFORD_PHD_SCHEMA_DESIGN.md`
+Purpose: Designs the Phase 10 Stanford/PhD readiness schema before SQL implementation.
+
+### `docs/phase-reports/PHASE_10_SOURCE_TO_SCOPE_TRACEABILITY.md`
+Purpose: Maps Phase 10 scope to existing foundations, safe-link strategy, and deferred future phases.
+
