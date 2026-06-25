@@ -8,6 +8,10 @@ import {
   type DataListItem,
 } from "@/components/dashboard";
 import type { LearningProjectDashboardDataResult } from "@/lib/dashboard";
+import {
+  LearningProjectCrossLinks,
+  LearningProjectStateBoundaryPanel,
+} from "@/components/dashboard/learning-project-linkage-panels";
 import type {
   ProjectLinkRow,
   ProjectRow,
@@ -307,6 +311,10 @@ export function KnowledgeVaultAlignmentV1({
       >
         <ProjectKnowledgeSources projects={projects} projectLinks={projectLinks} />
       </SectionCard>
+
+      <LearningProjectStateBoundaryPanel surface="knowledge" />
+
+      <LearningProjectCrossLinks activeRoute="/knowledge" />
 
       <SectionCard
         title="Deferred memory/RAG boundary"

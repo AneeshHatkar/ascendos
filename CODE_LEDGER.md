@@ -1400,3 +1400,20 @@ Change: Adds project build-log detail panel.
 
 ### `src/components/dashboard/index.ts`
 Change: Exports Phase 9 detail panels.
+
+## Phase 9 Chunk K — Linkage and State Surfaces
+
+### `src/components/dashboard/learning-project-linkage-panels.tsx`
+Purpose: Adds read-only linkage, proposed-action visibility, state/privacy boundary, and cross-link panels for Phase 9.
+
+### `src/components/dashboard/learning-academy-dashboard-v1.tsx`
+Change: Wires Phase 9 linkage, operating, proposed-action, state, and cross-link panels into `/learning`.
+
+### `src/components/dashboard/project-builder-dashboard-v1.tsx`
+Change: Wires Phase 9 linkage, operating, proposed-action, state, and cross-link panels into `/projects`.
+
+### `src/components/dashboard/knowledge-vault-alignment-v1.tsx`
+Change: Adds Phase 9 state boundary and cross-links to `/knowledge`.
+
+### `src/components/dashboard/index.ts`
+Change: Exports Phase 9 linkage panels.

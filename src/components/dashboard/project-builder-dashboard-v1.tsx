@@ -9,6 +9,13 @@ import {
 } from "@/components/dashboard";
 import type { LearningProjectDashboardDataResult } from "@/lib/dashboard";
 import { ProjectBuildLogDetailPanel } from "@/components/dashboard/learning-project-detail-panels";
+import {
+  LearningProjectCrossLinks,
+  LearningProjectEvidenceLinkagePanel,
+  LearningProjectOperatingLinkagePanel,
+  LearningProjectProposedActionVisibilityPanel,
+  LearningProjectStateBoundaryPanel,
+} from "@/components/dashboard/learning-project-linkage-panels";
 import type {
   ProjectBugRow,
   ProjectLinkRow,
@@ -458,6 +465,23 @@ export function ProjectBuilderDashboardV1({
         tests={tests}
         releases={releases}
       />
+
+      <LearningProjectEvidenceLinkagePanel
+        projects={projects}
+        releases={releases}
+        projectLinks={links}
+      />
+
+      <LearningProjectOperatingLinkagePanel
+        projects={projects}
+        releases={releases}
+      />
+
+      <LearningProjectProposedActionVisibilityPanel />
+
+      <LearningProjectStateBoundaryPanel surface="projects" />
+
+      <LearningProjectCrossLinks activeRoute="/projects" />
     </div>
   );
 }

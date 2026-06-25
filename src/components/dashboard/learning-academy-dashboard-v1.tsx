@@ -9,6 +9,13 @@ import {
 } from "@/components/dashboard";
 import type { LearningProjectDashboardDataResult } from "@/lib/dashboard";
 import { SkillPathProgressDetailPanel, QuizSessionDetailPanel } from "@/components/dashboard/learning-project-detail-panels";
+import {
+  LearningProjectCrossLinks,
+  LearningProjectEvidenceLinkagePanel,
+  LearningProjectOperatingLinkagePanel,
+  LearningProjectProposedActionVisibilityPanel,
+  LearningProjectStateBoundaryPanel,
+} from "@/components/dashboard/learning-project-linkage-panels";
 import type {
   LearningSessionRow,
   QuizAttemptRow,
@@ -417,6 +424,20 @@ export function LearningAcademyDashboardV1({
         skills={skills}
         progress={skillProgress}
       />
+
+      <LearningProjectEvidenceLinkagePanel
+        learningSessions={learningSessions}
+        quizAttempts={quizAttempts}
+        skillProgress={skillProgress}
+      />
+
+      <LearningProjectOperatingLinkagePanel skillProgress={skillProgress} />
+
+      <LearningProjectProposedActionVisibilityPanel />
+
+      <LearningProjectStateBoundaryPanel surface="learning" />
+
+      <LearningProjectCrossLinks activeRoute="/learning" />
 
       <QuizSessionDetailPanel
         sessions={learningSessions}

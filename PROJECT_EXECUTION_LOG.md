@@ -2074,3 +2074,24 @@ Purpose:
 ### Result
 - Learning and project dashboards now include Phase 9 focused detail views.
 - Next chunk: Chunk K — proof, goals/tasks/timeline linkage, proposed-action visibility, states, and cross-links.
+
+## 2026-06-24 — Phase 9 Chunk K Linkage and State Surfaces
+
+### Scope
+- Added README/resume/proof linkage surface.
+- Added goal/task/timeline linkage surface.
+- Added preview-only proposed-action visibility panel.
+- Added empty/loading/error/privacy boundary panel.
+- Added Phase 9 cross-dashboard links.
+- Wired linkage panels into `/learning`, `/projects`, and `/knowledge`.
+
+### Files
+- `src/components/dashboard/learning-project-linkage-panels.tsx`
+- `src/components/dashboard/learning-academy-dashboard-v1.tsx`
+- `src/components/dashboard/project-builder-dashboard-v1.tsx`
+- `src/components/dashboard/knowledge-vault-alignment-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Result
+- Phase 9 surfaces now show linkage, state boundaries, proposed-action previews, and cross-links while remaining read-only.
+- Next chunk: Chunk L — Phase 9 audits, smoke checklist, completion report, and closeout.

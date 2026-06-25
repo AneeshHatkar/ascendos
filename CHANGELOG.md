@@ -501,3 +501,15 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ### Notes
 - No write behavior added.
 - No proposed-action execution added.
+
+## 2026-06-24 — Phase 9 Chunk K Linkage and State Surfaces
+
+### Added
+- Learning/project proof, resume, README, goal, task, and timeline linkage surfaces.
+- Preview-only proposed-action visibility panel.
+- Empty/loading/error/privacy boundary panel.
+- Cross-dashboard links for learning, projects, knowledge, proof, goals, timeline, resume, and Carnos.
+
+### Notes
+- No write behavior added.
+- No proposed-action execution added.
