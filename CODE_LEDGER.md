@@ -1434,3 +1434,11 @@ Purpose: Final Phase 9 closeout report.
 
 ### `PHASE_STATUS.md`
 Change: Marks Phase 9 complete and sets Phase 10 as the next step.
+
+## Phase 10 Chunk A — Source and Route Inspection
+
+### `docs/phase-plans/PHASE_10_RESEARCH_STANFORD_SYSTEM.md`
+Purpose: Locks the upgraded 36-step Phase 10 Research / Stanford System plan and 11-chunk build sequence.
+
+### `docs/phase-reports/PHASE_10_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
+Purpose: Records initial source, route, component, proposed-action, database-type, read-helper, and migration inspection for Phase 10.

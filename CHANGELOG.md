@@ -527,3 +527,16 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 
 ### Next
 - Phase 10 — Research / Stanford System.
+
+## 2026-06-25 — Phase 10 Chunk A Research / Stanford Planning
+
+### Added
+- Phase 10 Research / Stanford System plan.
+- Phase 10 Chunk A source and route inspection report.
+
+### Notes
+- No app code changed.
+- No SQL changed.
+- No database types changed.
+- No old phase migration edited.
+- Next: Phase 10 Chunk B schema design.
