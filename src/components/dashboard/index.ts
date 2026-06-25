@@ -25,3 +25,4 @@ export * from "./career-state-boundary-panel";
 export * from "./learning-project-summary-panel";
 export * from "./learning-academy-dashboard-v1";
 export * from "./project-builder-dashboard-v1";
+export * from "./knowledge-vault-alignment-v1";

@@ -480,3 +480,13 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ### Notes
 - No write behavior added.
 - No proposed-action execution added.
+
+## 2026-06-24 — Phase 9 Chunk I Knowledge Route Alignment
+
+### Added
+- Knowledge Vault alignment dashboard.
+- `/knowledge` route wired to Phase 9 learning/project source records.
+
+### Notes
+- Full memory/RAG remains deferred to later phases.
+- No write behavior added.

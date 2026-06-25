@@ -2040,3 +2040,20 @@ Purpose:
 ### Result
 - `/projects` now has a real Phase 9 read-only dashboard.
 - Next chunk: Chunk I — `/knowledge` route alignment.
+
+## 2026-06-24 — Phase 9 Chunk I Knowledge Route Alignment
+
+### Scope
+- Added Knowledge Vault alignment dashboard.
+- Wired `/knowledge` to read Phase 9 learning/project source records.
+- Explicitly preserved the boundary that full memory/RAG belongs to later phases.
+- Preserved no-write behavior.
+
+### Files
+- `src/components/dashboard/knowledge-vault-alignment-v1.tsx`
+- `src/components/dashboard/index.ts`
+- `src/app/knowledge/page.tsx`
+
+### Result
+- `/knowledge` now reflects Phase 9 learning/project source alignment without implementing Phase 15 memory/RAG.
+- Next chunk: Chunk J — skill path/progress, quiz/session, and project build-log detail panels.
