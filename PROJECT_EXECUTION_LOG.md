@@ -2622,3 +2622,26 @@ Purpose:
 - No RLS policy changed.
 - No database type change added.
 - No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.
+
+## 2026-06-26 — Nutrition Dashboard Route Wiring
+
+### Scope
+- Rewired `/nutrition` from a placeholder page to a read-only nutrition dashboard.
+- Added a nutrition-focused dashboard component using existing health/body summary helpers.
+- Added dashboard component export wiring.
+- Fixed a small text spacing typo in the shared health/body boundary notice.
+
+### Files
+- `src/app/nutrition/page.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/index.ts`
+
+### Schema
+- No schema change needed.
+
+### Boundary
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.

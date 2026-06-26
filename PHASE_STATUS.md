@@ -981,3 +981,24 @@ No schema change needed.
 
 ### Boundary
 No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.
+
+## Nutrition Dashboard Route Wiring
+
+### Status
+Completed pending verification.
+
+### Completed Work
+- Wired `/nutrition` to a read-only nutrition dashboard.
+- Added a nutrition-focused dashboard component.
+
+### Schema
+No schema change needed.
+
+### Files
+- `src/app/nutrition/page.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/index.ts`
+
+### Boundary
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.

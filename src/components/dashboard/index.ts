@@ -34,3 +34,4 @@ export * from "./research-detail-panels";
 export * from "./research-proposed-action-visibility-panel";
 export * from "./health-body-dashboard-v1";
 export * from "./health-body-dashboard-states";
+export * from "./health-body-nutrition-dashboard-v1";

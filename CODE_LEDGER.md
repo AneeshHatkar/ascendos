@@ -1687,3 +1687,21 @@ Purpose: Wires the `/body` route to the read-only health/body dashboard overview
 Schema: No schema change needed.
 
 Boundary: No writes, SQL migration, database type change, storage/upload behavior, or Carnos action was added.
+
+## Nutrition Dashboard Route Wiring
+
+### `src/app/nutrition/page.tsx`
+Purpose: Wires `/nutrition` to a protected, read-only nutrition dashboard.
+
+### `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+Purpose: Provides a nutrition-focused read-only dashboard for nutrition logs, meal items, supplements, and recent related health signals.
+
+### `src/components/dashboard/health-body-dashboard-states.tsx`
+Purpose: Fixed a small text spacing typo in the read-only boundary notice.
+
+### `src/components/dashboard/index.ts`
+Purpose: Exports the nutrition dashboard component.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, or Carnos action was added.
