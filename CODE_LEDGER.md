@@ -1623,3 +1623,13 @@ Boundary: No SQL, repositories, read helpers, dashboards, routes, storage/upload
 Purpose: Adds the actual TypeScript table definitions and aliases for the 16 Phase 11 health/body SQL tables after the previous Chunk D commit only updated documentation/log files.
 
 Boundary: No SQL, repositories, read helpers, dashboards, routes, storage/upload behavior, or Carnos writes are added.
+
+## Phase 11 Chunk E1 — Read Helper Foundation
+
+### `src/lib/repositories/health-body-read.ts`
+Purpose: Provides read-only repository list helpers for the 16 Phase 11 health/body SQL tables.
+
+### `src/lib/repositories/index.ts`
+Purpose: Exports the health/body read helper module.
+
+Boundary: No writes, mutations, SQL, dashboards, routes, storage/upload behavior, or Carnos actions are added.

@@ -882,3 +882,18 @@ The prior Chunk D commit updated documentation/log files but did not modify `src
 
 ### Boundary
 No SQL migration, RLS policy, parent ownership trigger, read helper, route, dashboard, storage/upload behavior, Carnos write behavior, Python/ML execution, candidate baseline table, or progress photo table was added.
+
+## Phase 11 Chunk E1 — Read Helper Foundation
+
+### Status
+Completed pending verification.
+
+### Completed Steps
+- 11.18 Read helpers foundation
+
+### Files
+- `src/lib/repositories/health-body-read.ts`
+- `src/lib/repositories/index.ts`
+
+### Boundary
+No SQL migration, RLS policy, parent ownership trigger, write helper, dashboard, route, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot, candidate baseline table, or progress photo table was added.

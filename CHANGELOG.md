@@ -803,3 +803,12 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 
 ### Added
 - Actual `src/types/database.ts` table entries and aliases for the 16 Phase 11 health/body tables.
+
+## 2026-06-25 — Phase 11 Chunk E1 Read Helper Foundation
+
+### Added
+- Read-only repository helpers for Phase 11 health/body tables.
+- Repository export wiring for health/body helpers.
+
+### Notes
+- No write helpers, SQL migrations, dashboards, routes, storage/upload behavior, Carnos actions, baseline table, or progress photo table added.

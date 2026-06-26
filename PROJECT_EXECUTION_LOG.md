@@ -2512,3 +2512,18 @@ Purpose:
 - No RLS policy changed.
 - No parent ownership trigger changed.
 - No read helpers, repositories, dashboards, routes, storage/upload behavior, or Carnos write behavior added.
+
+## 2026-06-25 — Phase 11 Chunk E1 Read Helper Foundation
+
+### Scope
+- Added read-only repository helpers for Phase 11 health/body tables.
+- Added repository export wiring for health/body read helpers.
+
+### Files
+- `src/lib/repositories/health-body-read.ts`
+- `src/lib/repositories/index.ts`
+
+### Boundary
+- No SQL migration added.
+- No RLS policy changed.
+- No write helpers, server mutations, Carnos actions, dashboards, routes, UI components, storage/upload behavior, analytics snapshots, progress photo table, or baseline table added.
