@@ -774,3 +774,15 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No `health_body_baselines` table added.
 - No `progress_photos` table added.
 - No app routes, dashboards, repositories, or database TypeScript types changed.
+
+## 2026-06-25 — Phase 11 Chunk C.1 Parent Ownership Guards
+
+### Added
+- Phase 11 parent ownership guard migration.
+- Parent ownership validation functions for Phase 11.
+- Before insert/update ownership guard triggers for Phase 11 child tables.
+
+### Notes
+- No new tables added.
+- No database TypeScript types changed.
+- No repositories, routes, dashboards, storage/upload behavior, or Carnos write behavior added.

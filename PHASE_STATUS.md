@@ -840,3 +840,17 @@ Completed pending verification.
 
 ### Boundary
 No parent ownership guards, database TypeScript types, repositories, routes, dashboards, storage/upload behavior, Carnos writes, Python/ML execution, candidate baseline table, or progress photo table were added.
+
+## Phase 11 Chunk C.1 — Parent Ownership Guards
+
+### Status
+Completed pending verification.
+
+### Completed Steps
+- 11.16 RLS / ownership guards
+
+### Files
+- `supabase/migrations/0013_phase11_parent_ownership_guards.sql`
+
+### Boundary
+No new tables, database TypeScript types, repositories, routes, dashboards, storage/upload behavior, Carnos writes, Python/ML execution, candidate baseline table, or progress photo table were added.

@@ -1602,3 +1602,10 @@ Purpose: Updated with B3 safety, duplicate-log, missing-vs-zero, target, and tre
 Purpose: Creates the source-confirmed Phase 11 health/body SQL tables with owner-scoped RLS, updated_at triggers, and basic indexes.
 
 Boundary: Parent ownership triggers are deferred to Chunk C.1. Candidate tables such as `health_body_baselines` and `progress_photos` are not created.
+
+## Phase 11 Chunk C.1 — Parent Ownership Guards
+
+### `supabase/migrations/0013_phase11_parent_ownership_guards.sql`
+Purpose: Adds Phase 11 parent ownership validation functions and before insert/update triggers for Phase 11 tables with parent foreign keys.
+
+Boundary: No new tables, TypeScript types, read helpers, routes, dashboards, storage behavior, or Carnos writes are added.

@@ -2461,3 +2461,23 @@ Purpose:
 - No storage buckets or upload behavior added.
 - No database TypeScript types changed.
 - No repositories, helpers, routes, dashboards, or Carnos write behavior added.
+
+## 2026-06-25 — Phase 11 Chunk C.1 Parent Ownership Guards
+
+### Scope
+- Added Phase 11 parent ownership guard migration.
+- Added `phase11_parent_belongs_to_user`.
+- Added `phase11_assert_parent_belongs_to_user`.
+- Added `phase11_validate_parent_ownership`.
+- Added before insert/update ownership guard triggers for Phase 11 tables with parent foreign keys.
+
+### Files
+- `supabase/migrations/0013_phase11_parent_ownership_guards.sql`
+
+### Boundary
+- No new tables added.
+- No Phase 11 table shape changed.
+- No `health_body_baselines` table added.
+- No `progress_photos` table added.
+- No database TypeScript types changed.
+- No repositories, helpers, routes, dashboards, storage/upload behavior, or Carnos write behavior added.
