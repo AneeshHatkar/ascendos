@@ -1633,3 +1633,13 @@ Purpose: Provides read-only repository list helpers for the 16 Phase 11 health/b
 Purpose: Exports the health/body read helper module.
 
 Boundary: No writes, mutations, SQL, dashboards, routes, storage/upload behavior, or Carnos actions are added.
+
+## Phase 11 Chunk E2 — Dashboard Summary Helper Foundation
+
+### `src/lib/dashboard/health-body-dashboard-data-helpers.ts`
+Purpose: Provides read-only health/body dashboard summary aggregation over Phase 11 repository helpers.
+
+### `src/lib/dashboard/index.ts`
+Purpose: Exports the health/body dashboard summary helper module.
+
+Boundary: No writes, mutations, SQL, dashboards, routes, storage/upload behavior, or Carnos actions are added.

@@ -897,3 +897,18 @@ Completed pending verification.
 
 ### Boundary
 No SQL migration, RLS policy, parent ownership trigger, write helper, dashboard, route, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot, candidate baseline table, or progress photo table was added.
+
+## Phase 11 Chunk E2 — Dashboard Summary Helper Foundation
+
+### Status
+Completed pending verification.
+
+### Completed Steps
+- 11.19 Focused read helpers / dashboard summary helper foundation
+
+### Files
+- `src/lib/dashboard/health-body-dashboard-data-helpers.ts`
+- `src/lib/dashboard/index.ts`
+
+### Boundary
+No SQL migration, RLS policy, parent ownership trigger, write helper, dashboard route, UI component, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.

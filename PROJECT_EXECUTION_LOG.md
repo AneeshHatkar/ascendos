@@ -2527,3 +2527,19 @@ Purpose:
 - No SQL migration added.
 - No RLS policy changed.
 - No write helpers, server mutations, Carnos actions, dashboards, routes, UI components, storage/upload behavior, analytics snapshots, progress photo table, or baseline table added.
+
+## 2026-06-26 — Phase 11 Chunk E2 Dashboard Summary Helper Foundation
+
+### Scope
+- Added read-only health/body dashboard summary helper.
+- Aggregates Phase 11 repository read results into dashboard-ready summary counts.
+- Added dashboard helper export wiring.
+
+### Files
+- `src/lib/dashboard/health-body-dashboard-data-helpers.ts`
+- `src/lib/dashboard/index.ts`
+
+### Boundary
+- No SQL migration added.
+- No RLS policy changed.
+- No write helpers, server mutations, Carnos actions, UI components, dashboards, routes, storage/upload behavior, analytics snapshots, progress photo table, or baseline table added.

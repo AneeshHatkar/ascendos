@@ -812,3 +812,12 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 
 ### Notes
 - No write helpers, SQL migrations, dashboards, routes, storage/upload behavior, Carnos actions, baseline table, or progress photo table added.
+
+## 2026-06-26 — Phase 11 Chunk E2 Dashboard Summary Helper Foundation
+
+### Added
+- Read-only health/body dashboard summary helper.
+- Dashboard helper export wiring for Phase 11 health/body summaries.
+
+### Notes
+- No write helpers, SQL migrations, dashboards, routes, storage/upload behavior, Carnos actions, baseline table, or progress photo table added.

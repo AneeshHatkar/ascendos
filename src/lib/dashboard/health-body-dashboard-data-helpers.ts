@@ -1,0 +1,203 @@
+import {
+  listBodyLogs,
+  listEmotionLogs,
+  listEnergyLogs,
+  listHaircareLogs,
+  listJournalEntries,
+  listMealItems,
+  listMentalHealthLogs,
+  listNutritionLogs,
+  listProducts,
+  listSkincareLogs,
+  listSleepLogs,
+  listSupplementLogs,
+  listSupplements,
+  listWorkoutSets,
+  listWorkouts,
+} from "@/lib/repositories";
+
+export interface HealthBodyDashboardSummary {
+  body_log_count: number;
+  workout_count: number;
+  workout_set_count: number;
+  nutrition_log_count: number;
+  meal_item_count: number;
+  supplement_count: number;
+  active_supplement_count: number;
+  supplement_log_count: number;
+  sleep_log_count: number;
+  energy_log_count: number;
+  mental_health_log_count: number;
+  emotion_log_count: number;
+  journal_entry_count: number;
+  skincare_log_count: number;
+  haircare_log_count: number;
+  product_count: number;
+  active_product_count: number;
+  recent_health_signal_count: number;
+  read_only_boundary: true;
+}
+
+export interface HealthBodyDashboardDataResult {
+  summary: HealthBodyDashboardSummary;
+  generated_at: string;
+  source_tables: string[];
+  warnings: string[];
+}
+
+const RECENT_WINDOW_DAYS = 7;
+const DEFAULT_SUMMARY_LIMIT = 100;
+
+function asRows<T>(result: { data: T[] | null; error: string | null }): T[] {
+  return result.data ?? [];
+}
+
+function collectWarning(label: string, error: string | null): string | null {
+  if (!error) {
+    return null;
+  }
+
+  return `${label}: ${error}`;
+}
+
+function isWithinRecentWindow(value: string | null | undefined): boolean {
+  if (!value) {
+    return false;
+  }
+
+  const candidate = new Date(value);
+  if (Number.isNaN(candidate.getTime())) {
+    return false;
+  }
+
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - RECENT_WINDOW_DAYS);
+
+  return candidate.getTime() >= cutoff.getTime();
+}
+
+export async function getHealthBodyDashboardDataSummary(
+  userId: string,
+): Promise<HealthBodyDashboardDataResult> {
+  const [
+    bodyLogs,
+    workouts,
+    workoutSets,
+    nutritionLogs,
+    mealItems,
+    supplements,
+    activeSupplements,
+    supplementLogs,
+    sleepLogs,
+    energyLogs,
+    mentalHealthLogs,
+    emotionLogs,
+    journalEntries,
+    skincareLogs,
+    haircareLogs,
+    products,
+    activeProducts,
+  ] = await Promise.all([
+    listBodyLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listWorkouts(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listWorkoutSets(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listNutritionLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listMealItems(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listSupplements(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listSupplements(userId, { active: true, limit: DEFAULT_SUMMARY_LIMIT }),
+    listSupplementLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listSleepLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listEnergyLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listMentalHealthLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listEmotionLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listJournalEntries(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listSkincareLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listHaircareLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listProducts(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listProducts(userId, { active: true, limit: DEFAULT_SUMMARY_LIMIT }),
+  ]);
+
+  const bodyRows = asRows(bodyLogs);
+  const workoutRows = asRows(workouts);
+  const nutritionRows = asRows(nutritionLogs);
+  const sleepRows = asRows(sleepLogs);
+  const energyRows = asRows(energyLogs);
+  const mentalRows = asRows(mentalHealthLogs);
+  const emotionRows = asRows(emotionLogs);
+  const skincareRows = asRows(skincareLogs);
+  const haircareRows = asRows(haircareLogs);
+
+  const recentHealthSignalCount =
+    bodyRows.filter((item) => isWithinRecentWindow(item.log_date)).length +
+    workoutRows.filter((item) => isWithinRecentWindow(item.workout_date)).length +
+    nutritionRows.filter((item) => isWithinRecentWindow(item.log_date)).length +
+    sleepRows.filter((item) => isWithinRecentWindow(item.sleep_date)).length +
+    energyRows.filter((item) => isWithinRecentWindow(item.log_date)).length +
+    mentalRows.filter((item) => isWithinRecentWindow(item.log_date)).length +
+    emotionRows.filter((item) => isWithinRecentWindow(item.occurred_at)).length +
+    skincareRows.filter((item) => isWithinRecentWindow(item.log_date)).length +
+    haircareRows.filter((item) => isWithinRecentWindow(item.log_date)).length;
+
+  const warnings = [
+    collectWarning("body_logs", bodyLogs.error),
+    collectWarning("workouts", workouts.error),
+    collectWarning("workout_sets", workoutSets.error),
+    collectWarning("nutrition_logs", nutritionLogs.error),
+    collectWarning("meal_items", mealItems.error),
+    collectWarning("supplements", supplements.error),
+    collectWarning("active_supplements", activeSupplements.error),
+    collectWarning("supplement_logs", supplementLogs.error),
+    collectWarning("sleep_logs", sleepLogs.error),
+    collectWarning("energy_logs", energyLogs.error),
+    collectWarning("mental_health_logs", mentalHealthLogs.error),
+    collectWarning("emotion_logs", emotionLogs.error),
+    collectWarning("journal_entries", journalEntries.error),
+    collectWarning("skincare_logs", skincareLogs.error),
+    collectWarning("haircare_logs", haircareLogs.error),
+    collectWarning("products", products.error),
+    collectWarning("active_products", activeProducts.error),
+  ].filter((warning): warning is string => warning !== null);
+
+  return {
+    generated_at: new Date().toISOString(),
+    source_tables: [
+      "body_logs",
+      "workouts",
+      "workout_sets",
+      "nutrition_logs",
+      "meal_items",
+      "supplements",
+      "supplement_logs",
+      "sleep_logs",
+      "energy_logs",
+      "mental_health_logs",
+      "emotion_logs",
+      "journal_entries",
+      "skincare_logs",
+      "haircare_logs",
+      "products",
+    ],
+    warnings,
+    summary: {
+      body_log_count: bodyRows.length,
+      workout_count: workoutRows.length,
+      workout_set_count: asRows(workoutSets).length,
+      nutrition_log_count: nutritionRows.length,
+      meal_item_count: asRows(mealItems).length,
+      supplement_count: asRows(supplements).length,
+      active_supplement_count: asRows(activeSupplements).length,
+      supplement_log_count: asRows(supplementLogs).length,
+      sleep_log_count: sleepRows.length,
+      energy_log_count: energyRows.length,
+      mental_health_log_count: mentalRows.length,
+      emotion_log_count: emotionRows.length,
+      journal_entry_count: asRows(journalEntries).length,
+      skincare_log_count: skincareRows.length,
+      haircare_log_count: haircareRows.length,
+      product_count: asRows(products).length,
+      active_product_count: asRows(activeProducts).length,
+      recent_health_signal_count: recentHealthSignalCount,
+      read_only_boundary: true,
+    },
+  };
+}
