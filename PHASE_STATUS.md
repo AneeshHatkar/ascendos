@@ -1163,3 +1163,29 @@ No schema change needed.
 
 ### Boundary
 No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, progress photo table, or visual evidence storage was added.
+
+## Health/Body Linkage Visibility
+
+### Status
+Completed pending verification.
+
+### Completed Work
+- Added read-only proof and operating linkage visibility for health/body records.
+- Attached linkage visibility to all six health/body dashboard surfaces.
+- Preserved read-only route and dashboard boundaries.
+
+### Schema
+No schema change needed.
+
+### Files
+- `src/components/dashboard/health-body-linkage-panels.tsx`
+- `src/components/dashboard/index.ts`
+- `src/components/dashboard/health-body-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-emotion-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-hair-skincare-dashboard-v1.tsx`
+
+### Boundary
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, progress photo table, or visual evidence storage was added.

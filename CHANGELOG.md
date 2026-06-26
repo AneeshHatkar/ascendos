@@ -962,3 +962,14 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ### Notes
 - No schema change needed.
 - Existing repository read helpers remain the only health/body data source for these panels.
+
+## 2026-06-26 — Health/Body Linkage Visibility
+
+### Added
+- Read-only health/body proof and operating linkage panel.
+- Link counts for proof, goals, tasks, daily logs, and events.
+- Linkage visibility across all health/body dashboard surfaces.
+
+### Notes
+- No schema change needed.
+- The panel only displays existing link fields and does not create or modify related records.

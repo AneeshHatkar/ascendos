@@ -2813,3 +2813,24 @@ Purpose:
 - No RLS policy changed.
 - No database type change added.
 - No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, baseline table, or visual evidence storage added.
+
+## 2026-06-26 — Health/Body Linkage Visibility
+
+### Scope
+- Added read-only health/body proof and operating linkage visibility.
+- Added counts and sample ids for proof, goal, task, daily-log, and event links.
+- Attached linkage visibility to all six health/body dashboard surfaces.
+
+### Files
+- `src/components/dashboard/health-body-linkage-panels.tsx`
+- `src/components/dashboard/index.ts`
+- Health/body dashboard surface components.
+
+### Schema
+- No schema change needed.
+
+### Boundary
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, baseline table, or visual evidence storage added.

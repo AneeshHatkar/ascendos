@@ -6,6 +6,7 @@ import {
   HealthBodyWarningPanel,
 } from "./health-body-dashboard-states";
 import { HealthBodyEmotionReflectionDetailPanel } from "./health-body-detail-panels";
+import { HealthBodyProofLinkagePanel } from "./health-body-linkage-panels";
 
 interface HealthBodyEmotionDashboardV1Props {
   userId: string;
@@ -100,6 +101,18 @@ export async function HealthBodyEmotionDashboardV1({
         emotionLogs={data.detail_rows.emotion_logs}
         mentalHealthLogs={data.detail_rows.mental_health_logs}
         journalEntries={data.detail_rows.journal_entries}
+      />
+
+      <HealthBodyProofLinkagePanel
+        bodyLogs={data.detail_rows.body_logs}
+        workouts={data.detail_rows.workouts}
+        nutritionLogs={data.detail_rows.nutrition_logs}
+        supplementLogs={data.detail_rows.supplement_logs}
+        sleepLogs={data.detail_rows.sleep_logs}
+        energyLogs={data.detail_rows.energy_logs}
+        emotionLogs={data.detail_rows.emotion_logs}
+        skincareLogs={data.detail_rows.skincare_logs}
+        haircareLogs={data.detail_rows.haircare_logs}
       />
 
       {!hasEmotionData ? (

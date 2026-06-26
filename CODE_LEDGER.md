@@ -1837,3 +1837,15 @@ Purpose: Attach the reusable read-only detail panels to `/body`, `/nutrition`, `
 Schema: No schema change needed.
 
 Boundary: No writes, SQL migration, database type change, storage/upload behavior, visual evidence storage, or Carnos action was added.
+
+## Health/Body Linkage Visibility
+
+### `src/components/dashboard/health-body-linkage-panels.tsx`
+Purpose: Provides read-only proof, goal, task, daily-log, and event linkage visibility for health/body records.
+
+### Health/body dashboard components
+Purpose: Attach the linkage visibility panel to body, nutrition, supplements, sleep-energy, emotion, and hair-skincare surfaces.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, visual evidence storage, or Carnos action was added.

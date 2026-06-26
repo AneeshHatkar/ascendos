@@ -6,6 +6,7 @@ import {
   HealthBodyWarningPanel,
 } from "./health-body-dashboard-states";
 import { HealthBodyTrainingDetailPanel } from "./health-body-detail-panels";
+import { HealthBodyProofLinkagePanel } from "./health-body-linkage-panels";
 
 interface HealthBodyDashboardV1Props {
   userId: string;
@@ -162,6 +163,18 @@ export async function HealthBodyDashboardV1({ userId }: HealthBodyDashboardV1Pro
         workouts={data.detail_rows.workouts}
         exercises={data.detail_rows.exercises}
         workoutSets={data.detail_rows.workout_sets}
+      />
+
+      <HealthBodyProofLinkagePanel
+        bodyLogs={data.detail_rows.body_logs}
+        workouts={data.detail_rows.workouts}
+        nutritionLogs={data.detail_rows.nutrition_logs}
+        supplementLogs={data.detail_rows.supplement_logs}
+        sleepLogs={data.detail_rows.sleep_logs}
+        energyLogs={data.detail_rows.energy_logs}
+        emotionLogs={data.detail_rows.emotion_logs}
+        skincareLogs={data.detail_rows.skincare_logs}
+        haircareLogs={data.detail_rows.haircare_logs}
       />
 
       {summary.recent_health_signal_count === 0 ? (

@@ -6,6 +6,7 @@ import {
   HealthBodyWarningPanel,
 } from "./health-body-dashboard-states";
 import { HealthBodySupplementDetailPanel } from "./health-body-detail-panels";
+import { HealthBodyProofLinkagePanel } from "./health-body-linkage-panels";
 
 interface HealthBodySupplementsDashboardV1Props {
   userId: string;
@@ -100,6 +101,18 @@ export async function HealthBodySupplementsDashboardV1({
         supplements={data.detail_rows.supplements}
         supplementLogs={data.detail_rows.supplement_logs}
         products={data.detail_rows.products}
+      />
+
+      <HealthBodyProofLinkagePanel
+        bodyLogs={data.detail_rows.body_logs}
+        workouts={data.detail_rows.workouts}
+        nutritionLogs={data.detail_rows.nutrition_logs}
+        supplementLogs={data.detail_rows.supplement_logs}
+        sleepLogs={data.detail_rows.sleep_logs}
+        energyLogs={data.detail_rows.energy_logs}
+        emotionLogs={data.detail_rows.emotion_logs}
+        skincareLogs={data.detail_rows.skincare_logs}
+        haircareLogs={data.detail_rows.haircare_logs}
       />
 
       {!hasSupplementData ? (
