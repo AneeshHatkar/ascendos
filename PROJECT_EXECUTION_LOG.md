@@ -2371,3 +2371,26 @@ Purpose:
 
 ### Result
 - Phase 11 planning is locked for verification before schema design.
+
+## 2026-06-25 — Phase 11 Chunk B1 Schema Design
+
+### Scope
+- Created Phase 11 health/body schema design.
+- Created Phase 11 health privacy and safety review.
+- Created Phase 11 source-to-scope traceability report.
+- Mapped six source-confirmed routes to sixteen source-confirmed tables.
+- Identified source-referenced but not schema-confirmed items: `progress_photos`, `body_goals`, `reminders`, and `analytics_snapshots`.
+
+### Files
+- `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+- `docs/phase-reports/PHASE_11_HEALTH_PRIVACY_SAFETY_REVIEW.md`
+- `docs/phase-reports/PHASE_11_SOURCE_TO_SCOPE_TRACEABILITY.md`
+
+### Boundary
+- No SQL migration added.
+- No RLS policy added.
+- No database types changed.
+- No read helpers added.
+- No dashboard routes changed.
+- No Carnos write behavior added.
+- No medical, supplement, or body-image claims added.

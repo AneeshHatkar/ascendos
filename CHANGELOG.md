@@ -720,3 +720,16 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No dashboard components added.
 - No route rewiring added.
 - No autonomous writes, medical claims, Python/ML execution, memory/RAG, voice, web tools, or background jobs added.
+
+## 2026-06-25 — Phase 11 Chunk B1 Schema Design
+
+### Added
+- Phase 11 Health / Body schema design document.
+- Phase 11 health privacy and safety review.
+- Phase 11 source-to-scope traceability report.
+
+### Notes
+- No SQL migration added.
+- No database types changed.
+- No read helpers added.
+- No dashboard routes changed.

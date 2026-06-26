@@ -1565,3 +1565,14 @@ Purpose: Regenerated pre-phase code snapshot before Phase 11 implementation.
 
 ### `docs/phase-plans/PHASE_11_HEALTH_BODY_SYSTEM.md`
 Purpose: Locks the Phase 11 Health / Body System plan, 44-step build sequence, source scope, route scope, SQL table scope, hardening additions, safety boundaries, chunk plan, and completion criteria.
+
+## Phase 11 Chunk B1 — Schema Design / Privacy Review / Traceability
+
+### `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+Purpose: Designs Phase 11 source-confirmed health/body tables, candidate fields, ownership pattern, indexes, constraints, RLS strategy, and read-first boundaries before SQL migration.
+
+### `docs/phase-reports/PHASE_11_HEALTH_PRIVACY_SAFETY_REVIEW.md`
+Purpose: Locks privacy and safety boundaries for sensitive health/body, sleep, supplement, body-image, emotion, journal, and photo-reference surfaces.
+
+### `docs/phase-reports/PHASE_11_SOURCE_TO_SCOPE_TRACEABILITY.md`
+Purpose: Maps Phase 11 source-confirmed routes and tables to implementation scope and identifies deferred/source-referenced items.

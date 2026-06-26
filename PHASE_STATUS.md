@@ -771,3 +771,21 @@ No direct SQL writes, autonomous Carnos writes, Python/ML worker execution, memo
 
 ### Next Step
 Phase 11 Chunk A verification and plan commit.
+
+## Phase 11 Chunk B1 — Schema Design / Privacy Review / Traceability
+
+### Status
+Completed pending verification.
+
+### Completed Steps
+- 11.4 Health/body schema design
+- 11.5 Sensitive health/privacy schema review
+- 11.6 Source-to-scope traceability matrix
+
+### Files
+- `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+- `docs/phase-reports/PHASE_11_HEALTH_PRIVACY_SAFETY_REVIEW.md`
+- `docs/phase-reports/PHASE_11_SOURCE_TO_SCOPE_TRACEABILITY.md`
+
+### Boundary
+No SQL, types, repositories, routes, dashboards, Carnos writes, Python/ML execution, medical claims, supplement claims, or photo upload/storage were added.
