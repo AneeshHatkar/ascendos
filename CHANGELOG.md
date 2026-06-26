@@ -932,3 +932,12 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ### Notes
 - No schema change needed.
 - No SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.
+
+## 2026-06-26 — Health/Body Detail Panel Pattern Report
+
+### Added
+- Phase 11 health/body detail-panel pattern report.
+
+### Notes
+- No schema change needed.
+- No SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, progress photo table, analytics snapshot table, or visual evidence storage added.

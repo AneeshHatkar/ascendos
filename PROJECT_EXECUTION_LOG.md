@@ -2746,3 +2746,24 @@ Purpose:
 - No RLS policy changed.
 - No database type change added.
 - No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.
+
+## 2026-06-26 — Health/Body Detail Panel Pattern Report
+
+### Scope
+- Inspected current health/body route wiring.
+- Inspected current health/body dashboard components.
+- Inspected comparable detail-panel patterns from learning, research, and career surfaces.
+- Inspected existing health/body read helpers.
+- Added a Phase 11 detail-panel pattern report before creating any new detail panels.
+
+### Files
+- `docs/phase-reports/PHASE_11_HEALTH_BODY_DETAIL_PANEL_PATTERN_REPORT.md`
+
+### Schema
+- No schema change needed.
+
+### Boundary
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, baseline table, or visual evidence storage added.

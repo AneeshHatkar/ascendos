@@ -1804,3 +1804,12 @@ Purpose: Exports the hair skincare dashboard component.
 Schema: No schema change needed.
 
 Boundary: No writes, SQL migration, database type change, storage/upload behavior, or Carnos action was added.
+
+## Health/Body Detail Panel Pattern Report
+
+### `docs/phase-reports/PHASE_11_HEALTH_BODY_DETAIL_PANEL_PATTERN_REPORT.md`
+Purpose: Locks the read-only detail-panel implementation pattern for Phase 11 before health/body detail panels are created.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, visual evidence storage, or Carnos action was added.

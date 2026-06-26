@@ -1098,3 +1098,23 @@ No schema change needed.
 
 ### Boundary
 No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, progress photo table, or visual evidence storage was added.
+
+## Health/Body Detail Panel Pattern Report
+
+### Status
+Completed pending verification.
+
+### Completed Work
+- Inspected existing health/body dashboards and route wiring.
+- Inspected comparable detail-panel patterns.
+- Inspected existing health/body read helpers.
+- Documented the safe read-only detail-panel pattern for H2/H3.
+
+### Schema
+No schema change needed.
+
+### Files
+- `docs/phase-reports/PHASE_11_HEALTH_BODY_DETAIL_PANEL_PATTERN_REPORT.md`
+
+### Boundary
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, progress photo table, or visual evidence storage was added.
