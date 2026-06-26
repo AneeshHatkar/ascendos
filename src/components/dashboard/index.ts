@@ -32,3 +32,4 @@ export * from "./research-summary-panel";
 export * from "./research-linkage-boundary-panels";
 export * from "./research-detail-panels";
 export * from "./research-proposed-action-visibility-panel";
+export * from "./health-body-dashboard-v1";

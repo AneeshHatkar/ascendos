@@ -833,3 +833,12 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 
 ### Fixed
 - Added exercise coverage to the Phase 11 health/body dashboard summary helper.
+
+## 2026-06-26 — Health Body Overview Cards
+
+### Added
+- Read-only health/body overview dashboard cards.
+- Dashboard component export wiring.
+
+### Notes
+- No route rewiring, SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.

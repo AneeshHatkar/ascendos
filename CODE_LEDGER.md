@@ -1653,3 +1653,13 @@ Boundary: No code mutation surface, SQL migration, type change, write helper, ro
 
 ### E3 Verification Repair — `src/lib/dashboard/health-body-dashboard-data-helpers.ts`
 Purpose: Added exercise summary coverage so the dashboard summary helper covers all 16 confirmed Phase 11 source tables.
+
+## Health Body Overview Cards
+
+### `src/components/dashboard/health-body-dashboard-v1.tsx`
+Purpose: Provides a read-only health/body overview component with dashboard metric cards sourced from existing summary helpers.
+
+### `src/components/dashboard/index.ts`
+Purpose: Exports the health/body overview dashboard component.
+
+Boundary: No writes, route rewiring, SQL migration, storage/upload behavior, or Carnos action was added.

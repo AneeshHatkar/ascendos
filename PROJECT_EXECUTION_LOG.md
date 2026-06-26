@@ -2563,3 +2563,20 @@ Purpose:
 ### E3 Verification Repair
 - Added `listExercises` coverage to the health/body dashboard summary helper.
 - This aligns the summary helper with all 16 Phase 11 confirmed source tables.
+
+## 2026-06-26 — Health Body Overview Cards
+
+### Scope
+- Added the first read-only health/body dashboard UI component.
+- The component consumes the health/body summary helper and displays dashboard-ready metric cards.
+- Added dashboard component export wiring.
+
+### Files
+- `src/components/dashboard/health-body-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Boundary
+- No route was rewired.
+- No SQL migration added.
+- No RLS policy changed.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.
