@@ -876,3 +876,17 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ### Notes
 - No schema change needed.
 - No SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.
+
+## 2026-06-26 — Supplements Dashboard Route Wiring
+
+### Added
+- Read-only supplements dashboard surface.
+- `/supplements` route wiring to the supplements dashboard.
+- Supplements dashboard export wiring.
+
+### Fixed
+- Corrected a spacing typo in the health/body read-only boundary notice.
+
+### Notes
+- No schema change needed.
+- No SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.

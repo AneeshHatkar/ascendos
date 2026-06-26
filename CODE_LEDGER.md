@@ -1705,3 +1705,21 @@ Purpose: Exports the nutrition dashboard component.
 Schema: No schema change needed.
 
 Boundary: No writes, SQL migration, database type change, storage/upload behavior, or Carnos action was added.
+
+## Supplements Dashboard Route Wiring
+
+### `src/app/supplements/page.tsx`
+Purpose: Wires `/supplements` to a protected, read-only supplements dashboard.
+
+### `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+Purpose: Provides a supplement-focused read-only dashboard for supplements, active supplement records, supplement logs, products, and safety boundaries.
+
+### `src/components/dashboard/health-body-dashboard-states.tsx`
+Purpose: Fixed a small text spacing typo in the read-only boundary notice.
+
+### `src/components/dashboard/index.ts`
+Purpose: Exports the supplements dashboard component.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, or Carnos action was added.
