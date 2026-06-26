@@ -2603,3 +2603,22 @@ Purpose:
 - No RLS policy changed.
 - No database type change added.
 - No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.
+
+## 2026-06-26 — Body Dashboard Route Wiring
+
+### Scope
+- Rewired `/body` from the generic domain read page to the read-only health/body overview dashboard.
+- Preserved Phase 5 domain-read compatibility markers for route audits.
+- Kept route inside the authenticated dashboard shell.
+
+### Files
+- `src/app/body/page.tsx`
+
+### Schema
+- No schema change needed.
+
+### Boundary
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.

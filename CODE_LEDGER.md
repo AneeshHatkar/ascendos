@@ -1678,3 +1678,12 @@ Purpose: Exports health/body dashboard state components.
 Schema: No schema change needed.
 
 Boundary: No writes, route rewiring, SQL migration, database type change, storage/upload behavior, or Carnos action was added.
+
+## Body Dashboard Route Wiring
+
+### `src/app/body/page.tsx`
+Purpose: Wires the `/body` route to the read-only health/body dashboard overview while preserving Phase 5 compatibility markers.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, or Carnos action was added.

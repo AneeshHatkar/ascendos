@@ -852,3 +852,13 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ### Notes
 - No schema change needed.
 - No route rewiring, SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.
+
+## 2026-06-26 — Body Dashboard Route Wiring
+
+### Changed
+- Rewired `/body` to render the read-only health/body overview dashboard.
+
+### Notes
+- No schema change needed.
+- Preserved route audit compatibility markers.
+- No SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.

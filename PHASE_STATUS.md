@@ -964,3 +964,20 @@ No schema change needed.
 
 ### Boundary
 No route rewiring, SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.
+
+## Body Dashboard Route Wiring
+
+### Status
+Completed pending verification.
+
+### Completed Work
+- Wired `/body` to the read-only health/body overview dashboard.
+
+### Schema
+No schema change needed.
+
+### Files
+- `src/app/body/page.tsx`
+
+### Boundary
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.
