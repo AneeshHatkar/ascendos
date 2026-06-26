@@ -1143,3 +1143,17 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No schema change needed.
 - No app code added.
 - Housing search is not the Phase 12 primary workflow; housing is interpreted as rent, lease, utilities, maintenance, and housing documents for this user.
+
+## 2026-06-27 — Phase 12 C03 Schema Design
+
+### Added
+
+- Phase 12 Life Admin + Finance schema design.
+- Phase 12 privacy/safety review.
+- Phase 12 source-to-scope traceability report.
+
+### Notes
+
+- No SQL migration added yet.
+- No app code added.
+- C04 will begin SQL foundation after schema design is committed.

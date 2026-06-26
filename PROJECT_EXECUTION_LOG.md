@@ -3359,3 +3359,32 @@ Purpose:
 ### Boundary
 
 - No app code, SQL migration, RLS policy, database type, repository helper, route implementation, dashboard implementation, Carnos execution, Python/ML execution, background job, bank sync, document upload, auto-pay, or write behavior was added.
+
+## 2026-06-27 — Phase 12 C03 schema design
+
+### Scope
+
+- Added Phase 12 Life Admin + Finance schema design.
+- Added income/expense, rent/bills/subscriptions, document metadata/deadline, daily admin queue, and severity design.
+- Added privacy/safety review for finance, documents, housing, and Carnos boundaries.
+- Added source-to-scope traceability report.
+
+### Steps covered
+
+- 12.7
+- 12.8
+- 12.9
+- 12.10
+- 12.11
+- 12.12
+- 12.13
+- 12.14
+
+### Schema
+
+- No SQL schema was changed in C03.
+- SQL begins in C04 after this design is committed.
+
+### Boundary
+
+- No app code, SQL migration, RLS policy, database type, repository helper, route implementation, dashboard implementation, Carnos execution, Python/ML execution, background job, bank sync, document upload, auto-pay, or write behavior was added.

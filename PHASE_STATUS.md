@@ -1513,3 +1513,28 @@ No schema change needed for C02.
 ### Next Step
 
 Phase 12 C03 — schema design and traceability docs.
+
+## Phase 12 C03 — Schema Design
+
+### Status
+
+Complete after commit.
+
+### Steps Covered
+
+- 12.7 Design Life Admin + Finance schema.
+- 12.8 Design income and expense model.
+- 12.9 Design rent, bills, utilities, subscriptions model.
+- 12.10 Design document metadata/deadline model.
+- 12.11 Design daily admin queue model.
+- 12.12 Design due-soon / overdue / critical severity logic.
+- 12.13 Write finance/document privacy and safety review.
+- 12.14 Write source-to-scope traceability report.
+
+### Schema
+
+No SQL change in C03.
+
+### Next Step
+
+Phase 12 C04 — SQL foundation tables.

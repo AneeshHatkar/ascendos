@@ -2311,3 +2311,21 @@ Purpose: Adds post-v1 expansion Phases 22–26 without renumbering or changing t
 Schema: No schema change needed.
 
 Boundary: No app code, SQL migration, database type change, repository helper, route implementation, dashboard implementation, Carnos execution, Python/ML execution, background job, bank sync, document upload, auto-pay, or write behavior was added.
+
+## Phase 12 C03 Schema Design
+
+### `docs/database/PHASE_12_LIFE_ADMIN_FINANCE_SCHEMA_DESIGN.md`
+
+Purpose: Designs Phase 12 financial accounts, budget categories, financial logs, subscriptions, housing admin records, housing contacts, documents, Daily Admin Queue aggregation, severity logic, indexes, RLS, and parent ownership guard requirements.
+
+### `docs/phase-reports/PHASE_12_LIFE_ADMIN_PRIVACY_SAFETY_REVIEW.md`
+
+Purpose: Records privacy and safety boundaries for finance, documents, housing, Carnos, and dashboard UI.
+
+### `docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_TRACEABILITY.md`
+
+Purpose: Maps FINAL_SYNCED source dashboards/tables to Phase 12 implementation scope and records user-specific housing correction.
+
+Schema: No SQL schema change in C03.
+
+Boundary: No app code, SQL migration, database type change, repository helper, route implementation, dashboard implementation, Carnos execution, Python/ML execution, background job, bank sync, document upload, auto-pay, or write behavior was added.
