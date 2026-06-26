@@ -2496,3 +2496,19 @@ Purpose:
 - No RLS policy changed.
 - No parent ownership trigger changed.
 - No read helpers, repositories, dashboards, routes, storage/upload behavior, or Carnos write behavior added.
+
+## 2026-06-25 — Phase 11 Chunk D Repair: Actual Database Types
+
+### Scope
+- Corrected previous Chunk D documentation-only commit by adding the actual Phase 11 database table types.
+- Added actual table entries for 16 Phase 11 health/body tables in `src/types/database.ts`.
+- Added actual Row/Insert/Update aliases for Phase 11 health/body tables.
+
+### Files
+- `src/types/database.ts`
+
+### Boundary
+- No SQL migration added.
+- No RLS policy changed.
+- No parent ownership trigger changed.
+- No read helpers, repositories, dashboards, routes, storage/upload behavior, or Carnos write behavior added.

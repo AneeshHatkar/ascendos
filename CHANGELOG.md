@@ -795,3 +795,11 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 
 ### Notes
 - No SQL migrations, read helpers, dashboards, routes, storage/upload behavior, or Carnos write behavior added.
+
+## 2026-06-25 — Phase 11 Chunk D Repair
+
+### Fixed
+- Added the actual Phase 11 database table types after the previous Chunk D commit only updated documentation/log files.
+
+### Added
+- Actual `src/types/database.ts` table entries and aliases for the 16 Phase 11 health/body tables.

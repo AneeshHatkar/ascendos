@@ -868,3 +868,17 @@ Completed pending verification.
 
 ### Boundary
 No SQL migration, RLS policy, parent ownership trigger, read helper, route, dashboard, storage/upload behavior, Carnos write behavior, Python/ML execution, candidate baseline table, or progress photo table was added.
+
+## Phase 11 Chunk D Repair — Actual Database Types
+
+### Status
+Completed pending verification.
+
+### Corrected Issue
+The prior Chunk D commit updated documentation/log files but did not modify `src/types/database.ts`.
+
+### Files
+- `src/types/database.ts`
+
+### Boundary
+No SQL migration, RLS policy, parent ownership trigger, read helper, route, dashboard, storage/upload behavior, Carnos write behavior, Python/ML execution, candidate baseline table, or progress photo table was added.

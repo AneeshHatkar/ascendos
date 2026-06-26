@@ -1616,3 +1616,10 @@ Boundary: No new tables, TypeScript types, read helpers, routes, dashboards, sto
 Purpose: Adds TypeScript database table definitions and aliases for Phase 11 health/body tables.
 
 Boundary: No SQL, repositories, read helpers, dashboards, routes, storage/upload behavior, or Carnos writes are added.
+
+## Phase 11 Chunk D Repair — Actual Database Types
+
+### `src/types/database.ts`
+Purpose: Adds the actual TypeScript table definitions and aliases for the 16 Phase 11 health/body SQL tables after the previous Chunk D commit only updated documentation/log files.
+
+Boundary: No SQL, repositories, read helpers, dashboards, routes, storage/upload behavior, or Carnos writes are added.
