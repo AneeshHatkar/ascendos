@@ -2856,3 +2856,26 @@ Purpose:
 - No RLS policy changed.
 - No database type change added.
 - No write helper, server mutation, Carnos action execution, storage/upload behavior, analytics snapshot, progress photo table, baseline table, or visual evidence storage added.
+
+## 2026-06-26 — Health/Body Audit Gate
+
+### Scope
+- Added Phase 11 health/body audit script.
+- Added Phase 11 manual smoke checklist.
+- Added Phase 11 audit gate report.
+- Wired `audit:phase11` into package scripts and `npm run check`.
+
+### Files
+- `scripts/audit-phase-11.mjs`
+- `docs/qa/PHASE_11_HEALTH_BODY_MANUAL_SMOKE_CHECKLIST.md`
+- `docs/phase-reports/PHASE_11_HEALTH_BODY_AUDIT_GATE.md`
+- `package.json`
+
+### Schema
+- No schema change needed.
+
+### Boundary
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action execution, storage/upload behavior, analytics snapshot, progress photo table, baseline table, or visual evidence storage added.

@@ -1216,3 +1216,26 @@ No schema change needed.
 
 ### Boundary
 No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, progress photo table, or visual evidence storage was added.
+
+## Health/Body Audit Gate
+
+### Status
+Completed pending verification.
+
+### Completed Work
+- Added Phase 11 health/body automated audit gate.
+- Added Phase 11 health/body manual smoke checklist.
+- Added Phase 11 audit gate report.
+- Wired `audit:phase11` into `npm run check`.
+
+### Schema
+No schema change needed.
+
+### Files
+- `scripts/audit-phase-11.mjs`
+- `docs/qa/PHASE_11_HEALTH_BODY_MANUAL_SMOKE_CHECKLIST.md`
+- `docs/phase-reports/PHASE_11_HEALTH_BODY_AUDIT_GATE.md`
+- `package.json`
+
+### Boundary
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, progress photo table, or visual evidence storage was added.

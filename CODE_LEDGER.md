@@ -1861,3 +1861,21 @@ Purpose: Attach proposed-action visibility, state boundary, and cross-route cons
 Schema: No schema change needed.
 
 Boundary: No writes, SQL migration, database type change, storage/upload behavior, visual evidence storage, or Carnos execution was added.
+
+## Health/Body Audit Gate
+
+### `scripts/audit-phase-11.mjs`
+Purpose: Verifies Phase 11 health/body files, SQL/type/read contracts, dashboard exports, route wiring, safety language, deferred-table boundaries, and no-write/no-automation constraints.
+
+### `docs/qa/PHASE_11_HEALTH_BODY_MANUAL_SMOKE_CHECKLIST.md`
+Purpose: Manual smoke checklist for the six health/body dashboard routes.
+
+### `docs/phase-reports/PHASE_11_HEALTH_BODY_AUDIT_GATE.md`
+Purpose: Locks Phase 11 verification gates, protected boundaries, and deferred scope.
+
+### `package.json`
+Purpose: Adds `audit:phase11` and includes it in `npm run check`.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, visual evidence storage, or Carnos execution was added.

@@ -984,3 +984,15 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ### Notes
 - No schema change needed.
 - All proposed-action controls are disabled preview UI only.
+
+## 2026-06-26 — Health/Body Audit Gate
+
+### Added
+- Phase 11 health/body automated audit gate.
+- Phase 11 manual smoke checklist.
+- Phase 11 audit gate report.
+- `audit:phase11` package script included in `npm run check`.
+
+### Notes
+- No schema change needed.
+- Audit coverage verifies route wiring, safety boundaries, deferred scope, and no-write/no-automation constraints.
