@@ -944,3 +944,23 @@ Completed pending verification.
 
 ### Boundary
 No route rewiring, SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.
+
+## Health Body Dashboard States
+
+### Status
+Completed pending verification.
+
+### Completed Work
+- Added shared read-only health/body dashboard state components.
+- Added empty-state, warning-state, privacy notice, and read-only boundary notice coverage.
+
+### Schema
+No schema change needed.
+
+### Files
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/health-body-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Boundary
+No route rewiring, SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.

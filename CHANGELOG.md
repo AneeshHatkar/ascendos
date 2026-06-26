@@ -842,3 +842,13 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 
 ### Notes
 - No route rewiring, SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.
+
+## 2026-06-26 — Health Body Dashboard States
+
+### Added
+- Shared health/body dashboard empty, warning, privacy, and read-only boundary states.
+- Export wiring for health/body dashboard state components.
+
+### Notes
+- No schema change needed.
+- No route rewiring, SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.

@@ -1,4 +1,10 @@
 import { getHealthBodyDashboardDataSummary } from "@/lib/dashboard";
+import {
+  HealthBodyBoundaryNotice,
+  HealthBodyEmptyState,
+  HealthBodyPrivacyNotice,
+  HealthBodyWarningPanel,
+} from "./health-body-dashboard-states";
 
 interface HealthBodyDashboardV1Props {
   userId: string;
@@ -146,15 +152,15 @@ export async function HealthBodyDashboardV1({ userId }: HealthBodyDashboardV1Pro
         </div>
       </div>
 
-      {data.warnings.length > 0 ? (
-        <div className="rounded-3xl border border-amber-400/20 bg-amber-400/10 p-5 text-sm text-amber-100">
-          <p className="font-semibold">Some read helpers returned warnings.</p>
-          <ul className="mt-3 list-disc space-y-2 pl-5">
-            {data.warnings.map((warning) => (
-              <li key={warning}>{warning}</li>
-            ))}
-          </ul>
-        </div>
+      <HealthBodyBoundaryNotice />
+      <HealthBodyPrivacyNotice />
+      <HealthBodyWarningPanel warnings={data.warnings} />
+
+      {summary.recent_health_signal_count === 0 ? (
+        <HealthBodyEmptyState
+          title="No recent health signals yet"
+          description="Once records exist in the confirmed health/body tables, this read-only dashboard will summarize recent body, training, nutrition, sleep, energy, emotion, haircare, skincare, and product activity."
+        />
       ) : null}
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">

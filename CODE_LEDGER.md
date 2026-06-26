@@ -1663,3 +1663,18 @@ Purpose: Provides a read-only health/body overview component with dashboard metr
 Purpose: Exports the health/body overview dashboard component.
 
 Boundary: No writes, route rewiring, SQL migration, storage/upload behavior, or Carnos action was added.
+
+## Health Body Dashboard States
+
+### `src/components/dashboard/health-body-dashboard-states.tsx`
+Purpose: Provides shared read-only state components for the health/body dashboard, including empty, warning, privacy, and boundary states.
+
+### `src/components/dashboard/health-body-dashboard-v1.tsx`
+Purpose: Consumes shared state components while remaining a read-only dashboard overview.
+
+### `src/components/dashboard/index.ts`
+Purpose: Exports health/body dashboard state components.
+
+Schema: No schema change needed.
+
+Boundary: No writes, route rewiring, SQL migration, database type change, storage/upload behavior, or Carnos action was added.

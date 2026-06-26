@@ -2580,3 +2580,26 @@ Purpose:
 - No SQL migration added.
 - No RLS policy changed.
 - No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.
+
+## 2026-06-26 — Health Body Dashboard States
+
+### Scope
+- Added shared health/body dashboard state components.
+- Added empty-state, warning-state, privacy notice, and read-only boundary notice components.
+- Wired the health/body overview component to consume the shared state components.
+- Added dashboard state component export wiring.
+
+### Files
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/health-body-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Schema
+- No schema change needed.
+
+### Boundary
+- No route was rewired.
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.
