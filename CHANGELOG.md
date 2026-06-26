@@ -890,3 +890,17 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ### Notes
 - No schema change needed.
 - No SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.
+
+## 2026-06-26 — Sleep Energy Dashboard Route Wiring
+
+### Added
+- Read-only sleep energy dashboard surface.
+- `/sleep-energy` route wiring to the sleep energy dashboard.
+- Sleep energy dashboard export wiring.
+
+### Fixed
+- Cleaned small text spacing issues in existing health/body dashboard copy.
+
+### Notes
+- No schema change needed.
+- No SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.

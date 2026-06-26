@@ -36,3 +36,4 @@ export * from "./health-body-dashboard-v1";
 export * from "./health-body-dashboard-states";
 export * from "./health-body-nutrition-dashboard-v1";
 export * from "./health-body-supplements-dashboard-v1";
+export * from "./health-body-sleep-energy-dashboard-v1";

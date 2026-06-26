@@ -1023,3 +1023,27 @@ No schema change needed.
 
 ### Boundary
 No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.
+
+## Sleep Energy Dashboard Route Wiring
+
+### Status
+Completed pending verification.
+
+### Completed Work
+- Wired `/sleep-energy` to a read-only sleep energy dashboard.
+- Added a sleep-and-energy-focused dashboard component.
+- Cleaned small text spacing issues found during route preflight.
+
+### Schema
+No schema change needed.
+
+### Files
+- `src/app/sleep-energy/page.tsx`
+- `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Boundary
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.

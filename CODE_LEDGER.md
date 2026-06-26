@@ -1723,3 +1723,27 @@ Purpose: Exports the supplements dashboard component.
 Schema: No schema change needed.
 
 Boundary: No writes, SQL migration, database type change, storage/upload behavior, or Carnos action was added.
+
+## Sleep Energy Dashboard Route Wiring
+
+### `src/app/sleep-energy/page.tsx`
+Purpose: Wires `/sleep-energy` to a protected, read-only sleep energy dashboard.
+
+### `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+Purpose: Provides a sleep-and-energy-focused read-only dashboard for sleep logs, energy logs, mental health logs, and recent recovery signals.
+
+### `src/components/dashboard/health-body-dashboard-states.tsx`
+Purpose: Cleaned a small text spacing issue in the shared read-only boundary notice.
+
+### `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+Purpose: Cleaned small text spacing issues in nutrition dashboard copy.
+
+### `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+Purpose: Cleaned small text spacing issues in supplements dashboard copy.
+
+### `src/components/dashboard/index.ts`
+Purpose: Exports the sleep energy dashboard component.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, or Carnos action was added.

@@ -2668,3 +2668,28 @@ Purpose:
 - No RLS policy changed.
 - No database type change added.
 - No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.
+
+## 2026-06-26 — Sleep Energy Dashboard Route Wiring
+
+### Scope
+- Rewired `/sleep-energy` from a placeholder page to a read-only sleep energy dashboard.
+- Added a sleep-and-energy-focused dashboard component using existing health/body summary helpers.
+- Added dashboard component export wiring.
+- Cleaned small text spacing issues found during preflight in existing health/body UI copy.
+
+### Files
+- `src/app/sleep-energy/page.tsx`
+- `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Schema
+- No schema change needed.
+
+### Boundary
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.
