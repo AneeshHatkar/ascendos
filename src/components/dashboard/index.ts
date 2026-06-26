@@ -38,3 +38,4 @@ export * from "./health-body-nutrition-dashboard-v1";
 export * from "./health-body-supplements-dashboard-v1";
 export * from "./health-body-sleep-energy-dashboard-v1";
 export * from "./health-body-emotion-dashboard-v1";
+export * from "./health-body-hair-skincare-dashboard-v1";

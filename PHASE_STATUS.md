@@ -1072,3 +1072,29 @@ No schema change needed.
 
 ### Boundary
 No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.
+
+## Hair Skincare Dashboard Route Wiring
+
+### Status
+Completed pending verification.
+
+### Completed Work
+- Wired `/hair-skincare` to a read-only hair skincare dashboard.
+- Added a haircare-and-skincare-focused dashboard component.
+- Cleaned small text spacing issues found during route preflight.
+
+### Schema
+No schema change needed.
+
+### Files
+- `src/app/hair-skincare/page.tsx`
+- `src/components/dashboard/health-body-hair-skincare-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-emotion-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Boundary
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, progress photo table, or visual evidence storage was added.
