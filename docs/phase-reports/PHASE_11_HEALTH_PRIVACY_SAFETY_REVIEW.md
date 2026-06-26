@@ -191,3 +191,31 @@ Sensitive pages must be manually reviewed for:
 - no silent Carnos writes
 - no Python/ML mutation
 - no memory/RAG behavior
+
+## B3 Safety Hardening Addendum
+
+Phase 11 Chunk B3 expands the safety boundary for medical, supplement, body-image, emotion, journal, data quality, target comparison, and trend preview behavior.
+
+### Medical and supplement safety
+
+Phase 11 must remain recordkeeping and dashboard visibility only.
+
+It must not diagnose, prescribe, recommend supplement dosage, claim treatment, claim cure, or claim guaranteed outcomes.
+
+### Body-image and nutrition safety
+
+Phase 11 must avoid shame language, punishment framing, unsafe diet pressure, and guaranteed transformation claims.
+
+### Emotion and journal safety
+
+Sensitive emotion and journal details must remain privacy-safe. Phase 11 must not claim therapy, diagnose emotional states, automate crisis handling, or expose detailed notes on broad dashboards.
+
+### Data quality
+
+Phase 11 must distinguish missing values from zero values, show latest records clearly, avoid hiding duplicates, and avoid averages/trend claims when data is insufficient.
+
+### Targets and trends
+
+Phase 11 may compare logs to targets only when targets are source-backed.
+
+Phase 11 may show simple trend previews only. Advanced analytics, experiments, predictions, and deep correlations are deferred to Phase 17.

@@ -807,3 +807,22 @@ Completed pending verification.
 
 ### Boundary
 No SQL, types, repositories, routes, dashboards, upload/storage behavior, Carnos silent writes, Python/ML execution, or fake photo persistence were added.
+
+## Phase 11 Chunk B3 — Safety / Data Quality / Targets / Trend Boundary
+
+### Status
+Completed pending verification.
+
+### Completed Steps
+- 11.11 Medical/supplement/body-image safety hardening
+- 11.12 Data quality + duplicate-log protection
+- 11.13 Goal target comparison strategy
+- 11.14 Trend preview boundary; advanced analytics deferred to Phase 17
+
+### Files
+- `docs/phase-reports/PHASE_11_SAFETY_DATA_TARGET_TREND_BOUNDARY.md`
+- `docs/phase-reports/PHASE_11_HEALTH_PRIVACY_SAFETY_REVIEW.md`
+- `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+
+### Boundary
+No SQL, types, repositories, routes, dashboards, Carnos writes, Python/ML execution, medical claims, supplement recommendations, body-shaming language, advanced analytics, or fake persistence were added.

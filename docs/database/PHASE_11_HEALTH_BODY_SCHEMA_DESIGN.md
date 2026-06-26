@@ -608,3 +608,27 @@ Carnos may parse and calculate sleep duration only as a proposed action. It must
 ### Progress Photos
 
 Progress photos must not be faked. Photo references are allowed only when schema-backed; upload/storage is deferred unless explicitly implemented later.
+
+## B3 Safety, Data Quality, Target, and Trend Decision Notes
+
+Phase 11 Chunk B3 adds design boundaries for medical/supplement/body-image safety, duplicate-log behavior, target comparison, and trend previews.
+
+### Medical and supplement safety
+
+Schema and UI must support recordkeeping only. Fields may store user-entered notes, dosage text, and status values, but must not imply recommendations, diagnosis, treatment, cure, or medical safety.
+
+### Duplicate logs
+
+SQL should not blindly add unique same-day constraints unless explicitly justified. Duplicate logs are allowed by default, and dashboards/read helpers must display latest record, count, and source/date context clearly.
+
+### Missing versus zero
+
+Read helpers and UI must distinguish `null` from `0`.
+
+### Target comparison
+
+Target comparison is allowed only when targets are source-backed by existing goals, tasks, daily logs, a future approved baseline table, or explicit user-confirmed settings.
+
+### Trend previews
+
+Phase 11 supports basic trend previews only. Advanced analytics, predictions, experiments, and deep correlations are deferred to Phase 17.

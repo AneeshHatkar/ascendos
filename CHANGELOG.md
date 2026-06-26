@@ -746,3 +746,17 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No dashboard routes changed.
 - No upload/storage behavior added.
 - No Carnos silent write behavior added.
+
+## 2026-06-25 — Phase 11 Chunk B3 Safety / Data / Target / Trend Design
+
+### Added
+- Phase 11 safety, data quality, target comparison, and trend boundary document.
+- B3 safety hardening addendum in Phase 11 privacy/safety review.
+- B3 decision notes in Phase 11 schema design.
+
+### Notes
+- No SQL migration added.
+- No database types changed.
+- No dashboard routes changed.
+- No Carnos write behavior added.
+- Advanced analytics remain deferred to Phase 17.

@@ -1584,3 +1584,14 @@ Purpose: Locks baseline handling, unit clarity, daily sleep tracking, Carnos sle
 
 ### `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
 Purpose: Updated with B2 hardening decision notes for baselines, units, daily sleep, natural-language sleep capture, and progress photo honesty.
+
+## Phase 11 Chunk B3 — Safety / Data Quality / Targets / Trend Boundary
+
+### `docs/phase-reports/PHASE_11_SAFETY_DATA_TARGET_TREND_BOUNDARY.md`
+Purpose: Locks medical/supplement/body-image safety, emotion/journal safety, data quality, duplicate-log handling, target comparison strategy, and simple trend preview boundaries.
+
+### `docs/phase-reports/PHASE_11_HEALTH_PRIVACY_SAFETY_REVIEW.md`
+Purpose: Updated with B3 safety hardening addendum.
+
+### `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+Purpose: Updated with B3 safety, duplicate-log, missing-vs-zero, target, and trend decision notes.

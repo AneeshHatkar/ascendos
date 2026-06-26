@@ -2417,3 +2417,27 @@ Purpose:
 - No dashboard routes changed.
 - No upload/storage behavior added.
 - No Carnos silent write behavior added.
+
+## 2026-06-25 — Phase 11 Chunk B3 Safety / Data / Target / Trend Design
+
+### Scope
+- Documented medical, supplement, body-image, emotion, and journal safety hardening.
+- Documented data quality and duplicate-log protection.
+- Documented goal target comparison strategy.
+- Documented simple trend preview boundary and Phase 17 analytics deferral.
+- Added B3 safety addendum to the Phase 11 privacy/safety review.
+- Added B3 decision notes to the Phase 11 schema design.
+
+### Files
+- `docs/phase-reports/PHASE_11_SAFETY_DATA_TARGET_TREND_BOUNDARY.md`
+- `docs/phase-reports/PHASE_11_HEALTH_PRIVACY_SAFETY_REVIEW.md`
+- `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+
+### Boundary
+- No SQL migration added.
+- No RLS policy added.
+- No database types changed.
+- No read helpers added.
+- No dashboard routes changed.
+- No Carnos write behavior added.
+- No medical claims, supplement recommendations, body-shaming language, advanced analytics, or fake persistence added.
