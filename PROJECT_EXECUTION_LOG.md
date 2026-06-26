@@ -2767,3 +2767,24 @@ Purpose:
 - No RLS policy changed.
 - No database type change added.
 - No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, baseline table, or visual evidence storage added.
+
+## 2026-06-26 — Health/Body Detail Panels
+
+### Scope
+- Added reusable read-only health/body detail panels.
+- Added typed panel props for existing confirmed health/body row types.
+- Added detail-panel export wiring.
+- Kept panels detached from routes for H3.
+
+### Files
+- `src/components/dashboard/health-body-detail-panels.tsx`
+- `src/components/dashboard/index.ts`
+
+### Schema
+- No schema change needed.
+
+### Boundary
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, baseline table, or visual evidence storage added.

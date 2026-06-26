@@ -941,3 +941,14 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ### Notes
 - No schema change needed.
 - No SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, progress photo table, analytics snapshot table, or visual evidence storage added.
+
+## 2026-06-26 — Health/Body Detail Panels
+
+### Added
+- Reusable read-only health/body detail panels.
+- Detail panels for body/training, nutrition/meals, supplements, sleep/energy, emotion/reflection, and haircare/skincare records.
+- Health/body detail panel export wiring.
+
+### Notes
+- No schema change needed.
+- Panels are not route-attached yet; H3 will wire them to dashboard surfaces.

@@ -1118,3 +1118,23 @@ No schema change needed.
 
 ### Boundary
 No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, progress photo table, or visual evidence storage was added.
+
+## Health/Body Detail Panels
+
+### Status
+Completed pending verification.
+
+### Completed Work
+- Created reusable read-only health/body detail panels.
+- Exported health/body detail panels from the dashboard index.
+- Kept route attachment deferred to H3.
+
+### Schema
+No schema change needed.
+
+### Files
+- `src/components/dashboard/health-body-detail-panels.tsx`
+- `src/components/dashboard/index.ts`
+
+### Boundary
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, progress photo table, or visual evidence storage was added.

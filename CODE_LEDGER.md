@@ -1813,3 +1813,15 @@ Purpose: Locks the read-only detail-panel implementation pattern for Phase 11 be
 Schema: No schema change needed.
 
 Boundary: No writes, SQL migration, database type change, storage/upload behavior, visual evidence storage, or Carnos action was added.
+
+## Health/Body Detail Panels
+
+### `src/components/dashboard/health-body-detail-panels.tsx`
+Purpose: Provides reusable read-only detail panels for body/training, nutrition/meals, supplements, sleep/energy, emotion/reflection, and haircare/skincare records.
+
+### `src/components/dashboard/index.ts`
+Purpose: Exports the reusable health/body detail panels.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, visual evidence storage, or Carnos action was added.
