@@ -5,6 +5,7 @@ import {
   HealthBodyPrivacyNotice,
   HealthBodyWarningPanel,
 } from "./health-body-dashboard-states";
+import { HealthBodySleepEnergyDetailPanel } from "./health-body-detail-panels";
 
 interface HealthBodySleepEnergyDashboardV1Props {
   userId: string;
@@ -93,6 +94,12 @@ export async function HealthBodySleepEnergyDashboardV1({
       />
       <HealthBodyPrivacyNotice />
       <HealthBodyWarningPanel warnings={data.warnings} />
+
+      <HealthBodySleepEnergyDetailPanel
+        sleepLogs={data.detail_rows.sleep_logs}
+        energyLogs={data.detail_rows.energy_logs}
+        mentalHealthLogs={data.detail_rows.mental_health_logs}
+      />
 
       {!hasSleepEnergyData ? (
         <HealthBodyEmptyState

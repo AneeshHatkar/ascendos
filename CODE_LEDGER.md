@@ -1825,3 +1825,15 @@ Purpose: Exports the reusable health/body detail panels.
 Schema: No schema change needed.
 
 Boundary: No writes, SQL migration, database type change, storage/upload behavior, visual evidence storage, or Carnos action was added.
+
+## Health/Body Detail Panel Attachment
+
+### `src/lib/dashboard/health-body-dashboard-data-helpers.ts`
+Purpose: Adds read-only detail row arrays to the existing health/body dashboard data result using existing repository read helpers.
+
+### Health/body dashboard components
+Purpose: Attach the reusable read-only detail panels to `/body`, `/nutrition`, `/supplements`, `/sleep-energy`, `/emotion`, and `/hair-skincare` dashboard surfaces.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, visual evidence storage, or Carnos action was added.

@@ -5,6 +5,7 @@ import {
   HealthBodyPrivacyNotice,
   HealthBodyWarningPanel,
 } from "./health-body-dashboard-states";
+import { HealthBodyNutritionMealDetailPanel } from "./health-body-detail-panels";
 
 interface HealthBodyNutritionDashboardV1Props {
   userId: string;
@@ -93,6 +94,11 @@ export async function HealthBodyNutritionDashboardV1({
       />
       <HealthBodyPrivacyNotice />
       <HealthBodyWarningPanel warnings={data.warnings} />
+
+      <HealthBodyNutritionMealDetailPanel
+        nutritionLogs={data.detail_rows.nutrition_logs}
+        mealItems={data.detail_rows.meal_items}
+      />
 
       {!hasNutritionData ? (
         <HealthBodyEmptyState

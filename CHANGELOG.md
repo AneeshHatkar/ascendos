@@ -952,3 +952,13 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ### Notes
 - No schema change needed.
 - Panels are not route-attached yet; H3 will wire them to dashboard surfaces.
+
+## 2026-06-26 — Health/Body Detail Panel Attachment
+
+### Added
+- Attached read-only health/body detail panels to health/body dashboard surfaces.
+- Added detail row arrays to the existing health/body dashboard data result.
+
+### Notes
+- No schema change needed.
+- Existing repository read helpers remain the only health/body data source for these panels.

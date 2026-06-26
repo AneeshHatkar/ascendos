@@ -2788,3 +2788,28 @@ Purpose:
 - No RLS policy changed.
 - No database type change added.
 - No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, baseline table, or visual evidence storage added.
+
+## 2026-06-26 — Health/Body Detail Panel Attachment
+
+### Scope
+- Attached reusable read-only health/body detail panels to dashboard surfaces.
+- Expanded the existing health/body dashboard helper to return existing row arrays already read through repository helpers.
+- Routed detail rows into the appropriate dashboard-specific panels.
+
+### Files
+- `src/lib/dashboard/health-body-dashboard-data-helpers.ts`
+- `src/components/dashboard/health-body-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-emotion-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-hair-skincare-dashboard-v1.tsx`
+
+### Schema
+- No schema change needed.
+
+### Boundary
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, baseline table, or visual evidence storage added.

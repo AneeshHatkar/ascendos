@@ -17,6 +17,25 @@ import {
   listWorkouts,
 } from "@/lib/repositories";
 
+import type {
+  BodyLogRow,
+  EmotionLogRow,
+  EnergyLogRow,
+  ExerciseRow,
+  HaircareLogRow,
+  JournalEntryRow,
+  MealItemRow,
+  MentalHealthLogRow,
+  NutritionLogRow,
+  ProductRow,
+  SkincareLogRow,
+  SleepLogRow,
+  SupplementLogRow,
+  SupplementRow,
+  WorkoutRow,
+  WorkoutSetRow,
+} from "@/types/database";
+
 export interface HealthBodyDashboardSummary {
   body_log_count: number;
   workout_count: number;
@@ -40,11 +59,33 @@ export interface HealthBodyDashboardSummary {
   read_only_boundary: true;
 }
 
+export interface HealthBodyDashboardDetailRows {
+  body_logs: BodyLogRow[];
+  workouts: WorkoutRow[];
+  exercises: ExerciseRow[];
+  workout_sets: WorkoutSetRow[];
+  nutrition_logs: NutritionLogRow[];
+  meal_items: MealItemRow[];
+  supplements: SupplementRow[];
+  active_supplements: SupplementRow[];
+  supplement_logs: SupplementLogRow[];
+  sleep_logs: SleepLogRow[];
+  energy_logs: EnergyLogRow[];
+  mental_health_logs: MentalHealthLogRow[];
+  emotion_logs: EmotionLogRow[];
+  journal_entries: JournalEntryRow[];
+  skincare_logs: SkincareLogRow[];
+  haircare_logs: HaircareLogRow[];
+  products: ProductRow[];
+  active_products: ProductRow[];
+}
+
 export interface HealthBodyDashboardDataResult {
   summary: HealthBodyDashboardSummary;
   generated_at: string;
   source_tables: string[];
   warnings: string[];
+  detail_rows: HealthBodyDashboardDetailRows;
 }
 
 const RECENT_WINDOW_DAYS = 7;
@@ -123,13 +164,22 @@ export async function getHealthBodyDashboardDataSummary(
 
   const bodyRows = asRows(bodyLogs);
   const workoutRows = asRows(workouts);
+  const exerciseRows = asRows(exercises);
+  const workoutSetRows = asRows(workoutSets);
   const nutritionRows = asRows(nutritionLogs);
+  const mealRows = asRows(mealItems);
+  const supplementRows = asRows(supplements);
+  const activeSupplementRows = asRows(activeSupplements);
+  const supplementLogRows = asRows(supplementLogs);
   const sleepRows = asRows(sleepLogs);
   const energyRows = asRows(energyLogs);
   const mentalRows = asRows(mentalHealthLogs);
   const emotionRows = asRows(emotionLogs);
+  const journalRows = asRows(journalEntries);
   const skincareRows = asRows(skincareLogs);
   const haircareRows = asRows(haircareLogs);
+  const productRows = asRows(products);
+  const activeProductRows = asRows(activeProducts);
 
   const recentHealthSignalCount =
     bodyRows.filter((item) => isWithinRecentWindow(item.log_date)).length +
@@ -183,25 +233,45 @@ export async function getHealthBodyDashboardDataSummary(
       "products",
     ],
     warnings,
+    detail_rows: {
+      body_logs: bodyRows,
+      workouts: workoutRows,
+      exercises: exerciseRows,
+      workout_sets: workoutSetRows,
+      nutrition_logs: nutritionRows,
+      meal_items: mealRows,
+      supplements: supplementRows,
+      active_supplements: activeSupplementRows,
+      supplement_logs: supplementLogRows,
+      sleep_logs: sleepRows,
+      energy_logs: energyRows,
+      mental_health_logs: mentalRows,
+      emotion_logs: emotionRows,
+      journal_entries: journalRows,
+      skincare_logs: skincareRows,
+      haircare_logs: haircareRows,
+      products: productRows,
+      active_products: activeProductRows,
+    },
     summary: {
       body_log_count: bodyRows.length,
       workout_count: workoutRows.length,
-      exercise_count: asRows(exercises).length,
-      workout_set_count: asRows(workoutSets).length,
+      exercise_count: exerciseRows.length,
+      workout_set_count: workoutSetRows.length,
       nutrition_log_count: nutritionRows.length,
-      meal_item_count: asRows(mealItems).length,
-      supplement_count: asRows(supplements).length,
-      active_supplement_count: asRows(activeSupplements).length,
-      supplement_log_count: asRows(supplementLogs).length,
+      meal_item_count: mealRows.length,
+      supplement_count: supplementRows.length,
+      active_supplement_count: activeSupplementRows.length,
+      supplement_log_count: supplementLogRows.length,
       sleep_log_count: sleepRows.length,
       energy_log_count: energyRows.length,
       mental_health_log_count: mentalRows.length,
       emotion_log_count: emotionRows.length,
-      journal_entry_count: asRows(journalEntries).length,
+      journal_entry_count: journalRows.length,
       skincare_log_count: skincareRows.length,
       haircare_log_count: haircareRows.length,
-      product_count: asRows(products).length,
-      active_product_count: asRows(activeProducts).length,
+      product_count: productRows.length,
+      active_product_count: activeProductRows.length,
       recent_health_signal_count: recentHealthSignalCount,
       read_only_boundary: true,
     },

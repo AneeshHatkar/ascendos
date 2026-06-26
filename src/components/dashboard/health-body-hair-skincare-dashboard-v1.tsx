@@ -5,6 +5,7 @@ import {
   HealthBodyPrivacyNotice,
   HealthBodyWarningPanel,
 } from "./health-body-dashboard-states";
+import { HealthBodyHairSkincareDetailPanel } from "./health-body-detail-panels";
 
 interface HealthBodyHairSkincareDashboardV1Props {
   userId: string;
@@ -98,6 +99,12 @@ export async function HealthBodyHairSkincareDashboardV1({
       />
       <HealthBodyPrivacyNotice />
       <HealthBodyWarningPanel warnings={data.warnings} />
+
+      <HealthBodyHairSkincareDetailPanel
+        skincareLogs={data.detail_rows.skincare_logs}
+        haircareLogs={data.detail_rows.haircare_logs}
+        products={data.detail_rows.products}
+      />
 
       {!hasHairSkincareData ? (
         <HealthBodyEmptyState

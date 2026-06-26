@@ -5,6 +5,7 @@ import {
   HealthBodyPrivacyNotice,
   HealthBodyWarningPanel,
 } from "./health-body-dashboard-states";
+import { HealthBodyTrainingDetailPanel } from "./health-body-detail-panels";
 
 interface HealthBodyDashboardV1Props {
   userId: string;
@@ -155,6 +156,13 @@ export async function HealthBodyDashboardV1({ userId }: HealthBodyDashboardV1Pro
       <HealthBodyBoundaryNotice />
       <HealthBodyPrivacyNotice />
       <HealthBodyWarningPanel warnings={data.warnings} />
+
+      <HealthBodyTrainingDetailPanel
+        bodyLogs={data.detail_rows.body_logs}
+        workouts={data.detail_rows.workouts}
+        exercises={data.detail_rows.exercises}
+        workoutSets={data.detail_rows.workout_sets}
+      />
 
       {summary.recent_health_signal_count === 0 ? (
         <HealthBodyEmptyState

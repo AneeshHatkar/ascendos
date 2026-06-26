@@ -5,6 +5,7 @@ import {
   HealthBodyPrivacyNotice,
   HealthBodyWarningPanel,
 } from "./health-body-dashboard-states";
+import { HealthBodySupplementDetailPanel } from "./health-body-detail-panels";
 
 interface HealthBodySupplementsDashboardV1Props {
   userId: string;
@@ -94,6 +95,12 @@ export async function HealthBodySupplementsDashboardV1({
       />
       <HealthBodyPrivacyNotice />
       <HealthBodyWarningPanel warnings={data.warnings} />
+
+      <HealthBodySupplementDetailPanel
+        supplements={data.detail_rows.supplements}
+        supplementLogs={data.detail_rows.supplement_logs}
+        products={data.detail_rows.products}
+      />
 
       {!hasSupplementData ? (
         <HealthBodyEmptyState

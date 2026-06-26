@@ -5,6 +5,7 @@ import {
   HealthBodyPrivacyNotice,
   HealthBodyWarningPanel,
 } from "./health-body-dashboard-states";
+import { HealthBodyEmotionReflectionDetailPanel } from "./health-body-detail-panels";
 
 interface HealthBodyEmotionDashboardV1Props {
   userId: string;
@@ -94,6 +95,12 @@ export async function HealthBodyEmotionDashboardV1({
       />
       <HealthBodyPrivacyNotice />
       <HealthBodyWarningPanel warnings={data.warnings} />
+
+      <HealthBodyEmotionReflectionDetailPanel
+        emotionLogs={data.detail_rows.emotion_logs}
+        mentalHealthLogs={data.detail_rows.mental_health_logs}
+        journalEntries={data.detail_rows.journal_entries}
+      />
 
       {!hasEmotionData ? (
         <HealthBodyEmptyState
