@@ -1470,3 +1470,46 @@ No SQL migration, RLS policy, parent ownership trigger, database type change, wr
 ### Next Step
 
 Inspect FINAL_SYNCED source-of-truth before starting Phase 12.
+
+## Phase 12 — Life Admin + Finance + Daily Admin Queue
+
+### Status
+
+Started.
+
+### Completed Work
+
+- C01 source/route inspection completed.
+- C02 Phase 12 plan lock completed.
+- Post-v1 expansion roadmap addendum created for Phases 22–26.
+- User-specific scope correction recorded: no housing search primary workflow because user already has housing.
+
+### Locked Scope
+
+- Daily Admin Queue
+- Finance tracking
+- Rent/utilities/lease tracking
+- Bills/subscriptions
+- Document metadata/deadlines
+- Command/Calendar admin visibility
+
+### Deferred Scope
+
+- Housing search as primary workflow
+- Apartment comparison
+- Fashion/wardrobe until Phase 22
+- Bank sync
+- Auto-pay
+- Legal/tax/immigration advice
+- Document file upload/storage
+- Autonomous Carnos writes
+- Python/ML execution
+- Background jobs
+
+### Schema
+
+No schema change needed for C02.
+
+### Next Step
+
+Phase 12 C03 — schema design and traceability docs.
