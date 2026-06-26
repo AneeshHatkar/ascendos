@@ -2543,3 +2543,23 @@ Purpose:
 - No SQL migration added.
 - No RLS policy changed.
 - No write helpers, server mutations, Carnos actions, UI components, dashboards, routes, storage/upload behavior, analytics snapshots, progress photo table, or baseline table added.
+
+## 2026-06-26 — Phase 11 Chunk E3 Read Helper Schema-Boundary Audit
+
+### Scope
+- Added Phase 11 read helper schema-boundary audit report.
+- Locked read-only boundary before UI aggregation and dashboard route work.
+- Confirmed the allowed table surface, forbidden deferred scope, helper coverage, and summary-helper boundary.
+
+### Files
+- `docs/phase-reports/PHASE_11_READ_HELPER_SCHEMA_BOUNDARY_AUDIT.md`
+
+### Boundary
+- No SQL migration added.
+- No RLS policy changed.
+- No type file changed.
+- No write helpers, server mutations, Carnos actions, UI components, dashboards, routes, storage/upload behavior, analytics snapshots, progress photo table, or baseline table added.
+
+### E3 Verification Repair
+- Added `listExercises` coverage to the health/body dashboard summary helper.
+- This aligns the summary helper with all 16 Phase 11 confirmed source tables.

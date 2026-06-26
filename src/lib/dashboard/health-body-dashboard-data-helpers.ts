@@ -2,6 +2,7 @@ import {
   listBodyLogs,
   listEmotionLogs,
   listEnergyLogs,
+  listExercises,
   listHaircareLogs,
   listJournalEntries,
   listMealItems,
@@ -19,6 +20,7 @@ import {
 export interface HealthBodyDashboardSummary {
   body_log_count: number;
   workout_count: number;
+  exercise_count: number;
   workout_set_count: number;
   nutrition_log_count: number;
   meal_item_count: number;
@@ -82,6 +84,7 @@ export async function getHealthBodyDashboardDataSummary(
   const [
     bodyLogs,
     workouts,
+    exercises,
     workoutSets,
     nutritionLogs,
     mealItems,
@@ -100,6 +103,7 @@ export async function getHealthBodyDashboardDataSummary(
   ] = await Promise.all([
     listBodyLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
     listWorkouts(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listExercises(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
     listWorkoutSets(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
     listNutritionLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
     listMealItems(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
@@ -163,6 +167,7 @@ export async function getHealthBodyDashboardDataSummary(
     source_tables: [
       "body_logs",
       "workouts",
+      "exercises",
       "workout_sets",
       "nutrition_logs",
       "meal_items",
@@ -181,6 +186,7 @@ export async function getHealthBodyDashboardDataSummary(
     summary: {
       body_log_count: bodyRows.length,
       workout_count: workoutRows.length,
+      exercise_count: asRows(exercises).length,
       workout_set_count: asRows(workoutSets).length,
       nutrition_log_count: nutritionRows.length,
       meal_item_count: asRows(mealItems).length,

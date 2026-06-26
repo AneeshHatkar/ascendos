@@ -821,3 +821,15 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 
 ### Notes
 - No write helpers, SQL migrations, dashboards, routes, storage/upload behavior, Carnos actions, baseline table, or progress photo table added.
+
+## 2026-06-26 — Phase 11 Chunk E3 Read Helper Schema-Boundary Audit
+
+### Added
+- Phase 11 read-helper schema-boundary audit report.
+
+### Notes
+- Locked the allowed table surface and forbidden deferred scope before UI/dashboard work.
+- No SQL, type, route, dashboard, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.
+
+### Fixed
+- Added exercise coverage to the Phase 11 health/body dashboard summary helper.

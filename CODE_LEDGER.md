@@ -1643,3 +1643,13 @@ Purpose: Provides read-only health/body dashboard summary aggregation over Phase
 Purpose: Exports the health/body dashboard summary helper module.
 
 Boundary: No writes, mutations, SQL, dashboards, routes, storage/upload behavior, or Carnos actions are added.
+
+## Phase 11 Chunk E3 — Read Helper Schema-Boundary Audit
+
+### `docs/phase-reports/PHASE_11_READ_HELPER_SCHEMA_BOUNDARY_AUDIT.md`
+Purpose: Documents and locks the read-helper schema contract before Phase 11 UI aggregation/dashboard work.
+
+Boundary: No code mutation surface, SQL migration, type change, write helper, route, dashboard, storage/upload behavior, Python/ML execution, or Carnos action was added.
+
+### E3 Verification Repair — `src/lib/dashboard/health-body-dashboard-data-helpers.ts`
+Purpose: Added exercise summary coverage so the dashboard summary helper covers all 16 confirmed Phase 11 source tables.

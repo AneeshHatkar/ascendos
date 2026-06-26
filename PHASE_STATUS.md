@@ -912,3 +912,20 @@ Completed pending verification.
 
 ### Boundary
 No SQL migration, RLS policy, parent ownership trigger, write helper, dashboard route, UI component, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.
+
+## Phase 11 Chunk E3 — Read Helper Schema-Boundary Audit
+
+### Status
+Completed pending verification.
+
+### Completed Steps
+- 11.20 Final read helper hardening / source-boundary audit before UI aggregation
+
+### Files
+- `docs/phase-reports/PHASE_11_READ_HELPER_SCHEMA_BOUNDARY_AUDIT.md`
+
+### Boundary
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, dashboard route, UI component, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.
+
+### E3 Verification Repair
+- Added `exercise_count` and `listExercises` summary coverage for the confirmed `exercises` table.
