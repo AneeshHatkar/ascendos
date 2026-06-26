@@ -2348,3 +2348,26 @@ Purpose:
 ### Result
 - Phase 10 is complete.
 - Next phase is Phase 11 — Health / Body System.
+
+## 2026-06-25 — Phase 11 Chunk A Plan Lock Start
+
+### Scope
+- Started Phase 11 — Health / Body System.
+- Created the Phase 11 44-step plan from source-of-truth route and table scope.
+- Added hardening for baselines, units, daily sleep tracking, sleep natural-language capture, photo persistence honesty, supplement safety, body-image safety, sensitive emotion privacy, data quality, target comparison, and trend boundaries.
+- Confirmed Phase 11 begins from a clean Phase 10 closeout plus a regenerated pre-phase code snapshot.
+
+### Files
+- `CODE_SNAPSHOT.md`
+- `docs/phase-plans/PHASE_11_HEALTH_BODY_SYSTEM.md`
+
+### Boundary
+- No SQL changed.
+- No database types changed.
+- No read helpers added.
+- No dashboard components added.
+- No route rewiring added.
+- No autonomous Carnos behavior, Python/ML execution, memory/RAG, voice, web tools, background jobs, medical advice, supplement claims, body-shaming language, or direct dashboard writes added.
+
+### Result
+- Phase 11 planning is locked for verification before schema design.

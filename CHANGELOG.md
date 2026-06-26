@@ -705,3 +705,18 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No write helpers added.
 - No autonomous outreach, scraping, paper submission, application submission, Python/ML worker execution, memory/RAG, voice, or background jobs added.
 - Next phase: Phase 11 — Health / Body System.
+
+## 2026-06-25 — Phase 11 Health / Body System Plan Start
+
+### Added
+- Phase 11 Health / Body System 44-step plan.
+- Phase 11 source scope for body, nutrition, supplements, sleep/energy, hair/skincare, and emotion surfaces.
+- Phase 11 hardening scope for baselines, units, daily sleep tracking, sleep natural-language capture, progress photo honesty, supplement safety, body-image safety, sensitive privacy, data quality, target comparison, and trend preview boundaries.
+
+### Notes
+- No SQL changed.
+- No database types changed.
+- No read helpers added.
+- No dashboard components added.
+- No route rewiring added.
+- No autonomous writes, medical claims, Python/ML execution, memory/RAG, voice, web tools, or background jobs added.

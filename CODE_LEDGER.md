@@ -1557,3 +1557,11 @@ Change: Records Phase 10 completion.
 
 ### `CODE_LEDGER.md`
 Change: Records final Phase 10 closeout file purposes.
+
+## Phase 11 Chunk A — Plan Lock Start
+
+### `CODE_SNAPSHOT.md`
+Purpose: Regenerated pre-phase code snapshot before Phase 11 implementation.
+
+### `docs/phase-plans/PHASE_11_HEALTH_BODY_SYSTEM.md`
+Purpose: Locks the Phase 11 Health / Body System plan, 44-step build sequence, source scope, route scope, SQL table scope, hardening additions, safety boundaries, chunk plan, and completion criteria.

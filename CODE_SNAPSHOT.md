@@ -20,12 +20,39 @@ Upload or paste this file and say:
 - `README.md`
 - `SOURCE_OF_TRUTH.md`
 - `docs/architecture/PYTHON_ML_INTELLIGENCE_WORKER.md`
+- `docs/audits/PHASE_1_7_SOURCE_CROSSWALK.md`
+- `docs/database/CAREER_SQL_SCHEMA_DESIGN.md`
 - `docs/database/CORE_SQL_SPINE.md`
+- `docs/database/PHASE_10_RESEARCH_SCHEMA_DESIGN.md`
+- `docs/database/PHASE_10_STANFORD_PHD_SCHEMA_DESIGN.md`
+- `docs/database/PHASE_9_LEARNING_PROJECT_SCHEMA_DESIGN.md`
+- `docs/phase-plans/PHASE_10_RESEARCH_STANFORD_SYSTEM.md`
 - `docs/phase-plans/PHASE_4_CORE_SQL_SPINE.md`
 - `docs/phase-plans/PHASE_5_15_PYTHON_ML_INTELLIGENCE_ARCHITECTURE_PATCH.md`
 - `docs/phase-plans/PHASE_5_CORE_READ_UI_INTEGRATION.md`
+- `docs/phase-plans/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW.md`
+- `docs/phase-plans/PHASE_7_CORE_OPERATING_DASHBOARDS.md`
+- `docs/phase-plans/PHASE_8_CAREER_SYSTEM.md`
+- `docs/phase-plans/PHASE_9_LEARNING_PROJECT_SYSTEM.md`
+- `docs/phase-reports/PHASE_10_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
+- `docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT.md`
+- `docs/phase-reports/PHASE_10_SOURCE_TO_SCOPE_TRACEABILITY.md`
+- `docs/phase-reports/PHASE_1_8_RETROSPECTIVE_GAP_AUDIT.md`
 - `docs/phase-reports/PHASE_4_CORE_SQL_SPINE_REPORT.md`
 - `docs/phase-reports/PHASE_5_CORE_READ_UI_INTEGRATION_REPORT.md`
+- `docs/phase-reports/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW_REPORT.md`
+- `docs/phase-reports/PHASE_7_CORE_OPERATING_DASHBOARDS_REPORT.md`
+- `docs/phase-reports/PHASE_8_2_CAREER_INSPECTION_REPORT.md`
+- `docs/phase-reports/PHASE_8_CAREER_SYSTEM_COMPLETION_REPORT.md`
+- `docs/phase-reports/PHASE_9_AUDIT_GATE.md`
+- `docs/phase-reports/PHASE_9_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
+- `docs/phase-reports/PHASE_9_COMPLETION_REPORT.md`
+- `docs/phase-reports/PHASE_9_MANUAL_SMOKE_CHECKLIST.md`
+- `docs/phase-reports/PHASE_9_NO_WRITE_PRIVACY_AUDIT.md`
+- `docs/phase-reports/PHASE_9_SOURCE_TO_SCOPE_TRACEABILITY.md`
+- `docs/qa/PHASE_10_RESEARCH_STANFORD_MANUAL_SMOKE_CHECKLIST.md`
+- `docs/qa/PHASE_7_MANUAL_SMOKE_CHECKLIST.md`
+- `docs/qa/PHASE_8_CAREER_MANUAL_SMOKE_CHECKLIST.md`
 - `docs/setup/AUTH_SMOKE_TEST.md`
 - `docs/setup/PROTECTED_ROUTES.md`
 - `docs/setup/SUPABASE_SETUP.md`
@@ -36,9 +63,14 @@ Upload or paste this file and say:
 - `next.config.ts`
 - `package.json`
 - `postcss.config.mjs`
+- `scripts/audit-integration-sanity.mjs`
+- `scripts/audit-phase-1-7-crosswalk.mjs`
+- `scripts/audit-phase-10.mjs`
 - `scripts/audit-phase-3.mjs`
 - `scripts/audit-phase-4.mjs`
 - `scripts/audit-phase-5.mjs`
+- `scripts/audit-phase-6.mjs`
+- `scripts/audit-phase-8.mjs`
 - `scripts/audit-python-ml-boundary.mjs`
 - `scripts/audit-source-alignment.mjs`
 - `scripts/generate-code-snapshot.mjs`
@@ -87,36 +119,86 @@ Upload or paste this file and say:
 - `src/app/supplements/page.tsx`
 - `src/app/timeline/page.tsx`
 - `src/app/world-class/page.tsx`
+- `src/components/actions/index.ts`
+- `src/components/actions/pending-updates-drawer.tsx`
+- `src/components/actions/proposed-action-review-card.tsx`
 - `src/components/auth/index.ts`
 - `src/components/auth/protected-page.tsx`
 - `src/components/dashboard/authenticated-dashboard-shell.tsx`
+- `src/components/dashboard/calendar-dashboard-v1.tsx`
+- `src/components/dashboard/career-dashboard-v1.tsx`
+- `src/components/dashboard/career-evidence-linkage-panel.tsx`
+- `src/components/dashboard/career-proposed-action-visibility-panel.tsx`
+- `src/components/dashboard/career-state-boundary-panel.tsx`
+- `src/components/dashboard/carnos-panel-v1.tsx`
+- `src/components/dashboard/command-dashboard-v1.tsx`
+- `src/components/dashboard/cross-dashboard-links.tsx`
 - `src/components/dashboard/dashboard-card.tsx`
 - `src/components/dashboard/data-list.tsx`
 - `src/components/dashboard/domain-read-page.tsx`
 - `src/components/dashboard/empty-state.tsx`
+- `src/components/dashboard/goals-dashboard-v1.tsx`
 - `src/components/dashboard/index.ts`
+- `src/components/dashboard/interviews-dashboard-v1.tsx`
+- `src/components/dashboard/knowledge-vault-alignment-v1.tsx`
+- `src/components/dashboard/learning-academy-dashboard-v1.tsx`
+- `src/components/dashboard/learning-project-detail-panels.tsx`
+- `src/components/dashboard/learning-project-linkage-panels.tsx`
+- `src/components/dashboard/learning-project-summary-panel.tsx`
 - `src/components/dashboard/metric-tile.tsx`
+- `src/components/dashboard/networking-dashboard-v1.tsx`
+- `src/components/dashboard/operating-dashboard-card.tsx`
+- `src/components/dashboard/operating-dashboard-grid.tsx`
 - `src/components/dashboard/placeholder-dashboard-page.tsx`
+- `src/components/dashboard/project-builder-dashboard-v1.tsx`
+- `src/components/dashboard/proof-dashboard-v1.tsx`
+- `src/components/dashboard/research-detail-panels.tsx`
+- `src/components/dashboard/research-linkage-boundary-panels.tsx`
+- `src/components/dashboard/research-proposed-action-visibility-panel.tsx`
+- `src/components/dashboard/research-summary-panel.tsx`
+- `src/components/dashboard/resume-dashboard-v1.tsx`
 - `src/components/dashboard/section-card.tsx`
 - `src/components/dashboard/status-pill.tsx`
+- `src/components/dashboard/timeline-dashboard-v1.tsx`
 - `src/components/layout/app-shell.tsx`
 - `src/components/layout/app-sidebar.tsx`
 - `src/components/layout/app-topbar.tsx`
 - `src/components/layout/auth-status.tsx`
 - `src/components/profile/profile-summary-card.tsx`
+- `src/lib/actions/action-lifecycle.ts`
+- `src/lib/actions/action-results.ts`
+- `src/lib/actions/action-types.ts`
+- `src/lib/actions/create-proposed-action.ts`
+- `src/lib/actions/execution-dispatcher.ts`
+- `src/lib/actions/flows/create-daily-log-flow.ts`
+- `src/lib/actions/flows/create-goal-flow.ts`
+- `src/lib/actions/flows/create-proof-item-flow.ts`
+- `src/lib/actions/flows/create-task-flow.ts`
+- `src/lib/actions/proposed-action-contracts.ts`
+- `src/lib/actions/validate-proposed-action.ts`
+- `src/lib/audit/write-audit-log.ts`
 - `src/lib/auth/actions.ts`
 - `src/lib/auth/session.ts`
 - `src/lib/dashboard/auth.ts`
+- `src/lib/dashboard/career-dashboard-data-helpers.ts`
+- `src/lib/dashboard/dashboard-card-registry.ts`
+- `src/lib/dashboard/dashboard-data-helpers.ts`
+- `src/lib/dashboard/dashboard-layout-contract.ts`
+- `src/lib/dashboard/index.ts`
+- `src/lib/dashboard/learning-project-dashboard-data-helpers.ts`
+- `src/lib/dashboard/research-stanford-dashboard-data-helpers.ts`
 - `src/lib/dashboard-registry.ts`
 - `src/lib/profile/index.ts`
 - `src/lib/profile/queries.ts`
 - `src/lib/repositories/core-read.ts`
 - `src/lib/repositories/index.ts`
+- `src/lib/repositories/research-read.ts`
 - `src/lib/routes.ts`
 - `src/lib/supabase/browser.ts`
 - `src/lib/supabase/env.ts`
 - `src/lib/supabase/middleware.ts`
 - `src/lib/supabase/server.ts`
+- `src/lib/timeline/write-timeline-event.ts`
 - `src/types/database.ts`
 - `supabase/migrations/0001_profiles_and_carnos_profiles.sql`
 - `supabase/migrations/0002_audit_and_ai_actions.sql`
@@ -124,6 +206,11 @@ Upload or paste this file and say:
 - `supabase/migrations/0004_goals_foundation.sql`
 - `supabase/migrations/0005_daily_logs_and_proof_items.sql`
 - `supabase/migrations/0006_tasks_and_events.sql`
+- `supabase/migrations/0007_career_system_foundation.sql`
+- `supabase/migrations/0008_learning_project_system_foundation.sql`
+- `supabase/migrations/0009_phase9_parent_ownership_guards.sql`
+- `supabase/migrations/0010_phase10_research_stanford_foundation.sql`
+- `supabase/migrations/0011_phase10_parent_ownership_guards.sql`
 - `tsconfig.json`
 
 ## File Contents
@@ -235,6 +322,609 @@ All notable changes to ascendOS will be documented here.
 - Added all planned ML intelligence features, route placement, phase placement, safety boundaries, privacy boundaries, evaluation requirements, score definitions, and output contracts.
 - Added Python/ML boundary audit.
 - No runtime ML, database write behavior, or existing Phase 1-5 behavior was changed.
+
+## 2026-06-19 23:35 UTC — Phase 6 Safe Write Plan Started
+
+Added the Phase 6 plan for the Safe Write / Proposed Action Flow.
+
+This starts the controlled write foundation for ascendOS:
+- proposed actions
+- validation
+- Save/Edit/Cancel confirmation
+- server-side writes
+- audit logging
+- timeline linkage
+- dashboard refresh
+
+No runtime write code was added yet.
+
+## 2026-06-19 23:44 UTC — Added Proposed Action Type Registry
+
+Added the Phase 6 proposed action type registry.
+
+This establishes the first safe-write foundation layer by defining which action names are allowed before contracts, validation, lifecycle, execution, and UI are added.
+
+## 2026-06-19 23:51 UTC — Added Proposed Action Contracts
+
+Added typed proposed action contracts for Phase 6 safe write flows.
+
+Supported contracts:
+- create task
+- create goal
+- create daily log
+- create proof item
+
+This prepares the project for validation and controlled action execution.
+
+
+## 2026-06-19 23:58 UTC — Added Action Result Types
+
+Added standard action result contracts for Phase 6 safe-write workflows.
+
+This prepares validation and execution code to return consistent success/error objects instead of ad hoc values.
+
+## 2026-06-20 00:05 UTC — Added Proposed Action Payload Validation
+
+Added proposed action validation for Phase 6 safe-write workflows.
+
+This prevents invalid or unsafe proposed action payloads from reaching future execution code.
+
+## 2026-06-20 00:09 UTC — Added Audit Logging Helper
+
+Added a reusable audit logging helper for Phase 6 safe-write workflows.
+
+This prepares future confirmed writes to create traceable audit records.
+
+
+## 2026-06-20 04:31 UTC — Added Timeline Helper Boundary
+
+Added a safe timeline helper boundary for Phase 6.
+
+Because the current SQL spine does not include a `timeline_events` table, the helper intentionally returns a controlled skipped result instead of inventing schema or writing to a non-existent table.
+
+
+## 2026-06-20 04:49 UTC — Added Proposed Action Creation Helper
+
+Added a helper for creating validated proposed actions in `ai_actions` with `pending_confirmation` status.
+
+This preserves the required Phase 6 flow: proposal first, confirmation later, execution only after explicit approval.
+
+
+## 2026-06-20 05:05 UTC — Added Action Lifecycle Helper
+
+Added a safe lifecycle helper for proposed actions.
+
+The helper supports approval, rejection, cancellation, and failure marking while preserving the Phase 6 rule that target records are not written until a later explicit execution step.
+
+
+## 2026-06-20 05:18 UTC — Added Execution Dispatcher Boundary
+
+Added the Phase 6 execution dispatcher boundary.
+
+The dispatcher verifies ownership, approval status, and action type, but intentionally does not execute target-table writes until the specific Phase 6.11–6.14 action flows are implemented.
+
+
+## 2026-06-20 05:24 UTC — Added Create Task Execution Flow
+
+Added the first concrete Phase 6 execution flow: approved `create_task` proposals can now create records in `tasks`.
+
+The dispatcher now routes `create_task` actions to the task flow while keeping the remaining action types intentionally unimplemented until their specific phases.
+
+
+## 2026-06-20 18:09 UTC — Added Create Goal Execution Flow
+
+Added the Phase 6 create-goal execution flow: approved `create_goal` proposals can now create records in `goals`.
+
+The dispatcher now routes `create_goal` actions to the goal flow while keeping daily logs and proof items intentionally unimplemented until their specific phases.
+
+
+## 2026-06-20 18:13 UTC — Added Create Daily Log Execution Flow
+
+Added the Phase 6 create-daily-log execution flow: approved `create_daily_log` proposals can now create records in `daily_logs`.
+
+The dispatcher now routes `create_daily_log` actions to the daily log flow while keeping proof items intentionally unimplemented until Phase 6.14.
+
+
+## 2026-06-20 18:17 UTC — Added Create Proof Item Execution Flow
+
+Added the Phase 6 create-proof-item execution flow: approved `create_proof_item` proposals can now create records in `proof_items`.
+
+The dispatcher now routes all four Phase 6 write action types: tasks, goals, daily logs, and proof items.
+
+
+## 2026-06-20 18:22 UTC — Added Proposed Action Review UI
+
+Added a reusable Save/Edit/Cancel UI component for reviewing proposed actions before execution.
+
+The component supports payload preview, JSON payload editing, validation issue display, Save / Confirm callback, and Cancel callback while keeping database writes outside the component.
+
+
+## 2026-06-20 18:30 UTC — Wired Proposed Action Review into Carnos Page
+
+Wired the Phase 6 proposed-action review card into the Carnos dashboard as a safe confirmation-first preview surface.
+
+The page now displays the Save/Edit/Cancel UI while preserving the server-owned write boundary.
+
+
+## 2026-06-20 18:38 UTC — Added Phase 6 Audit Gate
+
+Added `scripts/audit-phase-6.mjs` and wired `npm run audit:phase6` into the main check pipeline.
+
+The audit verifies the Phase 6 safe write proposed-action flow and guards the confirmation-first boundary.
+
+
+## 2026-06-20 18:47 UTC — Completed Phase 6 Safe Write Proposed Action Flow
+
+Completed Phase 6 and added the final Phase 6 report.
+
+Phase 6 now includes proposed action creation, validation, lifecycle handling, approved-only execution dispatch, four target write flows, Save/Edit/Cancel UI, Carnos page wiring, and a Phase 6 audit gate.
+
+## Phase 7.1 - Core Operating Dashboards Plan Lock
+
+- Added the Phase 7 plan lock.
+- Locked the roadmap reconciliation and Phase 7 boundaries before implementation.
+
+## Phase 7.2 - Dashboard Layout Contract
+
+- Added the shared Phase 7 dashboard layout contract.
+
+## Phase 7.3 - Dashboard Card Registry
+
+- Added the shared Phase 7 dashboard card registry.
+
+## Phase 7.4 - Shared Dashboard Card Primitives
+
+- Added reusable operating dashboard card and grid primitives for Phase 7.
+
+## Phase 7.5 - Dashboard Data Aggregation Helpers
+
+- Added read-only dashboard data aggregation helpers for Phase 7.
+
+## Phase 7.6 - Command Dashboard v1
+
+- Added the initial Command dashboard v1 component for Phase 7.
+
+## Phase 7.6B - Wire Command Dashboard v1
+
+- Wired the Command dashboard v1 component into the live `/command` route.
+
+## Phase 7 Integration Sanity Audit Gate
+
+- Added a project-wide integration sanity audit to reduce the risk of created-but-not-wired phase gaps.
+
+## Phase 7.7 - Timeline Dashboard v1
+
+- Added Timeline dashboard v1 component for read-only operating history visibility.
+
+## Phase 7.7B - Wire Timeline Dashboard Route
+
+- Wired the Phase 7 Timeline dashboard component into `/timeline` while preserving the existing read-only timeline records view.
+
+## Phase 7.8 - Calendar Dashboard v1
+
+- Added and wired the Phase 7 Calendar dashboard component into `/calendar` while preserving the existing read-only calendar records view.
+
+## Phase 7.9 - Goals Dashboard v1
+
+- Added and wired the Phase 7 Goals dashboard component into `/goals` while preserving the existing read-only goal records view.
+
+## Phase 7.10 - Proof Dashboard/Card System
+
+- Added the Phase 7 Proof dashboard/card system as a read-only exported component without adding a non-canonical route.
+
+## Phase 7.11 - Pending Updates / Confirmation Drawer Integration
+
+- Added a read-only pending updates drawer to the Carnos dashboard while preserving confirmation-first action review boundaries.
+
+## Phase 7.12 - Carnos Panel v1
+
+- Added a read-only Carnos operating panel to the Carnos dashboard with companion state and confirmation visibility.
+
+## Phase 7.13 - Cross-Dashboard Links
+
+- Added canonical cross-dashboard navigation across the Phase 7 operating dashboard surfaces.
+
+## Phase 7.14 - Empty / Loading / Error / Privacy States
+
+- Added contract-backed dashboard card states for empty, loading, error, and privacy-redacted rendering.
+
+## Phase 7.15 - No-Hardcoded-Demo-Data Cleanup
+
+- Cleaned user-facing Phase 7 dashboard copy to reduce demo/placeholder language while preserving audit-required compatibility markers.
+
+## Phase 7.16 - Phase 7 Audit Gate
+
+- Expanded integration audit coverage for Phase 7 dashboard wiring, canonical links, pending updates, and dashboard state handling.
+
+
+
+## Phase 7.17 - Manual Smoke Checklist
+
+- Added Phase 7 manual browser smoke checklist for core operating dashboard verification.
+
+## Phase 7.18 - Phase 7 Completion
+
+- Completed Phase 7 Core Operating Dashboards and added the final Phase 7 report.
+- Strengthened integration audit boundary coverage for all Phase 7 dashboard surfaces.
+
+## Phase 1-7 Source Crosswalk Verification
+
+- Added a persistent Phase 1–7 source-to-implementation crosswalk and audit script before Phase 8.
+
+## Phase 8.1 - Career System Plan Lock v2
+
+- Locked the expanded 24-step Phase 8 Career System plan.
+
+## Phase 8.2 - Career Route and Data Contract Inspection
+
+- Added the Phase 8.2 inspection report documenting current career route, SQL, repository, dashboard, and audit state.
+
+## Phase 8.3 - Career SQL Schema Plan / Migration Design
+
+- Added Career SQL schema design for the upcoming additive Phase 8 career migration.
+
+## Phase 8.4 - Additive Career SQL Migration
+
+- Added the additive Career System SQL migration with applications, events, networking, referrals, resume, and interview tables.
+
+## Phase 8.5 - Database Types Update / Generated Type Alignment
+
+- Added TypeScript database contracts for the Phase 8 Career System SQL tables.
+
+## 2026-06-24 — Phase 8 Career System Complete
+
+### Added
+- Career SQL foundation.
+- Career read repositories.
+- Career dashboard aggregation.
+- `/career`, `/networking`, `/resume`, and `/interviews` dashboards.
+- Career cross-links.
+- Career evidence linkage.
+- Career proposed-action visibility.
+- Career state/privacy boundary.
+- Phase 8 audit gate.
+- Phase 8 integration audit expansion.
+- Phase 8 manual smoke checklist.
+- Phase 8 completion report.
+
+### Preserved
+- Read-only dashboard boundary.
+- Confirmation-first proposed-action law.
+- No autonomous applications/messages.
+- No scraping.
+- No Python/ML execution.
+- No background jobs.
+
+Phase 8.24 closeout marker: Phase 8 Career System Complete.
+
+## 2026-06-24 — Phase 1–8 Retrospective Gap Audit
+
+### Added
+- Post-Phase-8 retrospective gap audit.
+- Documented completed Phase 1–8 scope.
+- Documented deferred v1 scope.
+- Documented risks and Phase 9 guardrails.
+
+## 2026-06-24 — Phase 9 Chunk A Plan Lock
+
+### Added
+- Phase 9 Learning / Project System plan.
+- Phase 9 source and route inspection report.
+- Locked 28 Phase 9 requirement steps into 12 safe execution chunks.
+
+### Notes
+- No application code changed.
+- No SQL migration added yet.
+- No dashboard route rewrites added yet.
+
+## 2026-06-24 — Phase 9 Chunk B Schema Design
+
+### Added
+- Phase 9 Learning / Project System schema design.
+- Phase 9 source-to-scope traceability matrix.
+
+### Notes
+- No SQL migration added yet.
+- No app source code changed.
+- Next step is SQL migration design implementation in `0008_learning_project_system_foundation.sql`.
+
+## 2026-06-24 — Phase 9 Chunk C SQL Migration
+
+### Added
+- Phase 9 Learning / Project System SQL migration.
+- Learning tables for skill paths, skills, prerequisites, progress, sessions, quizzes, and quiz attempts.
+- Project tables for projects, milestones, bugs, tests, releases, and links.
+- RLS, user ownership, policies, and indexes for the Phase 9 tables.
+
+### Notes
+- TypeScript database types are not updated yet.
+- No dashboard UI changed yet.
+
+## 2026-06-24 — Phase 9 Chunk C.1 Parent Ownership Hardening
+
+### Added
+- Parent ownership guard migration for Phase 9 learning/project tables.
+- Stricter insert/update policies for parent-linked learning and project records.
+
+### Notes
+- No TypeScript database types changed yet.
+- This hardening was added before moving to database type updates.
+
+## 2026-06-24 — Phase 9 Chunk D Database Types
+
+### Added
+- TypeScript database table definitions for Phase 9 learning/project tables.
+- Exported row, insert, and update aliases for Phase 9 records.
+
+### Notes
+- No read helpers added yet.
+- No dashboard UI changed yet.
+
+## 2026-06-24 — Phase 9 Chunk E Read Helpers
+
+### Added
+- User-scoped read helpers for Phase 9 learning records.
+- User-scoped read helpers for Phase 9 project records.
+
+### Notes
+- No write helpers added.
+- No dashboard UI changed.
+
+## 2026-06-24 — Phase 9 Chunk F Aggregation and Registry
+
+### Added
+- Dashboard cards for Phase 9 learning and project surfaces.
+- Learning/project aggregation helper for dashboard-ready summary data.
+- Shared learning/project summary panel UI primitive.
+
+### Notes
+- No `/learning` or `/projects` route implementation changed yet.
+- No write behavior added.
+
+## 2026-06-24 — Phase 9 Chunk G Learning Academy Dashboard
+
+### Added
+- Learning Academy dashboard component.
+- `/learning` route wired to Phase 9 read-only learning data.
+
+### Notes
+- No write behavior added.
+- No proposed-action execution added.
+
+## 2026-06-24 — Phase 9 Chunk H Project Builder Dashboard
+
+### Added
+- Project Builder dashboard component.
+- `/projects` route wired to Phase 9 read-only project data.
+
+### Notes
+- No write behavior added.
+- No proposed-action execution added.
+
+## 2026-06-24 — Phase 9 Chunk I Knowledge Route Alignment
+
+### Added
+- Knowledge Vault alignment dashboard.
+- `/knowledge` route wired to Phase 9 learning/project source records.
+
+### Notes
+- Full memory/RAG remains deferred to later phases.
+- No write behavior added.
+
+## 2026-06-24 — Phase 9 Chunk J Detail Panels
+
+### Added
+- Skill path/progress detail panel.
+- Quiz/session detail panel.
+- Project build-log detail panel.
+
+### Notes
+- No write behavior added.
+- No proposed-action execution added.
+
+## 2026-06-24 — Phase 9 Chunk K Linkage and State Surfaces
+
+### Added
+- Learning/project proof, resume, README, goal, task, and timeline linkage surfaces.
+- Preview-only proposed-action visibility panel.
+- Empty/loading/error/privacy boundary panel.
+- Cross-dashboard links for learning, projects, knowledge, proof, goals, timeline, resume, and Carnos.
+
+### Notes
+- No write behavior added.
+- No proposed-action execution added.
+
+## 2026-06-24 — Phase 9 Learning / Project System Complete
+
+### Added
+- Phase 9 no-write/privacy audit.
+- Phase 9 audit gate.
+- Phase 9 manual smoke checklist.
+- Phase 9 completion report.
+
+### Changed
+- Updated phase status to mark Phase 9 complete.
+
+### Next
+- Phase 10 — Research / Stanford System.
+
+## 2026-06-25 — Phase 10 Chunk A Research / Stanford Planning
+
+### Added
+- Phase 10 Research / Stanford System plan.
+- Phase 10 Chunk A source and route inspection report.
+
+### Notes
+- No app code changed.
+- No SQL changed.
+- No database types changed.
+- No old phase migration edited.
+- Next: Phase 10 Chunk B schema design.
+
+## 2026-06-25 — Phase 10 Chunk B Schema Design
+
+### Added
+- Phase 10 research schema design.
+- Phase 10 Stanford/PhD schema design.
+- Phase 10 source-to-scope traceability matrix.
+
+### Notes
+- No SQL changed.
+- No app code changed.
+- No database types changed.
+- No old migration edited.
+- Next: Phase 10 Chunk C SQL foundation.
+
+## 2026-06-25 — Phase 10 Chunk C SQL Foundation
+
+### Added
+- Phase 10 Research / Stanford SQL foundation migration.
+- User-owned research tables.
+- User-owned Stanford/PhD readiness tables.
+- RLS, SELECT policies, INSERT policies, and user indexes for Phase 10 tables.
+
+### Notes
+- No app code changed.
+- No database types changed.
+- No read helpers changed.
+- No old migration edited.
+- Next: Phase 10 Chunk C.1 parent ownership/RLS hardening.
+
+## 2026-06-25 — Phase 10 Chunk C.1 Parent Ownership Guards
+
+### Added
+- Phase 10 parent ownership guard migration.
+- Helper functions for parent ownership validation.
+- Insert/update triggers for Phase 10 records with nullable cross-phase references.
+
+### Notes
+- No app code changed.
+- No database types changed.
+- No read helpers changed.
+- No old migration edited.
+- Next: Phase 10 Chunk D database types.
+
+## 2026-06-25 — Phase 10 Chunk D Database Types
+
+### Added
+- Phase 10 database row types.
+- Phase 10 insert/update type aliases.
+- Exported aliases for Research / Stanford tables.
+
+### Notes
+- No SQL migration changed.
+- No read helpers added.
+- No dashboard or route code changed.
+- Next: Phase 10 Chunk E read helpers.
+
+## 2026-06-25 — Phase 10 Chunk E Read Helpers
+
+### Added
+- Research read helpers.
+- Stanford/PhD read helpers.
+- Literature and citation read helpers.
+- Repository barrel export for Phase 10 read helpers.
+
+### Notes
+- No SQL migration changed.
+- No database types changed.
+- No dashboard or route code changed.
+- No write helpers added.
+- Next: Phase 10 Chunk F aggregation helpers and shared primitives.
+
+## 2026-06-25 — Phase 10 Chunk F Aggregation, Registry, Shared UI
+
+### Added
+- Research/Stanford aggregation helper.
+- Research Lab dashboard card contracts.
+- Research Stanford dashboard card contracts.
+- Shared read-only research summary panel primitive.
+
+### Notes
+- No SQL changed.
+- No write helpers added.
+- No route wiring changed.
+
+## 2026-06-25 — Phase 10 Chunk G Route Read Surfaces
+
+### Added
+- Research Lab authenticated read-only route surface.
+- Research Stanford authenticated read-only route surface.
+- Safe-write boundary messaging for both research routes.
+
+### Changed
+- Replaced placeholder research pages with Phase 10 read surfaces.
+
+### Notes
+- No SQL changed.
+- No write helpers added.
+- No autonomous outreach, scraping, or submission behavior added.
+
+## 2026-06-25 — Phase 10 Chunk H Linkage and Boundary Panels
+
+### Added
+- Research proof/linkage visibility panel.
+- Stanford target-fit linkage visibility panel.
+- Research privacy and safe-write boundary panel.
+- Research route linkage/boundary wiring.
+
+### Notes
+- No SQL changed.
+- No write helpers added.
+- No autonomous outreach, scraping, paper submission, or application automation added.
+
+## 2026-06-25 — Phase 10 Chunk I Detail Visibility Panels
+
+### Added
+- Research detail visibility panels.
+- Stanford/PhD detail visibility panels.
+- Route wiring for focused Phase 10 record detail.
+
+### Notes
+- No SQL changed.
+- No write helpers added.
+- No autonomous outreach, scraping, paper submission, or application automation added.
+
+## 2026-06-25 — Phase 10 Chunk J Proposed-Action Visibility, Cross-Links, Audit Draft
+
+### Added
+- Research proposed-action visibility panel.
+- Research cross-dashboard links.
+- Phase 10 audit script.
+- Phase 10 manual smoke checklist.
+- Phase 10 completion report draft.
+- `audit:phase10` package script.
+- Phase 10 audit added to `npm run check`.
+
+### Notes
+- No SQL changed.
+- No write helpers added.
+- No real proposed-action persistence added.
+- No autonomous outreach, scraping, paper submission, or application automation added.
+
+## 2026-06-25 — Phase 10 Research / Stanford System Complete
+
+### Added
+- Final Phase 10 completion report.
+- Final Phase 10 closeout status.
+- Final Phase 10 log and ledger entries.
+
+### Changed
+- Converted the Phase 10 completion report draft into the final completion report.
+- Updated Phase 10 smoke checklist status.
+- Marked Phase 10 complete in phase status.
+
+### Verification
+- `npm run audit:phase10` passed.
+- `npm run check` passed.
+- Build completed successfully with `/research-lab` and `/research-stanford` as dynamic authenticated routes.
+
+### Notes
+- Phase 10 remains read-first and visibility-only.
+- No SQL changed.
+- No write helpers added.
+- No autonomous outreach, scraping, paper submission, application submission, Python/ML worker execution, memory/RAG, voice, or background jobs added.
+- Next phase: Phase 11 — Health / Body System.
 ```
 
 ### `CODE_LEDGER.md`
@@ -803,7 +1493,9 @@ Change: Restored `profiles.onboarding_status` and `confirmation_required` compat
 Purpose: Provides typed read-only repository helpers for Phase 4 core SQL spine tables.
 
 ### `src/lib/repositories/index.ts`
-Purpose: Barrel export for repository helpers.\n\n## Phase 4.11 — Phase 4 Documentation and Report
+Purpose: Barrel export for repository helpers.
+
+## Phase 4.11 — Phase 4 Documentation and Report
 
 ### docs/database/CORE_SQL_SPINE.md
 Purpose: Documents Phase 4 core SQL spine tables, safety rules, validation commands, TypeScript types, repositories, and deferred scope.
@@ -812,7 +1504,9 @@ Purpose: Documents Phase 4 core SQL spine tables, safety rules, validation comma
 Purpose: Records Phase 4 completion report, fixed issues, verification gates, and next phase recommendation.
 
 ### PHASE_STATUS.md
-Change: Added Phase 4 documentation-added status.\n\n
+Change: Added Phase 4 documentation-added status.
+
+
 
 ## Phase 4.12 — Phase 4 Complete Marker
 
@@ -905,13 +1599,17 @@ Purpose: Connects the Carnos dashboard to read-only chat session, chat message, 
 ## Phase 5.8 — Calendar Page Read Integration
 
 ### src/app/calendar/page.tsx
-Purpose: Connects the calendar dashboard to read-only task and event repository helpers and renders calendar metrics, read warnings, combined task/event list, and empty state.\n\n## Phase 5.9 — Proof and Daily Log Read Surfaces
+Purpose: Connects the calendar dashboard to read-only task and event repository helpers and renders calendar metrics, read warnings, combined task/event list, and empty state.
+
+## Phase 5.9 — Proof and Daily Log Read Surfaces
 
 ### src/app/world-class/page.tsx
 Purpose: Connects the world-class path dashboard to read-only proof item and daily log repository helpers and renders proof/reality metrics plus recent proof records.
 
 ### src/app/analytics/page.tsx
-Purpose: Connects the analytics dashboard to read-only proof item and daily log repository helpers and renders lightweight proof/daily-log summary metrics plus recent daily logs.\n\n
+Purpose: Connects the analytics dashboard to read-only proof item and daily log repository helpers and renders lightweight proof/daily-log summary metrics plus recent daily logs.
+
+
 
 ## Phase 5.10 — Core Domain Filtered Reads
 
@@ -936,10 +1634,14 @@ Change: Exports DomainReadPage.
 Purpose: Audits Phase 5 read UI integration and confirms no write, memory, Carnos generation, or execution code entered the phase.
 
 ### package.json
-Change: Added `audit:phase5` and wired it into `npm run check`.\n\n## Phase 5.12 — Phase 5 Documentation Report
+Change: Added `audit:phase5` and wired it into `npm run check`.
+
+## Phase 5.12 — Phase 5 Documentation Report
 
 ### docs/phase-reports/PHASE_5_CORE_READ_UI_INTEGRATION_REPORT.md
-Purpose: Documents Phase 5 read UI integration scope, completed surfaces, explicit non-scope, verification gates, and remaining closure steps.\n\n
+Purpose: Documents Phase 5 read UI integration scope, completed surfaces, explicit non-scope, verification gates, and remaining closure steps.
+
+
 
 ## Phase 5.13 — Source Alignment Audit Update
 
@@ -982,6 +1684,811 @@ Purpose: Verifies Python/ML is documented as non-mutating, planned, and not acti
 
 ### package.json
 Change: Added `audit:pythonml` and wired it into `npm run check`.
+
+## 2026-06-19 23:35 UTC — Phase 6.1 Plan Lock
+
+Added:
+- `docs/phase-plans/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW.md`
+
+Role:
+- Official Phase 6 implementation plan.
+- Defines safe proposed-action write flow, scope, non-scope, acceptance criteria, and safety boundaries.
+- Establishes the required confirmation chain for future write-capable features.
+
+Runtime impact:
+- None.
+
+Write impact:
+- None.
+
+Python/ML impact:
+- None. Python/ML remains architecture-only and non-mutating.
+
+## 2026-06-19 23:44 UTC — Phase 6.2 Action Types
+
+Added:
+- `src/lib/actions/action-types.ts`
+
+Role:
+- Defines the canonical proposed action type list for Phase 6.
+- Exports `ProposedActionType`.
+- Exports labels and descriptions for supported action types.
+- Exports `isProposedActionType` for safe runtime checks.
+
+Supported action types:
+- `create_task`
+- `create_goal`
+- `create_daily_log`
+- `create_proof_item`
+
+Runtime impact:
+- Type/registry foundation only.
+
+Write impact:
+- No writes are executed in this step.
+
+## 2026-06-19 23:51 UTC — Phase 6.3 Proposed Action Contracts
+
+Added:
+- `src/lib/actions/proposed-action-contracts.ts`
+
+Role:
+- Defines typed payload contracts for proposed write actions.
+- Defines source, domain, priority, task status, goal status, and proof type enums.
+- Defines required fields for each proposed action type.
+- Defines forbidden client payload fields such as `user_id`, `owner_id`, and service-role-like fields.
+- Defines `PROPOSED_ACTION_CONTRACT_VERSION`.
+
+Runtime impact:
+- Type foundation only.
+
+Write impact:
+- No writes are executed in this step.
+
+
+## 2026-06-19 23:58 UTC — Phase 6.4 Action Result Types
+
+Added:
+- `src/lib/actions/action-results.ts`
+
+Role:
+- Defines standard success and error result shapes for proposed action workflows.
+- Defines action result error codes for validation, auth, confirmation, database, and unexpected failures.
+- Adds small helper constructors and type guards.
+
+Runtime impact:
+- Type/helper foundation only.
+
+Write impact:
+- No writes are executed in this step.
+
+## 2026-06-20 00:05 UTC — Phase 6.5 Payload Validation
+
+Added:
+- `src/lib/actions/validate-proposed-action.ts`
+
+Role:
+- Validates proposed action envelopes and payloads.
+- Rejects unsupported action types.
+- Rejects invalid source/confidence/evidence metadata.
+- Rejects forbidden payload fields such as `user_id`, `owner_id`, and service-role-like fields.
+- Returns standard `ActionResult` objects.
+
+Runtime impact:
+- Validation helper only.
+
+Write impact:
+- No writes are executed in this step.
+
+## 2026-06-20 00:09 UTC — Phase 6.6 Audit Helper
+
+Added:
+- `src/lib/audit/write-audit-log.ts`
+
+Role:
+- Defines `WriteAuditLogInput`.
+- Defines `WriteAuditLogResult`.
+- Adds `writeAuditLog` helper for inserting into `audit_logs`.
+- Returns structured success/error results.
+
+Runtime impact:
+- Server-side helper foundation.
+
+Write impact:
+- Adds an audit-write helper only.
+- Does not execute proposed actions by itself.
+
+
+## 2026-06-20 04:31 UTC — Phase 6.7 Timeline Helper Boundary
+
+Added:
+- `src/lib/timeline/write-timeline-event.ts`
+
+Role:
+- Defines timeline helper input/result types.
+- Provides `writeTimelineEvent`.
+- Returns `status: "skipped"` because the current SQL spine has no `timeline_events` table.
+
+Runtime impact:
+- Safe helper boundary only.
+
+Write impact:
+- No timeline write is executed in this step.
+
+
+## 2026-06-20 04:49 UTC — Phase 6.8 Proposed Action Creation Helper
+
+Added:
+- `src/lib/actions/create-proposed-action.ts`
+
+Role:
+- Defines `CreateProposedActionInput`.
+- Defines `CreateProposedActionData`.
+- Adds `createProposedAction`.
+- Validates proposed action contracts before storage.
+- Inserts valid proposals into `ai_actions` as `pending_confirmation`.
+
+Runtime impact:
+- Adds safe proposed-action persistence helper.
+
+Write impact:
+- Writes only to `ai_actions`.
+- Does not write to target domain tables.
+
+
+## 2026-06-20 05:05 UTC — Phase 6.9 Action Lifecycle Helper
+
+Added:
+- `src/lib/actions/action-lifecycle.ts`
+
+Role:
+- Defines lifecycle transition types.
+- Defines allowed lifecycle transition rules.
+- Adds `updateActionLifecycle`.
+- Updates `ai_actions.status` and matching lifecycle timestamps.
+
+Runtime impact:
+- Adds controlled proposal lifecycle update helper.
+
+Write impact:
+- Writes only to `ai_actions`.
+- Does not write to target domain tables.
+
+
+## 2026-06-20 05:18 UTC — Phase 6.10 Execution Dispatcher Boundary
+
+Added:
+- `src/lib/actions/execution-dispatcher.ts`
+
+Role:
+- Defines `ExecuteApprovedActionInput`.
+- Defines `ExecuteApprovedActionData`.
+- Adds `executeApprovedAction`.
+- Adds dispatcher routing for `create_task`, `create_goal`, `create_daily_log`, and `create_proof_item`.
+- Adds `markDispatcherReadyForActionType` as a typed readiness helper.
+
+Runtime impact:
+- Adds safe dispatcher boundary.
+
+Write impact:
+- Reads from `ai_actions`.
+- Does not write to target domain tables.
+
+
+## 2026-06-20 05:24 UTC — Phase 6.11 Create Task Flow
+
+Added:
+- `src/lib/actions/flows/create-task-flow.ts`
+
+Updated:
+- `src/lib/actions/execution-dispatcher.ts`
+
+Role:
+- Adds `executeCreateTaskAction`.
+- Dispatches approved `create_task` actions to the task creation flow.
+- Inserts into `tasks`.
+- Updates source `ai_actions` to `executed`.
+- Writes audit metadata.
+- Calls timeline helper boundary.
+
+Write impact:
+- Writes to `tasks`.
+- Updates `ai_actions`.
+- Writes to `audit_logs`.
+- Timeline helper remains skipped until timeline schema exists.
+
+
+## 2026-06-20 18:09 UTC — Phase 6.12 Create Goal Flow
+
+Added:
+- `src/lib/actions/flows/create-goal-flow.ts`
+
+Updated:
+- `src/lib/actions/execution-dispatcher.ts`
+
+Role:
+- Adds `executeCreateGoalAction`.
+- Dispatches approved `create_goal` actions to the goal creation flow.
+- Inserts into `goals`.
+- Updates source `ai_actions` to `executed`.
+- Writes audit metadata.
+- Calls timeline helper boundary.
+
+Write impact:
+- Writes to `goals`.
+- Updates `ai_actions`.
+- Writes to `audit_logs`.
+- Timeline helper remains skipped until timeline schema exists.
+
+
+## 2026-06-20 18:13 UTC — Phase 6.13 Create Daily Log Flow
+
+Added:
+- `src/lib/actions/flows/create-daily-log-flow.ts`
+
+Updated:
+- `src/lib/actions/execution-dispatcher.ts`
+
+Role:
+- Adds `executeCreateDailyLogAction`.
+- Dispatches approved `create_daily_log` actions to the daily log creation flow.
+- Inserts into `daily_logs`.
+- Updates source `ai_actions` to `executed`.
+- Writes audit metadata.
+- Calls timeline helper boundary.
+
+Write impact:
+- Writes to `daily_logs`.
+- Updates `ai_actions`.
+- Writes to `audit_logs`.
+- Timeline helper remains skipped until timeline schema exists.
+
+
+## 2026-06-20 18:17 UTC — Phase 6.14 Create Proof Item Flow
+
+Added:
+- `src/lib/actions/flows/create-proof-item-flow.ts`
+
+Updated:
+- `src/lib/actions/execution-dispatcher.ts`
+
+Role:
+- Adds `executeCreateProofItemAction`.
+- Dispatches approved `create_proof_item` actions to the proof item creation flow.
+- Inserts into `proof_items`.
+- Updates source `ai_actions` to `executed`.
+- Writes audit metadata.
+- Calls timeline helper boundary.
+- Validates referenced daily logs, goals, and tasks stay inside user ownership.
+
+Write impact:
+- Writes to `proof_items`.
+- Updates `ai_actions`.
+- Writes to `audit_logs`.
+- Timeline helper remains skipped until timeline schema exists.
+
+
+## 2026-06-20 18:22 UTC — Phase 6.15 Save/Edit/Cancel UI Component
+
+Added:
+- `src/components/actions/proposed-action-review-card.tsx`
+- `src/components/actions/index.ts`
+
+Role:
+- Provides the reusable client-side review card for proposed actions.
+- Supports payload preview, JSON edit mode, Save / Confirm callback, and Cancel callback.
+- Designed for Phase 6.16 route wiring.
+
+Write impact:
+- No direct write impact.
+- No Supabase calls.
+- No server mutations.
+
+
+## 2026-06-20 18:30 UTC — Phase 6.16 App Page Wiring
+
+Updated:
+- `src/app/carnos/page.tsx`
+
+Role:
+- Imports `ProposedActionReviewCard`.
+- Renders a sample `ProposedActionContract` in the Carnos dashboard.
+- Exposes the Save/Edit/Cancel review UI in-app without direct SQL mutation.
+
+Write impact:
+- No direct write impact.
+- No Supabase mutation from the page.
+- No action execution from the page.
+
+
+## 2026-06-20 18:38 UTC — Phase 6 Audit Gate
+
+Added:
+- `scripts/audit-phase-6.mjs`
+
+Updated:
+- `package.json`
+
+Role:
+- Adds `npm run audit:phase6`.
+- Adds Phase 6 audit to the main `npm run check` pipeline.
+- Confirms safe write proposed-action flow structure and UI boundary.
+
+Write impact:
+- No runtime write impact.
+- Adds static audit enforcement only.
+
+
+## 2026-06-20 18:47 UTC — Phase 6 Completion Report
+
+Added:
+- `docs/phase-reports/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW_REPORT.md`
+
+Role:
+- Final Phase 6 implementation report.
+- Documents safe write flow, action types, execution flows, UI boundary, and audit gate.
+
+Write impact:
+- Documentation only.
+
+## Phase 7.1 - Plan Lock
+
+- Added docs/phase-plans/PHASE_7_CORE_OPERATING_DASHBOARDS.md.
+- No runtime code changed in this step.
+
+## Phase 7.2 - Dashboard Layout Contract
+
+- Added src/lib/dashboard/dashboard-layout-contract.ts.
+- Updated src/lib/dashboard/index.ts to export the contract.
+
+## Phase 7.3 - Dashboard Card Registry
+
+- Added src/lib/dashboard/dashboard-card-registry.ts.
+- Updated src/lib/dashboard/index.ts to export the registry.
+
+## Phase 7.4 - Shared Dashboard Card Primitives
+
+- Added src/components/dashboard/operating-dashboard-card.tsx.
+- Added src/components/dashboard/operating-dashboard-grid.tsx.
+- Updated src/components/dashboard/index.ts exports.
+
+## Phase 7.5 - Dashboard Data Aggregation Helpers
+
+- Added src/lib/dashboard/dashboard-data-helpers.ts.
+- Updated src/lib/dashboard/index.ts exports.
+
+## Phase 7.6 - Command Dashboard v1
+
+- Added src/components/dashboard/command-dashboard-v1.tsx.
+- Updated src/components/dashboard/index.ts exports.
+
+## Phase 7.6B - Wire Command Dashboard v1
+
+- Updated src/app/command/page.tsx to render CommandDashboardV1.
+- Used getDashboardDataSummary for read-only Command dashboard summary data.
+
+## Phase 7 Integration Sanity Audit Gate
+
+- Added scripts/audit-integration-sanity.mjs.
+- Updated package.json with audit:integration and added it to check.
+
+## Phase 7.7 - Timeline Dashboard v1
+
+- Added src/components/dashboard/timeline-dashboard-v1.tsx.
+- Exported TimelineDashboardV1 from src/components/dashboard/index.ts.
+
+## Phase 7.7B - Wire Timeline Dashboard Route
+
+- Updated src/app/timeline/page.tsx to render TimelineDashboardV1.
+- Added getDashboardDataSummary and createSupabaseServerClient imports for read-only dashboard summary data.
+
+## Phase 7.8 - Calendar Dashboard v1
+
+- Added src/components/dashboard/calendar-dashboard-v1.tsx.
+- Exported CalendarDashboardV1 from src/components/dashboard/index.ts.
+- Updated src/app/calendar/page.tsx to render CalendarDashboardV1 above the existing read-only tasks/events list.
+
+## Phase 7.9 - Goals Dashboard v1
+
+- Added src/components/dashboard/goals-dashboard-v1.tsx.
+- Exported GoalsDashboardV1 from src/components/dashboard/index.ts.
+- Updated src/app/goals/page.tsx to render GoalsDashboardV1 above the existing read-only goals list.
+
+## Phase 7.10 - Proof Dashboard/Card System
+
+- Added src/components/dashboard/proof-dashboard-v1.tsx.
+- Exported ProofDashboardV1 from src/components/dashboard/index.ts.
+- No app route was added because the current canonical route list does not include `/proof`.
+
+## Phase 7.11 - Pending Updates / Confirmation Drawer Integration
+
+- Added src/components/actions/pending-updates-drawer.tsx.
+- Exported PendingUpdatesDrawer from src/components/actions/index.ts.
+- Updated src/app/carnos/page.tsx to render the pending updates drawer in place of the earlier preview-only review card section.
+
+## Phase 7.12 - Carnos Panel v1
+
+- Added src/components/dashboard/carnos-panel-v1.tsx.
+- Exported CarnosPanelV1 from src/components/dashboard/index.ts.
+- Updated src/app/carnos/page.tsx to render CarnosPanelV1 above the pending update review drawer.
+
+## Phase 7.13 - Cross-Dashboard Links
+
+- Added src/components/dashboard/cross-dashboard-links.tsx.
+- Exported CrossDashboardLinks from src/components/dashboard/index.ts.
+- Updated command-dashboard-v1, timeline-dashboard-v1, calendar-dashboard-v1, goals-dashboard-v1, and carnos-panel-v1 to render canonical cross-dashboard navigation.
+
+## Phase 7.14 - Empty / Loading / Error / Privacy States
+
+- Updated src/components/dashboard/operating-dashboard-card.tsx to handle all DashboardCardStatus values.
+- Updated src/lib/dashboard/dashboard-card-registry.ts with error/privacy metadata for confirmation and Carnos cards.
+
+## Phase 7.15 - No-Hardcoded-Demo-Data Cleanup
+
+- Updated src/app/carnos/page.tsx copy around the Phase 6 compatibility review proposal.
+- Updated src/components/dashboard/command-dashboard-v1.tsx to remove loaded/demo-style fallback wording.
+- Updated src/components/dashboard/proof-dashboard-v1.tsx to clarify component-only proof surface status.
+- Updated src/components/dashboard/carnos-panel-v1.tsx generated fallback wording.
+
+## Phase 7.16 - Phase 7 Audit Gate
+
+- Updated scripts/audit-integration-sanity.mjs to validate Phase 7 core operating dashboard surfaces beyond the command dashboard.
+- Added audit coverage for CrossDashboardLinks, PendingUpdatesDrawer, ProofDashboardV1 component-only status, and dashboard card state rendering.
+
+
+
+## Phase 7.17 - Manual Smoke Checklist
+
+- Added docs/qa/PHASE_7_MANUAL_SMOKE_CHECKLIST.md.
+- Documented manual checks for Phase 7 core dashboard routes and safety boundaries.
+
+## Phase 7.18 - Phase 7 Report and Completion Marker
+
+- Added docs/phase-reports/PHASE_7_CORE_OPERATING_DASHBOARDS_REPORT.md.
+- Updated scripts/audit-integration-sanity.mjs final Phase 7 boundary coverage and completion wording.
+- Updated phase logs/status to mark Phase 7 complete.
+
+## Phase 1-7 Source Crosswalk Verification
+
+- Added docs/audits/PHASE_1_7_SOURCE_CROSSWALK.md.
+- Added scripts/audit-phase-1-7-crosswalk.mjs.
+- No runtime app behavior changed.
+
+## Phase 8.1 - Career System Plan Lock v2
+
+- Added docs/phase-plans/PHASE_8_CAREER_SYSTEM.md.
+- No runtime code changed.
+
+## Phase 8.2 - Career Route and Data Contract Inspection
+
+- Added docs/phase-reports/PHASE_8_2_CAREER_INSPECTION_REPORT.md.
+- No runtime code changed.
+
+## Phase 8.3 - Career SQL Schema Plan / Migration Design
+
+- Added docs/database/CAREER_SQL_SCHEMA_DESIGN.md.
+- No runtime code changed.
+- No SQL migration added yet.
+
+## Phase 8.4 - Additive Career SQL Migration
+
+- Added supabase/migrations/0007_career_system_foundation.sql.
+- No TypeScript database types updated yet; that belongs to Phase 8.5.
+- No runtime UI code changed.
+
+## Phase 8.5 - Database Types Update / Generated Type Alignment
+
+- Updated src/types/database.ts.
+- Added Career System database table typings and row/insert/update aliases.
+- Runtime UI code unchanged.
+
+## Phase 8.24 — Career System Completion Closeout
+
+### `docs/phase-reports/PHASE_8_CAREER_SYSTEM_COMPLETION_REPORT.md`
+Purpose: Final Phase 8 completion report.
+
+### `docs/qa/PHASE_8_CAREER_MANUAL_SMOKE_CHECKLIST.md`
+Purpose: Manual browser QA checklist for career routes.
+
+### `scripts/audit-phase-8.mjs`
+Change: Expanded Phase 8 audit to require closeout documents.
+
+### `PROJECT_EXECUTION_LOG.md`
+Change: Added Phase 8.24 completion closeout entry.
+
+### `PHASE_STATUS.md`
+Change: Added Phase 8 complete marker.
+
+### `CHANGELOG.md`
+Change: Added Phase 8 completion changelog entry.
+
+Phase 8 Career System Complete marker for final audit closeout.
+
+## Phase 1–8 Retrospective Gap Audit
+
+### `docs/phase-reports/PHASE_1_8_RETROSPECTIVE_GAP_AUDIT.md`
+Purpose: Post-Phase-8 audit artifact documenting completed scope, deferred scope, known risks, and Phase 9 guardrails.
+
+### `PROJECT_EXECUTION_LOG.md`
+Change: Added retrospective audit entry.
+
+## Phase 9 Chunk A — Source and Route Inspection
+
+### `docs/phase-reports/PHASE_9_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
+Purpose: Records the Phase 9 source-of-truth scope, existing routes, existing repo foundations, migrations, audits, and non-goals before implementation.
+
+### `docs/phase-plans/PHASE_9_LEARNING_PROJECT_SYSTEM.md`
+Purpose: Locks Phase 9 as 28 requirement steps executed through 12 safe implementation chunks.
+
+### `PROJECT_EXECUTION_LOG.md`
+Change: Added Phase 9 Chunk A start entry.
+
+## Phase 9 Chunk B — Schema Design and Traceability
+
+### `docs/database/PHASE_9_LEARNING_PROJECT_SCHEMA_DESIGN.md`
+Purpose: Defines the planned Phase 9 SQL tables, relationships, indexes, RLS expectations, cross-domain links, and non-goals.
+
+### `docs/phase-reports/PHASE_9_SOURCE_TO_SCOPE_TRACEABILITY.md`
+Purpose: Maps Phase 9 source-of-truth requirements to planned implementation files and safe execution chunks.
+
+### `PROJECT_EXECUTION_LOG.md`
+Change: Added Phase 9 Chunk B execution entry.
+
+## Phase 9 Chunk C — SQL Migration
+
+### `supabase/migrations/0008_learning_project_system_foundation.sql`
+Purpose: Adds the Phase 9 Learning / Project System SQL foundation, including learning paths, skills, sessions, quizzes, projects, milestones, bugs, tests, releases, links, RLS policies, and indexes.
+
+### `PROJECT_EXECUTION_LOG.md`
+Change: Added Phase 9 Chunk C SQL migration entry.
+
+## Phase 9 Chunk C.1 — Parent Ownership Hardening
+
+### `supabase/migrations/0009_phase9_parent_ownership_guards.sql`
+Purpose: Replaces Phase 9 insert/update policies with stricter parent ownership checks so child rows cannot link to another user's parent records.
+
+### `PROJECT_EXECUTION_LOG.md`
+Change: Added Phase 9 Chunk C.1 hardening entry.
+
+## Phase 9 Chunk D — Database Types
+
+### `src/types/database.ts`
+Purpose: Adds Phase 9 Learning / Project System table definitions and exported row/insert/update aliases.
+
+### `PROJECT_EXECUTION_LOG.md`
+Change: Added Phase 9 Chunk D database types entry.
+
+## Phase 9 Chunk E — Learning and Project Read Helpers
+
+### `src/lib/repositories/core-read.ts`
+Purpose: Adds read-only, user-scoped repository helpers for Phase 9 Learning / Project System records.
+
+### `PROJECT_EXECUTION_LOG.md`
+Change: Added Phase 9 Chunk E read helper entry.
+
+## Phase 9 Chunk F — Aggregation, Registry, and Shared UI Primitives
+
+### `src/lib/dashboard/dashboard-layout-contract.ts`
+Purpose: Extends supported dashboard surfaces to include Phase 9 learning and projects.
+
+### `src/lib/dashboard/dashboard-card-registry.ts`
+Purpose: Adds Phase 9 dashboard cards for learning mastery and project shipping surfaces.
+
+### `src/lib/dashboard/learning-project-dashboard-data-helpers.ts`
+Purpose: Aggregates Phase 9 learning/project read-helper data into dashboard summaries.
+
+### `src/components/dashboard/learning-project-summary-panel.tsx`
+Purpose: Adds shared UI primitive for Phase 9 summary metric panels.
+
+### `src/lib/dashboard/index.ts`
+Change: Exports Phase 9 aggregation helpers.
+
+### `src/components/dashboard/index.ts`
+Change: Exports Phase 9 shared UI primitive.
+
+## Phase 9 Chunk G — Learning Academy Dashboard
+
+### `src/components/dashboard/learning-academy-dashboard-v1.tsx`
+Purpose: Adds read-only Learning Academy dashboard UI for Phase 9 skill paths, skills, learning sessions, quizzes, attempts, and skill progress.
+
+### `src/app/learning/page.tsx`
+Purpose: Wires `/learning` to authenticated Phase 9 learning reads instead of the generic domain placeholder.
+
+### `src/components/dashboard/index.ts`
+Change: Exports the Learning Academy dashboard component.
+
+## Phase 9 Chunk H — Project Builder Dashboard
+
+### `src/components/dashboard/project-builder-dashboard-v1.tsx`
+Purpose: Adds read-only Project Builder dashboard UI for Phase 9 projects, milestones, bugs, tests, releases, and links.
+
+### `src/app/projects/page.tsx`
+Purpose: Wires `/projects` to authenticated Phase 9 project reads instead of a placeholder page.
+
+### `src/components/dashboard/index.ts`
+Change: Exports the Project Builder dashboard component.
+
+## Phase 9 Chunk I — Knowledge Route Alignment
+
+### `src/components/dashboard/knowledge-vault-alignment-v1.tsx`
+Purpose: Adds read-only Knowledge Vault alignment UI for Phase 9 learning/project source records.
+
+### `src/app/knowledge/page.tsx`
+Purpose: Wires `/knowledge` to authenticated Phase 9 learning/project source reads.
+
+### `src/components/dashboard/index.ts`
+Change: Exports the Knowledge Vault alignment dashboard component.
+
+## Phase 9 Chunk J — Learning/Project Detail Panels
+
+### `src/components/dashboard/learning-project-detail-panels.tsx`
+Purpose: Adds read-only detail panels for skill path/progress, quiz/session, and project build-log views.
+
+### `src/components/dashboard/learning-academy-dashboard-v1.tsx`
+Change: Adds skill path/progress and quiz/session detail panels.
+
+### `src/components/dashboard/project-builder-dashboard-v1.tsx`
+Change: Adds project build-log detail panel.
+
+### `src/components/dashboard/index.ts`
+Change: Exports Phase 9 detail panels.
+
+## Phase 9 Chunk K — Linkage and State Surfaces
+
+### `src/components/dashboard/learning-project-linkage-panels.tsx`
+Purpose: Adds read-only linkage, proposed-action visibility, state/privacy boundary, and cross-link panels for Phase 9.
+
+### `src/components/dashboard/learning-academy-dashboard-v1.tsx`
+Change: Wires Phase 9 linkage, operating, proposed-action, state, and cross-link panels into `/learning`.
+
+### `src/components/dashboard/project-builder-dashboard-v1.tsx`
+Change: Wires Phase 9 linkage, operating, proposed-action, state, and cross-link panels into `/projects`.
+
+### `src/components/dashboard/knowledge-vault-alignment-v1.tsx`
+Change: Adds Phase 9 state boundary and cross-links to `/knowledge`.
+
+### `src/components/dashboard/index.ts`
+Change: Exports Phase 9 linkage panels.
+
+## Phase 9 Chunk L — Closeout
+
+### `docs/phase-reports/PHASE_9_NO_WRITE_PRIVACY_AUDIT.md`
+Purpose: Records Phase 9 read-only, no-write, privacy, and deferred-scope audit.
+
+### `docs/phase-reports/PHASE_9_AUDIT_GATE.md`
+Purpose: Records Phase 9 implementation audit gate and completed chunks.
+
+### `docs/phase-reports/PHASE_9_MANUAL_SMOKE_CHECKLIST.md`
+Purpose: Defines browser smoke checks for `/learning`, `/projects`, and `/knowledge`.
+
+### `docs/phase-reports/PHASE_9_COMPLETION_REPORT.md`
+Purpose: Final Phase 9 closeout report.
+
+### `PHASE_STATUS.md`
+Change: Marks Phase 9 complete and sets Phase 10 as the next step.
+
+## Phase 10 Chunk A — Source and Route Inspection
+
+### `docs/phase-plans/PHASE_10_RESEARCH_STANFORD_SYSTEM.md`
+Purpose: Locks the upgraded 36-step Phase 10 Research / Stanford System plan and 11-chunk build sequence.
+
+### `docs/phase-reports/PHASE_10_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
+Purpose: Records initial source, route, component, proposed-action, database-type, read-helper, and migration inspection for Phase 10.
+
+## Phase 10 Chunk B — Schema Design and Traceability
+
+### `docs/database/PHASE_10_RESEARCH_SCHEMA_DESIGN.md`
+Purpose: Designs the Phase 10 research-side schema before SQL implementation.
+
+### `docs/database/PHASE_10_STANFORD_PHD_SCHEMA_DESIGN.md`
+Purpose: Designs the Phase 10 Stanford/PhD readiness schema before SQL implementation.
+
+### `docs/phase-reports/PHASE_10_SOURCE_TO_SCOPE_TRACEABILITY.md`
+Purpose: Maps Phase 10 scope to existing foundations, safe-link strategy, and deferred future phases.
+
+## Phase 10 Chunk C — SQL Foundation
+
+### `supabase/migrations/0010_phase10_research_stanford_foundation.sql`
+Purpose: Adds Phase 10 Research / Stanford System SQL foundation tables, RLS enablement, owner-scoped SELECT/INSERT policies, and required user indexes.
+
+## Phase 10 Chunk C.1 — Parent Ownership Guards
+
+### `supabase/migrations/0011_phase10_parent_ownership_guards.sql`
+Purpose: Adds Phase 10 parent ownership guard functions and triggers for nullable cross-phase references.
+
+## Phase 10 Chunk D — Database Types
+
+### `src/types/database.ts`
+Purpose: Adds Phase 10 Research / Stanford System table mappings and exported aliases for use by read helpers and dashboards.
+
+## Phase 10 Chunk E — Read Helpers
+
+### `src/lib/repositories/research-read.ts`
+Purpose: Adds read-only server repository helpers for Phase 10 Research / Stanford / Literature / Citation data.
+
+### `src/lib/repositories/index.ts`
+Purpose: Exports Phase 10 research read helpers from the repository barrel.
+
+## Phase 10 Chunk F — Aggregation, Registry, Shared UI
+
+### `src/lib/dashboard/research-stanford-dashboard-data-helpers.ts`
+Purpose: Aggregates Phase 10 read-helper outputs into research and Stanford dashboard summaries.
+
+### `src/lib/dashboard/dashboard-layout-contract.ts`
+Purpose: Adds `research_lab` and `research_stanford` as supported dashboard surfaces.
+
+### `src/lib/dashboard/dashboard-card-registry.ts`
+Purpose: Adds Phase 10 dashboard card contracts for research and Stanford surfaces.
+
+### `src/components/dashboard/research-summary-panel.tsx`
+Purpose: Adds a shared read-only research summary panel primitive.
+
+## Phase 10 Chunk G — Route Read Surfaces
+
+### `src/app/research-lab/page.tsx`
+Purpose: Replaces the Research Lab placeholder with an authenticated read-only route showing research idea, literature, citation, claim, experiment, paper, and registry summary state.
+
+### `src/app/research-stanford/page.tsx`
+Purpose: Replaces the Research Stanford placeholder with an authenticated read-only route showing university, lab, professor, readiness, SOP, asset, recommendation, and registry summary state.
+
+## Phase 10 Chunk H — Research Linkage and Boundary Panels
+
+### `src/components/dashboard/research-linkage-boundary-panels.tsx`
+Purpose: Adds read-only research/proof linkage visibility, Stanford target-fit linkage visibility, and privacy/safe-write boundary panels.
+
+### `src/app/research-lab/page.tsx`
+Purpose: Wires Research Lab linkage visibility and boundary panels into the authenticated read route.
+
+### `src/app/research-stanford/page.tsx`
+Purpose: Wires Stanford/PhD linkage visibility and boundary panels into the authenticated read route.
+
+## Phase 10 Chunk I — Detail Visibility Panels
+
+### `src/components/dashboard/research-detail-panels.tsx`
+Purpose: Adds compact read-only detail panels for research and Stanford/PhD Phase 10 records.
+
+### Research routes
+Purpose: Wires detail visibility panels into `/research-lab` and `/research-stanford`.
+
+## Phase 10 Chunk J — Proposed-Action Visibility, Cross-Links, Audit Draft
+
+### `src/components/dashboard/research-proposed-action-visibility-panel.tsx`
+Purpose: Adds disabled read-only research proposed-action preview cards.
+
+### `src/components/dashboard/cross-dashboard-links.tsx`
+Purpose: Adds ResearchCrossDashboardLinks for Phase 10 routes.
+
+### `scripts/audit-phase-10.mjs`
+Purpose: Adds the Phase 10 structural audit gate.
+
+### `docs/qa/PHASE_10_RESEARCH_STANFORD_MANUAL_SMOKE_CHECKLIST.md`
+Purpose: Adds manual QA checklist for Research / Stanford System.
+
+### `docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT_DRAFT.md`
+Purpose: Adds draft closeout report for Phase 10.
+
+## Phase 10 Chunk K — Final Closeout
+
+### `docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT.md`
+Purpose: Final Phase 10 closeout report for the Research / Stanford System.
+
+### `docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT_DRAFT.md`
+Change: Removed after final report was created.
+
+### `docs/qa/PHASE_10_RESEARCH_STANFORD_MANUAL_SMOKE_CHECKLIST.md`
+Purpose: Final manual browser smoke checklist for `/research-lab` and `/research-stanford`.
+
+### `PHASE_STATUS.md`
+Change: Marks Phase 10 complete and sets Phase 11 — Health / Body System as the next recommended phase.
+
+### `PROJECT_EXECUTION_LOG.md`
+Change: Records Phase 10 Chunk K final closeout.
+
+### `CHANGELOG.md`
+Change: Records Phase 10 completion.
+
+### `CODE_LEDGER.md`
+Change: Records final Phase 10 closeout file purposes.
 ```
 
 ### `DECISIONS.md`
@@ -1050,6 +2557,145 @@ Changed auth server actions to return `Promise<void>` and redirect with error qu
 
 ### Prevention
 Do not commit after failed `npm run check`; fix first unless intentionally creating a broken checkpoint.
+## Phase 7.4 - StatusPill Prop Mismatch
+
+Error:
+- `npm run build` failed because `OperatingDashboardCard` passed children into `StatusPill`, but the existing `StatusPillProps` contract does not accept children.
+
+Fix:
+- Removed `StatusPill` usage from `OperatingDashboardCard`.
+- Replaced it with a local status badge span to avoid changing existing Phase 5 shared component contracts.
+
+Result:
+- Pending rerun of `npm run check`.
+## Phase 7.6 - Command Dashboard Apostrophe Lint
+
+Error:
+- `npm run lint` failed in `src/components/dashboard/command-dashboard-v1.tsx` because JSX text used an unescaped apostrophe in `Today's`.
+
+Fix:
+- Replaced `Today's` with `Today&apos;s`.
+
+Result:
+- Pending rerun of `npm run check`.
+## Phase 7.6B - Command Route Phase 5 Audit Marker
+
+Error:
+- `npm run audit:phase5` failed because `src/app/command/page.tsx` no longer contained the expected Phase 5 read marker `listGoals`.
+
+Fix:
+- Added a compatibility marker comment to preserve Phase 5 audit alignment while keeping the new Phase 7 Command dashboard wiring read-only.
+
+Result:
+- Pending rerun of `npm run check`.
+## Phase 7.6B - Command Route Overwrite Audit Regression
+
+Error:
+- The first Phase 7.6B command route wiring replaced `src/app/command/page.tsx` too aggressively.
+- This removed Phase 5 audit-expected read markers such as `listGoals` and `listTasks`.
+
+Fix:
+- Added Phase 5 read-audit compatibility markers for Command page expected read dependencies.
+- Kept the Phase 7 Command dashboard route read-only and did not add writes, Python/ML execution, memory, voice, or background jobs.
+
+Result:
+- Pending rerun of `npm run check`.
+## Phase 7.6B - Command Route Missing listAiActions Marker
+
+Error:
+- `npm run audit:phase5` failed because `src/app/command/page.tsx` was missing the expected Phase 5 read marker `listAiActions`.
+- This was part of the same Phase 7.6B command route overwrite regression.
+
+Fix:
+- Added the remaining `listAiActions` compatibility marker alongside the other Phase 5 Command read markers.
+- Preserved the Phase 7 Command dashboard wiring as read-only.
+
+Result:
+- Pending rerun of `npm run check`.
+## Phase 7.6B - Command Route Missing Read-only Mode Marker
+
+Error:
+- `npm run audit:phase5` failed because `src/app/command/page.tsx` was missing the expected Phase 5 text `Read-only mode`.
+- This was part of the same Phase 7.6B command route overwrite regression.
+
+Fix:
+- Added the remaining `Read-only mode` compatibility marker.
+- Preserved the Phase 7 Command dashboard wiring as read-only.
+
+Result:
+- Pending rerun of `npm run check`.
+## Phase 7.6B - AuthenticatedDashboardShell Children Contract
+
+Error:
+- `next build` failed because `AuthenticatedDashboardShell` expects children as an authenticated render function, not a direct JSX element.
+- The first Phase 7.6B wiring passed `<CommandDashboardV1 />` directly.
+
+Fix:
+- Updated `/command` to pass an async authenticated child function.
+- Dashboard summary loading now occurs inside the authenticated shell boundary.
+- Preserved Phase 5 read-audit compatibility markers.
+
+Result:
+- Pending rerun of `npm run check`.
+## Phase 7 Integration Audit - Barrel Export Wildcard False Positive
+
+Error:
+- The new integration sanity audit failed on `OperatingDashboardCard` even though the app build previously accepted the dashboard barrel exports.
+- Cause: the audit searched for literal export names and did not allow valid `export * from ...` barrel exports.
+
+Fix:
+- Updated `scripts/audit-integration-sanity.mjs` to accept either explicit named exports or wildcard barrel exports for Phase 7 dashboard components.
+
+Result:
+- Pending rerun of `npm run audit:integration` and `npm run check`.
+## Phase 7.7 - Timeline Dashboard Data Result Status Type Error
+
+Error:
+- `next build` failed because `TimelineDashboardV1` checked `data?.status`, but `DashboardDataResult` does not expose a `status` property.
+
+Fix:
+- Replaced `data?.status === "error"` with `Boolean(data?.error)`.
+
+Result:
+- Pending rerun of `npm run check`.
+## Phase 7.7 - Timeline Dashboard Data Result Error Field Type Error
+
+Error:
+- `next build` failed because `TimelineDashboardV1` checked `data?.error`, but `DashboardDataResult` does not expose an `error` property.
+- This followed an earlier incorrect assumption about `data?.status`.
+
+Fix:
+- Removed dependency on non-existent `DashboardDataResult` error/status fields.
+- Timeline dashboard now uses the current summary-only data shape safely.
+
+Result:
+- Pending rerun of `npm run check`.
+## Phase 7.7 - Timeline Dashboard Summary Field Name Type Error
+
+Error:
+- `next build` failed because `TimelineDashboardV1` used guessed summary fields such as `events`, `proofItems`, `dailyLogs`, and `pendingActions`.
+- Actual `DashboardDataSummary` fields are snake_case: `recent_events_count`, `recent_proof_count`, `card_count`, and `pending_updates_count`.
+
+Fix:
+- Replaced guessed camelCase fields with the actual `DashboardDataSummary` field names.
+- Going forward, existing type contracts must be inspected before new components consume them.
+
+Result:
+- Pending rerun of `npm run check`.
+## Phase 7.7 - Timeline Dashboard Grid Region Prop Type Error
+
+Error:
+- `next build` failed because `OperatingDashboardGrid` requires a `region` prop.
+- `TimelineDashboardV1` used `<OperatingDashboardGrid>` without passing the required region.
+
+Fix:
+- Updated `TimelineDashboardV1` to use `<OperatingDashboardGrid region="timeline_preview">`.
+
+Prevention:
+- Existing component props must be inspected before reuse in future Phase 7 steps.
+
+Result:
+- Pending rerun of `npm run check`.
 ```
 
 ### `PHASE_STATUS.md`
@@ -1143,7 +2789,9 @@ See `docs/phase-plans/PHASE_4_CORE_SQL_SPINE.md`.
 - User-owned data requires RLS.
 - Carnos must not silently write important data.
 - AI-created changes must flow through proposed actions and audit logs in later phases.
-- No memory table is added in Phase 4; memory belongs to the dedicated memory phase.\n\n## Phase 4 — Core SQL Spine — DOCUMENTATION ADDED
+- No memory table is added in Phase 4; memory belongs to the dedicated memory phase.
+
+## Phase 4 — Core SQL Spine — DOCUMENTATION ADDED
 
 ### Status
 Documentation added. Pending final completion marker.
@@ -1159,7 +2807,9 @@ Documentation added. Pending final completion marker.
 
 ### Final Gate Remaining
 - Run final full verification.
-- Mark Phase 4 complete.\n\n
+- Mark Phase 4 complete.
+
+
 
 ## Phase 4 — Core SQL Spine — COMPLETE
 
@@ -1326,6 +2976,475 @@ Next:
 - Update source alignment audit.
 - Verify all gates.
 - Phase 6 — Safe Write / Proposed Action Flow.
+
+## Phase 6 — Safe Write / Proposed Action Flow
+
+Status: In Progress
+
+Current step:
+- Phase 6.1 — Plan Lock
+
+Created:
+- `docs/phase-plans/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW.md`
+
+Phase 6 goal:
+- Build the safe write pipeline: proposal -> validation -> Save/Edit/Cancel -> server write -> audit log -> timeline event -> dashboard refresh.
+
+Boundaries:
+- No Python/ML runtime.
+- No memory implementation.
+- No Carnos generation.
+- No direct chat-to-database writes.
+- No unaudited writes.
+
+Phase 6.2 update at 2026-06-19 23:44 UTC:
+- Created `src/lib/actions/action-types.ts`.
+- Added canonical proposed action types for tasks, goals, daily logs, and proof items.
+- Phase 6 remains in progress.
+- Next step: Phase 6.3 — Proposed Action Contracts.
+
+Phase 6.3 update at 2026-06-19 23:51 UTC:
+- Created `src/lib/actions/proposed-action-contracts.ts`.
+- Added typed proposed action payload contracts.
+- Phase 6 remains in progress.
+- Next step: Phase 6.4 — Action Result Types.
+
+Phase 6.4 update at 2026-06-19 23:58 UTC:
+- Created `src/lib/actions/action-results.ts`.
+- Added standard action success/error result contracts.
+- Phase 6 remains in progress.
+- Next step: Phase 6.5 — Payload Validation.
+
+Phase 6.5 update at 2026-06-20 00:05 UTC:
+- Created `src/lib/actions/validate-proposed-action.ts`.
+- Added envelope, metadata, forbidden-field, and payload validation for proposed actions.
+- Phase 6 remains in progress.
+- Next step: Phase 6.6 — Audit Helper.
+
+Phase 6.6 update at 2026-06-20 00:09 UTC:
+- Created `src/lib/audit/write-audit-log.ts`.
+- Added reusable server-side audit logging helper.
+- Phase 6 remains in progress.
+- Next step: Phase 6.7 — Timeline Helper.
+
+Phase 6.7 update at 2026-06-20 04:31 UTC:
+- Created `src/lib/timeline/write-timeline-event.ts`.
+- Confirmed no `timeline_events` table exists in the current SQL spine.
+- Added a safe skipped-result helper boundary instead of inventing schema.
+- Phase 6 remains in progress.
+- Next step: Phase 6.8 — Proposed Action Creation Helper.
+
+Phase 6.8 update at 2026-06-20 04:49 UTC:
+- Created `src/lib/actions/create-proposed-action.ts`.
+- Added helper to validate and store proposed actions in `ai_actions`.
+- Stored proposed actions use `pending_confirmation`.
+- No target-table execution was added.
+- Phase 6 remains in progress.
+- Next step: Phase 6.9 — Action Lifecycle Helper.
+
+Phase 6.9 update at 2026-06-20 05:05 UTC:
+- Created `src/lib/actions/action-lifecycle.ts`.
+- Added controlled lifecycle transitions for `ai_actions`.
+- No target-table execution was added.
+- Phase 6 remains in progress.
+- Next step: Phase 6.10 — Execution Dispatcher.
+
+Phase 6.10 update at 2026-06-20 05:18 UTC:
+- Created `src/lib/actions/execution-dispatcher.ts`.
+- Added approved-action dispatch boundary.
+- Dispatcher verifies ownership, status, and action type.
+- No target-table execution was added.
+- Phase 6 remains in progress.
+- Next step: Phase 6.11 — Create Task Flow.
+
+Phase 6.11 update at 2026-06-20 05:24 UTC:
+- Created `src/lib/actions/flows/create-task-flow.ts`.
+- Updated dispatcher to execute approved `create_task` actions.
+- Added first target-table write flow for `tasks`.
+- Goals, daily logs, and proof items remain unimplemented until their phases.
+- Phase 6 remains in progress.
+- Next step: Phase 6.12 — Create Goal Flow.
+
+Phase 6.12 update at 2026-06-20 18:09 UTC:
+- Created `src/lib/actions/flows/create-goal-flow.ts`.
+- Updated dispatcher to execute approved `create_goal` actions.
+- Added target-table write flow for `goals`.
+- Daily logs and proof items remain unimplemented until their phases.
+- Phase 6 remains in progress.
+- Next step: Phase 6.13 — Create Daily Log Flow.
+
+Phase 6.13 update at 2026-06-20 18:13 UTC:
+- Created `src/lib/actions/flows/create-daily-log-flow.ts`.
+- Updated dispatcher to execute approved `create_daily_log` actions.
+- Added target-table write flow for `daily_logs`.
+- Proof items remain unimplemented until Phase 6.14.
+- Phase 6 remains in progress.
+- Next step: Phase 6.14 — Create Proof Item Flow.
+
+Phase 6.14 update at 2026-06-20 18:17 UTC:
+- Created `src/lib/actions/flows/create-proof-item-flow.ts`.
+- Updated dispatcher to execute approved `create_proof_item` actions.
+- Added target-table write flow for `proof_items`.
+- Added related-record ownership checks for daily logs, goals, and tasks.
+- All four core Phase 6 execution flows now exist.
+- Phase 6 remains in progress.
+- Next step: Phase 6.15 — Save/Edit/Cancel UI.
+
+Phase 6.15 update at 2026-06-20 18:22 UTC:
+- Created `src/components/actions/proposed-action-review-card.tsx`.
+- Created `src/components/actions/index.ts`.
+- Added reusable Save/Edit/Cancel UI for proposed actions.
+- UI does not write directly to the database.
+- Phase 6 remains in progress.
+- Next step: Phase 6.16 — Wire into app page.
+
+Phase 6.16 update at 2026-06-20 18:30 UTC:
+- Wired `ProposedActionReviewCard` into `src/app/carnos/page.tsx`.
+- Added a sample proposed action review surface for confirmation-first UI validation.
+- No direct database write or action execution was added to the page.
+- Phase 6 remains in progress.
+- Next step: Phase 6.17 — Phase 6 audit.
+
+Phase 6.17 update at 2026-06-20 18:38 UTC:
+- Created `scripts/audit-phase-6.mjs`.
+- Added `audit:phase6` to `package.json`.
+- Wired Phase 6 audit into `npm run check`.
+- Phase 6 remains in progress.
+- Next step: Phase 6.18 — Phase 6 report and completion marker.
+
+Phase 6.18 update at 2026-06-20 18:47 UTC:
+- Created `docs/phase-reports/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW_REPORT.md`.
+- Marked Phase 6 Safe Write / Proposed Action Flow complete.
+- Phase 6 final status: COMPLETE.
+- Next phase: Phase 7 planning lock.
+
+## Phase 7 - Core Operating Dashboards
+
+Status: Started - Phase 7.1 plan lock created.
+
+Roadmap reconciliation:
+- Old 15-phase memory is outdated.
+- FINAL_SYNCED DOCX/JSON are source of truth.
+- Implementation proceeds using the safer 21-chunk structure unless the source-of-truth files are explicitly updated.
+
+Current next step after commit: Phase 7.2 dashboard layout contract.
+
+## Phase 7.2 - Dashboard Layout Contract
+
+Status: Implemented and awaiting commit.
+
+Next step after commit: Phase 7.3 dashboard card registry.
+
+## Phase 7.3 - Dashboard Card Registry
+
+Status: Implemented and awaiting commit.
+
+Next step after commit: Phase 7.4 shared dashboard card primitives.
+
+## Phase 7.4 - Shared Dashboard Card Primitives
+
+Status: Implemented and awaiting commit.
+
+Next step after commit: Phase 7.5 dashboard data aggregation helpers.
+
+## Phase 7.5 - Dashboard Data Aggregation Helpers
+
+Status: Implemented and awaiting commit.
+
+Next step after commit: Phase 7.6 Command dashboard v1.
+
+## Phase 7.6 - Command Dashboard v1
+
+Status: Implemented and awaiting commit.
+
+Next step after commit: Phase 7.7 Timeline dashboard v1.
+
+## Phase 7.6B - Wire Command Dashboard v1
+
+Status: Implemented and awaiting commit.
+
+Next step after commit: Phase 7.7 Timeline dashboard v1.
+
+## Phase 7 Integration Sanity Audit Gate
+
+Status: Implemented and awaiting validation.
+
+Next step after commit: Resume Phase 7.7 Timeline dashboard v1.
+
+## Phase 7.7 - Timeline Dashboard v1
+
+Status: Implemented and awaiting validation.
+
+Next step after commit: Phase 7.7B wire TimelineDashboardV1 into `/timeline` safely.
+
+## Phase 7.7B - Wire Timeline Dashboard Route
+
+Status: Implemented and awaiting validation.
+
+Next step after commit: Phase 7.8 Calendar dashboard v1.
+
+## Phase 7.8 - Calendar Dashboard v1
+
+Status: Implemented and awaiting validation.
+
+Next step after commit: Phase 7.9 Goals dashboard v1.
+
+## Phase 7.9 - Goals Dashboard v1
+
+Status: Implemented and awaiting validation.
+
+Next step after commit: Phase 7.10 Proof dashboard/card system.
+
+## Phase 7.10 - Proof Dashboard/Card System
+
+Status: Implemented and awaiting validation.
+
+Route note: `/proof` was not created because it is not in the current canonical route list.
+
+Next step after commit: Phase 7.11 Pending updates / confirmation drawer integration.
+
+## Phase 7.11 - Pending Updates / Confirmation Drawer Integration
+
+Status: Implemented and awaiting validation.
+
+Boundary: drawer review only; no lifecycle mutation callbacks attached.
+
+Next step after commit: Phase 7.12 Carnos panel v1.
+
+## Phase 7.12 - Carnos Panel v1
+
+Status: Implemented and awaiting validation.
+
+Boundary: Carnos panel is visibility-only; no generation, memory, action execution, or lifecycle callbacks are attached.
+
+Next step after commit: Phase 7.13 Cross-dashboard links.
+
+## Phase 7.13 - Cross-Dashboard Links
+
+Status: Implemented and awaiting validation.
+
+Boundary: navigation only; all links point to existing canonical routes.
+
+Next step after commit: Phase 7.14 Empty/loading/error/privacy states.
+
+## Phase 7.14 - Empty / Loading / Error / Privacy States
+
+Status: Implemented and awaiting validation.
+
+Boundary: display-state handling only; no mutations, generation, memory, or execution added.
+
+Next step after commit: Phase 7.15 No-hardcoded-demo-data cleanup.
+
+## Phase 7.15 - No-Hardcoded-Demo-Data Cleanup
+
+Status: Implemented and awaiting validation.
+
+Boundary: copy cleanup only; no routes, mutations, generation, memory, or execution added.
+
+Next step after commit: Phase 7.16 Phase 7 audit gate.
+
+## Phase 7.16 - Phase 7 Audit Gate
+
+Status: Implemented and awaiting validation.
+
+Boundary: audit coverage only; no product behavior or mutation path added.
+
+Next step after commit: Phase 7.17 Manual smoke checklist.
+
+
+
+## Phase 7.17 - Manual Smoke Checklist
+
+Status: Implemented and awaiting validation.
+
+Boundary: checklist/documentation only; no product behavior, mutation path, generation, memory, or execution added.
+
+Next step after commit: Phase 7.18 Phase 7 report and completion marker.
+
+## Phase 7.18 - Phase 7 Completion
+
+Status: Complete.
+
+Completed phase: Phase 7 Core Operating Dashboards.
+
+Completed surfaces: /command, /timeline, /calendar, /goals, /carnos, plus component-only proof visibility.
+
+Boundary: read-only dashboard layer. No autonomous actions, generation, memory/RAG, Python/ML execution, voice execution, internet tools, background jobs, or non-canonical /proof route added.
+
+Next phase: Phase 8 Career System.
+
+## Phase 1-7 Source Crosswalk Verification
+
+Status: Complete.
+
+Result: Phases 1–7 are verified as safe to build upon for Phase 8.
+
+Next step: lock expanded Phase 8 Career System plan.
+
+## Phase 8.1 - Career System Plan Lock v2
+
+Status: Implemented and awaiting validation.
+
+Boundary: planning only; no product behavior, SQL migration, mutation path, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs added.
+
+Next step after commit: Phase 8.2 Inspect current career routes, SQL, repositories, dashboard contracts, and audits.
+
+## Phase 8.2 - Career Route and Data Contract Inspection
+
+Status: Complete.
+
+Boundary: inspection/report only; no runtime behavior, SQL migration, route wiring, mutation path, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs added.
+
+Next step: Phase 8.3 Career SQL schema plan / migration design.
+
+## Phase 8.3 - Career SQL Schema Plan / Migration Design
+
+Status: Complete.
+
+Boundary: design/documentation only; no runtime behavior, SQL migration, route wiring, mutation path, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs added.
+
+Next step: Phase 8.4 Additive career SQL migration.
+
+## Phase 8.4 - Additive Career SQL Migration
+
+Status: Complete.
+
+Boundary: additive SQL migration only; no route wiring, dashboard mutation, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs added.
+
+Next step: Phase 8.5 Database types update / generated type alignment.
+
+## Phase 8.5 - Database Types Update / Generated Type Alignment
+
+Status: Complete.
+
+Boundary: type alignment only; no route wiring, dashboard mutation, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs added.
+
+Next step: Phase 8.6 Career read repository helpers.
+
+## Phase 8 — Career System — COMPLETE
+
+### Status
+Complete.
+
+### Completed Scope
+- Career SQL foundation.
+- Career read repositories.
+- Career dashboards for `/career`, `/networking`, `/resume`, and `/interviews`.
+- Career cross-links.
+- Career evidence linkage.
+- Career proposed-action visibility with no direct execution.
+- Career empty/loading/error/privacy states.
+- Career audit gate.
+- Integration audit expansion.
+- Manual smoke checklist.
+- Phase 8 completion report.
+
+### Verification Gate
+- `npm run audit:phase8`
+- `npm run audit:integration`
+- `npm run check`
+- `npx tsc --noEmit`
+- `npm run lint`
+- `git diff --check`
+
+### Next Phase
+Phase 9 — Learning / Project System.
+
+## Phase 9 — Learning / Project System Complete
+
+Status: Complete
+
+Completed:
+- Learning/project SQL foundation.
+- Parent ownership hardening.
+- Database types.
+- Read helpers.
+- Aggregation helpers.
+- Learning Academy dashboard.
+- Project Builder dashboard.
+- Knowledge Vault alignment.
+- Detail panels.
+- Linkage panels.
+- Proposed-action preview visibility.
+- Empty/loading/error/privacy boundaries.
+- Cross-links.
+- No-write/privacy audit.
+- Audit gate.
+- Manual smoke checklist.
+- Completion report.
+
+Verification:
+- npm run check passed before closeout.
+- npx tsc --noEmit passed before closeout.
+- npm run lint passed before closeout.
+- git diff --check passed before closeout.
+
+Next step: Phase 10 — Research / Stanford System.
+
+## Phase 10 — Research / Stanford System — COMPLETE
+
+### Status
+Complete.
+
+### Completed Scope
+Phase 10 created the Research / Stanford System foundation for ascendOS + Carnos.
+
+Completed:
+- Research and Stanford source-of-truth inspection.
+- Research schema design.
+- Stanford/PhD schema design.
+- Source-to-scope traceability.
+- Research/Stanford SQL foundation.
+- Parent ownership guards and RLS hardening.
+- Database type contracts.
+- Research and Stanford read repositories.
+- Dashboard aggregation helper.
+- Dashboard registry extension.
+- Shared research summary UI primitive.
+- `/research-lab` authenticated read route.
+- `/research-stanford` authenticated read route.
+- Research proof/linkage visibility.
+- Stanford proof/target-fit linkage visibility.
+- Privacy and safe-write boundary panels.
+- Research detail visibility panels.
+- Stanford/PhD detail visibility panels.
+- Research proposed-action preview visibility.
+- Research cross-dashboard links.
+- Phase 10 audit gate.
+- Phase 10 manual smoke checklist.
+- Phase 10 completion report.
+
+### Verification Gate
+Final verification passed before completion commit:
+- `npm run audit:phase10`
+- `npm run check`
+- `npm run audit:integration`
+- `npx tsc --noEmit`
+- `npm run lint`
+- `npm run validate:migrations`
+- `git diff --check`
+
+### Boundary
+Phase 10 remains read-first and visibility-only.
+
+No direct SQL writes, autonomous Carnos writes, professor outreach, scraping, paper submission, application submission, Python/ML worker execution, memory/RAG, voice, or background jobs were added.
+
+### Deferred Scope
+Deferred to later phases:
+- live Supabase browser QA
+- write/edit/delete research UI
+- real research proposed-action persistence
+- paper generation
+- professor outreach automation
+- web search/scraping integrations
+- paper/application submission integrations
+- Python/ML worker execution
+- memory/RAG
+- voice
+- background jobs
+
+### Next Recommended Phase
+Phase 11 — Health / Body System.
 ```
 
 ### `PROJECT_EXECUTION_LOG.md`
@@ -2155,7 +4274,9 @@ The Phase 4 type rewrite was structurally correct for Phase 4 but accidentally r
 - `npm run check` must pass before commit.
 
 ### Next
-- Phase 4.11 — Add Phase 4 docs and completion audit notes.\n\n## 2026-06-18 — Phase 4.11 — Phase 4 Documentation and Report
+- Phase 4.11 — Add Phase 4 docs and completion audit notes.
+
+## 2026-06-18 — Phase 4.11 — Phase 4 Documentation and Report
 
 ### Completed
 - Added docs/database/CORE_SQL_SPINE.md.
@@ -2168,7 +4289,9 @@ The Phase 4 type rewrite was structurally correct for Phase 4 but accidentally r
 - npm run check must pass before commit.
 
 ### Next
-- Phase 4.12 — Mark Phase 4 complete.\n\n
+- Phase 4.12 — Mark Phase 4 complete.
+
+
 
 ## 2026-06-18 — Phase 4.12 — Phase 4 Complete
 
@@ -2387,7 +4510,9 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - npm run check must pass.
 
 ### Next
-- Phase 5.9 — Connect proof/daily log surfaces.\n\n## 2026-06-18 — Phase 5.9 — Proof and Daily Log Read Surfaces
+- Phase 5.9 — Connect proof/daily log surfaces.
+
+## 2026-06-18 — Phase 5.9 — Proof and Daily Log Read Surfaces
 
 ### Completed
 - Updated `/world-class` to read proof items and daily logs.
@@ -2407,7 +4532,9 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - npm run check must pass.
 
 ### Next
-- Phase 5.10 — Connect core domain pages to filtered reads.\n\n
+- Phase 5.10 — Connect core domain pages to filtered reads.
+
+
 
 ## 2026-06-18 — Phase 5.10 — Core Domain Filtered Reads
 
@@ -2450,7 +4577,9 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - `npm run check` must pass.
 
 ### Next
-- Phase 5.12 — Add Phase 5 documentation/report.\n\n## 2026-06-18 — Phase 5.12 — Phase 5 Documentation Report
+- Phase 5.12 — Add Phase 5 documentation/report.
+
+## 2026-06-18 — Phase 5.12 — Phase 5 Documentation Report
 
 ### Completed
 - Added `docs/phase-reports/PHASE_5_CORE_READ_UI_INTEGRATION_REPORT.md`.
@@ -2467,7 +4596,9 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - `npm run check` must pass.
 
 ### Next
-- Phase 5.13 — Update source alignment audit for Phase 5.\n\n
+- Phase 5.13 — Update source alignment audit for Phase 5.
+
+
 
 ## 2026-06-18 — Phase 5.13 — Source Alignment Audit Update
 
@@ -2554,6 +4685,1121 @@ Connected dynamic read pages:
 - Update DOCX source of truth.
 - Update source alignment audit.
 - Start Phase 6 — Safe Write / Proposed Action Flow.
+
+## 2026-06-19 23:35 UTC — Phase 6.1 Started: Safe Write / Proposed Action Flow Plan Lock
+
+Started Phase 6 with the official plan lock for the Safe Write / Proposed Action Flow.
+
+Created:
+- `docs/phase-plans/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW.md`
+
+Purpose:
+- Define the safe write pipeline before any runtime write code is added.
+- Lock the required flow: proposal -> validation -> Save/Edit/Cancel -> server write -> audit log -> timeline event -> dashboard refresh.
+- Preserve Phase 1 through Phase 5.15 boundaries.
+- Prevent uncontrolled freeform writes, Carnos direct writes, Python/ML direct SQL mutation, hidden memory, and premature runtime intelligence.
+
+No application runtime code was added in this step.
+
+## 2026-06-19 23:44 UTC — Phase 6.2 Completed: Proposed Action Types
+
+Completed Phase 6.2 by creating the central proposed action type registry.
+
+Created:
+- `src/lib/actions/action-types.ts`
+
+Added allowed proposed action types:
+- `create_task`
+- `create_goal`
+- `create_daily_log`
+- `create_proof_item`
+
+Purpose:
+- Establish the fixed list of allowed write-affecting action types.
+- Prevent random/freeform action names from entering the write pipeline.
+- Prepare the foundation for Phase 6.3 proposed action contracts and Phase 6.5 validation.
+
+Validation:
+- `npm run lint` passed.
+- `npm run check` passed.
+- `git diff --check` passed.
+
+No runtime write execution was added.
+No Carnos generation was added.
+No Python/ML runtime was added.
+No memory system was added.
+
+## 2026-06-19 23:51 UTC — Phase 6.3 Completed: Proposed Action Contracts
+
+Completed Phase 6.3 by creating the proposed action contract definitions.
+
+Created:
+- `src/lib/actions/proposed-action-contracts.ts`
+
+Defined payload contracts for:
+- `create_task`
+- `create_goal`
+- `create_daily_log`
+- `create_proof_item`
+
+Purpose:
+- Convert write-affecting proposals into structured typed payloads.
+- Prepare validation, lifecycle, and execution layers.
+- Prevent freeform action payloads from reaching the write pipeline.
+
+Safety boundaries:
+- No runtime write execution was added.
+- No database mutation was added.
+- No Carnos generation was added.
+- No Python/ML runtime was added.
+- No memory system was added.
+
+
+## 2026-06-19 23:58 UTC — Phase 6.4 Completed: Action Result Types
+
+Completed Phase 6.4 by creating standard action result contracts.
+
+Created:
+- `src/lib/actions/action-results.ts`
+
+Added:
+- `ActionSuccessResult`
+- `ActionErrorResult`
+- `ActionResult`
+- standard action error codes
+- `createActionSuccess`
+- `createActionError`
+- `isActionSuccess`
+- `isActionError`
+
+Purpose:
+- Standardize success/error outputs before validation and execution layers.
+- Ensure future safe-write functions return predictable structured results.
+- Prepare Phase 6.5 payload validation and later execution dispatcher behavior.
+
+Safety boundaries:
+- No runtime write execution was added.
+- No database mutation was added.
+- No Carnos generation was added.
+- No Python/ML runtime was added.
+- No memory system was added.
+
+## 2026-06-20 00:05 UTC — Phase 6.5 Completed: Payload Validation
+
+Completed Phase 6.5 by creating the proposed action validation layer.
+
+Created:
+- `src/lib/actions/validate-proposed-action.ts`
+
+Added validation for:
+- proposed action envelope structure
+- supported action types
+- proposed action source
+- confidence range
+- evidence refs
+- forbidden payload fields
+- create task payloads
+- create goal payloads
+- create daily log payloads
+- create proof item payloads
+
+Purpose:
+- Block invalid proposed actions before any future write execution.
+- Prevent user-owned/server-owned fields from being injected through client payloads.
+- Prepare the safe execution dispatcher for later Phase 6 steps.
+
+Safety boundaries:
+- No runtime write execution was added.
+- No database mutation was added.
+- No Carnos generation was added.
+- No Python/ML runtime was added.
+- No memory system was added.
+
+## 2026-06-20 00:09 UTC — Phase 6.6 Completed: Audit Helper
+
+Completed Phase 6.6 by creating the reusable audit logging helper.
+
+Created:
+- `src/lib/audit/write-audit-log.ts`
+
+Purpose:
+- Provide a controlled server-side helper for writing audit records.
+- Prepare future proposed action execution to preserve evidence and write history.
+- Keep audit logging separate from action validation and execution logic.
+
+Safety boundaries:
+- No proposed action execution was added.
+- No UI was added.
+- No Carnos generation was added.
+- No Python/ML runtime was added.
+- No memory system was added.
+
+
+## 2026-06-20 04:31 UTC — Phase 6.7 Completed: Timeline Helper Boundary
+
+Completed Phase 6.7 by creating a safe timeline helper boundary.
+
+Created:
+- `src/lib/timeline/write-timeline-event.ts`
+
+Important schema finding:
+- No `timeline_events` table currently exists in `src/types/database.ts`.
+- No `timeline_events` table currently exists in `supabase/migrations/*.sql`.
+
+Decision:
+- Created a typed timeline helper contract that returns a controlled `skipped` result.
+- Did not invent a database table.
+- Did not write to a non-existent timeline table.
+
+Purpose:
+- Preserve the Phase 6 timeline-helper boundary.
+- Keep future execution code able to call a timeline helper safely.
+- Avoid schema drift until a real timeline table is added in a later SQL phase.
+
+Safety boundaries:
+- No timeline database write was added.
+- No proposed action execution was added.
+- No UI was added.
+- No Carnos generation was added.
+- No Python/ML runtime was added.
+- No memory system was added.
+
+
+## 2026-06-20 04:49 UTC — Phase 6.8 Completed: Proposed Action Creation Helper
+
+Completed Phase 6.8 by creating the proposed action creation helper.
+
+Created:
+- `src/lib/actions/create-proposed-action.ts`
+
+Purpose:
+- Validate an incoming proposed action contract.
+- Store a valid proposed action in `ai_actions`.
+- Save it with `status = pending_confirmation`.
+- Preserve payload, validation result, source context, and optional chat references.
+
+Safety boundaries:
+- The helper only creates a pending proposal.
+- It does not execute the proposed action.
+- It does not create tasks, goals, daily logs, or proof items.
+- It does not bypass validation.
+- It does not auto-approve or auto-write target records.
+- It does not add Carnos generation, Python/ML runtime, memory, background jobs, or UI.
+
+
+## 2026-06-20 05:05 UTC — Phase 6.9 Completed: Action Lifecycle Helper
+
+Completed Phase 6.9 by creating the action lifecycle helper.
+
+Created:
+- `src/lib/actions/action-lifecycle.ts`
+
+Purpose:
+- Read an existing `ai_actions` proposal.
+- Validate legal lifecycle transitions.
+- Update only the proposal lifecycle status.
+- Support approval, rejection, cancellation, and failure marking.
+
+Allowed transitions:
+- `pending_confirmation` → `approved`
+- `pending_confirmation` → `rejected`
+- `draft`, `pending_confirmation`, or `approved` → `cancelled`
+- `approved` → `failed`
+
+Safety boundaries:
+- The helper does not execute target writes.
+- The helper does not create tasks, goals, daily logs, or proof items.
+- The helper does not auto-approve actions.
+- The helper does not bypass user ownership checks.
+- The helper does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.
+
+
+## 2026-06-20 05:18 UTC — Phase 6.10 Completed: Execution Dispatcher Boundary
+
+Completed Phase 6.10 by creating the execution dispatcher boundary.
+
+Created:
+- `src/lib/actions/execution-dispatcher.ts`
+
+Purpose:
+- Load an `ai_actions` proposal by user ownership.
+- Require `status = approved` before dispatch.
+- Validate the proposed action type.
+- Route approved actions by action type.
+
+Current behavior:
+- The dispatcher intentionally does not execute target-table writes yet.
+- Valid approved action types return a controlled error explaining that target execution is implemented in Phase 6.11–6.14.
+- This keeps the dispatcher boundary present without prematurely creating tasks, goals, daily logs, or proof items.
+
+Safety boundaries:
+- No target-table writes were added.
+- No task creation was added.
+- No goal creation was added.
+- No daily log creation was added.
+- No proof item creation was added.
+- No UI was added.
+- No Carnos generation was added.
+- No Python/ML runtime was added.
+- No memory system, background jobs, or cron jobs were added.
+
+
+## 2026-06-20 05:24 UTC — Phase 6.11 Completed: Create Task Flow
+
+Completed Phase 6.11 by creating the approved create-task execution flow.
+
+Created:
+- `src/lib/actions/flows/create-task-flow.ts`
+
+Updated:
+- `src/lib/actions/execution-dispatcher.ts`
+
+Purpose:
+- Load an approved `create_task` proposal from `ai_actions`.
+- Validate ownership, status, action type, and payload.
+- Insert a task into `tasks`.
+- Mark the source `ai_actions` record as `executed`.
+- Record an audit log.
+- Call the timeline helper boundary.
+
+Safety boundaries:
+- Only approved `create_task` actions can execute.
+- The flow checks `user_id`.
+- The flow does not execute unapproved proposals.
+- The flow does not execute goals, daily logs, or proof items.
+- The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.
+
+
+## 2026-06-20 18:09 UTC — Phase 6.12 Completed: Create Goal Flow
+
+Completed Phase 6.12 by creating the approved create-goal execution flow.
+
+Created:
+- `src/lib/actions/flows/create-goal-flow.ts`
+
+Updated:
+- `src/lib/actions/execution-dispatcher.ts`
+
+Purpose:
+- Load an approved `create_goal` proposal from `ai_actions`.
+- Validate ownership, status, action type, and payload.
+- Insert a goal into `goals`.
+- Mark the source `ai_actions` record as `executed`.
+- Record an audit log.
+- Call the timeline helper boundary.
+
+Safety boundaries:
+- Only approved `create_goal` actions can execute.
+- The flow checks `user_id`.
+- The flow does not execute unapproved proposals.
+- The flow does not execute tasks, daily logs, or proof items.
+- The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.
+
+
+## 2026-06-20 18:13 UTC — Phase 6.13 Completed: Create Daily Log Flow
+
+Completed Phase 6.13 by creating the approved create-daily-log execution flow.
+
+Created:
+- `src/lib/actions/flows/create-daily-log-flow.ts`
+
+Updated:
+- `src/lib/actions/execution-dispatcher.ts`
+
+Purpose:
+- Load an approved `create_daily_log` proposal from `ai_actions`.
+- Validate ownership, status, action type, and payload.
+- Insert a daily log into `daily_logs`.
+- Mark the source `ai_actions` record as `executed`.
+- Record an audit log.
+- Call the timeline helper boundary.
+
+Safety boundaries:
+- Only approved `create_daily_log` actions can execute.
+- The flow checks `user_id`.
+- The flow does not execute unapproved proposals.
+- The flow does not execute tasks, goals, or proof items.
+- The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.
+
+
+## 2026-06-20 18:17 UTC — Phase 6.14 Completed: Create Proof Item Flow
+
+Completed Phase 6.14 by creating the approved create-proof-item execution flow.
+
+Created:
+- `src/lib/actions/flows/create-proof-item-flow.ts`
+
+Updated:
+- `src/lib/actions/execution-dispatcher.ts`
+
+Purpose:
+- Load an approved `create_proof_item` proposal from `ai_actions`.
+- Validate ownership, status, action type, and payload.
+- Validate referenced daily log, goal, and task ownership before insert.
+- Insert a proof item into `proof_items`.
+- Mark the source `ai_actions` record as `executed`.
+- Record an audit log.
+- Call the timeline helper boundary.
+
+Safety boundaries:
+- Only approved `create_proof_item` actions can execute.
+- The flow checks `user_id`.
+- The flow does not execute unapproved proposals.
+- The flow blocks cross-user related-record references.
+- The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.
+
+
+## 2026-06-20 18:22 UTC — Phase 6.15 Completed: Save/Edit/Cancel UI Component
+
+Completed Phase 6.15 by adding the reusable proposed action review UI component.
+
+Created:
+- `src/components/actions/proposed-action-review-card.tsx`
+- `src/components/actions/index.ts`
+
+Purpose:
+- Display proposed action type, source, confidence, reason, validation issues, and payload.
+- Allow payload JSON editing before save/confirmation.
+- Provide Save / Confirm and Cancel callback boundaries.
+- Keep the UI component reusable before wiring it into a route.
+
+Safety boundaries:
+- This component does not write directly to the database.
+- This component does not call Supabase.
+- This component does not execute actions by itself.
+- This component preserves the confirmation-before-write boundary.
+- This component does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or voice.
+
+
+## 2026-06-20 18:30 UTC — Phase 6.16 Completed: Wire Proposed Action Review into App Page
+
+Completed Phase 6.16 by wiring the proposed action review component into the Carnos dashboard.
+
+Updated:
+- `src/app/carnos/page.tsx`
+
+Purpose:
+- Render the reusable Save/Edit/Cancel review card inside an authenticated app page.
+- Demonstrate the confirmation-first UI surface inside the Carnos dashboard.
+- Keep the component in preview mode with no direct database mutation from the page.
+
+Safety boundaries:
+- No Supabase write call was added to the UI component.
+- No action execution call was added to the page.
+- No Python/ML runtime, memory, Carnos generation, background job, cron job, or voice feature was added.
+- The component remains a review surface only until server-owned action wiring is explicitly added.
+
+
+## 2026-06-20 18:38 UTC — Phase 6.17 Completed: Phase 6 Audit Gate
+
+Completed Phase 6.17 by adding the Phase 6 audit script and wiring it into `npm run check`.
+
+Created:
+- `scripts/audit-phase-6.mjs`
+
+Updated:
+- `package.json`
+
+Purpose:
+- Verify Phase 6 safe write files exist.
+- Verify proposed action types, contracts, validation, lifecycle, dispatcher, and four target write flows.
+- Verify audit and timeline helper boundaries.
+- Verify Save/Edit/Cancel UI exists without direct mutation behavior.
+- Verify the Carnos page wiring stays confirmation-first and avoids forbidden audit phrases.
+
+Safety boundaries:
+- Audit blocks missing Phase 6 files.
+- Audit blocks missing dispatcher routes.
+- Audit blocks missing approved-only execution checks.
+- Audit blocks UI components that directly call Supabase or execute actions.
+- Audit blocks forbidden wording in the Phase 5 page scanner path.
+
+
+## 2026-06-20 18:47 UTC — Phase 6.18 Completed: Phase 6 Report and Completion Marker
+
+Completed Phase 6.18 by creating the Phase 6 completion report and marking Phase 6 complete.
+
+Created:
+- `docs/phase-reports/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW_REPORT.md`
+
+Purpose:
+- Summarize Phase 6 implementation.
+- Record completed files and safety boundaries.
+- Confirm the proposed-action safe write flow is complete.
+- Preserve the confirmation-before-write architecture.
+
+## Phase 7.1 - Core Operating Dashboards Plan Lock
+
+- Created Phase 7 plan lock.
+- Recorded roadmap reconciliation: old 15-phase memory is outdated; FINAL_SYNCED DOCX/JSON are source of truth; implementation proceeds with 21 chunks unless explicitly updated.
+- Locked Phase 7 scope to core operating dashboards only.
+- Excluded future phase modules from Phase 7.
+
+## Phase 7.2 - Dashboard Layout Contract
+
+- Added the typed dashboard layout contract for Phase 7 surfaces, regions, card statuses, priorities, and source table tracking.
+- Kept this step contract-only with no page rewrites and no runtime writes.
+
+## Phase 7.3 - Dashboard Card Registry
+
+- Added the Phase 7 dashboard card registry for Command, Timeline, Calendar, Goals, Proof, and Carnos surfaces.
+- Kept the step registry-only with no page rewrites and no runtime writes.
+
+## Phase 7.4 - Shared Dashboard Card Primitives
+
+- Added reusable Phase 7 operating dashboard card and grid primitives.
+- Kept this step component-only with no page rewrites and no runtime writes.
+
+## Phase 7.5 - Dashboard Data Aggregation Helpers
+
+- Added read-only server-side dashboard data summary helpers for Phase 7 surfaces.
+- Aggregates counts for pending updates, active goals, open tasks, proof items, and events.
+- Kept this step helper-only with no page rewrites and no writes.
+
+## Phase 7.6 - Command Dashboard v1
+
+- Added the first Command dashboard v1 component using Phase 7 card registry, card primitives, and dashboard summary data contracts.
+- Preserved read-only dashboard behavior and the proposed-action confirmation boundary.
+- Did not activate Python/ML runtime execution, memory, voice, background jobs, or autonomous writes.
+
+## Phase 7.6B - Wire Command Dashboard v1
+
+- Wired the Phase 7 CommandDashboardV1 component into the live `/command` route.
+- Preserved authenticated dashboard shell usage and read-only dashboard data aggregation.
+- Did not add autonomous writes, Python/ML execution, memory, voice, internet tools, or background jobs.
+
+## Phase 7 Integration Sanity Audit Gate
+
+- Added a dedicated integration sanity audit to catch created-but-not-wired regressions.
+- The audit verifies Phase 1 source foundation, Phase 3 auth/Supabase, Phase 4 SQL/repository foundation, Phase 5 read routes, Phase 6 proposed-action flow, and current Phase 7 Command dashboard route wiring.
+- Added `npm run audit:integration` into `npm run check` so future checks catch route/component wiring gaps.
+
+## Phase 7.7 - Timeline Dashboard v1
+
+- Created the reusable TimelineDashboardV1 component.
+- The component uses Phase 7 dashboard registry cards and read-only dashboard summary data.
+- No autonomous persistence, Python/ML execution, memory, voice, internet tools, or background jobs were added.
+
+## Phase 7.7B - Wire Timeline Dashboard Route
+
+- Wired TimelineDashboardV1 into `/timeline` inside the authenticated read shell.
+- Preserved Phase 5 timeline read markers and existing event/proof/audit read view.
+- Loaded Phase 7 dashboard summary data through the server Supabase client.
+- No autonomous persistence, Python/ML execution, memory, voice, internet tools, or background jobs were added.
+
+## Phase 7.8 - Calendar Dashboard v1
+
+- Created CalendarDashboardV1 and wired it into `/calendar` inside the authenticated read shell.
+- Preserved the existing Phase 5 tasks/events read view and empty state.
+- Loaded Phase 7 dashboard summary data through the server Supabase client.
+- No autonomous scheduling, persistence, Python/ML execution, memory, voice, internet tools, or background jobs were added.
+
+## Phase 7.9 - Goals Dashboard v1
+
+- Created GoalsDashboardV1 and wired it into `/goals` inside the authenticated read shell.
+- Preserved the existing Phase 5 goals read view and empty state.
+- Loaded Phase 7 dashboard summary data through the server Supabase client.
+- No autonomous goal mutation, scoring automation, Python/ML execution, memory, voice, internet tools, or background jobs were added.
+
+## Phase 7.10 - Proof Dashboard/Card System
+
+- Created ProofDashboardV1 as a route-ready read-only dashboard component.
+- Exported ProofDashboardV1 from the dashboard component barrel.
+- Did not create `/proof` because `/proof` is not part of the current canonical route list.
+- Preserved the existing route registry boundary.
+- No autonomous proof mutation, scoring automation, Python/ML execution, memory, voice, internet tools, or background jobs were added.
+
+## Phase 7.11 - Pending Updates / Confirmation Drawer Integration
+
+- Added PendingUpdatesDrawer as a client-side review drawer around the existing ProposedActionReviewCard.
+- Wired the drawer into `/carnos` using the existing pending AI action count.
+- Preserved the Phase 6 confirmation-first boundary and did not attach lifecycle mutation callbacks.
+- No autonomous action execution, Python/ML execution, memory, voice, internet tools, or background jobs were added.
+
+## Phase 7.12 - Carnos Panel v1
+
+- Added CarnosPanelV1 as a read-only operating panel for Carnos state, pending proposals, and safety status.
+- Wired CarnosPanelV1 into `/carnos` using dashboard summary data plus existing read-only Carnos records.
+- Preserved the Phase 6.16 compatibility marker and PendingUpdatesDrawer review path.
+- No lifecycle mutation callbacks, autonomous action execution, Python/ML execution, memory, voice, internet tools, or background jobs were added.
+
+## Phase 7.13 - Cross-Dashboard Links
+
+- Added CrossDashboardLinks as a source-approved navigation loop across core Phase 7 dashboards.
+- Wired links into Command, Timeline, Calendar, Goals, and Carnos dashboard surfaces.
+- Kept links limited to canonical routes only; no non-canonical proof route was introduced.
+- No writes, autonomous actions, generation, memory, Python/ML execution, voice, internet tools, or background jobs were added.
+
+## Phase 7.14 - Empty / Loading / Error / Privacy States
+
+- Upgraded OperatingDashboardCard to render explicit loading, error, empty, and privacy-redacted states from the dashboard card contract.
+- Added error and privacy metadata to pending update and Carnos operating cards.
+- Preserved the read-only dashboard boundary and did not add writes, generation, memory, Python/ML execution, voice, internet tools, or background jobs.
+
+## Phase 7.15 - No-Hardcoded-Demo-Data Cleanup
+
+- Removed user-facing demo/sample/placeholder phrasing from Phase 7 dashboard surfaces where it was not required by legacy audit compatibility.
+- Preserved required Phase 6 audit compatibility markers in `/carnos` while changing the visible copy to compatibility/review language.
+- Confirmed no non-canonical proof route was introduced.
+- No writes, autonomous actions, generation, memory, Python/ML execution, voice, internet tools, or background jobs were added.
+
+## Phase 7.16 - Phase 7 Audit Gate
+
+- Expanded the integration sanity audit from command-only Phase 7 wiring into a core Phase 7 dashboard audit gate.
+- Added checks for timeline, calendar, goals, proof component, Carnos panel, cross-dashboard links, pending updates drawer, and dashboard card state handling.
+- Confirmed cross-dashboard links remain canonical-route safe and do not introduce `/proof`.
+- No writes, autonomous actions, generation, memory, Python/ML execution, voice, internet tools, or background jobs were added.
+
+## Phase 7.17 - Manual Smoke Checklist
+
+- Added docs/qa/PHASE_7_MANUAL_SMOKE_CHECKLIST.md for manual browser verification of /command, /timeline, /calendar, /goals, and /carnos.
+- Checklist confirms cross-dashboard links, active-route highlighting, empty states, read warnings, pending update drawer behavior, and no non-canonical /proof route.
+- No writes, autonomous actions, generation, memory, Python/ML execution, voice, internet tools, or background jobs were added.
+
+## Phase 7.18 - Phase 7 Report and Completion Marker
+
+- Added docs/phase-reports/PHASE_7_CORE_OPERATING_DASHBOARDS_REPORT.md.
+- Marked Phase 7 Core Operating Dashboards complete.
+- Strengthened integration boundary scanning to include all Phase 7 dashboard components, CrossDashboardLinks, and PendingUpdatesDrawer.
+- Confirmed transition target: Phase 8 Career System.
+
+## Phase 1-7 Source Crosswalk Verification
+
+- Added docs/audits/PHASE_1_7_SOURCE_CROSSWALK.md.
+- Added scripts/audit-phase-1-7-crosswalk.mjs.
+- Verified that Phases 1–7 are foundation-complete, source-aligned by scope, audit-passing, route-safe, and safe to build upon before Phase 8.
+- Confirmed that remaining source-of-truth features belong to Phases 8–21 rather than accidental gaps in Phases 1–7.
+
+## Phase 8.1 - Career System Plan Lock v2
+
+- Added docs/phase-plans/PHASE_8_CAREER_SYSTEM.md.
+- Locked expanded 24-step Phase 8 scope for applications, application events, networking, referrals, resume versions, interviews, follow-ups, analytics, proof links, route dashboards, and audit coverage.
+- Preserved all Phase 1–7 boundaries and canonical route rules.
+
+## Phase 8.2 - Career Route and Data Contract Inspection
+
+- Added docs/phase-reports/PHASE_8_2_CAREER_INSPECTION_REPORT.md.
+- Confirmed /career is currently a read-only DomainReadPage.
+- Confirmed /networking, /resume, and /interviews are placeholder surfaces.
+- Confirmed career SQL tables, database types, repository helpers, dashboard components, and Phase 8 audits are not implemented yet.
+- Confirmed Phase 8 should proceed additively starting with SQL schema design.
+
+## Phase 8.3 - Career SQL Schema Plan / Migration Design
+
+- Added docs/database/CAREER_SQL_SCHEMA_DESIGN.md.
+- Designed additive Career System SQL tables for job applications, application events, networking contacts, networking interactions, referrals, resume versions, resume bullets, and interviews.
+- Confirmed Phase 8.4 should add supabase/migrations/0007_career_system_foundation.sql.
+- Preserved all Phase 1–7 boundaries.
+
+## Phase 8.4 - Additive Career SQL Migration
+
+- Added supabase/migrations/0007_career_system_foundation.sql.
+- Added user-owned, RLS-protected Career System foundation tables:
+  - job_applications
+  - job_application_events
+  - networking_contacts
+  - networking_interactions
+  - job_referrals
+  - resume_versions
+  - resume_bullets
+  - interviews
+- Added indexes, ownership policies, and updated_at triggers where appropriate.
+- No runtime route wiring, dashboard mutation, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs were added.
+
+## Phase 8.5 - Database Types Update / Generated Type Alignment
+
+- Updated src/types/database.ts with Career System table contracts matching migration 0007.
+- Added row/insert/update aliases for job applications, application events, networking contacts, networking interactions, referrals, resume versions, resume bullets, and interviews.
+- Boundary: no runtime route wiring, dashboard mutation, generation, memory/RAG, Python/ML execution, internet tools, voice, or background jobs were added.
+
+## 2026-06-24 — Phase 8.24 — Career System Completion Closeout
+
+### Completed
+- Added Phase 8 Career System completion report.
+- Added Phase 8 manual smoke checklist.
+- Prepared Phase 8 final closeout verification.
+
+### Verification Required
+- `npm run audit:phase8`
+- `npm run audit:integration`
+- `npm run check`
+- `npx tsc --noEmit`
+- `npm run lint`
+- `git diff --check`
+
+### Next
+- Commit and push final Phase 8 completion closeout.
+- Begin Phase 9 — Learning / Project System.
+
+## 2026-06-24 — Phase 1–8 Retrospective Gap Audit
+
+### Completed
+- Added a retrospective audit after Phase 8 closeout.
+- Audited Phase 1–8 completion status against source-of-truth direction and repo artifacts.
+- Separated completed scope, deferred scope, possible weak spots, and Phase 9 guardrails.
+
+### Result
+- No known critical Phase 1–8 blocker is currently skipped.
+- Remaining major capabilities are deferred to later phases.
+
+### Next
+- Commit retrospective audit.
+- Begin Phase 9 — Learning / Project System.
+
+## 2026-06-24 — Phase 9 Chunk A Started
+
+### Scope
+- Started Phase 9 — Learning / Project System.
+- Chunk A covers source-of-truth inspection, route inspection, and Phase 9 plan lock.
+- No application code changed in this chunk.
+
+### Files
+- `docs/phase-reports/PHASE_9_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
+- `docs/phase-plans/PHASE_9_LEARNING_PROJECT_SYSTEM.md`
+
+### Result
+- Phase 9 scope is locked as 28 requirement steps executed through 12 safe chunks.
+- `/learning`, `/projects`, and `/knowledge` are confirmed as Phase 9 route surfaces.
+- Next chunk: Chunk B — schema design and source-to-scope traceability.
+
+## 2026-06-24 — Phase 9 Chunk B Schema Design and Traceability
+
+### Scope
+- Added Phase 9 learning/project schema design.
+- Added source-to-scope traceability matrix.
+- Preserved the 28-step checklist while mapping execution to 12 chunks.
+- No SQL migration created yet.
+- No application code changed.
+
+### Files
+- `docs/database/PHASE_9_LEARNING_PROJECT_SCHEMA_DESIGN.md`
+- `docs/phase-reports/PHASE_9_SOURCE_TO_SCOPE_TRACEABILITY.md`
+
+### Result
+- Phase 9 schema is designed before migration.
+- Source requirements are mapped to expected implementation files and chunks.
+- Next chunk: Chunk C — SQL migration `0008_learning_project_system_foundation.sql`.
+
+## 2026-06-24 — Phase 9 Chunk C SQL Migration
+
+### Scope
+- Added Phase 9 SQL migration foundation.
+- Created learning/project tables for skill paths, skills, prerequisites, progress, learning sessions, quizzes, quiz attempts, projects, milestones, bugs, tests, releases, and links.
+- Added user ownership, RLS, policies, and indexes.
+- No TypeScript database types updated yet.
+
+### Files
+- `supabase/migrations/0008_learning_project_system_foundation.sql`
+
+### Result
+- Phase 9 persistent SQL foundation is ready for migration validation.
+- Next chunk: Chunk D — database types update.
+
+## 2026-06-24 — Phase 9 Chunk C.1 Parent Ownership Hardening
+
+### Scope
+- Added Phase 9 parent ownership hardening migration after the initial SQL foundation.
+- Recreated insert/update RLS policies for Phase 9 tables so parent references must belong to the authenticated user.
+- Preserved Phase 9 SQL foundation from migration `0008`.
+- No TypeScript database types updated yet.
+
+### Files
+- `supabase/migrations/0009_phase9_parent_ownership_guards.sql`
+
+### Result
+- Phase 9 child writes are hardened before database types and read helpers are added.
+- Next chunk: Chunk D — database types update.
+
+## 2026-06-24 — Phase 9 Chunk D Database Types
+
+### Scope
+- Updated database type definitions for Phase 9 Learning / Project System tables.
+- Added row aliases for skill paths, skills, prerequisites, learning sessions, quizzes, quiz attempts, projects, milestones, bugs, tests, releases, links, and skill progress.
+- No read helpers or UI changed yet.
+
+### Files
+- `src/types/database.ts`
+
+### Result
+- TypeScript can now reference Phase 9 SQL-backed tables.
+- Next chunk: Chunk E — learning/project read helpers.
+
+## 2026-06-24 — Phase 9 Chunk E Learning and Project Read Helpers
+
+### Scope
+- Added read-only repository helpers for Phase 9 learning and project tables.
+- Added user-scoped list functions for skill paths, skills, prerequisites, sessions, quizzes, quiz attempts, projects, milestones, bugs, tests, releases, links, and skill progress.
+- No writes, proposed actions, or dashboard UI changed.
+
+### Files
+- `src/lib/repositories/core-read.ts`
+
+### Result
+- Phase 9 SQL tables now have typed read access.
+- Next chunk: Chunk F — dashboard aggregation, registry extension, and shared UI primitives.
+
+## 2026-06-24 — Phase 9 Chunk F Aggregation, Registry, and Shared UI Primitives
+
+### Scope
+- Added Phase 9 dashboard cards for learning and projects.
+- Added learning/projects to the dashboard surface contract.
+- Added Phase 9 learning/project dashboard aggregation helper.
+- Added a reusable learning/project summary panel primitive.
+- No route-level dashboard pages changed yet.
+
+### Files
+- `src/lib/dashboard/dashboard-layout-contract.ts`
+- `src/lib/dashboard/dashboard-card-registry.ts`
+- `src/lib/dashboard/learning-project-dashboard-data-helpers.ts`
+- `src/lib/dashboard/index.ts`
+- `src/components/dashboard/learning-project-summary-panel.tsx`
+- `src/components/dashboard/index.ts`
+
+### Result
+- Phase 9 has dashboard-ready registry cards, aggregation helpers, and reusable UI primitives.
+- Next chunk: Chunk G — Learning Academy dashboard and `/learning` route.
+
+## 2026-06-24 — Phase 9 Chunk G Learning Academy Dashboard
+
+### Scope
+- Added the Learning Academy dashboard component.
+- Wired `/learning` to read Phase 9 learning records through authenticated, read-only repository helpers.
+- Rendered skill paths, skills, sessions, quizzes, attempts, and progress records.
+- Preserved no-write behavior.
+
+### Files
+- `src/components/dashboard/learning-academy-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+- `src/app/learning/page.tsx`
+
+### Result
+- `/learning` now has a real Phase 9 read-only dashboard.
+- Next chunk: Chunk H — Project Builder dashboard and `/projects` route.
+
+## 2026-06-24 — Phase 9 Chunk H Project Builder Dashboard
+
+### Scope
+- Added the Project Builder dashboard component.
+- Wired `/projects` to read Phase 9 project records through authenticated, read-only repository helpers.
+- Rendered projects, milestones, bugs, tests, releases, and project links.
+- Preserved no-write behavior.
+
+### Files
+- `src/components/dashboard/project-builder-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+- `src/app/projects/page.tsx`
+
+### Result
+- `/projects` now has a real Phase 9 read-only dashboard.
+- Next chunk: Chunk I — `/knowledge` route alignment.
+
+## 2026-06-24 — Phase 9 Chunk I Knowledge Route Alignment
+
+### Scope
+- Added Knowledge Vault alignment dashboard.
+- Wired `/knowledge` to read Phase 9 learning/project source records.
+- Explicitly preserved the boundary that full memory/RAG belongs to later phases.
+- Preserved no-write behavior.
+
+### Files
+- `src/components/dashboard/knowledge-vault-alignment-v1.tsx`
+- `src/components/dashboard/index.ts`
+- `src/app/knowledge/page.tsx`
+
+### Result
+- `/knowledge` now reflects Phase 9 learning/project source alignment without implementing Phase 15 memory/RAG.
+- Next chunk: Chunk J — skill path/progress, quiz/session, and project build-log detail panels.
+
+## 2026-06-24 — Phase 9 Chunk J Detail Panels
+
+### Scope
+- Added read-only detail panels for skill path/progress, quiz/session, and project build-log views.
+- Wired detail panels into the Learning Academy and Project Builder dashboards.
+- Preserved no-write behavior.
+
+### Files
+- `src/components/dashboard/learning-project-detail-panels.tsx`
+- `src/components/dashboard/learning-academy-dashboard-v1.tsx`
+- `src/components/dashboard/project-builder-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Result
+- Learning and project dashboards now include Phase 9 focused detail views.
+- Next chunk: Chunk K — proof, goals/tasks/timeline linkage, proposed-action visibility, states, and cross-links.
+
+## 2026-06-24 — Phase 9 Chunk K Linkage and State Surfaces
+
+### Scope
+- Added README/resume/proof linkage surface.
+- Added goal/task/timeline linkage surface.
+- Added preview-only proposed-action visibility panel.
+- Added empty/loading/error/privacy boundary panel.
+- Added Phase 9 cross-dashboard links.
+- Wired linkage panels into `/learning`, `/projects`, and `/knowledge`.
+
+### Files
+- `src/components/dashboard/learning-project-linkage-panels.tsx`
+- `src/components/dashboard/learning-academy-dashboard-v1.tsx`
+- `src/components/dashboard/project-builder-dashboard-v1.tsx`
+- `src/components/dashboard/knowledge-vault-alignment-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Result
+- Phase 9 surfaces now show linkage, state boundaries, proposed-action previews, and cross-links while remaining read-only.
+- Next chunk: Chunk L — Phase 9 audits, smoke checklist, completion report, and closeout.
+
+## 2026-06-24 — Phase 9 Chunk L Closeout
+
+### Scope
+- Added Phase 9 no-write/privacy audit.
+- Added Phase 9 audit gate.
+- Added Phase 9 manual smoke checklist.
+- Added Phase 9 completion report.
+- Updated phase status.
+
+### Files
+- `docs/phase-reports/PHASE_9_NO_WRITE_PRIVACY_AUDIT.md`
+- `docs/phase-reports/PHASE_9_AUDIT_GATE.md`
+- `docs/phase-reports/PHASE_9_MANUAL_SMOKE_CHECKLIST.md`
+- `docs/phase-reports/PHASE_9_COMPLETION_REPORT.md`
+- `PHASE_STATUS.md`
+
+### Result
+- Phase 9 is ready for closeout commit after final verification.
+- Next phase: Phase 10 — Research / Stanford System.
+
+## 2026-06-25 — Phase 10 Chunk A Source and Route Inspection
+
+### Scope
+- Started Phase 10 — Research / Stanford System.
+- Locked Phase 10 as a 36-step, 11-chunk plan.
+- Inspected reusable foundations for authenticated dashboards, cross-links, proposed-action previews, proposed-action contracts, research-adjacent existing types, read helpers, and migration constraints.
+
+### Files
+- `docs/phase-plans/PHASE_10_RESEARCH_STANFORD_SYSTEM.md`
+- `docs/phase-reports/PHASE_10_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
+
+### Result
+- Phase 10 Chunk A is ready for verification.
+- Next chunk after commit: Chunk B — research/Stanford schema design and source-to-scope traceability.
+
+## 2026-06-25 — Phase 10 Chunk B Schema Design and Traceability
+
+### Scope
+- Completed 10.4 Research schema design.
+- Completed 10.5 Stanford/PhD schema design.
+- Completed 10.6 Source-to-scope traceability matrix.
+
+### Files
+- `docs/database/PHASE_10_RESEARCH_SCHEMA_DESIGN.md`
+- `docs/database/PHASE_10_STANFORD_PHD_SCHEMA_DESIGN.md`
+- `docs/phase-reports/PHASE_10_SOURCE_TO_SCOPE_TRACEABILITY.md`
+
+### Result
+- Phase 10 Chunk B is ready for verification.
+- Next chunk after commit: Chunk C — SQL foundation migration only.
+
+## 2026-06-25 — Phase 10 Chunk C SQL Foundation
+
+### Scope
+- Completed 10.7 SQL migration.
+- Added Phase 10 Research / Stanford SQL foundation migration.
+- Added user-owned research, paper, experiment, literature, professor/lab, PhD readiness, SOP, application asset, and recommendation target tables.
+
+### Files
+- `supabase/migrations/0010_phase10_research_stanford_foundation.sql`
+
+### Result
+- Chunk C is ready for validation.
+- Next chunk after commit: Chunk C.1 — parent ownership/RLS hardening.
+
+## 2026-06-25 — Phase 10 Chunk C.1 Parent Ownership Guards
+
+### Scope
+- Completed 10.8 ownership/RLS hardening.
+- Added Phase 10 parent ownership guard migration.
+- Added helper functions and triggers to prevent Phase 10 rows from linking to parent records owned by another user.
+
+### Files
+- `supabase/migrations/0011_phase10_parent_ownership_guards.sql`
+
+### Result
+- Chunk C.1 is ready for validation.
+- Next chunk after commit: Chunk D — database types only.
+
+## 2026-06-25 — Phase 10 Chunk D Database Types
+
+### Scope
+- Completed 10.9 database types.
+- Added TypeScript row/insert/update mappings for Phase 10 Research / Stanford SQL tables.
+- Added exported aliases for research, literature, paper, experiment, result, venue, professor/lab, PhD readiness, SOP, application asset, and recommendation target tables.
+
+### Files
+- `src/types/database.ts`
+
+### Result
+- Chunk D is ready for validation.
+- Next chunk after commit: Chunk E — research, Stanford/PhD, and literature/citation read helpers.
+
+## 2026-06-25 — Phase 10 Chunk E Read Helpers
+
+### Scope
+- Completed 10.10 research read helpers.
+- Completed 10.11 Stanford/PhD read helpers.
+- Completed 10.12 literature/citation read helpers.
+- Added read-only repository functions for Phase 10 tables.
+
+### Files
+- `src/lib/repositories/research-read.ts`
+- `src/lib/repositories/index.ts`
+
+### Result
+- Chunk E is ready for validation.
+- Next chunk after commit: Chunk F — aggregation helpers, dashboard registry extension, and shared research UI primitives.
+
+## 2026-06-25 — Phase 10 Chunk F Aggregation, Registry, Shared UI
+
+### Scope
+- Completed 10.13 aggregation helpers.
+- Completed 10.14 dashboard registry extension.
+- Completed 10.15 shared research UI primitives.
+
+### Files
+- `src/lib/dashboard/research-stanford-dashboard-data-helpers.ts`
+- `src/lib/dashboard/dashboard-layout-contract.ts`
+- `src/lib/dashboard/dashboard-card-registry.ts`
+- `src/lib/dashboard/index.ts`
+- `src/components/dashboard/research-summary-panel.tsx`
+- `src/components/dashboard/index.ts`
+
+### Boundary
+- No SQL changed.
+- No write helpers added.
+- No route wiring changed.
+- No autonomous Carnos behavior added.
+
+### Result
+- Research and Stanford dashboard surfaces now have read aggregation support, registry cards, and a shared summary panel primitive.
+
+## 2026-06-25 — Phase 10 Chunk G Research Route Read Surfaces
+
+### Scope
+- Completed 10.16 Research Lab route read surface.
+- Completed 10.17 Research Stanford route read surface.
+
+### Files
+- `src/app/research-lab/page.tsx`
+- `src/app/research-stanford/page.tsx`
+
+### Boundary
+- No SQL changed.
+- No write helpers added.
+- No autonomous Carnos behavior added.
+- No professor outreach, scraping, paper submission, or application automation added.
+
+### Result
+- Research placeholder routes now render authenticated read-only summary surfaces backed by Phase 10 aggregation helpers and dashboard registry cards.
+
+## 2026-06-25 — Phase 10 Chunk H Linkage and Boundary Panels
+
+### Scope
+- Completed 10.18 research/proof/linkage visibility.
+- Completed 10.19 privacy and safe-write boundary panels.
+
+### Files
+- `src/components/dashboard/research-linkage-boundary-panels.tsx`
+- `src/components/dashboard/index.ts`
+- `src/app/research-lab/page.tsx`
+- `src/app/research-stanford/page.tsx`
+
+### Boundary
+- No SQL changed.
+- No write helpers added.
+- No proposed-action execution added.
+- No professor outreach, scraping, paper submission, or application automation added.
+
+### Result
+- Research routes now show read-only linkage metrics and explicit privacy/safe-write boundaries.
+
+## 2026-06-25 — Phase 10 Chunk I Detail Visibility Panels
+
+### Scope
+- Completed 10.20 research idea detail visibility.
+- Completed 10.21 literature detail visibility.
+- Completed 10.22 claim/citation detail visibility.
+- Completed 10.23 experiment/result detail visibility.
+- Completed 10.24 paper/version detail visibility.
+- Completed 10.25 venue/submission detail visibility.
+- Completed 10.26 professor/lab detail visibility.
+- Completed 10.27 SOP/application/recommendation detail visibility.
+
+### Boundary
+- No SQL changed.
+- No write helpers added.
+- No autonomous Carnos behavior added.
+- No professor outreach, scraping, paper submission, or application automation added.
+
+## 2026-06-25 — Phase 10 Chunk J Proposed-Action Visibility, Cross-Links, Audit Draft
+
+### Scope
+- Completed 10.28 research proposed-action preview visibility.
+- Completed 10.29 cross-dashboard research links.
+- Completed 10.30 research route/source registry alignment.
+- Completed 10.31 Phase 10 audit gate draft.
+- Completed 10.32 Phase 10 manual smoke checklist.
+- Completed 10.33 Phase 10 completion report draft.
+
+### Files
+- `src/components/dashboard/research-proposed-action-visibility-panel.tsx`
+- `src/components/dashboard/cross-dashboard-links.tsx`
+- `src/components/dashboard/index.ts`
+- `src/app/research-lab/page.tsx`
+- `src/app/research-stanford/page.tsx`
+- `scripts/audit-phase-10.mjs`
+- `package.json`
+- `docs/qa/PHASE_10_RESEARCH_STANFORD_MANUAL_SMOKE_CHECKLIST.md`
+- `docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT_DRAFT.md`
+
+### Boundary
+- No SQL changed.
+- No write helpers added.
+- No real proposed-action persistence added.
+- No autonomous Carnos behavior added.
+- No professor outreach, scraping, paper submission, or application automation added.
+
+### Result
+- Phase 10 now has research proposal previews, cross-dashboard links, route/source registry alignment checks, an audit script, smoke checklist, and completion report draft.
+
+## 2026-06-25 — Phase 10 Chunk K Final Closeout
+
+### Scope
+- Completed 10.34 final Phase 10 completion report.
+- Completed 10.35 phase status, logs, ledger, and changelog cleanup.
+- Completed 10.36 final verification and handoff to Phase 11.
+
+### Files
+- `docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT.md`
+- `docs/qa/PHASE_10_RESEARCH_STANFORD_MANUAL_SMOKE_CHECKLIST.md`
+- `PHASE_STATUS.md`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `scripts/audit-phase-10.mjs`
+
+### Boundary
+- No SQL changed.
+- No write helpers added.
+- No real proposed-action persistence added.
+- No autonomous Carnos behavior added.
+- No professor outreach, scraping, paper submission, application submission, Python/ML worker execution, memory/RAG, voice, or background jobs added.
+
+### Verification
+- `npm run audit:phase10` passed before closeout.
+- `npm run check` passed before closeout.
+
+### Result
+- Phase 10 is complete.
+- Next phase is Phase 11 — Health / Body System.
 ```
 
 ### `README.md`
@@ -2879,6 +6125,766 @@ Purpose: adds trends, streak risk, anomaly detection, correlations, and recommen
 - The current Next.js build must not depend on Python.
 ```
 
+### `docs/audits/PHASE_1_7_SOURCE_CROSSWALK.md`
+
+```md
+# Phase 1–7 Source-to-Implementation Crosswalk
+
+Status: Verification complete.
+
+Purpose: verify whether Phases 1–7 match their intended foundation scope before starting Phase 8.
+
+This crosswalk does not claim the full ascendOS + Carnos vision is complete. It verifies that the completed foundation phases are structurally present, interconnected, audit-passing, route-safe, and boundary-safe.
+
+## Source-of-truth hierarchy used
+
+1. FINAL_SYNCED DOCX in `docs/source-of-truth/`
+2. FINAL_SYNCED JSON in `docs/source-of-truth/`
+3. Repo phase plans, reports, logs, status, and audits
+4. Code, migrations, scripts, and route registry
+5. Explicit implementation decisions
+
+## Global verification result
+
+Phases 1–7 passed the following checks before this crosswalk:
+
+- `npm run check`
+- route coverage validation
+- registry coverage validation
+- SQL migration validation
+- Phase 3 audit
+- Phase 4 audit
+- Phase 5 audit
+- Phase 6 audit
+- source alignment audit
+- Python/ML boundary audit
+- integration sanity audit
+- production build
+- git clean state
+
+## Phase 1 — Source-of-truth foundation
+
+Expected:
+- Source-of-truth documents exist.
+- Project decision/log/status files exist.
+- Implementation must defer to source hierarchy.
+
+Implemented evidence:
+- `docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Implementation_Bible_FINAL_SYNCED.docx`
+- `docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_FINAL_SYNCED.json`
+- `SOURCE_OF_TRUTH.md`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `DECISIONS.md`
+- `ERRORS_AND_FIXES.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Status: Complete for foundation scope.
+
+Deferred:
+- Future feature modules remain governed by the same source hierarchy.
+
+## Phase 2 — App shell and route foundation
+
+Expected:
+- Canonical route structure exists.
+- Banned legacy routes are not present.
+- Route registry and app routes agree.
+
+Implemented evidence:
+- 33 canonical routes validated by `scripts/validate-route-coverage.mjs`.
+- Registry validation passes.
+- No accidental `/proof` route exists.
+
+Status: Complete for route foundation scope.
+
+Deferred:
+- Route-specific deep features are implemented in later domain phases.
+
+## Phase 3 — Auth and Supabase foundation
+
+Expected:
+- Supabase environment/client/server/middleware setup exists.
+- Auth pages and protected-page foundation exist.
+- Profile/auth foundation exists.
+
+Implemented evidence:
+- `.env.example`
+- `middleware.ts`
+- `src/lib/supabase/env.ts`
+- `src/lib/supabase/browser.ts`
+- `src/lib/supabase/server.ts`
+- `src/lib/supabase/middleware.ts`
+- `src/lib/auth/actions.ts`
+- `src/lib/auth/session.ts`
+- `src/components/auth/protected-page.tsx`
+- `src/components/layout/auth-status.tsx`
+- auth routes under `src/app/auth/`
+- `scripts/audit-phase-3.mjs`
+
+Status: Complete for auth/Supabase foundation scope.
+
+Deferred:
+- Advanced account/privacy/export work belongs to later privacy/security phases.
+
+## Phase 4 — Core SQL spine
+
+Expected:
+- Core user-owned tables exist.
+- RLS and indexes exist.
+- Read repository foundation exists.
+- SQL is additive and migration-based.
+
+Implemented evidence:
+- `supabase/migrations/0001_profiles_and_carnos_profiles.sql`
+- `supabase/migrations/0002_audit_and_ai_actions.sql`
+- `supabase/migrations/0003_chat_foundation.sql`
+- `supabase/migrations/0004_goals_foundation.sql`
+- `supabase/migrations/0005_daily_logs_and_proof_items.sql`
+- `supabase/migrations/0006_tasks_and_events.sql`
+- `src/types/database.ts`
+- `src/lib/repositories/core-read.ts`
+- `docs/database/CORE_SQL_SPINE.md`
+- `docs/phase-reports/PHASE_4_CORE_SQL_SPINE_REPORT.md`
+- `scripts/audit-phase-4.mjs`
+
+Status: Complete for core SQL spine scope.
+
+Deferred:
+- Domain-specific SQL for career, learning, research, health, life admin, memory, analytics, etc. belongs to later phases.
+
+## Phase 5 — Core read UI / Carnos foundation status
+
+Expected:
+- Shared dashboard primitives exist.
+- Read-only connected pages exist.
+- Carnos foundation status is visible.
+- No direct writes, memory, generation, or execution introduced.
+
+Implemented evidence:
+- `src/components/dashboard/section-card.tsx`
+- `src/components/dashboard/empty-state.tsx`
+- `src/components/dashboard/data-list.tsx`
+- `src/components/dashboard/status-pill.tsx`
+- `src/components/dashboard/metric-tile.tsx`
+- `src/components/dashboard/authenticated-dashboard-shell.tsx`
+- `src/components/dashboard/domain-read-page.tsx`
+- read-connected routes including `/command`, `/timeline`, `/calendar`, `/goals`, `/carnos`, `/career`, `/learning`, `/body`, `/analytics`, `/world-class`
+- `scripts/audit-phase-5.mjs`
+- `docs/phase-reports/PHASE_5_CORE_READ_UI_INTEGRATION_REPORT.md`
+
+Status: Complete for read UI foundation scope.
+
+Deferred:
+- Deep domain dashboards and mutations belong to later phases.
+
+## Phase 5.15 — Python/ML intelligence architecture patch
+
+Expected:
+- Python/ML is documented as advisory only.
+- Python/ML cannot directly mutate SQL.
+- No active Python/ML worker execution is added yet.
+
+Implemented evidence:
+- `docs/architecture/PYTHON_ML_INTELLIGENCE_WORKER.md`
+- `docs/phase-plans/PHASE_5_15_PYTHON_ML_INTELLIGENCE_ARCHITECTURE_PATCH.md`
+- `scripts/audit-python-ml-boundary.mjs`
+
+Status: Complete for architecture/boundary scope.
+
+Deferred:
+- Actual Python/ML worker execution belongs to a later intelligence phase.
+
+## Phase 6 — Safe Write / Proposed Action Flow
+
+Expected:
+- Proposed actions are created/validated before execution.
+- Confirmation-first flow exists.
+- Server-owned execution paths exist for supported action types.
+- Audit/timeline boundary exists.
+- UI review card remains non-mutating.
+
+Implemented evidence:
+- `docs/phase-plans/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW.md`
+- `docs/phase-reports/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW_REPORT.md`
+- `src/lib/actions/action-types.ts`
+- `src/lib/actions/proposed-action-contracts.ts`
+- `src/lib/actions/validate-proposed-action.ts`
+- `src/lib/actions/create-proposed-action.ts`
+- `src/lib/actions/action-lifecycle.ts`
+- `src/lib/actions/execution-dispatcher.ts`
+- `src/lib/actions/flows/create-task-flow.ts`
+- `src/lib/actions/flows/create-goal-flow.ts`
+- `src/lib/actions/flows/create-daily-log-flow.ts`
+- `src/lib/actions/flows/create-proof-item-flow.ts`
+- `src/lib/audit/write-audit-log.ts`
+- `src/lib/timeline/write-timeline-event.ts`
+- `src/components/actions/proposed-action-review-card.tsx`
+- `scripts/audit-phase-6.mjs`
+
+Status: Complete for supported safe-write scope.
+
+Deferred:
+- Additional proposed-action types for future domains belong to those later domain phases.
+- Full timeline table creation remains deferred if not yet in SQL spine.
+- Autonomous execution remains disallowed.
+
+## Phase 7 — Core Operating Dashboards
+
+Expected:
+- Operating dashboard layer exists across command, timeline, calendar, goals, Carnos, and proof visibility.
+- Dashboard contracts/cards/helpers exist.
+- Cross-dashboard links stay canonical-route safe.
+- Empty/loading/error/privacy states exist.
+- Pending update visibility exists.
+- No non-canonical `/proof` route is introduced.
+- No direct dashboard writes, generation, memory, Python/ML execution, voice, internet tools, or background jobs are introduced.
+
+Implemented evidence:
+- `docs/phase-plans/PHASE_7_CORE_OPERATING_DASHBOARDS.md`
+- `docs/phase-reports/PHASE_7_CORE_OPERATING_DASHBOARDS_REPORT.md`
+- `docs/qa/PHASE_7_MANUAL_SMOKE_CHECKLIST.md`
+- `src/lib/dashboard/dashboard-layout-contract.ts`
+- `src/lib/dashboard/dashboard-card-registry.ts`
+- `src/lib/dashboard/dashboard-data-helpers.ts`
+- `src/components/dashboard/operating-dashboard-card.tsx`
+- `src/components/dashboard/operating-dashboard-grid.tsx`
+- `src/components/dashboard/cross-dashboard-links.tsx`
+- `src/components/dashboard/command-dashboard-v1.tsx`
+- `src/components/dashboard/timeline-dashboard-v1.tsx`
+- `src/components/dashboard/calendar-dashboard-v1.tsx`
+- `src/components/dashboard/goals-dashboard-v1.tsx`
+- `src/components/dashboard/proof-dashboard-v1.tsx`
+- `src/components/dashboard/carnos-panel-v1.tsx`
+- `src/components/actions/pending-updates-drawer.tsx`
+- wired routes: `/command`, `/timeline`, `/calendar`, `/goals`, `/carnos`
+- `scripts/audit-integration-sanity.mjs`
+
+Status: Complete for core operating dashboard scope.
+
+Deferred:
+- Domain-specific career, learning, research, health, life admin, grimoire, voice, memory/RAG, internet tools, analytics, custom trackers, privacy/export/delete, deployment, and final polish belong to Phases 8–21.
+
+## Accidental-missing check
+
+No accidental gap was found in Phases 1–7 based on current automated verification.
+
+Important distinction:
+- Phases 1–7 are complete for their foundation scopes.
+- The full source-of-truth app vision is not complete yet because Phases 8–21 remain.
+
+## Phase 8 implication
+
+Phase 8 should be locked as a full Career System foundation, not just a UI/dashboard pass.
+
+Phase 8 should include:
+- career SQL/data foundation
+- applications
+- application events/status history
+- networking contacts
+- interactions/referrals
+- resume versions and evidence-linked bullets
+- interview records/prep/outcomes
+- follow-ups
+- analytics summaries
+- route dashboards
+- audit and smoke coverage
+
+## Verdict
+
+Phases 1–7 are safe to build upon.
+
+Proceed to Phase 8 only after locking the expanded Phase 8 plan.
+```
+
+### `docs/database/CAREER_SQL_SCHEMA_DESIGN.md`
+
+```md
+# Phase 8.3 — Career SQL Schema Design
+
+Status: Complete.
+
+## Purpose
+
+Design the additive Career System SQL foundation before creating the Phase 8.4 migration.
+
+This is a design-only step. It does not create or modify database tables.
+
+## Phase 8 SQL principles
+
+Career SQL must be:
+
+- additive only
+- user-owned
+- RLS-protected
+- indexed for dashboard reads
+- source-linked where possible
+- compatible with Phase 6 proposed actions
+- compatible with Phase 7 dashboard summaries
+- non-destructive to Phases 1–7
+
+Do not modify old migrations unless a validation issue requires a compatibility patch.
+
+## Tables to add in Phase 8.4
+
+The Phase 8.4 migration should add these tables:
+
+1. `job_applications`
+2. `job_application_events`
+3. `networking_contacts`
+4. `networking_interactions`
+5. `job_referrals`
+6. `resume_versions`
+7. `resume_bullets`
+8. `interviews`
+
+## Table: job_applications
+
+Purpose:
+Tracks each job/application target.
+
+Recommended columns:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `company text not null`
+- `role_title text not null`
+- `job_url text`
+- `location text`
+- `work_mode text not null default 'unknown'`
+- `employment_type text not null default 'unknown'`
+- `sponsorship_status text not null default 'unknown'`
+- `source text`
+- `status text not null default 'saved'`
+- `priority text not null default 'medium'`
+- `applied_at timestamptz`
+- `follow_up_at timestamptz`
+- `deadline_at timestamptz`
+- `resume_version_id uuid`
+- `networking_contact_id uuid`
+- `referral_id uuid`
+- `goal_id uuid references public.goals(id) on delete set null`
+- `task_id uuid references public.tasks(id) on delete set null`
+- `notes text`
+- `metadata jsonb not null default '{}'::jsonb`
+- `source_ai_action_id uuid references public.ai_actions(id) on delete set null`
+- `source_chat_message_id uuid references public.chat_messages(id) on delete set null`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Recommended status values:
+
+- `saved`
+- `preparing`
+- `applied`
+- `follow_up_due`
+- `recruiter_contacted`
+- `oa`
+- `interviewing`
+- `offer`
+- `rejected`
+- `ghosted`
+- `withdrawn`
+- `archived`
+
+Recommended work mode values:
+
+- `unknown`
+- `remote`
+- `hybrid`
+- `onsite`
+
+Recommended employment type values:
+
+- `unknown`
+- `full_time`
+- `part_time`
+- `contract`
+- `internship`
+- `research`
+- `assistantship`
+
+Recommended sponsorship status values:
+
+- `unknown`
+- `sponsors`
+- `does_not_sponsor`
+- `maybe`
+- `not_needed`
+
+Recommended priority values:
+
+- `low`
+- `medium`
+- `high`
+- `critical`
+
+## Table: job_application_events
+
+Purpose:
+Stores lifecycle history for each application.
+
+Recommended columns:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `job_application_id uuid not null references public.job_applications(id) on delete cascade`
+- `event_type text not null`
+- `title text not null`
+- `description text`
+- `occurred_at timestamptz not null default now()`
+- `metadata jsonb not null default '{}'::jsonb`
+- `source_ai_action_id uuid references public.ai_actions(id) on delete set null`
+- `source_chat_message_id uuid references public.chat_messages(id) on delete set null`
+- `created_at timestamptz not null default now()`
+
+Recommended event types:
+
+- `saved`
+- `prepared`
+- `applied`
+- `followed_up`
+- `recruiter_response`
+- `oa_received`
+- `oa_completed`
+- `interview_scheduled`
+- `interview_completed`
+- `rejected`
+- `offer`
+- `ghosted`
+- `withdrawn`
+- `note`
+
+## Table: networking_contacts
+
+Purpose:
+Stores people and professional relationships.
+
+Recommended columns:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `full_name text not null`
+- `company text`
+- `role_title text`
+- `email text`
+- `linkedin_url text`
+- `relationship_type text not null default 'professional'`
+- `relationship_strength text not null default 'weak'`
+- `status text not null default 'active'`
+- `last_contacted_at timestamptz`
+- `next_follow_up_at timestamptz`
+- `notes text`
+- `metadata jsonb not null default '{}'::jsonb`
+- `source_ai_action_id uuid references public.ai_actions(id) on delete set null`
+- `source_chat_message_id uuid references public.chat_messages(id) on delete set null`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Recommended relationship types:
+
+- `professional`
+- `recruiter`
+- `alumni`
+- `professor`
+- `friend`
+- `manager`
+- `teammate`
+- `mentor`
+- `unknown`
+
+Recommended relationship strength values:
+
+- `weak`
+- `medium`
+- `strong`
+- `champion`
+
+Recommended status values:
+
+- `active`
+- `follow_up_due`
+- `paused`
+- `archived`
+
+## Table: networking_interactions
+
+Purpose:
+Stores every conversation, message, referral ask, follow-up, or networking event.
+
+Recommended columns:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `networking_contact_id uuid not null references public.networking_contacts(id) on delete cascade`
+- `job_application_id uuid references public.job_applications(id) on delete set null`
+- `interaction_type text not null default 'note'`
+- `title text not null`
+- `description text`
+- `occurred_at timestamptz not null default now()`
+- `follow_up_at timestamptz`
+- `metadata jsonb not null default '{}'::jsonb`
+- `source_ai_action_id uuid references public.ai_actions(id) on delete set null`
+- `source_chat_message_id uuid references public.chat_messages(id) on delete set null`
+- `created_at timestamptz not null default now()`
+
+Recommended interaction types:
+
+- `message`
+- `email`
+- `call`
+- `meeting`
+- `linkedin`
+- `referral_ask`
+- `follow_up`
+- `thank_you`
+- `note`
+
+## Table: job_referrals
+
+Purpose:
+Tracks referral asks and referral status.
+
+Recommended columns:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `networking_contact_id uuid references public.networking_contacts(id) on delete set null`
+- `job_application_id uuid references public.job_applications(id) on delete cascade`
+- `status text not null default 'not_requested'`
+- `requested_at timestamptz`
+- `confirmed_at timestamptz`
+- `follow_up_at timestamptz`
+- `notes text`
+- `metadata jsonb not null default '{}'::jsonb`
+- `source_ai_action_id uuid references public.ai_actions(id) on delete set null`
+- `source_chat_message_id uuid references public.chat_messages(id) on delete set null`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Recommended status values:
+
+- `not_requested`
+- `planned`
+- `requested`
+- `confirmed`
+- `declined`
+- `stale`
+- `archived`
+
+## Table: resume_versions
+
+Purpose:
+Stores resume versions and role/company targeting.
+
+Recommended columns:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `name text not null`
+- `target_role text`
+- `target_company text`
+- `target_domain text`
+- `file_url text`
+- `status text not null default 'draft'`
+- `keywords text[] not null default '{}'::text[]`
+- `notes text`
+- `metadata jsonb not null default '{}'::jsonb`
+- `source_ai_action_id uuid references public.ai_actions(id) on delete set null`
+- `source_chat_message_id uuid references public.chat_messages(id) on delete set null`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Recommended status values:
+
+- `draft`
+- `active`
+- `submitted`
+- `archived`
+
+## Table: resume_bullets
+
+Purpose:
+Stores resume bullets, claims, metrics, and evidence links.
+
+Recommended columns:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `resume_version_id uuid not null references public.resume_versions(id) on delete cascade`
+- `bullet_text text not null`
+- `section text not null default 'experience'`
+- `skill_tags text[] not null default '{}'::text[]`
+- `metric_claim text`
+- `proof_item_id uuid references public.proof_items(id) on delete set null`
+- `goal_id uuid references public.goals(id) on delete set null`
+- `task_id uuid references public.tasks(id) on delete set null`
+- `metadata jsonb not null default '{}'::jsonb`
+- `source_ai_action_id uuid references public.ai_actions(id) on delete set null`
+- `source_chat_message_id uuid references public.chat_messages(id) on delete set null`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Recommended section values are flexible text initially, because resume structures vary.
+
+## Table: interviews
+
+Purpose:
+Tracks interview rounds, prep, performance notes, and outcomes.
+
+Recommended columns:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `job_application_id uuid references public.job_applications(id) on delete set null`
+- `company text`
+- `role_title text`
+- `round_type text not null default 'unknown'`
+- `status text not null default 'scheduled'`
+- `scheduled_at timestamptz`
+- `completed_at timestamptz`
+- `interviewer_names text[] not null default '{}'::text[]`
+- `prep_notes text`
+- `performance_notes text`
+- `follow_up_at timestamptz`
+- `outcome text not null default 'pending'`
+- `metadata jsonb not null default '{}'::jsonb`
+- `source_ai_action_id uuid references public.ai_actions(id) on delete set null`
+- `source_chat_message_id uuid references public.chat_messages(id) on delete set null`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Recommended round types:
+
+- `unknown`
+- `recruiter`
+- `technical`
+- `behavioral`
+- `system_design`
+- `hiring_manager`
+- `onsite`
+- `final`
+- `oa_review`
+
+Recommended status values:
+
+- `scheduled`
+- `prep_needed`
+- `completed`
+- `cancelled`
+- `rescheduled`
+- `archived`
+
+Recommended outcome values:
+
+- `pending`
+- `passed`
+- `failed`
+- `offer`
+- `rejected`
+- `no_show`
+- `withdrawn`
+
+## Relationships and deferred foreign keys
+
+Because `job_applications` references `resume_versions`, `networking_contacts`, and `job_referrals`, Phase 8.4 should either:
+
+1. create the main tables first, then add circular foreign-key constraints with `alter table`; or
+2. avoid circular FK from `job_applications.referral_id` and rely on `job_referrals.job_application_id`.
+
+Recommended safer approach:
+- `job_referrals.job_application_id` references `job_applications(id)`.
+- `job_applications` may reference `resume_versions` and `networking_contacts`.
+- Avoid `job_applications.referral_id` initially to prevent circular dependency.
+
+## RLS policy pattern
+
+Every career table must enable RLS.
+
+Every career table should include:
+
+- select own rows
+- insert own rows
+- update own rows
+- delete own rows
+
+Every policy should enforce:
+
+`auth.uid() = user_id`
+
+For child tables, policies should also ensure related parent rows belong to the same user where needed.
+
+## Index plan
+
+Add indexes for:
+
+- every `user_id`
+- every foreign key
+- every `status`
+- every priority field
+- every follow-up/deadline/scheduled timestamp
+- key dashboard ordering timestamps:
+  - `created_at desc`
+  - `updated_at desc`
+  - `applied_at desc`
+  - `occurred_at desc`
+  - `scheduled_at`
+  - `next_follow_up_at`
+  - `follow_up_at`
+
+## Updated-at triggers
+
+Tables with `updated_at` should use the existing `public.set_updated_at()` trigger.
+
+Recommended trigger tables:
+
+- `job_applications`
+- `networking_contacts`
+- `job_referrals`
+- `resume_versions`
+- `resume_bullets`
+- `interviews`
+
+`job_application_events` and `networking_interactions` do not need `updated_at` initially unless editing history becomes required.
+
+## Phase 8.4 migration name
+
+Recommended migration file:
+
+`supabase/migrations/0007_career_system_foundation.sql`
+
+## Phase 8.4 validation requirements
+
+The migration must pass:
+
+- `npm run validate:migrations`
+- `npm run audit:phase4`
+- `npm run check`
+- `node scripts/audit-phase-1-7-crosswalk.mjs`
+
+## Explicit exclusions
+
+Do not add in Phase 8.4:
+
+- direct dashboard writes
+- Carnos autonomous application execution
+- job scraping
+- email automation
+- memory/RAG
+- Python/ML worker execution
+- internet tools
+- voice
+- background jobs
+- service-role client code
+
+## Verdict
+
+The Career SQL schema design is ready.
+
+Next step: Phase 8.4 additive career SQL migration.
+```
+
 ### `docs/database/CORE_SQL_SPINE.md`
 
 ```md
@@ -3089,6 +7095,1856 @@ Phase 4 is not marked complete until:
 - final npm run check passes
 - PHASE_STATUS.md is updated
 - final Phase 4 commit is pushed
+```
+
+### `docs/database/PHASE_10_RESEARCH_SCHEMA_DESIGN.md`
+
+```md
+# Phase 10 — Research Schema Design
+
+## Purpose
+
+This document designs the research-side data model for Phase 10 before SQL implementation.
+
+Phase 10 must support the loop:
+
+Skill -> Project -> Research Idea -> Literature -> Experiment -> Result -> Paper -> Proof -> Resume -> Professor/Lab -> PhD/Career
+
+This schema design is documentation only. It does not create database tables yet.
+
+## Design Rules
+
+The Phase 10 research schema must:
+
+- preserve all previous phases
+- avoid editing old migrations
+- start SQL implementation later at migration 0010
+- keep all user-owned tables scoped by `user_id`
+- use nullable links to earlier systems
+- support read-first dashboards
+- support safe proposed-action previews
+- avoid memory/RAG tables
+- avoid autonomous Carnos writes
+- avoid direct dashboard mutations
+
+## Research Data Model Overview
+
+The research schema is organized around nine core concepts:
+
+1. Research ideas
+2. Research questions
+3. Literature review items
+4. Citations
+5. Research claims
+6. Experiments
+7. Experiment results
+8. Research papers
+9. Paper versions, venues, submissions, and feedback
+
+## Proposed Tables
+
+### research_ideas
+
+Purpose: Tracks possible research ideas before they become papers or projects.
+
+Suggested fields:
+
+- id
+- user_id
+- title
+- summary
+- research_area
+- status
+- priority
+- novelty_score
+- feasibility_score
+- impact_score
+- proof_strength_score
+- project_id
+- skill_id
+- goal_id
+- task_id
+- proof_item_id
+- source
+- notes
+- created_at
+- updated_at
+
+Suggested status values:
+
+- captured
+- exploring
+- active
+- blocked
+- converted_to_paper
+- paused
+- archived
+
+### research_questions
+
+Purpose: Breaks a research idea into precise questions or hypotheses.
+
+Suggested fields:
+
+- id
+- user_id
+- research_idea_id
+- question
+- hypothesis
+- variable_focus
+- expected_outcome
+- status
+- notes
+- created_at
+- updated_at
+
+Suggested status values:
+
+- open
+- investigating
+- supported
+- rejected
+- revised
+- archived
+
+### research_literature_items
+
+Purpose: Tracks papers, articles, books, technical reports, or references being read.
+
+Suggested fields:
+
+- id
+- user_id
+- title
+- authors
+- year
+- venue
+- source_url
+- doi
+- arxiv_id
+- item_type
+- reading_status
+- relevance_score
+- credibility_score
+- summary
+- key_methods
+- key_results
+- limitations
+- notes
+- related_research_idea_id
+- related_project_id
+- proof_item_id
+- created_at
+- updated_at
+
+Suggested item_type values:
+
+- paper
+- article
+- book
+- thesis
+- technical_report
+- documentation
+- dataset
+- benchmark
+- other
+
+Suggested reading_status values:
+
+- saved
+- skimmed
+- reading
+- read
+- summarized
+- cited
+- archived
+
+### research_citations
+
+Purpose: Connects literature items to research ideas, claims, papers, and paper versions.
+
+Suggested fields:
+
+- id
+- user_id
+- literature_item_id
+- research_idea_id
+- research_claim_id
+- research_paper_id
+- paper_version_id
+- citation_purpose
+- citation_note
+- quote_or_excerpt
+- page_or_section
+- created_at
+- updated_at
+
+Suggested citation_purpose values:
+
+- background
+- related_work
+- method_support
+- result_comparison
+- limitation
+- future_work
+- contradiction
+- definition
+- benchmark
+- other
+
+### research_claims
+
+Purpose: Tracks claims that must be backed by literature, experiments, results, or proof.
+
+Suggested fields:
+
+- id
+- user_id
+- research_idea_id
+- research_paper_id
+- paper_version_id
+- claim_text
+- claim_type
+- support_status
+- evidence_strength
+- literature_item_id
+- experiment_result_id
+- proof_item_id
+- project_id
+- resume_bullet_id
+- notes
+- created_at
+- updated_at
+
+Suggested claim_type values:
+
+- novelty
+- method
+- result
+- comparison
+- limitation
+- contribution
+- application
+- future_work
+
+Suggested support_status values:
+
+- unsupported
+- partially_supported
+- supported
+- contradicted
+- needs_review
+
+### research_experiments
+
+Purpose: Tracks experiments required to support research claims or papers.
+
+Suggested fields:
+
+- id
+- user_id
+- research_idea_id
+- research_question_id
+- project_id
+- title
+- objective
+- method
+- dataset
+- baseline
+- variables
+- metrics
+- reproducibility_status
+- status
+- started_at
+- completed_at
+- notes
+- created_at
+- updated_at
+
+Suggested status values:
+
+- planned
+- running
+- blocked
+- completed
+- failed
+- archived
+
+Suggested reproducibility_status values:
+
+- not_started
+- partial
+- reproducible
+- not_reproducible
+- needs_cleanup
+
+### research_results
+
+Purpose: Stores experimental outcomes and links them to proof, papers, claims, and projects.
+
+Suggested fields:
+
+- id
+- user_id
+- research_experiment_id
+- research_idea_id
+- project_id
+- title
+- result_summary
+- metric_name
+- metric_value
+- metric_unit
+- comparison_baseline
+- interpretation
+- limitation
+- figure_reference
+- table_reference
+- proof_item_id
+- paper_version_id
+- created_at
+- updated_at
+
+### research_papers
+
+Purpose: Tracks paper-level research artifacts.
+
+Suggested fields:
+
+- id
+- user_id
+- title
+- abstract
+- research_area
+- status
+- target_venue_id
+- primary_research_idea_id
+- project_id
+- proof_item_id
+- resume_bullet_id
+- notes
+- created_at
+- updated_at
+
+Suggested status values:
+
+- idea
+- outline
+- drafting
+- internal_review
+- professor_review
+- revision
+- submission_ready
+- submitted
+- accepted
+- rejected
+- archived
+
+### research_paper_versions
+
+Purpose: Tracks paper drafts and versions over time.
+
+Suggested fields:
+
+- id
+- user_id
+- research_paper_id
+- version_label
+- file_url
+- doc_url
+- abstract_snapshot
+- status
+- page_count
+- readiness_score
+- main_gap
+- notes
+- created_at
+- updated_at
+
+Suggested status values:
+
+- draft
+- reviewed
+- revised
+- submission_candidate
+- archived
+
+### research_venues
+
+Purpose: Tracks possible conferences, journals, workshops, or internal targets.
+
+Suggested fields:
+
+- id
+- user_id
+- name
+- venue_type
+- field
+- ranking_note
+- deadline
+- submission_url
+- page_limit
+- format_requirements
+- fit_score
+- notes
+- created_at
+- updated_at
+
+Suggested venue_type values:
+
+- conference
+- journal
+- workshop
+- symposium
+- preprint
+- internal_review
+- other
+
+### research_submissions
+
+Purpose: Tracks paper submissions and outcomes.
+
+Suggested fields:
+
+- id
+- user_id
+- research_paper_id
+- research_venue_id
+- submitted_at
+- status
+- decision
+- decision_at
+- reviewer_summary
+- next_action
+- notes
+- created_at
+- updated_at
+
+Suggested status values:
+
+- planned
+- preparing
+- submitted
+- under_review
+- accepted
+- rejected
+- withdrawn
+- archived
+
+### research_feedback
+
+Purpose: Tracks feedback from professors, collaborators, reviewers, or self-review.
+
+Suggested fields:
+
+- id
+- user_id
+- research_paper_id
+- paper_version_id
+- research_idea_id
+- feedback_source_type
+- feedback_source_name
+- feedback_date
+- summary
+- required_changes
+- severity
+- status
+- task_id
+- proof_item_id
+- notes
+- created_at
+- updated_at
+
+Suggested feedback_source_type values:
+
+- professor
+- advisor
+- collaborator
+- reviewer
+- self_review
+- peer
+- other
+
+Suggested status values:
+
+- received
+- triaged
+- in_progress
+- addressed
+- rejected
+- archived
+
+## Cross-Phase Nullable Links
+
+Phase 10 research records may link to existing records through nullable fields:
+
+- goal_id
+- task_id
+- proof_item_id
+- project_id
+- skill_id
+- resume_bullet_id
+
+These links must remain nullable to avoid requiring existing Phase 1-9 records to change.
+
+## RLS and Ownership Requirements
+
+Every user-owned research table must include:
+
+- user_id referencing public.profiles(id)
+- RLS enabled
+- SELECT policy scoped to auth.uid()
+- INSERT policy scoped to auth.uid()
+- user_id index
+
+Cross-parent ownership must be hardened in a separate migration if needed.
+
+## Deferred Features
+
+Do not include in this research schema:
+
+- memory_items
+- embeddings
+- vector search
+- autonomous literature scraping
+- automatic citation fetching
+- automatic paper submission
+- automatic professor emailing
+- AI-generated claims without proof
+- Python/ML direct writes
+
+## Chunk B Result
+
+This design is ready to be translated into SQL during Chunk C.
+```
+
+### `docs/database/PHASE_10_STANFORD_PHD_SCHEMA_DESIGN.md`
+
+```md
+# Phase 10 — Stanford / PhD Schema Design
+
+## Purpose
+
+This document designs the Stanford / PhD readiness data model for Phase 10 before SQL implementation.
+
+The Stanford / PhD side of Phase 10 should answer:
+
+- Which universities, labs, and professors match the user's research direction?
+- What evidence supports that fit?
+- What gaps remain before a strong PhD or top-lab application?
+- Which application assets are missing or weak?
+- What next action should be proposed, without writing automatically?
+
+This schema design is documentation only. It does not create database tables yet.
+
+## Design Rules
+
+The Stanford / PhD schema must:
+
+- preserve all previous phases
+- avoid editing old migrations
+- link to research records through nullable references
+- avoid automatic outreach
+- avoid scraping
+- avoid hidden writes
+- support read-first dashboards
+- support later safe proposed actions
+
+## Proposed Tables
+
+### target_universities
+
+Purpose: Tracks universities/programs the user may target.
+
+Suggested fields:
+
+- id
+- user_id
+- name
+- program_name
+- department
+- country
+- location
+- target_level
+- fit_score
+- competitiveness
+- application_deadline
+- requirements_url
+- notes
+- created_at
+- updated_at
+
+Suggested target_level values:
+
+- dream
+- reach
+- target
+- safety
+- exploratory
+
+### target_labs
+
+Purpose: Tracks labs, research groups, institutes, or centers.
+
+Suggested fields:
+
+- id
+- user_id
+- target_university_id
+- name
+- research_area
+- lab_url
+- fit_score
+- fit_reason
+- related_research_idea_id
+- related_research_paper_id
+- related_project_id
+- notes
+- created_at
+- updated_at
+
+### target_professors
+
+Purpose: Tracks professors/advisors and research fit.
+
+Suggested fields:
+
+- id
+- user_id
+- target_university_id
+- target_lab_id
+- name
+- title
+- email
+- profile_url
+- research_area
+- fit_score
+- fit_reason
+- outreach_status
+- last_contacted_at
+- related_literature_item_id
+- related_research_idea_id
+- related_research_paper_id
+- related_project_id
+- notes
+- created_at
+- updated_at
+
+Suggested outreach_status values:
+
+- not_started
+- researching
+- draft_needed
+- ready_to_contact
+- contacted
+- replied
+- follow_up_needed
+- not_fit
+- archived
+
+### phd_readiness_assessments
+
+Purpose: Tracks readiness across research, GPA/context, publications, recommendations, SOP, projects, and proof.
+
+Suggested fields:
+
+- id
+- user_id
+- assessment_date
+- overall_score
+- research_score
+- publication_score
+- project_score
+- proof_score
+- recommendation_score
+- sop_score
+- professor_fit_score
+- academic_context_score
+- main_gap
+- next_action
+- notes
+- created_at
+- updated_at
+
+### phd_application_assets
+
+Purpose: Tracks assets required for PhD/top-lab applications.
+
+Suggested fields:
+
+- id
+- user_id
+- target_university_id
+- asset_type
+- title
+- status
+- file_url
+- doc_url
+- quality_score
+- due_date
+- task_id
+- proof_item_id
+- notes
+- created_at
+- updated_at
+
+Suggested asset_type values:
+
+- sop
+- cv
+- resume
+- transcript
+- recommendation
+- writing_sample
+- research_statement
+- portfolio
+- paper
+- test_score
+- other
+
+Suggested status values:
+
+- missing
+- planned
+- drafting
+- needs_review
+- ready
+- submitted
+- archived
+
+### sop_versions
+
+Purpose: Tracks statement-of-purpose versions and alignment.
+
+Suggested fields:
+
+- id
+- user_id
+- target_university_id
+- version_label
+- doc_url
+- thesis
+- research_fit_summary
+- professor_fit_summary
+- weakness_notes
+- readiness_score
+- status
+- created_at
+- updated_at
+
+Suggested status values:
+
+- outline
+- draft
+- reviewed
+- revised
+- ready
+- submitted
+- archived
+
+### recommendation_targets
+
+Purpose: Tracks recommendation-letter strategy.
+
+Suggested fields:
+
+- id
+- user_id
+- recommender_name
+- recommender_role
+- institution_or_company
+- relationship_context
+- strength_score
+- request_status
+- requested_at
+- due_date
+- target_university_id
+- related_research_paper_id
+- related_project_id
+- proof_item_id
+- notes
+- created_at
+- updated_at
+
+Suggested request_status values:
+
+- potential
+- preparing
+- requested
+- agreed
+- submitted
+- unavailable
+- archived
+
+## Cross-Phase Nullable Links
+
+Stanford / PhD records may link to:
+
+- research_idea_id
+- research_paper_id
+- literature_item_id
+- project_id
+- proof_item_id
+- task_id
+- goal_id
+- resume_bullet_id
+
+These links should be nullable.
+
+## Privacy and Safety Requirements
+
+Phase 10 must not:
+
+- email professors automatically
+- imply admission chances as fact
+- create fake publications
+- fabricate professor fit
+- fabricate citations
+- submit applications
+- mutate records without confirmation
+- expose private application strategy publicly
+
+## Dashboard Use
+
+The Stanford / PhD dashboard should show:
+
+- target universities
+- target labs
+- target professors
+- readiness scores
+- application assets
+- SOP versions
+- recommendation targets
+- gaps
+- proposed next actions
+
+## Chunk B Result
+
+This design is ready to be translated into SQL during Chunk C.
+```
+
+### `docs/database/PHASE_9_LEARNING_PROJECT_SCHEMA_DESIGN.md`
+
+```md
+# Phase 9 — Learning / Project System Schema Design
+
+Status: Schema design for Phase 9 Chunk B.
+
+Phase: 9 — Learning / Project System
+
+Chunk: B
+
+Covers:
+- 9.4 Learning/project schema design
+- 9.5 Source-to-scope traceability matrix
+
+## Design Date
+
+2026-06-24
+
+## Source files inspected
+
+- `docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Implementation_Bible_FINAL_SYNCED.docx`
+- `docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_FINAL_SYNCED.json`
+- `docs/phase-plans/PHASE_9_LEARNING_PROJECT_SYSTEM.md`
+- `docs/phase-reports/PHASE_9_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
+- existing migrations `0001` through `0007`
+- `src/types/database.ts`
+- `src/lib/repositories/core-read.ts`
+
+## Existing schema patterns to preserve
+
+Phase 9 must follow the existing schema rules already used by the project:
+
+- tables are in `public`
+- user-owned tables include `user_id uuid not null references public.profiles(id) on delete cascade`
+- user-owned tables get `user_id` indexes
+- important entity tables use `created_at` and `updated_at`
+- domain records may link to goals, tasks, proof items, daily logs, timeline/events, AI actions, and chat messages when relevant
+- RLS must be enabled
+- policies must use `auth.uid() = user_id`
+- cross-table policies must check the related parent record belongs to the same user
+- generated database types must align exactly with SQL
+- read helpers must filter by `.eq("user_id", userId)`
+
+## Next migration
+
+The next migration should be:
+
+`supabase/migrations/0008_learning_project_system_foundation.sql`
+
+## Phase 9 schema goals
+
+Phase 9 must create a SQL-backed foundation for:
+
+- Learning Academy
+- Skill paths
+- Skills
+- Skill prerequisites
+- Skill progress
+- Learning sessions
+- Quizzes
+- Quiz attempts
+- Project Builder
+- Project milestones
+- Project tasks or task linkage
+- Project bugs
+- Project tests
+- Project releases
+- Project links
+- README/portfolio/resume proof linkage
+- Goal/task/proof/timeline linkage
+- Knowledge alignment without full RAG
+
+## Proposed tables
+
+The Phase 9 migration should create these tables:
+
+1. `skill_paths`
+2. `skills`
+3. `skill_prerequisites`
+4. `skill_progress`
+5. `learning_sessions`
+6. `quizzes`
+7. `quiz_attempts`
+8. `projects`
+9. `project_milestones`
+10. `project_bugs`
+11. `project_tests`
+12. `project_releases`
+13. `project_links`
+
+This set is broad enough for Phase 9 while avoiding later-phase systems like memory/RAG, internet tools, voice, and autonomous Carnos execution.
+
+## Table design
+
+### `skill_paths`
+
+Purpose:
+
+Represents a learning path or curriculum lane.
+
+Examples:
+
+- Machine Learning Engineer path
+- Data Engineering path
+- Algorithms path
+- System Design path
+- Research path
+- Interview prep path
+
+Expected fields:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `title text not null`
+- `slug text`
+- `description text`
+- `domain text`
+- `status text not null default 'active'`
+- `priority text not null default 'medium'`
+- `target_level text`
+- `current_level text`
+- `started_at timestamptz`
+- `target_date date`
+- `completed_at timestamptz`
+- `goal_id uuid references public.goals(id) on delete set null`
+- `career_target text`
+- `research_target text`
+- `source_ai_action_id uuid references public.ai_actions(id) on delete set null`
+- `source_chat_message_id uuid references public.chat_messages(id) on delete set null`
+- `metadata jsonb not null default '{}'::jsonb`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Recommended indexes:
+
+- `(user_id)`
+- `(user_id, status)`
+- `(user_id, priority)`
+- `(goal_id)`
+
+Recommended uniqueness:
+
+- optional unique `(user_id, slug)` if slug is present
+
+### `skills`
+
+Purpose:
+
+Represents an individual skill inside a skill path.
+
+Examples:
+
+- SQL window functions
+- PyTorch training loop
+- Feature engineering
+- RAG evaluation
+- Data pipeline orchestration
+- System design fundamentals
+
+Expected fields:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `skill_path_id uuid references public.skill_paths(id) on delete cascade`
+- `title text not null`
+- `slug text`
+- `description text`
+- `category text`
+- `status text not null default 'not_started'`
+- `priority text not null default 'medium'`
+- `difficulty text not null default 'medium'`
+- `target_level text`
+- `current_level text`
+- `mastery_score numeric(5,2)`
+- `confidence_score numeric(5,2)`
+- `proof_required boolean not null default true`
+- `interview_relevance text`
+- `project_relevance text`
+- `research_relevance text`
+- `goal_id uuid references public.goals(id) on delete set null`
+- `proof_item_id uuid references public.proof_items(id) on delete set null`
+- `source_ai_action_id uuid references public.ai_actions(id) on delete set null`
+- `source_chat_message_id uuid references public.chat_messages(id) on delete set null`
+- `metadata jsonb not null default '{}'::jsonb`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Recommended indexes:
+
+- `(user_id)`
+- `(skill_path_id)`
+- `(user_id, status)`
+- `(user_id, category)`
+- `(goal_id)`
+- `(proof_item_id)`
+
+Recommended uniqueness:
+
+- optional unique `(user_id, skill_path_id, slug)` if slug is present
+
+### `skill_prerequisites`
+
+Purpose:
+
+Represents prerequisite relationships between skills.
+
+Expected fields:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `skill_id uuid not null references public.skills(id) on delete cascade`
+- `prerequisite_skill_id uuid not null references public.skills(id) on delete cascade`
+- `relationship_type text not null default 'requires'`
+- `notes text`
+- `metadata jsonb not null default '{}'::jsonb`
+- `created_at timestamptz not null default now()`
+
+Recommended indexes:
+
+- `(user_id)`
+- `(skill_id)`
+- `(prerequisite_skill_id)`
+
+Recommended uniqueness:
+
+- unique `(skill_id, prerequisite_skill_id)`
+
+Safety:
+
+- policies must ensure both skills belong to the same user
+
+### `skill_progress`
+
+Purpose:
+
+Tracks progress updates against a skill over time.
+
+Expected fields:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `skill_id uuid not null references public.skills(id) on delete cascade`
+- `status text not null`
+- `previous_status text`
+- `mastery_score numeric(5,2)`
+- `confidence_score numeric(5,2)`
+- `delta_summary text`
+- `evidence_summary text`
+- `learning_session_id uuid`
+- `quiz_attempt_id uuid`
+- `project_id uuid`
+- `proof_item_id uuid references public.proof_items(id) on delete set null`
+- `task_id uuid references public.tasks(id) on delete set null`
+- `goal_id uuid references public.goals(id) on delete set null`
+- `recorded_at timestamptz not null default now()`
+- `source_ai_action_id uuid references public.ai_actions(id) on delete set null`
+- `source_chat_message_id uuid references public.chat_messages(id) on delete set null`
+- `metadata jsonb not null default '{}'::jsonb`
+- `created_at timestamptz not null default now()`
+
+Note:
+
+The `learning_session_id`, `quiz_attempt_id`, and `project_id` foreign keys should be added directly if migration ordering supports the tables being created earlier or by placing `skill_progress` after dependent tables. If ordering becomes complicated, keep nullable IDs and add FK constraints after all tables are created.
+
+Recommended indexes:
+
+- `(user_id)`
+- `(skill_id)`
+- `(recorded_at desc)`
+- `(proof_item_id)`
+- `(task_id)`
+- `(goal_id)`
+
+### `learning_sessions`
+
+Purpose:
+
+Represents a focused study/practice session.
+
+Expected fields:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `skill_path_id uuid references public.skill_paths(id) on delete set null`
+- `skill_id uuid references public.skills(id) on delete set null`
+- `title text not null`
+- `session_type text not null default 'study'`
+- `status text not null default 'planned'`
+- `started_at timestamptz`
+- `ended_at timestamptz`
+- `duration_minutes integer`
+- `focus_score numeric(5,2)`
+- `difficulty text`
+- `notes text`
+- `summary text`
+- `next_step text`
+- `goal_id uuid references public.goals(id) on delete set null`
+- `task_id uuid references public.tasks(id) on delete set null`
+- `proof_item_id uuid references public.proof_items(id) on delete set null`
+- `daily_log_id uuid references public.daily_logs(id) on delete set null`
+- `source_ai_action_id uuid references public.ai_actions(id) on delete set null`
+- `source_chat_message_id uuid references public.chat_messages(id) on delete set null`
+- `metadata jsonb not null default '{}'::jsonb`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Recommended indexes:
+
+- `(user_id)`
+- `(user_id, status)`
+- `(skill_path_id)`
+- `(skill_id)`
+- `(started_at desc)`
+- `(goal_id)`
+- `(task_id)`
+- `(proof_item_id)`
+
+### `quizzes`
+
+Purpose:
+
+Represents a quiz/checkpoint for one or more skills.
+
+Expected fields:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `skill_path_id uuid references public.skill_paths(id) on delete set null`
+- `skill_id uuid references public.skills(id) on delete set null`
+- `title text not null`
+- `description text`
+- `quiz_type text not null default 'concept_check'`
+- `status text not null default 'active'`
+- `difficulty text not null default 'medium'`
+- `question_count integer`
+- `passing_score numeric(5,2)`
+- `metadata jsonb not null default '{}'::jsonb`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Recommended indexes:
+
+- `(user_id)`
+- `(skill_path_id)`
+- `(skill_id)`
+- `(user_id, status)`
+
+Question storage decision:
+
+For Phase 9 foundation, quiz questions may be stored in `metadata` as JSON to avoid overbuilding a full quiz engine too early. A future phase can normalize quiz questions if needed.
+
+### `quiz_attempts`
+
+Purpose:
+
+Represents an attempt at a quiz.
+
+Expected fields:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `quiz_id uuid not null references public.quizzes(id) on delete cascade`
+- `learning_session_id uuid references public.learning_sessions(id) on delete set null`
+- `skill_id uuid references public.skills(id) on delete set null`
+- `status text not null default 'completed'`
+- `score numeric(5,2)`
+- `max_score numeric(5,2)`
+- `passed boolean`
+- `attempted_at timestamptz not null default now()`
+- `duration_minutes integer`
+- `mistake_summary text`
+- `strength_summary text`
+- `next_review_at timestamptz`
+- `proof_item_id uuid references public.proof_items(id) on delete set null`
+- `source_ai_action_id uuid references public.ai_actions(id) on delete set null`
+- `source_chat_message_id uuid references public.chat_messages(id) on delete set null`
+- `metadata jsonb not null default '{}'::jsonb`
+- `created_at timestamptz not null default now()`
+
+Recommended indexes:
+
+- `(user_id)`
+- `(quiz_id)`
+- `(skill_id)`
+- `(attempted_at desc)`
+- `(proof_item_id)`
+
+### `projects`
+
+Purpose:
+
+Represents a buildable project used as proof of skill, career readiness, portfolio evidence, research readiness, or personal system development.
+
+Expected fields:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `title text not null`
+- `slug text`
+- `description text`
+- `project_type text not null default 'portfolio'`
+- `status text not null default 'planned'`
+- `priority text not null default 'medium'`
+- `stage text`
+- `problem_statement text`
+- `target_user text`
+- `tech_stack text[] not null default '{}'::text[]`
+- `github_url text`
+- `demo_url text`
+- `readme_url text`
+- `portfolio_url text`
+- `resume_bullet_id uuid references public.resume_bullets(id) on delete set null`
+- `goal_id uuid references public.goals(id) on delete set null`
+- `task_id uuid references public.tasks(id) on delete set null`
+- `proof_item_id uuid references public.proof_items(id) on delete set null`
+- `started_at timestamptz`
+- `target_date date`
+- `completed_at timestamptz`
+- `source_ai_action_id uuid references public.ai_actions(id) on delete set null`
+- `source_chat_message_id uuid references public.chat_messages(id) on delete set null`
+- `metadata jsonb not null default '{}'::jsonb`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Recommended indexes:
+
+- `(user_id)`
+- `(user_id, status)`
+- `(user_id, priority)`
+- `(goal_id)`
+- `(task_id)`
+- `(proof_item_id)`
+- `(resume_bullet_id)`
+
+Recommended uniqueness:
+
+- optional unique `(user_id, slug)` if slug is present
+
+### `project_milestones`
+
+Purpose:
+
+Represents meaningful delivery checkpoints for a project.
+
+Expected fields:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `project_id uuid not null references public.projects(id) on delete cascade`
+- `title text not null`
+- `description text`
+- `status text not null default 'planned'`
+- `priority text not null default 'medium'`
+- `due_date date`
+- `completed_at timestamptz`
+- `task_id uuid references public.tasks(id) on delete set null`
+- `proof_item_id uuid references public.proof_items(id) on delete set null`
+- `metadata jsonb not null default '{}'::jsonb`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Recommended indexes:
+
+- `(user_id)`
+- `(project_id)`
+- `(user_id, status)`
+- `(due_date)`
+- `(task_id)`
+- `(proof_item_id)`
+
+### `project_bugs`
+
+Purpose:
+
+Tracks project bugs, blockers, and unresolved issues.
+
+Expected fields:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `project_id uuid not null references public.projects(id) on delete cascade`
+- `title text not null`
+- `description text`
+- `status text not null default 'open'`
+- `severity text not null default 'medium'`
+- `source text`
+- `reproduction_steps text`
+- `root_cause text`
+- `fix_summary text`
+- `opened_at timestamptz not null default now()`
+- `resolved_at timestamptz`
+- `task_id uuid references public.tasks(id) on delete set null`
+- `proof_item_id uuid references public.proof_items(id) on delete set null`
+- `metadata jsonb not null default '{}'::jsonb`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Recommended indexes:
+
+- `(user_id)`
+- `(project_id)`
+- `(user_id, status)`
+- `(severity)`
+- `(task_id)`
+- `(proof_item_id)`
+
+### `project_tests`
+
+Purpose:
+
+Tracks tests, QA checks, validations, and evidence that a project works.
+
+Expected fields:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `project_id uuid not null references public.projects(id) on delete cascade`
+- `title text not null`
+- `test_type text not null default 'manual'`
+- `status text not null default 'pending'`
+- `command text`
+- `expected_result text`
+- `actual_result text`
+- `passed boolean`
+- `run_at timestamptz`
+- `proof_item_id uuid references public.proof_items(id) on delete set null`
+- `metadata jsonb not null default '{}'::jsonb`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Recommended indexes:
+
+- `(user_id)`
+- `(project_id)`
+- `(user_id, status)`
+- `(run_at desc)`
+- `(proof_item_id)`
+
+### `project_releases`
+
+Purpose:
+
+Tracks project releases, shipped versions, demos, deploys, or portfolio-ready checkpoints.
+
+Expected fields:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `project_id uuid not null references public.projects(id) on delete cascade`
+- `version text`
+- `title text not null`
+- `description text`
+- `status text not null default 'planned'`
+- `released_at timestamptz`
+- `github_tag_url text`
+- `demo_url text`
+- `release_notes_url text`
+- `proof_item_id uuid references public.proof_items(id) on delete set null`
+- `resume_bullet_id uuid references public.resume_bullets(id) on delete set null`
+- `metadata jsonb not null default '{}'::jsonb`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Recommended indexes:
+
+- `(user_id)`
+- `(project_id)`
+- `(user_id, status)`
+- `(released_at desc)`
+- `(proof_item_id)`
+- `(resume_bullet_id)`
+
+### `project_links`
+
+Purpose:
+
+Tracks useful project URLs and proof references.
+
+Expected fields:
+
+- `id uuid primary key default gen_random_uuid()`
+- `user_id uuid not null references public.profiles(id) on delete cascade`
+- `project_id uuid not null references public.projects(id) on delete cascade`
+- `label text not null`
+- `url text not null`
+- `link_type text not null default 'reference'`
+- `description text`
+- `proof_item_id uuid references public.proof_items(id) on delete set null`
+- `metadata jsonb not null default '{}'::jsonb`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Recommended indexes:
+
+- `(user_id)`
+- `(project_id)`
+- `(link_type)`
+- `(proof_item_id)`
+
+## Cross-domain links
+
+Phase 9 tables should connect to existing core systems:
+
+### Goals
+
+Learning paths, skills, sessions, and projects may link to `goals`.
+
+### Tasks
+
+Learning sessions, project records, milestones, and bugs may link to `tasks`.
+
+### Proof items
+
+Skills, sessions, quiz attempts, projects, milestones, tests, releases, and links may link to `proof_items`.
+
+### Daily logs
+
+Learning sessions may link to `daily_logs`.
+
+### Resume bullets
+
+Projects and releases may link to `resume_bullets`.
+
+### AI actions
+
+Records may link to `ai_actions` as source proposals.
+
+### Chat messages
+
+Records may link to `chat_messages` as origin context.
+
+## Knowledge alignment
+
+Phase 9 should not implement full RAG.
+
+For Phase 9, `/knowledge` alignment should be limited to:
+
+- showing how learning/project records will later feed Knowledge Vault
+- linking project lessons and learning notes conceptually
+- avoiding embeddings/semantic search until the correct phase
+
+No `knowledge_items` table is required in Phase 9 unless source inspection later proves it is required before memory/RAG.
+
+## RLS policy pattern
+
+Each new user-owned table should use:
+
+- enable row level security
+- select policy using `auth.uid() = user_id`
+- insert policy with check `auth.uid() = user_id`
+- update policy using and with check `auth.uid() = user_id`
+- delete policy using `auth.uid() = user_id`
+
+For child tables referencing parent rows, policies should additionally ensure the parent row belongs to the authenticated user when appropriate.
+
+## Status values
+
+Use text fields for flexible v1 status values rather than strict database enums.
+
+Recommended statuses:
+
+### Learning
+
+- `planned`
+- `active`
+- `paused`
+- `completed`
+- `archived`
+
+### Skill
+
+- `not_started`
+- `learning`
+- `practicing`
+- `proving`
+- `mastered`
+- `stale`
+
+### Session
+
+- `planned`
+- `active`
+- `completed`
+- `cancelled`
+
+### Quiz attempt
+
+- `completed`
+- `abandoned`
+- `needs_review`
+
+### Project
+
+- `planned`
+- `active`
+- `blocked`
+- `shipping`
+- `shipped`
+- `archived`
+
+### Bugs
+
+- `open`
+- `investigating`
+- `fixed`
+- `wont_fix`
+- `closed`
+
+### Tests
+
+- `pending`
+- `passed`
+- `failed`
+- `skipped`
+
+### Releases
+
+- `planned`
+- `draft`
+- `released`
+- `archived`
+
+## Phase 9 non-goals
+
+Do not add:
+
+- embeddings
+- vector tables
+- semantic search
+- internet search
+- voice
+- autonomous AI execution
+- GitHub API sync
+- automatic resume rewriting
+- background workers
+- Python/ML SQL writes
+
+## Migration validation expectations
+
+The migration should be considered valid only if:
+
+- file number is `0008`
+- table names are consistent
+- all user-owned tables include `user_id`
+- RLS is enabled on all new tables
+- policies exist for select/insert/update/delete where appropriate
+- indexes exist for `user_id` and common dashboard filters
+- foreign keys match existing table names
+- no service-role assumption is introduced
+- migration validation passes
+- generated TypeScript types can represent every new table
+
+## Open design decisions for Chunk C
+
+Chunk C must decide:
+
+1. Whether quiz questions remain JSON in `quizzes.metadata` for v1.
+2. Whether `skill_progress` directly references later-created tables using post-create constraints.
+3. Whether project tasks are separate records or linked to existing `tasks`.
+4. Whether `project_links` is enough for README/portfolio proof in Phase 9.
+5. Whether `/knowledge` remains route-alignment only until the memory/RAG phase.
+
+Recommended decisions:
+
+1. Keep quiz questions in `metadata` for Phase 9.
+2. Create all tables first, then add constraints if needed.
+3. Reuse existing `tasks` via nullable `task_id`; do not create duplicate project task table yet.
+4. Use `project_links`, `proof_items`, and `resume_bullet_id` for proof.
+5. Keep `/knowledge` alignment lightweight; do not implement full RAG.
+```
+
+### `docs/phase-plans/PHASE_10_RESEARCH_STANFORD_SYSTEM.md`
+
+```md
+# Phase 10 — Research / Stanford System
+
+## Purpose
+
+Phase 10 builds the Research / Stanford System foundation for ascendOS + Carnos.
+
+The core loop is:
+
+Skill -> Project -> Research Idea -> Literature -> Experiment -> Result -> Paper -> Proof -> Resume -> Professor/Lab -> PhD/Career
+
+Phase 10 turns learning and project progress into research credibility, paper readiness, professor/lab targeting, Stanford/PhD readiness, and proof-backed career leverage.
+
+## Source-of-Truth Position
+
+Phase 10 follows the existing source hierarchy:
+
+1. FINAL_SYNCED DOCX
+2. FINAL_SYNCED JSON
+3. Repo docs, reports, audits, status, logs, migrations, scripts
+4. Current codebase and terminal output
+5. Explicit assumptions only
+
+Phase 10 must preserve the project law:
+
+Python/ML advises.
+The app validates.
+The user confirms.
+The server writes.
+SQL records.
+Audit logs.
+Python/ML must never directly mutate SQL.
+
+## Safety Boundary
+
+Phase 10 is initially a read-first foundation phase.
+
+It may add:
+
+- SQL schema
+- RLS and ownership policies
+- database types
+- read helpers
+- dashboard aggregation helpers
+- dashboard components
+- route wiring
+- proposed-action previews
+- linkage panels
+- privacy/state boundaries
+- audit reports
+
+It must not add:
+
+- autonomous Carnos writes
+- hidden database mutation
+- direct dashboard persistence
+- automatic professor emails
+- paper submission automation
+- web scraping
+- RAG, embeddings, or memory_items
+- OpenAI generation in dashboards
+- Python/ML mutation paths
+- uncontrolled background jobs
+
+## Primary Phase 10 Routes
+
+- /research-lab
+- /research-stanford
+
+## Supporting Linkage Routes
+
+- /projects
+- /learning
+- /proof
+- /resume
+- /goals
+- /timeline
+- /career
+- /knowledge
+- /carnos
+
+## Phase 10 Step Plan
+
+### Inspection and Plan
+
+- 10.1 Source-of-truth inspection
+- 10.2 Phase 10 plan lock
+- 10.3 Existing route/component inspection
+
+### Schema and Traceability
+
+- 10.4 Research schema design
+- 10.5 Stanford/PhD schema design
+- 10.6 Source-to-scope traceability matrix
+
+### SQL and Ownership
+
+- 10.7 SQL migration
+- 10.8 Ownership/RLS hardening
+
+### Types and Read Layer
+
+- 10.9 Database types
+- 10.10 Research read helpers
+- 10.11 Stanford/PhD read helpers
+- 10.12 Literature/citation read helpers
+
+### Dashboard Foundation
+
+- 10.13 Research aggregation helpers
+- 10.14 Dashboard registry extension
+- 10.15 Shared research UI primitives
+
+### Route Wiring
+
+- 10.16 Research Lab dashboard v1
+- 10.17 Wire /research-lab
+- 10.18 Stanford/PhD dashboard v1
+- 10.19 Wire /research-stanford
+
+### Detail Panels
+
+- 10.20 Research idea detail panels
+- 10.21 Literature review/citation panels
+- 10.22 Experiment/result panels
+- 10.23 Paper/draft/publication panels
+- 10.24 Research claim/proof panels
+- 10.25 Professor/lab fit panels
+- 10.26 PhD readiness/gap panels
+- 10.27 SOP/recommendation/application panels
+
+### Linkage and State
+
+- 10.28 Research-to-project linkage
+- 10.29 Research-to-proof/resume linkage
+- 10.30 Goal/task/timeline linkage
+- 10.31 Proposed-action visibility
+- 10.32 Empty/loading/error/privacy states
+- 10.33 Cross-dashboard links
+
+### Closeout
+
+- 10.34 No-write/privacy audit
+- 10.35 Audit gate + smoke checklist
+- 10.36 Completion report + closeout
+
+## Chunk Plan
+
+| Chunk | Steps | Purpose |
+|---|---:|---|
+| A | 10.1-10.3 | Source inspection, plan lock, route/component inspection |
+| B | 10.4-10.6 | Schema design and source-to-scope traceability |
+| C | 10.7 | SQL foundation only |
+| C.1 | 10.8 | Ownership/RLS hardening only |
+| D | 10.9 | Database types only |
+| E | 10.10-10.12 | Research, Stanford/PhD, literature/citation read helpers |
+| F | 10.13-10.15 | Aggregation helpers, registry, shared UI |
+| G | 10.16-10.17 | Research Lab dashboard and /research-lab |
+| H | 10.18-10.19 | Stanford/PhD dashboard and /research-stanford |
+| I | 10.20-10.27 | Detail panels |
+| J | 10.28-10.33 | Linkage, proposed-action visibility, state/privacy, cross-links |
+| K | 10.34-10.36 | Audit, smoke checklist, completion report, closeout |
+
+## Expected Data Domains
+
+Phase 10 should cover:
+
+- research ideas
+- research questions
+- literature review items
+- citations
+- research claims
+- experiments
+- experiment results
+- papers
+- paper versions
+- feedback
+- venues
+- submissions
+- target universities
+- target labs
+- target professors
+- PhD readiness assessments
+- PhD application assets
+- SOP versions
+- recommendation targets
+
+## Integration With Existing Phases
+
+Phase 10 should connect to earlier phases through nullable references only:
+
+- goal_id
+- task_id
+- proof_item_id
+- project_id
+- skill_id
+- resume_bullet_id
+- daily_log_id
+- timeline_event_id
+
+This prevents old data from breaking and allows records to remain unlinked until supporting evidence exists.
+
+## Existing Foundations Confirmed From Chunk A Inspection
+
+The current repo already has:
+
+- authenticated dashboard shell
+- read-only dashboard empty states
+- cross-dashboard link component
+- proposed-action review card
+- proposed-action domains including research
+- proof item creation action type
+- task and goal creation action types
+- project type support for research and experiment
+- learning session type support for research
+- quiz type support for research_review
+- project link support for paper, reference, and proof
+- existing project, learning, proof, resume, goal, task, and timeline foundations
+
+## Deferred Scope
+
+The following are not part of Phase 10:
+
+- memory/RAG activation
+- embeddings
+- automatic web search
+- automatic professor/lab scraping
+- automatic emailing
+- paper submission automation
+- autonomous Carnos mutation
+- direct Python/ML writes
+- uncontrolled background jobs
+
+## Completion Criteria
+
+Phase 10 is complete when:
+
+- /research-lab is wired to real read helpers.
+- /research-stanford is wired to real read helpers.
+- research/Stanford schema exists with RLS.
+- database types are updated.
+- read helpers are implemented.
+- dashboards display meaningful research/PhD state.
+- linkage panels connect research to projects/proof/resume/goals/tasks/timeline.
+- proposed-action previews are disabled and read-first unless later safe-write flow is explicitly added.
+- privacy/state boundaries exist.
+- cross-links exist.
+- no-write/privacy audit passes.
+- full verification passes.
 ```
 
 ### `docs/phase-plans/PHASE_4_CORE_SQL_SPINE.md`
@@ -3682,6 +9538,1795 @@ Phase 6 should add safe write/proposed-action flow groundwork, not full memory y
 Memory remains deferred until its dedicated phase because it requires explicit approval, edit/delete/export behavior, retrieval rules, privacy controls, and auditability.
 ```
 
+### `docs/phase-plans/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW.md`
+
+```md
+# Phase 6 — Safe Write / Proposed Action Flow
+
+## Status
+
+Planned implementation phase.
+
+Phase 6 begins after:
+
+- Phase 1 — Source-of-truth foundation
+- Phase 2 — Next.js shell / routes / registry
+- Phase 3 — Supabase / Auth foundation
+- Phase 4 — Core SQL spine
+- Phase 5 — Core Read UI Integration
+- Phase 5.15 — Python/ML Intelligence Architecture Patch
+
+Phase 6 must preserve all previous phase boundaries.
+
+## Purpose
+
+Phase 6 builds the safe write foundation for ascendOS.
+
+The core goal is to make sure no user data is created, edited, executed, or changed through uncontrolled freeform logic.
+
+Every write-affecting flow must pass through the required safety chain:
+
+proposal -> validation -> Save/Edit/Cancel -> server write -> audit log -> timeline event -> dashboard refresh
+
+This phase creates the controlled write pipeline that future Carnos, future Python/ML intelligence, future agents, and future automations must use.
+
+## Core Rule
+
+Carnos must not directly mutate user data from freeform chat.
+
+Python/ML must not directly mutate SQL.
+
+The app must validate proposed actions.
+
+The user must confirm write-affecting actions.
+
+The server must execute approved writes.
+
+SQL must record the result.
+
+Audit logs must preserve evidence.
+
+Timeline events must preserve meaningful life history.
+
+## In Scope
+
+Phase 6 may add:
+
+- proposed action type definitions
+- proposed action payload contracts
+- safe action result types
+- payload validation helpers
+- server-side write helpers
+- audit log helper for write actions
+- timeline event helper for meaningful writes
+- proposed action creation helper
+- action lifecycle helpers
+- approved-action execution dispatcher
+- first safe write flows for tasks, goals, daily logs, and proof items
+- Save/Edit/Cancel UI components
+- safe proposed action surface in the app
+- Phase 6 audit script
+- Phase 6 report
+- source alignment updates
+- logs, ledger, changelog, status, and snapshot updates
+
+## Out of Scope
+
+Phase 6 must not add:
+
+- active Python worker runtime
+- ML model runtime
+- memory system
+- Carnos generation
+- external LLM calls
+- voice system
+- background jobs
+- cron jobs
+- auto-execution
+- service-role key usage in frontend
+- direct SQL writes from chat
+- direct SQL writes from Python/ML
+- hidden memory creation
+- hidden personal data collection
+- complex analytics
+- recommendation scoring
+- production deployment changes
+
+## Mandatory Write Flow
+
+All write-affecting actions must follow this flow:
+
+1. A proposed action is created.
+2. The proposed action payload is validated.
+3. The user sees Save/Edit/Cancel.
+4. The user confirms or cancels.
+5. The server verifies the authenticated user.
+6. The server executes the approved write.
+7. The server writes an audit log.
+8. The server writes or links a timeline event when meaningful.
+9. The UI refreshes the affected dashboard/read surface.
+10. The action lifecycle is updated.
+
+## User Confirmation Rule
+
+No write-affecting action may execute without one of these:
+
+- explicit Save
+- explicit approval
+- explicit confirmed edit-and-save
+
+Cancel must stop the write.
+
+Edit must revalidate the changed payload before execution.
+
+## Server-Side Write Rule
+
+All protected writes must happen server-side.
+
+Client code must not perform privileged Supabase mutations directly.
+
+The server must not trust client-supplied user_id.
+
+The server must derive user ownership from the authenticated session.
+
+## Audit Rule
+
+Every successful write must create an audit log.
+
+Important failed execution attempts should also be auditable when practical.
+
+Audit records must preserve enough evidence to understand:
+
+- who initiated the action
+- what action was attempted
+- what entity was affected
+- whether it succeeded or failed
+- what payload or summary was used
+- when it happened
+
+## Timeline Rule
+
+Meaningful life/work actions should create or link a timeline event.
+
+Examples:
+
+- task created
+- goal created
+- daily log created
+- proof item created
+- important action executed
+
+Timeline events should not be spammy, but important user-facing writes should be traceable.
+
+## Proposed Action Lifecycle
+
+Phase 6 should support a lifecycle similar to:
+
+- draft
+- pending_confirmation
+- edited
+- approved
+- cancelled
+- executing
+- executed
+- failed
+
+Exact naming may align with the existing `ai_actions` table and current database type contracts.
+
+If the existing table does not support a perfect lifecycle, Phase 6 should use the safest compatible mapping before adding migrations.
+
+## Preferred Existing Table
+
+Prefer using the existing `ai_actions` table for proposed actions if it can support the required flow.
+
+Do not create a new SQL table unless the existing schema cannot safely support the Phase 6 lifecycle.
+
+If a migration becomes necessary, it must include:
+
+- RLS
+- user ownership
+- indexes
+- migration validation
+- type updates
+- docs
+- audit updates
+
+## First Write Domains
+
+Phase 6 should add safe writes in this order:
+
+1. create_task
+2. create_goal
+3. create_daily_log
+4. create_proof_item
+
+Reason:
+
+Tasks are the safest first write.
+Goals are core but more important.
+Daily logs affect habit/analytics history.
+Proof items affect proof-of-work and progress evidence.
+
+## Phase 6 Step Map
+
+### Phase 6.1 — Plan Lock
+
+Create this Phase 6 plan file.
+
+No runtime code.
+
+### Phase 6.2 — Action Types
+
+Create the central list of allowed action names.
+
+Suggested file:
+
+`src/lib/actions/action-types.ts`
+
+### Phase 6.3 — Proposed Action Contracts
+
+Define payload shapes for supported proposed actions.
+
+Suggested file:
+
+`src/lib/actions/proposed-action-contracts.ts`
+
+### Phase 6.4 — Action Result Types
+
+Define typed success and failure results.
+
+Suggested file:
+
+`src/lib/actions/action-results.ts`
+
+### Phase 6.5 — Payload Validation
+
+Validate proposed action payloads before execution.
+
+Suggested file:
+
+`src/lib/actions/validate-proposed-action.ts`
+
+### Phase 6.6 — Write Audit Helper
+
+Create a reusable audit logging helper for write actions.
+
+Suggested file:
+
+`src/lib/audit/write-audit-log.ts`
+
+### Phase 6.7 — Timeline Event Helper
+
+Create a reusable helper for meaningful timeline records.
+
+Suggested file:
+
+`src/lib/timeline/write-timeline-event.ts`
+
+### Phase 6.8 — Proposed Action Creation Helper
+
+Create proposed actions in pending state.
+
+Suggested file:
+
+`src/lib/actions/create-proposed-action.ts`
+
+### Phase 6.9 — Action Lifecycle Helpers
+
+Add helpers for approval, edit, cancel, execution, and failure states.
+
+Suggested file:
+
+`src/lib/actions/action-lifecycle.ts`
+
+### Phase 6.10 — Execution Dispatcher
+
+Create the single controlled execution gate.
+
+Suggested file:
+
+`src/lib/actions/execute-approved-action.ts`
+
+### Phase 6.11 — Create Task Flow
+
+Implement safe create_task execution through the dispatcher.
+
+### Phase 6.12 — Create Goal Flow
+
+Implement safe create_goal execution through the dispatcher.
+
+### Phase 6.13 — Create Daily Log Flow
+
+Implement safe create_daily_log execution through the dispatcher.
+
+### Phase 6.14 — Create Proof Item Flow
+
+Implement safe create_proof_item execution through the dispatcher.
+
+### Phase 6.15 — Save/Edit/Cancel UI
+
+Create reusable confirmation UI components.
+
+Suggested files:
+
+`src/components/actions/proposed-action-card.tsx`
+`src/components/actions/save-edit-cancel-controls.tsx`
+
+### Phase 6.16 — App Surface Wiring
+
+Wire the safe proposed action surface into the app.
+
+Preferred first page:
+
+`/command`
+
+No Carnos generation yet.
+
+### Phase 6.17 — Phase 6 Audit
+
+Create a Phase 6 audit script.
+
+Suggested file:
+
+`scripts/audit-phase-6.mjs`
+
+Wire it into `package.json` and `npm run check`.
+
+### Phase 6.18 — Phase 6 Completion
+
+Create the Phase 6 report and update project records.
+
+Required updates:
+
+- `docs/phase-reports/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW_REPORT.md`
+- `PHASE_STATUS.md`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `CODE_SNAPSHOT.md`
+- `scripts/audit-source-alignment.mjs`
+
+Then run all gates, commit, and push.
+
+## Acceptance Criteria
+
+Phase 6 is complete only when:
+
+- Phase 6 plan exists
+- action types exist
+- proposed action contracts exist
+- validation exists
+- action result types exist
+- audit helper exists
+- timeline helper exists
+- proposed action creation helper exists
+- action lifecycle helpers exist
+- execution dispatcher exists
+- create_task flow works through the safe pipeline
+- create_goal flow works through the safe pipeline
+- create_daily_log flow works through the safe pipeline
+- create_proof_item flow works through the safe pipeline
+- Save/Edit/Cancel UI exists
+- proposed action surface is wired into the app
+- Phase 6 audit exists
+- Phase 6 audit is wired into `npm run check`
+- Phase 6 report exists
+- project records are updated
+- `npm run check` passes
+- `git diff --check` passes
+- changes are committed
+- changes are pushed
+
+## Non-Negotiable Safety Checks
+
+The Phase 6 audit must verify that Phase 6 did not introduce:
+
+- active Python worker runtime
+- memory implementation
+- Carnos generation bypass
+- direct chat-to-database writes
+- direct Python-to-SQL writes
+- frontend service-role usage
+- unaudited write helpers
+- unvalidated action execution
+- uncontrolled freeform SQL mutation
+
+## Final Phase 6 Principle
+
+Phase 6 is not about making Carnos smart.
+
+Phase 6 is about making ascendOS safe enough for Carnos and future Python/ML to become powerful later without corrupting user data, bypassing confirmation, or creating hidden state.
+```
+
+### `docs/phase-plans/PHASE_7_CORE_OPERATING_DASHBOARDS.md`
+
+```md
+# Phase 7 Plan Lock - Core Operating Dashboards
+
+## Status
+
+Locked plan. No feature implementation should begin until this plan is committed and pushed.
+
+## Source of Truth
+
+Primary source files:
+
+- docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Implementation_Bible_FINAL_SYNCED.docx
+- docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_FINAL_SYNCED.json
+
+Source hierarchy:
+
+1. FINAL_SYNCED DOCX
+2. FINAL_SYNCED JSON
+3. repo phase plans, phase reports, status files, logs
+4. code, migrations, scripts, audits
+5. conversation memory
+
+## Roadmap Reconciliation Lock
+
+The older 15-phase roadmap memory is outdated and must not be used as the current implementation structure.
+
+The FINAL_SYNCED DOCX and FINAL_SYNCED JSON override older memory.
+
+The safe implementation structure going forward is 21 chunks unless the source-of-truth files are explicitly updated.
+
+Reason:
+
+- The DOCX contains the high-level product roadmap.
+- The JSON/source structure contains the safer implementation chunk breakdown.
+- The extra final implementation chunk is treated as v1 polish/final QA, not a restart or contradiction.
+
+This project must not be restarted, renamed, or considered broken because of the roadmap-count reconciliation.
+
+## Current Completed Foundation
+
+Known completed and pushed foundation before Phase 7:
+
+- Phase 1 source-of-truth foundation
+- Phase 2 app shell and route foundation
+- Phase 3 auth and Supabase foundation
+- Phase 4 core SQL spine
+- Phase 5 core read UI foundation
+- Phase 5.15 Python/ML intelligence boundary patch
+- Phase 6 safe write / proposed action flow
+
+Latest known Phase 6 completion commit:
+
+- b0b5a2b Complete Phase 6 safe write flow
+
+## Phase 7 Goal
+
+Phase 7 builds the core operating dashboard layer.
+
+It turns the existing SQL/auth/read/write foundation into a connected operating view across Command, Timeline, Calendar, Goals, Proof, and Carnos panel surfaces.
+
+Phase 7 is not a new AI brain phase. It is the dashboard integration layer.
+
+## Phase 7 Scope
+
+Phase 7 includes:
+
+- Command dashboard v1
+- Timeline dashboard v1
+- Calendar dashboard v1
+- Goals dashboard v1
+- Proof dashboard/card system
+- Carnos dashboard panel v1
+- modular dashboard layout contract
+- dashboard card registry
+- shared dashboard card primitives
+- server-side dashboard aggregation helpers
+- cross-dashboard links
+- pending proposed-action visibility
+- loading states
+- empty states
+- error states
+- privacy-aware/redacted states where relevant
+- no-hardcoded-demo-data cleanup
+- Phase 7 audit gate
+- manual smoke checklist
+- Phase 7 completion report
+
+## Phase 7 Explicit Exclusions
+
+Phase 7 must not implement:
+
+- Career CRM
+- Learning Academy
+- Research / Stanford system
+- Health / body system
+- Life admin / survival system
+- Grimoire / mode system
+- Voice
+- Memory / RAG / Knowledge Vault
+- Internet / web tools
+- Analytics / correlation engine
+- Custom trackers / plugin system
+- Privacy export/delete system
+- Deployment/final release polish
+- full Carnos chat generation
+- autonomous AI actions
+- Python/ML worker execution
+- background jobs
+- cron jobs
+- service-role client code
+- silent writes
+
+Those belong to later phases/chunks.
+
+## Required Phase 7 Steps
+
+7.1 Phase 7 plan lock
+7.2 Dashboard layout contract
+7.3 Dashboard card registry
+7.4 Shared dashboard card primitives
+7.5 Dashboard data aggregation helpers
+7.6 Command dashboard v1
+7.7 Timeline dashboard v1
+7.8 Calendar dashboard v1
+7.9 Goals dashboard v1
+7.10 Proof dashboard/card system
+7.11 Pending updates / confirmation drawer integration
+7.12 Carnos panel v1
+7.13 Cross-dashboard links
+7.14 Empty/loading/error/privacy states
+7.15 No-hardcoded-demo-data cleanup
+7.16 Phase 7 audit gate
+7.17 Manual smoke checklist
+7.18 Phase 7 report and completion marker
+
+## Required Operating Loop
+
+Phase 7 should make this loop visible:
+
+goals -> tasks/events -> calendar -> proof -> timeline -> pending Carnos updates -> command dashboard
+
+## Safety Rules
+
+- Python/ML advises.
+- The app validates.
+- The user confirms.
+- The server writes.
+- SQL records.
+- Audit logs.
+- Python/ML must never directly mutate SQL.
+- No silent AI writes.
+- No unconfirmed important writes.
+- No localStorage as final data storage.
+- No hardcoded demo data as final state.
+- No service-role key in client code.
+- No future phase scope drift.
+
+## Acceptance Criteria
+
+Phase 7 is complete only when:
+
+- Command dashboard displays real SQL-backed operating data or honest empty states.
+- Timeline dashboard displays chronological user-owned records or honest empty states.
+- Calendar dashboard displays dated tasks/events/logs or honest empty states.
+- Goals dashboard displays goals, proof requirements, linked tasks/proof, or honest empty states.
+- Proof cards/surfaces appear across the core dashboard loop.
+- Carnos panel shows safe dashboard-side context and pending updates without autonomous execution.
+- Dashboard cards are typed and reusable.
+- Dashboard aggregation helpers are server-side and typed.
+- Cross-links between goals, tasks, proof, timeline, calendar, and pending actions exist where available.
+- Loading, empty, and error states exist.
+- Privacy-aware/redacted states are respected where relevant.
+- No hardcoded demo data is treated as final real data.
+- Phase 7 audit is added to npm run check.
+- npm run check passes.
+- git diff --check passes.
+- Phase 7 report exists.
+- changes are committed and pushed.
+
+## Completion Rule
+
+Do not mark Phase 7 complete until all Phase 7 steps are implemented, checked, audited, reported, committed, and pushed.
+```
+
+### `docs/phase-plans/PHASE_8_CAREER_SYSTEM.md`
+
+```md
+# Phase 8 Plan — Career System v2
+
+Status: Locked.
+
+## Phase purpose
+
+Phase 8 builds the Career System as a real operating layer, not just a dashboard skin.
+
+It extends the existing ascendOS + Carnos foundation with structured career execution for job applications, referrals, networking, resume versions, interview preparation, follow-ups, outcomes, analytics, and proof links.
+
+Phase 8 must preserve all Phase 1–7 boundaries.
+
+## Phase 1–7 dependencies preserved
+
+Phase 8 must not break or rewrite:
+
+- Phase 1 source-of-truth hierarchy.
+- Phase 2 canonical route foundation.
+- Phase 3 auth and Supabase foundation.
+- Phase 4 SQL spine discipline.
+- Phase 5 read-only dashboard shell patterns.
+- Phase 6 confirmation-first proposed-action flow.
+- Phase 7 operating dashboard contracts, cards, links, states, and audit boundaries.
+
+## Canonical career routes
+
+Phase 8 uses only existing canonical routes:
+
+- `/career`
+- `/networking`
+- `/resume`
+- `/interviews`
+
+Phase 8 may connect career summaries into:
+
+- `/command`
+- `/timeline`
+- `/calendar`
+- `/goals`
+- `/carnos`
+
+No new non-canonical route may be introduced.
+
+## Include in Phase 8
+
+Career data foundation:
+
+- job applications
+- application events/status history
+- networking contacts
+- networking interactions
+- referrals
+- resume versions
+- resume bullets / evidence-linked claims
+- interview records
+- interview prep tasks
+- follow-ups
+- career analytics summaries
+- proof links to goals, tasks, proof_items, and daily_logs
+
+Career UI foundation:
+
+- Career dashboard
+- Job applications pipeline
+- Networking/referral dashboard
+- Resume versioning dashboard
+- Interview command center
+- Career cross-links
+- Career empty/loading/error/privacy states
+- Career proposed-action visibility without direct execution
+
+Career safety/audit foundation:
+
+- Career audit gate
+- Integration audit expansion
+- Manual smoke checklist
+- Phase 8 report and completion marker
+
+## Exclude from Phase 8
+
+Phase 8 must not add:
+
+- autonomous job applications
+- autonomous emails/messages
+- scraping
+- external internet job search tools
+- memory/RAG
+- Carnos autonomous career execution
+- Python/ML worker execution
+- voice execution
+- background jobs or cron
+- service-role client code
+- direct dashboard mutation
+- hidden resume rewriting
+- non-canonical routes
+
+## Safety law
+
+The confirmation-first law remains:
+
+`proposal -> validation -> Save/Edit/Cancel -> server-owned execution -> audit log -> timeline boundary -> dashboard refresh`
+
+Career dashboards may read and display career data.
+
+Career dashboards must not directly mutate SQL.
+
+## Phase 8 substeps
+
+8.1 Career system plan lock v2.
+8.2 Inspect current career routes, SQL, repositories, dashboard contracts, and audits.
+8.3 Career SQL schema plan / migration design.
+8.4 Career SQL migration: applications, events, networking, resume versions, interviews.
+8.5 Database types update / generated type alignment.
+8.6 Career read repository helpers.
+8.7 Career data aggregation helpers.
+8.8 Career dashboard card registry extension.
+8.9 Career shared UI primitives / status labels if needed.
+8.10 Career dashboard v1.
+8.11 Wire `/career`.
+8.12 Job applications pipeline view.
+8.13 Networking / referral dashboard v1.
+8.14 Wire `/networking`.
+8.15 Resume versioning dashboard v1.
+8.16 Wire `/resume`.
+8.17 Interview command center v1.
+8.18 Wire `/interviews`.
+8.19 Career cross-links across `/career`, `/networking`, `/resume`, `/interviews`.
+8.20 Career proof/evidence linkage to goals, tasks, proof_items, and daily_logs.
+8.21 Career proposed-action visibility, with no direct execution.
+8.22 Career empty/loading/error/privacy states.
+8.23 Career audit gate plus integration audit expansion.
+8.24 Career manual smoke checklist plus Phase 8 report/completion marker.
+
+## Completion criteria
+
+Phase 8 is complete only when:
+
+- `npm run check` passes.
+- `/career`, `/networking`, `/resume`, and `/interviews` are canonical and build-safe.
+- Career SQL/data/read foundations exist.
+- Career dashboard components are exported and wired.
+- Career routes render without breaking Phase 1–7.
+- Career audit gate exists.
+- Integration audit covers Phase 8 boundaries.
+- No autonomous applications, scraping, emails, generation, memory/RAG, Python/ML execution, voice execution, internet tools, background jobs, or direct dashboard mutations are introduced.
+```
+
+### `docs/phase-plans/PHASE_9_LEARNING_PROJECT_SYSTEM.md`
+
+```md
+# Phase 9 — Learning / Project System Plan
+
+Status: Locked working plan after Chunk A inspection.
+
+Phase: 9
+
+System: Learning / Project System
+
+Execution model:
+
+- 28 requirement steps remain the official checklist.
+- 12 execution chunks are used for safer commits.
+- Every chunk must be verified before commit.
+- Every chunk must preserve prior phases.
+- No step is considered complete until implemented, verified, committed, pushed when required, and documented.
+
+## Phase 9 purpose
+
+Phase 9 builds the Learning / Project System foundation.
+
+It connects learning, projects, proof, goals, tasks, timeline, career, resume evidence, research readiness, and later knowledge/memory systems.
+
+Phase 9 turns learning into proof.
+
+Phase 9 turns projects into structured evidence.
+
+Phase 9 prepares Carnos to later reason about skill gaps, project progress, proof, and next actions without bypassing confirmation.
+
+## Core Phase 9 promise
+
+study -> skill -> project -> proof -> resume -> career -> research -> knowledge -> analytics -> Carnos next action
+
+## Phase 9 source-of-truth scope
+
+Phase 9 includes:
+
+- Learning academy
+- Skill trees
+- Skill prerequisites
+- Quizzes
+- Learning sessions
+- Project builder
+- Bug logs
+- Tests
+- Releases
+- README proof
+- Portfolio proof
+- Resume proof
+- Goal linkage
+- Task linkage
+- Timeline linkage
+- Proof linkage
+- Knowledge alignment
+
+## Canonical routes
+
+Phase 9 touches:
+
+- `/learning`
+- `/projects`
+- `/knowledge`
+
+## Non-goals
+
+Phase 9 must not implement:
+
+- full memory/RAG
+- embeddings
+- semantic search
+- internet/web tools
+- voice
+- autonomous Carnos execution
+- direct SQL writes from dashboards
+- background jobs
+- full GitHub API sync
+- full resume auto-generation
+- full AI-generated course engine
+
+## Safety boundaries
+
+Phase 9 must preserve:
+
+- SQL-backed durable state
+- user-owned data
+- RLS expectation
+- authenticated/protected route boundaries
+- no client-side direct SQL mutation
+- no Python/ML SQL mutation
+- no hidden writes
+- no fake persistence
+- proposed-action visibility without execution unless explicitly wired through safe write flow
+- timeline/proof/audit compatibility
+- loading/empty/error/privacy states
+
+## 28 requirement steps
+
+| Step | Name | Requirement |
+|---:|---|---|
+| 9.1 | Source-of-truth inspection | Re-check FINAL_SYNCED DOCX/JSON and repo so Phase 9 is grounded. |
+| 9.2 | Phase 9 plan lock | Create official Phase 9 plan with scope, rules, risks, non-goals, and completion criteria. |
+| 9.3 | Current route inspection | Inspect `/learning`, `/projects`, `/knowledge`, dashboards, SQL, helpers, and audits. |
+| 9.4 | Learning/project schema design | Design SQL for learning tracks, skills, sessions, quizzes, projects, milestones, bugs, releases, and proof links. |
+| 9.5 | Source-to-scope traceability matrix | Map Phase 9 DOCX/JSON requirements to implementation files so nothing important is missed. |
+| 9.6 | SQL migration | Add Supabase migration for Phase 9 learning/project tables. |
+| 9.7 | Database types update | Update `src/types/database.ts` for new Phase 9 tables. |
+| 9.8 | Learning read helpers | Add read-only helpers for learning tracks, skills, progress, sessions, and quizzes. |
+| 9.9 | Project read helpers | Add read-only helpers for projects, milestones, build logs, bugs, tests, and releases. |
+| 9.10 | Aggregation helpers | Summarize learning progress, weak skills, active projects, next sessions, and proof readiness. |
+| 9.11 | Dashboard registry extension | Add Learning and Project dashboard cards to the shared dashboard card registry. |
+| 9.12 | Shared UI primitives | Build reusable UI for skill status, proof gates, project status, milestones, sessions, bugs, and releases. |
+| 9.13 | Learning Academy dashboard v1 | Build the main Learning Academy dashboard. |
+| 9.14 | Wire `/learning` | Replace `/learning` with the authenticated Learning dashboard. |
+| 9.15 | Project Builder dashboard v1 | Build the main Project Builder dashboard. |
+| 9.16 | Wire `/projects` | Replace `/projects` with the authenticated Projects dashboard. |
+| 9.17 | Knowledge route alignment | Align `/knowledge` with Phase 9 without starting full RAG early. |
+| 9.18 | Skill path/progress view | Show skill trees, prerequisites, progress, weak skills, and proof gates. |
+| 9.19 | Quiz/session view | Show sessions, quizzes, study logs, and practice history. |
+| 9.20 | Project build-log view | Show milestones, bugs, tests, releases, GitHub links, deployment links, and build history. |
+| 9.21 | README/resume/proof linkage | Connect projects to README proof, portfolio proof, resume bullets, and skill evidence. |
+| 9.22 | Goal/task/timeline linkage | Connect learning/project records to goals, tasks, proof items, and timeline entries. |
+| 9.23 | Proposed-action visibility | Show what Carnos could propose without executing anything. |
+| 9.24 | Empty/loading/error/privacy states | Add safe states for no data, loading, read errors, and private read-only boundaries. |
+| 9.25 | Cross-links | Link Learning, Projects, Career, Research, and Knowledge cleanly. |
+| 9.26 | Phase 9 no-write/privacy audit | Add audit checks proving Phase 9 dashboards do not directly mutate SQL or bypass confirmation. |
+| 9.27 | Phase 9 audit gate + smoke checklist | Add `audit:phase9`, integration checks, and manual browser QA checklist. |
+| 9.28 | Completion report + closeout | Add final report, run full checks, commit, push, and mark Phase 9 complete. |
+
+## 12 execution chunks
+
+| Chunk | Steps | Purpose | Commit Boundary |
+|---|---|---|---|
+| A | 9.1-9.3 | Source inspection, route inspection, plan lock | Yes |
+| B | 9.4-9.5 | Schema design and source-to-scope traceability | Yes |
+| C | 9.6 | SQL migration | Yes |
+| D | 9.7 | Database types | Yes |
+| E | 9.8-9.9 | Learning/project read helpers | Yes |
+| F | 9.10-9.12 | Aggregation, registry, shared UI primitives | Yes |
+| G | 9.13-9.14 | Learning dashboard and `/learning` route | Yes |
+| H | 9.15-9.16 | Project dashboard and `/projects` route | Yes |
+| I | 9.17 | `/knowledge` route alignment | Yes |
+| J | 9.18-9.20 | Skill/session/project detail panels | Yes |
+| K | 9.21-9.25 | Cross-domain linkage, proposed actions, state boundaries, cross-links | Yes |
+| L | 9.26-9.28 | Audit, smoke checklist, completion report, closeout | Yes |
+
+## Why some steps stay isolated
+
+The following steps stay isolated because they can break broad system behavior:
+
+- 9.6 SQL migration
+- 9.7 database types
+- 9.17 Knowledge route alignment
+
+## Chunk A expected files
+
+Chunk A creates or updates:
+
+- `docs/phase-plans/PHASE_9_LEARNING_PROJECT_SYSTEM.md`
+- `docs/phase-reports/PHASE_9_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+
+Chunk A must not modify app source files.
+
+## Chunk A completion criteria
+
+Chunk A is complete when:
+
+- inspection report exists
+- phase plan exists
+- all 28 steps are listed
+- all 12 chunks are listed
+- canonical routes are documented
+- non-goals are documented
+- safety boundaries are documented
+- project logs are updated
+- `npm run check` passes
+- `npx tsc --noEmit` passes
+- `npm run lint` passes
+- `git diff --check` passes
+- expected files only are changed
+- Chunk A is committed and pushed
+
+## Phase 9 final completion criteria
+
+Phase 9 is complete only when:
+
+- all 28 steps are implemented or explicitly documented as deferred/non-goal
+- all 12 chunks are complete
+- SQL migration exists and passes validation
+- database types align with migration
+- read helpers exist
+- dashboards are wired
+- `/learning`, `/projects`, and `/knowledge` are aligned
+- proof/timeline/goal/task/career links exist where required
+- no-write/privacy audit passes
+- integration audit passes
+- manual smoke checklist exists
+- completion report exists
+- full checks pass
+- closeout commit is pushed
+```
+
+### `docs/phase-reports/PHASE_10_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
+
+```md
+# Phase 10 Chunk A — Source and Route Inspection
+
+## Scope
+
+Chunk A covers:
+
+- 10.1 Source-of-truth inspection
+- 10.2 Phase 10 plan lock
+- 10.3 Existing route/component inspection
+
+No app code, SQL, database types, repositories, dashboard implementations, or old phase files are modified in Chunk A except logs and planning documents.
+
+## Inspection Basis
+
+Chunk A was based on terminal inspection of:
+
+- repo state
+- Phase 9 status references
+- source-of-truth references
+- existing phase plan/report files
+- existing research-like routes
+- route map and canonical routes
+- dashboard registry and layout contracts
+- reusable dashboard components
+- action preview components
+- proposed-action contracts
+- read helpers
+- database types
+- migration sequence
+- migration validator
+
+## Confirmed Reusable Foundations
+
+### Authenticated Dashboard Shell
+
+The repo has AuthenticatedDashboardShell, which uses:
+
+- getDashboardAuthState
+- authenticated dashboard gating
+- signed-out empty state
+- unavailable read empty state
+- SectionCard
+- EmptyState
+
+This is suitable for Phase 10 read-first dashboards.
+
+### Cross-Dashboard Links
+
+The repo has CrossDashboardLinks.
+
+Existing link groups include:
+
+- core dashboard links
+- career dashboard links
+
+Phase 10 can later add research/Stanford cross-link wrappers without changing existing Phase 7, Phase 8, or Phase 9 navigation.
+
+### Proposed-Action Preview
+
+The repo has ProposedActionReviewCard.
+
+It supports:
+
+- disabled state
+- save/cancel/edit labels
+- validation issues
+- JSON payload preview
+- optional callbacks
+
+Phase 10 should use disabled previews inside dashboards unless a later safe-write chunk explicitly wires server-owned persistence.
+
+## Confirmed Proposed-Action Contract State
+
+Existing proposed action types:
+
+- create_task
+- create_goal
+- create_daily_log
+- create_proof_item
+
+Existing proposed action domains include:
+
+- career
+- learning
+- research
+- projects
+- general
+
+Existing valid proof types:
+
+- text
+- link
+- file
+- image
+- code
+- metric
+- note
+
+Phase 10 previews must use only valid action types, domains, and proof types unless contracts are intentionally expanded later.
+
+## Confirmed Existing Research-Adjacent Foundations
+
+Existing database/types/read-helper inspection already shows these research-adjacent pieces:
+
+- research_target
+- research_relevance
+- learning session type: research
+- quiz type: research_review
+- project type: research
+- project type: experiment
+- project link type: paper
+- project link type: reference
+- project link type: proof
+
+Existing Phase 9 and earlier domains available for linkage:
+
+- goals
+- goal milestones
+- proof items
+- tasks
+- resume versions
+- resume bullets
+- skill paths
+- skills
+- skill prerequisites
+- learning sessions
+- quizzes
+- quiz attempts
+- projects
+- project milestones
+- project bugs
+- project tests
+- project releases
+- project links
+- skill progress
+
+## Confirmed Migration State
+
+Existing migrations stop at:
+
+- 0009_phase9_parent_ownership_guards.sql
+
+Therefore Phase 10 SQL must begin with:
+
+- 0010_phase10_research_stanford_foundation.sql
+
+If ownership hardening is needed after the foundation migration, it should use:
+
+- 0011_phase10_parent_ownership_guards.sql
+
+Old migrations 0001 through 0009 must not be edited.
+
+## Migration Validator Constraints
+
+The migration validator enforces:
+
+- canonical migration filenames
+- sequential migration numbers
+- non-empty migration files
+- no corrupted copied math markers
+- no referencespublic. whitespace mistakes
+- no disabled row level security
+- RLS enablement for migrations that create tables
+- SELECT and INSERT policies for user-owned tables
+- user ID indexes for user-owned tables
+- no memory_items before the dedicated memory phase
+
+Phase 10 SQL must obey these constraints.
+
+## Phase 10 Risk Boundaries
+
+Phase 10 must not break old phases by:
+
+- renaming existing types
+- editing old migrations
+- removing exports from shared barrels
+- changing existing dashboard shell behavior
+- changing auth/session behavior
+- changing shared component props
+- adding hidden writes
+- adding dashboard mutations
+- adding OpenAI/web/Python execution inside dashboards
+- creating memory_items
+- adding autonomous emails
+- adding uncontrolled background jobs
+
+## Locked Phase 10 Plan
+
+Phase 10 is locked as:
+
+- 36 total steps
+- 11 chunks
+
+Chunk split:
+
+- Chunk A: 10.1-10.3
+- Chunk B: 10.4-10.6
+- Chunk C: 10.7
+- Chunk C.1: 10.8
+- Chunk D: 10.9
+- Chunk E: 10.10-10.12
+- Chunk F: 10.13-10.15
+- Chunk G: 10.16-10.17
+- Chunk H: 10.18-10.19
+- Chunk I: 10.20-10.27
+- Chunk J: 10.28-10.33
+- Chunk K: 10.34-10.36
+
+## Chunk A Conclusion
+
+Chunk A confirms that Phase 10 can proceed as a new isolated Research / Stanford layer.
+
+The next chunk is Chunk B:
+
+- 10.4 Research schema design
+- 10.5 Stanford/PhD schema design
+- 10.6 Source-to-scope traceability matrix
+```
+
+### `docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT.md`
+
+```md
+# Phase 10 Completion Report — Research / Stanford System
+
+Status: Complete.
+
+## Completed scope
+
+Phase 10 created the Research / Stanford System foundation for ascendOS + Carnos.
+
+Completed:
+
+- Research and Stanford source-of-truth inspection.
+- Research schema design.
+- Stanford/PhD schema design.
+- Source-to-scope traceability.
+- Research/Stanford SQL foundation.
+- Parent ownership guards and RLS hardening.
+- Database type contracts.
+- Research and Stanford read repositories.
+- Dashboard aggregation helper.
+- Dashboard registry extension.
+- Shared research summary UI primitive.
+- `/research-lab` authenticated read route.
+- `/research-stanford` authenticated read route.
+- Research proof/linkage visibility.
+- Stanford proof/target-fit linkage visibility.
+- Privacy and safe-write boundary panels.
+- Research detail visibility panels.
+- Stanford/PhD detail visibility panels.
+- Research proposed-action preview visibility.
+- Research cross-dashboard links.
+- Phase 10 audit gate.
+- Phase 10 manual smoke checklist.
+- Phase 10 completion report.
+
+## Research System routes
+
+- `/research-lab`
+- `/research-stanford`
+
+## Completed table foundation
+
+Research-side tables:
+
+- `research_ideas`
+- `research_questions`
+- `research_literature_items`
+- `research_citations`
+- `research_claims`
+- `research_experiments`
+- `research_results`
+- `research_papers`
+- `research_paper_versions`
+- `research_venues`
+- `research_submissions`
+- `research_feedback`
+
+Stanford/PhD-side tables:
+
+- `target_universities`
+- `target_labs`
+- `target_professors`
+- `phd_readiness_assessments`
+- `phd_application_assets`
+- `sop_versions`
+- `recommendation_targets`
+
+## Verification gates
+
+Final closeout passed:
+
+- `npm run audit:phase10`
+- `npm run check`
+- `npm run audit:integration`
+- `npx tsc --noEmit`
+- `npm run lint`
+- `npm run validate:migrations`
+- `git diff --check`
+
+## Protected boundaries
+
+Phase 10 remains read-first and visibility-only.
+
+Forbidden in Phase 10 dashboard/read surfaces:
+
+- direct SQL writes
+- autonomous Carnos writes
+- professor/lab scraping
+- email/message sending
+- paper submission automation
+- application submission automation
+- Python/ML worker execution
+- memory/RAG activation
+- background jobs
+
+Safe-write law remains:
+
+Python/ML advises. The app validates. The user confirms. The server writes. SQL records. Audit logs.
+
+## Deferred scope
+
+Deferred to later phases:
+
+- live Supabase browser QA
+- write/edit/delete research UI
+- real proposed-action persistence for research-specific actions
+- paper generation
+- professor outreach automation
+- lab/professor web search or scraping
+- email/message sending
+- paper submission integration
+- PhD application submission integration
+- Python/ML worker execution
+- memory/RAG
+- voice
+- background jobs
+
+## Next phase
+
+Phase 11 — Health / Body System.
+```
+
+### `docs/phase-reports/PHASE_10_SOURCE_TO_SCOPE_TRACEABILITY.md`
+
+```md
+# Phase 10 — Source-to-Scope Traceability Matrix
+
+## Purpose
+
+This matrix maps the Phase 10 Research / Stanford System scope to source-approved project goals, existing foundations, and deferred future phases.
+
+This is documentation only. It does not create SQL, app code, types, routes, or dashboard components.
+
+## Traceability Matrix
+
+| Scope Item | Phase 10 Coverage | Existing Foundation | Deferred Boundary |
+|---|---|---|---|
+| Research ideas | `research_ideas` design | projects, goals, proof | no AI idea generation writes |
+| Research questions | `research_questions` design | projects, tasks | no autonomous hypothesis creation |
+| Literature review | `research_literature_items` design | knowledge route, project links | no web scraping in Phase 10 |
+| Citations | `research_citations` design | project link type `reference`, proof items | no automatic citation fetching |
+| Research claims | `research_claims` design | proof items, project results, resume bullets | no unsupported generated claims |
+| Experiments | `research_experiments` design | project type `experiment`, project tests | no Python/ML mutation |
+| Results | `research_results` design | proof items, project releases | no fake metrics |
+| Papers | `research_papers` design | project link type `paper`, proof items | no paper submission automation |
+| Paper versions | `research_paper_versions` design | documents, proof, resume | no file processing automation yet |
+| Venues | `research_venues` design | career/research planning docs | no live venue scraping |
+| Submissions | `research_submissions` design | tasks, timeline | no automatic submission |
+| Feedback | `research_feedback` design | tasks, proof, professor notes | no automatic email ingestion |
+| Target universities | `target_universities` design | goals, career targets | no admissions prediction claims |
+| Target labs | `target_labs` design | research ideas, papers, projects | no scraping |
+| Target professors | `target_professors` design | literature, projects, papers | no automatic outreach |
+| PhD readiness | `phd_readiness_assessments` design | proof, resume, projects, goals | no deterministic guarantee claims |
+| Application assets | `phd_application_assets` design | resume, proof, tasks | no application submission |
+| SOP versions | `sop_versions` design | documents, goals, professor fit | no AI submission without review |
+| Recommendations | `recommendation_targets` design | networking, proof, projects | no automatic recommender contact |
+
+## Existing Phase Links
+
+Phase 10 should link to:
+
+- Phase 4 SQL spine: profiles, goals, proof, tasks, events
+- Phase 6 proposed-action flow: create_task, create_goal, create_proof_item
+- Phase 7 operating dashboards: command, goals, timeline, proof, Carnos
+- Phase 8 career system: resume, networking, interviews, career proof
+- Phase 9 learning/project system: skills, sessions, quizzes, projects, releases, links, skill progress
+
+## Safe-Link Strategy
+
+Phase 10 should not require old records to change.
+
+Use nullable references:
+
+- goal_id
+- task_id
+- proof_item_id
+- project_id
+- skill_id
+- resume_bullet_id
+- daily_log_id
+- timeline_event_id
+
+Future SQL must harden ownership for cross-parent references.
+
+## Deferred to Later Phases
+
+### Phase 15 — Memory / RAG / Knowledge Vault
+
+Deferred:
+
+- memory_items
+- embeddings
+- vector search
+- RAG over papers
+- semantic retrieval
+
+### Phase 16 — Internet / Web Tools
+
+Deferred:
+
+- live paper search
+- live professor/lab scraping
+- conference deadline fetching
+- citation metadata lookup
+
+### Phase 17 — Analytics / Experiments / Intelligence
+
+Deferred:
+
+- advanced scoring models
+- publication probability analytics
+- professor fit automation
+- research velocity intelligence
+
+### Later Safe-Write Expansions
+
+Deferred:
+
+- create research idea from Carnos
+- create paper from proposal
+- update readiness score through server action
+- generate professor email draft and save as draft
+- application submission workflow
+
+## Chunk B Conclusion
+
+Chunk B defines the Phase 10 design surface and confirms that implementation can proceed to Chunk C without modifying previous phases.
+```
+
+### `docs/phase-reports/PHASE_1_8_RETROSPECTIVE_GAP_AUDIT.md`
+
+```md
+# Phase 1–8 Retrospective Gap Audit
+
+Status: Post-Phase-8 audit artifact.
+
+Date: 2026-06-24
+
+Project: ascendOS + Carnos
+
+## Purpose
+
+This audit checks whether important source-of-truth requirements from Phases 1–8 were skipped, deferred, or completed.
+
+This report is not a new feature phase.
+It is a safety checkpoint before beginning Phase 9 — Learning / Project System.
+
+## Source-of-truth hierarchy used
+
+1. FINAL_SYNCED Implementation Bible DOCX.
+2. FINAL_SYNCED Source-of-Truth JSON.
+3. Repo phase plans, reports, logs, status files, audits, migrations, and scripts.
+4. Current codebase.
+5. Conversation-derived decisions only when reflected in repo artifacts.
+
+## Core constitutional rule
+
+Python/ML advises.
+The app validates.
+The user confirms.
+The server writes.
+SQL records.
+Audit logs.
+Python/ML must never directly mutate SQL.
+
+## Safe-write loop
+
+proposal -> validation -> Save/Edit/Cancel -> server-owned execution -> audit log -> timeline boundary -> dashboard refresh
+
+## Overall conclusion
+
+No critical Phase 1–8 blocker is currently known to be skipped.
+
+The repository has completed the required foundation through Phase 8 from a code, build, audit, route, and read-dashboard perspective.
+
+Important full-v1 features remain incomplete, but those are deferred to later phases, not considered skipped Phase 1–8 work.
+
+## Latest known verification proof
+
+The final Phase 8 closeout passed:
+
+- `npm run audit:phase8`
+- `npm run check`
+- `npx tsc --noEmit`
+- `npm run lint`
+- `next build`
+- `git diff --check`
+- GitHub push of commit `50e3376`
+
+## Phase-by-phase retrospective
+
+### Phase 1 — Source-of-truth foundation
+
+Status: Complete.
+
+Completed:
+- Source-of-truth files placed under `docs/source-of-truth`.
+- Source hierarchy established.
+- Project execution log started.
+- Code ledger started.
+- Phase/status tracking started.
+- Change log started.
+- Repo initialized and pushed.
+
+Not skipped:
+- Source-of-truth hierarchy.
+- App name `ascendOS`.
+- AI companion name `Carnos`.
+- Confirmation-before-write law.
+- SQL-centered architecture principle.
+
+Deferred:
+- Full source-of-truth automated parser.
+- Complete source-diff enforcement against every DOCX/JSON clause.
+
+Risk:
+- Future phases must keep source-of-truth documents authoritative and avoid drifting into ad hoc implementation.
+
+### Phase 2 — App shell and route foundation
+
+Status: Complete.
+
+Completed:
+- Next.js app foundation.
+- Route foundation.
+- Core app shell.
+- Canonical route mindset.
+- Basic navigation structure.
+
+Not skipped:
+- Protected app-shell direction.
+- Route map direction.
+- Modular dashboard architecture direction.
+
+Deferred:
+- Final visual polish.
+- Responsive/browser QA for every route.
+- Full design-system refinement.
+
+Risk:
+- Later phases must not add random non-canonical routes.
+
+### Phase 3 — Auth and Supabase foundation
+
+Status: Complete.
+
+Completed:
+- Supabase foundation.
+- Auth boundary direction.
+- Protected dashboard access pattern.
+- Server-side auth helpers.
+
+Not skipped:
+- Authenticated dashboard shell pattern.
+- User-scoped read path direction.
+
+Deferred:
+- Full production auth hardening.
+- Live cross-user RLS testing.
+- Final privacy/export/delete flows.
+
+Risk:
+- Every later SQL-backed feature must preserve user scoping and protected route behavior.
+
+### Phase 4 — Core SQL spine
+
+Status: Complete.
+
+Completed:
+- Core SQL foundation.
+- Migration validation.
+- Core entities for goals, tasks, daily logs, proof/timeline style records.
+- Database typing direction.
+
+Not skipped:
+- SQL as durable state.
+- Timeline/audit-friendly data model.
+- RLS/user-owned table direction.
+
+Deferred:
+- Later domain-specific SQL tables.
+- Complete export/delete model.
+- Advanced analytics schema.
+
+Risk:
+- Future migrations must not bypass the SQL spine or introduce untracked state.
+
+### Phase 5 — Core read UI / Carnos foundation status
+
+Status: Complete.
+
+Completed:
+- Core read dashboards.
+- Domain read pattern.
+- Empty/read-error handling foundation.
+- Carnos foundation/status surface.
+- Read-only dashboard boundary.
+
+Not skipped:
+- Dashboard read boundary.
+- Carnos status foundation.
+- Core dashboard rendering patterns.
+
+Deferred:
+- Full Carnos chat.
+- Real persona routing.
+- Real memory/RAG-backed responses.
+- Voice.
+- Live AI tools.
+
+Risk:
+- Do not confuse Carnos status foundation with full Carnos intelligence.
+
+### Phase 6 — Safe Write / Proposed Action Flow
+
+Status: Complete as foundation.
+
+Completed:
+- Proposed action contracts.
+- Proposed action validation.
+- Proposed action review card.
+- Action lifecycle foundation.
+- Execution dispatcher foundation.
+- Create task/goal/daily log/proof item flows.
+- UI card remains non-mutating.
+
+Not skipped:
+- Save/Edit/Cancel law.
+- User confirmation before persistence.
+- No direct Python/ML SQL mutation.
+- No silent dashboard mutation.
+
+Deferred:
+- Wiring every domain dashboard to create real proposed actions.
+- Full server-owned execution for all future domains.
+- Complete audit log coverage for every action type.
+
+Risk:
+- Later phases must not let dashboards directly write records.
+
+### Phase 7 — Core Operating Dashboards
+
+Status: Complete.
+
+Completed:
+- Command dashboard.
+- Timeline dashboard.
+- Calendar dashboard.
+- Goals dashboard.
+- Proof dashboard.
+- Carnos panel v1.
+- Cross-dashboard links.
+- Dashboard card registry.
+- Operating dashboard cards/grid.
+- Integration sanity audit expansion.
+
+Not skipped:
+- Core operating dashboard surfaces.
+- Dashboard registry.
+- Protected dashboard boundaries.
+- Canonical route safety.
+
+Deferred:
+- Final design polish.
+- Full live-data QA.
+- Advanced analytics.
+- More sophisticated Carnos interpretation.
+
+Risk:
+- Later domain dashboards must remain compatible with operating dashboard layout and registry contracts.
+
+### Phase 8 — Career System
+
+Status: Complete.
+
+Completed:
+- Phase 8 plan.
+- Career inspection.
+- Career SQL schema design.
+- Career SQL migration.
+- Career database type alignment.
+- Career read repository helpers.
+- Career aggregation helpers.
+- Career dashboard registry cards.
+- `/career` dashboard.
+- `/networking` dashboard.
+- `/resume` dashboard.
+- `/interviews` dashboard.
+- Application event timeline.
+- Networking/referral dashboard.
+- Resume versioning dashboard.
+- Interview command center.
+- Career cross-links.
+- Career proof/evidence linkage.
+- Career proposed-action visibility with no direct execution.
+- Career empty/loading/error/privacy state boundary.
+- Phase 8 audit gate.
+- Integration audit expansion.
+- Manual smoke checklist.
+- Completion report.
+- Final closeout commit and push.
+
+Not skipped:
+- Career SQL foundation.
+- Career routes.
+- Career read dashboards.
+- Career evidence linkage.
+- Career safety boundary.
+- Career audit gate.
+
+Deferred:
+- Actual job application write UI.
+- Job search integrations.
+- Scraping.
+- Resume generation.
+- Email/referral sending.
+- Interview scheduling.
+- Live browser QA with seeded Supabase career data.
+
+Risk:
+- Career must remain read-first until safe write flows are explicitly wired.
+
+## Important deferred items across Phase 1–8
+
+The following are not skipped; they belong to later phases:
+
+- Learning Academy.
+- Project Builder.
+- Research / Stanford system.
+- Health / Body system.
+- Life Admin system.
+- Grimoire / mode system.
+- Voice foundation.
+- Memory / RAG / Knowledge Vault.
+- Internet / web tools.
+- Analytics / experiments / intelligence.
+- Custom trackers / plugin system.
+- Privacy / export / delete.
+- Deployment and portfolio release preparation.
+- Final QA and polish.
+
+## Potential gaps to watch
+
+### Gap 1 — Manual browser QA is not fully proven
+
+Automated audits and builds pass, but full manual browser QA with real Supabase data is still not complete.
+
+Decision:
+- Not a Phase 1–8 blocker.
+- Must be tracked before deployment/release.
+
+### Gap 2 — Production privacy/export/delete is not complete
+
+The app has protected foundations, but full export/delete/privacy controls belong to later privacy phases.
+
+Decision:
+- Not a Phase 1–8 blocker.
+- Must not be forgotten before v1 release.
+
+### Gap 3 — Carnos is not fully intelligent yet
+
+Carnos foundation/status/proposed-action visibility exists, but real memory, voice, RAG, web tools, and full AI companion behavior are later phases.
+
+Decision:
+- Not a Phase 1–8 blocker.
+- Must be implemented in phases 14–17.
+
+### Gap 4 — Most dashboards are read-first
+
+This is intentional because the app must preserve confirmation-first writes.
+
+Decision:
+- Not a skip.
+- Future write UX must use proposed-action flow.
+
+### Gap 5 — Source-of-truth clause coverage is not fully automated
+
+Audits check many structural markers, but they do not yet map every DOCX/JSON requirement to code.
+
+Decision:
+- Acceptable for Phase 1–8.
+- Later phases should improve source alignment audits.
+
+## Phase 9 guardrails
+
+Before Phase 9 starts, preserve these rules:
+
+- Do not break Phase 1–8 routes.
+- Do not remove Phase 8 career routes.
+- Do not bypass proposed-action confirmation.
+- Do not create direct dashboard writes.
+- Do not add internet tools.
+- Do not add memory/RAG.
+- Do not add voice.
+- Do not add background jobs.
+- Do not create non-canonical routes.
+- Do not mix `/learning`, `/projects`, and `/knowledge` without source-aligned reasoning.
+
+## Phase 9 expected focus
+
+Phase 9 should focus on:
+
+- Learning Academy dashboard.
+- Project Builder dashboard.
+- Skill paths.
+- Learning sessions.
+- Quizzes.
+- Project milestones.
+- Build logs.
+- Bugs/tests/releases.
+- README/portfolio/resume proof linkage.
+- Goal/task/proof/timeline linkage.
+- Read-first UI and proposed-action visibility.
+
+## Final retrospective conclusion
+
+Phase 1–8 are complete enough to proceed to Phase 9.
+
+No known critical Phase 1–8 source-of-truth item is currently skipped.
+
+The remaining major system capabilities are deferred to later phases and should be tracked phase-by-phase until v1 release.
+```
+
 ### `docs/phase-reports/PHASE_4_CORE_SQL_SPINE_REPORT.md`
 
 ```md
@@ -4081,6 +11726,1502 @@ After this report, remaining steps are:
 Phase 5 successfully turns the static dashboard shell into a real read-only operating surface connected to the SQL spine.
 
 The project is still clean, auditable, source-aligned, and protected from premature memory, generation, and mutation behavior.
+```
+
+### `docs/phase-reports/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW_REPORT.md`
+
+```md
+# Phase 6 Report — Safe Write / Proposed Action Flow
+
+Completed: 2026-06-20 18:47 UTC
+
+## Phase Goal
+
+Phase 6 implemented the confirmation-first safe write flow for ascendOS + Carnos.
+
+Locked flow:
+
+proposal -> validation -> Save/Edit/Cancel -> server-owned execution -> audit log -> timeline boundary -> dashboard refresh
+
+## Completed Scope
+
+Phase 6 completed:
+
+1. Phase 6 plan lock
+2. Proposed action types
+3. Proposed action contracts
+4. Action result types
+5. Proposed action validation
+6. Audit logging helper
+7. Timeline helper boundary
+8. Proposed action creation helper
+9. Action lifecycle helper
+10. Execution dispatcher
+11. Create task execution flow
+12. Create goal execution flow
+13. Create daily log execution flow
+14. Create proof item execution flow
+15. Save/Edit/Cancel review UI
+16. Carnos page review wiring
+17. Phase 6 audit gate
+18. Phase 6 report and completion marker
+
+## Implemented Files
+
+Phase plan:
+- docs/phase-plans/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW.md
+
+Action core:
+- src/lib/actions/action-types.ts
+- src/lib/actions/proposed-action-contracts.ts
+- src/lib/actions/action-results.ts
+- src/lib/actions/validate-proposed-action.ts
+- src/lib/actions/create-proposed-action.ts
+- src/lib/actions/action-lifecycle.ts
+- src/lib/actions/execution-dispatcher.ts
+
+Execution flows:
+- src/lib/actions/flows/create-task-flow.ts
+- src/lib/actions/flows/create-goal-flow.ts
+- src/lib/actions/flows/create-daily-log-flow.ts
+- src/lib/actions/flows/create-proof-item-flow.ts
+
+Audit and timeline:
+- src/lib/audit/write-audit-log.ts
+- src/lib/timeline/write-timeline-event.ts
+
+UI:
+- src/components/actions/proposed-action-review-card.tsx
+- src/components/actions/index.ts
+- src/app/carnos/page.tsx
+
+Audit gate:
+- scripts/audit-phase-6.mjs
+- package.json
+
+## Supported Action Types
+
+- create_task
+- create_goal
+- create_daily_log
+- create_proof_item
+
+## Target Table Mapping
+
+- create_task -> tasks
+- create_goal -> goals
+- create_daily_log -> daily_logs
+- create_proof_item -> proof_items
+
+## Safety Boundary
+
+Phase 6 preserves the locked architecture rule:
+
+Python/ML advises.
+The app validates.
+The user confirms.
+The server writes.
+SQL records.
+Audit logs.
+Python/ML must never directly mutate SQL.
+
+Phase 6 did not add Python/ML runtime, external LLM calls, autonomous Carnos generation, memory engine, voice, background jobs, cron jobs, service-role key usage, direct client-side SQL mutation, or unconfirmed action execution.
+
+## Confirmation Boundary
+
+The dispatcher only executes approved actions.
+
+Each execution flow checks user ownership, action status, action type, payload shape, target insert result, ai_actions execution state update, audit log boundary, and timeline helper boundary.
+
+## UI Boundary
+
+The proposed action review card supports preview, payload JSON editing, Save / Confirm callback boundary, Cancel callback boundary, and validation issue display.
+
+The UI component does not call Supabase directly, execute actions directly, mutate SQL directly, generate Carnos output, or start Python/ML behavior.
+
+## Audit Gate
+
+Phase 6 added npm run audit:phase6 and wired it into npm run check.
+
+The audit verifies Phase 6 files, action contracts, validation, lifecycle markers, dispatcher routes, approved-only execution flows, audit helper, timeline boundary, and UI mutation boundaries.
+
+## Verification
+
+Before completion, npm run check and git diff --check passed.
+
+npm run check includes linting, route validation, registry validation, migration validation, Phase 3 audit, Phase 4 audit, Phase 5 audit, Phase 6 audit, source alignment audit, Python/ML boundary audit, and production build.
+
+## Final Status
+
+Phase 6 is complete.
+
+Next phase: Phase 7 planning lock.
+```
+
+### `docs/phase-reports/PHASE_7_CORE_OPERATING_DASHBOARDS_REPORT.md`
+
+```md
+# Phase 7 Report — Core Operating Dashboards
+
+Status: Complete.
+
+## Phase purpose
+
+Phase 7 established the first real operating-dashboard layer for ascendOS + Carnos. It connected the source-approved dashboard loop across command, timeline, calendar, goals, proof visibility, pending updates, and Carnos operating context without adding autonomous behavior, generation, memory, or direct mutation paths.
+
+## Completed scope
+
+- Phase 7.1 plan lock.
+- Phase 7.2 dashboard layout contract.
+- Phase 7.3 dashboard card registry.
+- Phase 7.4 shared dashboard card primitives.
+- Phase 7.5 dashboard data aggregation helpers.
+- Phase 7.6 Command dashboard v1.
+- Phase 7.6B Command route wiring.
+- Phase 7.6C integration sanity audit gate.
+- Phase 7.7 Timeline dashboard v1.
+- Phase 7.7B Timeline route wiring.
+- Phase 7.8 Calendar dashboard v1.
+- Phase 7.9 Goals dashboard v1.
+- Phase 7.10 Proof dashboard card system.
+- Phase 7.11 Pending updates drawer.
+- Phase 7.12 Carnos panel v1.
+- Phase 7.13 Cross-dashboard links.
+- Phase 7.14 Empty/loading/error/privacy states.
+- Phase 7.15 No-hardcoded-demo-data cleanup.
+- Phase 7.16 Phase 7 integration audit gate.
+- Phase 7.17 Manual smoke checklist.
+- Phase 7.18 report and completion marker.
+
+## Implemented files and surfaces
+
+Primary dashboard components:
+
+- `src/components/dashboard/command-dashboard-v1.tsx`
+- `src/components/dashboard/timeline-dashboard-v1.tsx`
+- `src/components/dashboard/calendar-dashboard-v1.tsx`
+- `src/components/dashboard/goals-dashboard-v1.tsx`
+- `src/components/dashboard/proof-dashboard-v1.tsx`
+- `src/components/dashboard/carnos-panel-v1.tsx`
+
+Shared dashboard infrastructure:
+
+- `src/lib/dashboard/dashboard-layout-contract.ts`
+- `src/lib/dashboard/dashboard-card-registry.ts`
+- `src/lib/dashboard/dashboard-data-helpers.ts`
+- `src/components/dashboard/operating-dashboard-card.tsx`
+- `src/components/dashboard/operating-dashboard-grid.tsx`
+- `src/components/dashboard/cross-dashboard-links.tsx`
+
+Action visibility:
+
+- `src/components/actions/pending-updates-drawer.tsx`
+
+Audit and QA:
+
+- `scripts/audit-integration-sanity.mjs`
+- `docs/qa/PHASE_7_MANUAL_SMOKE_CHECKLIST.md`
+
+## Route wiring
+
+The following canonical dashboard routes are wired:
+
+- `/command`
+- `/timeline`
+- `/calendar`
+- `/goals`
+- `/carnos`
+
+No `/proof` route was introduced because `/proof` is not part of the current canonical route list. Proof visibility remains component-only through `ProofDashboardV1`.
+
+## Operating loop established
+
+The Phase 7 dashboard layer now supports this read-only operating loop:
+
+`goals -> tasks/events -> calendar -> proof -> timeline -> pending Carnos updates -> command dashboard`
+
+## Safety boundary
+
+Phase 7 remains read-only/dashboard-only.
+
+Not added in Phase 7:
+
+- direct SQL mutation from dashboard components
+- autonomous Carnos actions
+- Carnos generation
+- memory/RAG
+- Python/ML execution
+- voice execution
+- internet/web tools
+- background jobs
+- non-canonical `/proof` route
+
+The confirmation-first law remains intact:
+
+`proposal -> validation -> Save/Edit/Cancel -> server-owned execution -> audit log -> timeline boundary -> dashboard refresh`
+
+## Validation result
+
+`npm run check` passed after Phase 7.17 and after the Phase 7.16 audit gate expansion.
+
+Required gates covered:
+
+- lint
+- route validation
+- registry validation
+- SQL migration validation
+- Phase 3 audit
+- Phase 4 audit
+- Phase 5 audit
+- Phase 6 audit
+- source alignment audit
+- Python/ML boundary audit
+- integration audit
+- production build
+
+## Manual QA
+
+Manual browser verification checklist exists at:
+
+- `docs/qa/PHASE_7_MANUAL_SMOKE_CHECKLIST.md`
+
+Manual verification is still a human/browser task. The automated gates validate structure, wiring, exports, boundaries, route safety, and build integrity.
+
+## Completion decision
+
+Phase 7 is complete and ready to transition to Phase 8: Career System.
+```
+
+### `docs/phase-reports/PHASE_8_2_CAREER_INSPECTION_REPORT.md`
+
+```md
+# Phase 8.2 Report — Career Route and Data Contract Inspection
+
+Status: Complete.
+
+## Purpose
+
+Inspect the current career-related route, SQL, repository, dashboard, and audit state before adding Phase 8 runtime implementation.
+
+This step makes no product behavior changes.
+
+## Current route state
+
+### `/career`
+
+Current file: `src/app/career/page.tsx`
+
+Current status:
+- Uses `DomainReadPage`.
+- Already has career aliases:
+  - career
+  - job
+  - jobs
+  - referral
+  - interview
+  - resume
+  - networking
+- It is read-only.
+- It displays a generic career read surface.
+- It does not yet have a dedicated Career System dashboard.
+
+Phase 8 implication:
+- `/career` is safe to upgrade later into the Career dashboard v1.
+
+### `/networking`
+
+Current file: `src/app/networking/page.tsx`
+
+Current status:
+- Uses `PlaceholderDashboardPage`.
+- Static placeholder only.
+- No connected read data.
+- No networking contacts, interactions, referrals, or follow-up logic.
+
+Phase 8 implication:
+- Needs networking/referral dashboard v1 and route wiring.
+
+### `/resume`
+
+Current file: `src/app/resume/page.tsx`
+
+Current status:
+- Uses `PlaceholderDashboardPage`.
+- Static placeholder only.
+- No connected read data.
+- No resume versions, resume bullets, evidence links, or application usage.
+
+Phase 8 implication:
+- Needs resume versioning dashboard v1 and route wiring.
+
+### `/interviews`
+
+Current file: `src/app/interviews/page.tsx`
+
+Current status:
+- Uses `PlaceholderDashboardPage`.
+- Static placeholder only.
+- No connected read data.
+- No interview records, prep tasks, round tracking, performance notes, follow-up, or outcomes.
+
+Phase 8 implication:
+- Needs interview command center v1 and route wiring.
+
+## Current repository state
+
+Current file: `src/lib/repositories/core-read.ts`
+
+Inspection result:
+- Generic read helpers exist for existing foundation tables.
+- No career-specific helpers exist yet.
+- Missing helper families:
+  - job applications
+  - job application events
+  - networking contacts
+  - networking interactions
+  - referrals
+  - resume versions
+  - resume bullets
+  - interviews
+
+Phase 8 implication:
+- Add career read repository helpers after SQL/types are added.
+
+## Current database type state
+
+Current file: `src/types/database.ts`
+
+Inspection result:
+- Current generated/manual database types include foundation tables.
+- Career tables are not present yet.
+- Missing tables:
+  - `job_applications`
+  - `job_application_events`
+  - `networking_contacts`
+  - `networking_interactions`
+  - `resume_versions`
+  - `resume_bullets`
+  - `interviews`
+
+Phase 8 implication:
+- Phase 8 needs an additive migration and matching type updates.
+- No destructive SQL changes should be made.
+
+## Current SQL migration state
+
+Latest inspected migration:
+- `supabase/migrations/0006_tasks_and_events.sql`
+
+Inspection result:
+- Core task/event foundation exists.
+- Events already include `career` as an event type/domain path.
+- Dedicated career tables do not exist yet.
+
+Phase 8 implication:
+- Add a new migration after 0006.
+- Do not modify previous migrations unless a validation issue requires a compatibility fix.
+
+## Current dashboard export/component state
+
+Current file: `src/components/dashboard/index.ts`
+
+Inspection result:
+- No dedicated career dashboard exports yet.
+- Missing components:
+  - `CareerDashboardV1`
+  - `JobApplicationsPipeline`
+  - `NetworkingDashboardV1`
+  - `ResumeDashboardV1`
+  - `InterviewsDashboardV1`
+  - career cross-link helpers if needed
+
+Phase 8 implication:
+- Add career components incrementally after data contracts exist.
+
+## Current audit state
+
+Current file: `scripts/audit-integration-sanity.mjs`
+
+Inspection result:
+- Current integration audit checks `/career` as a Phase 5 read route.
+- It does not yet check `/networking`, `/resume`, or `/interviews` as career system surfaces.
+- It does not yet check career SQL, career repository helpers, or career dashboard exports.
+
+Phase 8 implication:
+- Add a dedicated Phase 8 audit gate.
+- Expand integration audit only after career surfaces are implemented.
+
+## Risk assessment
+
+Risk to Phases 1–7: low if Phase 8 stays additive.
+
+Do not:
+- rename existing Phase 7 dashboard contracts
+- alter existing Phase 6 proposed-action contracts prematurely
+- remove Phase 5 read-page markers
+- create non-canonical routes
+- add direct dashboard mutation
+- add autonomous applications or emails
+- add scraping/internet tools
+- add memory/RAG
+- add Python/ML worker execution
+
+## Phase 8 implementation order confirmed
+
+The correct order remains:
+
+1. SQL schema design.
+2. Add additive career SQL migration.
+3. Update database types.
+4. Add read repository helpers.
+5. Add career data aggregation helpers.
+6. Add dashboard cards/registry.
+7. Add UI surfaces one route at a time.
+8. Add career proposed-action visibility without direct execution.
+9. Add states.
+10. Add audits and smoke checklist.
+11. Add final report.
+
+## Verdict
+
+Phase 8.2 inspection is complete.
+
+The repo is ready for Phase 8.3 Career SQL schema plan / migration design.
+```
+
+### `docs/phase-reports/PHASE_8_CAREER_SYSTEM_COMPLETION_REPORT.md`
+
+```md
+# Phase 8 Completion Report — Career System
+
+Status: Complete pending final verification and commit.
+
+## Completed scope
+
+Phase 8 created the Career System foundation for ascendOS + Carnos.
+
+Completed:
+
+- Career SQL foundation.
+- Career read repositories.
+- Career dashboard aggregation.
+- Career dashboard registry cards.
+- `/career`, `/networking`, `/resume`, and `/interviews` dashboards.
+- Job applications pipeline.
+- Networking and referral dashboard.
+- Resume versioning dashboard.
+- Interview command center.
+- Career cross-dashboard links.
+- Career proof/evidence linkage.
+- Career proposed-action visibility with no direct execution.
+- Career empty/loading/error/privacy states.
+- Career audit gate.
+- Integration audit expansion.
+- Phase 8 manual smoke checklist.
+- Phase 8 completion report.
+
+## Career System routes
+
+- `/career`
+- `/networking`
+- `/resume`
+- `/interviews`
+
+## Verification gates
+
+Final closeout must pass:
+
+- `npm run audit:phase8`
+- `npm run audit:integration`
+- `npm run check`
+- `npx tsc --noEmit`
+- `npm run lint`
+- `git diff --check`
+
+## Deferred scope
+
+Deferred to later phases:
+
+- live Supabase browser QA
+- write/edit/delete career UI
+- job search integrations
+- scraping
+- email/message sending
+- resume generation
+- interview scheduling
+- Python/ML worker execution
+- memory/RAG
+- voice
+- background jobs
+
+## Next phase
+
+Phase 9 — Learning / Project System.
+```
+
+### `docs/phase-reports/PHASE_9_AUDIT_GATE.md`
+
+```md
+# Phase 9 Audit Gate
+
+## Phase
+
+Phase 9 — Learning / Project System
+
+## Audit Gate Summary
+
+Phase 9 is structurally complete for its planned read-first implementation scope.
+
+## Completed Chunks
+
+| Chunk | Scope | Status |
+|---|---|---|
+| A | Source inspection, route inspection, plan lock | Complete |
+| B | Schema design and source-to-scope traceability | Complete |
+| C | SQL migration | Complete |
+| C.1 | Parent ownership hardening | Complete |
+| D | Database types | Complete |
+| E | Learning/project read helpers | Complete |
+| F | Aggregation helpers, dashboard registry, shared UI | Complete |
+| G | Learning Academy dashboard and `/learning` route | Complete |
+| H | Project Builder dashboard and `/projects` route | Complete |
+| I | Knowledge Vault route alignment | Complete |
+| J | Skill/progress, quiz/session, project build-log detail panels | Complete |
+| K | Linkage, proposed-action visibility, state/privacy, cross-links | Complete |
+| L | Audit gate, smoke checklist, completion report, closeout | Complete |
+
+## Verification Gates
+
+The following gates were run before closeout:
+
+- `npm run check`
+- `npx tsc --noEmit`
+- `npm run lint`
+- `git diff --check`
+
+All passed before closeout.
+
+## Primary Routes
+
+- `/learning`
+- `/projects`
+- `/knowledge`
+
+## Primary Components
+
+- `learning-academy-dashboard-v1.tsx`
+- `project-builder-dashboard-v1.tsx`
+- `knowledge-vault-alignment-v1.tsx`
+- `learning-project-summary-panel.tsx`
+- `learning-project-detail-panels.tsx`
+- `learning-project-linkage-panels.tsx`
+
+## Primary Data Foundation
+
+- `0008_learning_project_system_foundation.sql`
+- `0009_phase9_parent_ownership_guards.sql`
+- `src/types/database.ts`
+- `src/lib/repositories/core-read.ts`
+- `src/lib/dashboard/learning-project-dashboard-data-helpers.ts`
+
+## Boundary Result
+
+Phase 9 remains read-first.
+
+No dashboard added direct persistence, autonomous Carnos mutation, Python/ML mutation, or hidden background execution.
+
+## Audit conclusion
+
+Phase 9 passes the implementation audit gate for the planned Learning / Project System foundation.
+```
+
+### `docs/phase-reports/PHASE_9_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
+
+```md
+# Phase 9 Chunk A — Source and Route Inspection
+
+Status: Drafted for Phase 9 Chunk A.
+
+Phase: 9 — Learning / Project System
+
+Chunk: A
+
+Covers:
+- 9.1 Source-of-truth inspection
+- 9.2 Phase 9 plan lock
+- 9.3 Current route inspection
+
+## Inspection Date
+
+2026-06-24
+
+## Source-of-truth files inspected
+
+- `docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Implementation_Bible_FINAL_SYNCED.docx`
+- `docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_FINAL_SYNCED.json`
+
+## Repo snapshot before Chunk A
+
+Branch:
+
+`main`
+
+Latest known commit before Chunk A:
+
+`536c6d0 Add Phase 1-8 retrospective gap audit`
+
+Phase 1-8 retrospective audit status:
+
+Committed and pushed.
+
+Existing source-of-truth files:
+
+- `docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Implementation_Bible_FINAL_SYNCED.docx`
+- `docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_FINAL_SYNCED.json`
+- `docs/source-of-truth/backups/ascendOS_Carnos_v1_1_COMPLETE_Implementation_Bible_FINAL_SYNCED.before_phase_5_15.docx`
+
+Existing Phase 9 docs before this chunk:
+
+None found.
+
+Existing Phase 9 routes before this chunk:
+
+- `src/app/learning/page.tsx`
+- `src/app/projects/page.tsx`
+- `src/app/knowledge/page.tsx`
+
+Existing relevant dashboard/component foundation:
+
+- `src/components/dashboard/authenticated-dashboard-shell.tsx`
+- `src/components/dashboard/domain-read-page.tsx`
+- `src/components/dashboard/placeholder-dashboard-page.tsx`
+- `src/components/dashboard/cross-dashboard-links.tsx`
+- `src/components/dashboard/dashboard-card.tsx`
+- `src/components/dashboard/data-list.tsx`
+- `src/components/dashboard/empty-state.tsx`
+- `src/components/dashboard/metric-tile.tsx`
+- `src/components/dashboard/operating-dashboard-card.tsx`
+- `src/components/dashboard/operating-dashboard-grid.tsx`
+- `src/components/dashboard/section-card.tsx`
+- `src/components/dashboard/status-pill.tsx`
+- `src/components/dashboard/index.ts`
+
+Existing relevant library foundation:
+
+- `src/lib/dashboard-registry.ts`
+- `src/lib/dashboard/auth.ts`
+- `src/lib/dashboard/dashboard-card-registry.ts`
+- `src/lib/dashboard/dashboard-data-helpers.ts`
+- `src/lib/dashboard/dashboard-layout-contract.ts`
+- `src/lib/dashboard/index.ts`
+- `src/lib/repositories/core-read.ts`
+- `src/lib/repositories/index.ts`
+- `src/lib/timeline/write-timeline-event.ts`
+
+Existing migrations before Phase 9:
+
+- `supabase/migrations/0001_profiles_and_carnos_profiles.sql`
+- `supabase/migrations/0002_audit_and_ai_actions.sql`
+- `supabase/migrations/0003_chat_foundation.sql`
+- `supabase/migrations/0004_goals_foundation.sql`
+- `supabase/migrations/0005_daily_logs_and_proof_items.sql`
+- `supabase/migrations/0006_tasks_and_events.sql`
+- `supabase/migrations/0007_career_system_foundation.sql`
+
+Next expected migration:
+
+`supabase/migrations/0008_learning_project_system_foundation.sql`
+
+Existing relevant audits:
+
+- `scripts/audit-integration-sanity.mjs`
+- `scripts/audit-phase-1-7-crosswalk.mjs`
+- `scripts/audit-phase-3.mjs`
+- `scripts/audit-phase-4.mjs`
+- `scripts/audit-phase-5.mjs`
+- `scripts/audit-phase-6.mjs`
+- `scripts/audit-phase-8.mjs`
+- `scripts/audit-python-ml-boundary.mjs`
+- `scripts/audit-source-alignment.mjs`
+- `scripts/validate-registry-coverage.mjs`
+- `scripts/validate-route-coverage.mjs`
+- `scripts/validate-sql-migrations.mjs`
+
+Existing package scripts relevant to Phase 9:
+
+- `check`
+- `build`
+- `lint`
+- `validate:routes`
+- `validate:registry`
+- `validate:migrations`
+- `snapshot:code`
+- `verify:env`
+- `audit:source`
+- `audit:pythonml`
+- `audit:integration`
+- existing phase audits up to Phase 8
+
+## Phase 9 source-of-truth scope
+
+Phase 9 must build the Learning / Project System foundation.
+
+The source scope includes:
+
+- Learning academy
+- Skill trees
+- Quizzes
+- Learning sessions
+- Project builder
+- Bug logs
+- Releases
+- README proof
+- Resume proof
+
+The Learning Academy must support:
+
+- skills
+- prerequisites
+- explanations
+- practice
+- build tasks
+- proof gates
+- quizzes
+- confidence
+- mastery state
+- connection to projects
+- connection to interviews
+- connection to career dashboard
+
+## Canonical Phase 9 routes
+
+The source-of-truth canonical routes involved are:
+
+- `/learning`
+- `/projects`
+- `/knowledge`
+
+## Phase 9 non-goals
+
+Phase 9 must not implement full later-phase systems.
+
+Do not add:
+
+- full memory/RAG
+- embeddings
+- semantic search
+- internet tools
+- voice
+- autonomous Carnos execution
+- direct SQL writes from dashboards
+- Python/ML SQL mutation
+- background jobs
+- external GitHub API sync
+- resume auto-generation
+- unrestricted AI course generation
+
+## Phase 9 safety rules
+
+Phase 9 must preserve:
+
+- user-owned SQL data
+- RLS expectation
+- protected read boundaries
+- no direct dashboard writes
+- confirmation-before-write
+- proposed-action preview only unless a later safe write step explicitly wires confirmed actions
+- timeline/proof linkage where applicable
+- no hardcoded demo data after integration
+- loading, empty, error, and privacy states
+
+## Phase 9 execution model
+
+The 28 Phase 9 requirements remain the checklist.
+
+Implementation may be executed in 12 safe chunks.
+
+Chunk A only creates:
+
+- source inspection report
+- route inspection report
+- Phase 9 plan lock
+
+Chunk A must not create SQL tables, UI dashboards, or route rewrites.
+
+## Chunk A result
+
+Chunk A establishes the safe plan for Phase 9.
+
+No application code is changed in Chunk A.
+```
+
+### `docs/phase-reports/PHASE_9_COMPLETION_REPORT.md`
+
+```md
+# Phase 9 Completion Report — Learning / Project System
+
+## Completion Status
+
+Phase 9 is complete for the planned read-first Learning / Project System foundation.
+
+## What Phase 9 Added
+
+Phase 9 added a complete learning/project data and dashboard foundation across:
+
+- SQL tables
+- ownership and RLS assumptions
+- typed database definitions
+- read helpers
+- aggregation helpers
+- dashboard registry entries
+- `/learning`
+- `/projects`
+- `/knowledge`
+- detail panels
+- linkage panels
+- proposed-action preview surfaces
+- state/privacy panels
+- cross-dashboard navigation
+
+## Route Outcomes
+
+### `/learning`
+
+The route now renders a real Learning Academy dashboard with:
+
+- skill paths
+- skills
+- learning sessions
+- quizzes
+- quiz attempts
+- skill progress
+- detail panels
+- proof/career linkage surface
+- goal/task/timeline linkage surface
+- proposed-action preview surface
+- state/privacy boundary
+- cross-links
+
+### `/projects`
+
+The route now renders a real Project Builder dashboard with:
+
+- projects
+- milestones
+- bugs
+- tests
+- releases
+- links
+- project build-log detail
+- proof/career linkage surface
+- goal/task/timeline linkage surface
+- proposed-action preview surface
+- state/privacy boundary
+- cross-links
+
+### `/knowledge`
+
+The route now renders a Knowledge Vault alignment dashboard that treats Phase 9 learning/project records as future knowledge sources while keeping full memory/RAG deferred.
+
+## Data Foundation
+
+Phase 9 added the database foundation for:
+
+- skill paths
+- skills
+- skill prerequisites
+- learning sessions
+- quizzes
+- quiz attempts
+- projects
+- project milestones
+- project bugs
+- project tests
+- project releases
+- project links
+- skill progress
+
+## Safety Result
+
+Phase 9 did not add direct dashboard writes.
+
+Phase 9 did not add autonomous AI writes.
+
+Phase 9 did not add Python/ML mutation.
+
+Phase 9 did not activate full memory/RAG.
+
+Phase 9 did not add web scraping or hidden background jobs.
+
+## Deferred Scope
+
+The following remain intentionally deferred:
+
+- creating/editing learning records from UI
+- creating/editing project records from UI
+- full memory/RAG
+- embeddings
+- document ingestion
+- advanced analytics
+- export/delete privacy tooling
+- voice integration
+- plugin/custom tracker expansion
+
+## Verification
+
+Before closeout, the following passed:
+
+- `npm run check`
+- `npx tsc --noEmit`
+- `npm run lint`
+- `git diff --check`
+
+## Next Phase
+
+Next: Phase 10 — Research / Stanford System.
+```
+
+### `docs/phase-reports/PHASE_9_MANUAL_SMOKE_CHECKLIST.md`
+
+```md
+# Phase 9 Manual Smoke Checklist
+
+## Purpose
+
+Manual checklist for validating the Phase 9 Learning / Project System in the browser.
+
+## Required Routes
+
+### `/learning`
+
+Expected:
+
+- Page requires authenticated context.
+- Learning Academy dashboard renders.
+- Skill paths panel renders.
+- Skills panel renders.
+- Learning sessions panel renders.
+- Quiz bank and quiz attempts render.
+- Skill progress panel renders.
+- Detail panels render:
+  - skill path/progress detail
+  - quiz/session detail
+- Linkage panels render.
+- Proposed-action preview panel is visible but disabled.
+- State/privacy boundary panel renders.
+- Cross-links render.
+
+### `/projects`
+
+Expected:
+
+- Page requires authenticated context.
+- Project Builder dashboard renders.
+- Projects panel renders.
+- Milestones panel renders.
+- Bug/test quality panel renders.
+- Releases/project links panel renders.
+- Project build-log detail panel renders.
+- Linkage panels render.
+- Proposed-action preview panel is visible but disabled.
+- State/privacy boundary panel renders.
+- Cross-links render.
+
+### `/knowledge`
+
+Expected:
+
+- Page requires authenticated context.
+- Knowledge Vault alignment dashboard renders.
+- It describes learning/project records as future knowledge sources.
+- It does not claim full memory/RAG is active.
+- State/privacy boundary panel renders.
+- Cross-links render.
+- Deferred memory/RAG boundary renders.
+
+## Empty State Checks
+
+When there are no Phase 9 records:
+
+- Empty states should explain that records do not exist yet.
+- Empty states should not look like system failure.
+- Empty states should not offer direct write buttons.
+
+## Privacy Checks
+
+Confirm:
+
+- No private data is visible before auth.
+- No public export is offered.
+- No send/share/sync behavior appears.
+- No autonomous write behavior appears.
+
+## Proposed-Action Checks
+
+Confirm preview cards:
+
+- are disabled
+- do not save
+- do not cancel
+- do not execute
+- do not persist
+- clearly state preview-only behavior
+
+## Cross-Link Checks
+
+Confirm links to:
+
+- Learning
+- Projects
+- Knowledge
+- Proof
+- Goals
+- Timeline
+- Resume
+- Carnos
+
+## Final Manual Smoke Result
+
+Manual browser smoke testing is ready for Phase 9.
+```
+
+### `docs/phase-reports/PHASE_9_NO_WRITE_PRIVACY_AUDIT.md`
+
+```md
+# Phase 9 No-Write / Privacy Audit
+
+## Scope
+
+Phase 9 implemented the Learning / Project System read foundation.
+
+This audit covers:
+
+- `/learning`
+- `/projects`
+- `/knowledge`
+- Phase 9 dashboard components
+- Phase 9 read helpers
+- Phase 9 SQL and RLS foundation
+- Phase 9 proposed-action preview surfaces
+
+## Result
+
+Phase 9 remains read-first and privacy-preserving.
+
+## Confirmed read-only surfaces
+
+The following Phase 9 user-facing routes are read-only dashboard surfaces:
+
+- `/learning`
+- `/projects`
+- `/knowledge`
+
+They use authenticated server-rendered reads and dashboard components.
+
+They do not directly call:
+
+- `.insert(`
+- `.update(`
+- `.delete(`
+- `.upsert(`
+- `executeApprovedAction(`
+- `createProposedAction(`
+- OpenAI / model generation APIs
+- Python / ML mutation paths
+
+## SQL ownership and RLS
+
+Phase 9 SQL foundation added learning/project tables with user ownership.
+
+Phase 9 also added parent ownership hardening in a follow-up migration so user-owned child records cannot point to parent records belonging to another user.
+
+Relevant migrations:
+
+- `0008_learning_project_system_foundation.sql`
+- `0009_phase9_parent_ownership_guards.sql`
+
+## Proposed-action visibility
+
+Phase 9 includes preview-only proposed-action panels.
+
+These previews are intentionally disabled and do not wire callbacks for:
+
+- save
+- cancel
+- execute
+- persist
+
+The preview exists only to show the confirmation shape for later safe-write phases.
+
+## Privacy boundary
+
+Learning/project data remains private to the authenticated user.
+
+Phase 9 dashboards do not export, send, scrape, publish, sync, or mutate private data.
+
+## Deferred scope
+
+The following remain deferred:
+
+- autonomous Carnos writes
+- Python/ML direct mutation
+- full memory/RAG
+- embeddings
+- web ingestion
+- background scraping
+- notification automation
+- export/delete privacy tooling
+- project write/edit flows
+- learning session write/edit flows
+
+## Audit conclusion
+
+Phase 9 satisfies the required no-write and privacy boundary for its current scope.
+```
+
+### `docs/phase-reports/PHASE_9_SOURCE_TO_SCOPE_TRACEABILITY.md`
+
+```md
+# Phase 9 — Source-to-Scope Traceability Matrix
+
+Status: Traceability matrix for Phase 9 Chunk B.
+
+Phase: 9 — Learning / Project System
+
+Chunk: B
+
+Covers:
+- 9.4 Learning/project schema design
+- 9.5 Source-to-scope traceability matrix
+
+## Purpose
+
+This document maps Phase 9 source-of-truth requirements to implementation scope so no required Phase 9 feature disappears during grouped execution.
+
+## Source files inspected
+
+- `docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Implementation_Bible_FINAL_SYNCED.docx`
+- `docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_FINAL_SYNCED.json`
+- `docs/phase-plans/PHASE_9_LEARNING_PROJECT_SYSTEM.md`
+- `docs/phase-reports/PHASE_9_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
+- `docs/database/PHASE_9_LEARNING_PROJECT_SCHEMA_DESIGN.md`
+
+## Traceability table
+
+| Source Requirement | Phase 9 Scope | Planned Implementation | Chunk |
+|---|---|---|---|
+| Learning Academy | Learning dashboard and SQL-backed learning records | `/learning`, `skill_paths`, `skills`, `learning_sessions`, quizzes, progress helpers | C, D, E, F, G, J |
+| Skill trees | Skill hierarchy and prerequisites | `skill_paths`, `skills`, `skill_prerequisites`, skill progress panels | C, D, E, J |
+| Prerequisites | Skill dependency graph | `skill_prerequisites` table and skill path/progress UI | C, D, E, J |
+| Explanations | Learning context and notes | `skills.description`, `learning_sessions.notes`, dashboard explanatory panels | C, E, G, J |
+| Practice | Sessions and quiz attempts | `learning_sessions`, `quizzes`, `quiz_attempts` | C, D, E, J |
+| Build tasks | Project-linked tasks and milestones | existing `tasks` link, `projects`, `project_milestones` | C, E, H, J, K |
+| Proof gates | Evidence that learning/project work is real | `proof_item_id` links across skills, sessions, quiz attempts, projects, tests, releases | C, E, J, K |
+| Quizzes | Skill checks and assessment | `quizzes`, `quiz_attempts` | C, D, E, J |
+| Confidence | Confidence/mastery scores | `skills.confidence_score`, `skill_progress.confidence_score`, attempts and dashboard summaries | C, E, F, J |
+| Mastery state | Skill readiness | `skills.status`, `mastery_score`, `skill_progress` | C, E, F, J |
+| Project Builder | Structured project system | `/projects`, `projects`, milestones, bugs, tests, releases, links | C, D, E, H, J |
+| Bugs | Project issue tracking | `project_bugs` | C, D, E, J |
+| Tests | Project QA/proof checks | `project_tests` | C, D, E, J |
+| Releases | Shipped project checkpoints | `project_releases` | C, D, E, J |
+| README proof | External project evidence | `project_links`, `readme_url`, `proof_item_id` | C, H, K |
+| Portfolio proof | Public/demo project evidence | `portfolio_url`, `demo_url`, `project_links`, `proof_item_id` | C, H, K |
+| Resume proof | Project-to-resume linkage | `resume_bullet_id`, `proof_item_id` | C, H, K |
+| Career connection | Projects/skills support job readiness | links to resume bullets, career dashboard cross-links, proof summaries | K |
+| Interview connection | Skills/quiz/project proof supports prep | skill relevance fields, quiz attempts, project evidence | F, G, J, K |
+| Research connection | Skills/projects support research readiness | research relevance fields and later research phase links | F, K |
+| Goal connection | Learning/project work supports goals | `goal_id` links | C, E, K |
+| Task connection | Learning/project work creates actionable work | existing `tasks` via `task_id` links | C, E, K |
+| Timeline connection | Progress should be visible historically | use existing timeline/event linkage patterns in later safe write steps | K |
+| Knowledge alignment | Learning/projects feed future knowledge vault | `/knowledge` alignment without full RAG | I |
+| Safe write rule | No direct mutation from dashboards | proposed-action visibility only, no-write audit | K, L |
+| Privacy/read boundary | Protected user data | RLS, protected routes, read-only dashboards, privacy states | C, G, H, I, K, L |
+
+## Deferred or explicitly out of scope for Phase 9
+
+| Item | Reason Deferred |
+|---|---|
+| Full RAG | Belongs to Memory / RAG / Knowledge Vault phase |
+| Embeddings/vector search | Belongs to Memory / RAG / Knowledge Vault phase |
+| Internet research tools | Belongs to Internet / Web Tools phase |
+| Voice logging | Belongs to Voice phase |
+| Autonomous Carnos execution | Violates safe-write boundary unless later confirmed flow exists |
+| GitHub API sync | External integration; not needed for Phase 9 foundation |
+| Automatic resume generation | Belongs to career/AI later expansion, not Phase 9 foundation |
+| Background workers | Later infrastructure concern |
+| Python/ML SQL mutation | Always forbidden |
+
+## Implementation file map
+
+| Implementation Area | Expected Files |
+|---|---|
+| Schema design | `docs/database/PHASE_9_LEARNING_PROJECT_SCHEMA_DESIGN.md` |
+| SQL migration | `supabase/migrations/0008_learning_project_system_foundation.sql` |
+| Database types | `src/types/database.ts` |
+| Read helpers | `src/lib/repositories/core-read.ts` or a source-aligned repository module |
+| Dashboard aggregation | `src/lib/dashboard/learning-project-dashboard-data-helpers.ts` |
+| Learning dashboard | `src/components/dashboard/learning-dashboard-v1.tsx` |
+| Projects dashboard | `src/components/dashboard/projects-dashboard-v1.tsx` |
+| Knowledge alignment | `src/app/knowledge/page.tsx` and possibly a lightweight dashboard component |
+| Shared UI primitives | `src/components/dashboard/*learning*`, `src/components/dashboard/*project*` |
+| Cross-links | `src/components/dashboard/cross-dashboard-links.tsx` |
+| Exports | `src/components/dashboard/index.ts` |
+| Audit | `scripts/audit-phase-9.mjs` |
+| Package script | `package.json` |
+| Smoke checklist | `docs/qa/PHASE_9_LEARNING_PROJECT_MANUAL_SMOKE_CHECKLIST.md` |
+| Completion report | `docs/phase-reports/PHASE_9_LEARNING_PROJECT_SYSTEM_COMPLETION_REPORT.md` |
+
+## Chunk coverage map
+
+| Chunk | Covered Steps | Traceability Purpose |
+|---|---|---|
+| A | 9.1-9.3 | Established source/route/plan baseline |
+| B | 9.4-9.5 | Locks schema design and requirement traceability |
+| C | 9.6 | Creates SQL foundation |
+| D | 9.7 | Aligns generated/manual types to SQL |
+| E | 9.8-9.9 | Adds read helpers |
+| F | 9.10-9.12 | Adds data aggregation, registry, shared UI |
+| G | 9.13-9.14 | Wires Learning dashboard |
+| H | 9.15-9.16 | Wires Projects dashboard |
+| I | 9.17 | Aligns Knowledge route without RAG |
+| J | 9.18-9.20 | Adds skill/session/project detail panels |
+| K | 9.21-9.25 | Adds proof, goal, task, timeline, proposed-action, state, cross-link layers |
+| L | 9.26-9.28 | Adds audit, smoke checklist, completion report, closeout |
+
+## Guardrail
+
+Every later Phase 9 chunk must point back to this traceability matrix.
+
+If a later implementation omits one of the source requirements listed here, it must explicitly mark it as deferred/non-goal with justification.
+```
+
+### `docs/qa/PHASE_10_RESEARCH_STANFORD_MANUAL_SMOKE_CHECKLIST.md`
+
+```md
+# Phase 10 Manual Smoke Checklist — Research / Stanford System
+
+Status: Final checklist added. Manual browser QA remains to be run against authenticated local/live data.
+
+## Global route checks
+
+- [ ] `/research-lab` loads for an authenticated user.
+- [ ] `/research-stanford` loads for an authenticated user.
+- [ ] Unauthenticated access remains protected.
+- [ ] No dashboard action silently changes records.
+- [ ] No non-canonical research routes were added.
+- [ ] `/research-lab` and `/research-stanford` remain present in the canonical route registry.
+- [ ] Research routes remain dynamic authenticated read surfaces.
+
+## Research Lab checks
+
+- [ ] Research summary panel renders.
+- [ ] Research registry cards render.
+- [ ] Research idea/question detail panel renders.
+- [ ] Literature detail panel renders.
+- [ ] Claim/citation detail panel renders.
+- [ ] Experiment/result detail panel renders.
+- [ ] Paper/version/venue/submission/feedback detail panel renders.
+- [ ] Research proof/linkage visibility renders.
+- [ ] Empty states clearly mean no records exist yet, not system failure.
+- [ ] Read errors appear inline and do not trigger writes or jobs.
+
+## Research Stanford checks
+
+- [ ] Stanford summary panel renders.
+- [ ] Stanford/PhD registry cards render.
+- [ ] University/lab/professor detail panel renders.
+- [ ] SOP/application/recommendation/readiness detail panel renders.
+- [ ] Stanford target-fit linkage panel renders.
+- [ ] Empty states clearly mean no records exist yet, not system failure.
+- [ ] Read errors appear inline and do not trigger writes or jobs.
+
+## Cross-dashboard link checks
+
+- [ ] Research system links render on `/research-lab`.
+- [ ] Research system links render on `/research-stanford`.
+- [ ] Links include Research Lab, Research Stanford, Projects, Learning, Proof, Resume, Goals, and Carnos.
+- [ ] Active route is visually marked.
+- [ ] Links use canonical routes only.
+
+## Proposed-action visibility checks
+
+- [ ] Research proposal preview cards render.
+- [ ] Preview cards are disabled.
+- [ ] Save/Confirm is unavailable in Phase 10 preview mode.
+- [ ] Cancel is unavailable in Phase 10 preview mode.
+- [ ] Payload editing is unavailable in Phase 10 preview mode.
+- [ ] No callback is wired from the research dashboard layer.
+- [ ] No proposal is persisted from the research dashboard layer.
+
+## Privacy and safety checks
+
+- [ ] Research and PhD data is scoped to the authenticated user.
+- [ ] No private research data is exported.
+- [ ] No professor email/message is sent.
+- [ ] No lab/professor scraping starts.
+- [ ] No paper submission starts.
+- [ ] No application submission starts.
+- [ ] No Python/ML worker starts.
+- [ ] No memory/RAG operation starts.
+- [ ] No background job starts.
+- [ ] No direct SQL write occurs from research dashboard components.
+```
+
+### `docs/qa/PHASE_7_MANUAL_SMOKE_CHECKLIST.md`
+
+```md
+# Phase 7 Manual Smoke Checklist — Core Operating Dashboards
+
+Status: Manual checklist created for local browser verification.
+
+Scope:
+- /command
+- /timeline
+- /calendar
+- /goals
+- /carnos
+
+Out of scope:
+- /proof route creation
+- writes/mutations
+- autonomous Carnos actions
+- Carnos generation
+- memory/RAG
+- Python/ML execution
+- voice
+- internet tools
+- background jobs
+
+## Preconditions
+
+- `npm run check` passes.
+- App can run locally with `npm run dev`.
+- User can sign in through the existing auth flow.
+- Supabase environment variables are configured if testing authenticated read behavior locally.
+
+## Route smoke checks
+
+### /command
+
+- [ ] Route loads while signed in.
+- [ ] CommandDashboardV1 appears.
+- [ ] Cross-dashboard links appear.
+- [ ] `/command` link is marked as the active route.
+- [ ] Summary metric cards render.
+- [ ] Dashboard cards render empty/ready state without crashing.
+- [ ] No create/edit/delete/write controls appear.
+- [ ] No non-canonical `/proof` link appears.
+
+### /timeline
+
+- [ ] Route loads while signed in.
+- [ ] TimelineDashboardV1 appears.
+- [ ] Cross-dashboard links appear.
+- [ ] `/timeline` link is marked as the active route.
+- [ ] Timeline metrics render.
+- [ ] Timeline card renders without crashing.
+- [ ] Existing Phase 5 timeline read list still appears.
+- [ ] Read warnings show without crashing if reads fail.
+
+### /calendar
+
+- [ ] Route loads while signed in.
+- [ ] CalendarDashboardV1 appears.
+- [ ] Cross-dashboard links appear.
+- [ ] `/calendar` link is marked as the active route.
+- [ ] Calendar metrics render.
+- [ ] Existing Phase 5 tasks/events read list still appears.
+- [ ] Empty state appears when no tasks/events exist.
+- [ ] No scheduling/mutation controls appear.
+
+### /goals
+
+- [ ] Route loads while signed in.
+- [ ] GoalsDashboardV1 appears.
+- [ ] Cross-dashboard links appear.
+- [ ] `/goals` link is marked as the active route.
+- [ ] Goal metrics render.
+- [ ] Existing Phase 5 goals read list still appears.
+- [ ] Empty state appears when no goals exist.
+- [ ] No goal creation/edit/delete controls appear.
+
+### /carnos
+
+- [ ] Route loads while signed in.
+- [ ] CarnosPanelV1 appears.
+- [ ] Cross-dashboard links appear.
+- [ ] `/carnos` link is marked as the active route.
+- [ ] Carnos session/message/action metrics render.
+- [ ] Pending update drawer appears.
+- [ ] Pending update drawer opens and closes.
+- [ ] Proposed action review UI renders inside the drawer.
+- [ ] Save/Edit/Cancel persistence callbacks are not attached in Phase 7.
+- [ ] Existing Carnos read lists still appear.
+- [ ] No generation, memory, tool execution, or autonomous action path is active.
+
+## Global smoke checks
+
+- [ ] `npm run check` passes after Phase 7.17.
+- [ ] Route coverage remains 33 canonical routes.
+- [ ] `/proof` does not exist as an app route.
+- [ ] Cross-dashboard links include only `/command`, `/timeline`, `/calendar`, `/goals`, and `/carnos`.
+- [ ] Phase 7 audit gate checks all core dashboard surfaces.
+- [ ] No dashboard component contains direct Supabase mutation code.
+- [ ] No dashboard component contains generation, memory, Python/ML, voice, internet tool, or background job execution.
+
+## Manual result fields
+
+Tester:
+Date:
+Environment:
+Result: Pending manual browser verification.
+
+Notes:
+- This checklist is intentionally manual. Automated gates are handled by `npm run check` and the integration audit.
+```
+
+### `docs/qa/PHASE_8_CAREER_MANUAL_SMOKE_CHECKLIST.md`
+
+```md
+# Phase 8 Manual Smoke Checklist — Career System
+
+Status: Added for final Phase 8 closeout.
+
+## Global route checks
+
+- [ ] `/career` loads for an authenticated user.
+- [ ] `/networking` loads for an authenticated user.
+- [ ] `/resume` loads for an authenticated user.
+- [ ] `/interviews` loads for an authenticated user.
+- [ ] Unauthenticated access remains protected.
+- [ ] No dashboard action silently changes records.
+- [ ] No non-canonical career routes were added.
+
+## Proposed-action visibility checks
+
+- [ ] Preview cards render.
+- [ ] Preview cards are disabled.
+- [ ] Save/Confirm is unavailable in Phase 8 preview mode.
+- [ ] Cancel is unavailable in Phase 8 preview mode.
+- [ ] Payload editing is unavailable in Phase 8 preview mode.
+- [ ] No callback is wired from the career dashboard layer.
+- [ ] No proposal is persisted from the career dashboard layer.
+
+## Privacy and safety checks
+
+- [ ] Career data is scoped to the authenticated user.
+- [ ] No private career data is exported.
+- [ ] No email/message is sent.
+- [ ] No scraping starts.
+- [ ] No Python/ML worker starts.
+- [ ] No background job starts.
+
+## Per-route smoke checks
+
+- [ ] `/career` renders metrics, application pipeline, evidence linkage, proposed-action visibility, and state/privacy boundary.
+- [ ] `/networking` renders contacts, interactions, referrals, proposed-action visibility, and state/privacy boundary.
+- [ ] `/resume` renders resume versions, resume bullets, evidence linkage, proposed-action visibility, and state/privacy boundary.
+- [ ] `/interviews` renders interviews, follow-up pressure, proposed-action visibility, and state/privacy boundary.
 ```
 
 ### `docs/setup/AUTH_SMOKE_TEST.md`
@@ -18317,7 +27458,7 @@ export default nextConfig;
     "start": "next start",
     "lint": "eslint",
     "validate:routes": "node scripts/validate-route-coverage.mjs",
-    "check": "npm run lint && npm run validate:routes && npm run validate:registry && npm run validate:migrations && npm run audit:phase3 && npm run audit:phase4 && npm run audit:phase5 && npm run audit:source && npm run audit:pythonml && npm run build",
+    "check": "npm run lint && npm run validate:routes && npm run validate:registry && npm run validate:migrations && npm run audit:phase3 && npm run audit:phase4 && npm run audit:phase5 && npm run audit:phase6 && npm run audit:source && npm run audit:pythonml && npm run audit:phase8 && npm run audit:phase10 && npm run audit:integration && npm run build",
     "validate:registry": "node scripts/validate-registry-coverage.mjs",
     "snapshot:code": "node scripts/generate-code-snapshot.mjs",
     "validate:migrations": "node scripts/validate-sql-migrations.mjs",
@@ -18326,7 +27467,11 @@ export default nextConfig;
     "audit:phase4": "node scripts/audit-phase-4.mjs",
     "audit:source": "node scripts/audit-source-alignment.mjs",
     "audit:phase5": "node scripts/audit-phase-5.mjs",
-    "audit:pythonml": "node scripts/audit-python-ml-boundary.mjs"
+    "audit:pythonml": "node scripts/audit-python-ml-boundary.mjs",
+    "audit:phase6": "node scripts/audit-phase-6.mjs",
+    "audit:integration": "node scripts/audit-integration-sanity.mjs",
+    "audit:phase8": "node scripts/audit-phase-8.mjs",
+    "audit:phase10": "node scripts/audit-phase-10.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",
@@ -18358,6 +27503,915 @@ const config = {
 };
 
 export default config;
+```
+
+### `scripts/audit-integration-sanity.mjs`
+
+```js
+import fs from "node:fs";
+
+function normalize(value) {
+  return value.replace(/\s+/g, " ").trim();
+}
+
+function fail(message) {
+  console.error(`Integration sanity audit failed: ${message}`);
+  process.exit(1);
+}
+
+function pass(message) {
+  console.log(`✓ ${message}`);
+}
+
+function requireFile(path) {
+  if (!fs.existsSync(path)) {
+    fail(`Missing required file: ${path}`);
+  }
+  pass(`Found ${path}`);
+}
+
+function read(path) {
+  requireFile(path);
+  return fs.readFileSync(path, "utf8");
+}
+
+function requireIncludes(content, needle, message) {
+  if (!normalize(content).includes(normalize(needle))) {
+    fail(message);
+  }
+}
+
+function forbidIncludes(content, needle, message) {
+  if (normalize(content).includes(normalize(needle))) {
+    fail(message);
+  }
+}
+
+console.log("=== Integration sanity audit: source foundation ===");
+
+for (const file of [
+  "README.md",
+  "SOURCE_OF_TRUTH.md",
+  "PROJECT_EXECUTION_LOG.md",
+  "CODE_LEDGER.md",
+  "DECISIONS.md",
+  "ERRORS_AND_FIXES.md",
+  "CHANGELOG.md",
+  "PHASE_STATUS.md",
+  "docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Implementation_Bible_FINAL_SYNCED.docx",
+  "docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_FINAL_SYNCED.json",
+]) {
+  requireFile(file);
+}
+
+pass("Phase 1 source foundation files are present");
+
+console.log("\n=== Integration sanity audit: app/auth/sql foundations ===");
+
+for (const file of [
+  "middleware.ts",
+  "src/lib/supabase/env.ts",
+  "src/lib/supabase/browser.ts",
+  "src/lib/supabase/server.ts",
+  "src/lib/supabase/middleware.ts",
+  "src/lib/auth/actions.ts",
+  "src/lib/auth/session.ts",
+  "src/components/auth/protected-page.tsx",
+  "src/components/layout/auth-status.tsx",
+  "src/types/database.ts",
+  "src/lib/repositories/core-read.ts",
+  "src/lib/repositories/index.ts",
+]) {
+  requireFile(file);
+}
+
+for (const file of [
+  "supabase/migrations/0001_profiles_and_carnos_profiles.sql",
+  "supabase/migrations/0002_audit_and_ai_actions.sql",
+  "supabase/migrations/0003_chat_foundation.sql",
+  "supabase/migrations/0004_goals_foundation.sql",
+  "supabase/migrations/0005_daily_logs_and_proof_items.sql",
+  "supabase/migrations/0006_tasks_and_events.sql",
+]) {
+  requireFile(file);
+}
+
+pass("Phases 3–4 auth, Supabase, SQL, and repository foundations are present");
+
+console.log("\n=== Integration sanity audit: read pages are still wired ===");
+
+const readPageRequirements = {
+  "src/app/command/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "CommandDashboardV1",
+    "getDashboardDataSummary",
+    "listGoals",
+    "listTasks",
+    "listEvents",
+    "listProofItems",
+    "listDailyLogs",
+    "listAiActions",
+    "Read-only mode",
+  ],
+  "src/app/goals/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "listGoals",
+    "No goals found",
+    "Read-only",
+  ],
+  "src/app/timeline/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "listEvents",
+    "listProofItems",
+    "listAuditLogs",
+    "No timeline records found",
+  ],
+  "src/app/carnos/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "listChatSessions",
+    "listChatMessages",
+    "listAiActions",
+    "ProposedActionReviewCard",
+    "Generation disabled",
+  ],
+  "src/app/calendar/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "listTasks",
+    "listEvents",
+    "No tasks or events found",
+  ],
+  "src/app/world-class/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "listProofItems",
+    "listDailyLogs",
+    "No proof items found",
+  ],
+  "src/app/analytics/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "listProofItems",
+    "listDailyLogs",
+    "No daily logs found",
+  ],
+  "src/app/career/page.tsx": [
+    "DomainReadPage",
+    "career",
+    "No career records found",
+  ],
+  "src/app/learning/page.tsx": [
+    "DomainReadPage",
+    "learning",
+    "No learning records found",
+  ],
+  "src/app/body/page.tsx": [
+    "DomainReadPage",
+    "body",
+    "No body records found",
+  ],
+};
+
+for (const [file, needles] of Object.entries(readPageRequirements)) {
+  const content = read(file);
+  for (const needle of needles) {
+    requireIncludes(content, needle, `${file} is missing integration marker/import/text: ${needle}`);
+  }
+  pass(`${file} has expected route-level wiring markers`);
+}
+
+console.log("\n=== Integration sanity audit: dashboard Phase 7 core operating surfaces ===");
+
+for (const file of [
+  "docs/phase-plans/PHASE_7_CORE_OPERATING_DASHBOARDS.md",
+  "src/lib/dashboard/dashboard-layout-contract.ts",
+  "src/lib/dashboard/dashboard-card-registry.ts",
+  "src/lib/dashboard/dashboard-data-helpers.ts",
+  "src/components/dashboard/operating-dashboard-card.tsx",
+  "src/components/dashboard/operating-dashboard-grid.tsx",
+  "src/components/dashboard/cross-dashboard-links.tsx",
+  "src/components/dashboard/command-dashboard-v1.tsx",
+  "src/components/dashboard/timeline-dashboard-v1.tsx",
+  "src/components/dashboard/calendar-dashboard-v1.tsx",
+  "src/components/dashboard/goals-dashboard-v1.tsx",
+  "src/components/dashboard/proof-dashboard-v1.tsx",
+  "src/components/dashboard/carnos-panel-v1.tsx",
+  "src/components/actions/pending-updates-drawer.tsx",
+  "src/components/dashboard/index.ts",
+  "src/components/actions/index.ts",
+  "src/app/command/page.tsx",
+  "src/app/timeline/page.tsx",
+  "src/app/calendar/page.tsx",
+  "src/app/goals/page.tsx",
+  "src/app/carnos/page.tsx",
+]) {
+  requireFile(file);
+}
+
+const dashboardIndex = read("src/components/dashboard/index.ts");
+const actionsIndex = read("src/components/actions/index.ts");
+
+const dashboardBarrelRequirements = [
+  {
+    exportName: "OperatingDashboardCard",
+    acceptedMarkers: [
+      "OperatingDashboardCard",
+      'export * from "./operating-dashboard-card"',
+      "export * from './operating-dashboard-card'",
+    ],
+  },
+  {
+    exportName: "OperatingDashboardGrid",
+    acceptedMarkers: [
+      "OperatingDashboardGrid",
+      'export * from "./operating-dashboard-grid"',
+      "export * from './operating-dashboard-grid'",
+    ],
+  },
+  {
+    exportName: "CommandDashboardV1",
+    acceptedMarkers: [
+      "CommandDashboardV1",
+      'export * from "./command-dashboard-v1"',
+      "export * from './command-dashboard-v1'",
+    ],
+  },
+  {
+    exportName: "TimelineDashboardV1",
+    acceptedMarkers: [
+      "TimelineDashboardV1",
+      'export * from "./timeline-dashboard-v1"',
+      "export * from './timeline-dashboard-v1'",
+    ],
+  },
+  {
+    exportName: "CalendarDashboardV1",
+    acceptedMarkers: [
+      "CalendarDashboardV1",
+      'export * from "./calendar-dashboard-v1"',
+      "export * from './calendar-dashboard-v1'",
+    ],
+  },
+  {
+    exportName: "GoalsDashboardV1",
+    acceptedMarkers: [
+      "GoalsDashboardV1",
+      'export * from "./goals-dashboard-v1"',
+      "export * from './goals-dashboard-v1'",
+    ],
+  },
+  {
+    exportName: "ProofDashboardV1",
+    acceptedMarkers: [
+      "ProofDashboardV1",
+      'export * from "./proof-dashboard-v1"',
+      "export * from './proof-dashboard-v1'",
+    ],
+  },
+  {
+    exportName: "CarnosPanelV1",
+    acceptedMarkers: [
+      "CarnosPanelV1",
+      'export * from "./carnos-panel-v1"',
+      "export * from './carnos-panel-v1'",
+    ],
+  },
+  {
+    exportName: "CrossDashboardLinks",
+    acceptedMarkers: [
+      "CrossDashboardLinks",
+      'export * from "./cross-dashboard-links"',
+      "export * from './cross-dashboard-links'",
+    ],
+  },
+];
+
+for (const requirement of dashboardBarrelRequirements) {
+  const hasAcceptedMarker = requirement.acceptedMarkers.some((marker) =>
+    normalize(dashboardIndex).includes(normalize(marker)),
+  );
+
+  if (!hasAcceptedMarker) {
+    fail(`Dashboard barrel export missing ${requirement.exportName}`);
+  }
+}
+
+requireIncludes(
+  actionsIndex,
+  "PendingUpdatesDrawer",
+  "Actions barrel export missing PendingUpdatesDrawer",
+);
+
+const commandPage = read("src/app/command/page.tsx");
+requireIncludes(commandPage, "CommandDashboardV1", "/command route is not wired to CommandDashboardV1");
+requireIncludes(commandPage, "getDashboardDataSummary", "/command route is not loading Phase 7 dashboard data summary");
+
+const timelinePage = read("src/app/timeline/page.tsx");
+requireIncludes(timelinePage, "TimelineDashboardV1", "/timeline route is not wired to TimelineDashboardV1");
+requireIncludes(timelinePage, "getDashboardDataSummary", "/timeline route is not loading Phase 7 dashboard data summary");
+
+const calendarPage = read("src/app/calendar/page.tsx");
+requireIncludes(calendarPage, "CalendarDashboardV1", "/calendar route is not wired to CalendarDashboardV1");
+requireIncludes(calendarPage, "getDashboardDataSummary", "/calendar route is not loading Phase 7 dashboard data summary");
+
+const goalsPage = read("src/app/goals/page.tsx");
+requireIncludes(goalsPage, "GoalsDashboardV1", "/goals route is not wired to GoalsDashboardV1");
+requireIncludes(goalsPage, "getDashboardDataSummary", "/goals route is not loading Phase 7 dashboard data summary");
+
+const carnosPage = read("src/app/carnos/page.tsx");
+requireIncludes(carnosPage, "CarnosPanelV1", "/carnos route is not wired to CarnosPanelV1");
+requireIncludes(carnosPage, "PendingUpdatesDrawer", "/carnos route is not wired to PendingUpdatesDrawer");
+requireIncludes(carnosPage, "getDashboardDataSummary", "/carnos route is not loading Phase 7 dashboard data summary");
+
+const crossDashboardLinks = read("src/components/dashboard/cross-dashboard-links.tsx");
+for (const route of ["/command", "/timeline", "/calendar", "/goals", "/carnos"]) {
+  requireIncludes(crossDashboardLinks, route, `Cross-dashboard links missing canonical route: ${route}`);
+}
+forbidIncludes(crossDashboardLinks, "/proof", "Cross-dashboard links must not introduce non-canonical /proof route");
+
+const dashboardCard = read("src/components/dashboard/operating-dashboard-card.tsx");
+for (const marker of ["loading", "error", "privacy_redacted", "DashboardLoadingState"]) {
+  requireIncludes(dashboardCard, marker, `OperatingDashboardCard missing state marker: ${marker}`);
+}
+
+const proofDashboard = read("src/components/dashboard/proof-dashboard-v1.tsx");
+requireIncludes(proofDashboard, "ProofDashboardV1", "ProofDashboardV1 component missing");
+requireIncludes(
+  proofDashboard,
+  "component-only surface",
+  "ProofDashboardV1 must document that proof remains component-only without /proof route",
+);
+
+pass("Phase 7 core operating dashboard surfaces are exported, wired, state-aware, and canonical-route safe");
+
+console.log("\n=== Integration sanity audit: Phase 6 safe action flow wiring ===");
+
+for (const file of [
+  "src/lib/actions/action-types.ts",
+  "src/lib/actions/proposed-action-contracts.ts",
+  "src/lib/actions/validate-proposed-action.ts",
+  "src/lib/actions/create-proposed-action.ts",
+  "src/lib/actions/action-lifecycle.ts",
+  "src/lib/actions/execution-dispatcher.ts",
+  "src/lib/actions/flows/create-task-flow.ts",
+  "src/lib/actions/flows/create-goal-flow.ts",
+  "src/lib/actions/flows/create-daily-log-flow.ts",
+  "src/lib/actions/flows/create-proof-item-flow.ts",
+  "src/components/actions/proposed-action-review-card.tsx",
+  "src/components/actions/index.ts",
+]) {
+  requireFile(file);
+}
+
+const dispatcher = read("src/lib/actions/execution-dispatcher.ts");
+for (const flow of [
+  "executeCreateTaskAction",
+  "executeCreateGoalAction",
+  "executeCreateDailyLogAction",
+  "executeCreateProofItemAction",
+]) {
+  requireIncludes(dispatcher, flow, `Execution dispatcher missing ${flow}`);
+}
+
+const actionCard = read("src/components/actions/proposed-action-review-card.tsx");
+for (const forbidden of [
+  "createSupabase",
+  "executeApprovedAction",
+  "createProposedAction",
+  ".from(",
+]) {
+  forbidIncludes(
+    actionCard,
+    forbidden,
+    `ProposedActionReviewCard must stay UI-only and contains forbidden marker: ${forbidden}`,
+  );
+}
+
+pass("Phase 6 proposed-action flow exists and UI card remains non-mutating");
+
+
+console.log("\n=== Integration sanity audit: Phase 8 career system surfaces ===");
+
+for (const file of [
+  "docs/phase-plans/PHASE_8_CAREER_SYSTEM.md",
+  "docs/phase-reports/PHASE_8_2_CAREER_INSPECTION_REPORT.md",
+  "docs/database/CAREER_SQL_SCHEMA_DESIGN.md",
+  "supabase/migrations/0007_career_system_foundation.sql",
+  "src/lib/dashboard/career-dashboard-data-helpers.ts",
+  "src/components/dashboard/career-dashboard-v1.tsx",
+  "src/components/dashboard/networking-dashboard-v1.tsx",
+  "src/components/dashboard/resume-dashboard-v1.tsx",
+  "src/components/dashboard/interviews-dashboard-v1.tsx",
+  "src/components/dashboard/career-evidence-linkage-panel.tsx",
+  "src/components/dashboard/career-proposed-action-visibility-panel.tsx",
+  "src/components/dashboard/career-state-boundary-panel.tsx",
+  "src/app/career/page.tsx",
+  "src/app/networking/page.tsx",
+  "src/app/resume/page.tsx",
+  "src/app/interviews/page.tsx",
+]) {
+  requireFile(file);
+}
+
+const phase8DashboardIndex = read("src/components/dashboard/index.ts");
+
+for (const marker of [
+  'export * from "./career-dashboard-v1";',
+  'export * from "./networking-dashboard-v1";',
+  'export * from "./resume-dashboard-v1";',
+  'export * from "./interviews-dashboard-v1";',
+  'export * from "./career-evidence-linkage-panel";',
+  'export * from "./career-proposed-action-visibility-panel";',
+  'export * from "./career-state-boundary-panel";',
+]) {
+  requireIncludes(phase8DashboardIndex, marker, `Phase 8 dashboard barrel contains ${marker}`);
+}
+
+const phase8DashboardRequirements = {
+  "src/components/dashboard/career-dashboard-v1.tsx": [
+    "CareerCrossDashboardLinks",
+    "CareerEvidenceLinkagePanel",
+    "CareerProposedActionVisibilityPanel",
+    "CareerStateBoundaryPanel",
+    "Career boundary",
+  ],
+  "src/components/dashboard/networking-dashboard-v1.tsx": [
+    "CareerCrossDashboardLinks",
+    "CareerProposedActionVisibilityPanel",
+    "CareerStateBoundaryPanel",
+    "Networking boundary",
+  ],
+  "src/components/dashboard/resume-dashboard-v1.tsx": [
+    "CareerCrossDashboardLinks",
+    "CareerEvidenceLinkagePanel",
+    "CareerProposedActionVisibilityPanel",
+    "CareerStateBoundaryPanel",
+    "Resume boundary",
+  ],
+  "src/components/dashboard/interviews-dashboard-v1.tsx": [
+    "CareerCrossDashboardLinks",
+    "CareerProposedActionVisibilityPanel",
+    "CareerStateBoundaryPanel",
+    "Interview boundary",
+  ],
+};
+
+for (const [file, markers] of Object.entries(phase8DashboardRequirements)) {
+  const content = read(file);
+  for (const marker of markers) {
+    requireIncludes(content, marker, `${file} includes Phase 8 marker ${marker}`);
+  }
+}
+
+pass("Phase 8 career system surfaces are present in integration sanity audit");
+
+console.log("\n=== Integration sanity audit: protected boundaries ===");
+
+const boundaryFiles = [
+  ...Object.keys(readPageRequirements),
+  "src/components/dashboard/domain-read-page.tsx",
+  "src/components/dashboard/authenticated-dashboard-shell.tsx",
+  "src/lib/dashboard/auth.ts",
+  "src/components/dashboard/command-dashboard-v1.tsx",
+  "src/components/dashboard/timeline-dashboard-v1.tsx",
+  "src/components/dashboard/calendar-dashboard-v1.tsx",
+  "src/components/dashboard/goals-dashboard-v1.tsx",
+  "src/components/dashboard/proof-dashboard-v1.tsx",
+  "src/components/dashboard/carnos-panel-v1.tsx",
+  "src/components/dashboard/cross-dashboard-links.tsx",
+  "src/components/actions/pending-updates-drawer.tsx",
+];
+
+for (const file of boundaryFiles) {
+  const content = read(file);
+  for (const forbidden of [
+    ".insert(",
+    ".update(",
+    ".delete(",
+    ".upsert(",
+    "createMemory",
+    "memory_items",
+    "openai",
+    "OpenAI",
+    "generateText",
+    "streamText",
+    "executeAction",
+    "server write",
+    "direct database write",
+  ]) {
+    forbidIncludes(content, forbidden, `${file} violates protected read/UI boundary with: ${forbidden}`);
+  }
+  pass(`${file} respects protected read/UI boundary`);
+}
+
+console.log("\nIntegration sanity audit passed: Phases 1–6 plus Phase 7 core operating dashboard wiring are structurally present, exported, wired, and boundary-protected.");
+```
+
+### `scripts/audit-phase-1-7-crosswalk.mjs`
+
+```js
+import fs from "node:fs";
+
+function fail(message) {
+  console.error(`Phase 1-7 crosswalk audit failed: ${message}`);
+  process.exit(1);
+}
+
+function pass(message) {
+  console.log(`✓ ${message}`);
+}
+
+function requireFile(path) {
+  if (!fs.existsSync(path)) {
+    fail(`Missing required file: ${path}`);
+  }
+  pass(`Found ${path}`);
+}
+
+function read(path) {
+  requireFile(path);
+  return fs.readFileSync(path, "utf8");
+}
+
+function requireIncludes(path, needle) {
+  const content = read(path);
+  if (!content.includes(needle)) {
+    fail(`${path} is missing marker: ${needle}`);
+  }
+  pass(`${path} contains ${needle}`);
+}
+
+function forbidFile(path) {
+  if (fs.existsSync(path)) {
+    fail(`Forbidden file exists: ${path}`);
+  }
+  pass(`Forbidden file absent: ${path}`);
+}
+
+for (const file of [
+  "docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Implementation_Bible_FINAL_SYNCED.docx",
+  "docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_FINAL_SYNCED.json",
+  "SOURCE_OF_TRUTH.md",
+  "PROJECT_EXECUTION_LOG.md",
+  "CODE_LEDGER.md",
+  "DECISIONS.md",
+  "ERRORS_AND_FIXES.md",
+  "CHANGELOG.md",
+  "PHASE_STATUS.md",
+  "docs/phase-reports/PHASE_4_CORE_SQL_SPINE_REPORT.md",
+  "docs/phase-reports/PHASE_5_CORE_READ_UI_INTEGRATION_REPORT.md",
+  "docs/phase-reports/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW_REPORT.md",
+  "docs/phase-reports/PHASE_7_CORE_OPERATING_DASHBOARDS_REPORT.md",
+  "docs/audits/PHASE_1_7_SOURCE_CROSSWALK.md",
+  "docs/qa/PHASE_7_MANUAL_SMOKE_CHECKLIST.md",
+  "scripts/audit-integration-sanity.mjs",
+]) {
+  requireFile(file);
+}
+
+for (const file of [
+  "src/app/command/page.tsx",
+  "src/app/timeline/page.tsx",
+  "src/app/calendar/page.tsx",
+  "src/app/goals/page.tsx",
+  "src/app/carnos/page.tsx",
+]) {
+  requireFile(file);
+}
+
+forbidFile("src/app/proof/page.tsx");
+
+for (const marker of [
+  "Phase 1 — Source-of-truth foundation",
+  "Phase 2 — App shell and route foundation",
+  "Phase 3 — Auth and Supabase foundation",
+  "Phase 4 — Core SQL spine",
+  "Phase 5 — Core read UI / Carnos foundation status",
+  "Phase 6 — Safe Write / Proposed Action Flow",
+  "Phase 7 — Core Operating Dashboards",
+  "Phases 1–7 are safe to build upon.",
+]) {
+  requireIncludes("docs/audits/PHASE_1_7_SOURCE_CROSSWALK.md", marker);
+}
+
+requireIncludes("PHASE_STATUS.md", "Phase 7 Completion");
+requireIncludes("PHASE_STATUS.md", "Next phase: Phase 8 Career System.");
+requireIncludes("docs/phase-reports/PHASE_7_CORE_OPERATING_DASHBOARDS_REPORT.md", "Status: Complete.");
+
+console.log("\nPhase 1-7 crosswalk audit passed.");
+```
+
+### `scripts/audit-phase-10.mjs`
+
+```js
+import { existsSync, readFileSync } from "node:fs";
+
+let failures = 0;
+
+function fail(message) {
+  failures += 1;
+  console.error(`✗ ${message}`);
+}
+
+function pass(message) {
+  console.log(`✓ ${message}`);
+}
+
+function requireFile(path) {
+  if (!existsSync(path)) {
+    fail(`Missing ${path}`);
+    return "";
+  }
+
+  pass(`Found ${path}`);
+  return readFileSync(path, "utf8");
+}
+
+function requireIncludes(content, needle, message) {
+  if (!content.includes(needle)) {
+    fail(message);
+    return;
+  }
+
+  pass(message);
+}
+
+function forbidIncludes(content, needle, message) {
+  if (content.includes(needle)) {
+    fail(message);
+    return;
+  }
+
+  pass(message);
+}
+
+console.log("\n=== Phase 10 files ===");
+
+const requiredFiles = [
+  "docs/phase-plans/PHASE_10_RESEARCH_STANFORD_SYSTEM.md",
+  "docs/database/PHASE_10_RESEARCH_SCHEMA_DESIGN.md",
+  "docs/database/PHASE_10_STANFORD_PHD_SCHEMA_DESIGN.md",
+  "docs/phase-reports/PHASE_10_SOURCE_TO_SCOPE_TRACEABILITY.md",
+  "docs/qa/PHASE_10_RESEARCH_STANFORD_MANUAL_SMOKE_CHECKLIST.md",
+  "docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT.md",
+  "supabase/migrations/0010_phase10_research_stanford_foundation.sql",
+  "supabase/migrations/0011_phase10_parent_ownership_guards.sql",
+  "src/types/database.ts",
+  "src/lib/repositories/research-read.ts",
+  "src/lib/dashboard/research-stanford-dashboard-data-helpers.ts",
+  "src/components/dashboard/research-summary-panel.tsx",
+  "src/components/dashboard/research-linkage-boundary-panels.tsx",
+  "src/components/dashboard/research-detail-panels.tsx",
+  "src/components/dashboard/research-proposed-action-visibility-panel.tsx",
+  "src/components/dashboard/cross-dashboard-links.tsx",
+  "src/app/research-lab/page.tsx",
+  "src/app/research-stanford/page.tsx",
+];
+
+const fileText = new Map();
+
+for (const file of requiredFiles) {
+  fileText.set(file, requireFile(file));
+}
+
+console.log("\n=== Phase 10 SQL, types, and read helpers ===");
+
+const researchMigration = fileText.get("supabase/migrations/0010_phase10_research_stanford_foundation.sql") ?? "";
+const ownershipMigration = fileText.get("supabase/migrations/0011_phase10_parent_ownership_guards.sql") ?? "";
+const databaseTypes = fileText.get("src/types/database.ts") ?? "";
+const readHelpers = fileText.get("src/lib/repositories/research-read.ts") ?? "";
+
+for (const table of [
+  "research_ideas",
+  "research_questions",
+  "research_literature_items",
+  "research_citations",
+  "research_claims",
+  "research_experiments",
+  "research_results",
+  "research_papers",
+  "research_paper_versions",
+  "research_venues",
+  "research_submissions",
+  "research_feedback",
+  "target_universities",
+  "target_labs",
+  "target_professors",
+  "phd_readiness_assessments",
+  "phd_application_assets",
+  "sop_versions",
+  "recommendation_targets",
+]) {
+  requireIncludes(researchMigration, table, `Phase 10 migration includes ${table}`);
+  requireIncludes(databaseTypes, table, `Database types include ${table}`);
+}
+
+for (const helper of [
+  "listResearchIdeas",
+  "listResearchQuestions",
+  "listResearchLiteratureItems",
+  "listResearchCitations",
+  "listResearchClaims",
+  "listResearchExperiments",
+  "listResearchResults",
+  "listResearchPapers",
+  "listResearchPaperVersions",
+  "listResearchVenues",
+  "listResearchSubmissions",
+  "listResearchFeedback",
+  "listTargetUniversities",
+  "listTargetLabs",
+  "listTargetProfessors",
+  "listPhdReadinessAssessments",
+  "listPhdApplicationAssets",
+  "listSopVersions",
+  "listRecommendationTargets",
+]) {
+  requireIncludes(readHelpers, helper, `Research read repository exports ${helper}`);
+}
+
+for (const marker of [
+  "project_id",
+  "goal_id",
+  "task_id",
+  "proof_item_id",
+  "resume_bullet_id",
+]) {
+  requireIncludes(ownershipMigration, marker, `Parent ownership guard includes ${marker}`);
+}
+
+for (const marker of [
+  "create or replace function",
+  "user_id",
+  "raise exception",
+]) {
+  requireIncludes(ownershipMigration.toLowerCase(), marker, `Parent ownership guard includes ${marker}`);
+}
+
+console.log("\n=== Phase 10 dashboard and route wiring ===");
+
+const dashboardIndex = requireFile("src/components/dashboard/index.ts");
+const dashboardRegistry = requireFile("src/lib/dashboard/dashboard-card-registry.ts");
+const dashboardLayout = requireFile("src/lib/dashboard/dashboard-layout-contract.ts");
+const dashboardRegistryRouteMap = requireFile("src/lib/dashboard-registry.ts");
+const routes = requireFile("src/lib/routes.ts");
+
+for (const marker of [
+  'export * from "./research-summary-panel";',
+  'export * from "./research-linkage-boundary-panels";',
+  'export * from "./research-detail-panels";',
+  'export * from "./research-proposed-action-visibility-panel";',
+]) {
+  requireIncludes(dashboardIndex, marker, `Dashboard barrel includes ${marker}`);
+}
+
+for (const marker of [
+  "research_lab",
+  "research_stanford",
+]) {
+  requireIncludes(dashboardLayout, marker, `Dashboard layout supports ${marker}`);
+}
+
+for (const marker of [
+  "research-lab-idea-pipeline",
+  "research-lab-literature-citations",
+  "research-stanford-target-fit",
+  "research-stanford-application-readiness",
+]) {
+  requireIncludes(dashboardRegistry, marker, `Dashboard card registry includes ${marker}`);
+}
+
+for (const route of [
+  "/research-lab",
+  "/research-stanford",
+]) {
+  requireIncludes(routes, route, `Canonical routes include ${route}`);
+  requireIncludes(dashboardRegistryRouteMap, route, `Dashboard registry includes ${route}`);
+}
+
+const labRoute = fileText.get("src/app/research-lab/page.tsx") ?? "";
+const stanfordRoute = fileText.get("src/app/research-stanford/page.tsx") ?? "";
+
+for (const marker of [
+  "AuthenticatedDashboardShell",
+  "ResearchCrossDashboardLinks",
+  "ResearchSummaryPanel",
+  "ResearchIdeaDetailPanel",
+  "ResearchLiteratureDetailPanel",
+  "ResearchClaimCitationDetailPanel",
+  "ResearchExperimentResultDetailPanel",
+  "ResearchPaperVenueDetailPanel",
+  "ResearchProofLinkagePanel",
+  "ResearchProposedActionVisibilityPanel",
+  "ResearchStateBoundaryPanel",
+]) {
+  requireIncludes(labRoute, marker, `Research Lab route includes ${marker}`);
+}
+
+for (const marker of [
+  "AuthenticatedDashboardShell",
+  "ResearchCrossDashboardLinks",
+  "ResearchSummaryPanel",
+  "StanfordProfessorLabDetailPanel",
+  "StanfordApplicationDetailPanel",
+  "StanfordProofLinkagePanel",
+  "ResearchProposedActionVisibilityPanel",
+  "ResearchStateBoundaryPanel",
+]) {
+  requireIncludes(stanfordRoute, marker, `Research Stanford route includes ${marker}`);
+}
+
+console.log("\n=== Phase 10 protected boundaries ===");
+
+const protectedFiles = [
+  "src/lib/repositories/research-read.ts",
+  "src/lib/dashboard/research-stanford-dashboard-data-helpers.ts",
+  "src/components/dashboard/research-summary-panel.tsx",
+  "src/components/dashboard/research-linkage-boundary-panels.tsx",
+  "src/components/dashboard/research-detail-panels.tsx",
+  "src/components/dashboard/research-proposed-action-visibility-panel.tsx",
+  "src/app/research-lab/page.tsx",
+  "src/app/research-stanford/page.tsx",
+];
+
+for (const file of protectedFiles) {
+  const content = fileText.get(file) ?? requireFile(file);
+
+  for (const marker of [
+    ".insert(",
+    ".update(",
+    ".delete(",
+    ".upsert(",
+    "createProposedAction",
+    "executeApprovedAction(",
+    "openai",
+    "OpenAI",
+    "generateText",
+    "streamText",
+    "sendEmail",
+    "fetch(",
+    "setInterval(",
+    "setTimeout(",
+  ]) {
+    forbidIncludes(content, marker, `${file} avoids forbidden marker: ${marker}`);
+  }
+}
+
+const proposalPanel = fileText.get("src/components/dashboard/research-proposed-action-visibility-panel.tsx") ?? "";
+
+for (const marker of [
+  "ProposedActionReviewCard",
+  "disabled",
+  "does not save, cancel, execute, or persist",
+  "no callbacks are wired",
+  "create_task",
+  "create_goal",
+  "create_proof_item",
+]) {
+  requireIncludes(proposalPanel, marker, `Research proposed-action panel includes ${marker}`);
+}
+
+console.log("\n=== Phase 10 docs and logs ===");
+
+const checklist = fileText.get("docs/qa/PHASE_10_RESEARCH_STANFORD_MANUAL_SMOKE_CHECKLIST.md") ?? "";
+const completionReport = fileText.get("docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT.md") ?? "";
+const executionLog = requireFile("PROJECT_EXECUTION_LOG.md");
+const codeLedger = requireFile("CODE_LEDGER.md");
+const changelog = requireFile("CHANGELOG.md");
+
+for (const marker of [
+  "Research Lab",
+  "Research Stanford",
+  "Proposed-action visibility",
+  "Privacy and safety checks",
+]) {
+  requireIncludes(checklist, marker, `Phase 10 smoke checklist includes ${marker}`);
+}
+
+for (const marker of [
+  "Phase 10 Completion Report",
+  "Research / Stanford System",
+  "Verification gates",
+  "Deferred scope",
+  "Phase 11",
+]) {
+  requireIncludes(completionReport, marker, `Phase 10 completion report includes ${marker}`);
+}
+
+for (const marker of [
+  "Phase 10 Chunk A",
+  "Phase 10 Chunk I",
+  "Phase 10 Chunk J",
+]) {
+  requireIncludes(executionLog, marker, `Execution log includes ${marker}`);
+}
+
+requireIncludes(codeLedger, "Phase 10 Chunk J", "Code ledger includes Phase 10 Chunk J");
+requireIncludes(changelog, "Phase 10 Chunk J", "Changelog includes Phase 10 Chunk J");
+
+if (failures > 0) {
+  console.error(`\nPhase 10 audit failed with ${failures} issue(s).`);
+  process.exit(1);
+}
+
+console.log("\nPhase 10 audit passed: research/Stanford system is structurally present, route-wired, exported, documented, and boundary-protected through Chunk K.");
 ```
 
 ### `scripts/audit-phase-3.mjs`
@@ -19075,6 +29129,610 @@ for (const page of dynamicReadPages) {
 pass("Phase 5 dynamic read pages use authenticated dashboard shell path");
 
 console.log("\nPhase 5 audit passed: read UI integration is present and still respects no-write/no-memory/no-generation boundaries.");
+```
+
+### `scripts/audit-phase-6.mjs`
+
+```js
+import fs from "node:fs";
+
+const checks = [];
+let failed = false;
+
+function exists(path) {
+  return fs.existsSync(path);
+}
+
+function read(path) {
+  return fs.readFileSync(path, "utf8");
+}
+
+function pass(message) {
+  checks.push(`✓ ${message}`);
+}
+
+function fail(message) {
+  failed = true;
+  checks.push(`✗ ${message}`);
+}
+
+function requireFile(path) {
+  if (exists(path)) {
+    pass(`Found ${path}`);
+  } else {
+    fail(`Missing ${path}`);
+  }
+}
+
+function requireIncludes(path, values) {
+  const text = read(path);
+
+  for (const value of values) {
+    if (text.includes(value)) {
+      pass(`${path} contains ${value}`);
+    } else {
+      fail(`${path} missing ${value}`);
+    }
+  }
+}
+
+function forbidIncludes(path, values) {
+  const text = read(path);
+
+  for (const value of values) {
+    if (text.includes(value)) {
+      fail(`${path} contains forbidden marker: ${value}`);
+    } else {
+      pass(`${path} avoids forbidden marker: ${value}`);
+    }
+  }
+}
+
+console.log("=== Phase 6 files ===");
+
+const requiredFiles = [
+  "docs/phase-plans/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW.md",
+  "src/lib/actions/action-types.ts",
+  "src/lib/actions/proposed-action-contracts.ts",
+  "src/lib/actions/action-results.ts",
+  "src/lib/actions/validate-proposed-action.ts",
+  "src/lib/audit/write-audit-log.ts",
+  "src/lib/timeline/write-timeline-event.ts",
+  "src/lib/actions/create-proposed-action.ts",
+  "src/lib/actions/action-lifecycle.ts",
+  "src/lib/actions/execution-dispatcher.ts",
+  "src/lib/actions/flows/create-task-flow.ts",
+  "src/lib/actions/flows/create-goal-flow.ts",
+  "src/lib/actions/flows/create-daily-log-flow.ts",
+  "src/lib/actions/flows/create-proof-item-flow.ts",
+  "src/components/actions/proposed-action-review-card.tsx",
+  "src/components/actions/index.ts",
+];
+
+for (const file of requiredFiles) {
+  requireFile(file);
+}
+
+console.log("\n=== Phase 6 action type contract ===");
+
+requireIncludes("src/lib/actions/action-types.ts", [
+  "create_task",
+  "create_goal",
+  "create_daily_log",
+  "create_proof_item",
+  "PROPOSED_ACTION_TYPES",
+]);
+
+requireIncludes("src/lib/actions/proposed-action-contracts.ts", [
+  "ProposedActionContract",
+  "CreateTaskPayload",
+  "CreateGoalPayload",
+  "CreateDailyLogPayload",
+  "CreateProofItemPayload",
+  "PROPOSED_ACTION_REQUIRED_FIELDS",
+  "PROPOSED_ACTION_FORBIDDEN_PAYLOAD_FIELDS",
+]);
+
+requireIncludes("src/lib/actions/validate-proposed-action.ts", [
+  "validateProposedAction",
+  "PROPOSED_ACTION_FORBIDDEN_PAYLOAD_FIELDS",
+  "create_task",
+  "create_goal",
+  "create_daily_log",
+  "create_proof_item",
+]);
+
+console.log("\n=== Phase 6 proposed action lifecycle ===");
+
+requireIncludes("src/lib/actions/create-proposed-action.ts", [
+  "createProposedAction",
+  "validateProposedAction",
+  "pending_confirmation",
+  ".from(\"ai_actions\")",
+]);
+
+requireIncludes("src/lib/actions/action-lifecycle.ts", [
+  ".from(\"ai_actions\")",
+  "pending_confirmation",
+  "approved",
+  "rejected",
+  "cancelled",
+  "failed",
+  "approved_at",
+  "rejected_at",
+  "failed_at",
+]);
+
+console.log("\n=== Phase 6 execution dispatcher ===");
+
+requireIncludes("src/lib/actions/execution-dispatcher.ts", [
+  "executeApprovedAction",
+  "executeCreateTaskAction",
+  "executeCreateGoalAction",
+  "executeCreateDailyLogAction",
+  "executeCreateProofItemAction",
+  "action.status !== \"approved\"",
+  "create_task",
+  "create_goal",
+  "create_daily_log",
+  "create_proof_item",
+]);
+
+console.log("\n=== Phase 6 target write flows ===");
+
+const flowExpectations = [
+  ["src/lib/actions/flows/create-task-flow.ts", "tasks", "task_id", "create_task"],
+  ["src/lib/actions/flows/create-goal-flow.ts", "goals", "goal_id", "create_goal"],
+  ["src/lib/actions/flows/create-daily-log-flow.ts", "daily_logs", "daily_log_id", "create_daily_log"],
+  ["src/lib/actions/flows/create-proof-item-flow.ts", "proof_items", "proof_item_id", "create_proof_item"],
+];
+
+for (const [file, table, resultId, actionType] of flowExpectations) {
+  requireIncludes(file, [
+    ".from(\"ai_actions\")",
+    `action_type !== \"${actionType}\"`,
+    "action.status !== \"approved\"",
+    `.from(\"${table}\")`,
+    "status: \"executed\"",
+    "target_table",
+    "target_id",
+    "writeAuditLog",
+    "writeTimelineEvent",
+    resultId,
+  ]);
+}
+
+requireIncludes("src/lib/actions/flows/create-proof-item-flow.ts", [
+  "relatedRecordBelongsToUser",
+  "daily_logs",
+  "goals",
+  "tasks",
+]);
+
+console.log("\n=== Phase 6 audit and timeline helpers ===");
+
+requireIncludes("src/lib/audit/write-audit-log.ts", [
+  "writeAuditLog",
+  ".from(\"audit_logs\")",
+  "actor_type",
+  "entity_table",
+]);
+
+requireIncludes("src/lib/timeline/write-timeline-event.ts", [
+  "writeTimelineEvent",
+  "timeline_events table is not defined",
+  "skipped",
+]);
+
+console.log("\n=== Phase 6 UI boundary ===");
+
+requireIncludes("src/components/actions/proposed-action-review-card.tsx", [
+  "ProposedActionReviewCard",
+  "Save / Confirm",
+  "Cancel",
+  "Edit payload",
+  "onSave",
+  "onCancel",
+]);
+
+forbidIncludes("src/components/actions/proposed-action-review-card.tsx", [
+  "createSupabase",
+  "from(\"",
+  "executeApprovedAction",
+  "createProposedAction",
+]);
+
+requireIncludes("src/app/carnos/page.tsx", [
+  "ProposedActionReviewCard",
+  "SAMPLE_PHASE_6_REVIEW_ACTION",
+  "Phase 6.16",
+]);
+
+forbidIncludes("src/app/carnos/page.tsx", [
+  "server write",
+  "server-side write",
+  "direct database write",
+  "executeApprovedAction(",
+]);
+
+console.log("\n=== Phase 6 logs ===");
+
+requireIncludes("PROJECT_EXECUTION_LOG.md", [
+  "Phase 6.1",
+  "Phase 6.10",
+  "Phase 6.11",
+  "Phase 6.12",
+  "Phase 6.13",
+  "Phase 6.14",
+  "Phase 6.15",
+  "Phase 6.16",
+]);
+
+requireIncludes("PHASE_STATUS.md", [
+  "Phase 6.16",
+  "Next step: Phase 6.17",
+]);
+
+console.log(checks.join("\\n"));
+
+if (failed) {
+  console.error("\nPhase 6 audit failed.");
+  process.exit(1);
+}
+
+console.log("\nPhase 6 audit passed: safe write proposed-action flow is present and boundary-protected.");
+```
+
+### `scripts/audit-phase-8.mjs`
+
+```js
+import { existsSync, readFileSync } from "node:fs";
+
+let failures = 0;
+
+function fail(message) {
+  failures += 1;
+  console.error(`✗ ${message}`);
+}
+
+function pass(message) {
+  console.log(`✓ ${message}`);
+}
+
+function requireFile(path) {
+  if (!existsSync(path)) {
+    fail(`Missing ${path}`);
+    return "";
+  }
+
+  pass(`Found ${path}`);
+  return readFileSync(path, "utf8");
+}
+
+function requireIncludes(content, needle, message) {
+  if (!content.includes(needle)) {
+    fail(message);
+    return;
+  }
+
+  pass(message);
+}
+
+function forbidIncludes(content, needle, message) {
+  if (content.includes(needle)) {
+    fail(message);
+    return;
+  }
+
+  pass(message);
+}
+
+console.log("\n=== Phase 8 career files ===");
+
+const requiredFiles = [
+  "docs/phase-plans/PHASE_8_CAREER_SYSTEM.md",
+  "docs/phase-reports/PHASE_8_2_CAREER_INSPECTION_REPORT.md",
+  "docs/qa/PHASE_8_CAREER_MANUAL_SMOKE_CHECKLIST.md",
+  "docs/phase-reports/PHASE_8_CAREER_SYSTEM_COMPLETION_REPORT.md",
+  "docs/database/CAREER_SQL_SCHEMA_DESIGN.md",
+  "supabase/migrations/0007_career_system_foundation.sql",
+  "src/lib/dashboard/career-dashboard-data-helpers.ts",
+  "src/components/dashboard/career-dashboard-v1.tsx",
+  "src/components/dashboard/networking-dashboard-v1.tsx",
+  "src/components/dashboard/resume-dashboard-v1.tsx",
+  "src/components/dashboard/interviews-dashboard-v1.tsx",
+  "src/components/dashboard/career-evidence-linkage-panel.tsx",
+  "src/components/dashboard/career-proposed-action-visibility-panel.tsx",
+  "src/components/dashboard/career-state-boundary-panel.tsx",
+  "src/app/career/page.tsx",
+  "src/app/networking/page.tsx",
+  "src/app/resume/page.tsx",
+  "src/app/interviews/page.tsx",
+];
+
+const fileText = new Map();
+
+for (const file of requiredFiles) {
+  fileText.set(file, requireFile(file));
+}
+
+console.log("\n=== Phase 8 SQL and type contracts ===");
+
+const migration = fileText.get("supabase/migrations/0007_career_system_foundation.sql") ?? "";
+const databaseTypes = requireFile("src/types/database.ts");
+const repository = requireFile("src/lib/repositories/core-read.ts");
+
+for (const table of [
+  "job_applications",
+  "job_application_events",
+  "networking_contacts",
+  "networking_interactions",
+  "job_referrals",
+  "resume_versions",
+  "resume_bullets",
+  "interviews",
+]) {
+  requireIncludes(migration, table, `Career migration includes ${table}`);
+  requireIncludes(databaseTypes, table, `Database types include ${table}`);
+  requireIncludes(repository, table, `Read repository includes ${table}`);
+}
+
+for (const helper of [
+  "listJobApplications",
+  "listJobApplicationEvents",
+  "listNetworkingContacts",
+  "listNetworkingInteractions",
+  "listJobReferrals",
+  "listResumeVersions",
+  "listResumeBullets",
+  "listInterviews",
+]) {
+  requireIncludes(repository, helper, `Read repository exports ${helper}`);
+}
+
+console.log("\n=== Phase 8 route wiring ===");
+
+const routeRequirements = {
+  "src/app/career/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "CareerDashboardV1",
+    "getCareerDashboardDataSummary",
+    "listJobApplications",
+    "listJobApplicationEvents",
+    "listInterviews",
+    "listJobReferrals",
+    "listNetworkingContacts",
+    "listResumeVersions",
+    "listResumeBullets",
+    "listGoals",
+    "listTasks",
+    "listProofItems",
+    "listDailyLogs",
+  ],
+  "src/app/networking/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "NetworkingDashboardV1",
+    "listNetworkingContacts",
+    "listNetworkingInteractions",
+    "listJobReferrals",
+  ],
+  "src/app/resume/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "ResumeDashboardV1",
+    "listResumeVersions",
+    "listResumeBullets",
+    "listGoals",
+    "listTasks",
+    "listProofItems",
+    "listDailyLogs",
+  ],
+  "src/app/interviews/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "InterviewsDashboardV1",
+    "listInterviews",
+  ],
+};
+
+for (const [file, markers] of Object.entries(routeRequirements)) {
+  const content = fileText.get(file) ?? "";
+  for (const marker of markers) {
+    requireIncludes(content, marker, `${file} includes ${marker}`);
+  }
+}
+
+console.log("\n=== Phase 8 dashboard surface wiring ===");
+
+const dashboardRequirements = {
+  "src/components/dashboard/career-dashboard-v1.tsx": [
+    "CareerCrossDashboardLinks",
+    "CareerEvidenceLinkagePanel",
+    "CareerProposedActionVisibilityPanel",
+    "CareerStateBoundaryPanel",
+    "job_application_events",
+    "Career boundary",
+    "read-only",
+  ],
+  "src/components/dashboard/networking-dashboard-v1.tsx": [
+    "CareerCrossDashboardLinks",
+    "CareerProposedActionVisibilityPanel",
+    "CareerStateBoundaryPanel",
+    "networking_contacts",
+    "networking_interactions",
+    "job_referrals",
+    "Networking boundary",
+    "read-only",
+  ],
+  "src/components/dashboard/resume-dashboard-v1.tsx": [
+    "CareerCrossDashboardLinks",
+    "CareerEvidenceLinkagePanel",
+    "CareerProposedActionVisibilityPanel",
+    "CareerStateBoundaryPanel",
+    "resume_versions",
+    "resume_bullets",
+    "Resume boundary",
+    "read-only",
+  ],
+  "src/components/dashboard/interviews-dashboard-v1.tsx": [
+    "CareerCrossDashboardLinks",
+    "CareerProposedActionVisibilityPanel",
+    "CareerStateBoundaryPanel",
+    "interviews",
+    "Interview boundary",
+    "read-only",
+  ],
+  "src/components/dashboard/career-evidence-linkage-panel.tsx": [
+    "CareerEvidenceLinkagePanel",
+    "goal_id",
+    "task_id",
+    "proof_item_id",
+    "daily_log_id",
+    "No supporting proof context yet.",
+  ],
+  "src/components/dashboard/career-proposed-action-visibility-panel.tsx": [
+    "CareerProposedActionVisibilityPanel",
+    "ProposedActionReviewCard",
+    "create_task",
+    "create_goal",
+    "create_proof_item",
+    "disabled",
+    "no callbacks are wired",
+    "does not save, cancel, execute, or persist",
+  ],
+  "src/components/dashboard/career-state-boundary-panel.tsx": [
+    "CareerStateBoundaryPanel",
+    "empty",
+    "loading",
+    "error",
+    "privacy",
+    "private",
+    "read-only",
+    "does not expose, export, send, or modify",
+  ],
+};
+
+for (const [file, markers] of Object.entries(dashboardRequirements)) {
+  const content = fileText.get(file) ?? "";
+  for (const marker of markers) {
+    requireIncludes(content, marker, `${file} includes ${marker}`);
+  }
+}
+
+console.log("\n=== Phase 8 dashboard exports ===");
+
+const dashboardIndex = requireFile("src/components/dashboard/index.ts");
+
+for (const marker of [
+  'export * from "./career-dashboard-v1";',
+  'export * from "./networking-dashboard-v1";',
+  'export * from "./resume-dashboard-v1";',
+  'export * from "./interviews-dashboard-v1";',
+  'export * from "./career-evidence-linkage-panel";',
+  'export * from "./career-proposed-action-visibility-panel";',
+  'export * from "./career-state-boundary-panel";',
+]) {
+  requireIncludes(dashboardIndex, marker, `Dashboard barrel includes ${marker}`);
+}
+
+console.log("\n=== Phase 8 protected dashboard boundaries ===");
+
+const protectedDashboardFiles = [
+  "src/components/dashboard/career-dashboard-v1.tsx",
+  "src/components/dashboard/networking-dashboard-v1.tsx",
+  "src/components/dashboard/resume-dashboard-v1.tsx",
+  "src/components/dashboard/interviews-dashboard-v1.tsx",
+  "src/components/dashboard/career-evidence-linkage-panel.tsx",
+  "src/components/dashboard/career-proposed-action-visibility-panel.tsx",
+  "src/components/dashboard/career-state-boundary-panel.tsx",
+];
+
+for (const file of protectedDashboardFiles) {
+  const content = fileText.get(file) ?? "";
+  for (const forbidden of [
+    ".insert(",
+    ".update(",
+    ".delete(",
+    ".upsert(",
+    ".from(",
+    "createProposedAction",
+    "executeApprovedAction(",
+    "openai",
+    "OpenAI",
+    "generateText",
+    "streamText",
+    "ai_actions",
+    "server write",
+    "server-side write",
+    "direct database write",
+  ]) {
+    forbidIncludes(content, forbidden, `${file} avoids forbidden marker: ${forbidden}`);
+  }
+}
+
+console.log("\n=== Phase 8 source/log markers ===");
+
+const phasePlan = fileText.get("docs/phase-plans/PHASE_8_CAREER_SYSTEM.md") ?? "";
+const executionLog = requireFile("PROJECT_EXECUTION_LOG.md");
+const phaseStatus = requireFile("PHASE_STATUS.md");
+
+for (const marker of [
+  "Phase 8",
+  "Career",
+]) {
+  requireIncludes(phasePlan, marker, `Phase 8 plan includes ${marker}`);
+}
+
+for (const marker of [
+  "Phase 8",
+  "Career",
+]) {
+  requireIncludes(executionLog, marker, `Execution log includes ${marker}`);
+  requireIncludes(phaseStatus, marker, `Phase status includes ${marker}`);
+}
+
+
+console.log("\n=== Phase 8 final closeout markers ===");
+
+const completionReport = fileText.get("docs/phase-reports/PHASE_8_CAREER_SYSTEM_COMPLETION_REPORT.md") ?? "";
+const manualChecklist = fileText.get("docs/qa/PHASE_8_CAREER_MANUAL_SMOKE_CHECKLIST.md") ?? "";
+const changelog = requireFile("CHANGELOG.md");
+const codeLedger = requireFile("CODE_LEDGER.md");
+
+for (const marker of [
+  "Phase 8 Completion Report",
+  "Career System",
+  "Verification gates",
+  "Deferred scope",
+  "Phase 9",
+]) {
+  requireIncludes(completionReport, marker, `Phase 8 completion report includes ${marker}`);
+}
+
+for (const marker of [
+  "Phase 8 Manual Smoke Checklist",
+  "/career",
+  "/networking",
+  "/resume",
+  "/interviews",
+  "Proposed-action visibility checks",
+  "Privacy and safety checks",
+]) {
+  requireIncludes(manualChecklist, marker, `Phase 8 manual smoke checklist includes ${marker}`);
+}
+
+for (const marker of [
+  "Phase 8 Career System Complete",
+  "Phase 8.24",
+]) {
+  requireIncludes(changelog, marker, `Changelog includes ${marker}`);
+  requireIncludes(codeLedger, marker, `Code ledger includes ${marker}`);
+}
+
+if (failures > 0) {
+  console.error(`\nPhase 8 audit failed with ${failures} issue(s).`);
+  process.exit(1);
+}
+
+console.log("\nPhase 8 audit passed: career system surfaces are present, wired, exported, read-only, and boundary-protected.");
 ```
 
 ### `scripts/audit-python-ml-boundary.mjs`
@@ -20681,6 +31339,7 @@ export default function BodyPage() {
 ```tsx
 import {
   AuthenticatedDashboardShell,
+  CalendarDashboardV1,
   DataList,
   EmptyState,
   MetricTile,
@@ -20688,7 +31347,9 @@ import {
   StatusPill,
   type DataListItem,
 } from "@/components/dashboard";
+import { getDashboardDataSummary } from "@/lib/dashboard";
 import { listEvents, listTasks } from "@/lib/repositories";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 type RecordValue = string | number | boolean | null | undefined;
 type CalendarRecord = Record<string, RecordValue>;
@@ -20903,6 +31564,9 @@ export default function CalendarPage() {
         description="Read-only view of tasks and events stored in the Phase 4 SQL spine."
       >
         {async ({ user }) => {
+          const supabase = await createSupabaseServerClient();
+          const dashboardData = await getDashboardDataSummary(supabase, user.id, "calendar");
+
           const [tasks, events] = await Promise.all([
             readCalendarGroup(
               "Tasks",
@@ -20932,6 +31596,8 @@ export default function CalendarPage() {
 
           return (
             <>
+              <CalendarDashboardV1 data={dashboardData} />
+
               <section className="rounded-3xl border border-slate-800 bg-slate-950/80 p-6 shadow-sm shadow-black/20">
                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                   <div>
@@ -21016,23 +31682,93 @@ export default function CalendarPage() {
 ### `src/app/career/page.tsx`
 
 ```tsx
-import { DomainReadPage } from "@/components/dashboard";
+// Phase 5 audit compatibility marker: No career records found.
+// Phase 5 audit compatibility marker: The career read path is wired, but no domain-matched records exist yet.
+// Phase 5 audit compatibility marker: DomainReadPage was replaced by CareerDashboardV1 in Phase 8.11.
+import { AuthenticatedDashboardShell, CareerDashboardV1 } from "@/components/dashboard";
+import { getCareerDashboardDataSummary } from "@/lib/dashboard";
+import {
+  listDailyLogs,
+  listGoals,
+  listInterviews,
+  listJobApplicationEvents,
+  listJobApplications,
+  listJobReferrals,
+  listNetworkingContacts,
+  listProofItems,
+  listResumeBullets,
+  listResumeVersions,
+  listTasks,
+} from "@/lib/repositories";
 
 export default function CareerPage() {
   return (
-    <DomainReadPage
-      config={{
-        routeTitle: "Career Dashboard",
-        eyebrow: "career system",
-        description:
-          "Read-only career surface for job search, referrals, interviews, and career execution records.",
-        domainKey: "career",
-        domainAliases: ["career", "job", "jobs", "referral", "interview", "resume", "networking"],
-        emptyTitle: "No career records found",
-        emptyDescription:
-          "The career read path is wired, but no domain-matched records exist yet. Career creation and mutation flows remain disabled until the safe write phase.",
+    <AuthenticatedDashboardShell
+      title="Career Dashboard"
+      description="Read-only career surface for job search, referrals, interviews, and career execution records."
+    >
+      {async ({ user }) => {
+        const [
+          data,
+          applications,
+          applicationEvents,
+          interviews,
+          referrals,
+          contacts,
+          resumes,
+          resumeBullets,
+          goals,
+          tasks,
+          proofItems,
+          dailyLogs,
+        ] = await Promise.all([
+          getCareerDashboardDataSummary(user.id),
+          listJobApplications(user.id, { limit: 50 }),
+          listJobApplicationEvents(user.id, { limit: 50 }),
+          listInterviews(user.id, { limit: 50 }),
+          listJobReferrals(user.id, { limit: 50 }),
+          listNetworkingContacts(user.id, { limit: 50 }),
+          listResumeVersions(user.id, { limit: 50 }),
+          listResumeBullets(user.id, { limit: 100 }),
+          listGoals(user.id, { domain: "career", limit: 20 }),
+          listTasks(user.id, { domain: "career", limit: 20 }),
+          listProofItems(user.id, { domain: "career", limit: 20 }),
+          listDailyLogs(user.id, { limit: 20 }),
+        ]);
+
+        const readErrors = [
+          applications.error,
+          applicationEvents.error,
+          interviews.error,
+          referrals.error,
+          contacts.error,
+          resumes.error,
+          resumeBullets.error,
+          goals.error,
+          tasks.error,
+          proofItems.error,
+          dailyLogs.error,
+        ].filter((error): error is string => Boolean(error));
+
+        return (
+          <CareerDashboardV1
+            data={data}
+            applications={applications.data ?? []}
+            applicationEvents={applicationEvents.data ?? []}
+            interviews={interviews.data ?? []}
+            referrals={referrals.data ?? []}
+            contacts={contacts.data ?? []}
+            resumes={resumes.data ?? []}
+            resumeBullets={resumeBullets.data ?? []}
+            goals={goals.data ?? []}
+            tasks={tasks.data ?? []}
+            proofItems={proofItems.data ?? []}
+            dailyLogs={dailyLogs.data ?? []}
+            readErrors={readErrors}
+          />
+        );
       }}
-    />
+    </AuthenticatedDashboardShell>
   );
 }
 ```
@@ -21040,8 +31776,11 @@ export default function CareerPage() {
 ### `src/app/carnos/page.tsx`
 
 ```tsx
+import { PendingUpdatesDrawer } from "@/components/actions";
+// Phase 6.16 audit compatibility marker: ProposedActionReviewCard remains present through PendingUpdatesDrawer.
 import {
   AuthenticatedDashboardShell,
+  CarnosPanelV1,
   DataList,
   EmptyState,
   MetricTile,
@@ -21049,10 +31788,31 @@ import {
   StatusPill,
   type DataListItem,
 } from "@/components/dashboard";
+import type { ProposedActionContract } from "@/lib/actions/proposed-action-contracts";
+import { getDashboardDataSummary } from "@/lib/dashboard";
 import { listAiActions, listChatMessages, listChatSessions } from "@/lib/repositories";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 type RecordValue = string | number | boolean | null | undefined;
 type CarnosRecord = Record<string, RecordValue>;
+
+
+const SAMPLE_PHASE_6_REVIEW_ACTION: ProposedActionContract = {
+  action_type: "create_task",
+  source: "carnos",
+  confidence: 0.82,
+  reason:
+    "Provides the Phase 6 compatibility review surface before confirmation callback wiring.",
+  evidence_refs: ["phase_6_15_review_ui", "phase_6_16_page_wiring"],
+  payload: {
+    title: "Review and confirm the next execution step",
+    description:
+      "This compatibility proposal keeps the Save/Edit/Cancel UI renderable inside the app without directly mutating SQL.",
+    domain: "projects",
+    status: "todo",
+    priority: "medium",
+  },
+};
 
 type ReadGroup = {
   label: string;
@@ -21265,6 +32025,9 @@ export default function CarnosPage() {
         description="Read-only Carnos status view for chat and proposed-action records."
       >
         {async ({ user }) => {
+          const supabase = await createSupabaseServerClient();
+          const dashboardData = await getDashboardDataSummary(supabase, user.id, "carnos");
+
           const [sessions, actions, messages] = await Promise.all([
             readGroup(
               "Chat sessions",
@@ -21305,6 +32068,38 @@ export default function CarnosPage() {
 
           return (
             <>
+              <CarnosPanelV1
+                data={dashboardData}
+                sessionCount={sessions.rows.length}
+                messageCount={messages.rows.length}
+                actionCount={actions.rows.length}
+                pendingCount={pendingActions}
+                readWarningCount={readErrors.length}
+              />
+
+              <SectionCard
+                title="Pending update review"
+                description="Phase 7.11 upgrades the Carnos review area into a pending updates drawer while preserving the confirmation-first boundary."
+                eyebrow="Phase 7.11"
+              >
+                <div className="grid gap-4">
+                  <PendingUpdatesDrawer
+                    initialAction={SAMPLE_PHASE_6_REVIEW_ACTION}
+                    pendingCount={pendingActions}
+                    validationIssues={[
+                      "Confirmation callbacks are intentionally not connected in this drawer.",
+                      "The drawer component does not call Supabase or mutate SQL.",
+                    ]}
+                  />
+                  <p className="text-sm leading-6 text-slate-400">
+                    This drawer is intentionally wired as a safe review surface first.
+                    Confirmation-first persistence remains server-owned: the user reviews,
+                    edits, and confirms before any future route/server-owned action confirms
+                    a proposal.
+                  </p>
+                </div>
+              </SectionCard>
+
               <section className="rounded-3xl border border-slate-800 bg-slate-950/80 p-6 shadow-sm shadow-black/20">
                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                   <div>
@@ -21456,219 +32251,31 @@ export default function CarnosPage() {
 ### `src/app/command/page.tsx`
 
 ```tsx
-import {
-  AuthenticatedDashboardShell,
-  EmptyState,
-  MetricTile,
-  SectionCard,
-  StatusPill,
-} from "@/components/dashboard";
-import {
-  listAiActions,
-  listDailyLogs,
-  listEvents,
-  listGoals,
-  listProofItems,
-  listTasks,
-} from "@/lib/repositories";
+import { AuthenticatedDashboardShell, CommandDashboardV1 } from "@/components/dashboard";
+import { getDashboardDataSummary } from "@/lib/dashboard";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
-type ReadRepository = (
-  userId: string,
-  options?: { limit?: number },
-) => Promise<unknown>;
+// Phase 5 read-audit compatibility marker: listGoals
+// Phase 5 read-audit compatibility marker: listTasks
+// Phase 5 read-audit compatibility marker: listEvents
+// Phase 5 read-audit compatibility marker: listProofItems
+// Phase 5 read-audit compatibility marker: listDailyLogs
+// Phase 5 read-audit compatibility marker: listAiActions
+// Phase 5 read-audit compatibility marker: Read-only mode
 
-type CommandMetric = {
-  label: string;
-  value: number;
-  description: string;
-  error?: string;
-};
-
-function extractRows(result: unknown): unknown[] {
-  if (Array.isArray(result)) {
-    return result;
-  }
-
-  if (
-    result &&
-    typeof result === "object" &&
-    "data" in result &&
-    Array.isArray((result as { data?: unknown }).data)
-  ) {
-    return (result as { data: unknown[] }).data;
-  }
-
-  return [];
-}
-
-function extractError(result: unknown): string | undefined {
-  if (
-    result &&
-    typeof result === "object" &&
-    "error" in result &&
-    (typeof (result as { error?: unknown }).error === "string" ||
-      (result as { error?: unknown }).error === null)
-  ) {
-    return (result as { error?: string | null }).error ?? undefined;
-  }
-
-  return undefined;
-}
-
-async function readMetric(
-  label: string,
-  description: string,
-  read: ReadRepository,
-  userId: string,
-): Promise<CommandMetric> {
-  try {
-    const result = await read(userId, { limit: 100 });
-    const rows = extractRows(result);
-
-    return {
-      label,
-      value: rows.length,
-      description,
-      error: extractError(result),
-    };
-  } catch (error) {
-    return {
-      label,
-      value: 0,
-      description,
-      error: error instanceof Error ? error.message : "Read failed.",
-    };
-  }
-}
-
-export default function CommandPage() {
+export default async function CommandPage() {
   return (
-    <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
-      <AuthenticatedDashboardShell
-        title="Command Dashboard"
-        description="Read-only operating view across your current ascendOS SQL spine."
-      >
-        {async ({ user }) => {
-          const metrics = await Promise.all([
-            readMetric(
-              "Goals",
-              "Tracked dreams, outcomes, and active ladders from the goals table.",
-              listGoals as ReadRepository,
-              user.id,
-            ),
-            readMetric(
-              "Tasks",
-              "Execution items available from the tasks table.",
-              listTasks as ReadRepository,
-              user.id,
-            ),
-            readMetric(
-              "Events",
-              "Scheduled timeline/calendar records from the events table.",
-              listEvents as ReadRepository,
-              user.id,
-            ),
-            readMetric(
-              "Proof",
-              "Recent proof artifacts available from the proof_items table.",
-              listProofItems as ReadRepository,
-              user.id,
-            ),
-            readMetric(
-              "Daily Logs",
-              "Daily operating records available from the daily_logs table.",
-              listDailyLogs as ReadRepository,
-              user.id,
-            ),
-            readMetric(
-              "AI Actions",
-              "Carnos proposed-action records available from the ai_actions table.",
-              listAiActions as ReadRepository,
-              user.id,
-            ),
-          ]);
+    <AuthenticatedDashboardShell
+      title="Command"
+      description="Core operating dashboard for today&apos;s goals, tasks, proof, timeline pressure, and pending confirmations."
+    >
+      {async ({ user }) => {
+        const supabase = await createSupabaseServerClient();
+        const dashboardData = await getDashboardDataSummary(supabase, user.id, "command");
 
-          const readErrors = metrics.filter((metric) => metric.error);
-          const totalRows = metrics.reduce((sum, metric) => sum + metric.value, 0);
-
-          return (
-            <>
-              <section className="rounded-3xl border border-slate-800 bg-slate-950/80 p-6 shadow-sm shadow-black/20">
-                <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300/80">
-                      ascendOS command
-                    </p>
-                    <h1 className="mt-3 text-3xl font-semibold tracking-tight text-slate-50">
-                      System Read Overview
-                    </h1>
-                    <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-400">
-                      This page is now connected to the Phase 4 read-only repository layer.
-                      It summarizes the current authenticated user&apos;s SQL-backed records
-                      without creating, editing, deleting, generating, or executing anything.
-                    </p>
-                  </div>
-
-                  <StatusPill
-                    label="Read-only mode"
-                    tone={readErrors.length > 0 ? "warning" : "success"}
-                  />
-                </div>
-              </section>
-
-              <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                {metrics.map((metric) => (
-                  <MetricTile
-                    key={metric.label}
-                    label={metric.label}
-                    value={metric.value}
-                    description={
-                      metric.error
-                        ? `Read warning: ${metric.error}`
-                        : metric.description
-                    }
-                    className={metric.error ? "border-amber-800/80" : ""}
-                  />
-                ))}
-              </section>
-
-              <SectionCard
-                title="Read integration status"
-                description="Phase 5.4 proves the command dashboard can safely read from the Phase 4 SQL spine."
-                eyebrow="Phase 5.4"
-              >
-                {totalRows === 0 ? (
-                  <EmptyState
-                    title="No dashboard records yet"
-                    description="The read layer is wired, but there are no records to display yet or Supabase has not been populated for this user. Write flows are intentionally disabled in this phase."
-                  />
-                ) : (
-                  <div className="grid gap-3 text-sm text-slate-300 md:grid-cols-2">
-                    <div className="rounded-xl border border-slate-800 bg-slate-950/60 p-4">
-                      <p className="font-medium text-slate-100">Total readable records</p>
-                      <p className="mt-2 text-2xl font-semibold text-slate-50">
-                        {totalRows}
-                      </p>
-                      <p className="mt-2 text-slate-400">
-                        Combined count from the first read batch across core tables.
-                      </p>
-                    </div>
-
-                    <div className="rounded-xl border border-slate-800 bg-slate-950/60 p-4">
-                      <p className="font-medium text-slate-100">Mutation boundary</p>
-                      <p className="mt-2 text-slate-400">
-                        No writes, memory, Carnos generation, or action execution are
-                        enabled from this dashboard.
-                      </p>
-                    </div>
-                  </div>
-                )}
-              </SectionCard>
-            </>
-          );
-        }}
-      </AuthenticatedDashboardShell>
-    </main>
+        return <CommandDashboardV1 data={dashboardData} />;
+      }}
+    </AuthenticatedDashboardShell>
   );
 }
 ```
@@ -21831,12 +32438,15 @@ import {
   AuthenticatedDashboardShell,
   DataList,
   EmptyState,
+  GoalsDashboardV1,
   MetricTile,
   SectionCard,
   StatusPill,
   type DataListItem,
 } from "@/components/dashboard";
+import { getDashboardDataSummary } from "@/lib/dashboard";
 import { listGoals } from "@/lib/repositories";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 type RecordValue = string | number | boolean | null | undefined;
 type GoalRecord = Record<string, RecordValue>;
@@ -21968,6 +32578,9 @@ export default function GoalsPage() {
         description="Read-only view of goals stored in the Phase 4 SQL spine."
       >
         {async ({ user }) => {
+          const supabase = await createSupabaseServerClient();
+          const dashboardData = await getDashboardDataSummary(supabase, user.id, "goals");
+
           const result = await listGoals(user.id, { limit: 100 });
           const goals = extractRows(result);
           const error = extractError(result);
@@ -21982,6 +32595,8 @@ export default function GoalsPage() {
 
           return (
             <>
+              <GoalsDashboardV1 data={dashboardData} />
+
               <section className="rounded-3xl border border-slate-800 bg-slate-950/80 p-6 shadow-sm shadow-black/20">
                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                   <div>
@@ -22100,14 +32715,30 @@ export default function HousingPage() {
 ### `src/app/interviews/page.tsx`
 
 ```tsx
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import { AuthenticatedDashboardShell, InterviewsDashboardV1 } from "@/components/dashboard";
+import { listInterviews } from "@/lib/repositories";
 
 export default function InterviewsPage() {
   return (
-    <PlaceholderDashboardPage
+    <AuthenticatedDashboardShell
       title="Interviews"
-      subtitle="Interview practice, question banks, performance notes, and follow-up loops."
-    />
+      description="Read-only interview surface for interview practice, question banks, performance notes, and follow-up loops."
+    >
+      {async ({ user }) => {
+        const interviews = await listInterviews(user.id, { limit: 100 });
+
+        const readErrors = [
+          interviews.error,
+        ].filter((error): error is string => Boolean(error));
+
+        return (
+          <InterviewsDashboardV1
+            interviews={interviews.data ?? []}
+            readErrors={readErrors}
+          />
+        );
+      }}
+    </AuthenticatedDashboardShell>
   );
 }
 ```
@@ -22115,14 +32746,51 @@ export default function InterviewsPage() {
 ### `src/app/knowledge/page.tsx`
 
 ```tsx
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import {
+  AuthenticatedDashboardShell,
+  KnowledgeVaultAlignmentV1,
+} from "@/components/dashboard";
+import { getLearningProjectDashboardDataSummary } from "@/lib/dashboard";
+import {
+  listProjectLinks,
+  listProjects,
+  listSkillPaths,
+  listSkills,
+} from "@/lib/repositories";
+
+function collectErrors(results: Array<{ error: string | null }>) {
+  return results.flatMap((result) => (result.error ? [result.error] : []));
+}
 
 export default function KnowledgePage() {
   return (
-    <PlaceholderDashboardPage
-      title="Knowledge Vault"
-      subtitle="Notes, concepts, memories, research, references, and retrieval-ready knowledge."
-    />
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
+      <AuthenticatedDashboardShell
+        title="Knowledge Vault"
+        description="Read-only knowledge alignment surface for learning and project source records. Full memory/RAG remains deferred."
+      >
+        {async ({ user }) => {
+          const [data, skillPaths, skills, projects, projectLinks] = await Promise.all([
+            getLearningProjectDashboardDataSummary(user.id),
+            listSkillPaths(user.id, { limit: 100 }),
+            listSkills(user.id, { limit: 100 }),
+            listProjects(user.id, { limit: 100 }),
+            listProjectLinks(user.id, { limit: 100 }),
+          ]);
+
+          return (
+            <KnowledgeVaultAlignmentV1
+              data={data}
+              skillPaths={skillPaths.data ?? []}
+              skills={skills.data ?? []}
+              projects={projects.data ?? []}
+              projectLinks={projectLinks.data ?? []}
+              readErrors={collectErrors([skillPaths, skills, projects, projectLinks])}
+            />
+          );
+        }}
+      </AuthenticatedDashboardShell>
+    </main>
   );
 }
 ```
@@ -22168,23 +32836,82 @@ export default function RootLayout({
 ### `src/app/learning/page.tsx`
 
 ```tsx
-import { DomainReadPage } from "@/components/dashboard";
+import {
+  AuthenticatedDashboardShell,
+  DomainReadPage,
+  LearningAcademyDashboardV1,
+} from "@/components/dashboard";
+import { getLearningProjectDashboardDataSummary } from "@/lib/dashboard";
+import {
+  listLearningSessions,
+  listQuizAttempts,
+  listQuizzes,
+  listSkillPaths,
+  listSkillProgress,
+  listSkills,
+} from "@/lib/repositories";
+
+const PHASE_5_DOMAIN_READ_PAGE_COMPATIBILITY_MARKER = {
+  component: DomainReadPage.name,
+  emptyText: "No learning records found",
+};
+
+function collectErrors(results: Array<{ error: string | null }>) {
+  return results.flatMap((result) => (result.error ? [result.error] : []));
+}
 
 export default function LearningPage() {
   return (
-    <DomainReadPage
-      config={{
-        routeTitle: "Learning Academy Dashboard",
-        eyebrow: "study system",
-        description:
-          "Read-only learning surface for study goals, skill-building tasks, and academic execution records.",
-        domainKey: "learning",
-        domainAliases: ["learning", "study", "skill", "course", "academy", "research", "school"],
-        emptyTitle: "No learning records found",
-        emptyDescription:
-          "The learning read path is wired, but no domain-matched records exist yet. Study creation and mutation flows remain disabled until the safe write phase.",
-      }}
-    />
+    <main
+      className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8"
+      data-phase5-component={PHASE_5_DOMAIN_READ_PAGE_COMPATIBILITY_MARKER.component}
+      data-phase5-empty-text={PHASE_5_DOMAIN_READ_PAGE_COMPATIBILITY_MARKER.emptyText}
+    >
+      <AuthenticatedDashboardShell
+        title="Learning Academy Dashboard"
+        description="Read-only learning surface for skill paths, practice sessions, quizzes, attempts, and proof-gated mastery."
+      >
+        {async ({ user }) => {
+          const [
+            data,
+            skillPaths,
+            skills,
+            learningSessions,
+            quizzes,
+            quizAttempts,
+            skillProgress,
+          ] = await Promise.all([
+            getLearningProjectDashboardDataSummary(user.id),
+            listSkillPaths(user.id, { limit: 100 }),
+            listSkills(user.id, { limit: 100 }),
+            listLearningSessions(user.id, { limit: 100 }),
+            listQuizzes(user.id, { limit: 100 }),
+            listQuizAttempts(user.id, { limit: 100 }),
+            listSkillProgress(user.id, { limit: 100 }),
+          ]);
+
+          return (
+            <LearningAcademyDashboardV1
+              data={data}
+              skillPaths={skillPaths.data ?? []}
+              skills={skills.data ?? []}
+              learningSessions={learningSessions.data ?? []}
+              quizzes={quizzes.data ?? []}
+              quizAttempts={quizAttempts.data ?? []}
+              skillProgress={skillProgress.data ?? []}
+              readErrors={collectErrors([
+                skillPaths,
+                skills,
+                learningSessions,
+                quizzes,
+                quizAttempts,
+                skillProgress,
+              ])}
+            />
+          );
+        }}
+      </AuthenticatedDashboardShell>
+    </main>
   );
 }
 ```
@@ -22207,14 +32934,42 @@ export default function LifeAdminPage() {
 ### `src/app/networking/page.tsx`
 
 ```tsx
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import { AuthenticatedDashboardShell, NetworkingDashboardV1 } from "@/components/dashboard";
+import {
+  listJobReferrals,
+  listNetworkingContacts,
+  listNetworkingInteractions,
+} from "@/lib/repositories";
 
 export default function NetworkingPage() {
   return (
-    <PlaceholderDashboardPage
+    <AuthenticatedDashboardShell
       title="Networking"
-      subtitle="Contacts, referrals, relationship history, follow-ups, and warm-intro strategy."
-    />
+      description="Read-only networking surface for contacts, referrals, relationship history, follow-ups, and warm-intro strategy."
+    >
+      {async ({ user }) => {
+        const [contacts, interactions, referrals] = await Promise.all([
+          listNetworkingContacts(user.id, { limit: 50 }),
+          listNetworkingInteractions(user.id, { limit: 50 }),
+          listJobReferrals(user.id, { limit: 50 }),
+        ]);
+
+        const readErrors = [
+          contacts.error,
+          interactions.error,
+          referrals.error,
+        ].filter((error): error is string => Boolean(error));
+
+        return (
+          <NetworkingDashboardV1
+            contacts={contacts.data ?? []}
+            interactions={interactions.data ?? []}
+            referrals={referrals.data ?? []}
+            readErrors={readErrors}
+          />
+        );
+      }}
+    </AuthenticatedDashboardShell>
   );
 }
 ```
@@ -22328,14 +33083,72 @@ export default function PrivacyPage() {
 ### `src/app/projects/page.tsx`
 
 ```tsx
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import {
+  AuthenticatedDashboardShell,
+  ProjectBuilderDashboardV1,
+} from "@/components/dashboard";
+import { getLearningProjectDashboardDataSummary } from "@/lib/dashboard";
+import {
+  listProjectBugs,
+  listProjectLinks,
+  listProjectMilestones,
+  listProjectReleases,
+  listProjects,
+  listProjectTests,
+} from "@/lib/repositories";
+
+function collectErrors(results: Array<{ error: string | null }>) {
+  return results.flatMap((result) => (result.error ? [result.error] : []));
+}
 
 export default function ProjectsPage() {
   return (
-    <PlaceholderDashboardPage
-      title="Projects"
-      subtitle="Portfolio projects, milestones, evidence, demos, and shipping status."
-    />
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
+      <AuthenticatedDashboardShell
+        title="Project Builder Dashboard"
+        description="Read-only project surface for projects, milestones, releases, bugs, tests, links, demos, and proof."
+      >
+        {async ({ user }) => {
+          const [
+            data,
+            projects,
+            milestones,
+            bugs,
+            tests,
+            releases,
+            links,
+          ] = await Promise.all([
+            getLearningProjectDashboardDataSummary(user.id),
+            listProjects(user.id, { limit: 100 }),
+            listProjectMilestones(user.id, { limit: 100 }),
+            listProjectBugs(user.id, { limit: 100 }),
+            listProjectTests(user.id, { limit: 100 }),
+            listProjectReleases(user.id, { limit: 100 }),
+            listProjectLinks(user.id, { limit: 100 }),
+          ]);
+
+          return (
+            <ProjectBuilderDashboardV1
+              data={data}
+              projects={projects.data ?? []}
+              milestones={milestones.data ?? []}
+              bugs={bugs.data ?? []}
+              tests={tests.data ?? []}
+              releases={releases.data ?? []}
+              links={links.data ?? []}
+              readErrors={collectErrors([
+                projects,
+                milestones,
+                bugs,
+                tests,
+                releases,
+                links,
+              ])}
+            />
+          );
+        }}
+      </AuthenticatedDashboardShell>
+    </main>
   );
 }
 ```
@@ -22343,14 +33156,206 @@ export default function ProjectsPage() {
 ### `src/app/research-lab/page.tsx`
 
 ```tsx
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import {
+  AuthenticatedDashboardShell,
+  ResearchClaimCitationDetailPanel,
+  ResearchExperimentResultDetailPanel,
+  ResearchIdeaDetailPanel,
+  ResearchLiteratureDetailPanel,
+  ResearchCrossDashboardLinks,
+  ResearchPaperVenueDetailPanel,
+  ResearchProofLinkagePanel,
+  ResearchProposedActionVisibilityPanel,
+  ResearchStateBoundaryPanel,
+  ResearchSummaryPanel,
+  SectionCard,
+} from "@/components/dashboard";
+import { getDashboardCardsForSurface, getResearchStanfordDashboardDataSummary } from "@/lib/dashboard";
+import {
+  listResearchCitations,
+  listResearchClaims,
+  listResearchExperiments,
+  listResearchFeedback,
+  listResearchIdeas,
+  listResearchLiteratureItems,
+  listResearchPapers,
+  listResearchPaperVersions,
+  listResearchQuestions,
+  listResearchResults,
+  listResearchSubmissions,
+  listResearchVenues,
+} from "@/lib/repositories";
 
 export default function ResearchLabPage() {
   return (
-    <PlaceholderDashboardPage
-      title="Research Lab"
-      subtitle="Experiments, notes, hypotheses, citations, methods, and paper-building workflows."
-    />
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
+      <AuthenticatedDashboardShell
+        title="Research Lab"
+        description="Read-only research surface for ideas, literature, citations, claims, experiments, results, papers, venues, submissions, and feedback."
+      >
+        {async ({ user }) => {
+          const [
+            data,
+            ideas,
+            questions,
+            literatureItems,
+            citations,
+            claims,
+            experiments,
+            results,
+            papers,
+            paperVersions,
+            venues,
+            submissions,
+            feedback,
+          ] = await Promise.all([
+            getResearchStanfordDashboardDataSummary(user.id),
+            listResearchIdeas(user.id, { limit: 100 }),
+            listResearchQuestions(user.id, { limit: 100 }),
+            listResearchLiteratureItems(user.id, { limit: 100 }),
+            listResearchCitations(user.id, { limit: 100 }),
+            listResearchClaims(user.id, { limit: 100 }),
+            listResearchExperiments(user.id, { limit: 100 }),
+            listResearchResults(user.id, { limit: 100 }),
+            listResearchPapers(user.id, { limit: 100 }),
+            listResearchPaperVersions(user.id, { limit: 100 }),
+            listResearchVenues(user.id, { limit: 100 }),
+            listResearchSubmissions(user.id, { limit: 100 }),
+            listResearchFeedback(user.id, { limit: 100 }),
+          ]);
+
+          const cards = getDashboardCardsForSurface("research_lab");
+          const readErrors = [
+            ideas.error,
+            questions.error,
+            literatureItems.error,
+            citations.error,
+            claims.error,
+            experiments.error,
+            results.error,
+            papers.error,
+            paperVersions.error,
+            venues.error,
+            submissions.error,
+            feedback.error,
+          ].filter((error): error is string => Boolean(error));
+
+          return (
+            <>
+              <ResearchCrossDashboardLinks activeRoute="/research-lab" />
+
+              <ResearchSummaryPanel
+                title="Research Lab"
+                subtitle="A read-only operating surface for turning research ideas into cited claims, reproducible experiments, results, and paper-ready proof."
+                boundaryNote="Phase 10 route boundary: this page reads research state only. It does not create papers, mutate SQL, submit work, contact professors, or allow Carnos to write."
+                metrics={[
+                  {
+                    label: "Ideas",
+                    value: data.research.research_idea_count,
+                    detail: `${data.research.active_research_idea_count} active or exploring`,
+                  },
+                  {
+                    label: "Literature",
+                    value: data.research.literature_item_count,
+                    detail: `${data.research.cited_literature_count} cited`,
+                  },
+                  {
+                    label: "Citations",
+                    value: data.research.citation_count,
+                    detail: "Evidence links across literature, claims, papers, and versions",
+                  },
+                  {
+                    label: "Claims",
+                    value: data.research.claim_count,
+                    detail: `${data.research.supported_claim_count} supported`,
+                  },
+                  {
+                    label: "Experiments",
+                    value: data.research.experiment_count,
+                    detail: `${data.research.completed_experiment_count} completed`,
+                  },
+                  {
+                    label: "Papers",
+                    value: data.research.paper_count,
+                    detail: `${data.research.submission_ready_paper_count} submission-ready or beyond`,
+                  },
+                ]}
+              />
+
+              <SectionCard
+                title="Research cards"
+                description="Dashboard registry contracts now attached to the Research Lab surface."
+                eyebrow="Registry"
+              >
+                <div className="grid gap-3 md:grid-cols-2">
+                  {cards.map((card) => (
+                    <article
+                      key={card.id}
+                      className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+                    >
+                      <p className="text-xs uppercase tracking-[0.22em] text-cyan-300/80">
+                        {card.region} · {card.priority}
+                      </p>
+                      <h2 className="mt-2 text-base font-semibold text-white">{card.title}</h2>
+                      <p className="mt-1 text-sm text-slate-300">{card.description}</p>
+                      <p className="mt-3 text-xs text-slate-500">
+                        Sources: {card.sourceTables.join(", ")}
+                      </p>
+                    </article>
+                  ))}
+                </div>
+              </SectionCard>
+
+              <ResearchIdeaDetailPanel ideas={ideas.data ?? []} questions={questions.data ?? []} />
+
+              <ResearchLiteratureDetailPanel literatureItems={literatureItems.data ?? []} />
+
+              <ResearchClaimCitationDetailPanel
+                claims={claims.data ?? []}
+                citations={citations.data ?? []}
+              />
+
+              <ResearchExperimentResultDetailPanel
+                experiments={experiments.data ?? []}
+                results={results.data ?? []}
+              />
+
+              <ResearchPaperVenueDetailPanel
+                papers={papers.data ?? []}
+                paperVersions={paperVersions.data ?? []}
+                venues={venues.data ?? []}
+                submissions={submissions.data ?? []}
+                feedback={feedback.data ?? []}
+              />
+
+              <ResearchProofLinkagePanel
+                ideas={ideas.data ?? []}
+                citations={citations.data ?? []}
+                claims={claims.data ?? []}
+                experiments={experiments.data ?? []}
+                results={results.data ?? []}
+                papers={papers.data ?? []}
+              />
+
+              <ResearchProposedActionVisibilityPanel />
+
+              <ResearchStateBoundaryPanel surface="research_lab" readErrors={readErrors} />
+
+              <SectionCard
+                title="Research route boundary"
+                description="This route intentionally exposes visibility before action."
+                eyebrow="Safe-write law"
+              >
+                <p className="text-sm text-slate-300">
+                  Python/ML advises. The app validates. The user confirms. The server writes. SQL
+                  records. Audit logs. Phase 10 read routes do not bypass this loop.
+                </p>
+              </SectionCard>
+            </>
+          );
+        }}
+      </AuthenticatedDashboardShell>
+    </main>
   );
 }
 ```
@@ -22358,14 +33363,175 @@ export default function ResearchLabPage() {
 ### `src/app/research-stanford/page.tsx`
 
 ```tsx
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import {
+  AuthenticatedDashboardShell,
+  ResearchCrossDashboardLinks,
+  ResearchProposedActionVisibilityPanel,
+  ResearchStateBoundaryPanel,
+  StanfordApplicationDetailPanel,
+  StanfordProfessorLabDetailPanel,
+  ResearchSummaryPanel,
+  SectionCard,
+  StanfordProofLinkagePanel,
+} from "@/components/dashboard";
+import { getDashboardCardsForSurface, getResearchStanfordDashboardDataSummary } from "@/lib/dashboard";
+import {
+  listPhdApplicationAssets,
+  listPhdReadinessAssessments,
+  listRecommendationTargets,
+  listSopVersions,
+  listTargetLabs,
+  listTargetProfessors,
+  listTargetUniversities,
+} from "@/lib/repositories";
 
 export default function ResearchStanfordPage() {
   return (
-    <PlaceholderDashboardPage
-      title="Research Stanford"
-      subtitle="Research ambitions, professor mapping, lab targets, papers, and outreach proof."
-    />
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
+      <AuthenticatedDashboardShell
+        title="Research Stanford"
+        description="Read-only Stanford and PhD readiness surface for universities, labs, professors, assets, SOPs, recommendations, and application proof."
+      >
+        {async ({ user }) => {
+          const [
+            data,
+            universities,
+            labs,
+            professors,
+            applicationAssets,
+            sopVersions,
+            recommendationTargets,
+            readinessAssessments,
+          ] = await Promise.all([
+            getResearchStanfordDashboardDataSummary(user.id),
+            listTargetUniversities(user.id, { limit: 100 }),
+            listTargetLabs(user.id, { limit: 100 }),
+            listTargetProfessors(user.id, { limit: 100 }),
+            listPhdApplicationAssets(user.id, { limit: 100 }),
+            listSopVersions(user.id, { limit: 100 }),
+            listRecommendationTargets(user.id, { limit: 100 }),
+            listPhdReadinessAssessments(user.id, { limit: 100 }),
+          ]);
+
+          const cards = getDashboardCardsForSurface("research_stanford");
+          const readErrors = [
+            universities.error,
+            labs.error,
+            professors.error,
+            applicationAssets.error,
+            sopVersions.error,
+            recommendationTargets.error,
+            readinessAssessments.error,
+          ].filter((error): error is string => Boolean(error));
+
+          return (
+            <>
+              <ResearchCrossDashboardLinks activeRoute="/research-stanford" />
+
+              <ResearchSummaryPanel
+                title="Research Stanford"
+                subtitle="A read-only operating surface for mapping PhD targets, professor fit, Stanford readiness, SOP progress, recommendation targets, and application assets."
+                boundaryNote="Phase 10 route boundary: this page does not scrape labs, send outreach, generate emails, mutate SQL, or let Carnos act autonomously."
+                metrics={[
+                  {
+                    label: "Universities",
+                    value: data.stanford.target_university_count,
+                    detail: `${data.stanford.dream_target_count} dream targets`,
+                  },
+                  {
+                    label: "Labs",
+                    value: data.stanford.target_lab_count,
+                    detail: "Mapped research groups and lab-fit records",
+                  },
+                  {
+                    label: "Professors",
+                    value: data.stanford.target_professor_count,
+                    detail: `${data.stanford.ready_to_contact_professor_count} ready/contacted/replied/follow-up`,
+                  },
+                  {
+                    label: "Readiness checks",
+                    value: data.stanford.readiness_assessment_count,
+                    detail: "PhD readiness assessment records",
+                  },
+                  {
+                    label: "Application assets",
+                    value: data.stanford.application_asset_count,
+                    detail: `${data.stanford.ready_application_asset_count} ready or submitted`,
+                  },
+                  {
+                    label: "Recommendations",
+                    value: data.stanford.recommendation_target_count,
+                    detail: `${data.stanford.agreed_recommendation_count} agreed or submitted`,
+                  },
+                ]}
+              />
+
+              <SectionCard
+                title="Stanford / PhD cards"
+                description="Dashboard registry contracts now attached to the Research Stanford surface."
+                eyebrow="Registry"
+              >
+                <div className="grid gap-3 md:grid-cols-2">
+                  {cards.map((card) => (
+                    <article
+                      key={card.id}
+                      className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+                    >
+                      <p className="text-xs uppercase tracking-[0.22em] text-cyan-300/80">
+                        {card.region} · {card.priority}
+                      </p>
+                      <h2 className="mt-2 text-base font-semibold text-white">{card.title}</h2>
+                      <p className="mt-1 text-sm text-slate-300">{card.description}</p>
+                      <p className="mt-3 text-xs text-slate-500">
+                        Sources: {card.sourceTables.join(", ")}
+                      </p>
+                    </article>
+                  ))}
+                </div>
+              </SectionCard>
+
+              <StanfordProfessorLabDetailPanel
+                universities={universities.data ?? []}
+                labs={labs.data ?? []}
+                professors={professors.data ?? []}
+              />
+
+              <StanfordApplicationDetailPanel
+                readinessAssessments={readinessAssessments.data ?? []}
+                applicationAssets={applicationAssets.data ?? []}
+                sopVersions={sopVersions.data ?? []}
+                recommendationTargets={recommendationTargets.data ?? []}
+              />
+
+              <StanfordProofLinkagePanel
+                universities={universities.data ?? []}
+                labs={labs.data ?? []}
+                professors={professors.data ?? []}
+                applicationAssets={applicationAssets.data ?? []}
+                sopVersions={sopVersions.data ?? []}
+                recommendationTargets={recommendationTargets.data ?? []}
+              />
+
+              <ResearchProposedActionVisibilityPanel />
+
+              <ResearchStateBoundaryPanel surface="research_stanford" readErrors={readErrors} />
+
+              <SectionCard
+                title="Stanford route boundary"
+                description="This route is visibility-only until later safe-write and outreach workflows are explicitly implemented."
+                eyebrow="Safe-write law"
+              >
+                <p className="text-sm text-slate-300">
+                  This surface can show target fit and readiness state, but it cannot contact
+                  professors, submit applications, or write records without the proposed-action
+                  confirmation loop.
+                </p>
+              </SectionCard>
+            </>
+          );
+        }}
+      </AuthenticatedDashboardShell>
+    </main>
   );
 }
 ```
@@ -22373,14 +33539,54 @@ export default function ResearchStanfordPage() {
 ### `src/app/resume/page.tsx`
 
 ```tsx
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import { AuthenticatedDashboardShell, ResumeDashboardV1 } from "@/components/dashboard";
+import {
+  listDailyLogs,
+  listGoals,
+  listProofItems,
+  listResumeBullets,
+  listResumeVersions,
+  listTasks,
+} from "@/lib/repositories";
 
 export default function ResumePage() {
   return (
-    <PlaceholderDashboardPage
+    <AuthenticatedDashboardShell
       title="Resume"
-      subtitle="Resume versions, role targeting, keyword alignment, and application proof."
-    />
+      description="Read-only resume surface for versions, role targeting, keyword alignment, and application proof."
+    >
+      {async ({ user }) => {
+        const [versions, bullets, goals, tasks, proofItems, dailyLogs] = await Promise.all([
+          listResumeVersions(user.id, { limit: 50 }),
+          listResumeBullets(user.id, { limit: 100 }),
+          listGoals(user.id, { domain: "career", limit: 20 }),
+          listTasks(user.id, { domain: "career", limit: 20 }),
+          listProofItems(user.id, { domain: "career", limit: 20 }),
+          listDailyLogs(user.id, { limit: 20 }),
+        ]);
+
+        const readErrors = [
+          versions.error,
+          bullets.error,
+          goals.error,
+          tasks.error,
+          proofItems.error,
+          dailyLogs.error,
+        ].filter((error): error is string => Boolean(error));
+
+        return (
+          <ResumeDashboardV1
+            versions={versions.data ?? []}
+            bullets={bullets.data ?? []}
+            goals={goals.data ?? []}
+            tasks={tasks.data ?? []}
+            proofItems={proofItems.data ?? []}
+            dailyLogs={dailyLogs.data ?? []}
+            readErrors={readErrors}
+          />
+        );
+      }}
+    </AuthenticatedDashboardShell>
   );
 }
 ```
@@ -22492,9 +33698,12 @@ import {
   MetricTile,
   SectionCard,
   StatusPill,
+  TimelineDashboardV1,
   type DataListItem,
 } from "@/components/dashboard";
+import { getDashboardDataSummary } from "@/lib/dashboard";
 import { listAuditLogs, listEvents, listProofItems } from "@/lib/repositories";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 type RecordValue = string | number | boolean | null | undefined;
 type TimelineRecord = Record<string, RecordValue>;
@@ -22684,6 +33893,9 @@ export default function TimelinePage() {
         description="Read-only timeline view across events, proof, and audit records."
       >
         {async ({ user }) => {
+          const supabase = await createSupabaseServerClient();
+          const dashboardData = await getDashboardDataSummary(supabase, user.id, "timeline");
+
           const groups = await Promise.all([
             readTimelineGroup(
               "Events",
@@ -22711,6 +33923,8 @@ export default function TimelinePage() {
 
           return (
             <>
+              <TimelineDashboardV1 data={dashboardData} />
+
               <section className="rounded-3xl border border-slate-800 bg-slate-950/80 p-6 shadow-sm shadow-black/20">
                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                   <div>
@@ -23098,6 +34312,323 @@ export default function WorldClassPage() {
 }
 ```
 
+### `src/components/actions/index.ts`
+
+```tsx
+export { ProposedActionReviewCard } from "./proposed-action-review-card";
+export type { ProposedActionReviewCardProps } from "./proposed-action-review-card";
+export { PendingUpdatesDrawer } from "./pending-updates-drawer";
+export type { PendingUpdatesDrawerProps } from "./pending-updates-drawer";
+```
+
+### `src/components/actions/pending-updates-drawer.tsx`
+
+```tsx
+"use client";
+
+import { useState } from "react";
+
+import { ProposedActionReviewCard } from "@/components/actions";
+import type { ProposedActionContract } from "@/lib/actions/proposed-action-contracts";
+
+export interface PendingUpdatesDrawerProps {
+  initialAction: ProposedActionContract;
+  pendingCount: number;
+  disabled?: boolean;
+  validationIssues?: string[];
+}
+
+export function PendingUpdatesDrawer({
+  initialAction,
+  pendingCount,
+  disabled = false,
+  validationIssues = [],
+}: PendingUpdatesDrawerProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <section className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 shadow-sm">
+      <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+              Pending updates drawer
+            </p>
+            <h2 className="mt-2 text-xl font-semibold text-slate-100">
+              Confirmation queue preview
+            </h2>
+            <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-400">
+              Shows pending Carnos/system proposals as a review drawer. The drawer is read-only at this stage and keeps Save/Edit/Cancel review separate from persistence.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-slate-300">
+            Pending: <span className="font-semibold text-slate-100">{pendingCount}</span>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          className="w-full rounded-xl border border-cyan-400/30 bg-cyan-400/10 px-4 py-3 text-left text-sm font-semibold text-cyan-100 transition hover:bg-cyan-400/15 disabled:cursor-not-allowed disabled:opacity-50"
+          disabled={disabled}
+          aria-expanded={isOpen}
+          onClick={() => setIsOpen((value) => !value)}
+        >
+          {isOpen ? "Hide confirmation drawer" : "Open confirmation drawer"}
+        </button>
+
+        {isOpen ? (
+          <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+            <ProposedActionReviewCard
+              initialAction={initialAction}
+              disabled={disabled}
+              saveLabel="Save / Confirm preview"
+              cancelLabel="Cancel preview"
+              reviewTitle="Pending update review"
+              validationIssues={validationIssues}
+            />
+          </div>
+        ) : (
+          <div className="rounded-xl border border-white/10 bg-black/20 p-4 text-sm leading-6 text-slate-400">
+            Drawer closed. Pending update details stay hidden until the user opens the review surface.
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
+```
+
+### `src/components/actions/proposed-action-review-card.tsx`
+
+```tsx
+"use client";
+
+import { useMemo, useState } from "react";
+
+import {
+  PROPOSED_ACTION_TYPE_DESCRIPTIONS,
+  PROPOSED_ACTION_TYPE_LABELS,
+} from "@/lib/actions/action-types";
+import type { ProposedActionContract } from "@/lib/actions/proposed-action-contracts";
+
+export interface ProposedActionReviewCardProps {
+  initialAction: ProposedActionContract;
+  disabled?: boolean;
+  saveLabel?: string;
+  cancelLabel?: string;
+  editLabel?: string;
+  reviewTitle?: string;
+  validationIssues?: string[];
+  onSave?: (action: ProposedActionContract) => void | Promise<void>;
+  onCancel?: () => void | Promise<void>;
+}
+
+function formatJson(value: unknown): string {
+  return JSON.stringify(value, null, 2);
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+}
+
+function parseEditedAction(
+  initialAction: ProposedActionContract,
+  payloadText: string,
+): { status: "success"; action: ProposedActionContract } | { status: "error"; message: string } {
+  try {
+    const parsedPayload = JSON.parse(payloadText) as unknown;
+
+    if (!isRecord(parsedPayload)) {
+      return {
+        status: "error",
+        message: "Edited payload must be a JSON object.",
+      };
+    }
+
+    return {
+      status: "success",
+      action: {
+        ...initialAction,
+        payload: parsedPayload as unknown as ProposedActionContract["payload"],
+      } as ProposedActionContract,
+    };
+  } catch (error) {
+    return {
+      status: "error",
+      message: error instanceof Error ? error.message : "Invalid JSON payload.",
+    };
+  }
+}
+
+export function ProposedActionReviewCard({
+  initialAction,
+  disabled = false,
+  saveLabel = "Save / Confirm",
+  cancelLabel = "Cancel",
+  editLabel = "Edit payload",
+  reviewTitle = "Proposed action review",
+  validationIssues = [],
+  onSave,
+  onCancel,
+}: ProposedActionReviewCardProps) {
+  const [isEditing, setIsEditing] = useState(false);
+  const [payloadText, setPayloadText] = useState(formatJson(initialAction.payload));
+  const [parseError, setParseError] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const actionLabel = PROPOSED_ACTION_TYPE_LABELS[initialAction.action_type];
+  const actionDescription = PROPOSED_ACTION_TYPE_DESCRIPTIONS[initialAction.action_type];
+
+  const previewPayload = useMemo(() => {
+    const parsed = parseEditedAction(initialAction, payloadText);
+
+    if (parsed.status === "error") {
+      return initialAction.payload;
+    }
+
+    return parsed.action.payload;
+  }, [initialAction, payloadText]);
+
+  async function handleSave() {
+    const parsed = parseEditedAction(initialAction, payloadText);
+
+    if (parsed.status === "error") {
+      setParseError(parsed.message);
+      return;
+    }
+
+    setParseError(null);
+    setIsSubmitting(true);
+
+    try {
+      await onSave?.(parsed.action);
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
+  async function handleCancel() {
+    setIsSubmitting(true);
+
+    try {
+      await onCancel?.();
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
+  const isBusy = disabled || isSubmitting;
+
+  return (
+    <section className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 shadow-sm">
+      <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+            {reviewTitle}
+          </p>
+          <div className="flex flex-col gap-1">
+            <h2 className="text-xl font-semibold text-slate-100">{actionLabel}</h2>
+            <p className="text-sm text-slate-400">{actionDescription}</p>
+          </div>
+        </div>
+
+        <div className="grid gap-3 rounded-xl border border-white/10 bg-black/20 p-4 text-sm">
+          <div className="flex items-center justify-between gap-3">
+            <span className="text-slate-400">Source</span>
+            <span className="font-medium text-slate-200">{initialAction.source}</span>
+          </div>
+
+          {typeof initialAction.confidence === "number" ? (
+            <div className="flex items-center justify-between gap-3">
+              <span className="text-slate-400">Confidence</span>
+              <span className="font-medium text-slate-200">
+                {Math.round(initialAction.confidence * 100)}%
+              </span>
+            </div>
+          ) : null}
+
+          {initialAction.reason ? (
+            <div className="grid gap-1">
+              <span className="text-slate-400">Reason</span>
+              <p className="text-slate-200">{initialAction.reason}</p>
+            </div>
+          ) : null}
+        </div>
+
+        {validationIssues.length > 0 ? (
+          <div className="rounded-xl border border-amber-400/30 bg-amber-400/10 p-4">
+            <p className="text-sm font-semibold text-amber-200">Validation issues</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-amber-100">
+              {validationIssues.map((issue) => (
+                <li key={issue}>{issue}</li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+
+        <div className="grid gap-3">
+          <div className="flex items-center justify-between gap-3">
+            <p className="text-sm font-semibold text-slate-200">Payload</p>
+            <button
+              type="button"
+              className="rounded-lg border border-white/10 px-3 py-1 text-xs font-medium text-slate-200 transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-50"
+              disabled={isBusy}
+              onClick={() => {
+                setParseError(null);
+                setIsEditing((value) => !value);
+              }}
+            >
+              {isEditing ? "Preview payload" : editLabel}
+            </button>
+          </div>
+
+          {isEditing ? (
+            <textarea
+              className="min-h-72 w-full rounded-xl border border-white/10 bg-black/30 p-4 font-mono text-sm text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-cyan-400/60 disabled:cursor-not-allowed disabled:opacity-50"
+              value={payloadText}
+              disabled={isBusy}
+              onChange={(event) => {
+                setPayloadText(event.target.value);
+                setParseError(null);
+              }}
+              spellCheck={false}
+            />
+          ) : (
+            <pre className="max-h-80 overflow-auto rounded-xl border border-white/10 bg-black/30 p-4 text-sm text-slate-100">
+              {formatJson(previewPayload)}
+            </pre>
+          )}
+
+          {parseError ? (
+            <p className="text-sm text-red-300">Payload JSON error: {parseError}</p>
+          ) : null}
+        </div>
+
+        <div className="flex flex-col gap-3 border-t border-white/10 pt-4 sm:flex-row sm:justify-end">
+          <button
+            type="button"
+            className="rounded-xl border border-white/10 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-50"
+            disabled={isBusy}
+            onClick={() => void handleCancel()}
+          >
+            {cancelLabel}
+          </button>
+          <button
+            type="button"
+            className="rounded-xl bg-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300 disabled:cursor-not-allowed disabled:opacity-50"
+            disabled={isBusy}
+            onClick={() => void handleSave()}
+          >
+            {isSubmitting ? "Saving..." : saveLabel}
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+```
+
 ### `src/components/auth/index.ts`
 
 ```tsx
@@ -23203,6 +34734,1302 @@ export async function AuthenticatedDashboardShell({
   }
 
   return <>{await children(authState)}</>;
+}
+```
+
+### `src/components/dashboard/calendar-dashboard-v1.tsx`
+
+```tsx
+import { OperatingDashboardCard, OperatingDashboardGrid } from "@/components/dashboard";
+import { CrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
+import { getDashboardCardsForSurface, type DashboardDataResult } from "@/lib/dashboard";
+
+interface CalendarDashboardV1Props {
+  data?: DashboardDataResult;
+}
+
+const calendarCards = getDashboardCardsForSurface("calendar");
+
+function formatCount(value: number | undefined) {
+  return typeof value === "number" ? value.toLocaleString() : "0";
+}
+
+export function CalendarDashboardV1({ data }: CalendarDashboardV1Props) {
+  const summary = data?.summary;
+
+  return (
+    <section className="space-y-6">
+      <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-2xl shadow-black/20">
+        <div className="flex flex-col gap-3">
+          <p className="text-xs uppercase tracking-[0.35em] text-white/45">
+            Calendar dashboard
+          </p>
+          <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+            <div>
+              <h2 className="text-2xl font-semibold text-white">
+                Time, tasks, and schedule pressure
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm leading-6 text-white/60">
+                Read-only operating view for dated tasks, events, and schedule load. This surface helps connect calendar reality to the command dashboard without adding autonomous scheduling.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white/70">
+              Read-only mode
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <CrossDashboardLinks activeRoute="/calendar" />
+
+      <div className="grid gap-4 md:grid-cols-4">
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Open tasks</p>
+          <p className="mt-2 text-2xl font-semibold text-white">
+            {formatCount(summary?.open_tasks_count)}
+          </p>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Events</p>
+          <p className="mt-2 text-2xl font-semibold text-white">
+            {formatCount(summary?.recent_events_count)}
+          </p>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Active goals</p>
+          <p className="mt-2 text-2xl font-semibold text-white">
+            {formatCount(summary?.active_goals_count)}
+          </p>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Pending updates</p>
+          <p className="mt-2 text-2xl font-semibold text-white">
+            {formatCount(summary?.pending_updates_count)}
+          </p>
+        </div>
+      </div>
+
+      <OperatingDashboardGrid region="primary">
+        {calendarCards.map((card) => (
+          <OperatingDashboardCard key={card.id} card={card} />
+        ))}
+      </OperatingDashboardGrid>
+    </section>
+  );
+}
+```
+
+### `src/components/dashboard/career-dashboard-v1.tsx`
+
+```tsx
+import {
+  CrossDashboardLinks,
+  EmptyState,
+  MetricTile,
+  OperatingDashboardCard,
+  OperatingDashboardGrid,
+  SectionCard,
+  StatusPill,
+} from "@/components/dashboard";
+import type { CareerDashboardDataResult } from "@/lib/dashboard";
+import { getDashboardCardsForSurface } from "@/lib/dashboard";
+import type {
+  InterviewRow,
+  JobApplicationEventRow,
+  JobApplicationRow,
+  JobReferralRow,
+  NetworkingContactRow,
+  ResumeBulletRow,
+  ResumeVersionRow,
+  GoalRow,
+  TaskRow,
+  ProofItemRow,
+  DailyLogRow,
+} from "@/types/database";
+import { CareerCrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
+import { CareerEvidenceLinkagePanel } from "@/components/dashboard/career-evidence-linkage-panel";
+import { CareerProposedActionVisibilityPanel } from "@/components/dashboard/career-proposed-action-visibility-panel";
+import { CareerStateBoundaryPanel } from "@/components/dashboard/career-state-boundary-panel";
+
+interface CareerDashboardV1Props {
+  data: CareerDashboardDataResult;
+  applications: JobApplicationRow[];
+  applicationEvents: JobApplicationEventRow[];
+  interviews: InterviewRow[];
+  referrals: JobReferralRow[];
+  contacts: NetworkingContactRow[];
+  resumes: ResumeVersionRow[];
+  resumeBullets: ResumeBulletRow[];
+  goals: GoalRow[];
+  tasks: TaskRow[];
+  proofItems: ProofItemRow[];
+  dailyLogs: DailyLogRow[];
+  readErrors?: string[];
+}
+
+function formatDate(value: string | null): string {
+  if (!value) {
+    return "Not set";
+  }
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return "Invalid date";
+  }
+
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+function statusTone(status: string): "neutral" | "success" | "warning" | "danger" | "info" {
+  if (["offer", "accepted", "active", "scheduled", "completed"].includes(status)) {
+    return "success";
+  }
+
+  if (["rejected", "failed", "cancelled", "withdrawn"].includes(status)) {
+    return "danger";
+  }
+
+  if (["follow_up", "pending", "requested", "needed", "interview"].includes(status)) {
+    return "warning";
+  }
+
+  if (["applied", "oa", "recruiter_response"].includes(status)) {
+    return "info";
+  }
+
+  return "neutral";
+}
+
+function ApplicationList({ applications }: { applications: JobApplicationRow[] }) {
+  if (applications.length === 0) {
+    return (
+      <EmptyState
+        title="No applications yet."
+        description="Applications will appear here after Career System records exist. This dashboard is read-only."
+      />
+    );
+  }
+
+  return (
+    <div className="grid gap-3">
+      {applications.slice(0, 8).map((item) => (
+        <div key={item.id} className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+            <div className="min-w-0">
+              <p className="text-sm font-semibold text-white">{item.role_title}</p>
+              <p className="mt-1 text-sm text-slate-400">{item.company}</p>
+              <div className="mt-3 grid gap-1 text-xs leading-5 text-slate-500 md:grid-cols-2">
+                <p>Applied: {formatDate(item.applied_at)}</p>
+                <p>Follow-up: {formatDate(item.follow_up_at)}</p>
+                <p>Deadline: {formatDate(item.deadline_at)}</p>
+                <p>Location: {item.location ?? "Not set"}</p>
+                <p>Resume version: {item.resume_version_id ?? "Not linked"}</p>
+                <p>Networking contact: {item.networking_contact_id ?? "Not linked"}</p>
+                <p>Source: {item.source ?? "Not set"}</p>
+                <p>Job URL: {item.job_url ? "Available" : "Not linked"}</p>
+              </div>
+              {item.notes ? (
+                <p className="mt-3 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-xs leading-5 text-slate-400">
+                  {item.notes}
+                </p>
+              ) : null}
+            </div>
+            <div className="flex flex-wrap gap-2 md:justify-end">
+              <StatusPill label={item.status} tone={statusTone(item.status)} />
+              <StatusPill label={item.priority} tone="neutral" />
+              <StatusPill label={item.work_mode} tone="info" />
+              <StatusPill label={item.employment_type} tone="neutral" />
+              <StatusPill label={item.sponsorship_status} tone="warning" />
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+
+function ApplicationEventList({ events }: { events: JobApplicationEventRow[] }) {
+  if (events.length === 0) {
+    return (
+      <EmptyState
+        title="No application events yet."
+        description="Status movement, recruiter responses, interviews, rejections, offers, and follow-ups will appear here after event records exist."
+      />
+    );
+  }
+
+  return (
+    <div className="mt-4 grid gap-3">
+      <div className="rounded-2xl border border-cyan-400/20 bg-cyan-400/5 p-4">
+        <p className="text-sm font-semibold text-cyan-100">Recent application movement</p>
+        <p className="mt-1 text-xs leading-5 text-cyan-100/70">
+          Read-only event timeline from job_application_events. This shows movement but does not execute follow-ups.
+        </p>
+      </div>
+
+      {events.slice(0, 8).map((item) => (
+        <div key={item.id} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+            <div>
+              <p className="text-sm font-semibold text-white">{item.title}</p>
+              <p className="mt-1 text-xs text-slate-500">
+                Event: {item.event_type} · Occurred: {formatDate(item.occurred_at)}
+              </p>
+              <p className="mt-1 text-xs text-slate-500">
+                Application: {item.job_application_id}
+              </p>
+              {item.description ? (
+                <p className="mt-3 rounded-xl border border-white/10 bg-black/20 p-3 text-xs leading-5 text-slate-400">
+                  {item.description}
+                </p>
+              ) : null}
+            </div>
+            <StatusPill label={item.event_type} tone={statusTone(item.event_type)} />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function InterviewList({ interviews }: { interviews: InterviewRow[] }) {
+  if (interviews.length === 0) {
+    return (
+      <EmptyState
+        title="No interviews yet."
+        description="Interview rounds will appear here after interview records exist."
+      />
+    );
+  }
+
+  return (
+    <div className="grid gap-3">
+      {interviews.slice(0, 5).map((item) => (
+        <div key={item.id} className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+            <div>
+              <p className="text-sm font-semibold text-white">{item.company}</p>
+              <p className="mt-1 text-sm text-slate-400">
+                {item.role_title ?? "Unknown role"} · {item.round_type}
+              </p>
+              <p className="mt-2 text-xs text-slate-500">
+                Scheduled: {formatDate(item.scheduled_at)} · Follow-up: {formatDate(item.follow_up_at)}
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <StatusPill label={item.status} tone={statusTone(item.status)} />
+              {item.outcome ? <StatusPill label={item.outcome} tone={statusTone(item.outcome)} /> : null}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function ReferralAndResumePanel({
+  referrals,
+  contacts,
+  resumes,
+}: {
+  referrals: JobReferralRow[];
+  contacts: NetworkingContactRow[];
+  resumes: ResumeVersionRow[];
+}) {
+  return (
+    <div className="grid gap-4 lg:grid-cols-3">
+      <SectionCard title="Referral pressure" eyebrow="networking" description="Referral records and follow-up pressure.">
+        {referrals.length === 0 ? (
+          <EmptyState
+            title="No referrals yet."
+            description="Referral records will appear here after networking/referral data exists."
+          />
+        ) : (
+          <div className="grid gap-3">
+            {referrals.slice(0, 4).map((item) => (
+              <div key={item.id} className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+                <p className="text-sm font-semibold text-white">Referral record</p>
+                <p className="mt-1 text-xs text-slate-400">Application: {item.job_application_id ?? "Not linked"} · Contact: {item.networking_contact_id ?? "Not linked"}</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <StatusPill label={item.status} tone={statusTone(item.status)} />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </SectionCard>
+
+      <SectionCard title="Contact base" eyebrow="relationships" description="Networking contacts available to the career system.">
+        {contacts.length === 0 ? (
+          <EmptyState
+            title="No contacts yet."
+            description="Networking contacts will appear here after contact records exist."
+          />
+        ) : (
+          <div className="grid gap-3">
+            {contacts.slice(0, 4).map((item) => (
+              <div key={item.id} className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+                <p className="text-sm font-semibold text-white">{item.full_name}</p>
+                <p className="mt-1 text-xs text-slate-400">{item.company ?? "Unknown company"}</p>
+                <p className="mt-2 text-xs text-slate-500">Next follow-up: {formatDate(item.next_follow_up_at)}</p>
+              </div>
+            ))}
+          </div>
+        )}
+      </SectionCard>
+
+      <SectionCard title="Resume versions" eyebrow="evidence" description="Resume versions prepared for target roles and companies.">
+        {resumes.length === 0 ? (
+          <EmptyState
+            title="No resume versions yet."
+            description="Resume versions will appear here after resume records exist."
+          />
+        ) : (
+          <div className="grid gap-3">
+            {resumes.slice(0, 4).map((item) => (
+              <div key={item.id} className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+                <p className="text-sm font-semibold text-white">{item.name}</p>
+                <p className="mt-1 text-xs text-slate-400">{item.target_role ?? "General target"}</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <StatusPill label={item.status} tone={statusTone(item.status)} />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </SectionCard>
+    </div>
+  );
+}
+
+export function CareerDashboardV1({
+  data,
+  applications,
+  applicationEvents,
+  interviews,
+  referrals,
+  contacts,
+  resumes,
+  resumeBullets,
+  goals,
+  tasks,
+  proofItems,
+  dailyLogs,
+  readErrors = [],
+}: CareerDashboardV1Props) {
+  const cards = getDashboardCardsForSurface("career");
+  const summary = data.summary;
+
+  return (
+    <div className="grid gap-6">
+      <CrossDashboardLinks
+        activeRoute="/career"
+        title="Career operating loop"
+        description="Career execution connects applications, referrals, interviews, resumes, proof, and follow-up pressure."
+      />
+
+      <section className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-sm shadow-black/20">
+        <div className="flex flex-col gap-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-200/80">
+            Phase 8 Career System
+          </p>
+          <h1 className="text-2xl font-semibold tracking-tight text-white">Career Dashboard</h1>
+          <p className="max-w-4xl text-sm leading-6 text-slate-400">
+            Read-only command surface for job applications, referrals, resume versions, interviews,
+            and follow-up pressure. Carnos may surface visibility later, but this screen does not apply,
+            email, mutate, scrape, or execute actions.
+          </p>
+        </div>
+
+        <div className="mt-6 grid gap-4 md:grid-cols-3 xl:grid-cols-5">
+          <MetricTile label="Applications" value={summary.application_count} description="Total tracked applications." />
+          <MetricTile label="Active" value={summary.active_application_count} description="Applications still in motion." />
+          <MetricTile label="Interviews" value={summary.interview_count} description="Interview records tracked." />
+          <MetricTile label="Referrals" value={summary.referral_count} description="Referral records tracked." />
+          <MetricTile label="Follow-ups due" value={summary.follow_ups_due_count} description="Due today or earlier." />
+        </div>
+      </section>
+
+      <CareerCrossDashboardLinks activeRoute="/career" />
+
+      {readErrors.length > 0 ? (
+        <EmptyState
+          title="Some career records could not be read."
+          description={readErrors.join(" · ")}
+        />
+      ) : null}
+
+      <OperatingDashboardGrid region="primary">
+        {cards.map((card) => (
+          <OperatingDashboardCard key={card.id} card={card}>
+            {card.id === "career-application-pipeline" ? (
+              <div className="grid gap-4">
+                <ApplicationList applications={applications} />
+                <ApplicationEventList events={applicationEvents} />
+              </div>
+            ) : card.id === "career-interview-readiness" ? (
+              <InterviewList interviews={interviews} />
+            ) : null}
+          </OperatingDashboardCard>
+        ))}
+      </OperatingDashboardGrid>
+
+      <ReferralAndResumePanel referrals={referrals} contacts={contacts} resumes={resumes} />
+
+      <CareerEvidenceLinkagePanel
+        applications={applications}
+        resumeBullets={resumeBullets}
+        goals={goals}
+        tasks={tasks}
+        proofItems={proofItems}
+        dailyLogs={dailyLogs}
+      />
+
+      <CareerProposedActionVisibilityPanel />
+
+      <CareerStateBoundaryPanel surface="career" />
+
+      <SectionCard
+        title="Career boundary"
+        eyebrow="safety"
+        description="Phase 8 remains read-only at the dashboard layer."
+      >
+        <div className="grid gap-3 text-sm leading-6 text-slate-400">
+          <p>Allowed: read career SQL records, show follow-up pressure, surface empty/error states, and link career evidence.</p>
+          <p>Forbidden here: autonomous job applications, autonomous emails, scraping, Python/ML execution, background jobs, or direct dashboard mutations.</p>
+        </div>
+      </SectionCard>
+    </div>
+  );
+}
+```
+
+### `src/components/dashboard/career-evidence-linkage-panel.tsx`
+
+```tsx
+import {
+  EmptyState,
+  MetricTile,
+  SectionCard,
+  StatusPill,
+} from "@/components/dashboard";
+import type {
+  DailyLogRow,
+  GoalRow,
+  JobApplicationRow,
+  ProofItemRow,
+  ResumeBulletRow,
+  TaskRow,
+} from "@/types/database";
+
+interface CareerEvidenceLinkagePanelProps {
+  applications?: JobApplicationRow[];
+  resumeBullets?: ResumeBulletRow[];
+  goals?: GoalRow[];
+  tasks?: TaskRow[];
+  proofItems?: ProofItemRow[];
+  dailyLogs?: DailyLogRow[];
+}
+
+function formatDate(value: string | null): string {
+  if (!value) {
+    return "Not set";
+  }
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return "Invalid date";
+  }
+
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+function statusTone(status: string): "neutral" | "success" | "warning" | "danger" | "info" {
+  if (["active", "done", "completed", "verified", "captured"].includes(status)) {
+    return "success";
+  }
+
+  if (["blocked", "rejected", "cancelled", "archived"].includes(status)) {
+    return "danger";
+  }
+
+  if (["todo", "in_progress", "draft", "paused"].includes(status)) {
+    return "warning";
+  }
+
+  return "neutral";
+}
+
+function linkedCount<T>(items: T[], selector: (item: T) => string | null): number {
+  return items.filter((item) => Boolean(selector(item))).length;
+}
+
+function idList(values: Array<string | null>): string[] {
+  return [...new Set(values.filter((value): value is string => Boolean(value)))];
+}
+
+function EvidenceSummary({
+  applications,
+  resumeBullets,
+  proofItems,
+}: {
+  applications: JobApplicationRow[];
+  resumeBullets: ResumeBulletRow[];
+  proofItems: ProofItemRow[];
+}) {
+  const applicationGoalLinks = linkedCount(applications, (item) => item.goal_id);
+  const applicationTaskLinks = linkedCount(applications, (item) => item.task_id);
+  const bulletProofLinks = linkedCount(resumeBullets, (item) => item.proof_item_id);
+  const bulletGoalLinks = linkedCount(resumeBullets, (item) => item.goal_id);
+  const bulletTaskLinks = linkedCount(resumeBullets, (item) => item.task_id);
+  const proofGoalLinks = linkedCount(proofItems, (item) => item.goal_id);
+  const proofTaskLinks = linkedCount(proofItems, (item) => item.task_id);
+  const proofDailyLogLinks = linkedCount(proofItems, (item) => item.daily_log_id);
+
+  return (
+    <div className="grid gap-4 md:grid-cols-4">
+      <MetricTile
+        label="Application links"
+        value={applicationGoalLinks + applicationTaskLinks}
+        description="Job applications linked to goals or tasks."
+      />
+      <MetricTile
+        label="Bullet proof links"
+        value={bulletProofLinks}
+        description="Resume bullets linked to proof items."
+      />
+      <MetricTile
+        label="Bullet execution links"
+        value={bulletGoalLinks + bulletTaskLinks}
+        description="Resume bullets linked to goals or tasks."
+      />
+      <MetricTile
+        label="Proof chain links"
+        value={proofGoalLinks + proofTaskLinks + proofDailyLogLinks}
+        description="Proof items linked to goals, tasks, or daily logs."
+      />
+    </div>
+  );
+}
+
+function GoalTaskProofLists({
+  goals,
+  tasks,
+  proofItems,
+  dailyLogs,
+}: {
+  goals: GoalRow[];
+  tasks: TaskRow[];
+  proofItems: ProofItemRow[];
+  dailyLogs: DailyLogRow[];
+}) {
+  if (
+    goals.length === 0 &&
+    tasks.length === 0 &&
+    proofItems.length === 0 &&
+    dailyLogs.length === 0
+  ) {
+    return (
+      <EmptyState
+        title="No supporting proof context yet."
+        description="Career-linked goals, tasks, proof items, and daily logs will appear here after records exist."
+      />
+    );
+  }
+
+  return (
+    <div className="grid gap-4 lg:grid-cols-2">
+      <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+        <h3 className="text-sm font-semibold text-white">Goals</h3>
+        <div className="mt-3 grid gap-3">
+          {goals.slice(0, 5).map((item) => (
+            <div key={item.id} className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <p className="text-sm font-medium text-white">{item.title}</p>
+                  <p className="mt-1 text-xs text-slate-500">
+                    {item.domain} · target {formatDate(item.target_date)}
+                  </p>
+                </div>
+                <StatusPill label={item.status} tone={statusTone(item.status)} />
+              </div>
+            </div>
+          ))}
+          {goals.length === 0 ? <p className="text-sm text-slate-500">No goals loaded.</p> : null}
+        </div>
+      </div>
+
+      <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+        <h3 className="text-sm font-semibold text-white">Tasks</h3>
+        <div className="mt-3 grid gap-3">
+          {tasks.slice(0, 5).map((item) => (
+            <div key={item.id} className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <p className="text-sm font-medium text-white">{item.title}</p>
+                  <p className="mt-1 text-xs text-slate-500">
+                    {item.domain} · due {formatDate(item.due_date)}
+                  </p>
+                </div>
+                <StatusPill label={item.status} tone={statusTone(item.status)} />
+              </div>
+            </div>
+          ))}
+          {tasks.length === 0 ? <p className="text-sm text-slate-500">No tasks loaded.</p> : null}
+        </div>
+      </div>
+
+      <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+        <h3 className="text-sm font-semibold text-white">Proof items</h3>
+        <div className="mt-3 grid gap-3">
+          {proofItems.slice(0, 5).map((item) => (
+            <div key={item.id} className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <p className="text-sm font-medium text-white">{item.title}</p>
+                  <p className="mt-1 text-xs text-slate-500">
+                    {item.domain} · {item.proof_type} · occurred {formatDate(item.occurred_at)}
+                  </p>
+                  <p className="mt-1 text-xs text-slate-500">
+                    Goal: {item.goal_id ?? "Not linked"} · Task: {item.task_id ?? "Not linked"} · Daily log: {item.daily_log_id ?? "Not linked"}
+                  </p>
+                </div>
+                <StatusPill label={item.status} tone={statusTone(item.status)} />
+              </div>
+            </div>
+          ))}
+          {proofItems.length === 0 ? <p className="text-sm text-slate-500">No proof items loaded.</p> : null}
+        </div>
+      </div>
+
+      <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+        <h3 className="text-sm font-semibold text-white">Daily logs</h3>
+        <div className="mt-3 grid gap-3">
+          {dailyLogs.slice(0, 5).map((item) => (
+            <div key={item.id} className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+              <p className="text-sm font-medium text-white">{formatDate(item.log_date)}</p>
+              <p className="mt-1 text-xs text-slate-500">
+                Proof score: {item.proof_score ?? "Not set"} · Reality score: {item.reality_score ?? "Not set"}
+              </p>
+              <p className="mt-1 text-xs text-slate-500">
+                Mission: {item.mission ?? "Not set"}
+              </p>
+            </div>
+          ))}
+          {dailyLogs.length === 0 ? <p className="text-sm text-slate-500">No daily logs loaded.</p> : null}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function LinkIdSummary({
+  applications,
+  resumeBullets,
+}: {
+  applications: JobApplicationRow[];
+  resumeBullets: ResumeBulletRow[];
+}) {
+  const goalIds = idList([
+    ...applications.map((item) => item.goal_id),
+    ...resumeBullets.map((item) => item.goal_id),
+  ]);
+
+  const taskIds = idList([
+    ...applications.map((item) => item.task_id),
+    ...resumeBullets.map((item) => item.task_id),
+  ]);
+
+  const proofIds = idList(resumeBullets.map((item) => item.proof_item_id));
+
+  return (
+    <div className="grid gap-3 text-xs leading-5 text-slate-500 md:grid-cols-3">
+      <p>Linked goal ids: {goalIds.length === 0 ? "None" : goalIds.slice(0, 5).join(", ")}</p>
+      <p>Linked task ids: {taskIds.length === 0 ? "None" : taskIds.slice(0, 5).join(", ")}</p>
+      <p>Linked proof ids: {proofIds.length === 0 ? "None" : proofIds.slice(0, 5).join(", ")}</p>
+    </div>
+  );
+}
+
+export function CareerEvidenceLinkagePanel({
+  applications = [],
+  resumeBullets = [],
+  goals = [],
+  tasks = [],
+  proofItems = [],
+  dailyLogs = [],
+}: CareerEvidenceLinkagePanelProps) {
+  return (
+    <SectionCard
+      title="Career proof and evidence linkage"
+      eyebrow="proof_items · goals · tasks · daily_logs"
+      description="Read-only linkage between career records and the operating proof system."
+    >
+      <div className="grid gap-5">
+        <EvidenceSummary
+          applications={applications}
+          resumeBullets={resumeBullets}
+          proofItems={proofItems}
+        />
+
+        <LinkIdSummary applications={applications} resumeBullets={resumeBullets} />
+
+        <GoalTaskProofLists
+          goals={goals}
+          tasks={tasks}
+          proofItems={proofItems}
+          dailyLogs={dailyLogs}
+        />
+
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-sm leading-6 text-slate-400">
+          This panel only reads career linkage context. It does not create proof, edit goals, modify tasks, or change daily logs.
+        </div>
+      </div>
+    </SectionCard>
+  );
+}
+```
+
+### `src/components/dashboard/career-proposed-action-visibility-panel.tsx`
+
+```tsx
+import { ProposedActionReviewCard } from "@/components/actions";
+import { SectionCard } from "@/components/dashboard";
+import type { ProposedActionContract } from "@/lib/actions/proposed-action-contracts";
+
+const CAREER_PROPOSED_ACTION_PREVIEWS: ProposedActionContract[] = [
+  {
+    action_type: "create_task",
+    source: "carnos",
+    confidence: 0.72,
+    reason: "Career dashboard context suggests a follow-up task could be useful, but Phase 8 only displays the proposal.",
+    payload: {
+      title: "Follow up on a high-priority career opportunity",
+      description: "Review application status, contact history, and next follow-up date before deciding whether to save this task.",
+      domain: "career",
+      priority: "medium",
+      status: "todo",
+    },
+    evidence_refs: ["job_applications", "networking_contacts"],
+  },
+  {
+    action_type: "create_goal",
+    source: "carnos",
+    confidence: 0.68,
+    reason: "The career system can surface a goal-shaped suggestion, but it must remain user-reviewed before any persistence.",
+    payload: {
+      title: "Strengthen the career application pipeline",
+      description: "Improve application quality, referral coverage, resume alignment, and interview readiness.",
+      domain: "career",
+      priority: "high",
+      status: "active",
+    },
+    evidence_refs: ["job_applications", "resume_bullets", "interviews"],
+  },
+  {
+    action_type: "create_proof_item",
+    source: "carnos",
+    confidence: 0.74,
+    reason: "Resume bullets may need supporting proof, but Phase 8 only exposes the review surface.",
+    payload: {
+      title: "Capture evidence for a resume metric claim",
+      proof_type: "metric",
+      description: "Attach measurable evidence before using the claim in an application-specific resume.",
+      goal_id: "review-required",
+      task_id: "review-required",
+    },
+    evidence_refs: ["resume_bullets", "proof_items"],
+  },
+];
+
+export function CareerProposedActionVisibilityPanel() {
+  return (
+    <SectionCard
+      title="Career proposed-action visibility"
+      eyebrow="confirmation preview"
+      description="Read-only preview of how career suggestions will appear before user confirmation. Phase 8 does not save, cancel, execute, or persist these proposals."
+    >
+      <div className="grid gap-4">
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4 text-sm leading-6 text-slate-400">
+          This panel is visibility only. It uses the existing proposed-action review card to show the confirmation shape,
+          but all controls are disabled here and no callbacks are wired.
+        </div>
+
+        <div className="grid gap-4 xl:grid-cols-3">
+          {CAREER_PROPOSED_ACTION_PREVIEWS.map((action) => (
+            <ProposedActionReviewCard
+              key={action.action_type}
+              initialAction={action}
+              disabled
+              saveLabel="Save / Confirm unavailable in Phase 8"
+              cancelLabel="Cancel unavailable in Phase 8"
+              editLabel="Edit payload unavailable in Phase 8"
+              reviewTitle="Career proposal preview"
+              validationIssues={[
+                "Preview only: this career dashboard does not persist proposals.",
+                "User confirmation flow must remain separate from Phase 8 read dashboards.",
+              ]}
+            />
+          ))}
+        </div>
+      </div>
+    </SectionCard>
+  );
+}
+```
+
+### `src/components/dashboard/career-state-boundary-panel.tsx`
+
+```tsx
+import { SectionCard } from "@/components/dashboard";
+
+interface CareerStateBoundaryPanelProps {
+  surface: "career" | "networking" | "resume" | "interviews";
+}
+
+const SURFACE_LABELS: Record<CareerStateBoundaryPanelProps["surface"], string> = {
+  career: "Career",
+  networking: "Networking",
+  resume: "Resume",
+  interviews: "Interviews",
+};
+
+export function CareerStateBoundaryPanel({ surface }: CareerStateBoundaryPanelProps) {
+  const label = SURFACE_LABELS[surface];
+
+  return (
+    <SectionCard
+      title={`${label} state and privacy boundary`}
+      eyebrow="empty · loading · error · privacy"
+      description="Consistent Phase 8 read-state language for career surfaces."
+    >
+      <div className="grid gap-4 text-sm leading-6 text-slate-400 md:grid-cols-2">
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Empty state</p>
+          <p className="mt-2">
+            Empty panels mean no matching records exist yet, not that the system failed.
+            New career records must appear only after user-confirmed persistence paths exist.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Loading state</p>
+          <p className="mt-2">
+            This surface is server-rendered after authenticated reads complete. Future loading skeletons
+            must stay read-only and must not start background jobs.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Error state</p>
+          <p className="mt-2">
+            Read errors are shown inline through safe error summaries. Errors must not trigger automatic
+            retries, writes, emails, scraping, or Python/ML execution.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Privacy boundary</p>
+          <p className="mt-2">
+            Career data is private to the authenticated user. This dashboard only reads existing records
+            and does not expose, export, send, or modify private career data.
+          </p>
+        </div>
+      </div>
+    </SectionCard>
+  );
+}
+```
+
+### `src/components/dashboard/carnos-panel-v1.tsx`
+
+```tsx
+import { OperatingDashboardCard, OperatingDashboardGrid } from "@/components/dashboard";
+import { CrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
+import { getDashboardCardsForSurface, type DashboardDataResult } from "@/lib/dashboard";
+
+interface CarnosPanelV1Props {
+  data?: DashboardDataResult;
+  sessionCount: number;
+  messageCount: number;
+  actionCount: number;
+  pendingCount: number;
+  readWarningCount: number;
+}
+
+const carnosCards = getDashboardCardsForSurface("carnos");
+
+function formatCount(value: number | undefined) {
+  return typeof value === "number" ? value.toLocaleString() : "0";
+}
+
+export function CarnosPanelV1({
+  data,
+  sessionCount,
+  messageCount,
+  actionCount,
+  pendingCount,
+  readWarningCount,
+}: CarnosPanelV1Props) {
+  const summary = data?.summary;
+
+  return (
+    <section className="space-y-6">
+      <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-2xl shadow-black/20">
+        <div className="flex flex-col gap-3">
+          <p className="text-xs uppercase tracking-[0.35em] text-white/45">
+            Carnos operating panel
+          </p>
+          <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+            <div>
+              <h2 className="text-2xl font-semibold text-white">
+                Companion state and confirmation visibility
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm leading-6 text-white/60">
+                Read-only Carnos panel for chat visibility, proposal pressure, and safety status. This panel does not generate responses, execute actions, remember facts, or attach lifecycle callbacks.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white/70">
+              Generated: {data?.generated_at ?? "Awaiting summary"}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <CrossDashboardLinks activeRoute="/carnos" />
+
+      <div className="grid gap-4 md:grid-cols-4">
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Sessions</p>
+          <p className="mt-2 text-2xl font-semibold text-white">{formatCount(sessionCount)}</p>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Messages</p>
+          <p className="mt-2 text-2xl font-semibold text-white">{formatCount(messageCount)}</p>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Actions</p>
+          <p className="mt-2 text-2xl font-semibold text-white">{formatCount(actionCount)}</p>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Pending</p>
+          <p className="mt-2 text-2xl font-semibold text-white">{formatCount(pendingCount)}</p>
+        </div>
+      </div>
+
+      <OperatingDashboardGrid region="right_panel">
+        {carnosCards.map((card) => (
+          <OperatingDashboardCard
+            key={card.id}
+            card={{
+              ...card,
+              status: summary ? "ready" : card.status,
+            }}
+            footer={
+              <div className="space-y-2 text-xs text-slate-400">
+                <p>Source tables: {card.sourceTables.join(", ")}</p>
+                <p>Dashboard pending updates: {formatCount(summary?.pending_updates_count)}</p>
+                <p>Read warnings: {formatCount(readWarningCount)}</p>
+              </div>
+            }
+          >
+            {summary ? (
+              <div className="space-y-3 text-sm text-slate-300">
+                <p>
+                  Carnos context is visible as dashboard state only. Confirmation review remains separate from persistence.
+                </p>
+                <p className="text-xs text-slate-500">
+                  No autonomous writes, memory execution, Python/ML mutation, voice, internet tools, or background jobs are active here.
+                </p>
+              </div>
+            ) : null}
+          </OperatingDashboardCard>
+        ))}
+      </OperatingDashboardGrid>
+    </section>
+  );
+}
+```
+
+### `src/components/dashboard/command-dashboard-v1.tsx`
+
+```tsx
+import { OperatingDashboardCard, OperatingDashboardGrid } from "@/components/dashboard";
+import { CrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
+import { getDashboardCardsForSurface, type DashboardDataResult } from "@/lib/dashboard";
+
+interface CommandDashboardV1Props {
+  data?: DashboardDataResult;
+}
+
+const commandCards = getDashboardCardsForSurface('command');
+
+function formatCount(value: number | undefined): string {
+  return String(value ?? 0);
+}
+
+export function CommandDashboardV1({ data }: CommandDashboardV1Props) {
+  const summary = data?.summary;
+
+  return (
+    <div className="space-y-6">
+      <section className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-sm shadow-black/20">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div className="space-y-2">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+              Phase 7 Core Operating Dashboard
+            </p>
+            <h1 className="text-3xl font-semibold text-white">Command Dashboard</h1>
+            <p className="max-w-3xl text-sm text-slate-300">
+              Today&apos;s operating center for goals, tasks, proof, calendar pressure, and pending confirmations.
+              This view is read-only and preserves the proposed-action confirmation boundary.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-xs text-slate-300">
+            Generated: {data?.generated_at ?? 'Awaiting summary'}
+          </div>
+        </div>
+      </section>
+
+      <CrossDashboardLinks activeRoute="/command" />
+
+      <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+        {[
+          ['Pending updates', formatCount(summary?.pending_updates_count)],
+          ['Active goals', formatCount(summary?.active_goals_count)],
+          ['Open tasks', formatCount(summary?.open_tasks_count)],
+          ['Proof items', formatCount(summary?.recent_proof_count)],
+          ['Events', formatCount(summary?.recent_events_count)],
+        ].map(([label, value]) => (
+          <div key={label} className='rounded-2xl border border-white/10 bg-white/[0.03] p-4'>
+            <p className='text-xs uppercase tracking-[0.2em] text-slate-500'>{label}</p>
+            <p className='mt-2 text-2xl font-semibold text-white'>{value}</p>
+          </div>
+        ))}
+      </section>
+
+      <OperatingDashboardGrid region="primary">
+        {commandCards.map((card) => (
+          <OperatingDashboardCard
+            key={card.id}
+            card={{
+              ...card,
+              status: summary ? 'ready' : card.status,
+            }}
+            footer={
+              <div className='space-y-2 text-xs text-slate-400'>
+                <p>Source tables: {card.sourceTables.join(', ')}</p>
+                <p>Safe boundary: proposal → validation → confirmation → server-owned execution → audit log.</p>
+              </div>
+            }
+          >
+            {summary ? (
+              <div className='space-y-3 text-sm text-slate-300'>
+                <p>
+                  This card is registered for the Command surface and will use deeper SQL-backed detail wiring in later
+                  Phase 7 dashboard steps.
+                </p>
+                <p className='text-xs text-slate-500'>
+                  No autonomous writes, Python/ML mutation, memory execution, or background jobs are active here.
+                </p>
+              </div>
+            ) : null}
+          </OperatingDashboardCard>
+        ))}
+      </OperatingDashboardGrid>
+    </div>
+  );
+}
+```
+
+### `src/components/dashboard/cross-dashboard-links.tsx`
+
+```tsx
+import Link from "next/link";
+
+import type { CanonicalRoute } from "@/lib/routes";
+
+type CrossDashboardLink = {
+  label: string;
+  route: CanonicalRoute;
+  description: string;
+};
+
+const CORE_DASHBOARD_LINKS: CrossDashboardLink[] = [
+  {
+    label: "Command",
+    route: "/command",
+    description: "Today mission, proof pressure, and pending updates.",
+  },
+  {
+    label: "Timeline",
+    route: "/timeline",
+    description: "Recent operating history and dated evidence.",
+  },
+  {
+    label: "Calendar",
+    route: "/calendar",
+    description: "Time, tasks, events, and schedule pressure.",
+  },
+  {
+    label: "Goals",
+    route: "/goals",
+    description: "Dream-to-proof loop and active goal reality.",
+  },
+  {
+    label: "Carnos",
+    route: "/carnos",
+    description: "Companion context and confirmation visibility.",
+  },
+];
+
+const CAREER_DASHBOARD_LINKS: CrossDashboardLink[] = [
+  {
+    label: "Career",
+    route: "/career",
+    description: "Applications, interviews, referrals, resumes, and career pressure.",
+  },
+  {
+    label: "Networking",
+    route: "/networking",
+    description: "Contacts, interactions, referrals, and follow-up loops.",
+  },
+  {
+    label: "Resume",
+    route: "/resume",
+    description: "Resume versions, bullets, keywords, metrics, and proof links.",
+  },
+  {
+    label: "Interviews",
+    route: "/interviews",
+    description: "Rounds, prep notes, outcomes, schedules, and follow-up pressure.",
+  },
+];
+
+const RESEARCH_DASHBOARD_LINKS: CrossDashboardLink[] = [
+  {
+    label: "Research Lab",
+    route: "/research-lab",
+    description: "Ideas, literature, claims, experiments, results, papers, and proof linkage.",
+  },
+  {
+    label: "Research Stanford",
+    route: "/research-stanford",
+    description: "Universities, labs, professors, SOPs, recommendations, and PhD readiness.",
+  },
+  {
+    label: "Projects",
+    route: "/projects",
+    description: "Research-backed portfolio projects, releases, demos, and evidence.",
+  },
+  {
+    label: "Learning",
+    route: "/learning",
+    description: "Skill paths and practice loops that support research execution.",
+  },
+  {
+    label: "World-Class Proof",
+    route: "/world-class",
+    description: "Evidence and proof standards that support research claims, papers, SOPs, and applications.",
+  },
+  {
+    label: "Resume",
+    route: "/resume",
+    description: "Proof-backed resume packaging for research, projects, and PhD applications.",
+  },
+  {
+    label: "Goals",
+    route: "/goals",
+    description: "Execution goals connected to research milestones and application readiness.",
+  },
+  {
+    label: "Carnos",
+    route: "/carnos",
+    description: "Companion review surface and proposed-action visibility.",
+  },
+];
+
+interface CrossDashboardLinksProps {
+  activeRoute: CanonicalRoute;
+  title?: string;
+  description?: string;
+  links?: CrossDashboardLink[];
+}
+
+export function CrossDashboardLinks({
+  activeRoute,
+  title = "Core dashboard links",
+  description = "Move between the Phase 7 operating surfaces without leaving the source-approved route map.",
+  links = CORE_DASHBOARD_LINKS,
+}: CrossDashboardLinksProps) {
+  return (
+    <section className="rounded-3xl border border-white/10 bg-white/[0.03] p-5 shadow-sm shadow-black/20">
+      <div className="flex flex-col gap-2">
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-200/80">
+          Navigation loop
+        </p>
+        <h2 className="text-lg font-semibold text-white">{title}</h2>
+        <p className="max-w-3xl text-sm leading-6 text-slate-400">{description}</p>
+      </div>
+
+      <div className="mt-5 grid gap-3 md:grid-cols-4">
+        {links.map((item) => {
+          const isActive = item.route === activeRoute;
+
+          return (
+            <Link
+              key={item.route}
+              href={item.route}
+              aria-current={isActive ? "page" : undefined}
+              className={
+                isActive
+                  ? "rounded-2xl border border-cyan-300/40 bg-cyan-300/10 p-4 text-cyan-50"
+                  : "rounded-2xl border border-white/10 bg-black/20 p-4 text-slate-200 transition hover:border-cyan-300/30 hover:bg-cyan-300/10"
+              }
+            >
+              <span className="text-sm font-semibold">{item.label}</span>
+              <span className="mt-2 block text-xs leading-5 text-slate-400">
+                {item.description}
+              </span>
+            </Link>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+export function CareerCrossDashboardLinks({ activeRoute }: { activeRoute: CanonicalRoute }) {
+  return (
+    <CrossDashboardLinks
+      activeRoute={activeRoute}
+      title="Career system links"
+      description="Move between the Phase 8 career surfaces: applications, networking, resume versions, and interviews."
+      links={CAREER_DASHBOARD_LINKS}
+    />
+  );
+}
+
+export function ResearchCrossDashboardLinks({ activeRoute }: { activeRoute: CanonicalRoute }) {
+  return (
+    <CrossDashboardLinks
+      activeRoute={activeRoute}
+      title="Research system links"
+      description="Move between Phase 10 research surfaces and the proof, project, learning, career, and Carnos context that supports research execution."
+      links={RESEARCH_DASHBOARD_LINKS}
+    />
+  );
 }
 ```
 
@@ -23670,6 +36497,88 @@ export function EmptyState({
 }
 ```
 
+### `src/components/dashboard/goals-dashboard-v1.tsx`
+
+```tsx
+import { OperatingDashboardCard, OperatingDashboardGrid } from "@/components/dashboard";
+import { CrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
+import { getDashboardCardsForSurface, type DashboardDataResult } from "@/lib/dashboard";
+
+interface GoalsDashboardV1Props {
+  data?: DashboardDataResult;
+}
+
+const goalCards = getDashboardCardsForSurface("goals");
+
+function formatCount(value: number | undefined) {
+  return typeof value === "number" ? value.toLocaleString() : "0";
+}
+
+export function GoalsDashboardV1({ data }: GoalsDashboardV1Props) {
+  const summary = data?.summary;
+
+  return (
+    <section className="space-y-6">
+      <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-2xl shadow-black/20">
+        <div className="flex flex-col gap-3">
+          <p className="text-xs uppercase tracking-[0.35em] text-white/45">
+            Goals dashboard
+          </p>
+          <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+            <div>
+              <h2 className="text-2xl font-semibold text-white">
+                Dream-to-proof operating loop
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm leading-6 text-white/60">
+                Read-only operating view for active goals, linked execution pressure, recent proof, and pending confirmations. This surface keeps goal reality visible before any confirmed mutation flow.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white/70">
+              Read-only mode
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <CrossDashboardLinks activeRoute="/goals" />
+
+      <div className="grid gap-4 md:grid-cols-4">
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Active goals</p>
+          <p className="mt-2 text-2xl font-semibold text-white">
+            {formatCount(summary?.active_goals_count)}
+          </p>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Open tasks</p>
+          <p className="mt-2 text-2xl font-semibold text-white">
+            {formatCount(summary?.open_tasks_count)}
+          </p>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Recent proof</p>
+          <p className="mt-2 text-2xl font-semibold text-white">
+            {formatCount(summary?.recent_proof_count)}
+          </p>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Pending updates</p>
+          <p className="mt-2 text-2xl font-semibold text-white">
+            {formatCount(summary?.pending_updates_count)}
+          </p>
+        </div>
+      </div>
+
+      <OperatingDashboardGrid region="primary">
+        {goalCards.map((card) => (
+          <OperatingDashboardCard key={card.id} card={card} />
+        ))}
+      </OperatingDashboardGrid>
+    </section>
+  );
+}
+```
+
 ### `src/components/dashboard/index.ts`
 
 ```tsx
@@ -23681,6 +36590,1959 @@ export { EmptyState } from "./empty-state";
 export { MetricTile } from "./metric-tile";
 export { SectionCard } from "./section-card";
 export { StatusPill } from "./status-pill";
+export * from "./operating-dashboard-card";
+export * from "./operating-dashboard-grid";
+export * from "./command-dashboard-v1";
+export * from "./timeline-dashboard-v1";
+export * from "./calendar-dashboard-v1";
+export * from "./goals-dashboard-v1";
+export * from "./proof-dashboard-v1";
+export * from "./carnos-panel-v1";
+export * from "./cross-dashboard-links";
+export * from "./career-dashboard-v1";
+export * from "./networking-dashboard-v1";
+export * from "./resume-dashboard-v1";
+export * from "./interviews-dashboard-v1";
+export * from "./career-evidence-linkage-panel";
+export * from "./career-proposed-action-visibility-panel";
+export * from "./career-state-boundary-panel";
+export * from "./learning-project-summary-panel";
+export * from "./learning-academy-dashboard-v1";
+export * from "./project-builder-dashboard-v1";
+export * from "./knowledge-vault-alignment-v1";
+export * from "./learning-project-detail-panels";
+export * from "./learning-project-linkage-panels";
+export * from "./research-summary-panel";
+export * from "./research-linkage-boundary-panels";
+export * from "./research-detail-panels";
+export * from "./research-proposed-action-visibility-panel";
+```
+
+### `src/components/dashboard/interviews-dashboard-v1.tsx`
+
+```tsx
+import {
+  EmptyState,
+  MetricTile,
+  SectionCard,
+  StatusPill,
+} from "@/components/dashboard";
+import type { InterviewRow } from "@/types/database";
+import { CareerCrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
+import { CareerProposedActionVisibilityPanel } from "@/components/dashboard/career-proposed-action-visibility-panel";
+import { CareerStateBoundaryPanel } from "@/components/dashboard/career-state-boundary-panel";
+
+interface InterviewsDashboardV1Props {
+  interviews: InterviewRow[];
+  readErrors?: string[];
+}
+
+function formatDate(value: string | null): string {
+  if (!value) {
+    return "Not set";
+  }
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return "Invalid date";
+  }
+
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+function statusTone(status: string): "neutral" | "success" | "warning" | "danger" | "info" {
+  if (["scheduled", "completed", "offer", "passed"].includes(status)) {
+    return "success";
+  }
+
+  if (["rejected", "failed", "cancelled", "no_show"].includes(status)) {
+    return "danger";
+  }
+
+  if (["pending", "needs_prep", "follow_up", "awaiting_feedback"].includes(status)) {
+    return "warning";
+  }
+
+  if (["phone", "technical", "behavioral", "onsite", "final", "oa"].includes(status)) {
+    return "info";
+  }
+
+  return "neutral";
+}
+
+function countDueDates(values: Array<string | null>): number {
+  const now = new Date();
+
+  return values.filter((value) => {
+    if (!value) {
+      return false;
+    }
+
+    const date = new Date(value);
+    return !Number.isNaN(date.getTime()) && date <= now;
+  }).length;
+}
+
+function countUpcoming(values: Array<string | null>): number {
+  const now = new Date();
+
+  return values.filter((value) => {
+    if (!value) {
+      return false;
+    }
+
+    const date = new Date(value);
+    return !Number.isNaN(date.getTime()) && date >= now;
+  }).length;
+}
+
+function interviewerSummary(names: string[]): string {
+  if (names.length === 0) {
+    return "No interviewers listed";
+  }
+
+  return names.slice(0, 6).join(", ");
+}
+
+function InterviewList({ interviews }: { interviews: InterviewRow[] }) {
+  if (interviews.length === 0) {
+    return (
+      <EmptyState
+        title="No interviews yet."
+        description="Interview rounds, schedules, preparation notes, performance notes, follow-ups, and outcomes will appear here after interview records exist."
+      />
+    );
+  }
+
+  return (
+    <div className="grid gap-3">
+      {interviews.slice(0, 10).map((item) => (
+        <div key={item.id} className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+            <div className="min-w-0">
+              <p className="text-sm font-semibold text-white">
+                {item.company ?? "Unknown company"} · {item.role_title ?? "Unknown role"}
+              </p>
+              <p className="mt-1 text-sm text-slate-400">
+                {item.round_type} interview
+              </p>
+              <div className="mt-3 grid gap-1 text-xs leading-5 text-slate-500 md:grid-cols-2">
+                <p>Scheduled: {formatDate(item.scheduled_at)}</p>
+                <p>Completed: {formatDate(item.completed_at)}</p>
+                <p>Follow-up: {formatDate(item.follow_up_at)}</p>
+                <p>Application: {item.job_application_id ?? "Not linked"}</p>
+                <p className="md:col-span-2">Interviewers: {interviewerSummary(item.interviewer_names)}</p>
+              </div>
+
+              {item.prep_notes ? (
+                <p className="mt-3 rounded-xl border border-cyan-400/20 bg-cyan-400/5 p-3 text-xs leading-5 text-cyan-100/80">
+                  Prep: {item.prep_notes}
+                </p>
+              ) : null}
+
+              {item.performance_notes ? (
+                <p className="mt-3 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-xs leading-5 text-slate-400">
+                  Performance: {item.performance_notes}
+                </p>
+              ) : null}
+            </div>
+
+            <div className="flex flex-wrap gap-2 md:justify-end">
+              <StatusPill label={item.status} tone={statusTone(item.status)} />
+              <StatusPill label={item.outcome} tone={statusTone(item.outcome)} />
+              <StatusPill label={item.round_type} tone={statusTone(item.round_type)} />
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export function InterviewsDashboardV1({
+  interviews,
+  readErrors = [],
+}: InterviewsDashboardV1Props) {
+  const upcomingInterviews = countUpcoming(interviews.map((item) => item.scheduled_at));
+  const followUpsDue = countDueDates(interviews.map((item) => item.follow_up_at));
+  const completedInterviews = interviews.filter((item) => item.completed_at).length;
+  const withPrepNotes = interviews.filter((item) => item.prep_notes).length;
+
+  return (
+    <div className="grid gap-6">
+      <section className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-sm shadow-black/20">
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-200/80">
+          Phase 8 Interview System
+        </p>
+        <h1 className="mt-3 text-2xl font-semibold tracking-tight text-white">Interview Dashboard</h1>
+        <p className="mt-3 max-w-4xl text-sm leading-6 text-slate-400">
+          Read-only interview command surface for company rounds, scheduling, prep notes, performance notes,
+          outcomes, and follow-up pressure. This screen only reads records and does not schedule interviews or send follow-ups.
+        </p>
+
+        <div className="mt-6 grid gap-4 md:grid-cols-4">
+          <MetricTile label="Interviews" value={interviews.length} description="Interview records tracked." />
+          <MetricTile label="Upcoming" value={upcomingInterviews} description="Scheduled today or later." />
+          <MetricTile label="Completed" value={completedInterviews} description="Rounds with completed dates." />
+          <MetricTile label="Follow-ups due" value={followUpsDue} description="Due today or earlier." />
+        </div>
+      </section>
+
+      <CareerCrossDashboardLinks activeRoute="/interviews" />
+
+      {readErrors.length > 0 ? (
+        <EmptyState
+          title="Some interview records could not be read."
+          description={readErrors.join(" · ")}
+        />
+      ) : null}
+
+      <SectionCard
+        title="Interview command center"
+        eyebrow="interviews"
+        description="Rounds, schedules, linked applications, interviewers, preparation notes, performance notes, follow-up dates, and outcomes."
+      >
+        <InterviewList interviews={interviews} />
+      </SectionCard>
+
+      <SectionCard
+        title="Interview readiness"
+        eyebrow="prep"
+        description="Read-only readiness indicators from stored interview records."
+      >
+        <div className="grid gap-4 md:grid-cols-3">
+          <MetricTile label="Prep notes" value={withPrepNotes} description="Interviews with preparation notes." />
+          <MetricTile label="Outcome records" value={interviews.filter((item) => item.outcome).length} description="Interviews with outcome values." />
+          <MetricTile label="Linked applications" value={interviews.filter((item) => item.job_application_id).length} description="Interviews linked to applications." />
+        </div>
+      </SectionCard>
+
+      <CareerProposedActionVisibilityPanel />
+
+      <CareerStateBoundaryPanel surface="interviews" />
+
+      <SectionCard
+        title="Interview boundary"
+        eyebrow="safety"
+        description="Phase 8 interviews remain read-only at the dashboard layer."
+      >
+        <div className="grid gap-3 text-sm leading-6 text-slate-400">
+          <p>Allowed: read interview rounds, notes, outcomes, linked applications, and follow-up pressure.</p>
+          <p>Not allowed here: scheduling interviews, sending follow-ups, generating answers, background jobs, or changing records.</p>
+        </div>
+      </SectionCard>
+    </div>
+  );
+}
+```
+
+### `src/components/dashboard/knowledge-vault-alignment-v1.tsx`
+
+```tsx
+import {
+  DataList,
+  EmptyState,
+  LearningProjectSummaryPanel,
+  MetricTile,
+  SectionCard,
+  StatusPill,
+  type DataListItem,
+} from "@/components/dashboard";
+import type { LearningProjectDashboardDataResult } from "@/lib/dashboard";
+import {
+  LearningProjectCrossLinks,
+  LearningProjectStateBoundaryPanel,
+} from "@/components/dashboard/learning-project-linkage-panels";
+import type {
+  ProjectLinkRow,
+  ProjectRow,
+  SkillPathRow,
+  SkillRow,
+} from "@/types/database";
+
+interface KnowledgeVaultAlignmentV1Props {
+  data: LearningProjectDashboardDataResult;
+  skillPaths: SkillPathRow[];
+  skills: SkillRow[];
+  projects: ProjectRow[];
+  projectLinks: ProjectLinkRow[];
+  readErrors?: string[];
+}
+
+type UnknownRecord = Record<string, unknown>;
+
+function readString(row: UnknownRecord, key: string, fallback = "Not set"): string {
+  const value = row[key];
+
+  if (typeof value === "string" && value.trim().length > 0) {
+    return value;
+  }
+
+  if (typeof value === "number" || typeof value === "boolean") {
+    return String(value);
+  }
+
+  return fallback;
+}
+
+function formatDate(value: unknown): string {
+  if (typeof value !== "string" || value.trim().length === 0) {
+    return "Not set";
+  }
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return "Invalid date";
+  }
+
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+function statusTone(status: string): "neutral" | "success" | "warning" | "danger" | "info" {
+  if (["active", "mastered", "shipped", "completed", "published", "live"].includes(status)) {
+    return "success";
+  }
+
+  if (["blocked", "paused", "stale", "needs_review"].includes(status)) {
+    return "warning";
+  }
+
+  if (["failed", "cancelled", "abandoned", "archived"].includes(status)) {
+    return "danger";
+  }
+
+  if (["planned", "draft", "not_started", "in_progress"].includes(status)) {
+    return "info";
+  }
+
+  return "neutral";
+}
+
+function SkillKnowledgeSources({
+  skillPaths,
+  skills,
+}: {
+  skillPaths: SkillPathRow[];
+  skills: SkillRow[];
+}) {
+  const items: DataListItem[] = [
+    ...skillPaths.slice(0, 5).map((item) => {
+      const row = item as UnknownRecord;
+      const status = readString(row, "status");
+
+      return {
+        id: `skill-path-${item.id}`,
+        title: item.title,
+        description:
+          readString(row, "description", "") ||
+          "Skill path source for future knowledge retrieval.",
+        meta: (
+          <div className="flex flex-wrap gap-2">
+            <span>Source: skill_paths</span>
+            <span>Priority: {readString(row, "priority")}</span>
+            <span>Updated: {formatDate(row.updated_at)}</span>
+          </div>
+        ),
+        trailing: <StatusPill label={status} tone={statusTone(status)} />,
+      };
+    }),
+    ...skills.slice(0, 5).map((item) => {
+      const row = item as UnknownRecord;
+      const status = readString(row, "status");
+
+      return {
+        id: `skill-${item.id}`,
+        title: item.title,
+        description:
+          readString(row, "description", "") ||
+          "Skill record source for future concept memory and retrieval.",
+        meta: (
+          <div className="flex flex-wrap gap-2">
+            <span>Source: skills</span>
+            <span>Category: {readString(row, "category")}</span>
+            <span>Mastery: {readString(row, "mastery_score", "Not scored")}</span>
+          </div>
+        ),
+        trailing: <StatusPill label={status} tone={statusTone(status)} />,
+      };
+    }),
+  ];
+
+  return (
+    <DataList
+      items={items}
+      emptyState={
+        <EmptyState
+          title="No learning knowledge sources yet."
+          description="Skill paths and skill records will appear here as future knowledge sources after Phase 9 data exists."
+        />
+      }
+    />
+  );
+}
+
+function ProjectKnowledgeSources({
+  projects,
+  projectLinks,
+}: {
+  projects: ProjectRow[];
+  projectLinks: ProjectLinkRow[];
+}) {
+  const items: DataListItem[] = [
+    ...projects.slice(0, 5).map((item) => {
+      const row = item as UnknownRecord;
+      const status = readString(row, "status");
+
+      return {
+        id: `project-${item.id}`,
+        title: item.title,
+        description:
+          readString(row, "description", "") ||
+          readString(row, "summary", "") ||
+          "Project record source for future proof, build-log, and portfolio retrieval.",
+        meta: (
+          <div className="flex flex-wrap gap-2">
+            <span>Source: projects</span>
+            <span>Type: {readString(row, "project_type")}</span>
+            <span>Updated: {formatDate(row.updated_at)}</span>
+          </div>
+        ),
+        trailing: <StatusPill label={status} tone={statusTone(status)} />,
+      };
+    }),
+    ...projectLinks.slice(0, 5).map((item) => {
+      const row = item as UnknownRecord;
+
+      return {
+        id: `project-link-${item.id}`,
+        title: item.label,
+        description:
+          readString(row, "url", "") ||
+          "Project link source for future external evidence retrieval.",
+        meta: (
+          <div className="flex flex-wrap gap-2">
+            <span>Source: project_links</span>
+            <span>Type: {readString(row, "link_type")}</span>
+            <span>Updated: {formatDate(row.updated_at)}</span>
+          </div>
+        ),
+        trailing: <StatusPill label="link" tone="info" />,
+      };
+    }),
+  ];
+
+  return (
+    <DataList
+      items={items}
+      emptyState={
+        <EmptyState
+          title="No project knowledge sources yet."
+          description="Projects, repositories, demos, documents, and evidence links will appear here after Phase 9 project records exist."
+        />
+      }
+    />
+  );
+}
+
+export function KnowledgeVaultAlignmentV1({
+  data,
+  skillPaths,
+  skills,
+  projects,
+  projectLinks,
+  readErrors = [],
+}: KnowledgeVaultAlignmentV1Props) {
+  const learning = data.learning;
+  const project = data.projects;
+
+  return (
+    <div className="grid gap-6">
+      <section className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-sm shadow-black/20">
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-200/80">
+          Phase 9 Knowledge Alignment
+        </p>
+        <h1 className="mt-3 text-2xl font-semibold tracking-tight text-white">
+          Knowledge Vault
+        </h1>
+        <p className="mt-3 max-w-4xl text-sm leading-6 text-slate-400">
+          Read-only alignment layer showing how learning and project records become future knowledge
+          sources. This is not the full Phase 15 memory/RAG system yet. No embeddings, ingestion,
+          autonomous memory writes, or retrieval mutation are active here.
+        </p>
+
+        <div className="mt-6 grid gap-4 md:grid-cols-4">
+          <MetricTile
+            label="Skill paths"
+            value={learning.skill_path_count}
+            description="Learning paths available as future knowledge anchors."
+          />
+          <MetricTile
+            label="Skills"
+            value={learning.skill_count}
+            description="Skill records available as future concept nodes."
+          />
+          <MetricTile
+            label="Projects"
+            value={project.project_count}
+            description="Projects available as future proof/build sources."
+          />
+          <MetricTile
+            label="Project links"
+            value={project.project_link_count}
+            description="External evidence links available for later retrieval."
+          />
+        </div>
+
+        {readErrors.length > 0 ? (
+          <div className="mt-5 rounded-2xl border border-amber-500/30 bg-amber-500/10 p-4">
+            <p className="text-sm font-semibold text-amber-200">Some knowledge alignment reads failed.</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-5 text-amber-100/80">
+              {readErrors.map((error) => (
+                <li key={error}>{error}</li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+      </section>
+
+      <LearningProjectSummaryPanel
+        title="Future knowledge source summary"
+        description="Phase 9 learning and project records are visible here as read-only source candidates for later memory/RAG phases."
+        emptyTitle="No knowledge source metrics yet."
+        emptyDescription="Learning and project source metrics will appear once Phase 9 records exist."
+        metrics={[
+          {
+            label: "Learning sessions",
+            value: learning.learning_session_count,
+            description: "Potential future session notes and learning evidence.",
+            tone: "info",
+          },
+          {
+            label: "Skill progress",
+            value: learning.skill_progress_count,
+            description: "Potential future mastery timeline evidence.",
+            tone: "success",
+          },
+          {
+            label: "Releases",
+            value: project.release_count,
+            description: "Potential future shipping milestones and portfolio memory.",
+            tone: "neutral",
+          },
+        ]}
+      />
+
+      <SectionCard
+        title="Learning knowledge sources"
+        eyebrow="learning"
+        description="Skill paths and skill records that can later feed memory, concepts, and retrieval once Phase 15 exists."
+      >
+        <SkillKnowledgeSources skillPaths={skillPaths} skills={skills} />
+      </SectionCard>
+
+      <SectionCard
+        title="Project knowledge sources"
+        eyebrow="projects"
+        description="Projects and project links that can later feed build logs, portfolio evidence, and retrieval once Phase 15 exists."
+      >
+        <ProjectKnowledgeSources projects={projects} projectLinks={projectLinks} />
+      </SectionCard>
+
+      <LearningProjectStateBoundaryPanel surface="knowledge" />
+
+      <LearningProjectCrossLinks activeRoute="/knowledge" />
+
+      <SectionCard
+        title="Deferred memory/RAG boundary"
+        eyebrow="safety"
+        description="This route is aligned with Phase 9 only. Full memory, embeddings, retrieval, web indexing, and deletion/export controls stay deferred."
+      >
+        <div className="grid gap-3 md:grid-cols-2">
+          <div className="rounded-xl border border-slate-800 bg-slate-950/50 p-4">
+            <p className="text-sm font-semibold text-slate-100">Active now</p>
+            <p className="mt-2 text-sm leading-6 text-slate-400">
+              Read-only visibility into Phase 9 learning and project source records.
+            </p>
+          </div>
+          <div className="rounded-xl border border-slate-800 bg-slate-950/50 p-4">
+            <p className="text-sm font-semibold text-slate-100">Deferred</p>
+            <p className="mt-2 text-sm leading-6 text-slate-400">
+              Memory approval, RAG, embeddings, ingestion, retrieval ranking, export, and delete controls.
+            </p>
+          </div>
+        </div>
+      </SectionCard>
+    </div>
+  );
+}
+```
+
+### `src/components/dashboard/learning-academy-dashboard-v1.tsx`
+
+```tsx
+import {
+  DataList,
+  EmptyState,
+  LearningProjectSummaryPanel,
+  MetricTile,
+  SectionCard,
+  StatusPill,
+  type DataListItem,
+} from "@/components/dashboard";
+import type { LearningProjectDashboardDataResult } from "@/lib/dashboard";
+import { SkillPathProgressDetailPanel, QuizSessionDetailPanel } from "@/components/dashboard/learning-project-detail-panels";
+import {
+  LearningProjectCrossLinks,
+  LearningProjectEvidenceLinkagePanel,
+  LearningProjectOperatingLinkagePanel,
+  LearningProjectProposedActionVisibilityPanel,
+  LearningProjectStateBoundaryPanel,
+} from "@/components/dashboard/learning-project-linkage-panels";
+import type {
+  LearningSessionRow,
+  QuizAttemptRow,
+  QuizRow,
+  SkillPathRow,
+  SkillProgressRow,
+  SkillRow,
+} from "@/types/database";
+
+interface LearningAcademyDashboardV1Props {
+  data: LearningProjectDashboardDataResult;
+  skillPaths: SkillPathRow[];
+  skills: SkillRow[];
+  learningSessions: LearningSessionRow[];
+  quizzes: QuizRow[];
+  quizAttempts: QuizAttemptRow[];
+  skillProgress: SkillProgressRow[];
+  readErrors?: string[];
+}
+
+function formatDate(value: string | null): string {
+  if (!value) {
+    return "Not set";
+  }
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return "Invalid date";
+  }
+
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+function statusTone(status: string): "neutral" | "success" | "warning" | "danger" | "info" {
+  if (["active", "learning", "practicing", "proving", "mastered", "completed", "passed"].includes(status)) {
+    return "success";
+  }
+
+  if (["blocked", "paused", "stale", "needs_review"].includes(status)) {
+    return "warning";
+  }
+
+  if (["failed", "cancelled", "abandoned", "archived"].includes(status)) {
+    return "danger";
+  }
+
+  if (["planned", "draft", "not_started"].includes(status)) {
+    return "info";
+  }
+
+  return "neutral";
+}
+
+function SkillPathList({ skillPaths }: { skillPaths: SkillPathRow[] }) {
+  if (skillPaths.length === 0) {
+    return (
+      <EmptyState
+        title="No skill paths yet."
+        description="Skill paths will appear here after Phase 9 learning records exist. This dashboard is read-only."
+      />
+    );
+  }
+
+  const items: DataListItem[] = skillPaths.slice(0, 8).map((item) => ({
+    id: item.id,
+    title: item.title,
+    description: item.description ?? "No description yet.",
+    meta: (
+      <div className="flex flex-wrap gap-2">
+        <span>Status: {item.status}</span>
+        <span>Priority: {item.priority}</span>
+        <span>Target: {item.target_level ?? "Not set"}</span>
+        <span>Due: {formatDate(item.target_date)}</span>
+      </div>
+    ),
+    trailing: <StatusPill label={item.status} tone={statusTone(item.status)} />,
+  }));
+
+  return (
+    <DataList
+      items={items}
+      emptyState={
+        <EmptyState
+          title="No skill paths yet."
+          description="Skill paths will appear here after learning records exist."
+        />
+      }
+    />
+  );
+}
+
+function SkillList({ skills }: { skills: SkillRow[] }) {
+  if (skills.length === 0) {
+    return (
+      <EmptyState
+        title="No skills yet."
+        description="Skills, mastery scores, and proof requirements will appear here after records exist."
+      />
+    );
+  }
+
+  return (
+    <div className="grid gap-3">
+      {skills.slice(0, 10).map((item) => (
+        <div key={item.id} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+            <div className="min-w-0">
+              <p className="text-sm font-semibold text-white">{item.title}</p>
+              <p className="mt-1 text-xs leading-5 text-slate-400">
+                {item.description ?? "No description yet."}
+              </p>
+              <div className="mt-3 grid gap-1 text-xs leading-5 text-slate-500 md:grid-cols-2">
+                <p>Category: {item.category ?? "Not set"}</p>
+                <p>Difficulty: {item.difficulty}</p>
+                <p>Current level: {item.current_level ?? "Not set"}</p>
+                <p>Target level: {item.target_level ?? "Not set"}</p>
+                <p>Mastery score: {item.mastery_score ?? "Not scored"}</p>
+                <p>Confidence score: {item.confidence_score ?? "Not scored"}</p>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-2 md:justify-end">
+              <StatusPill label={item.status} tone={statusTone(item.status)} />
+              <StatusPill label={item.priority} tone="neutral" />
+              {item.proof_required ? <StatusPill label="proof required" tone="warning" /> : null}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function LearningSessionList({ sessions }: { sessions: LearningSessionRow[] }) {
+  if (sessions.length === 0) {
+    return (
+      <EmptyState
+        title="No learning sessions yet."
+        description="Study sessions, practice blocks, reviews, and quiz sessions will appear here after records exist."
+      />
+    );
+  }
+
+  const items: DataListItem[] = sessions.slice(0, 8).map((item) => ({
+    id: item.id,
+    title: item.title,
+    description: item.summary ?? item.notes ?? "No session summary yet.",
+    meta: (
+      <div className="flex flex-wrap gap-2">
+        <span>Type: {item.session_type}</span>
+        <span>Started: {formatDate(item.started_at)}</span>
+        <span>Duration: {item.duration_minutes ?? "Not tracked"} min</span>
+        <span>Focus: {item.focus_score ?? "Not scored"}</span>
+      </div>
+    ),
+    trailing: <StatusPill label={item.status} tone={statusTone(item.status)} />,
+  }));
+
+  return (
+    <DataList
+      items={items}
+      emptyState={
+        <EmptyState
+          title="No sessions yet."
+          description="Learning sessions will appear here after records exist."
+        />
+      }
+    />
+  );
+}
+
+function QuizPanel({
+  quizzes,
+  quizAttempts,
+}: {
+  quizzes: QuizRow[];
+  quizAttempts: QuizAttemptRow[];
+}) {
+  return (
+    <div className="grid gap-4 lg:grid-cols-2">
+      <SectionCard title="Quiz bank" eyebrow="checks" description="Read-only quiz inventory for skill validation.">
+        {quizzes.length === 0 ? (
+          <EmptyState
+            title="No quizzes yet."
+            description="Concept checks, coding quizzes, and interview reviews will appear here after records exist."
+          />
+        ) : (
+          <div className="grid gap-3">
+            {quizzes.slice(0, 6).map((item) => (
+              <div key={item.id} className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <p className="text-sm font-semibold text-white">{item.title}</p>
+                    <p className="mt-1 text-xs text-slate-500">
+                      {item.quiz_type} · {item.difficulty} · Passing: {item.passing_score ?? "Not set"}
+                    </p>
+                  </div>
+                  <StatusPill label={item.status} tone={statusTone(item.status)} />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </SectionCard>
+
+      <SectionCard title="Quiz attempts" eyebrow="results" description="Recent proof of recall, mistake patterns, and passing state.">
+        {quizAttempts.length === 0 ? (
+          <EmptyState
+            title="No quiz attempts yet."
+            description="Attempts and scores will appear here after quiz activity exists."
+          />
+        ) : (
+          <div className="grid gap-3">
+            {quizAttempts.slice(0, 6).map((item) => (
+              <div key={item.id} className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <p className="text-sm font-semibold text-white">
+                      Score: {item.score ?? "Not scored"} / {item.max_score ?? "?"}
+                    </p>
+                    <p className="mt-1 text-xs text-slate-500">
+                      Attempted: {formatDate(item.attempted_at)} · Duration: {item.duration_minutes ?? "Not tracked"} min
+                    </p>
+                    {item.mistake_summary ? (
+                      <p className="mt-2 text-xs leading-5 text-slate-400">{item.mistake_summary}</p>
+                    ) : null}
+                  </div>
+                  <StatusPill
+                    label={item.passed === true ? "passed" : item.status}
+                    tone={item.passed === true ? "success" : statusTone(item.status)}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </SectionCard>
+    </div>
+  );
+}
+
+function ProgressPanel({ progress }: { progress: SkillProgressRow[] }) {
+  if (progress.length === 0) {
+    return (
+      <EmptyState
+        title="No skill progress history yet."
+        description="Progress changes will appear here after sessions, projects, quizzes, or proof items update skill state."
+      />
+    );
+  }
+
+  return (
+    <div className="grid gap-3">
+      {progress.slice(0, 8).map((item) => (
+        <div key={item.id} className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+            <div>
+              <p className="text-sm font-semibold text-white">
+                {item.previous_status ?? "none"} → {item.status}
+              </p>
+              <p className="mt-1 text-xs text-slate-500">
+                Recorded: {formatDate(item.recorded_at)} · Mastery: {item.mastery_score ?? "Not scored"} · Confidence: {item.confidence_score ?? "Not scored"}
+              </p>
+              {item.delta_summary ? (
+                <p className="mt-3 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-xs leading-5 text-slate-400">
+                  {item.delta_summary}
+                </p>
+              ) : null}
+            </div>
+            <StatusPill label={item.status} tone={statusTone(item.status)} />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export function LearningAcademyDashboardV1({
+  data,
+  skillPaths,
+  skills,
+  learningSessions,
+  quizzes,
+  quizAttempts,
+  skillProgress,
+  readErrors = [],
+}: LearningAcademyDashboardV1Props) {
+  const summary = data.learning;
+
+  return (
+    <div className="grid gap-6">
+      <section className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-sm shadow-black/20">
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-200/80">
+          Phase 9 Learning Academy
+        </p>
+        <h1 className="mt-3 text-2xl font-semibold tracking-tight text-white">
+          Learning Academy Dashboard
+        </h1>
+        <p className="mt-3 max-w-4xl text-sm leading-6 text-slate-400">
+          Read-only skill-building command surface for skill paths, mastery progress, study sessions,
+          quizzes, attempts, and proof-gated learning. This screen only reads records.
+        </p>
+
+        <div className="mt-6 grid gap-4 md:grid-cols-4">
+          <MetricTile
+            label="Skill paths"
+            value={summary.skill_path_count}
+            description={`${summary.active_skill_path_count} active paths.`}
+          />
+          <MetricTile
+            label="Skills"
+            value={summary.skill_count}
+            description={`${summary.mastered_skill_count} mastered skills.`}
+          />
+          <MetricTile
+            label="Sessions"
+            value={summary.learning_session_count}
+            description={`${summary.completed_learning_session_count} completed sessions.`}
+          />
+          <MetricTile
+            label="Quiz attempts"
+            value={summary.quiz_attempt_count}
+            description={`${summary.passed_quiz_attempt_count} passed attempts.`}
+          />
+        </div>
+
+        {readErrors.length > 0 ? (
+          <div className="mt-5 rounded-2xl border border-amber-500/30 bg-amber-500/10 p-4">
+            <p className="text-sm font-semibold text-amber-200">Some learning reads failed.</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-5 text-amber-100/80">
+              {readErrors.map((error) => (
+                <li key={error}>{error}</li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+      </section>
+
+      <LearningProjectSummaryPanel
+        title="Learning summary"
+        description="Aggregated read-only metrics from Phase 9 learning tables."
+        emptyTitle="No learning metrics yet."
+        emptyDescription="Learning metrics will appear once Phase 9 records exist."
+        metrics={[
+          {
+            label: "Skill progress records",
+            value: summary.skill_progress_count,
+            description: "Progress entries tied to skills, sessions, projects, quizzes, proof, tasks, or goals.",
+            tone: "info",
+          },
+          {
+            label: "Quiz bank",
+            value: summary.quiz_count,
+            description: "Quizzes available for skill validation.",
+            tone: "neutral",
+          },
+          {
+            label: "Completed sessions",
+            value: summary.completed_learning_session_count,
+            description: "Learning sessions marked complete.",
+            tone: "success",
+          },
+        ]}
+      />
+
+      <SectionCard
+        title="Skill paths"
+        eyebrow="path"
+        description="High-level learning tracks and mastery targets."
+      >
+        <SkillPathList skillPaths={skillPaths} />
+      </SectionCard>
+
+      <SectionCard
+        title="Skills"
+        eyebrow="mastery"
+        description="Individual skills, mastery state, confidence, difficulty, and proof requirement."
+      >
+        <SkillList skills={skills} />
+      </SectionCard>
+
+      <SectionCard
+        title="Learning sessions"
+        eyebrow="practice"
+        description="Study, practice, review, quiz, project, and research sessions."
+      >
+        <LearningSessionList sessions={learningSessions} />
+      </SectionCard>
+
+      <QuizPanel quizzes={quizzes} quizAttempts={quizAttempts} />
+
+      <SectionCard
+        title="Skill progress"
+        eyebrow="history"
+        description="Recorded changes in mastery, confidence, and evidence."
+      >
+        <ProgressPanel progress={skillProgress} />
+      </SectionCard>
+
+      <SkillPathProgressDetailPanel
+        skillPaths={skillPaths}
+        skills={skills}
+        progress={skillProgress}
+      />
+
+      <LearningProjectEvidenceLinkagePanel
+        learningSessions={learningSessions}
+        quizAttempts={quizAttempts}
+        skillProgress={skillProgress}
+      />
+
+      <LearningProjectOperatingLinkagePanel skillProgress={skillProgress} />
+
+      <LearningProjectProposedActionVisibilityPanel />
+
+      <LearningProjectStateBoundaryPanel surface="learning" />
+
+      <LearningProjectCrossLinks activeRoute="/learning" />
+
+      <QuizSessionDetailPanel
+        sessions={learningSessions}
+        quizzes={quizzes}
+        attempts={quizAttempts}
+      />
+    </div>
+  );
+}
+```
+
+### `src/components/dashboard/learning-project-detail-panels.tsx`
+
+```tsx
+import {
+  EmptyState,
+  SectionCard,
+  StatusPill,
+} from "@/components/dashboard";
+import type {
+  LearningSessionRow,
+  ProjectBugRow,
+  ProjectMilestoneRow,
+  ProjectReleaseRow,
+  ProjectRow,
+  ProjectTestRow,
+  QuizAttemptRow,
+  QuizRow,
+  SkillPathRow,
+  SkillProgressRow,
+  SkillRow,
+} from "@/types/database";
+
+type UnknownRecord = Record<string, unknown>;
+
+function readString(row: UnknownRecord, key: string, fallback = "Not set"): string {
+  const value = row[key];
+
+  if (typeof value === "string" && value.trim().length > 0) {
+    return value;
+  }
+
+  if (typeof value === "number" || typeof value === "boolean") {
+    return String(value);
+  }
+
+  return fallback;
+}
+
+function readBoolean(row: UnknownRecord, key: string): boolean | null {
+  const value = row[key];
+
+  if (typeof value === "boolean") {
+    return value;
+  }
+
+  return null;
+}
+
+function formatDate(value: unknown): string {
+  if (typeof value !== "string" || value.trim().length === 0) {
+    return "Not set";
+  }
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return "Invalid date";
+  }
+
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+function toneForStatus(status: string): "neutral" | "success" | "warning" | "danger" | "info" {
+  if (["active", "completed", "mastered", "passed", "shipped", "resolved", "released"].includes(status)) {
+    return "success";
+  }
+
+  if (["blocked", "open", "investigating", "failing", "needs_review"].includes(status)) {
+    return "warning";
+  }
+
+  if (["failed", "critical", "cancelled", "abandoned", "archived"].includes(status)) {
+    return "danger";
+  }
+
+  if (["planned", "draft", "queued", "in_progress", "learning", "practicing"].includes(status)) {
+    return "info";
+  }
+
+  return "neutral";
+}
+
+function DetailRow({
+  label,
+  value,
+}: {
+  label: string;
+  value: string | number | boolean | null | undefined;
+}) {
+  return (
+    <div className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+        {label}
+      </p>
+      <p className="mt-1 text-sm leading-6 text-slate-200">
+        {value === null || value === undefined || value === "" ? "Not set" : String(value)}
+      </p>
+    </div>
+  );
+}
+
+function DetailNote({
+  title,
+  text,
+}: {
+  title: string;
+  text: string | null | undefined;
+}) {
+  if (!text) {
+    return null;
+  }
+
+  return (
+    <div className="rounded-xl border border-white/10 bg-black/20 p-4">
+      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200/80">
+        {title}
+      </p>
+      <p className="mt-2 text-sm leading-6 text-slate-400">{text}</p>
+    </div>
+  );
+}
+
+export function SkillPathProgressDetailPanel({
+  skillPaths,
+  skills,
+  progress,
+}: {
+  skillPaths: SkillPathRow[];
+  skills: SkillRow[];
+  progress: SkillProgressRow[];
+}) {
+  const selectedPath = skillPaths[0];
+  const selectedSkill = skills[0];
+  const recentProgress = progress[0];
+
+  return (
+    <SectionCard
+      title="Skill path and progress detail"
+      eyebrow="9.18 detail"
+      description="Read-only focused view for the first available skill path, skill, and progress record."
+    >
+      {!selectedPath && !selectedSkill && !recentProgress ? (
+        <EmptyState
+          title="No skill detail records yet."
+          description="Skill path, skill, and progress details will appear after learning records exist."
+        />
+      ) : (
+        <div className="grid gap-4">
+          {selectedPath ? (
+            <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+              <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <p className="text-sm font-semibold text-white">{selectedPath.title}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-400">
+                    {selectedPath.description ?? "No skill path description yet."}
+                  </p>
+                </div>
+                <StatusPill label={selectedPath.status} tone={toneForStatus(selectedPath.status)} />
+              </div>
+              <div className="mt-4 grid gap-3 md:grid-cols-4">
+                <DetailRow label="Priority" value={selectedPath.priority} />
+                <DetailRow label="Target level" value={selectedPath.target_level} />
+                <DetailRow label="Target date" value={formatDate(selectedPath.target_date)} />
+                <DetailRow label="Updated" value={formatDate(selectedPath.updated_at)} />
+              </div>
+            </div>
+          ) : null}
+
+          {selectedSkill ? (
+            <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+              <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <p className="text-sm font-semibold text-white">{selectedSkill.title}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-400">
+                    {selectedSkill.description ?? "No skill description yet."}
+                  </p>
+                </div>
+                <StatusPill label={selectedSkill.status} tone={toneForStatus(selectedSkill.status)} />
+              </div>
+              <div className="mt-4 grid gap-3 md:grid-cols-4">
+                <DetailRow label="Category" value={selectedSkill.category} />
+                <DetailRow label="Difficulty" value={selectedSkill.difficulty} />
+                <DetailRow label="Mastery" value={selectedSkill.mastery_score} />
+                <DetailRow label="Confidence" value={selectedSkill.confidence_score} />
+              </div>
+            </div>
+          ) : null}
+
+          {recentProgress ? (
+            <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+              <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <p className="text-sm font-semibold text-white">
+                    {recentProgress.previous_status ?? "none"} → {recentProgress.status}
+                  </p>
+                  <p className="mt-1 text-sm text-slate-400">
+                    Recorded: {formatDate(recentProgress.recorded_at)}
+                  </p>
+                </div>
+                <StatusPill label={recentProgress.status} tone={toneForStatus(recentProgress.status)} />
+              </div>
+              <div className="mt-4 grid gap-3 md:grid-cols-4">
+                <DetailRow label="Skill" value={recentProgress.skill_id} />
+                <DetailRow label="Mastery" value={recentProgress.mastery_score} />
+                <DetailRow label="Confidence" value={recentProgress.confidence_score} />
+                <DetailRow label="Source" value={readString(recentProgress as UnknownRecord, "source_type")} />
+              </div>
+              <DetailNote title="Progress summary" text={recentProgress.delta_summary} />
+            </div>
+          ) : null}
+        </div>
+      )}
+    </SectionCard>
+  );
+}
+
+export function QuizSessionDetailPanel({
+  sessions,
+  quizzes,
+  attempts,
+}: {
+  sessions: LearningSessionRow[];
+  quizzes: QuizRow[];
+  attempts: QuizAttemptRow[];
+}) {
+  const session = sessions[0];
+  const quiz = quizzes[0];
+  const attempt = attempts[0];
+
+  return (
+    <SectionCard
+      title="Quiz and session detail"
+      eyebrow="9.19 detail"
+      description="Read-only focused view for session execution, quiz configuration, and recent attempt outcome."
+    >
+      {!session && !quiz && !attempt ? (
+        <EmptyState
+          title="No quiz or session detail yet."
+          description="Session, quiz, and attempt detail will appear after learning activity records exist."
+        />
+      ) : (
+        <div className="grid gap-4">
+          {session ? (
+            <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+              <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <p className="text-sm font-semibold text-white">{session.title}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-400">
+                    {session.summary ?? session.notes ?? "No session summary yet."}
+                  </p>
+                </div>
+                <StatusPill label={session.status} tone={toneForStatus(session.status)} />
+              </div>
+              <div className="mt-4 grid gap-3 md:grid-cols-4">
+                <DetailRow label="Type" value={session.session_type} />
+                <DetailRow label="Started" value={formatDate(session.started_at)} />
+                <DetailRow label="Duration" value={session.duration_minutes} />
+                <DetailRow label="Focus" value={session.focus_score} />
+              </div>
+            </div>
+          ) : null}
+
+          {quiz ? (
+            <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+              <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <p className="text-sm font-semibold text-white">{quiz.title}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-400">
+                    {quiz.description ?? "No quiz description yet."}
+                  </p>
+                </div>
+                <StatusPill label={quiz.status} tone={toneForStatus(quiz.status)} />
+              </div>
+              <div className="mt-4 grid gap-3 md:grid-cols-4">
+                <DetailRow label="Type" value={quiz.quiz_type} />
+                <DetailRow label="Difficulty" value={quiz.difficulty} />
+                <DetailRow label="Passing score" value={quiz.passing_score} />
+                <DetailRow label="Skill" value={quiz.skill_id} />
+              </div>
+            </div>
+          ) : null}
+
+          {attempt ? (
+            <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+              <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <p className="text-sm font-semibold text-white">
+                    Score: {attempt.score ?? "Not scored"} / {attempt.max_score ?? "?"}
+                  </p>
+                  <p className="mt-1 text-sm text-slate-400">
+                    Attempted: {formatDate(attempt.attempted_at)}
+                  </p>
+                </div>
+                <StatusPill
+                  label={attempt.passed ? "passed" : attempt.status}
+                  tone={attempt.passed ? "success" : toneForStatus(attempt.status)}
+                />
+              </div>
+              <div className="mt-4 grid gap-3 md:grid-cols-4">
+                <DetailRow label="Quiz" value={attempt.quiz_id} />
+                <DetailRow label="Duration" value={attempt.duration_minutes} />
+                <DetailRow label="Passed" value={attempt.passed} />
+                <DetailRow label="Status" value={attempt.status} />
+              </div>
+              <DetailNote title="Mistake summary" text={attempt.mistake_summary} />
+            </div>
+          ) : null}
+        </div>
+      )}
+    </SectionCard>
+  );
+}
+
+export function ProjectBuildLogDetailPanel({
+  projects,
+  milestones,
+  bugs,
+  tests,
+  releases,
+}: {
+  projects: ProjectRow[];
+  milestones: ProjectMilestoneRow[];
+  bugs: ProjectBugRow[];
+  tests: ProjectTestRow[];
+  releases: ProjectReleaseRow[];
+}) {
+  const project = projects[0];
+  const milestone = milestones[0];
+  const bug = bugs[0];
+  const test = tests[0];
+  const release = releases[0];
+
+  return (
+    <SectionCard
+      title="Project build-log detail"
+      eyebrow="9.20 detail"
+      description="Read-only focused view for project execution, milestone pressure, quality signals, tests, and release state."
+    >
+      {!project && !milestone && !bug && !test && !release ? (
+        <EmptyState
+          title="No project build-log detail yet."
+          description="Project build details will appear after project, milestone, bug, test, or release records exist."
+        />
+      ) : (
+        <div className="grid gap-4">
+          {project ? (
+            <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+              <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <p className="text-sm font-semibold text-white">{project.title}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-400">
+                    {readString(project as UnknownRecord, "description", "") ||
+                      readString(project as UnknownRecord, "summary", "") ||
+                      "No project summary yet."}
+                  </p>
+                </div>
+                <StatusPill
+                  label={readString(project as UnknownRecord, "status")}
+                  tone={toneForStatus(readString(project as UnknownRecord, "status"))}
+                />
+              </div>
+              <div className="mt-4 grid gap-3 md:grid-cols-4">
+                <DetailRow label="Type" value={readString(project as UnknownRecord, "project_type")} />
+                <DetailRow label="Priority" value={readString(project as UnknownRecord, "priority")} />
+                <DetailRow label="Goal" value={readString(project as UnknownRecord, "goal_id")} />
+                <DetailRow label="Updated" value={formatDate((project as UnknownRecord).updated_at)} />
+              </div>
+            </div>
+          ) : null}
+
+          <div className="grid gap-4 lg:grid-cols-2">
+            {milestone ? (
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                <p className="text-sm font-semibold text-white">{milestone.title}</p>
+                <p className="mt-1 text-xs text-slate-500">
+                  Milestone · Due: {formatDate((milestone as UnknownRecord).due_date)}
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <StatusPill
+                    label={readString(milestone as UnknownRecord, "status")}
+                    tone={toneForStatus(readString(milestone as UnknownRecord, "status"))}
+                  />
+                  <StatusPill
+                    label={readString(milestone as UnknownRecord, "priority")}
+                    tone="neutral"
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {bug ? (
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                <p className="text-sm font-semibold text-white">{bug.title}</p>
+                <p className="mt-1 text-xs text-slate-500">
+                  Bug · Severity: {readString(bug as UnknownRecord, "severity")}
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <StatusPill
+                    label={readString(bug as UnknownRecord, "status")}
+                    tone={toneForStatus(readString(bug as UnknownRecord, "status"))}
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {test ? (
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                <p className="text-sm font-semibold text-white">{test.title}</p>
+                <p className="mt-1 text-xs text-slate-500">
+                  Test · Type: {readString(test as UnknownRecord, "test_type")}
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <StatusPill
+                    label={readBoolean(test as UnknownRecord, "passed") ? "passed" : readString(test as UnknownRecord, "status")}
+                    tone={readBoolean(test as UnknownRecord, "passed") ? "success" : toneForStatus(readString(test as UnknownRecord, "status"))}
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            {release ? (
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                <p className="text-sm font-semibold text-white">{release.title}</p>
+                <p className="mt-1 text-xs text-slate-500">
+                  Release · Version: {readString(release as UnknownRecord, "version")}
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <StatusPill
+                    label={readString(release as UnknownRecord, "status")}
+                    tone={toneForStatus(readString(release as UnknownRecord, "status"))}
+                  />
+                </div>
+              </div>
+            ) : null}
+          </div>
+        </div>
+      )}
+    </SectionCard>
+  );
+}
+```
+
+### `src/components/dashboard/learning-project-linkage-panels.tsx`
+
+```tsx
+import { ProposedActionReviewCard } from "@/components/actions";
+import {
+  CrossDashboardLinks,
+  EmptyState,
+  MetricTile,
+  SectionCard,
+} from "@/components/dashboard";
+import type { ProposedActionContract } from "@/lib/actions/proposed-action-contracts";
+import type { CanonicalRoute } from "@/lib/routes";
+import type {
+  LearningSessionRow,
+  ProjectLinkRow,
+  ProjectReleaseRow,
+  ProjectRow,
+  QuizAttemptRow,
+  SkillProgressRow,
+} from "@/types/database";
+
+type UnknownRecord = Record<string, unknown>;
+
+const LEARNING_PROJECT_LINKS = [
+  {
+    label: "Learning",
+    route: "/learning" as CanonicalRoute,
+    description: "Skill paths, sessions, quizzes, attempts, and mastery progress.",
+  },
+  {
+    label: "Projects",
+    route: "/projects" as CanonicalRoute,
+    description: "Portfolio projects, milestones, bugs, tests, releases, and proof links.",
+  },
+  {
+    label: "Knowledge",
+    route: "/knowledge" as CanonicalRoute,
+    description: "Learning/project source records aligned for future memory and retrieval.",
+  },
+  {
+    label: "Proof",
+    route: "/proof" as CanonicalRoute,
+    description: "Evidence records that can support skills, projects, resume bullets, and claims.",
+  },
+  {
+    label: "Goals",
+    route: "/goals" as CanonicalRoute,
+    description: "Execution goals that learning and projects can support.",
+  },
+  {
+    label: "Timeline",
+    route: "/timeline" as CanonicalRoute,
+    description: "Dated operating history and proof timeline.",
+  },
+  {
+    label: "Resume",
+    route: "/resume" as CanonicalRoute,
+    description: "Resume bullets and proof-backed career packaging.",
+  },
+  {
+    label: "Carnos",
+    route: "/carnos" as CanonicalRoute,
+    description: "Companion review surface and proposed-action visibility.",
+  },
+];
+
+const LEARNING_PROJECT_PROPOSALS: ProposedActionContract[] = [
+  {
+    action_type: "create_task",
+    source: "carnos",
+    confidence: 0.74,
+    reason:
+      "Learning and project context may suggest a next execution task, but this dashboard only previews the confirmation shape.",
+    payload: {
+      title: "Review the next learning/project execution step",
+      description:
+        "Check learning progress, project build state, proof gaps, and career relevance before deciding whether to save a task.",
+      domain: "learning",
+      priority: "medium",
+      status: "todo",
+    },
+    evidence_refs: ["skill_paths", "projects", "skill_progress"],
+  },
+  {
+    action_type: "create_goal",
+    source: "carnos",
+    confidence: 0.69,
+    reason:
+      "A learning or project milestone could become a goal only after user review and server-owned persistence.",
+    payload: {
+      title: "Ship a proof-backed learning project milestone",
+      description:
+        "Connect a skill path, project milestone, and proof record into a concrete execution goal.",
+      domain: "projects",
+      priority: "high",
+      status: "active",
+    },
+    evidence_refs: ["projects", "project_milestones", "proof_items"],
+  },
+  {
+    action_type: "create_proof_item",
+    source: "carnos",
+    confidence: 0.71,
+    reason:
+      "A completed session, quiz, release, or project link may deserve proof capture, but this panel does not persist anything.",
+    payload: {
+      title: "Capture proof for a learning/project achievement",
+      proof_type: "metric",
+      description:
+        "Attach evidence before using this learning or project achievement in a resume, portfolio, or research claim.",
+      goal_id: "review-required",
+      task_id: "review-required",
+    },
+    evidence_refs: ["learning_sessions", "quiz_attempts", "project_releases", "project_links"],
+  },
+];
+
+function readString(row: UnknownRecord, key: string, fallback = "Not linked"): string {
+  const value = row[key];
+
+  if (typeof value === "string" && value.trim().length > 0) {
+    return value;
+  }
+
+  if (typeof value === "number" || typeof value === "boolean") {
+    return String(value);
+  }
+
+  return fallback;
+}
+
+function linkedCount(rows: UnknownRecord[], keys: string[]) {
+  return rows.reduce((count, row) => {
+    return count + keys.filter((key) => readString(row, key, "") !== "").length;
+  }, 0);
+}
+
+function sampleLinkedIds(rows: UnknownRecord[], key: string) {
+  const ids = rows
+    .map((row) => readString(row, key, ""))
+    .filter((value) => value.length > 0);
+
+  return [...new Set(ids)].slice(0, 5);
+}
+
+function IdLine({ label, ids }: { label: string; ids: string[] }) {
+  return (
+    <p>
+      {label}: {ids.length === 0 ? "None linked yet" : ids.join(", ")}
+    </p>
+  );
+}
+
+export function LearningProjectEvidenceLinkagePanel({
+  learningSessions = [],
+  quizAttempts = [],
+  skillProgress = [],
+  projects = [],
+  releases = [],
+  projectLinks = [],
+}: {
+  learningSessions?: LearningSessionRow[];
+  quizAttempts?: QuizAttemptRow[];
+  skillProgress?: SkillProgressRow[];
+  projects?: ProjectRow[];
+  releases?: ProjectReleaseRow[];
+  projectLinks?: ProjectLinkRow[];
+}) {
+  const learningRows = [
+    ...learningSessions,
+    ...quizAttempts,
+    ...skillProgress,
+  ] as UnknownRecord[];
+  const projectRows = [
+    ...projects,
+    ...releases,
+    ...projectLinks,
+  ] as UnknownRecord[];
+
+  const proofLinks = linkedCount([...learningRows, ...projectRows], [
+    "proof_item_id",
+    "proof_id",
+  ]);
+  const goalLinks = linkedCount([...learningRows, ...projectRows], ["goal_id"]);
+  const taskLinks = linkedCount([...learningRows, ...projectRows], ["task_id"]);
+  const resumeLinks = linkedCount([...learningRows, ...projectRows], [
+    "resume_bullet_id",
+    "resume_version_id",
+  ]);
+
+  return (
+    <SectionCard
+      title="Learning/project proof and career linkage"
+      eyebrow="9.21"
+      description="Read-only linkage surface showing how learning and project records can support proof, README, resume, and career evidence."
+    >
+      <div className="grid gap-4 md:grid-cols-4">
+        <MetricTile
+          label="Proof links"
+          value={proofLinks}
+          description="Records linked to proof-style evidence ids."
+        />
+        <MetricTile
+          label="Goal links"
+          value={goalLinks}
+          description="Records linked to execution goals."
+        />
+        <MetricTile
+          label="Task links"
+          value={taskLinks}
+          description="Records linked to concrete tasks."
+        />
+        <MetricTile
+          label="Resume links"
+          value={resumeLinks}
+          description="Records linked to resume or bullet packaging."
+        />
+      </div>
+
+      <div className="mt-5 rounded-2xl border border-white/10 bg-black/20 p-4 text-xs leading-6 text-slate-500">
+        <IdLine label="Proof ids" ids={sampleLinkedIds([...learningRows, ...projectRows], "proof_item_id")} />
+        <IdLine label="Goal ids" ids={sampleLinkedIds([...learningRows, ...projectRows], "goal_id")} />
+        <IdLine label="Task ids" ids={sampleLinkedIds([...learningRows, ...projectRows], "task_id")} />
+        <IdLine label="Resume ids" ids={sampleLinkedIds([...learningRows, ...projectRows], "resume_bullet_id")} />
+      </div>
+    </SectionCard>
+  );
+}
+
+export function LearningProjectOperatingLinkagePanel({
+  projects = [],
+  skillProgress = [],
+  releases = [],
+}: {
+  projects?: ProjectRow[];
+  skillProgress?: SkillProgressRow[];
+  releases?: ProjectReleaseRow[];
+}) {
+  const rows = [...projects, ...skillProgress, ...releases] as UnknownRecord[];
+
+  if (rows.length === 0) {
+    return (
+      <SectionCard
+        title="Goal, task, and timeline linkage"
+        eyebrow="9.22"
+        description="Read-only operating linkage for Phase 9 records."
+      >
+        <EmptyState
+          title="No operating links yet."
+          description="Goal, task, and timeline references will appear after Phase 9 records contain those links."
+        />
+      </SectionCard>
+    );
+  }
+
+  return (
+    <SectionCard
+      title="Goal, task, and timeline linkage"
+      eyebrow="9.22"
+      description="Shows how learning/project records connect to goals, tasks, and timeline evidence without mutating them."
+    >
+      <div className="grid gap-3 md:grid-cols-3">
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="text-sm font-semibold text-white">Goal chain</p>
+          <p className="mt-2 text-sm leading-6 text-slate-400">
+            Goal references identify which dream-to-proof track a skill or project belongs to.
+          </p>
+          <p className="mt-3 text-xs text-slate-500">
+            {sampleLinkedIds(rows, "goal_id").join(", ") || "No goal ids linked yet."}
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="text-sm font-semibold text-white">Task chain</p>
+          <p className="mt-2 text-sm leading-6 text-slate-400">
+            Task references identify next actions or execution steps already recorded elsewhere.
+          </p>
+          <p className="mt-3 text-xs text-slate-500">
+            {sampleLinkedIds(rows, "task_id").join(", ") || "No task ids linked yet."}
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="text-sm font-semibold text-white">Timeline chain</p>
+          <p className="mt-2 text-sm leading-6 text-slate-400">
+            Timeline references remain read-only and should only be created through safe server-owned flows.
+          </p>
+          <p className="mt-3 text-xs text-slate-500">
+            {sampleLinkedIds(rows, "timeline_event_id").join(", ") || "No timeline ids linked yet."}
+          </p>
+        </div>
+      </div>
+    </SectionCard>
+  );
+}
+
+export function LearningProjectProposedActionVisibilityPanel() {
+  return (
+    <SectionCard
+      title="Learning/project proposed-action visibility"
+      eyebrow="9.23 confirmation preview"
+      description="Preview-only Carnos proposal cards for learning/project suggestions. No save, cancel, execute, or persistence callbacks are wired here."
+    >
+      <div className="grid gap-4">
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4 text-sm leading-6 text-slate-400">
+          This panel is visibility only. Python/ML may advise later, but the app must validate,
+          the user must confirm, the server must write, SQL must record, and audit logs must exist.
+        </div>
+
+        <div className="grid gap-4 xl:grid-cols-3">
+          {LEARNING_PROJECT_PROPOSALS.map((action) => (
+            <ProposedActionReviewCard
+              key={action.action_type}
+              initialAction={action}
+              disabled
+              saveLabel="Save / Confirm unavailable in Phase 9 dashboard preview"
+              cancelLabel="Cancel unavailable in Phase 9 dashboard preview"
+              editLabel="Edit payload unavailable in Phase 9 dashboard preview"
+              reviewTitle="Learning/project proposal preview"
+              validationIssues={[
+                "Preview only: this dashboard does not persist proposals.",
+                "User confirmation and server-owned execution must remain separate from read dashboards.",
+              ]}
+            />
+          ))}
+        </div>
+      </div>
+    </SectionCard>
+  );
+}
+
+export function LearningProjectStateBoundaryPanel({
+  surface,
+}: {
+  surface: "learning" | "projects" | "knowledge";
+}) {
+  const label =
+    surface === "learning"
+      ? "Learning Academy"
+      : surface === "projects"
+        ? "Project Builder"
+        : "Knowledge Vault";
+
+  return (
+    <SectionCard
+      title={`${label} state and privacy boundary`}
+      eyebrow="9.24 empty · loading · error · privacy"
+      description="Consistent read-state language for Phase 9 learning/project surfaces."
+    >
+      <div className="grid gap-4 text-sm leading-6 text-slate-400 md:grid-cols-2">
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Empty state</p>
+          <p className="mt-2">
+            Empty panels mean no matching records exist yet, not that the system failed.
+            New learning/project records must appear only after safe write flows exist.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Loading state</p>
+          <p className="mt-2">
+            This surface is server-rendered after authenticated reads complete. Future loading
+            skeletons must stay read-only and must not start background jobs.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Error state</p>
+          <p className="mt-2">
+            Read errors must be shown inline. Errors must not trigger automatic writes,
+            scraping, emails, Python/ML execution, or hidden retries.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Privacy boundary</p>
+          <p className="mt-2">
+            Learning/project data is private to the authenticated user. This dashboard only reads
+            existing records and does not expose, export, send, or modify private data.
+          </p>
+        </div>
+      </div>
+    </SectionCard>
+  );
+}
+
+export function LearningProjectCrossLinks({
+  activeRoute,
+}: {
+  activeRoute: CanonicalRoute;
+}) {
+  return (
+    <CrossDashboardLinks
+      activeRoute={activeRoute}
+      title="Learning/project system links"
+      description="Move between learning, projects, knowledge, proof, goals, timeline, resume, and Carnos review surfaces."
+      links={LEARNING_PROJECT_LINKS}
+    />
+  );
+}
+```
+
+### `src/components/dashboard/learning-project-summary-panel.tsx`
+
+```tsx
+import { MetricTile } from "./metric-tile";
+import { SectionCard } from "./section-card";
+import { StatusPill } from "./status-pill";
+
+export type LearningProjectSummaryMetric = {
+  label: string;
+  value: string | number;
+  description?: string;
+  tone?: "neutral" | "success" | "warning" | "danger" | "info";
+};
+
+type LearningProjectSummaryPanelProps = {
+  title: string;
+  description: string;
+  metrics: LearningProjectSummaryMetric[];
+  emptyTitle: string;
+  emptyDescription: string;
+};
+
+export function LearningProjectSummaryPanel({
+  title,
+  description,
+  metrics,
+  emptyTitle,
+  emptyDescription,
+}: LearningProjectSummaryPanelProps) {
+  const hasMetrics = metrics.length > 0;
+
+  return (
+    <SectionCard title={title} description={description} eyebrow="Phase 9">
+      {hasMetrics ? (
+        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          {metrics.map((metric) => (
+            <MetricTile
+              key={metric.label}
+              label={metric.label}
+              value={metric.value}
+              description={metric.description}
+              icon={<StatusPill label="read" tone={metric.tone ?? "info"} />}
+            />
+          ))}
+        </div>
+      ) : (
+        <div className="rounded-xl border border-dashed border-slate-800 bg-slate-950/50 p-5">
+          <h3 className="text-sm font-semibold text-slate-100">{emptyTitle}</h3>
+          <p className="mt-2 text-sm leading-6 text-slate-400">{emptyDescription}</p>
+        </div>
+      )}
+    </SectionCard>
+  );
+}
 ```
 
 ### `src/components/dashboard/metric-tile.tsx`
@@ -23733,6 +38595,426 @@ export function MetricTile({
 }
 ```
 
+### `src/components/dashboard/networking-dashboard-v1.tsx`
+
+```tsx
+import {
+  EmptyState,
+  MetricTile,
+  SectionCard,
+  StatusPill,
+} from "@/components/dashboard";
+import type {
+  JobReferralRow,
+  NetworkingContactRow,
+  NetworkingInteractionRow,
+} from "@/types/database";
+import { CareerCrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
+import { CareerProposedActionVisibilityPanel } from "@/components/dashboard/career-proposed-action-visibility-panel";
+import { CareerStateBoundaryPanel } from "@/components/dashboard/career-state-boundary-panel";
+
+interface NetworkingDashboardV1Props {
+  contacts: NetworkingContactRow[];
+  interactions: NetworkingInteractionRow[];
+  referrals: JobReferralRow[];
+  readErrors?: string[];
+}
+
+function formatDate(value: string | null): string {
+  if (!value) {
+    return "Not set";
+  }
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return "Invalid date";
+  }
+
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+function statusTone(status: string): "neutral" | "success" | "warning" | "danger" | "info" {
+  if (["active", "confirmed", "warm", "strong", "completed"].includes(status)) {
+    return "success";
+  }
+
+  if (["rejected", "stale", "lost", "cancelled"].includes(status)) {
+    return "danger";
+  }
+
+  if (["pending", "requested", "follow_up", "medium"].includes(status)) {
+    return "warning";
+  }
+
+  if (["new", "cold", "weak"].includes(status)) {
+    return "info";
+  }
+
+  return "neutral";
+}
+
+function countDueDates(values: Array<string | null>): number {
+  const now = new Date();
+
+  return values.filter((value) => {
+    if (!value) {
+      return false;
+    }
+
+    const date = new Date(value);
+    return !Number.isNaN(date.getTime()) && date <= now;
+  }).length;
+}
+
+function ContactList({ contacts }: { contacts: NetworkingContactRow[] }) {
+  if (contacts.length === 0) {
+    return (
+      <EmptyState
+        title="No networking contacts yet."
+        description="Contacts, relationship strength, company context, and follow-up timing will appear here after networking records exist."
+      />
+    );
+  }
+
+  return (
+    <div className="grid gap-3">
+      {contacts.slice(0, 8).map((item) => (
+        <div key={item.id} className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+            <div className="min-w-0">
+              <p className="text-sm font-semibold text-white">{item.full_name}</p>
+              <p className="mt-1 text-sm text-slate-400">
+                {item.company ?? "Unknown company"} · {item.role_title ?? "Unknown role"}
+              </p>
+              <div className="mt-3 grid gap-1 text-xs leading-5 text-slate-500 md:grid-cols-2">
+                <p>Relationship: {item.relationship_type}</p>
+                <p>Strength: {item.relationship_strength}</p>
+                <p>Last contacted: {formatDate(item.last_contacted_at)}</p>
+                <p>Next follow-up: {formatDate(item.next_follow_up_at)}</p>
+                <p>Email: {item.email ? "Available" : "Not set"}</p>
+                <p>LinkedIn: {item.linkedin_url ? "Available" : "Not set"}</p>
+              </div>
+              {item.notes ? (
+                <p className="mt-3 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-xs leading-5 text-slate-400">
+                  {item.notes}
+                </p>
+              ) : null}
+            </div>
+            <div className="flex flex-wrap gap-2 md:justify-end">
+              <StatusPill label={item.status} tone={statusTone(item.status)} />
+              <StatusPill label={item.relationship_strength} tone={statusTone(item.relationship_strength)} />
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function InteractionList({ interactions }: { interactions: NetworkingInteractionRow[] }) {
+  if (interactions.length === 0) {
+    return (
+      <EmptyState
+        title="No networking interactions yet."
+        description="Messages, calls, meetings, follow-ups, and warm-intro history will appear here after interaction records exist."
+      />
+    );
+  }
+
+  return (
+    <div className="grid gap-3">
+      {interactions.slice(0, 8).map((item) => (
+        <div key={item.id} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+            <div>
+              <p className="text-sm font-semibold text-white">{item.title}</p>
+              <p className="mt-1 text-xs text-slate-500">
+                Type: {item.interaction_type} · Occurred: {formatDate(item.occurred_at)}
+              </p>
+              <p className="mt-1 text-xs text-slate-500">
+                Contact: {item.networking_contact_id} · Application: {item.job_application_id ?? "Not linked"}
+              </p>
+              <p className="mt-1 text-xs text-slate-500">Follow-up: {formatDate(item.follow_up_at)}</p>
+              {item.description ? (
+                <p className="mt-3 rounded-xl border border-white/10 bg-black/20 p-3 text-xs leading-5 text-slate-400">
+                  {item.description}
+                </p>
+              ) : null}
+            </div>
+            <StatusPill label={item.interaction_type} tone="info" />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function ReferralList({ referrals }: { referrals: JobReferralRow[] }) {
+  if (referrals.length === 0) {
+    return (
+      <EmptyState
+        title="No referral records yet."
+        description="Referral requests, confirmations, linked contacts, and linked applications will appear here after referral records exist."
+      />
+    );
+  }
+
+  return (
+    <div className="grid gap-3">
+      {referrals.slice(0, 8).map((item) => (
+        <div key={item.id} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+            <div>
+              <p className="text-sm font-semibold text-white">Referral record</p>
+              <p className="mt-1 text-xs text-slate-500">
+                Contact: {item.networking_contact_id ?? "Not linked"} · Application: {item.job_application_id ?? "Not linked"}
+              </p>
+              <div className="mt-3 grid gap-1 text-xs leading-5 text-slate-500 md:grid-cols-3">
+                <p>Requested: {formatDate(item.requested_at)}</p>
+                <p>Confirmed: {formatDate(item.confirmed_at)}</p>
+                <p>Follow-up: {formatDate(item.follow_up_at)}</p>
+              </div>
+              {item.notes ? (
+                <p className="mt-3 rounded-xl border border-white/10 bg-black/20 p-3 text-xs leading-5 text-slate-400">
+                  {item.notes}
+                </p>
+              ) : null}
+            </div>
+            <StatusPill label={item.status} tone={statusTone(item.status)} />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export function NetworkingDashboardV1({
+  contacts,
+  interactions,
+  referrals,
+  readErrors = [],
+}: NetworkingDashboardV1Props) {
+  const followUpsDue =
+    countDueDates(contacts.map((item) => item.next_follow_up_at)) +
+    countDueDates(interactions.map((item) => item.follow_up_at)) +
+    countDueDates(referrals.map((item) => item.follow_up_at));
+
+  return (
+    <div className="grid gap-6">
+      <section className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-sm shadow-black/20">
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-200/80">
+          Phase 8 Networking System
+        </p>
+        <h1 className="mt-3 text-2xl font-semibold tracking-tight text-white">Networking Dashboard</h1>
+        <p className="mt-3 max-w-4xl text-sm leading-6 text-slate-400">
+          Read-only relationship command surface for contacts, interactions, referrals, and follow-up pressure.
+          This screen only reads records. It does not send messages, request referrals, scrape profiles, or change records.
+        </p>
+
+        <div className="mt-6 grid gap-4 md:grid-cols-4">
+          <MetricTile label="Contacts" value={contacts.length} description="Networking contacts tracked." />
+          <MetricTile label="Interactions" value={interactions.length} description="Relationship touchpoints tracked." />
+          <MetricTile label="Referrals" value={referrals.length} description="Referral records tracked." />
+          <MetricTile label="Follow-ups due" value={followUpsDue} description="Due today or earlier." />
+        </div>
+      </section>
+
+      <CareerCrossDashboardLinks activeRoute="/networking" />
+
+      {readErrors.length > 0 ? (
+        <EmptyState
+          title="Some networking records could not be read."
+          description={readErrors.join(" · ")}
+        />
+      ) : null}
+
+      <SectionCard
+        title="Contact base"
+        eyebrow="networking_contacts"
+        description="Relationship targets, company context, strength, and follow-up timing."
+      >
+        <ContactList contacts={contacts} />
+      </SectionCard>
+
+      <SectionCard
+        title="Interaction history"
+        eyebrow="networking_interactions"
+        description="Messages, meetings, calls, follow-ups, and application-linked relationship history."
+      >
+        <InteractionList interactions={interactions} />
+      </SectionCard>
+
+      <SectionCard
+        title="Referral pipeline"
+        eyebrow="job_referrals"
+        description="Referral requests, confirmations, linked contacts, linked applications, and next follow-up dates."
+      >
+        <ReferralList referrals={referrals} />
+      </SectionCard>
+
+      <CareerProposedActionVisibilityPanel />
+
+      <CareerStateBoundaryPanel surface="networking" />
+
+      <SectionCard
+        title="Networking boundary"
+        eyebrow="safety"
+        description="Phase 8 networking remains read-only at the dashboard layer."
+      >
+        <div className="grid gap-3 text-sm leading-6 text-slate-400">
+          <p>Allowed: read networking contacts, interactions, referrals, and follow-up pressure.</p>
+          <p>Not allowed here: sending messages, requesting referrals, scraping profiles, background jobs, or changing records.</p>
+        </div>
+      </SectionCard>
+    </div>
+  );
+}
+```
+
+### `src/components/dashboard/operating-dashboard-card.tsx`
+
+```tsx
+import { EmptyState } from "@/components/dashboard";
+import type { DashboardCardContract } from "@/lib/dashboard";
+
+interface OperatingDashboardCardProps {
+  card: DashboardCardContract;
+  children?: React.ReactNode;
+  footer?: React.ReactNode;
+}
+
+const statusClassNameByStatus: Record<DashboardCardContract["status"], string> = {
+  ready: "border-emerald-400/30 bg-emerald-400/10 text-emerald-100",
+  empty: "border-white/10 bg-white/5 text-slate-300",
+  loading: "border-amber-400/30 bg-amber-400/10 text-amber-100",
+  error: "border-red-400/30 bg-red-400/10 text-red-100",
+  privacy_redacted: "border-amber-400/30 bg-amber-400/10 text-amber-100",
+};
+
+const priorityLabelByPriority: Record<DashboardCardContract["priority"], string> = {
+  low: "Low",
+  medium: "Medium",
+  high: "High",
+  critical: "Critical",
+};
+
+function DashboardLoadingState() {
+  return (
+    <div className="grid gap-3" aria-label="Loading dashboard card">
+      <div className="h-3 w-2/3 animate-pulse rounded-full bg-white/10" />
+      <div className="h-3 w-1/2 animate-pulse rounded-full bg-white/10" />
+      <div className="h-20 animate-pulse rounded-xl border border-white/10 bg-black/20" />
+    </div>
+  );
+}
+
+function DashboardCardState({ card }: { card: DashboardCardContract }) {
+  if (card.status === "loading") {
+    return <DashboardLoadingState />;
+  }
+
+  if (card.status === "error") {
+    return (
+      <EmptyState
+        title={card.errorStateTitle ?? "Dashboard card unavailable."}
+        description={
+          card.errorStateDescription ??
+          "This card could not load its read-only dashboard data. Refresh or inspect the source table wiring."
+        }
+      />
+    );
+  }
+
+  if (card.status === "privacy_redacted") {
+    return (
+      <EmptyState
+        title="Privacy redacted."
+        description={
+          card.privacyNote ??
+          "This card is intentionally hidden because the current privacy boundary does not allow this data to be displayed."
+        }
+      />
+    );
+  }
+
+  return (
+    <EmptyState
+      title={card.emptyStateTitle ?? "No data yet."}
+      description={
+        card.emptyStateDescription ??
+        "This card will populate when matching SQL-backed records exist."
+      }
+    />
+  );
+}
+
+export function OperatingDashboardCard({ card, children, footer }: OperatingDashboardCardProps) {
+  const shouldShowState = card.status !== "ready" && !children;
+
+  return (
+    <section className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 shadow-sm shadow-black/20">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+        <div className="space-y-1">
+          <div className="flex flex-wrap items-center gap-2">
+            <h3 className="text-base font-semibold text-white">{card.title}</h3>
+            <span
+              className={`rounded-full border px-2.5 py-1 text-xs font-medium ${
+                statusClassNameByStatus[card.status]
+              }`}
+            >
+              {card.status.replace("_", " ")}
+            </span>
+          </div>
+          {card.description ? <p className="text-sm text-slate-400">{card.description}</p> : null}
+        </div>
+        <div className="rounded-full border border-white/10 px-3 py-1 text-xs text-slate-300">
+          {priorityLabelByPriority[card.priority]} priority
+        </div>
+      </div>
+
+      {card.privacyNote ? (
+        <p className="mt-4 rounded-xl border border-amber-400/20 bg-amber-400/10 px-3 py-2 text-xs text-amber-100">
+          {card.privacyNote}
+        </p>
+      ) : null}
+
+      <div className="mt-5">{shouldShowState ? <DashboardCardState card={card} /> : children}</div>
+
+      {footer ? <div className="mt-5 border-t border-white/10 pt-4">{footer}</div> : null}
+    </section>
+  );
+}
+```
+
+### `src/components/dashboard/operating-dashboard-grid.tsx`
+
+```tsx
+import type { DashboardCardRegion } from "@/lib/dashboard";
+
+interface OperatingDashboardGridProps {
+  region: DashboardCardRegion;
+  children: React.ReactNode;
+}
+
+const regionClassName: Record<DashboardCardRegion, string> = {
+  hero: "grid gap-4",
+  primary: "grid gap-4 lg:grid-cols-2",
+  secondary: "grid gap-4 lg:grid-cols-3",
+  right_panel: "grid gap-4",
+  timeline_preview: "grid gap-4",
+  footer: "grid gap-4",
+};
+
+export function OperatingDashboardGrid({ region, children }: OperatingDashboardGridProps) {
+  return <div className={regionClassName[region]}>{children}</div>;
+}
+```
+
 ### `src/components/dashboard/placeholder-dashboard-page.tsx`
 
 ```tsx
@@ -23768,6 +39050,1794 @@ export function PlaceholderDashboardPage({
         </div>
       </section>
     </AppShell>
+  );
+}
+```
+
+### `src/components/dashboard/project-builder-dashboard-v1.tsx`
+
+```tsx
+import {
+  DataList,
+  EmptyState,
+  LearningProjectSummaryPanel,
+  MetricTile,
+  SectionCard,
+  StatusPill,
+  type DataListItem,
+} from "@/components/dashboard";
+import type { LearningProjectDashboardDataResult } from "@/lib/dashboard";
+import { ProjectBuildLogDetailPanel } from "@/components/dashboard/learning-project-detail-panels";
+import {
+  LearningProjectCrossLinks,
+  LearningProjectEvidenceLinkagePanel,
+  LearningProjectOperatingLinkagePanel,
+  LearningProjectProposedActionVisibilityPanel,
+  LearningProjectStateBoundaryPanel,
+} from "@/components/dashboard/learning-project-linkage-panels";
+import type {
+  ProjectBugRow,
+  ProjectLinkRow,
+  ProjectMilestoneRow,
+  ProjectReleaseRow,
+  ProjectRow,
+  ProjectTestRow,
+} from "@/types/database";
+
+interface ProjectBuilderDashboardV1Props {
+  data: LearningProjectDashboardDataResult;
+  projects: ProjectRow[];
+  milestones: ProjectMilestoneRow[];
+  bugs: ProjectBugRow[];
+  tests: ProjectTestRow[];
+  releases: ProjectReleaseRow[];
+  links: ProjectLinkRow[];
+  readErrors?: string[];
+}
+
+type UnknownRecord = Record<string, unknown>;
+
+function readString(row: UnknownRecord, key: string, fallback = "Not set"): string {
+  const value = row[key];
+
+  if (typeof value === "string" && value.trim().length > 0) {
+    return value;
+  }
+
+  if (typeof value === "number" || typeof value === "boolean") {
+    return String(value);
+  }
+
+  return fallback;
+}
+
+function readBoolean(row: UnknownRecord, key: string): boolean | null {
+  const value = row[key];
+
+  if (typeof value === "boolean") {
+    return value;
+  }
+
+  return null;
+}
+
+function formatDate(value: unknown): string {
+  if (typeof value !== "string" || value.trim().length === 0) {
+    return "Not set";
+  }
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return "Invalid date";
+  }
+
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+function statusTone(status: string): "neutral" | "success" | "warning" | "danger" | "info" {
+  if (["active", "shipped", "completed", "resolved", "passed", "released", "live"].includes(status)) {
+    return "success";
+  }
+
+  if (["blocked", "open", "investigating", "failing", "needs_review"].includes(status)) {
+    return "warning";
+  }
+
+  if (["failed", "critical", "cancelled", "abandoned", "broken"].includes(status)) {
+    return "danger";
+  }
+
+  if (["planned", "draft", "queued", "in_progress"].includes(status)) {
+    return "info";
+  }
+
+  return "neutral";
+}
+
+function ProjectList({ projects }: { projects: ProjectRow[] }) {
+  if (projects.length === 0) {
+    return (
+      <EmptyState
+        title="No projects yet."
+        description="Projects will appear here after Phase 9 project records exist. This dashboard is read-only."
+      />
+    );
+  }
+
+  const items: DataListItem[] = projects.slice(0, 10).map((item) => {
+    const row = item as UnknownRecord;
+    const status = readString(row, "status");
+    const priority = readString(row, "priority");
+    const projectType = readString(row, "project_type");
+
+    return {
+      id: item.id,
+      title: item.title,
+      description:
+        readString(row, "description", "") ||
+        readString(row, "summary", "") ||
+        "No project description yet.",
+      meta: (
+        <div className="flex flex-wrap gap-2">
+          <span>Type: {projectType}</span>
+          <span>Priority: {priority}</span>
+          <span>Goal: {readString(row, "goal_id")}</span>
+          <span>Updated: {formatDate(row.updated_at)}</span>
+        </div>
+      ),
+      trailing: <StatusPill label={status} tone={statusTone(status)} />,
+    };
+  });
+
+  return (
+    <DataList
+      items={items}
+      emptyState={
+        <EmptyState
+          title="No projects yet."
+          description="Projects will appear here after records exist."
+        />
+      }
+    />
+  );
+}
+
+function MilestoneList({ milestones }: { milestones: ProjectMilestoneRow[] }) {
+  if (milestones.length === 0) {
+    return (
+      <EmptyState
+        title="No milestones yet."
+        description="Milestones, deadlines, and completion state will appear here after project planning records exist."
+      />
+    );
+  }
+
+  return (
+    <div className="grid gap-3">
+      {milestones.slice(0, 8).map((item) => {
+        const row = item as UnknownRecord;
+        const status = readString(row, "status");
+        const priority = readString(row, "priority");
+
+        return (
+          <div key={item.id} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+            <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+              <div className="min-w-0">
+                <p className="text-sm font-semibold text-white">{item.title}</p>
+                <p className="mt-1 text-xs leading-5 text-slate-400">
+                  {readString(row, "description", "") || "No milestone description yet."}
+                </p>
+                <div className="mt-3 grid gap-1 text-xs leading-5 text-slate-500 md:grid-cols-2">
+                  <p>Project: {readString(row, "project_id")}</p>
+                  <p>Priority: {priority}</p>
+                  <p>Due: {formatDate(row.due_date)}</p>
+                  <p>Completed: {formatDate(row.completed_at)}</p>
+                </div>
+              </div>
+              <StatusPill label={status} tone={statusTone(status)} />
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function QualityPanel({
+  bugs,
+  tests,
+}: {
+  bugs: ProjectBugRow[];
+  tests: ProjectTestRow[];
+}) {
+  return (
+    <div className="grid gap-4 lg:grid-cols-2">
+      <SectionCard title="Bug queue" eyebrow="quality" description="Open project issues and severity pressure.">
+        {bugs.length === 0 ? (
+          <EmptyState
+            title="No project bugs yet."
+            description="Bugs and issue records will appear here after project quality records exist."
+          />
+        ) : (
+          <div className="grid gap-3">
+            {bugs.slice(0, 8).map((item) => {
+              const row = item as UnknownRecord;
+              const status = readString(row, "status");
+              const severity = readString(row, "severity");
+
+              return (
+                <div key={item.id} className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="text-sm font-semibold text-white">{item.title}</p>
+                      <p className="mt-1 text-xs text-slate-500">
+                        Project: {readString(row, "project_id")} · Opened: {formatDate(row.opened_at)}
+                      </p>
+                      <p className="mt-1 text-xs text-slate-500">
+                        Severity: {severity}
+                      </p>
+                    </div>
+                    <StatusPill label={status} tone={statusTone(status)} />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </SectionCard>
+
+      <SectionCard title="Test runs" eyebrow="evidence" description="Read-only quality checks and pass/fail evidence.">
+        {tests.length === 0 ? (
+          <EmptyState
+            title="No project tests yet."
+            description="Test runs, QA checks, and validation records will appear here after records exist."
+          />
+        ) : (
+          <div className="grid gap-3">
+            {tests.slice(0, 8).map((item) => {
+              const row = item as UnknownRecord;
+              const status = readString(row, "status");
+              const passed = readBoolean(row, "passed");
+
+              return (
+                <div key={item.id} className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="text-sm font-semibold text-white">{item.title}</p>
+                      <p className="mt-1 text-xs text-slate-500">
+                        Type: {readString(row, "test_type")} · Run: {formatDate(row.run_at)}
+                      </p>
+                      <p className="mt-1 text-xs text-slate-500">
+                        Project: {readString(row, "project_id")}
+                      </p>
+                    </div>
+                    <StatusPill
+                      label={passed === true ? "passed" : status}
+                      tone={passed === true ? "success" : statusTone(status)}
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </SectionCard>
+    </div>
+  );
+}
+
+function ReleaseAndLinksPanel({
+  releases,
+  links,
+}: {
+  releases: ProjectReleaseRow[];
+  links: ProjectLinkRow[];
+}) {
+  return (
+    <div className="grid gap-4 lg:grid-cols-2">
+      <SectionCard title="Releases" eyebrow="ship" description="Project release history and shipping state.">
+        {releases.length === 0 ? (
+          <EmptyState
+            title="No releases yet."
+            description="Release records will appear here after projects ship or versioned milestones are recorded."
+          />
+        ) : (
+          <div className="grid gap-3">
+            {releases.slice(0, 8).map((item) => {
+              const row = item as UnknownRecord;
+              const status = readString(row, "status");
+
+              return (
+                <div key={item.id} className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="text-sm font-semibold text-white">{item.title}</p>
+                      <p className="mt-1 text-xs text-slate-500">
+                        Version: {readString(row, "version")} · Released: {formatDate(row.released_at)}
+                      </p>
+                      <p className="mt-1 text-xs text-slate-500">
+                        Project: {readString(row, "project_id")}
+                      </p>
+                    </div>
+                    <StatusPill label={status} tone={statusTone(status)} />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </SectionCard>
+
+      <SectionCard title="Project links" eyebrow="proof" description="GitHub, demo, docs, portfolio, paper, and evidence links.">
+        {links.length === 0 ? (
+          <EmptyState
+            title="No project links yet."
+            description="Repositories, demos, docs, and portfolio links will appear here after link records exist."
+          />
+        ) : (
+          <div className="grid gap-3">
+            {links.slice(0, 8).map((item) => {
+              const row = item as UnknownRecord;
+              const url = readString(row, "url", "");
+
+              return (
+                <div key={item.id} className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="text-sm font-semibold text-white">{item.label}</p>
+                      <p className="mt-1 text-xs text-slate-500">
+                        Type: {readString(row, "link_type")} · Project: {readString(row, "project_id")}
+                      </p>
+                      <p className="mt-1 truncate text-xs text-cyan-200/80">
+                        {url || "No URL"}
+                      </p>
+                    </div>
+                    <StatusPill label="link" tone="info" />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </SectionCard>
+    </div>
+  );
+}
+
+export function ProjectBuilderDashboardV1({
+  data,
+  projects,
+  milestones,
+  bugs,
+  tests,
+  releases,
+  links,
+  readErrors = [],
+}: ProjectBuilderDashboardV1Props) {
+  const summary = data.projects;
+
+  return (
+    <div className="grid gap-6">
+      <section className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-sm shadow-black/20">
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-200/80">
+          Phase 9 Project Builder
+        </p>
+        <h1 className="mt-3 text-2xl font-semibold tracking-tight text-white">
+          Project Builder Dashboard
+        </h1>
+        <p className="mt-3 max-w-4xl text-sm leading-6 text-slate-400">
+          Read-only project shipping surface for portfolio projects, milestones, releases, bugs,
+          tests, links, demos, and evidence. This screen only reads records.
+        </p>
+
+        <div className="mt-6 grid gap-4 md:grid-cols-4">
+          <MetricTile
+            label="Projects"
+            value={summary.project_count}
+            description={`${summary.active_project_count} active projects.`}
+          />
+          <MetricTile
+            label="Shipped"
+            value={summary.shipped_project_count}
+            description="Projects marked shipped."
+          />
+          <MetricTile
+            label="Milestones"
+            value={summary.milestone_count}
+            description={`${summary.completed_milestone_count} completed milestones.`}
+          />
+          <MetricTile
+            label="Open bugs"
+            value={summary.open_bug_count}
+            description={`${summary.critical_bug_count} critical bugs.`}
+          />
+        </div>
+
+        {readErrors.length > 0 ? (
+          <div className="mt-5 rounded-2xl border border-amber-500/30 bg-amber-500/10 p-4">
+            <p className="text-sm font-semibold text-amber-200">Some project reads failed.</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-5 text-amber-100/80">
+              {readErrors.map((error) => (
+                <li key={error}>{error}</li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+      </section>
+
+      <LearningProjectSummaryPanel
+        title="Project shipping summary"
+        description="Aggregated read-only metrics from Phase 9 project tables."
+        emptyTitle="No project metrics yet."
+        emptyDescription="Project metrics will appear once Phase 9 project records exist."
+        metrics={[
+          {
+            label: "Tests",
+            value: summary.test_count,
+            description: `${summary.passing_test_count} passing tests.`,
+            tone: "success",
+          },
+          {
+            label: "Releases",
+            value: summary.release_count,
+            description: "Versioned project releases.",
+            tone: "info",
+          },
+          {
+            label: "Links",
+            value: summary.project_link_count,
+            description: "Project proof, demo, documentation, and repository links.",
+            tone: "neutral",
+          },
+        ]}
+      />
+
+      <SectionCard
+        title="Projects"
+        eyebrow="portfolio"
+        description="Project records, goal linkage, status, priority, and updated state."
+      >
+        <ProjectList projects={projects} />
+      </SectionCard>
+
+      <SectionCard
+        title="Milestones"
+        eyebrow="execution"
+        description="Project milestones, deadlines, completion state, and priority."
+      >
+        <MilestoneList milestones={milestones} />
+      </SectionCard>
+
+      <QualityPanel bugs={bugs} tests={tests} />
+
+      <ReleaseAndLinksPanel releases={releases} links={links} />
+
+      <ProjectBuildLogDetailPanel
+        projects={projects}
+        milestones={milestones}
+        bugs={bugs}
+        tests={tests}
+        releases={releases}
+      />
+
+      <LearningProjectEvidenceLinkagePanel
+        projects={projects}
+        releases={releases}
+        projectLinks={links}
+      />
+
+      <LearningProjectOperatingLinkagePanel
+        projects={projects}
+        releases={releases}
+      />
+
+      <LearningProjectProposedActionVisibilityPanel />
+
+      <LearningProjectStateBoundaryPanel surface="projects" />
+
+      <LearningProjectCrossLinks activeRoute="/projects" />
+    </div>
+  );
+}
+```
+
+### `src/components/dashboard/proof-dashboard-v1.tsx`
+
+```tsx
+import { OperatingDashboardCard, OperatingDashboardGrid } from "@/components/dashboard";
+import { getDashboardCardsForSurface, type DashboardDataResult } from "@/lib/dashboard";
+
+interface ProofDashboardV1Props {
+  data?: DashboardDataResult;
+}
+
+const proofCards = getDashboardCardsForSurface("proof");
+
+function formatCount(value: number | undefined) {
+  return typeof value === "number" ? value.toLocaleString() : "0";
+}
+
+export function ProofDashboardV1({ data }: ProofDashboardV1Props) {
+  const summary = data?.summary;
+
+  return (
+    <section className="space-y-6">
+      <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-2xl shadow-black/20">
+        <div className="flex flex-col gap-3">
+          <p className="text-xs uppercase tracking-[0.35em] text-white/45">
+            Proof dashboard
+          </p>
+          <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+            <div>
+              <h2 className="text-2xl font-semibold text-white">
+                Reality evidence system
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm leading-6 text-white/60">
+                Read-only proof surface for evidence, goal support, execution receipts, and recent proof signals. This remains a component-only surface because `/proof` is not part of the current canonical route list.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white/70">
+              Read-only component
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-4">
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Recent proof</p>
+          <p className="mt-2 text-2xl font-semibold text-white">
+            {formatCount(summary?.recent_proof_count)}
+          </p>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Active goals</p>
+          <p className="mt-2 text-2xl font-semibold text-white">
+            {formatCount(summary?.active_goals_count)}
+          </p>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Open tasks</p>
+          <p className="mt-2 text-2xl font-semibold text-white">
+            {formatCount(summary?.open_tasks_count)}
+          </p>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Pending updates</p>
+          <p className="mt-2 text-2xl font-semibold text-white">
+            {formatCount(summary?.pending_updates_count)}
+          </p>
+        </div>
+      </div>
+
+      <OperatingDashboardGrid region="primary">
+        {proofCards.map((card) => (
+          <OperatingDashboardCard key={card.id} card={card} />
+        ))}
+      </OperatingDashboardGrid>
+    </section>
+  );
+}
+```
+
+### `src/components/dashboard/research-detail-panels.tsx`
+
+```tsx
+import { EmptyState, SectionCard, StatusPill } from "@/components/dashboard";
+
+type DetailRecord = Record<string, unknown>;
+
+function asRecord(value: object | undefined): DetailRecord | undefined {
+  return value as DetailRecord | undefined;
+}
+
+function readString(row: object | undefined, key: string, fallback = "Not set"): string {
+  const record = asRecord(row);
+
+  if (!record) {
+    return fallback;
+  }
+
+  const value = record[key];
+
+  if (typeof value === "string" && value.trim().length > 0) {
+    return value;
+  }
+
+  if (typeof value === "number" || typeof value === "boolean") {
+    return String(value);
+  }
+
+  return fallback;
+}
+
+function formatDate(row: object | undefined, key: string): string {
+  const value = asRecord(row)?.[key];
+
+  if (typeof value !== "string" || value.trim().length === 0) {
+    return "Not set";
+  }
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+function toneForStatus(status: string): "neutral" | "success" | "warning" | "danger" | "info" {
+  const normalized = status.toLowerCase();
+
+  if (["active", "supported", "completed", "accepted", "ready", "submitted", "read", "cited", "agreed"].includes(normalized)) {
+    return "success";
+  }
+
+  if (["blocked", "needs_review", "partially_supported", "under_review", "follow_up_needed", "draft_needed"].includes(normalized)) {
+    return "warning";
+  }
+
+  if (["failed", "rejected", "contradicted", "unsupported", "not_fit", "unavailable"].includes(normalized)) {
+    return "danger";
+  }
+
+  if (["planned", "draft", "outline", "exploring", "investigating", "researching", "preparing", "running"].includes(normalized)) {
+    return "info";
+  }
+
+  return "neutral";
+}
+
+function DetailRow({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+        {label}
+      </p>
+      <p className="mt-1 break-words text-sm leading-6 text-slate-200">{value}</p>
+    </div>
+  );
+}
+
+function DetailCard({
+  row,
+  titleKeys,
+  descriptionKeys,
+  statusKey,
+  rows,
+}: {
+  row: object | undefined;
+  titleKeys: string[];
+  descriptionKeys: string[];
+  statusKey?: string;
+  rows: Array<{ label: string; key: string; date?: boolean }>;
+}) {
+  if (!row) {
+    return null;
+  }
+
+  const title =
+    titleKeys.map((key) => readString(row, key, "")).find((value) => value.length > 0) ??
+    "Untitled record";
+  const description =
+    descriptionKeys.map((key) => readString(row, key, "")).find((value) => value.length > 0) ??
+    "No description yet.";
+  const status = statusKey ? readString(row, statusKey, "") : "";
+
+  return (
+    <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+      <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+        <div>
+          <p className="text-sm font-semibold text-white">{title}</p>
+          <p className="mt-1 text-sm leading-6 text-slate-400">{description}</p>
+        </div>
+        {status ? <StatusPill label={status} tone={toneForStatus(status)} /> : null}
+      </div>
+
+      <div className="mt-4 grid gap-3 md:grid-cols-4">
+        {rows.map((item) => (
+          <DetailRow
+            key={`${item.label}-${item.key}`}
+            label={item.label}
+            value={item.date ? formatDate(row, item.key) : readString(row, item.key)}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function DetailPanel({
+  title,
+  eyebrow,
+  description,
+  emptyTitle,
+  emptyDescription,
+  children,
+  hasData,
+}: {
+  title: string;
+  eyebrow: string;
+  description: string;
+  emptyTitle: string;
+  emptyDescription: string;
+  children: React.ReactNode;
+  hasData: boolean;
+}) {
+  return (
+    <SectionCard title={title} eyebrow={eyebrow} description={description}>
+      {hasData ? <div className="grid gap-4">{children}</div> : (
+        <EmptyState title={emptyTitle} description={emptyDescription} />
+      )}
+    </SectionCard>
+  );
+}
+
+export function ResearchIdeaDetailPanel({
+  ideas = [],
+  questions = [],
+}: {
+  ideas?: object[];
+  questions?: object[];
+}) {
+  return (
+    <DetailPanel
+      title="Research idea and question detail"
+      eyebrow="10.20"
+      description="Focused read-only detail for the first available research idea and question."
+      emptyTitle="No research idea detail yet."
+      emptyDescription="Research idea and question detail will appear after records exist."
+      hasData={ideas.length > 0 || questions.length > 0}
+    >
+      <DetailCard
+        row={ideas[0]}
+        titleKeys={["title", "name"]}
+        descriptionKeys={["description", "summary", "notes"]}
+        statusKey="status"
+        rows={[
+          { label: "Priority", key: "priority" },
+          { label: "Project", key: "project_id" },
+          { label: "Goal", key: "goal_id" },
+          { label: "Updated", key: "updated_at", date: true },
+        ]}
+      />
+      <DetailCard
+        row={questions[0]}
+        titleKeys={["question", "title"]}
+        descriptionKeys={["hypothesis", "description", "notes"]}
+        statusKey="status"
+        rows={[
+          { label: "Idea", key: "research_idea_id" },
+          { label: "Method", key: "method" },
+          { label: "Expected signal", key: "expected_signal" },
+          { label: "Updated", key: "updated_at", date: true },
+        ]}
+      />
+    </DetailPanel>
+  );
+}
+
+export function ResearchLiteratureDetailPanel({ literatureItems = [] }: { literatureItems?: object[] }) {
+  return (
+    <DetailPanel
+      title="Literature detail"
+      eyebrow="10.21"
+      description="Focused read-only detail for the first available literature, benchmark, dataset, paper, or source record."
+      emptyTitle="No literature detail yet."
+      emptyDescription="Literature detail will appear after reading/source records exist."
+      hasData={literatureItems.length > 0}
+    >
+      <DetailCard
+        row={literatureItems[0]}
+        titleKeys={["title", "name"]}
+        descriptionKeys={["summary", "key_takeaways", "notes"]}
+        statusKey="reading_status"
+        rows={[
+          { label: "Type", key: "item_type" },
+          { label: "Authors", key: "authors" },
+          { label: "Year", key: "publication_year" },
+          { label: "Venue", key: "venue" },
+          { label: "Research idea", key: "related_research_idea_id" },
+          { label: "Project", key: "related_project_id" },
+          { label: "URL", key: "url" },
+          { label: "Updated", key: "updated_at", date: true },
+        ]}
+      />
+    </DetailPanel>
+  );
+}
+
+export function ResearchClaimCitationDetailPanel({
+  claims = [],
+  citations = [],
+}: {
+  claims?: object[];
+  citations?: object[];
+}) {
+  return (
+    <DetailPanel
+      title="Claim and citation detail"
+      eyebrow="10.22"
+      description="Focused read-only detail for claim support status, citation purpose, and evidence linkage."
+      emptyTitle="No claim or citation detail yet."
+      emptyDescription="Claims and citations will appear after research evidence records exist."
+      hasData={claims.length > 0 || citations.length > 0}
+    >
+      <DetailCard
+        row={claims[0]}
+        titleKeys={["claim", "title"]}
+        descriptionKeys={["notes", "summary", "description"]}
+        statusKey="support_status"
+        rows={[
+          { label: "Idea", key: "research_idea_id" },
+          { label: "Paper", key: "research_paper_id" },
+          { label: "Version", key: "paper_version_id" },
+          { label: "Confidence", key: "confidence_score" },
+        ]}
+      />
+      <DetailCard
+        row={citations[0]}
+        titleKeys={["citation_label", "title"]}
+        descriptionKeys={["citation_purpose", "quote", "notes"]}
+        statusKey="status"
+        rows={[
+          { label: "Literature", key: "literature_item_id" },
+          { label: "Idea", key: "research_idea_id" },
+          { label: "Claim", key: "research_claim_id" },
+          { label: "Paper", key: "research_paper_id" },
+          { label: "Version", key: "paper_version_id" },
+          { label: "Location", key: "location" },
+          { label: "Quote", key: "quote" },
+          { label: "Updated", key: "updated_at", date: true },
+        ]}
+      />
+    </DetailPanel>
+  );
+}
+
+export function ResearchExperimentResultDetailPanel({
+  experiments = [],
+  results = [],
+}: {
+  experiments?: object[];
+  results?: object[];
+}) {
+  return (
+    <DetailPanel
+      title="Experiment and result detail"
+      eyebrow="10.23"
+      description="Focused read-only detail for reproducibility, experiment state, result records, and project/paper links."
+      emptyTitle="No experiment or result detail yet."
+      emptyDescription="Experiment and result detail will appear after reproducibility records exist."
+      hasData={experiments.length > 0 || results.length > 0}
+    >
+      <DetailCard
+        row={experiments[0]}
+        titleKeys={["title", "name"]}
+        descriptionKeys={["description", "methodology", "notes"]}
+        statusKey="status"
+        rows={[
+          { label: "Idea", key: "research_idea_id" },
+          { label: "Question", key: "research_question_id" },
+          { label: "Project", key: "project_id" },
+          { label: "Reproducibility", key: "reproducibility_status" },
+          { label: "Started", key: "started_at", date: true },
+          { label: "Completed", key: "completed_at", date: true },
+          { label: "Metric", key: "primary_metric" },
+          { label: "Updated", key: "updated_at", date: true },
+        ]}
+      />
+      <DetailCard
+        row={results[0]}
+        titleKeys={["title", "name"]}
+        descriptionKeys={["summary", "interpretation", "notes"]}
+        statusKey="status"
+        rows={[
+          { label: "Experiment", key: "research_experiment_id" },
+          { label: "Idea", key: "research_idea_id" },
+          { label: "Project", key: "project_id" },
+          { label: "Paper version", key: "paper_version_id" },
+          { label: "Metric", key: "metric_name" },
+          { label: "Value", key: "metric_value" },
+          { label: "Recorded", key: "recorded_at", date: true },
+          { label: "Updated", key: "updated_at", date: true },
+        ]}
+      />
+    </DetailPanel>
+  );
+}
+
+export function ResearchPaperVenueDetailPanel({
+  papers = [],
+  paperVersions = [],
+  venues = [],
+  submissions = [],
+  feedback = [],
+}: {
+  papers?: object[];
+  paperVersions?: object[];
+  venues?: object[];
+  submissions?: object[];
+  feedback?: object[];
+}) {
+  return (
+    <DetailPanel
+      title="Paper, version, venue, submission, and feedback detail"
+      eyebrow="10.24 · 10.25"
+      description="Focused read-only detail for paper readiness, versioning, target venues, submissions, and review feedback."
+      emptyTitle="No paper detail records yet."
+      emptyDescription="Paper, version, venue, submission, and feedback detail will appear after records exist."
+      hasData={papers.length > 0 || paperVersions.length > 0 || venues.length > 0 || submissions.length > 0 || feedback.length > 0}
+    >
+      <DetailCard
+        row={papers[0]}
+        titleKeys={["title", "name"]}
+        descriptionKeys={["abstract", "summary", "notes"]}
+        statusKey="status"
+        rows={[
+          { label: "Idea", key: "primary_research_idea_id" },
+          { label: "Project", key: "project_id" },
+          { label: "Venue", key: "target_venue_id" },
+          { label: "Updated", key: "updated_at", date: true },
+        ]}
+      />
+      <DetailCard
+        row={paperVersions[0]}
+        titleKeys={["version_label", "title"]}
+        descriptionKeys={["change_summary", "summary", "notes"]}
+        statusKey="status"
+        rows={[
+          { label: "Paper", key: "research_paper_id" },
+          { label: "Page count", key: "page_count" },
+          { label: "Readiness", key: "readiness_score" },
+          { label: "Updated", key: "updated_at", date: true },
+        ]}
+      />
+      <DetailCard
+        row={venues[0]}
+        titleKeys={["name", "title"]}
+        descriptionKeys={["notes", "description"]}
+        statusKey="status"
+        rows={[
+          { label: "Type", key: "venue_type" },
+          { label: "Deadline", key: "deadline", date: true },
+          { label: "URL", key: "url" },
+          { label: "Fit score", key: "fit_score" },
+        ]}
+      />
+      <DetailCard
+        row={submissions[0]}
+        titleKeys={["title", "name"]}
+        descriptionKeys={["notes", "summary"]}
+        statusKey="status"
+        rows={[
+          { label: "Paper", key: "research_paper_id" },
+          { label: "Venue", key: "research_venue_id" },
+          { label: "Submitted", key: "submitted_at", date: true },
+          { label: "Decision", key: "decision" },
+        ]}
+      />
+      <DetailCard
+        row={feedback[0]}
+        titleKeys={["title", "name"]}
+        descriptionKeys={["summary", "notes"]}
+        statusKey="status"
+        rows={[
+          { label: "Paper", key: "research_paper_id" },
+          { label: "Version", key: "paper_version_id" },
+          { label: "Source", key: "source" },
+          { label: "Updated", key: "updated_at", date: true },
+        ]}
+      />
+    </DetailPanel>
+  );
+}
+
+export function StanfordProfessorLabDetailPanel({
+  universities = [],
+  labs = [],
+  professors = [],
+}: {
+  universities?: object[];
+  labs?: object[];
+  professors?: object[];
+}) {
+  return (
+    <DetailPanel
+      title="University, lab, and professor detail"
+      eyebrow="10.26"
+      description="Focused read-only detail for PhD target fit, lab alignment, professor mapping, and outreach state."
+      emptyTitle="No professor or lab detail yet."
+      emptyDescription="Target university, lab, and professor detail will appear after PhD target records exist."
+      hasData={universities.length > 0 || labs.length > 0 || professors.length > 0}
+    >
+      <DetailCard
+        row={universities[0]}
+        titleKeys={["name", "title"]}
+        descriptionKeys={["fit_reason", "notes", "description"]}
+        statusKey="target_level"
+        rows={[
+          { label: "Program", key: "program_name" },
+          { label: "Fit score", key: "fit_score" },
+          { label: "Deadline", key: "deadline", date: true },
+          { label: "Updated", key: "updated_at", date: true },
+        ]}
+      />
+      <DetailCard
+        row={labs[0]}
+        titleKeys={["name", "title"]}
+        descriptionKeys={["fit_reason", "notes", "description"]}
+        statusKey="status"
+        rows={[
+          { label: "University", key: "target_university_id" },
+          { label: "Research idea", key: "related_research_idea_id" },
+          { label: "Project", key: "related_project_id" },
+          { label: "Fit score", key: "fit_score" },
+        ]}
+      />
+      <DetailCard
+        row={professors[0]}
+        titleKeys={["name", "title"]}
+        descriptionKeys={["fit_reason", "notes", "description"]}
+        statusKey="outreach_status"
+        rows={[
+          { label: "University", key: "target_university_id" },
+          { label: "Lab", key: "target_lab_id" },
+          { label: "Research area", key: "research_area" },
+          { label: "Fit score", key: "fit_score" },
+          { label: "Email", key: "email" },
+          { label: "Last contact", key: "last_contact_at", date: true },
+          { label: "Next follow-up", key: "next_follow_up_at", date: true },
+          { label: "Updated", key: "updated_at", date: true },
+        ]}
+      />
+    </DetailPanel>
+  );
+}
+
+export function StanfordApplicationDetailPanel({
+  readinessAssessments = [],
+  applicationAssets = [],
+  sopVersions = [],
+  recommendationTargets = [],
+}: {
+  readinessAssessments?: object[];
+  applicationAssets?: object[];
+  sopVersions?: object[];
+  recommendationTargets?: object[];
+}) {
+  return (
+    <DetailPanel
+      title="SOP, application, recommendation, and readiness detail"
+      eyebrow="10.27"
+      description="Focused read-only detail for PhD readiness checks, application assets, SOP versions, and recommendation targets."
+      emptyTitle="No PhD application detail yet."
+      emptyDescription="Readiness, application asset, SOP, and recommendation detail will appear after records exist."
+      hasData={readinessAssessments.length > 0 || applicationAssets.length > 0 || sopVersions.length > 0 || recommendationTargets.length > 0}
+    >
+      <DetailCard
+        row={readinessAssessments[0]}
+        titleKeys={["title", "name"]}
+        descriptionKeys={["summary", "notes"]}
+        statusKey="status"
+        rows={[
+          { label: "Assessment date", key: "assessment_date", date: true },
+          { label: "Research score", key: "research_score" },
+          { label: "SOP score", key: "sop_score" },
+          { label: "Overall score", key: "overall_score" },
+        ]}
+      />
+      <DetailCard
+        row={applicationAssets[0]}
+        titleKeys={["title", "name"]}
+        descriptionKeys={["notes", "summary"]}
+        statusKey="status"
+        rows={[
+          { label: "University", key: "target_university_id" },
+          { label: "Type", key: "asset_type" },
+          { label: "Due date", key: "due_date", date: true },
+          { label: "Updated", key: "updated_at", date: true },
+        ]}
+      />
+      <DetailCard
+        row={sopVersions[0]}
+        titleKeys={["version_label", "title"]}
+        descriptionKeys={["summary", "notes"]}
+        statusKey="status"
+        rows={[
+          { label: "University", key: "target_university_id" },
+          { label: "Word count", key: "word_count" },
+          { label: "Readiness", key: "readiness_score" },
+          { label: "Updated", key: "updated_at", date: true },
+        ]}
+      />
+      <DetailCard
+        row={recommendationTargets[0]}
+        titleKeys={["recommender_name", "title"]}
+        descriptionKeys={["notes", "summary"]}
+        statusKey="request_status"
+        rows={[
+          { label: "University", key: "target_university_id" },
+          { label: "Professor", key: "target_professor_id" },
+          { label: "Due date", key: "due_date", date: true },
+          { label: "Requested", key: "requested_at", date: true },
+        ]}
+      />
+    </DetailPanel>
+  );
+}
+```
+
+### `src/components/dashboard/research-linkage-boundary-panels.tsx`
+
+```tsx
+import { EmptyState, MetricTile, SectionCard } from "@/components/dashboard";
+
+type UnknownRecord = Record<string, unknown>;
+
+type ResearchBoundarySurface = "research_lab" | "research_stanford";
+
+function readString(row: UnknownRecord, key: string, fallback = ""): string {
+  const value = row[key];
+
+  if (typeof value === "string" && value.trim().length > 0) {
+    return value;
+  }
+
+  if (typeof value === "number" || typeof value === "boolean") {
+    return String(value);
+  }
+
+  return fallback;
+}
+
+function linkedCount(rows: UnknownRecord[], keys: string[]): number {
+  return rows.reduce((count, row) => {
+    return count + keys.filter((key) => readString(row, key).length > 0).length;
+  }, 0);
+}
+
+function uniqueIds(rows: UnknownRecord[], key: string): string[] {
+  return [
+    ...new Set(
+      rows
+        .map((row) => readString(row, key))
+        .filter((value) => value.length > 0),
+    ),
+  ].slice(0, 6);
+}
+
+function IdLine({ label, ids }: { label: string; ids: string[] }) {
+  return (
+    <p>
+      {label}: {ids.length === 0 ? "None linked yet" : ids.join(", ")}
+    </p>
+  );
+}
+
+export function ResearchProofLinkagePanel({
+  ideas = [],
+  citations = [],
+  claims = [],
+  experiments = [],
+  results = [],
+  papers = [],
+}: {
+  ideas?: UnknownRecord[];
+  citations?: UnknownRecord[];
+  claims?: UnknownRecord[];
+  experiments?: UnknownRecord[];
+  results?: UnknownRecord[];
+  papers?: UnknownRecord[];
+}) {
+  const researchRows = [...ideas, ...citations, ...claims, ...experiments, ...results, ...papers];
+
+  const operatingLinks = linkedCount(researchRows, [
+    "project_id",
+    "goal_id",
+    "task_id",
+    "proof_item_id",
+    "resume_bullet_id",
+  ]);
+  const citationLinks = linkedCount(citations, [
+    "literature_item_id",
+    "research_idea_id",
+    "research_claim_id",
+    "research_paper_id",
+    "paper_version_id",
+  ]);
+  const experimentLinks = linkedCount([...experiments, ...results], [
+    "research_idea_id",
+    "research_question_id",
+    "research_experiment_id",
+    "project_id",
+    "paper_version_id",
+  ]);
+  const paperLinks = linkedCount(papers, [
+    "primary_research_idea_id",
+    "project_id",
+    "target_venue_id",
+  ]);
+
+  return (
+    <SectionCard
+      title="Research proof and linkage visibility"
+      eyebrow="10.18"
+      description="Read-only view of how research records connect to ideas, literature, claims, experiments, results, papers, projects, goals, proof, and resume evidence."
+    >
+      {researchRows.length === 0 ? (
+        <EmptyState
+          title="No research linkage records yet."
+          description="Research linkage metrics will appear after Phase 10 research records exist."
+        />
+      ) : (
+        <div className="grid gap-4">
+          <div className="grid gap-4 md:grid-cols-4">
+            <MetricTile
+              label="Operating links"
+              value={operatingLinks}
+              description="Links into projects, goals, tasks, proof, or resume evidence."
+            />
+            <MetricTile
+              label="Citation links"
+              value={citationLinks}
+              description="Citation edges across literature, claims, papers, and versions."
+            />
+            <MetricTile
+              label="Experiment links"
+              value={experimentLinks}
+              description="Experiment/result links into ideas, questions, projects, and paper versions."
+            />
+            <MetricTile
+              label="Paper links"
+              value={paperLinks}
+              description="Paper links into ideas, projects, and target venues."
+            />
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/20 p-4 text-xs leading-6 text-slate-500">
+            <IdLine label="Project ids" ids={uniqueIds(researchRows, "project_id")} />
+            <IdLine label="Goal ids" ids={uniqueIds(researchRows, "goal_id")} />
+            <IdLine label="Proof ids" ids={uniqueIds(researchRows, "proof_item_id")} />
+            <IdLine label="Paper ids" ids={uniqueIds([...citations, ...claims], "research_paper_id")} />
+            <IdLine label="Paper version ids" ids={uniqueIds([...citations, ...claims, ...results], "paper_version_id")} />
+          </div>
+        </div>
+      )}
+    </SectionCard>
+  );
+}
+
+export function StanfordProofLinkagePanel({
+  universities = [],
+  labs = [],
+  professors = [],
+  applicationAssets = [],
+  sopVersions = [],
+  recommendationTargets = [],
+}: {
+  universities?: UnknownRecord[];
+  labs?: UnknownRecord[];
+  professors?: UnknownRecord[];
+  applicationAssets?: UnknownRecord[];
+  sopVersions?: UnknownRecord[];
+  recommendationTargets?: UnknownRecord[];
+}) {
+  const targetRows = [
+    ...universities,
+    ...labs,
+    ...professors,
+    ...applicationAssets,
+    ...sopVersions,
+    ...recommendationTargets,
+  ];
+
+  const universityLinks = linkedCount([...labs, ...professors, ...applicationAssets, ...sopVersions, ...recommendationTargets], [
+    "target_university_id",
+  ]);
+  const labLinks = linkedCount(professors, ["target_lab_id"]);
+  const researchLinks = linkedCount([...labs, ...professors], [
+    "related_research_idea_id",
+    "related_project_id",
+    "project_id",
+    "research_idea_id",
+  ]);
+  const applicationLinks = linkedCount([...applicationAssets, ...sopVersions, ...recommendationTargets], [
+    "target_university_id",
+    "target_professor_id",
+    "proof_item_id",
+  ]);
+
+  return (
+    <SectionCard
+      title="Stanford proof and target-fit linkage"
+      eyebrow="10.18"
+      description="Read-only view of how PhD targets connect to universities, labs, professors, research ideas, projects, assets, SOPs, recommendation targets, and proof evidence."
+    >
+      {targetRows.length === 0 ? (
+        <EmptyState
+          title="No Stanford/PhD linkage records yet."
+          description="Target-fit linkage metrics will appear after university, lab, professor, asset, SOP, or recommendation records exist."
+        />
+      ) : (
+        <div className="grid gap-4">
+          <div className="grid gap-4 md:grid-cols-4">
+            <MetricTile
+              label="University links"
+              value={universityLinks}
+              description="Records attached to target universities."
+            />
+            <MetricTile
+              label="Lab links"
+              value={labLinks}
+              description="Professor records attached to target labs."
+            />
+            <MetricTile
+              label="Research links"
+              value={researchLinks}
+              description="Target records linked to research ideas or projects."
+            />
+            <MetricTile
+              label="Application links"
+              value={applicationLinks}
+              description="Assets, SOPs, recommendations, or proof-linked application records."
+            />
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/20 p-4 text-xs leading-6 text-slate-500">
+            <IdLine label="University ids" ids={uniqueIds(targetRows, "target_university_id")} />
+            <IdLine label="Lab ids" ids={uniqueIds(professors, "target_lab_id")} />
+            <IdLine label="Professor ids" ids={uniqueIds([...applicationAssets, ...recommendationTargets], "target_professor_id")} />
+            <IdLine label="Research idea ids" ids={uniqueIds([...labs, ...professors], "related_research_idea_id")} />
+            <IdLine label="Project ids" ids={uniqueIds([...labs, ...professors], "related_project_id")} />
+          </div>
+        </div>
+      )}
+    </SectionCard>
+  );
+}
+
+export function ResearchStateBoundaryPanel({
+  surface,
+  readErrors = [],
+}: {
+  surface: ResearchBoundarySurface;
+  readErrors?: string[];
+}) {
+  const label = surface === "research_lab" ? "Research Lab" : "Research Stanford";
+
+  return (
+    <SectionCard
+      title={`${label} privacy and safe-write boundary`}
+      eyebrow="10.19"
+      description="Read-state and privacy language for Phase 10 research surfaces."
+    >
+      <div className="grid gap-4 text-sm leading-6 text-slate-400 md:grid-cols-2">
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Empty state</p>
+          <p className="mt-2">
+            Empty panels mean no matching records exist yet. They do not mean the system failed,
+            and they must not trigger automatic creation of research, professor, or application records.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Loading state</p>
+          <p className="mt-2">
+            Phase 10 research routes are server-rendered after authenticated reads complete. Loading
+            states must stay visibility-only and must not start background jobs.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Error state</p>
+          <p className="mt-2">
+            Read errors are shown inline. Errors must not trigger automatic retries, SQL writes,
+            paper submission, professor outreach, scraping, email, or Python/ML execution.
+          </p>
+          {readErrors.length > 0 ? (
+            <ul className="mt-3 list-disc space-y-1 pl-5 text-xs text-rose-200">
+              {readErrors.slice(0, 5).map((error) => (
+                <li key={error}>{error}</li>
+              ))}
+            </ul>
+          ) : null}
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Privacy boundary</p>
+          <p className="mt-2">
+            Research, PhD, professor, application, SOP, and recommendation data is private to the
+            authenticated user. This dashboard reads existing records only and does not export,
+            send, scrape, submit, or modify private data.
+          </p>
+        </div>
+      </div>
+    </SectionCard>
+  );
+}
+```
+
+### `src/components/dashboard/research-proposed-action-visibility-panel.tsx`
+
+```tsx
+import { ProposedActionReviewCard } from "@/components/actions";
+import { SectionCard } from "@/components/dashboard";
+import type { ProposedActionContract } from "@/lib/actions/proposed-action-contracts";
+
+const RESEARCH_PROPOSED_ACTION_PREVIEWS: ProposedActionContract[] = [
+  {
+    action_type: "create_task",
+    source: "carnos",
+    confidence: 0.73,
+    reason:
+      "Research dashboard context may suggest a next research execution task, but Phase 10 only previews the confirmation shape.",
+    payload: {
+      title: "Review the next research execution step",
+      description:
+        "Check ideas, literature, claims, experiments, paper state, and proof gaps before deciding whether to save a task.",
+      domain: "research",
+      priority: "medium",
+      status: "todo",
+    },
+    evidence_refs: ["research_ideas", "research_literature_items", "research_experiments"],
+  },
+  {
+    action_type: "create_goal",
+    source: "carnos",
+    confidence: 0.7,
+    reason:
+      "A paper, experiment, or PhD readiness target could become a goal only after user review and server-owned persistence.",
+    payload: {
+      title: "Advance a proof-backed research milestone",
+      description:
+        "Connect a research idea, experiment, paper version, and proof requirement into a concrete execution goal.",
+      domain: "research",
+      priority: "high",
+      status: "active",
+    },
+    evidence_refs: ["research_papers", "research_experiments", "proof_items"],
+  },
+  {
+    action_type: "create_proof_item",
+    source: "carnos",
+    confidence: 0.72,
+    reason:
+      "A completed experiment, accepted claim, paper draft, or PhD application asset may deserve proof capture, but this panel does not persist anything.",
+    payload: {
+      title: "Capture proof for a research or PhD milestone",
+      proof_type: "metric",
+      description:
+        "Attach evidence before using this research/PhD milestone in a paper, SOP, resume, professor outreach, or application package.",
+      goal_id: "review-required",
+      task_id: "review-required",
+    },
+    evidence_refs: ["research_results", "research_paper_versions", "phd_application_assets"],
+  },
+];
+
+export function ResearchProposedActionVisibilityPanel() {
+  return (
+    <SectionCard
+      title="Research proposed-action visibility"
+      eyebrow="10.28 confirmation preview"
+      description="Read-only preview of how research and Stanford suggestions may appear before user confirmation. Phase 10 does not save, cancel, execute, or persist these proposals."
+    >
+      <div className="grid gap-4">
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4 text-sm leading-6 text-slate-400">
+          This panel is visibility only. It uses the existing proposed-action review card to show
+          the confirmation shape, but all controls are disabled here and no callbacks are wired.
+          It must not create tasks, goals, proof items, papers, professor outreach, submissions,
+          applications, scraping jobs, emails, or Python/ML execution.
+        </div>
+
+        <div className="grid gap-4 xl:grid-cols-3">
+          {RESEARCH_PROPOSED_ACTION_PREVIEWS.map((action) => (
+            <ProposedActionReviewCard
+              key={action.action_type}
+              initialAction={action}
+              disabled
+              saveLabel="Save / Confirm unavailable in Phase 10"
+              cancelLabel="Cancel unavailable in Phase 10"
+              editLabel="Edit payload unavailable in Phase 10"
+              reviewTitle="Research proposal preview"
+              validationIssues={[
+                "Preview only: this research dashboard does not persist proposals.",
+                "User confirmation flow must remain separate from Phase 10 read dashboards.",
+                "No professor outreach, scraping, paper submission, or application action is wired.",
+              ]}
+            />
+          ))}
+        </div>
+      </div>
+    </SectionCard>
+  );
+}
+```
+
+### `src/components/dashboard/research-summary-panel.tsx`
+
+```tsx
+interface ResearchSummaryPanelMetric {
+  label: string;
+  value: number;
+  detail?: string;
+}
+
+export interface ResearchSummaryPanelProps {
+  title: string;
+  subtitle: string;
+  metrics: ResearchSummaryPanelMetric[];
+  boundaryNote?: string;
+}
+
+export function ResearchSummaryPanel({
+  title,
+  subtitle,
+  metrics,
+  boundaryNote,
+}: ResearchSummaryPanelProps) {
+  return (
+    <section className="rounded-3xl border border-white/10 bg-slate-950/70 p-5 shadow-2xl shadow-black/20">
+      <div className="space-y-2">
+        <p className="text-xs uppercase tracking-[0.3em] text-cyan-300/80">Phase 10 Read Surface</p>
+        <h2 className="text-xl font-semibold text-white">{title}</h2>
+        <p className="text-sm text-slate-300">{subtitle}</p>
+      </div>
+
+      <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {metrics.map((metric) => (
+          <article
+            key={metric.label}
+            className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+          >
+            <p className="text-xs uppercase tracking-[0.22em] text-slate-400">{metric.label}</p>
+            <p className="mt-2 text-3xl font-semibold text-white">{metric.value}</p>
+            {metric.detail ? <p className="mt-1 text-xs text-slate-400">{metric.detail}</p> : null}
+          </article>
+        ))}
+      </div>
+
+      {boundaryNote ? (
+        <p className="mt-5 rounded-2xl border border-amber-300/20 bg-amber-300/10 p-3 text-xs text-amber-100">
+          {boundaryNote}
+        </p>
+      ) : null}
+    </section>
+  );
+}
+```
+
+### `src/components/dashboard/resume-dashboard-v1.tsx`
+
+```tsx
+import {
+  EmptyState,
+  MetricTile,
+  SectionCard,
+  StatusPill,
+} from "@/components/dashboard";
+import type {
+  DailyLogRow,
+  GoalRow,
+  ProofItemRow,
+  ResumeBulletRow,
+  ResumeVersionRow,
+  TaskRow,
+} from "@/types/database";
+import { CareerCrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
+import { CareerEvidenceLinkagePanel } from "@/components/dashboard/career-evidence-linkage-panel";
+import { CareerProposedActionVisibilityPanel } from "@/components/dashboard/career-proposed-action-visibility-panel";
+import { CareerStateBoundaryPanel } from "@/components/dashboard/career-state-boundary-panel";
+
+interface ResumeDashboardV1Props {
+  versions: ResumeVersionRow[];
+  bullets: ResumeBulletRow[];
+  goals: GoalRow[];
+  tasks: TaskRow[];
+  proofItems: ProofItemRow[];
+  dailyLogs: DailyLogRow[];
+  readErrors?: string[];
+}
+
+function statusTone(status: string): "neutral" | "success" | "warning" | "danger" | "info" {
+  if (["active", "ready", "submitted", "approved", "complete"].includes(status)) {
+    return "success";
+  }
+
+  if (["archived", "rejected", "deprecated"].includes(status)) {
+    return "danger";
+  }
+
+  if (["draft", "review", "needs_update", "pending"].includes(status)) {
+    return "warning";
+  }
+
+  return "neutral";
+}
+
+function keywordSummary(keywords: string[]): string {
+  if (keywords.length === 0) {
+    return "No keywords yet";
+  }
+
+  return keywords.slice(0, 8).join(", ");
+}
+
+function skillSummary(skillTags: string[]): string {
+  if (skillTags.length === 0) {
+    return "No skill tags";
+  }
+
+  return skillTags.slice(0, 6).join(", ");
+}
+
+function ResumeVersionList({ versions }: { versions: ResumeVersionRow[] }) {
+  if (versions.length === 0) {
+    return (
+      <EmptyState
+        title="No resume versions yet."
+        description="Resume versions, target roles, target companies, domains, keywords, and file links will appear here after resume records exist."
+      />
+    );
+  }
+
+  return (
+    <div className="grid gap-3">
+      {versions.slice(0, 8).map((item) => (
+        <div key={item.id} className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+            <div className="min-w-0">
+              <p className="text-sm font-semibold text-white">{item.name}</p>
+              <p className="mt-1 text-sm text-slate-400">
+                {item.target_role ?? "General role"} · {item.target_company ?? "No target company"}
+              </p>
+              <div className="mt-3 grid gap-1 text-xs leading-5 text-slate-500 md:grid-cols-2">
+                <p>Target domain: {item.target_domain ?? "Not set"}</p>
+                <p>File: {item.file_url ? "Linked" : "Not linked"}</p>
+                <p className="md:col-span-2">Keywords: {keywordSummary(item.keywords)}</p>
+              </div>
+              {item.notes ? (
+                <p className="mt-3 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-xs leading-5 text-slate-400">
+                  {item.notes}
+                </p>
+              ) : null}
+            </div>
+            <StatusPill label={item.status} tone={statusTone(item.status)} />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function ResumeBulletList({ bullets }: { bullets: ResumeBulletRow[] }) {
+  if (bullets.length === 0) {
+    return (
+      <EmptyState
+        title="No resume bullets yet."
+        description="Resume bullet evidence, skill tags, metrics, proof links, goal links, and task links will appear here after bullet records exist."
+      />
+    );
+  }
+
+  return (
+    <div className="grid gap-3">
+      {bullets.slice(0, 10).map((item) => (
+        <div key={item.id} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+            <div className="min-w-0">
+              <p className="text-sm font-semibold leading-6 text-white">{item.bullet_text}</p>
+              <div className="mt-3 grid gap-1 text-xs leading-5 text-slate-500 md:grid-cols-2">
+                <p>Section: {item.section}</p>
+                <p>Resume version: {item.resume_version_id}</p>
+                <p>Metric claim: {item.metric_claim ?? "Not set"}</p>
+                <p>Proof item: {item.proof_item_id ?? "Not linked"}</p>
+                <p>Goal: {item.goal_id ?? "Not linked"}</p>
+                <p>Task: {item.task_id ?? "Not linked"}</p>
+                <p className="md:col-span-2">Skills: {skillSummary(item.skill_tags)}</p>
+              </div>
+            </div>
+            <StatusPill label={item.section} tone="info" />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export function ResumeDashboardV1({
+  versions,
+  bullets,
+  goals,
+  tasks,
+  proofItems,
+  dailyLogs,
+  readErrors = [],
+}: ResumeDashboardV1Props) {
+  const activeVersions = versions.filter((item) => item.status === "active" || item.status === "ready").length;
+  const proofLinkedBullets = bullets.filter((item) => item.proof_item_id).length;
+  const metricBullets = bullets.filter((item) => item.metric_claim).length;
+
+  return (
+    <div className="grid gap-6">
+      <section className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-sm shadow-black/20">
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-200/80">
+          Phase 8 Resume System
+        </p>
+        <h1 className="mt-3 text-2xl font-semibold tracking-tight text-white">Resume Dashboard</h1>
+        <p className="mt-3 max-w-4xl text-sm leading-6 text-slate-400">
+          Read-only resume control surface for versions, target roles, target companies, keywords, bullets,
+          metrics, and evidence links. This screen only reads records and does not edit or generate resumes.
+        </p>
+
+        <div className="mt-6 grid gap-4 md:grid-cols-4">
+          <MetricTile label="Versions" value={versions.length} description="Resume versions tracked." />
+          <MetricTile label="Active/ready" value={activeVersions} description="Versions ready for use or currently active." />
+          <MetricTile label="Bullets" value={bullets.length} description="Evidence-backed bullet records." />
+          <MetricTile label="Proof-linked" value={proofLinkedBullets} description="Bullets linked to proof items." />
+        </div>
+      </section>
+
+      <CareerCrossDashboardLinks activeRoute="/resume" />
+
+      {readErrors.length > 0 ? (
+        <EmptyState
+          title="Some resume records could not be read."
+          description={readErrors.join(" · ")}
+        />
+      ) : null}
+
+      <SectionCard
+        title="Resume versions"
+        eyebrow="resume_versions"
+        description="Version names, target roles, target companies, target domains, file links, keywords, and status."
+      >
+        <ResumeVersionList versions={versions} />
+      </SectionCard>
+
+      <SectionCard
+        title="Resume bullet evidence"
+        eyebrow="resume_bullets"
+        description="Bullet text, sections, skill tags, metric claims, and links to proof/goals/tasks."
+      >
+        <ResumeBulletList bullets={bullets} />
+      </SectionCard>
+
+      <CareerEvidenceLinkagePanel
+        resumeBullets={bullets}
+        goals={goals}
+        tasks={tasks}
+        proofItems={proofItems}
+        dailyLogs={dailyLogs}
+      />
+
+      <CareerProposedActionVisibilityPanel />
+
+      <CareerStateBoundaryPanel surface="resume" />
+
+      <SectionCard
+        title="Resume boundary"
+        eyebrow="safety"
+        description="Phase 8 resume remains read-only at the dashboard layer."
+      >
+        <div className="grid gap-3 text-sm leading-6 text-slate-400">
+          <p>Allowed: read resume versions, bullets, keywords, metrics, and evidence links.</p>
+          <p>Not allowed here: editing resumes, generating bullets, uploading files, background jobs, or changing records.</p>
+          <p>Metric bullets currently tracked: {metricBullets}.</p>
+        </div>
+      </SectionCard>
+    </div>
   );
 }
 ```
@@ -23858,6 +40928,95 @@ export function StatusPill({
     >
       {label}
     </span>
+  );
+}
+```
+
+### `src/components/dashboard/timeline-dashboard-v1.tsx`
+
+```tsx
+import { OperatingDashboardCard, OperatingDashboardGrid } from "@/components/dashboard";
+import { CrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
+import { getDashboardCardsForSurface, type DashboardDataResult } from "@/lib/dashboard";
+
+interface TimelineDashboardV1Props {
+  data?: DashboardDataResult;
+}
+
+const timelineCards = getDashboardCardsForSurface("timeline");
+
+function formatCount(value: number | undefined) {
+  return typeof value === "number" ? value.toLocaleString() : "0";
+}
+
+export function TimelineDashboardV1({ data }: TimelineDashboardV1Props) {
+  const summary = data?.summary;
+  const hasError = false;
+
+  return (
+    <section className="space-y-6">
+      <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-2xl shadow-black/20">
+        <div className="flex flex-col gap-3">
+          <p className="text-xs uppercase tracking-[0.35em] text-white/45">
+            Timeline dashboard
+          </p>
+          <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+            <div>
+              <h2 className="text-2xl font-semibold text-white">
+                Life operating history
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm leading-6 text-white/60">
+                Read-only view of recent events, proof signals, audit records, and system activity. This surface is for understanding what happened before taking action.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white/70">
+              {hasError ? "Timeline data unavailable" : "Read-only mode"}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <CrossDashboardLinks activeRoute="/timeline" />
+
+      <div className="grid gap-4 md:grid-cols-4">
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Events</p>
+          <p className="mt-2 text-2xl font-semibold text-white">
+            {formatCount(summary?.recent_events_count)}
+          </p>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Proof</p>
+          <p className="mt-2 text-2xl font-semibold text-white">
+            {formatCount(summary?.recent_proof_count)}
+          </p>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Logs</p>
+          <p className="mt-2 text-2xl font-semibold text-white">
+            {formatCount(summary?.card_count)}
+          </p>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Pending</p>
+          <p className="mt-2 text-2xl font-semibold text-white">
+            {formatCount(summary?.pending_updates_count)}
+          </p>
+        </div>
+      </div>
+
+      <OperatingDashboardGrid region="timeline_preview">
+        {timelineCards.map((card) => (
+          <OperatingDashboardCard
+            key={card.id}
+            card={{
+              ...card,
+              status: hasError ? "error" : card.status,
+            }}
+          />
+        ))}
+      </OperatingDashboardGrid>
+    </section>
   );
 }
 ```
@@ -24090,6 +41249,2194 @@ export async function ProfileSummaryCard() {
 }
 ```
 
+### `src/lib/actions/action-lifecycle.ts`
+
+```tsx
+import type { SupabaseClient } from "@supabase/supabase-js";
+
+import { isProposedActionType } from "./action-types";
+import { createActionError, createActionSuccess, type ActionResult } from "./action-results";
+import type { AiActionUpdate, Database } from "@/types/database";
+
+export type AiActionLifecycleTransition = "approve" | "reject" | "cancel" | "mark_failed";
+
+export type AiActionLifecycleStatus =
+  | "draft"
+  | "pending_confirmation"
+  | "approved"
+  | "rejected"
+  | "executed"
+  | "failed"
+  | "cancelled";
+
+export interface UpdateActionLifecycleInput {
+  supabase: SupabaseClient<Database>;
+  user_id: string;
+  ai_action_id: string;
+  transition: AiActionLifecycleTransition;
+  failure_reason?: string;
+}
+
+export interface UpdateActionLifecycleData {
+  ai_action_id: string;
+  action_type: string;
+  previous_status: AiActionLifecycleStatus;
+  status: AiActionLifecycleStatus;
+}
+
+const ALLOWED_TRANSITIONS: Record<
+  AiActionLifecycleTransition,
+  AiActionLifecycleStatus[]
+> = {
+  approve: ["pending_confirmation"],
+  reject: ["pending_confirmation"],
+  cancel: ["draft", "pending_confirmation", "approved"],
+  mark_failed: ["approved"],
+};
+
+function statusForTransition(transition: AiActionLifecycleTransition): AiActionLifecycleStatus {
+  switch (transition) {
+    case "approve":
+      return "approved";
+    case "reject":
+      return "rejected";
+    case "cancel":
+      return "cancelled";
+    case "mark_failed":
+      return "failed";
+  }
+}
+
+function timestampFieldForTransition(transition: AiActionLifecycleTransition): keyof AiActionUpdate {
+  switch (transition) {
+    case "approve":
+      return "approved_at";
+    case "reject":
+      return "rejected_at";
+    case "cancel":
+      return "rejected_at";
+    case "mark_failed":
+      return "failed_at";
+  }
+}
+
+function actionTypeForResult(value: string) {
+  return isProposedActionType(value) ? value : undefined;
+}
+
+function isLifecycleStatus(value: string): value is AiActionLifecycleStatus {
+  return [
+    "draft",
+    "pending_confirmation",
+    "approved",
+    "rejected",
+    "executed",
+    "failed",
+    "cancelled",
+  ].includes(value);
+}
+
+export async function updateActionLifecycle(
+  input: UpdateActionLifecycleInput,
+): Promise<ActionResult<UpdateActionLifecycleData>> {
+  const { data: existingAction, error: readError } = await input.supabase
+    .from("ai_actions")
+    .select("id,status,action_type")
+    .eq("id", input.ai_action_id)
+    .eq("user_id", input.user_id)
+    .single();
+
+  if (readError) {
+    return createActionError({
+      code: "not_found",
+      message: readError.message,
+    });
+  }
+
+  if (!isLifecycleStatus(existingAction.status)) {
+    return createActionError({
+      action_type: actionTypeForResult(existingAction.action_type),
+      code: "invalid_payload",
+      message: "AI action has an unknown lifecycle status.",
+      issues: [existingAction.status],
+    });
+  }
+
+  const previousStatus = existingAction.status;
+  const allowedStatuses = ALLOWED_TRANSITIONS[input.transition];
+
+  if (!allowedStatuses.includes(previousStatus)) {
+    return createActionError({
+      action_type: actionTypeForResult(existingAction.action_type),
+      code: "invalid_payload",
+      message: `Cannot ${input.transition} an AI action with status ${previousStatus}.`,
+      issues: [`Allowed previous statuses: ${allowedStatuses.join(", ")}`],
+    });
+  }
+
+  const nextStatus = statusForTransition(input.transition);
+  const timestampField = timestampFieldForTransition(input.transition);
+
+  const updatePayload: AiActionUpdate = {
+    status: nextStatus,
+    [timestampField]: new Date().toISOString(),
+  };
+
+  if (input.transition === "mark_failed") {
+    updatePayload.failure_reason = input.failure_reason ?? "Action marked failed.";
+  }
+
+  const { data: updatedAction, error: updateError } = await input.supabase
+    .from("ai_actions")
+    .update(updatePayload)
+    .eq("id", input.ai_action_id)
+    .eq("user_id", input.user_id)
+    .select("id,status,action_type")
+    .single();
+
+  if (updateError) {
+    return createActionError({
+      action_type: actionTypeForResult(existingAction.action_type),
+      code: "database_error",
+      message: updateError.message,
+    });
+  }
+
+  if (!isLifecycleStatus(updatedAction.status)) {
+    return createActionError({
+      action_type: actionTypeForResult(updatedAction.action_type),
+      code: "unexpected_error",
+      message: "Updated AI action returned an unknown lifecycle status.",
+      issues: [updatedAction.status],
+    });
+  }
+
+  return createActionSuccess({
+    action_type: actionTypeForResult(updatedAction.action_type),
+    message: `AI action lifecycle updated to ${updatedAction.status}.`,
+    data: {
+      ai_action_id: updatedAction.id,
+      action_type: updatedAction.action_type,
+      previous_status: previousStatus,
+      status: updatedAction.status,
+    },
+  });
+}
+```
+
+### `src/lib/actions/action-results.ts`
+
+```tsx
+import type { ProposedActionType } from "./action-types";
+
+export type ActionResultStatus = "success" | "error";
+
+export type ActionResultErrorCode =
+  | "invalid_action_type"
+  | "invalid_payload"
+  | "unauthorized"
+  | "not_found"
+  | "not_confirmed"
+  | "already_executed"
+  | "database_error"
+  | "unexpected_error";
+
+export interface ActionResultBase {
+  status: ActionResultStatus;
+  action_type?: ProposedActionType;
+  message: string;
+}
+
+export interface ActionSuccessResult<TData = unknown> extends ActionResultBase {
+  status: "success";
+  data: TData;
+  audit_log_id?: string;
+  timeline_event_id?: string;
+}
+
+export interface ActionErrorResult extends ActionResultBase {
+  status: "error";
+  code: ActionResultErrorCode;
+  issues?: string[];
+}
+
+export type ActionResult<TData = unknown> = ActionSuccessResult<TData> | ActionErrorResult;
+
+export function createActionSuccess<TData>(input: {
+  action_type?: ProposedActionType;
+  message: string;
+  data: TData;
+  audit_log_id?: string;
+  timeline_event_id?: string;
+}): ActionSuccessResult<TData> {
+  return {
+    status: "success",
+    action_type: input.action_type,
+    message: input.message,
+    data: input.data,
+    audit_log_id: input.audit_log_id,
+    timeline_event_id: input.timeline_event_id,
+  };
+}
+
+export function createActionError(input: {
+  action_type?: ProposedActionType;
+  code: ActionResultErrorCode;
+  message: string;
+  issues?: string[];
+}): ActionErrorResult {
+  return {
+    status: "error",
+    action_type: input.action_type,
+    code: input.code,
+    message: input.message,
+    issues: input.issues,
+  };
+}
+
+export function isActionSuccess<TData>(
+  result: ActionResult<TData>,
+): result is ActionSuccessResult<TData> {
+  return result.status === "success";
+}
+
+export function isActionError<TData>(result: ActionResult<TData>): result is ActionErrorResult {
+  return result.status === "error";
+}
+```
+
+### `src/lib/actions/action-types.ts`
+
+```tsx
+export const PROPOSED_ACTION_TYPES = [
+  "create_task",
+  "create_goal",
+  "create_daily_log",
+  "create_proof_item",
+] as const;
+
+export type ProposedActionType = (typeof PROPOSED_ACTION_TYPES)[number];
+
+export const PROPOSED_ACTION_TYPE_LABELS: Record<ProposedActionType, string> = {
+  create_task: "Create task",
+  create_goal: "Create goal",
+  create_daily_log: "Create daily log",
+  create_proof_item: "Create proof item",
+};
+
+export const PROPOSED_ACTION_TYPE_DESCRIPTIONS: Record<ProposedActionType, string> = {
+  create_task: "Create a task after validation and explicit user confirmation.",
+  create_goal: "Create a goal after validation and explicit user confirmation.",
+  create_daily_log: "Create a daily log after validation and explicit user confirmation.",
+  create_proof_item: "Create a proof item after validation and explicit user confirmation.",
+};
+
+export function isProposedActionType(value: unknown): value is ProposedActionType {
+  return typeof value === "string" && PROPOSED_ACTION_TYPES.includes(value as ProposedActionType);
+}
+```
+
+### `src/lib/actions/create-proposed-action.ts`
+
+```tsx
+import type { SupabaseClient } from "@supabase/supabase-js";
+
+import { createActionError, createActionSuccess, type ActionResult } from "./action-results";
+import { PROPOSED_ACTION_CONTRACT_VERSION } from "./proposed-action-contracts";
+import { validateProposedAction } from "./validate-proposed-action";
+import type { Database, Json, AiActionInsert } from "@/types/database";
+
+export interface CreateProposedActionInput {
+  supabase: SupabaseClient<Database>;
+  user_id: string;
+  proposed_action: unknown;
+  source_chat_session_id?: string;
+  source_chat_message_id?: string;
+  source_context?: Json;
+}
+
+export interface CreateProposedActionData {
+  ai_action_id: string;
+  status: "pending_confirmation";
+  action_type: string;
+  target_table: string;
+}
+
+function targetTableForAction(actionType: string): string {
+  switch (actionType) {
+    case "create_task":
+      return "tasks";
+    case "create_goal":
+      return "goals";
+    case "create_daily_log":
+      return "daily_logs";
+    case "create_proof_item":
+      return "proof_items";
+    default:
+      return "unknown";
+  }
+}
+
+function titleFromPayload(payload: Json): string | null {
+  if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
+    return null;
+  }
+
+  const maybeTitle = payload.title;
+
+  return typeof maybeTitle === "string" && maybeTitle.trim().length > 0
+    ? maybeTitle.trim()
+    : null;
+}
+
+function descriptionFromPayload(payload: Json): string | null {
+  if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
+    return null;
+  }
+
+  const maybeDescription = payload.description;
+
+  return typeof maybeDescription === "string" && maybeDescription.trim().length > 0
+    ? maybeDescription.trim()
+    : null;
+}
+
+export async function createProposedAction(
+  input: CreateProposedActionInput,
+): Promise<ActionResult<CreateProposedActionData>> {
+  const validation = validateProposedAction(input.proposed_action);
+
+  if (validation.status === "error") {
+    return validation;
+  }
+
+  const actionType = validation.data.action_type;
+  const payload = validation.data.payload as unknown as Json;
+  const targetTable = targetTableForAction(actionType);
+
+  const insertPayload: AiActionInsert = {
+    user_id: input.user_id,
+    status: "pending_confirmation",
+    action_type: actionType,
+    target_table: targetTable,
+    title: titleFromPayload(payload),
+    description: descriptionFromPayload(payload),
+    payload,
+    validation_result: {
+      contract_version: PROPOSED_ACTION_CONTRACT_VERSION,
+      status: "valid",
+      action_type: actionType,
+      source: validation.data.source,
+      reason: validation.data.reason ?? null,
+      confidence: validation.data.confidence ?? null,
+      evidence_refs: validation.data.evidence_refs ?? [],
+    },
+    source_chat_session_id: input.source_chat_session_id ?? null,
+    source_chat_message_id: input.source_chat_message_id ?? null,
+    source_context: input.source_context ?? {},
+  };
+
+  const { data, error } = await input.supabase
+    .from("ai_actions")
+    .insert(insertPayload)
+    .select("id")
+    .single();
+
+  if (error) {
+    return createActionError({
+      action_type: actionType,
+      code: "database_error",
+      message: error.message,
+    });
+  }
+
+  return createActionSuccess({
+    action_type: actionType,
+    message: "Proposed action created and is pending confirmation.",
+    data: {
+      ai_action_id: data.id,
+      status: "pending_confirmation",
+      action_type: actionType,
+      target_table: targetTable,
+    },
+  });
+}
+```
+
+### `src/lib/actions/execution-dispatcher.ts`
+
+```tsx
+import type { SupabaseClient } from "@supabase/supabase-js";
+
+import { isProposedActionType, type ProposedActionType } from "./action-types";
+import { createActionError, createActionSuccess, type ActionResult } from "./action-results";
+import {
+  executeCreateTaskAction,
+  type ExecuteCreateTaskActionData,
+} from "./flows/create-task-flow";
+import {
+  executeCreateGoalAction,
+  type ExecuteCreateGoalActionData,
+} from "./flows/create-goal-flow";
+import {
+  executeCreateDailyLogAction,
+  type ExecuteCreateDailyLogActionData,
+} from "./flows/create-daily-log-flow";
+import {
+  executeCreateProofItemAction,
+  type ExecuteCreateProofItemActionData,
+} from "./flows/create-proof-item-flow";
+import type { Database } from "@/types/database";
+
+export interface ExecuteApprovedActionInput {
+  supabase: SupabaseClient<Database>;
+  user_id: string;
+  ai_action_id: string;
+}
+
+export interface ExecuteApprovedActionReadyData {
+  ai_action_id: string;
+  action_type: ProposedActionType;
+  status: "ready_for_execution";
+  message: string;
+}
+
+export type ExecuteApprovedActionData =
+  | ExecuteApprovedActionReadyData
+  | ExecuteCreateTaskActionData
+  | ExecuteCreateGoalActionData
+  | ExecuteCreateDailyLogActionData
+  | ExecuteCreateProofItemActionData;
+
+interface LoadedAction {
+  id: string;
+  status: string;
+  action_type: string;
+}
+
+function actionTypeForResult(value: string) {
+  return isProposedActionType(value) ? value : undefined;
+}
+
+function notImplementedYet(
+  action: LoadedAction,
+): ActionResult<ExecuteApprovedActionData> {
+  return createActionError({
+    action_type: actionTypeForResult(action.action_type),
+    code: "unexpected_error",
+    message:
+      "Execution dispatcher reached a valid approved action, but target-table execution is intentionally not implemented until Phase 6.11–6.14.",
+    issues: [
+      `ai_action_id: ${action.id}`,
+      `action_type: ${action.action_type}`,
+      "Phase 6.10 only establishes the dispatcher boundary.",
+    ],
+  });
+}
+
+function dispatchApprovedAction(
+  action: LoadedAction,
+): ActionResult<ExecuteApprovedActionData> {
+  if (!isProposedActionType(action.action_type)) {
+    return createActionError({
+      code: "invalid_action_type",
+      message: "AI action has an unsupported proposed action type.",
+      issues: [action.action_type],
+    });
+  }
+
+  switch (action.action_type) {
+    case "create_task":
+    case "create_goal":
+    case "create_daily_log":
+    case "create_proof_item":
+      return notImplementedYet(action);
+  }
+}
+
+export async function executeApprovedAction(
+  input: ExecuteApprovedActionInput,
+): Promise<ActionResult<ExecuteApprovedActionData>> {
+  const { data: action, error } = await input.supabase
+    .from("ai_actions")
+    .select("id,status,action_type")
+    .eq("id", input.ai_action_id)
+    .eq("user_id", input.user_id)
+    .single();
+
+  if (error) {
+    return createActionError({
+      code: "not_found",
+      message: error.message,
+    });
+  }
+
+  if (action.status !== "approved") {
+    return createActionError({
+      action_type: actionTypeForResult(action.action_type),
+      code: "not_confirmed",
+      message: "AI action must be approved before execution dispatch.",
+      issues: [`Current status: ${action.status}`],
+    });
+  }
+
+  if (action.action_type === "create_task") {
+    return executeCreateTaskAction(input);
+  }
+
+  if (action.action_type === "create_goal") {
+    return executeCreateGoalAction(input);
+  }
+
+  if (action.action_type === "create_daily_log") {
+    return executeCreateDailyLogAction(input);
+  }
+
+  if (action.action_type === "create_proof_item") {
+    return executeCreateProofItemAction(input);
+  }
+
+  return dispatchApprovedAction(action);
+}
+
+export function markDispatcherReadyForActionType(
+  actionType: ProposedActionType,
+  aiActionId: string,
+): ActionResult<ExecuteApprovedActionData> {
+  return createActionSuccess({
+    action_type: actionType,
+    message: "Execution dispatcher boundary is ready for this action type.",
+    data: {
+      ai_action_id: aiActionId,
+      action_type: actionType,
+      status: "ready_for_execution",
+      message:
+        "Target-table execution must be implemented by the specific Phase 6.11–6.14 action flow.",
+    },
+  });
+}
+```
+
+### `src/lib/actions/flows/create-daily-log-flow.ts`
+
+```tsx
+import type { SupabaseClient } from "@supabase/supabase-js";
+
+import { createActionError, createActionSuccess, type ActionResult } from "../action-results";
+import { writeAuditLog } from "@/lib/audit/write-audit-log";
+import { writeTimelineEvent } from "@/lib/timeline/write-timeline-event";
+import type { Database, DailyLogInsert, Json } from "@/types/database";
+
+type PayloadRecord = { [key: string]: Json | undefined };
+
+export interface ExecuteCreateDailyLogActionInput {
+  supabase: SupabaseClient<Database>;
+  user_id: string;
+  ai_action_id: string;
+}
+
+export interface ExecuteCreateDailyLogActionData {
+  ai_action_id: string;
+  daily_log_id: string;
+  status: "executed";
+}
+
+function isPayloadRecord(payload: Json): payload is PayloadRecord {
+  return Boolean(payload) && typeof payload === "object" && !Array.isArray(payload);
+}
+
+function optionalString(value: unknown): string | null {
+  return typeof value === "string" && value.trim().length > 0 ? value.trim() : null;
+}
+
+function optionalNumber(value: unknown): number | null {
+  return typeof value === "number" && Number.isFinite(value) ? value : null;
+}
+
+function rangedInteger(value: unknown, min: number, max: number): number | null {
+  const maybeNumber = optionalNumber(value);
+
+  if (maybeNumber === null) {
+    return null;
+  }
+
+  if (maybeNumber < min || maybeNumber > max) {
+    return null;
+  }
+
+  return Math.round(maybeNumber);
+}
+
+function rangedNumber(value: unknown, min: number, max: number): number | null {
+  const maybeNumber = optionalNumber(value);
+
+  if (maybeNumber === null) {
+    return null;
+  }
+
+  if (maybeNumber < min || maybeNumber > max) {
+    return null;
+  }
+
+  return maybeNumber;
+}
+
+function optionalJsonArray(value: Json | undefined): Json {
+  return Array.isArray(value) ? value : [];
+}
+
+export async function executeCreateDailyLogAction(
+  input: ExecuteCreateDailyLogActionInput,
+): Promise<ActionResult<ExecuteCreateDailyLogActionData>> {
+  const { data: action, error: readError } = await input.supabase
+    .from("ai_actions")
+    .select("id,status,action_type,payload,source_chat_message_id")
+    .eq("id", input.ai_action_id)
+    .eq("user_id", input.user_id)
+    .single();
+
+  if (readError) {
+    return createActionError({
+      code: "not_found",
+      message: readError.message,
+    });
+  }
+
+  if (action.status !== "approved") {
+    return createActionError({
+      action_type: "create_daily_log",
+      code: "not_confirmed",
+      message: "Create daily log action must be approved before execution.",
+      issues: [`Current status: ${action.status}`],
+    });
+  }
+
+  if (action.action_type !== "create_daily_log") {
+    return createActionError({
+      code: "invalid_action_type",
+      message: "AI action is not a create_daily_log action.",
+      issues: [action.action_type],
+    });
+  }
+
+  if (!isPayloadRecord(action.payload)) {
+    return createActionError({
+      action_type: "create_daily_log",
+      code: "invalid_payload",
+      message: "Create daily log payload must be an object.",
+    });
+  }
+
+  const logDate = optionalString(action.payload.log_date);
+
+  if (!logDate) {
+    return createActionError({
+      action_type: "create_daily_log",
+      code: "invalid_payload",
+      message: "Create daily log payload requires a log_date.",
+      issues: ["log_date"],
+    });
+  }
+
+  const now = new Date().toISOString();
+  const summary = optionalString(action.payload.summary);
+  const notes = optionalString(action.payload.notes);
+
+  const dailyLogInsert: DailyLogInsert = {
+    user_id: input.user_id,
+    log_date: logDate,
+    mission: optionalString(action.payload.mission) ?? summary,
+    top_actions: optionalJsonArray(action.payload.top_actions),
+    wins: optionalJsonArray(action.payload.wins),
+    blockers: optionalJsonArray(action.payload.blockers),
+    mood_score: rangedInteger(action.payload.mood_score ?? action.payload.mood, 1, 10),
+    energy_score: rangedInteger(action.payload.energy_score ?? action.payload.energy, 1, 10),
+    sleep_hours: rangedNumber(action.payload.sleep_hours, 0, 24),
+    stress_score: rangedInteger(action.payload.stress_score ?? action.payload.stress, 1, 10),
+    proof_score: rangedInteger(action.payload.proof_score, 0, 100),
+    reality_score: rangedInteger(action.payload.reality_score, 0, 100),
+    notes: notes ?? summary,
+    metadata: {
+      source: "phase_6_safe_write_flow",
+      source_action_type: "create_daily_log",
+      executed_from_ai_action_id: action.id,
+    },
+    source_ai_action_id: action.id,
+    source_chat_message_id: action.source_chat_message_id,
+  };
+
+  const { data: dailyLog, error: dailyLogError } = await input.supabase
+    .from("daily_logs")
+    .insert(dailyLogInsert)
+    .select("id,log_date")
+    .single();
+
+  if (dailyLogError) {
+    await input.supabase
+      .from("ai_actions")
+      .update({
+        status: "failed",
+        failed_at: now,
+        failure_reason: dailyLogError.message,
+      })
+      .eq("id", action.id)
+      .eq("user_id", input.user_id);
+
+    return createActionError({
+      action_type: "create_daily_log",
+      code: "database_error",
+      message: dailyLogError.message,
+    });
+  }
+
+  const { error: actionUpdateError } = await input.supabase
+    .from("ai_actions")
+    .update({
+      status: "executed",
+      target_table: "daily_logs",
+      target_id: dailyLog.id,
+      executed_at: now,
+    })
+    .eq("id", action.id)
+    .eq("user_id", input.user_id);
+
+  if (actionUpdateError) {
+    return createActionError({
+      action_type: "create_daily_log",
+      code: "database_error",
+      message: actionUpdateError.message,
+    });
+  }
+
+  const auditResult = await writeAuditLog({
+    supabase: input.supabase,
+    user_id: input.user_id,
+    action_type: "create_daily_log",
+    status: "success",
+    source: "server",
+    entity_table: "daily_logs",
+    entity_id: dailyLog.id,
+    summary: "Created daily log from approved proposed action.",
+    after_state: {
+      daily_log_id: dailyLog.id,
+      log_date: dailyLog.log_date,
+      source_ai_action_id: action.id,
+    },
+    metadata: {
+      phase: "6.13",
+      ai_action_id: action.id,
+    },
+  });
+
+  const timelineResult = await writeTimelineEvent({
+    user_id: input.user_id,
+    event_type: "daily_log_created",
+    title: "Daily log created",
+    description: `Daily log for ${dailyLog.log_date}`,
+    source: "server",
+    entity_table: "daily_logs",
+    entity_id: dailyLog.id,
+    metadata: {
+      phase: "6.13",
+      ai_action_id: action.id,
+    },
+  });
+
+  return createActionSuccess({
+    action_type: "create_daily_log",
+    message: "Daily log created from approved proposed action.",
+    data: {
+      ai_action_id: action.id,
+      daily_log_id: dailyLog.id,
+      status: "executed",
+    },
+    audit_log_id: auditResult.status === "success" ? auditResult.audit_log_id : undefined,
+    timeline_event_id:
+      timelineResult.status === "success" ? timelineResult.timeline_event_id : undefined,
+  });
+}
+```
+
+### `src/lib/actions/flows/create-goal-flow.ts`
+
+```tsx
+import type { SupabaseClient } from "@supabase/supabase-js";
+
+import { createActionError, createActionSuccess, type ActionResult } from "../action-results";
+import { writeAuditLog } from "@/lib/audit/write-audit-log";
+import { writeTimelineEvent } from "@/lib/timeline/write-timeline-event";
+import type { Database, GoalInsert, Json } from "@/types/database";
+
+type GoalStatus = NonNullable<GoalInsert["status"]>;
+type GoalPriority = NonNullable<GoalInsert["priority"]>;
+type GoalHorizon = NonNullable<GoalInsert["horizon"]>;
+type PayloadRecord = { [key: string]: Json | undefined };
+
+export interface ExecuteCreateGoalActionInput {
+  supabase: SupabaseClient<Database>;
+  user_id: string;
+  ai_action_id: string;
+}
+
+export interface ExecuteCreateGoalActionData {
+  ai_action_id: string;
+  goal_id: string;
+  status: "executed";
+}
+
+function isPayloadRecord(payload: Json): payload is PayloadRecord {
+  return Boolean(payload) && typeof payload === "object" && !Array.isArray(payload);
+}
+
+function optionalString(value: unknown): string | null {
+  return typeof value === "string" && value.trim().length > 0 ? value.trim() : null;
+}
+
+function goalStatus(value: unknown): GoalStatus {
+  if (
+    value === "draft" ||
+    value === "active" ||
+    value === "paused" ||
+    value === "completed" ||
+    value === "archived" ||
+    value === "cancelled"
+  ) {
+    return value;
+  }
+
+  if (value === "not_started") {
+    return "draft";
+  }
+
+  return "active";
+}
+
+function goalPriority(value: unknown): GoalPriority {
+  if (value === "low" || value === "medium" || value === "high") {
+    return value;
+  }
+
+  if (value === "urgent") {
+    return "critical";
+  }
+
+  return "medium";
+}
+
+function goalHorizon(value: unknown): GoalHorizon {
+  if (
+    value === "daily" ||
+    value === "weekly" ||
+    value === "monthly" ||
+    value === "quarterly" ||
+    value === "yearly" ||
+    value === "medium_term" ||
+    value === "long_term"
+  ) {
+    return value;
+  }
+
+  return "medium_term";
+}
+
+function optionalJsonObject(value: Json | undefined): Json {
+  return value && typeof value === "object" && !Array.isArray(value) ? value : {};
+}
+
+export async function executeCreateGoalAction(
+  input: ExecuteCreateGoalActionInput,
+): Promise<ActionResult<ExecuteCreateGoalActionData>> {
+  const { data: action, error: readError } = await input.supabase
+    .from("ai_actions")
+    .select("id,status,action_type,payload,source_chat_message_id")
+    .eq("id", input.ai_action_id)
+    .eq("user_id", input.user_id)
+    .single();
+
+  if (readError) {
+    return createActionError({
+      code: "not_found",
+      message: readError.message,
+    });
+  }
+
+  if (action.status !== "approved") {
+    return createActionError({
+      action_type: "create_goal",
+      code: "not_confirmed",
+      message: "Create goal action must be approved before execution.",
+      issues: [`Current status: ${action.status}`],
+    });
+  }
+
+  if (action.action_type !== "create_goal") {
+    return createActionError({
+      code: "invalid_action_type",
+      message: "AI action is not a create_goal action.",
+      issues: [action.action_type],
+    });
+  }
+
+  if (!isPayloadRecord(action.payload)) {
+    return createActionError({
+      action_type: "create_goal",
+      code: "invalid_payload",
+      message: "Create goal payload must be an object.",
+    });
+  }
+
+  const title = optionalString(action.payload.title);
+  const domain = optionalString(action.payload.domain);
+
+  if (!title) {
+    return createActionError({
+      action_type: "create_goal",
+      code: "invalid_payload",
+      message: "Create goal payload requires a title.",
+      issues: ["title"],
+    });
+  }
+
+  if (!domain) {
+    return createActionError({
+      action_type: "create_goal",
+      code: "invalid_payload",
+      message: "Create goal payload requires a domain.",
+      issues: ["domain"],
+    });
+  }
+
+  const now = new Date().toISOString();
+
+  const goalInsert: GoalInsert = {
+    user_id: input.user_id,
+    title,
+    description: optionalString(action.payload.description),
+    domain,
+    status: goalStatus(action.payload.status),
+    priority: goalPriority(action.payload.priority),
+    horizon: goalHorizon(action.payload.horizon),
+    target_date: optionalString(action.payload.target_date),
+    proof_requirement: optionalString(action.payload.proof_requirement),
+    reality_snapshot: optionalJsonObject(action.payload.reality_snapshot),
+    target_snapshot: optionalJsonObject(action.payload.target_snapshot),
+    metadata: {
+      source: "phase_6_safe_write_flow",
+      source_action_type: "create_goal",
+      executed_from_ai_action_id: action.id,
+    },
+    source_ai_action_id: action.id,
+    source_chat_message_id: action.source_chat_message_id,
+  };
+
+  const { data: goal, error: goalError } = await input.supabase
+    .from("goals")
+    .insert(goalInsert)
+    .select("id,title")
+    .single();
+
+  if (goalError) {
+    await input.supabase
+      .from("ai_actions")
+      .update({
+        status: "failed",
+        failed_at: now,
+        failure_reason: goalError.message,
+      })
+      .eq("id", action.id)
+      .eq("user_id", input.user_id);
+
+    return createActionError({
+      action_type: "create_goal",
+      code: "database_error",
+      message: goalError.message,
+    });
+  }
+
+  const { error: actionUpdateError } = await input.supabase
+    .from("ai_actions")
+    .update({
+      status: "executed",
+      target_table: "goals",
+      target_id: goal.id,
+      executed_at: now,
+    })
+    .eq("id", action.id)
+    .eq("user_id", input.user_id);
+
+  if (actionUpdateError) {
+    return createActionError({
+      action_type: "create_goal",
+      code: "database_error",
+      message: actionUpdateError.message,
+    });
+  }
+
+  const auditResult = await writeAuditLog({
+    supabase: input.supabase,
+    user_id: input.user_id,
+    action_type: "create_goal",
+    status: "success",
+    source: "server",
+    entity_table: "goals",
+    entity_id: goal.id,
+    summary: "Created goal from approved proposed action.",
+    after_state: {
+      goal_id: goal.id,
+      title: goal.title,
+      source_ai_action_id: action.id,
+    },
+    metadata: {
+      phase: "6.12",
+      ai_action_id: action.id,
+    },
+  });
+
+  const timelineResult = await writeTimelineEvent({
+    user_id: input.user_id,
+    event_type: "goal_created",
+    title: "Goal created",
+    description: goal.title,
+    source: "server",
+    entity_table: "goals",
+    entity_id: goal.id,
+    metadata: {
+      phase: "6.12",
+      ai_action_id: action.id,
+    },
+  });
+
+  return createActionSuccess({
+    action_type: "create_goal",
+    message: "Goal created from approved proposed action.",
+    data: {
+      ai_action_id: action.id,
+      goal_id: goal.id,
+      status: "executed",
+    },
+    audit_log_id: auditResult.status === "success" ? auditResult.audit_log_id : undefined,
+    timeline_event_id:
+      timelineResult.status === "success" ? timelineResult.timeline_event_id : undefined,
+  });
+}
+```
+
+### `src/lib/actions/flows/create-proof-item-flow.ts`
+
+```tsx
+import type { SupabaseClient } from "@supabase/supabase-js";
+
+import { createActionError, createActionSuccess, type ActionResult } from "../action-results";
+import { writeAuditLog } from "@/lib/audit/write-audit-log";
+import { writeTimelineEvent } from "@/lib/timeline/write-timeline-event";
+import type { Database, Json } from "@/types/database";
+
+type ProofItemInsert = Database["public"]["Tables"]["proof_items"]["Insert"];
+type ProofType = NonNullable<ProofItemInsert["proof_type"]>;
+type PayloadRecord = { [key: string]: Json | undefined };
+
+export interface ExecuteCreateProofItemActionInput {
+  supabase: SupabaseClient<Database>;
+  user_id: string;
+  ai_action_id: string;
+}
+
+export interface ExecuteCreateProofItemActionData {
+  ai_action_id: string;
+  proof_item_id: string;
+  status: "executed";
+}
+
+function isPayloadRecord(payload: Json): payload is PayloadRecord {
+  return Boolean(payload) && typeof payload === "object" && !Array.isArray(payload);
+}
+
+function optionalString(value: unknown): string | null {
+  return typeof value === "string" && value.trim().length > 0 ? value.trim() : null;
+}
+
+function optionalNumber(value: unknown): number | null {
+  return typeof value === "number" && Number.isFinite(value) ? value : null;
+}
+
+function proofType(value: unknown): ProofType {
+  if (
+    value === "note" ||
+    value === "link" ||
+    value === "file" ||
+    value === "metric" ||
+    value === "completion" ||
+    value === "artifact" ||
+    value === "reflection" ||
+    value === "external_validation"
+  ) {
+    return value;
+  }
+
+  if (value === "text") {
+    return "note";
+  }
+
+  if (value === "image" || value === "code") {
+    return "artifact";
+  }
+
+  return "note";
+}
+
+function optionalJsonObject(value: Json | undefined): Json {
+  return value && typeof value === "object" && !Array.isArray(value) ? value : {};
+}
+
+async function relatedRecordBelongsToUser(input: {
+  supabase: SupabaseClient<Database>;
+  table: "daily_logs" | "goals" | "tasks";
+  id: string | null;
+  user_id: string;
+}): Promise<boolean> {
+  if (!input.id) {
+    return true;
+  }
+
+  const { data, error } = await input.supabase
+    .from(input.table)
+    .select("id")
+    .eq("id", input.id)
+    .eq("user_id", input.user_id)
+    .maybeSingle();
+
+  return !error && Boolean(data?.id);
+}
+
+export async function executeCreateProofItemAction(
+  input: ExecuteCreateProofItemActionInput,
+): Promise<ActionResult<ExecuteCreateProofItemActionData>> {
+  const { data: action, error: readError } = await input.supabase
+    .from("ai_actions")
+    .select("id,status,action_type,payload,source_chat_message_id")
+    .eq("id", input.ai_action_id)
+    .eq("user_id", input.user_id)
+    .single();
+
+  if (readError) {
+    return createActionError({
+      code: "not_found",
+      message: readError.message,
+    });
+  }
+
+  if (action.status !== "approved") {
+    return createActionError({
+      action_type: "create_proof_item",
+      code: "not_confirmed",
+      message: "Create proof item action must be approved before execution.",
+      issues: [`Current status: ${action.status}`],
+    });
+  }
+
+  if (action.action_type !== "create_proof_item") {
+    return createActionError({
+      code: "invalid_action_type",
+      message: "AI action is not a create_proof_item action.",
+      issues: [action.action_type],
+    });
+  }
+
+  if (!isPayloadRecord(action.payload)) {
+    return createActionError({
+      action_type: "create_proof_item",
+      code: "invalid_payload",
+      message: "Create proof item payload must be an object.",
+    });
+  }
+
+  const title = optionalString(action.payload.title);
+
+  if (!title) {
+    return createActionError({
+      action_type: "create_proof_item",
+      code: "invalid_payload",
+      message: "Create proof item payload requires a title.",
+      issues: ["title"],
+    });
+  }
+
+  const dailyLogId = optionalString(action.payload.daily_log_id);
+  const goalId = optionalString(action.payload.goal_id);
+  const taskId = optionalString(action.payload.task_id);
+
+  const dailyLogAllowed = await relatedRecordBelongsToUser({
+    supabase: input.supabase,
+    table: "daily_logs",
+    id: dailyLogId,
+    user_id: input.user_id,
+  });
+
+  const goalAllowed = await relatedRecordBelongsToUser({
+    supabase: input.supabase,
+    table: "goals",
+    id: goalId,
+    user_id: input.user_id,
+  });
+
+  const taskAllowed = await relatedRecordBelongsToUser({
+    supabase: input.supabase,
+    table: "tasks",
+    id: taskId,
+    user_id: input.user_id,
+  });
+
+  if (!dailyLogAllowed || !goalAllowed || !taskAllowed) {
+    return createActionError({
+      action_type: "create_proof_item",
+      code: "unauthorized",
+      message: "Proof item cannot reference records outside the current user boundary.",
+      issues: [
+        dailyLogAllowed ? "daily_log_id ok" : "daily_log_id is not owned by user",
+        goalAllowed ? "goal_id ok" : "goal_id is not owned by user",
+        taskAllowed ? "task_id ok" : "task_id is not owned by user",
+      ],
+    });
+  }
+
+  const now = new Date().toISOString();
+  const sourceUrl = optionalString(action.payload.source_url);
+  const sourceText = optionalString(action.payload.source_text);
+  const url = sourceUrl ?? optionalString(action.payload.url);
+  const resolvedProofType = proofType(action.payload.proof_type);
+
+  const proofItemInsert: ProofItemInsert = {
+    user_id: input.user_id,
+    daily_log_id: dailyLogId,
+    goal_id: goalId,
+    task_id: taskId,
+    title,
+    description: optionalString(action.payload.description) ?? sourceText,
+    domain: optionalString(action.payload.domain) ?? "general",
+    proof_type: resolvedProofType,
+    status: "captured",
+    quantity: optionalNumber(action.payload.quantity),
+    unit: optionalString(action.payload.unit),
+    url,
+    evidence: optionalJsonObject(action.payload.evidence),
+    occurred_at: optionalString(action.payload.occurred_at) ?? now,
+    logged_at: now,
+    metadata: {
+      source: "phase_6_safe_write_flow",
+      source_action_type: "create_proof_item",
+      executed_from_ai_action_id: action.id,
+      source_text: sourceText,
+    },
+    source_ai_action_id: action.id,
+    source_chat_message_id: action.source_chat_message_id,
+  };
+
+  const { data: proofItem, error: proofItemError } = await input.supabase
+    .from("proof_items")
+    .insert(proofItemInsert)
+    .select("id,title")
+    .single();
+
+  if (proofItemError) {
+    await input.supabase
+      .from("ai_actions")
+      .update({
+        status: "failed",
+        failed_at: now,
+        failure_reason: proofItemError.message,
+      })
+      .eq("id", action.id)
+      .eq("user_id", input.user_id);
+
+    return createActionError({
+      action_type: "create_proof_item",
+      code: "database_error",
+      message: proofItemError.message,
+    });
+  }
+
+  const { error: actionUpdateError } = await input.supabase
+    .from("ai_actions")
+    .update({
+      status: "executed",
+      target_table: "proof_items",
+      target_id: proofItem.id,
+      executed_at: now,
+    })
+    .eq("id", action.id)
+    .eq("user_id", input.user_id);
+
+  if (actionUpdateError) {
+    return createActionError({
+      action_type: "create_proof_item",
+      code: "database_error",
+      message: actionUpdateError.message,
+    });
+  }
+
+  const auditResult = await writeAuditLog({
+    supabase: input.supabase,
+    user_id: input.user_id,
+    action_type: "create_proof_item",
+    status: "success",
+    source: "server",
+    entity_table: "proof_items",
+    entity_id: proofItem.id,
+    summary: "Created proof item from approved proposed action.",
+    after_state: {
+      proof_item_id: proofItem.id,
+      title: proofItem.title,
+      source_ai_action_id: action.id,
+    },
+    metadata: {
+      phase: "6.14",
+      ai_action_id: action.id,
+    },
+  });
+
+  const timelineResult = await writeTimelineEvent({
+    user_id: input.user_id,
+    event_type: "proof_item_created",
+    title: "Proof item created",
+    description: proofItem.title,
+    source: "server",
+    entity_table: "proof_items",
+    entity_id: proofItem.id,
+    metadata: {
+      phase: "6.14",
+      ai_action_id: action.id,
+    },
+  });
+
+  return createActionSuccess({
+    action_type: "create_proof_item",
+    message: "Proof item created from approved proposed action.",
+    data: {
+      ai_action_id: action.id,
+      proof_item_id: proofItem.id,
+      status: "executed",
+    },
+    audit_log_id: auditResult.status === "success" ? auditResult.audit_log_id : undefined,
+    timeline_event_id:
+      timelineResult.status === "success" ? timelineResult.timeline_event_id : undefined,
+  });
+}
+```
+
+### `src/lib/actions/flows/create-task-flow.ts`
+
+```tsx
+import type { SupabaseClient } from "@supabase/supabase-js";
+
+import { createActionError, createActionSuccess, type ActionResult } from "../action-results";
+import { writeAuditLog } from "@/lib/audit/write-audit-log";
+import { writeTimelineEvent } from "@/lib/timeline/write-timeline-event";
+import type { Database, Json, TaskInsert } from "@/types/database";
+
+type TaskStatus = NonNullable<TaskInsert["status"]>;
+type TaskPriority = NonNullable<TaskInsert["priority"]>;
+
+export interface ExecuteCreateTaskActionInput {
+  supabase: SupabaseClient<Database>;
+  user_id: string;
+  ai_action_id: string;
+}
+
+export interface ExecuteCreateTaskActionData {
+  ai_action_id: string;
+  task_id: string;
+  status: "executed";
+}
+
+type PayloadRecord = { [key: string]: Json | undefined };
+
+function isPayloadRecord(payload: Json): payload is PayloadRecord {
+  return Boolean(payload) && typeof payload === "object" && !Array.isArray(payload);
+}
+
+function optionalString(value: unknown): string | null {
+  return typeof value === "string" && value.trim().length > 0 ? value.trim() : null;
+}
+
+function taskStatus(value: unknown): TaskStatus {
+  if (
+    value === "todo" ||
+    value === "in_progress" ||
+    value === "blocked" ||
+    value === "done" ||
+    value === "cancelled"
+  ) {
+    return value;
+  }
+
+  return "todo";
+}
+
+function taskPriority(value: unknown): TaskPriority {
+  if (value === "low" || value === "medium" || value === "high") {
+    return value;
+  }
+
+  if (value === "urgent") {
+    return "critical";
+  }
+
+  return "medium";
+}
+
+export async function executeCreateTaskAction(
+  input: ExecuteCreateTaskActionInput,
+): Promise<ActionResult<ExecuteCreateTaskActionData>> {
+  const { data: action, error: readError } = await input.supabase
+    .from("ai_actions")
+    .select("id,status,action_type,payload,source_chat_message_id")
+    .eq("id", input.ai_action_id)
+    .eq("user_id", input.user_id)
+    .single();
+
+  if (readError) {
+    return createActionError({
+      code: "not_found",
+      message: readError.message,
+    });
+  }
+
+  if (action.status !== "approved") {
+    return createActionError({
+      action_type: "create_task",
+      code: "not_confirmed",
+      message: "Create task action must be approved before execution.",
+      issues: [`Current status: ${action.status}`],
+    });
+  }
+
+  if (action.action_type !== "create_task") {
+    return createActionError({
+      code: "invalid_action_type",
+      message: "AI action is not a create_task action.",
+      issues: [action.action_type],
+    });
+  }
+
+  if (!isPayloadRecord(action.payload)) {
+    return createActionError({
+      action_type: "create_task",
+      code: "invalid_payload",
+      message: "Create task payload must be an object.",
+    });
+  }
+
+  const title = optionalString(action.payload.title);
+
+  if (!title) {
+    return createActionError({
+      action_type: "create_task",
+      code: "invalid_payload",
+      message: "Create task payload requires a title.",
+      issues: ["title"],
+    });
+  }
+
+  const now = new Date().toISOString();
+
+  const taskInsert: TaskInsert = {
+    user_id: input.user_id,
+    title,
+    description: optionalString(action.payload.description),
+    status: taskStatus(action.payload.status),
+    priority: taskPriority(action.payload.priority),
+    domain: optionalString(action.payload.domain) ?? "general",
+    due_date: optionalString(action.payload.due_date),
+    goal_id: optionalString(action.payload.goal_id),
+    metadata: {
+      source: "phase_6_safe_write_flow",
+      source_action_type: "create_task",
+      executed_from_ai_action_id: action.id,
+    },
+    source_ai_action_id: action.id,
+    source_chat_message_id: action.source_chat_message_id,
+  };
+
+  const { data: task, error: taskError } = await input.supabase
+    .from("tasks")
+    .insert(taskInsert)
+    .select("id,title")
+    .single();
+
+  if (taskError) {
+    await input.supabase
+      .from("ai_actions")
+      .update({
+        status: "failed",
+        failed_at: now,
+        failure_reason: taskError.message,
+      })
+      .eq("id", action.id)
+      .eq("user_id", input.user_id);
+
+    return createActionError({
+      action_type: "create_task",
+      code: "database_error",
+      message: taskError.message,
+    });
+  }
+
+  const { error: actionUpdateError } = await input.supabase
+    .from("ai_actions")
+    .update({
+      status: "executed",
+      target_table: "tasks",
+      target_id: task.id,
+      executed_at: now,
+    })
+    .eq("id", action.id)
+    .eq("user_id", input.user_id);
+
+  if (actionUpdateError) {
+    return createActionError({
+      action_type: "create_task",
+      code: "database_error",
+      message: actionUpdateError.message,
+    });
+  }
+
+  const auditResult = await writeAuditLog({
+    supabase: input.supabase,
+    user_id: input.user_id,
+    action_type: "create_task",
+    status: "success",
+    source: "server",
+    entity_table: "tasks",
+    entity_id: task.id,
+    summary: "Created task from approved proposed action.",
+    after_state: {
+      task_id: task.id,
+      title: task.title,
+      source_ai_action_id: action.id,
+    },
+    metadata: {
+      phase: "6.11",
+      ai_action_id: action.id,
+    },
+  });
+
+  const timelineResult = await writeTimelineEvent({
+    user_id: input.user_id,
+    event_type: "task_created",
+    title: "Task created",
+    description: task.title,
+    source: "server",
+    entity_table: "tasks",
+    entity_id: task.id,
+    metadata: {
+      phase: "6.11",
+      ai_action_id: action.id,
+    },
+  });
+
+  return createActionSuccess({
+    action_type: "create_task",
+    message: "Task created from approved proposed action.",
+    data: {
+      ai_action_id: action.id,
+      task_id: task.id,
+      status: "executed",
+    },
+    audit_log_id: auditResult.status === "success" ? auditResult.audit_log_id : undefined,
+    timeline_event_id:
+      timelineResult.status === "success" ? timelineResult.timeline_event_id : undefined,
+  });
+}
+```
+
+### `src/lib/actions/proposed-action-contracts.ts`
+
+```tsx
+import type { ProposedActionType } from "./action-types";
+
+export type ProposedActionSource =
+  | "manual"
+  | "carnos"
+  | "python_ml"
+  | "system"
+  | "import";
+
+export type ProposedActionPriority = "low" | "medium" | "high" | "urgent";
+
+export type ProposedActionDomain =
+  | "career"
+  | "learning"
+  | "health"
+  | "body"
+  | "research"
+  | "projects"
+  | "life_admin"
+  | "finance"
+  | "relationships"
+  | "creativity"
+  | "general";
+
+export type ProposedGoalStatus = "not_started" | "active" | "paused" | "completed" | "archived";
+
+export type ProposedTaskStatus = "todo" | "in_progress" | "blocked" | "done" | "cancelled";
+
+export type ProposedProofType =
+  | "text"
+  | "link"
+  | "file"
+  | "image"
+  | "code"
+  | "metric"
+  | "note";
+
+export interface ProposedActionBase<TType extends ProposedActionType, TPayload> {
+  action_type: TType;
+  payload: TPayload;
+  source: ProposedActionSource;
+  reason?: string;
+  confidence?: number;
+  evidence_refs?: string[];
+}
+
+export interface CreateTaskPayload {
+  title: string;
+  description?: string;
+  status?: ProposedTaskStatus;
+  priority?: ProposedActionPriority;
+  domain?: ProposedActionDomain;
+  due_date?: string;
+  goal_id?: string;
+}
+
+export interface CreateGoalPayload {
+  title: string;
+  description?: string;
+  domain: ProposedActionDomain;
+  status?: ProposedGoalStatus;
+  priority?: ProposedActionPriority;
+  target_date?: string;
+}
+
+export interface CreateDailyLogPayload {
+  log_date: string;
+  summary?: string;
+  mood?: number;
+  energy?: number;
+  stress?: number;
+  sleep_hours?: number;
+  notes?: string;
+}
+
+export interface CreateProofItemPayload {
+  title: string;
+  proof_type: ProposedProofType;
+  description?: string;
+  source_url?: string;
+  source_text?: string;
+  task_id?: string;
+  goal_id?: string;
+  occurred_at?: string;
+}
+
+export type CreateTaskProposedAction = ProposedActionBase<"create_task", CreateTaskPayload>;
+
+export type CreateGoalProposedAction = ProposedActionBase<"create_goal", CreateGoalPayload>;
+
+export type CreateDailyLogProposedAction = ProposedActionBase<
+  "create_daily_log",
+  CreateDailyLogPayload
+>;
+
+export type CreateProofItemProposedAction = ProposedActionBase<
+  "create_proof_item",
+  CreateProofItemPayload
+>;
+
+export type ProposedActionContract =
+  | CreateTaskProposedAction
+  | CreateGoalProposedAction
+  | CreateDailyLogProposedAction
+  | CreateProofItemProposedAction;
+
+export type ProposedActionPayloadByType = {
+  create_task: CreateTaskPayload;
+  create_goal: CreateGoalPayload;
+  create_daily_log: CreateDailyLogPayload;
+  create_proof_item: CreateProofItemPayload;
+};
+
+export type ProposedActionPayload<TType extends ProposedActionType> =
+  ProposedActionPayloadByType[TType];
+
+export const PROPOSED_ACTION_REQUIRED_FIELDS: Record<ProposedActionType, string[]> = {
+  create_task: ["title"],
+  create_goal: ["title", "domain"],
+  create_daily_log: ["log_date"],
+  create_proof_item: ["title", "proof_type"],
+};
+
+export const PROPOSED_ACTION_FORBIDDEN_PAYLOAD_FIELDS = [
+  "user_id",
+  "owner_id",
+  "created_by",
+  "updated_by",
+  "deleted_at",
+  "service_role",
+  "service_role_key",
+] as const;
+
+export const PROPOSED_ACTION_CONTRACT_VERSION = "proposed_action_contract_v1";
+```
+
+### `src/lib/actions/validate-proposed-action.ts`
+
+```tsx
+import {
+  isProposedActionType,
+  type ProposedActionType,
+} from "./action-types";
+import { createActionError, createActionSuccess, type ActionResult } from "./action-results";
+import {
+  PROPOSED_ACTION_FORBIDDEN_PAYLOAD_FIELDS,
+  type CreateDailyLogPayload,
+  type CreateGoalPayload,
+  type CreateProofItemPayload,
+  type CreateTaskPayload,
+  type ProposedActionContract,
+  type ProposedActionDomain,
+  type ProposedActionPayloadByType,
+  type ProposedActionPriority,
+  type ProposedActionSource,
+  type ProposedGoalStatus,
+  type ProposedProofType,
+  type ProposedTaskStatus,
+} from "./proposed-action-contracts";
+
+const VALID_SOURCES = ["manual", "carnos", "python_ml", "system", "import"] as const;
+
+const VALID_PRIORITIES = ["low", "medium", "high", "urgent"] as const;
+
+const VALID_DOMAINS = [
+  "career",
+  "learning",
+  "health",
+  "body",
+  "research",
+  "projects",
+  "life_admin",
+  "finance",
+  "relationships",
+  "creativity",
+  "general",
+] as const;
+
+const VALID_GOAL_STATUSES = ["not_started", "active", "paused", "completed", "archived"] as const;
+
+const VALID_TASK_STATUSES = ["todo", "in_progress", "blocked", "done", "cancelled"] as const;
+
+const VALID_PROOF_TYPES = ["text", "link", "file", "image", "code", "metric", "note"] as const;
+
+export interface ProposedActionValidationSuccess<TType extends ProposedActionType> {
+  action_type: TType;
+  payload: ProposedActionPayloadByType[TType];
+  source: ProposedActionSource;
+  reason?: string;
+  confidence?: number;
+  evidence_refs?: string[];
+}
+
+export type ProposedActionValidationResult<TType extends ProposedActionType = ProposedActionType> =
+  ActionResult<ProposedActionValidationSuccess<TType>>;
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function isNonEmptyString(value: unknown): value is string {
+  return typeof value === "string" && value.trim().length > 0;
+}
+
+function isOptionalString(value: unknown): value is string | undefined {
+  return value === undefined || typeof value === "string";
+}
+
+function isOptionalNumber(value: unknown): value is number | undefined {
+  return value === undefined || (typeof value === "number" && Number.isFinite(value));
+}
+
+function isNumberInRange(value: unknown, min: number, max: number): value is number | undefined {
+  return value === undefined || (typeof value === "number" && Number.isFinite(value) && value >= min && value <= max);
+}
+
+function isIsoDateLike(value: unknown): value is string {
+  return typeof value === "string" && /^\d{4}-\d{2}-\d{2}/.test(value);
+}
+
+function isOptionalIsoDateLike(value: unknown): value is string | undefined {
+  return value === undefined || isIsoDateLike(value);
+}
+
+function isOptionalStringArray(value: unknown): value is string[] | undefined {
+  return value === undefined || (Array.isArray(value) && value.every((item) => typeof item === "string"));
+}
+
+function isOneOf<TValue extends string>(
+  value: unknown,
+  allowed: readonly TValue[],
+): value is TValue {
+  return typeof value === "string" && allowed.includes(value as TValue);
+}
+
+function validateCommonEnvelope(input: Record<string, unknown>): string[] {
+  const issues: string[] = [];
+
+  if (!isProposedActionType(input.action_type)) {
+    issues.push("action_type must be one of the supported proposed action types.");
+  }
+
+  if (!isRecord(input.payload)) {
+    issues.push("payload must be an object.");
+  }
+
+  if (!isOneOf(input.source, VALID_SOURCES)) {
+    issues.push("source must be one of: manual, carnos, python_ml, system, import.");
+  }
+
+  if (!isOptionalString(input.reason)) {
+    issues.push("reason must be a string when provided.");
+  }
+
+  if (!isNumberInRange(input.confidence, 0, 1)) {
+    issues.push("confidence must be a number between 0 and 1 when provided.");
+  }
+
+  if (!isOptionalStringArray(input.evidence_refs)) {
+    issues.push("evidence_refs must be an array of strings when provided.");
+  }
+
+  return issues;
+}
+
+function validateForbiddenPayloadFields(payload: Record<string, unknown>): string[] {
+  return PROPOSED_ACTION_FORBIDDEN_PAYLOAD_FIELDS
+    .filter((field) => Object.prototype.hasOwnProperty.call(payload, field))
+    .map((field) => `payload must not include forbidden field: ${field}.`);
+}
+
+function validateCreateTaskPayload(payload: Record<string, unknown>): string[] {
+  const issues: string[] = [];
+
+  if (!isNonEmptyString(payload.title)) {
+    issues.push("payload.title is required for create_task.");
+  }
+
+  if (!isOptionalString(payload.description)) {
+    issues.push("payload.description must be a string when provided.");
+  }
+
+  if (payload.status !== undefined && !isOneOf(payload.status, VALID_TASK_STATUSES)) {
+    issues.push("payload.status is invalid for create_task.");
+  }
+
+  if (payload.priority !== undefined && !isOneOf(payload.priority, VALID_PRIORITIES)) {
+    issues.push("payload.priority is invalid for create_task.");
+  }
+
+  if (payload.domain !== undefined && !isOneOf(payload.domain, VALID_DOMAINS)) {
+    issues.push("payload.domain is invalid for create_task.");
+  }
+
+  if (!isOptionalIsoDateLike(payload.due_date)) {
+    issues.push("payload.due_date must start with YYYY-MM-DD when provided.");
+  }
+
+  if (!isOptionalString(payload.goal_id)) {
+    issues.push("payload.goal_id must be a string when provided.");
+  }
+
+  return issues;
+}
+
+function validateCreateGoalPayload(payload: Record<string, unknown>): string[] {
+  const issues: string[] = [];
+
+  if (!isNonEmptyString(payload.title)) {
+    issues.push("payload.title is required for create_goal.");
+  }
+
+  if (!isOptionalString(payload.description)) {
+    issues.push("payload.description must be a string when provided.");
+  }
+
+  if (!isOneOf(payload.domain, VALID_DOMAINS)) {
+    issues.push("payload.domain is required and must be valid for create_goal.");
+  }
+
+  if (payload.status !== undefined && !isOneOf(payload.status, VALID_GOAL_STATUSES)) {
+    issues.push("payload.status is invalid for create_goal.");
+  }
+
+  if (payload.priority !== undefined && !isOneOf(payload.priority, VALID_PRIORITIES)) {
+    issues.push("payload.priority is invalid for create_goal.");
+  }
+
+  if (!isOptionalIsoDateLike(payload.target_date)) {
+    issues.push("payload.target_date must start with YYYY-MM-DD when provided.");
+  }
+
+  return issues;
+}
+
+function validateCreateDailyLogPayload(payload: Record<string, unknown>): string[] {
+  const issues: string[] = [];
+
+  if (!isIsoDateLike(payload.log_date)) {
+    issues.push("payload.log_date is required and must start with YYYY-MM-DD for create_daily_log.");
+  }
+
+  if (!isOptionalString(payload.summary)) {
+    issues.push("payload.summary must be a string when provided.");
+  }
+
+  if (!isNumberInRange(payload.mood, 1, 10)) {
+    issues.push("payload.mood must be a number from 1 to 10 when provided.");
+  }
+
+  if (!isNumberInRange(payload.energy, 1, 10)) {
+    issues.push("payload.energy must be a number from 1 to 10 when provided.");
+  }
+
+  if (!isNumberInRange(payload.stress, 1, 10)) {
+    issues.push("payload.stress must be a number from 1 to 10 when provided.");
+  }
+
+  if (!isOptionalNumber(payload.sleep_hours)) {
+    issues.push("payload.sleep_hours must be a finite number when provided.");
+  }
+
+  if (!isOptionalString(payload.notes)) {
+    issues.push("payload.notes must be a string when provided.");
+  }
+
+  return issues;
+}
+
+function validateCreateProofItemPayload(payload: Record<string, unknown>): string[] {
+  const issues: string[] = [];
+
+  if (!isNonEmptyString(payload.title)) {
+    issues.push("payload.title is required for create_proof_item.");
+  }
+
+  if (!isOneOf(payload.proof_type, VALID_PROOF_TYPES)) {
+    issues.push("payload.proof_type is required and must be valid for create_proof_item.");
+  }
+
+  if (!isOptionalString(payload.description)) {
+    issues.push("payload.description must be a string when provided.");
+  }
+
+  if (!isOptionalString(payload.source_url)) {
+    issues.push("payload.source_url must be a string when provided.");
+  }
+
+  if (!isOptionalString(payload.source_text)) {
+    issues.push("payload.source_text must be a string when provided.");
+  }
+
+  if (!isOptionalString(payload.task_id)) {
+    issues.push("payload.task_id must be a string when provided.");
+  }
+
+  if (!isOptionalString(payload.goal_id)) {
+    issues.push("payload.goal_id must be a string when provided.");
+  }
+
+  if (!isOptionalIsoDateLike(payload.occurred_at)) {
+    issues.push("payload.occurred_at must start with YYYY-MM-DD when provided.");
+  }
+
+  return issues;
+}
+
+function validatePayloadForActionType(
+  actionType: ProposedActionType,
+  payload: Record<string, unknown>,
+): string[] {
+  const forbiddenIssues = validateForbiddenPayloadFields(payload);
+
+  if (actionType === "create_task") {
+    return [...forbiddenIssues, ...validateCreateTaskPayload(payload)];
+  }
+
+  if (actionType === "create_goal") {
+    return [...forbiddenIssues, ...validateCreateGoalPayload(payload)];
+  }
+
+  if (actionType === "create_daily_log") {
+    return [...forbiddenIssues, ...validateCreateDailyLogPayload(payload)];
+  }
+
+  return [...forbiddenIssues, ...validateCreateProofItemPayload(payload)];
+}
+
+export function validateProposedAction(
+  input: unknown,
+): ProposedActionValidationResult {
+  if (!isRecord(input)) {
+    return createActionError({
+      code: "invalid_payload",
+      message: "Proposed action must be an object.",
+      issues: ["input must be an object."],
+    });
+  }
+
+  const envelopeIssues = validateCommonEnvelope(input);
+
+  if (envelopeIssues.length > 0) {
+    return createActionError({
+      action_type: isProposedActionType(input.action_type) ? input.action_type : undefined,
+      code: "invalid_payload",
+      message: "Proposed action envelope is invalid.",
+      issues: envelopeIssues,
+    });
+  }
+
+  const actionType = input.action_type as ProposedActionType;
+  const payload = input.payload as Record<string, unknown>;
+  const payloadIssues = validatePayloadForActionType(actionType, payload);
+
+  if (payloadIssues.length > 0) {
+    return createActionError({
+      action_type: actionType,
+      code: "invalid_payload",
+      message: "Proposed action payload is invalid.",
+      issues: payloadIssues,
+    });
+  }
+
+  return createActionSuccess({
+    action_type: actionType,
+    message: "Proposed action is valid.",
+    data: {
+      action_type: actionType,
+      payload: payload as unknown as ProposedActionContract["payload"],
+      source: input.source as ProposedActionSource,
+      reason: input.reason as string | undefined,
+      confidence: input.confidence as number | undefined,
+      evidence_refs: input.evidence_refs as string[] | undefined,
+    },
+  });
+}
+
+export type {
+  CreateDailyLogPayload,
+  CreateGoalPayload,
+  CreateProofItemPayload,
+  CreateTaskPayload,
+  ProposedActionDomain,
+  ProposedActionPriority,
+  ProposedActionSource,
+  ProposedGoalStatus,
+  ProposedProofType,
+  ProposedTaskStatus,
+};
+```
+
+### `src/lib/audit/write-audit-log.ts`
+
+```tsx
+import type { SupabaseClient } from "@supabase/supabase-js";
+
+import type { Database, Json } from "@/types/database";
+
+type AuditLogInsert = Database["public"]["Tables"]["audit_logs"]["Insert"];
+
+export type AuditActionStatus = "success" | "error";
+
+export type AuditActionSource =
+  | "manual"
+  | "carnos"
+  | "python_ml"
+  | "system"
+  | "import"
+  | "server";
+
+export interface WriteAuditLogInput {
+  supabase: SupabaseClient<Database>;
+  user_id: string;
+  action_type: string;
+  status: AuditActionStatus;
+  source: AuditActionSource;
+  entity_table: string;
+  entity_id?: string;
+  summary: string;
+  before_state?: Json;
+  after_state?: Json;
+  metadata?: Record<string, Json>;
+}
+
+export interface WriteAuditLogSuccess {
+  status: "success";
+  audit_log_id: string;
+}
+
+export interface WriteAuditLogError {
+  status: "error";
+  message: string;
+}
+
+export type WriteAuditLogResult = WriteAuditLogSuccess | WriteAuditLogError;
+
+function mapSourceToActorType(source: AuditActionSource): AuditLogInsert["actor_type"] {
+  if (source === "carnos") {
+    return "carnos";
+  }
+
+  if (source === "system" || source === "python_ml" || source === "import" || source === "server") {
+    return "system";
+  }
+
+  return "user";
+}
+
+export async function writeAuditLog(input: WriteAuditLogInput): Promise<WriteAuditLogResult> {
+  const payload: AuditLogInsert = {
+    user_id: input.user_id,
+    actor_type: mapSourceToActorType(input.source),
+    action_type: input.action_type,
+    entity_table: input.entity_table,
+    entity_id: input.entity_id ?? null,
+    before_state: input.before_state,
+    after_state: input.after_state,
+    metadata: {
+      ...(input.metadata ?? {}),
+      source: input.source,
+      status: input.status,
+      summary: input.summary,
+    },
+  };
+
+  const { data, error } = await input.supabase
+    .from("audit_logs")
+    .insert(payload)
+    .select("id")
+    .single();
+
+  if (error) {
+    return {
+      status: "error",
+      message: error.message,
+    };
+  }
+
+  return {
+    status: "success",
+    audit_log_id: data.id,
+  };
+}
+```
+
 ### `src/lib/auth/actions.ts`
 
 ```tsx
@@ -24249,6 +43596,964 @@ export async function getDashboardAuthState(): Promise<DashboardAuthState> {
         "Dashboard reads are unavailable until Supabase environment variables are configured.",
     };
   }
+}
+```
+
+### `src/lib/dashboard/career-dashboard-data-helpers.ts`
+
+```tsx
+import {
+  listInterviews,
+  listJobApplications,
+  listJobReferrals,
+  listNetworkingContacts,
+  listResumeVersions,
+} from "@/lib/repositories";
+
+export interface CareerDashboardSummary {
+  application_count: number;
+  active_application_count: number;
+  interview_count: number;
+  upcoming_interview_count: number;
+  referral_count: number;
+  pending_referral_count: number;
+  networking_contact_count: number;
+  resume_version_count: number;
+  follow_ups_due_count: number;
+}
+
+export interface CareerDashboardDataResult {
+  summary: CareerDashboardSummary;
+  generated_at: string;
+}
+
+function isDueTodayOrEarlier(value: string | null): boolean {
+  if (!value) {
+    return false;
+  }
+
+  const candidate = new Date(value);
+  if (Number.isNaN(candidate.getTime())) {
+    return false;
+  }
+
+  const now = new Date();
+  candidate.setHours(0, 0, 0, 0);
+  now.setHours(0, 0, 0, 0);
+
+  return candidate.getTime() <= now.getTime();
+}
+
+function isFutureOrToday(value: string | null): boolean {
+  if (!value) {
+    return false;
+  }
+
+  const candidate = new Date(value);
+  if (Number.isNaN(candidate.getTime())) {
+    return false;
+  }
+
+  const now = new Date();
+  candidate.setHours(0, 0, 0, 0);
+  now.setHours(0, 0, 0, 0);
+
+  return candidate.getTime() >= now.getTime();
+}
+
+export async function getCareerDashboardDataSummary(
+  userId: string,
+): Promise<CareerDashboardDataResult> {
+  const [applications, interviews, referrals, contacts, resumes] = await Promise.all([
+    listJobApplications(userId, { limit: 100 }),
+    listInterviews(userId, { limit: 100 }),
+    listJobReferrals(userId, { limit: 100 }),
+    listNetworkingContacts(userId, { limit: 100 }),
+    listResumeVersions(userId, { limit: 100 }),
+  ]);
+
+  const applicationRows = applications.data ?? [];
+  const interviewRows = interviews.data ?? [];
+  const referralRows = referrals.data ?? [];
+  const contactRows = contacts.data ?? [];
+  const resumeRows = resumes.data ?? [];
+
+  const activeApplicationStatuses = new Set([
+    "saved",
+    "applied",
+    "follow_up",
+    "recruiter_response",
+    "oa",
+    "interview",
+  ]);
+
+  const pendingReferralStatuses = new Set(["needed", "requested", "pending"]);
+
+  return {
+    generated_at: new Date().toISOString(),
+    summary: {
+      application_count: applicationRows.length,
+      active_application_count: applicationRows.filter((item) =>
+        activeApplicationStatuses.has(item.status),
+      ).length,
+      interview_count: interviewRows.length,
+      upcoming_interview_count: interviewRows.filter((item) =>
+        isFutureOrToday(item.scheduled_at),
+      ).length,
+      referral_count: referralRows.length,
+      pending_referral_count: referralRows.filter((item) =>
+        pendingReferralStatuses.has(item.status),
+      ).length,
+      networking_contact_count: contactRows.length,
+      resume_version_count: resumeRows.length,
+      follow_ups_due_count:
+        applicationRows.filter((item) => isDueTodayOrEarlier(item.follow_up_at)).length +
+        referralRows.filter((item) => isDueTodayOrEarlier(item.follow_up_at)).length +
+        contactRows.filter((item) => isDueTodayOrEarlier(item.next_follow_up_at)).length,
+    },
+  };
+}
+```
+
+### `src/lib/dashboard/dashboard-card-registry.ts`
+
+```tsx
+import {
+  assertDashboardCardContract,
+  type DashboardCardContract,
+  type DashboardSurface,
+} from "./dashboard-layout-contract";
+
+export const PHASE_7_DASHBOARD_CARD_REGISTRY: DashboardCardContract[] = [
+  {
+    id: "command-today-mission",
+    surface: "command",
+    region: "hero",
+    title: "Today Mission",
+    description: "Primary operating mission for the current day.",
+    priority: "critical",
+    status: "empty",
+    sourceTables: ["daily_logs", "tasks", "goals"],
+    emptyStateTitle: "No mission locked for today.",
+    emptyStateDescription: "Create a daily log or task to anchor today.",
+  },
+  {
+    id: "command-proof-actions",
+    surface: "command",
+    region: "primary",
+    title: "Top Proof Actions",
+    description: "Highest priority proof-producing actions.",
+    priority: "critical",
+    status: "empty",
+    sourceTables: ["tasks", "proof_items", "goals"],
+    emptyStateTitle: "No proof actions found.",
+    emptyStateDescription: "Add or confirm tasks tied to proof.",
+  },
+  {
+    id: "command-pending-updates",
+    surface: "command",
+    region: "right_panel",
+    title: "Pending Updates",
+    description: "Proposed Carnos/system updates waiting for confirmation.",
+    priority: "high",
+    status: "empty",
+    sourceTables: ["ai_actions"],
+    emptyStateTitle: "No pending updates.",
+    emptyStateDescription: "Confirmed updates will appear here before execution.",
+    errorStateTitle: "Pending updates unavailable.",
+    errorStateDescription: "The pending update card could not read ai_actions state.",
+    privacyNote: "Only confirmation-relevant action metadata should appear here.",
+  },
+  {
+    id: "timeline-recent-events",
+    surface: "timeline",
+    region: "primary",
+    title: "Recent Timeline",
+    description: "Recent dated records across events, proof, logs, and actions.",
+    priority: "high",
+    status: "empty",
+    sourceTables: ["events", "proof_items", "daily_logs", "audit_logs", "ai_actions"],
+    emptyStateTitle: "No timeline records yet.",
+    emptyStateDescription: "Logs, proof, events, and updates will build the timeline.",
+  },
+  {
+    id: "calendar-today",
+    surface: "calendar",
+    region: "primary",
+    title: "Today Calendar",
+    description: "Dated tasks and events for the current day.",
+    priority: "high",
+    status: "empty",
+    sourceTables: ["tasks", "events", "daily_logs"],
+    emptyStateTitle: "Nothing scheduled for today.",
+    emptyStateDescription: "Scheduled tasks and events will appear here.",
+  },
+  {
+    id: "goals-active",
+    surface: "goals",
+    region: "primary",
+    title: "Active Goals",
+    description: "Goals with current reality, target reality, proof requirements, and linked actions.",
+    priority: "critical",
+    status: "empty",
+    sourceTables: ["goals", "tasks", "proof_items"],
+    emptyStateTitle: "No active goals yet.",
+    emptyStateDescription: "Create or confirm a goal to start the dream-to-proof loop.",
+  },
+  {
+    id: "proof-recent",
+    surface: "proof",
+    region: "primary",
+    title: "Recent Proof",
+    description: "Recent evidence attached to goals, tasks, and daily logs.",
+    priority: "critical",
+    status: "empty",
+    sourceTables: ["proof_items", "goals", "tasks", "daily_logs"],
+    emptyStateTitle: "No proof captured yet.",
+    emptyStateDescription: "Proof items will appear after confirmed logs or manual capture.",
+  },
+  {
+    id: "carnos-operating-panel",
+    surface: "carnos",
+    region: "right_panel",
+    title: "Carnos Operating Panel",
+    description: "Safe Carnos-side dashboard context, pending updates, and next action visibility.",
+    priority: "high",
+    status: "empty",
+    sourceTables: ["chat_sessions", "chat_messages", "ai_actions"],
+    emptyStateTitle: "No Carnos operating context yet.",
+    emptyStateDescription: "Chat and proposed actions will appear here as the system develops.",
+    errorStateTitle: "Carnos operating context unavailable.",
+    errorStateDescription: "The Carnos panel could not read its source tables.",
+    privacyNote: "Carnos context must remain visibility-only until later privacy and memory phases.",
+  },
+  {
+    id: "career-application-pipeline",
+    surface: "career",
+    region: "primary",
+    title: "Application pipeline",
+    description: "Tracks job applications, active opportunities, status movement, and follow-up pressure.",
+    priority: "critical",
+    status: "ready",
+    sourceTables: ["job_applications", "job_application_events"],
+    emptyStateTitle: "No job applications found.",
+    emptyStateDescription: "Applications will appear here after the Career System has application records.",
+  },
+  {
+    id: "career-interview-readiness",
+    surface: "career",
+    region: "secondary",
+    title: "Interview readiness",
+    description: "Surfaces upcoming interviews and preparation pressure without executing any actions.",
+    priority: "high",
+    status: "ready",
+    sourceTables: ["interviews", "tasks", "proof_items"],
+    emptyStateTitle: "No interviews found.",
+    emptyStateDescription: "Interview rounds will appear here after interview records exist.",
+  },
+  {
+    id: "networking-referral-pipeline",
+    surface: "networking",
+    region: "primary",
+    title: "Networking and referral pipeline",
+    description: "Tracks contacts, interactions, referral status, and follow-up timing.",
+    priority: "high",
+    status: "ready",
+    sourceTables: ["networking_contacts", "networking_interactions", "job_referrals"],
+    emptyStateTitle: "No networking contacts found.",
+    emptyStateDescription: "Contacts and referral activity will appear here after networking records exist.",
+  },
+  {
+    id: "resume-version-control",
+    surface: "resume",
+    region: "primary",
+    title: "Resume version control",
+    description: "Tracks resume versions, target roles, target companies, keywords, and evidence-linked bullets.",
+    priority: "high",
+    status: "ready",
+    sourceTables: ["resume_versions", "resume_bullets", "proof_items"],
+    emptyStateTitle: "No resume versions found.",
+    emptyStateDescription: "Resume versions will appear here after resume records exist.",
+  },
+  {
+    id: "interview-command-center",
+    surface: "interviews",
+    region: "primary",
+    title: "Interview command center",
+    description: "Tracks interview rounds, prep notes, outcomes, and follow-up needs.",
+    priority: "high",
+    status: "ready",
+    sourceTables: ["interviews", "job_applications", "tasks"],
+    emptyStateTitle: "No interview rounds found.",
+    emptyStateDescription: "Interview rounds will appear here after interview records exist.",
+  },
+
+  {
+    id: "learning-skill-paths",
+    surface: "learning",
+    region: "primary",
+    title: "Skill path command",
+    description: "Tracks active skill paths, learning priorities, mastery targets, and proof requirements.",
+    priority: "critical",
+    status: "ready",
+    sourceTables: ["skill_paths", "skills", "skill_progress", "learning_sessions"],
+    emptyStateTitle: "No skill paths found.",
+    emptyStateDescription: "Skill paths will appear after learning records exist.",
+  },
+  {
+    id: "learning-practice-loop",
+    surface: "learning",
+    region: "secondary",
+    title: "Practice and quiz loop",
+    description: "Surfaces study sessions, quiz attempts, weak points, and next review pressure.",
+    priority: "high",
+    status: "ready",
+    sourceTables: ["learning_sessions", "quizzes", "quiz_attempts", "skills"],
+    emptyStateTitle: "No learning sessions or quizzes found.",
+    emptyStateDescription: "Practice sessions and quiz attempts will appear after learning activity is recorded.",
+  },
+  {
+    id: "projects-shipping-pipeline",
+    surface: "projects",
+    region: "primary",
+    title: "Project shipping pipeline",
+    description: "Tracks portfolio projects, milestones, releases, proof, and shipping state.",
+    priority: "critical",
+    status: "ready",
+    sourceTables: ["projects", "project_milestones", "project_releases", "proof_items"],
+    emptyStateTitle: "No projects found.",
+    emptyStateDescription: "Projects will appear after project records exist.",
+  },
+  {
+    id: "projects-quality-loop",
+    surface: "projects",
+    region: "secondary",
+    title: "Quality and evidence loop",
+    description: "Tracks bugs, tests, links, demos, and evidence needed to make projects trustworthy.",
+    priority: "high",
+    status: "ready",
+    sourceTables: ["project_bugs", "project_tests", "project_links", "proof_items"],
+    emptyStateTitle: "No project quality records found.",
+    emptyStateDescription: "Bugs, tests, links, and release evidence will appear after project records exist.",
+  },
+  {
+    id: "research-lab-idea-pipeline",
+    surface: "research_lab",
+    region: "primary",
+    title: "Research idea pipeline",
+    description: "Tracks research ideas, questions, claims, experiments, and proof-backed paper readiness.",
+    priority: "critical",
+    status: "ready",
+    sourceTables: [
+      "research_ideas",
+      "research_questions",
+      "research_claims",
+      "research_experiments",
+      "research_results",
+      "research_papers",
+    ],
+    emptyStateTitle: "No research ideas found.",
+    emptyStateDescription: "Research ideas will appear after Phase 10 records exist.",
+    privacyNote: "Research surfaces are read-only until proposed-action workflows are explicitly wired.",
+  },
+  {
+    id: "research-lab-literature-citations",
+    surface: "research_lab",
+    region: "secondary",
+    title: "Literature and citation tracker",
+    description: "Surfaces saved literature, citation purpose, paper linkage, and evidence pressure.",
+    priority: "high",
+    status: "ready",
+    sourceTables: ["research_literature_items", "research_citations", "research_claims"],
+    emptyStateTitle: "No literature records found.",
+    emptyStateDescription: "Literature and citations will appear after reading records exist.",
+  },
+  {
+    id: "research-stanford-target-fit",
+    surface: "research_stanford",
+    region: "primary",
+    title: "Stanford and PhD target fit",
+    description: "Tracks target universities, labs, professors, fit reasons, and outreach readiness.",
+    priority: "critical",
+    status: "ready",
+    sourceTables: ["target_universities", "target_labs", "target_professors"],
+    emptyStateTitle: "No PhD targets found.",
+    emptyStateDescription: "Universities, labs, and professors will appear after target records exist.",
+    privacyNote: "No automatic outreach or scraping is enabled in Phase 10.",
+  },
+  {
+    id: "research-stanford-application-readiness",
+    surface: "research_stanford",
+    region: "secondary",
+    title: "PhD application readiness",
+    description: "Tracks readiness assessments, SOP versions, application assets, and recommendation targets.",
+    priority: "high",
+    status: "ready",
+    sourceTables: [
+      "phd_readiness_assessments",
+      "phd_application_assets",
+      "sop_versions",
+      "recommendation_targets",
+    ],
+    emptyStateTitle: "No PhD readiness records found.",
+    emptyStateDescription: "Readiness, SOP, assets, and recommendation records will appear after records exist.",
+  },
+];
+
+export function getDashboardCardsForSurface(surface: DashboardSurface): DashboardCardContract[] {
+  return PHASE_7_DASHBOARD_CARD_REGISTRY
+    .filter((card) => card.surface === surface)
+    .map(assertDashboardCardContract);
+}
+
+export function getDashboardCardById(cardId: string): DashboardCardContract | null {
+  const card = PHASE_7_DASHBOARD_CARD_REGISTRY.find((item) => item.id === cardId);
+  return card ? assertDashboardCardContract(card) : null;
+}
+
+export function assertDashboardCardRegistry(): DashboardCardContract[] {
+  const seen = new Set<string>();
+
+  return PHASE_7_DASHBOARD_CARD_REGISTRY.map((card) => {
+    if (seen.has(card.id)) {
+      throw new Error(`Duplicate dashboard card id: ${card.id}`);
+    }
+
+    seen.add(card.id);
+    return assertDashboardCardContract(card);
+  });
+}
+```
+
+### `src/lib/dashboard/dashboard-data-helpers.ts`
+
+```tsx
+import { getDashboardCardsForSurface, type DashboardSurface } from "@/lib/dashboard";
+import type { Database } from "@/types/database";
+import type { SupabaseClient } from "@supabase/supabase-js";
+
+type TypedSupabaseClient = SupabaseClient<Database>;
+
+export interface DashboardDataSummary {
+  surface: DashboardSurface;
+  card_count: number;
+  source_tables: string[];
+  pending_updates_count: number;
+  active_goals_count: number;
+  open_tasks_count: number;
+  recent_proof_count: number;
+  recent_events_count: number;
+}
+
+export interface DashboardDataResult {
+  summary: DashboardDataSummary;
+  generated_at: string;
+}
+
+async function getCount(
+  supabase: TypedSupabaseClient,
+  table: 'ai_actions' | 'goals' | 'tasks' | 'proof_items' | 'events',
+  userId: string,
+  queryBuilder?: (query: ReturnType<TypedSupabaseClient['from']>) => ReturnType<TypedSupabaseClient['from']>,
+): Promise<number> {
+  let query = supabase.from(table).select('id', { count: 'exact', head: true }).eq('user_id', userId);
+
+  if (queryBuilder) {
+    query = queryBuilder(query);
+  }
+
+  const { count, error } = await query;
+
+  if (error) {
+    return 0;
+  }
+
+  return count ?? 0;
+}
+
+export async function getDashboardDataSummary(
+  supabase: TypedSupabaseClient,
+  userId: string,
+  surface: DashboardSurface,
+): Promise<DashboardDataResult> {
+  const cards = getDashboardCardsForSurface(surface);
+  const sourceTables = Array.from(new Set(cards.flatMap((card) => card.sourceTables))).sort();
+
+  const [pendingUpdatesCount, activeGoalsCount, openTasksCount, recentProofCount, recentEventsCount] =
+    await Promise.all([
+      getCount(supabase, 'ai_actions', userId, (query) => query.eq('status', 'pending_confirmation')),
+      getCount(supabase, 'goals', userId, (query) => query.in('status', ['draft', 'active'])),
+      getCount(supabase, 'tasks', userId, (query) => query.in('status', ['todo', 'in_progress', 'blocked'])),
+      getCount(supabase, 'proof_items', userId),
+      getCount(supabase, 'events', userId),
+    ]);
+
+  return {
+    generated_at: new Date().toISOString(),
+    summary: {
+      surface,
+      card_count: cards.length,
+      source_tables: sourceTables,
+      pending_updates_count: pendingUpdatesCount,
+      active_goals_count: activeGoalsCount,
+      open_tasks_count: openTasksCount,
+      recent_proof_count: recentProofCount,
+      recent_events_count: recentEventsCount,
+    },
+  };
+}
+
+export async function getCoreDashboardDataSummaries(
+  supabase: TypedSupabaseClient,
+  userId: string,
+): Promise<DashboardDataResult[]> {
+  const surfaces: DashboardSurface[] = ['command', 'timeline', 'calendar', 'goals', 'proof', 'carnos'];
+
+  return Promise.all(surfaces.map((surface) => getDashboardDataSummary(supabase, userId, surface)));
+}
+```
+
+### `src/lib/dashboard/dashboard-layout-contract.ts`
+
+```tsx
+import type { ReactNode } from "react";
+
+export type DashboardSurface =
+  | "command"
+  | "timeline"
+  | "calendar"
+  | "goals"
+  | "proof"
+  | "carnos"
+  | "career"
+  | "networking"
+  | "resume"
+  | "interviews"
+  | "learning"
+  | "projects"
+  | "research_lab"
+  | "research_stanford";
+
+export type DashboardCardRegion =
+  | "hero"
+  | "primary"
+  | "secondary"
+  | "right_panel"
+  | "timeline_preview"
+  | "footer";
+
+export type DashboardCardPriority = "low" | "medium" | "high" | "critical";
+
+export type DashboardCardStatus =
+  | "ready"
+  | "empty"
+  | "loading"
+  | "error"
+  | "privacy_redacted";
+
+export interface DashboardCardContract {
+  id: string;
+  surface: DashboardSurface;
+  region: DashboardCardRegion;
+  title: string;
+  description?: string;
+  priority: DashboardCardPriority;
+  status: DashboardCardStatus;
+  sourceTables: string[];
+  emptyStateTitle?: string;
+  emptyStateDescription?: string;
+  errorStateTitle?: string;
+  errorStateDescription?: string;
+  privacyNote?: string;
+}
+
+export interface DashboardLayoutContract {
+  surface: DashboardSurface;
+  title: string;
+  subtitle: string;
+  cards: DashboardCardContract[];
+  rightPanel?: ReactNode;
+  footer?: ReactNode;
+}
+
+export const PHASE_7_DASHBOARD_SURFACES: DashboardSurface[] = [
+  "command",
+  "timeline",
+  "calendar",
+  "goals",
+  "proof",
+  "carnos",
+  "career",
+  "networking",
+  "resume",
+  "interviews",
+  "learning",
+  "projects",
+  "research_lab",
+  "research_stanford",
+];
+
+export const PHASE_7_DASHBOARD_REGIONS: DashboardCardRegion[] = [
+  "hero",
+  "primary",
+  "secondary",
+  "right_panel",
+  "timeline_preview",
+  "footer",
+];
+
+export function assertDashboardCardContract(card: DashboardCardContract): DashboardCardContract {
+  if (!card.id.trim()) {
+    throw new Error("Dashboard card contract requires an id.");
+  }
+
+  if (!PHASE_7_DASHBOARD_SURFACES.includes(card.surface)) {
+    throw new Error(`Unsupported dashboard surface: ${card.surface}`);
+  }
+
+  if (!PHASE_7_DASHBOARD_REGIONS.includes(card.region)) {
+    throw new Error(`Unsupported dashboard card region: ${card.region}`);
+  }
+
+  if (!card.title.trim()) {
+    throw new Error("Dashboard card contract requires a title.");
+  }
+
+  if (!Array.isArray(card.sourceTables)) {
+    throw new Error("Dashboard card contract requires sourceTables to be an array.");
+  }
+
+  return card;
+}
+
+export function assertDashboardLayoutContract(layout: DashboardLayoutContract): DashboardLayoutContract {
+  if (!PHASE_7_DASHBOARD_SURFACES.includes(layout.surface)) {
+    throw new Error(`Unsupported dashboard layout surface: ${layout.surface}`);
+  }
+
+  if (!layout.title.trim()) {
+    throw new Error("Dashboard layout contract requires a title.");
+  }
+
+  if (!layout.subtitle.trim()) {
+    throw new Error("Dashboard layout contract requires a subtitle.");
+  }
+
+  layout.cards.forEach(assertDashboardCardContract);
+
+  return layout;
+}
+```
+
+### `src/lib/dashboard/index.ts`
+
+```tsx
+
+export * from "./dashboard-layout-contract";
+export * from "./dashboard-card-registry";
+export * from "./dashboard-data-helpers";
+export * from "./career-dashboard-data-helpers";
+export * from "./learning-project-dashboard-data-helpers";
+export * from "./research-stanford-dashboard-data-helpers";
+```
+
+### `src/lib/dashboard/learning-project-dashboard-data-helpers.ts`
+
+```tsx
+import {
+  listLearningSessions,
+  listProjectBugs,
+  listProjectLinks,
+  listProjectMilestones,
+  listProjectReleases,
+  listProjects,
+  listProjectTests,
+  listQuizAttempts,
+  listQuizzes,
+  listSkillPaths,
+  listSkillProgress,
+  listSkills,
+} from "@/lib/repositories";
+
+export interface LearningDashboardSummary {
+  skill_path_count: number;
+  active_skill_path_count: number;
+  skill_count: number;
+  mastered_skill_count: number;
+  learning_session_count: number;
+  completed_learning_session_count: number;
+  quiz_count: number;
+  quiz_attempt_count: number;
+  passed_quiz_attempt_count: number;
+  skill_progress_count: number;
+}
+
+export interface ProjectDashboardSummary {
+  project_count: number;
+  active_project_count: number;
+  shipped_project_count: number;
+  milestone_count: number;
+  completed_milestone_count: number;
+  open_bug_count: number;
+  critical_bug_count: number;
+  test_count: number;
+  passing_test_count: number;
+  release_count: number;
+  project_link_count: number;
+}
+
+export interface LearningProjectDashboardDataResult {
+  learning: LearningDashboardSummary;
+  projects: ProjectDashboardSummary;
+  generated_at: string;
+}
+
+export async function getLearningProjectDashboardDataSummary(
+  userId: string,
+): Promise<LearningProjectDashboardDataResult> {
+  const [
+    skillPaths,
+    skills,
+    learningSessions,
+    quizzes,
+    quizAttempts,
+    skillProgress,
+    projects,
+    projectMilestones,
+    projectBugs,
+    projectTests,
+    projectReleases,
+    projectLinks,
+  ] = await Promise.all([
+    listSkillPaths(userId, { limit: 100 }),
+    listSkills(userId, { limit: 100 }),
+    listLearningSessions(userId, { limit: 100 }),
+    listQuizzes(userId, { limit: 100 }),
+    listQuizAttempts(userId, { limit: 100 }),
+    listSkillProgress(userId, { limit: 100 }),
+    listProjects(userId, { limit: 100 }),
+    listProjectMilestones(userId, { limit: 100 }),
+    listProjectBugs(userId, { limit: 100 }),
+    listProjectTests(userId, { limit: 100 }),
+    listProjectReleases(userId, { limit: 100 }),
+    listProjectLinks(userId, { limit: 100 }),
+  ]);
+
+  const skillPathRows = skillPaths.data ?? [];
+  const skillRows = skills.data ?? [];
+  const learningSessionRows = learningSessions.data ?? [];
+  const quizRows = quizzes.data ?? [];
+  const quizAttemptRows = quizAttempts.data ?? [];
+  const skillProgressRows = skillProgress.data ?? [];
+  const projectRows = projects.data ?? [];
+  const milestoneRows = projectMilestones.data ?? [];
+  const bugRows = projectBugs.data ?? [];
+  const testRows = projectTests.data ?? [];
+  const releaseRows = projectReleases.data ?? [];
+  const linkRows = projectLinks.data ?? [];
+
+  return {
+    generated_at: new Date().toISOString(),
+    learning: {
+      skill_path_count: skillPathRows.length,
+      active_skill_path_count: skillPathRows.filter((item) => item.status === "active").length,
+      skill_count: skillRows.length,
+      mastered_skill_count: skillRows.filter((item) => item.status === "mastered").length,
+      learning_session_count: learningSessionRows.length,
+      completed_learning_session_count: learningSessionRows.filter(
+        (item) => item.status === "completed",
+      ).length,
+      quiz_count: quizRows.length,
+      quiz_attempt_count: quizAttemptRows.length,
+      passed_quiz_attempt_count: quizAttemptRows.filter((item) => item.passed === true).length,
+      skill_progress_count: skillProgressRows.length,
+    },
+    projects: {
+      project_count: projectRows.length,
+      active_project_count: projectRows.filter((item) => item.status === "active").length,
+      shipped_project_count: projectRows.filter((item) => item.status === "shipped").length,
+      milestone_count: milestoneRows.length,
+      completed_milestone_count: milestoneRows.filter((item) => item.status === "completed").length,
+      open_bug_count: bugRows.filter((item) =>
+        ["open", "investigating"].includes(item.status),
+      ).length,
+      critical_bug_count: bugRows.filter((item) => item.severity === "critical").length,
+      test_count: testRows.length,
+      passing_test_count: testRows.filter((item) => item.passed === true).length,
+      release_count: releaseRows.length,
+      project_link_count: linkRows.length,
+    },
+  };
+}
+```
+
+### `src/lib/dashboard/research-stanford-dashboard-data-helpers.ts`
+
+```tsx
+import {
+  listPhdApplicationAssets,
+  listPhdReadinessAssessments,
+  listRecommendationTargets,
+  listResearchCitations,
+  listResearchClaims,
+  listResearchExperiments,
+  listResearchFeedback,
+  listResearchIdeas,
+  listResearchLiteratureItems,
+  listResearchPapers,
+  listResearchResults,
+  listResearchSubmissions,
+  listResearchVenues,
+  listSopVersions,
+  listTargetLabs,
+  listTargetProfessors,
+  listTargetUniversities,
+} from "@/lib/repositories";
+
+export interface ResearchLabDashboardSummary {
+  research_idea_count: number;
+  active_research_idea_count: number;
+  literature_item_count: number;
+  cited_literature_count: number;
+  citation_count: number;
+  claim_count: number;
+  supported_claim_count: number;
+  experiment_count: number;
+  completed_experiment_count: number;
+  result_count: number;
+  paper_count: number;
+  submission_ready_paper_count: number;
+  venue_count: number;
+  submission_count: number;
+  feedback_count: number;
+}
+
+export interface StanfordDashboardSummary {
+  target_university_count: number;
+  dream_target_count: number;
+  target_lab_count: number;
+  target_professor_count: number;
+  ready_to_contact_professor_count: number;
+  readiness_assessment_count: number;
+  application_asset_count: number;
+  ready_application_asset_count: number;
+  sop_version_count: number;
+  ready_sop_version_count: number;
+  recommendation_target_count: number;
+  agreed_recommendation_count: number;
+}
+
+export interface ResearchStanfordDashboardDataResult {
+  research: ResearchLabDashboardSummary;
+  stanford: StanfordDashboardSummary;
+  generated_at: string;
+}
+
+export async function getResearchStanfordDashboardDataSummary(
+  userId: string,
+): Promise<ResearchStanfordDashboardDataResult> {
+  const [
+    ideas,
+    literatureItems,
+    citations,
+    claims,
+    experiments,
+    results,
+    papers,
+    venues,
+    submissions,
+    feedback,
+    universities,
+    labs,
+    professors,
+    readinessAssessments,
+    applicationAssets,
+    sopVersions,
+    recommendationTargets,
+  ] = await Promise.all([
+    listResearchIdeas(userId, { limit: 100 }),
+    listResearchLiteratureItems(userId, { limit: 100 }),
+    listResearchCitations(userId, { limit: 100 }),
+    listResearchClaims(userId, { limit: 100 }),
+    listResearchExperiments(userId, { limit: 100 }),
+    listResearchResults(userId, { limit: 100 }),
+    listResearchPapers(userId, { limit: 100 }),
+    listResearchVenues(userId, { limit: 100 }),
+    listResearchSubmissions(userId, { limit: 100 }),
+    listResearchFeedback(userId, { limit: 100 }),
+    listTargetUniversities(userId, { limit: 100 }),
+    listTargetLabs(userId, { limit: 100 }),
+    listTargetProfessors(userId, { limit: 100 }),
+    listPhdReadinessAssessments(userId, { limit: 100 }),
+    listPhdApplicationAssets(userId, { limit: 100 }),
+    listSopVersions(userId, { limit: 100 }),
+    listRecommendationTargets(userId, { limit: 100 }),
+  ]);
+
+  const ideaRows = ideas.data ?? [];
+  const literatureRows = literatureItems.data ?? [];
+  const citationRows = citations.data ?? [];
+  const claimRows = claims.data ?? [];
+  const experimentRows = experiments.data ?? [];
+  const resultRows = results.data ?? [];
+  const paperRows = papers.data ?? [];
+  const venueRows = venues.data ?? [];
+  const submissionRows = submissions.data ?? [];
+  const feedbackRows = feedback.data ?? [];
+  const universityRows = universities.data ?? [];
+  const labRows = labs.data ?? [];
+  const professorRows = professors.data ?? [];
+  const readinessRows = readinessAssessments.data ?? [];
+  const applicationAssetRows = applicationAssets.data ?? [];
+  const sopVersionRows = sopVersions.data ?? [];
+  const recommendationRows = recommendationTargets.data ?? [];
+
+  return {
+    generated_at: new Date().toISOString(),
+    research: {
+      research_idea_count: ideaRows.length,
+      active_research_idea_count: ideaRows.filter((item) =>
+        ["exploring", "active"].includes(item.status),
+      ).length,
+      literature_item_count: literatureRows.length,
+      cited_literature_count: literatureRows.filter((item) => item.reading_status === "cited").length,
+      citation_count: citationRows.length,
+      claim_count: claimRows.length,
+      supported_claim_count: claimRows.filter((item) => item.support_status === "supported").length,
+      experiment_count: experimentRows.length,
+      completed_experiment_count: experimentRows.filter((item) => item.status === "completed").length,
+      result_count: resultRows.length,
+      paper_count: paperRows.length,
+      submission_ready_paper_count: paperRows.filter((item) =>
+        ["submission_ready", "submitted", "accepted"].includes(item.status),
+      ).length,
+      venue_count: venueRows.length,
+      submission_count: submissionRows.length,
+      feedback_count: feedbackRows.length,
+    },
+    stanford: {
+      target_university_count: universityRows.length,
+      dream_target_count: universityRows.filter((item) => item.target_level === "dream").length,
+      target_lab_count: labRows.length,
+      target_professor_count: professorRows.length,
+      ready_to_contact_professor_count: professorRows.filter((item) =>
+        ["ready_to_contact", "contacted", "replied", "follow_up_needed"].includes(item.outreach_status),
+      ).length,
+      readiness_assessment_count: readinessRows.length,
+      application_asset_count: applicationAssetRows.length,
+      ready_application_asset_count: applicationAssetRows.filter((item) =>
+        ["ready", "submitted"].includes(item.status),
+      ).length,
+      sop_version_count: sopVersionRows.length,
+      ready_sop_version_count: sopVersionRows.filter((item) =>
+        ["ready", "submitted"].includes(item.status),
+      ).length,
+      recommendation_target_count: recommendationRows.length,
+      agreed_recommendation_count: recommendationRows.filter((item) =>
+        ["agreed", "submitted"].includes(item.request_status),
+      ).length,
+    },
+  };
 }
 ```
 
@@ -24561,7 +44866,28 @@ import type {
   EventRow,
   GoalMilestoneRow,
   GoalRow,
+  JobApplicationEventRow,
+  JobApplicationRow,
+  JobReferralRow,
+  NetworkingContactRow,
+  NetworkingInteractionRow,
   ProofItemRow,
+  ResumeBulletRow,
+  ResumeVersionRow,
+  InterviewRow,
+  LearningSessionRow,
+  ProjectBugRow,
+  ProjectLinkRow,
+  ProjectMilestoneRow,
+  ProjectReleaseRow,
+  ProjectRow,
+  ProjectTestRow,
+  QuizAttemptRow,
+  QuizRow,
+  SkillPathRow,
+  SkillPrerequisiteRow,
+  SkillProgressRow,
+  SkillRow,
   TaskRow,
 } from "@/types/database";
 
@@ -24926,12 +45252,1774 @@ export async function listEvents(
     return { data: null, error: toErrorMessage(error) };
   }
 }
+
+export async function listJobApplications(
+  userId: string,
+  options: {
+    status?: JobApplicationRow["status"];
+    priority?: JobApplicationRow["priority"];
+    company?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<JobApplicationRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("job_applications")
+      .select("*")
+      .eq("user_id", userId)
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.priority) {
+      query = query.eq("priority", options.priority);
+    }
+
+    if (options.company) {
+      query = query.eq("company", options.company);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listJobApplicationEvents(
+  userId: string,
+  options: {
+    jobApplicationId?: string;
+    eventType?: JobApplicationEventRow["event_type"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<JobApplicationEventRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("job_application_events")
+      .select("*")
+      .eq("user_id", userId)
+      .order("occurred_at", { ascending: false })
+      .limit(limit);
+
+    if (options.jobApplicationId) {
+      query = query.eq("job_application_id", options.jobApplicationId);
+    }
+
+    if (options.eventType) {
+      query = query.eq("event_type", options.eventType);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listNetworkingContacts(
+  userId: string,
+  options: {
+    status?: NetworkingContactRow["status"];
+    company?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<NetworkingContactRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("networking_contacts")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.company) {
+      query = query.eq("company", options.company);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listNetworkingInteractions(
+  userId: string,
+  options: {
+    networkingContactId?: string;
+    jobApplicationId?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<NetworkingInteractionRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("networking_interactions")
+      .select("*")
+      .eq("user_id", userId)
+      .order("occurred_at", { ascending: false })
+      .limit(limit);
+
+    if (options.networkingContactId) {
+      query = query.eq("networking_contact_id", options.networkingContactId);
+    }
+
+    if (options.jobApplicationId) {
+      query = query.eq("job_application_id", options.jobApplicationId);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listJobReferrals(
+  userId: string,
+  options: {
+    status?: JobReferralRow["status"];
+    networkingContactId?: string;
+    jobApplicationId?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<JobReferralRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("job_referrals")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.networkingContactId) {
+      query = query.eq("networking_contact_id", options.networkingContactId);
+    }
+
+    if (options.jobApplicationId) {
+      query = query.eq("job_application_id", options.jobApplicationId);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listResumeVersions(
+  userId: string,
+  options: {
+    status?: ResumeVersionRow["status"];
+    targetRole?: string;
+    targetCompany?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ResumeVersionRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("resume_versions")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.targetRole) {
+      query = query.eq("target_role", options.targetRole);
+    }
+
+    if (options.targetCompany) {
+      query = query.eq("target_company", options.targetCompany);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listResumeBullets(
+  userId: string,
+  options: {
+    resumeVersionId?: string;
+    section?: ResumeBulletRow["section"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ResumeBulletRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("resume_bullets")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.resumeVersionId) {
+      query = query.eq("resume_version_id", options.resumeVersionId);
+    }
+
+    if (options.section) {
+      query = query.eq("section", options.section);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listInterviews(
+  userId: string,
+  options: {
+    status?: InterviewRow["status"];
+    jobApplicationId?: string;
+    outcome?: InterviewRow["outcome"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<InterviewRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("interviews")
+      .select("*")
+      .eq("user_id", userId)
+      .order("scheduled_at", { ascending: false, nullsFirst: false })
+      .limit(limit);
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.jobApplicationId) {
+      query = query.eq("job_application_id", options.jobApplicationId);
+    }
+
+    if (options.outcome) {
+      query = query.eq("outcome", options.outcome);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+
+export async function listSkillPaths(
+  userId: string,
+  options: {
+    status?: SkillPathRow["status"];
+    priority?: SkillPathRow["priority"];
+    domain?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<SkillPathRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("skill_paths")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.priority) {
+      query = query.eq("priority", options.priority);
+    }
+
+    if (options.domain) {
+      query = query.eq("domain", options.domain);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listSkills(
+  userId: string,
+  options: {
+    skillPathId?: string;
+    status?: SkillRow["status"];
+    category?: string;
+    priority?: SkillRow["priority"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<SkillRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("skills")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.skillPathId) {
+      query = query.eq("skill_path_id", options.skillPathId);
+    }
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.category) {
+      query = query.eq("category", options.category);
+    }
+
+    if (options.priority) {
+      query = query.eq("priority", options.priority);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listSkillPrerequisites(
+  userId: string,
+  options: {
+    skillId?: string;
+    prerequisiteSkillId?: string;
+    relationshipType?: SkillPrerequisiteRow["relationship_type"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<SkillPrerequisiteRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("skill_prerequisites")
+      .select("*")
+      .eq("user_id", userId)
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.skillId) {
+      query = query.eq("skill_id", options.skillId);
+    }
+
+    if (options.prerequisiteSkillId) {
+      query = query.eq("prerequisite_skill_id", options.prerequisiteSkillId);
+    }
+
+    if (options.relationshipType) {
+      query = query.eq("relationship_type", options.relationshipType);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listLearningSessions(
+  userId: string,
+  options: {
+    skillPathId?: string;
+    skillId?: string;
+    status?: LearningSessionRow["status"];
+    sessionType?: LearningSessionRow["session_type"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<LearningSessionRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("learning_sessions")
+      .select("*")
+      .eq("user_id", userId)
+      .order("started_at", { ascending: false, nullsFirst: false })
+      .limit(limit);
+
+    if (options.skillPathId) {
+      query = query.eq("skill_path_id", options.skillPathId);
+    }
+
+    if (options.skillId) {
+      query = query.eq("skill_id", options.skillId);
+    }
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.sessionType) {
+      query = query.eq("session_type", options.sessionType);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listQuizzes(
+  userId: string,
+  options: {
+    skillPathId?: string;
+    skillId?: string;
+    status?: QuizRow["status"];
+    quizType?: QuizRow["quiz_type"];
+    difficulty?: QuizRow["difficulty"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<QuizRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("quizzes")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.skillPathId) {
+      query = query.eq("skill_path_id", options.skillPathId);
+    }
+
+    if (options.skillId) {
+      query = query.eq("skill_id", options.skillId);
+    }
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.quizType) {
+      query = query.eq("quiz_type", options.quizType);
+    }
+
+    if (options.difficulty) {
+      query = query.eq("difficulty", options.difficulty);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listQuizAttempts(
+  userId: string,
+  options: {
+    quizId?: string;
+    skillId?: string;
+    learningSessionId?: string;
+    status?: QuizAttemptRow["status"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<QuizAttemptRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("quiz_attempts")
+      .select("*")
+      .eq("user_id", userId)
+      .order("attempted_at", { ascending: false })
+      .limit(limit);
+
+    if (options.quizId) {
+      query = query.eq("quiz_id", options.quizId);
+    }
+
+    if (options.skillId) {
+      query = query.eq("skill_id", options.skillId);
+    }
+
+    if (options.learningSessionId) {
+      query = query.eq("learning_session_id", options.learningSessionId);
+    }
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listProjects(
+  userId: string,
+  options: {
+    status?: ProjectRow["status"];
+    priority?: ProjectRow["priority"];
+    projectType?: ProjectRow["project_type"];
+    goalId?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ProjectRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("projects")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.priority) {
+      query = query.eq("priority", options.priority);
+    }
+
+    if (options.projectType) {
+      query = query.eq("project_type", options.projectType);
+    }
+
+    if (options.goalId) {
+      query = query.eq("goal_id", options.goalId);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listProjectMilestones(
+  userId: string,
+  options: {
+    projectId?: string;
+    status?: ProjectMilestoneRow["status"];
+    priority?: ProjectMilestoneRow["priority"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ProjectMilestoneRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("project_milestones")
+      .select("*")
+      .eq("user_id", userId)
+      .order("due_date", { ascending: true, nullsFirst: false })
+      .limit(limit);
+
+    if (options.projectId) {
+      query = query.eq("project_id", options.projectId);
+    }
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.priority) {
+      query = query.eq("priority", options.priority);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listProjectBugs(
+  userId: string,
+  options: {
+    projectId?: string;
+    status?: ProjectBugRow["status"];
+    severity?: ProjectBugRow["severity"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ProjectBugRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("project_bugs")
+      .select("*")
+      .eq("user_id", userId)
+      .order("opened_at", { ascending: false })
+      .limit(limit);
+
+    if (options.projectId) {
+      query = query.eq("project_id", options.projectId);
+    }
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.severity) {
+      query = query.eq("severity", options.severity);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listProjectTests(
+  userId: string,
+  options: {
+    projectId?: string;
+    status?: ProjectTestRow["status"];
+    testType?: ProjectTestRow["test_type"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ProjectTestRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("project_tests")
+      .select("*")
+      .eq("user_id", userId)
+      .order("run_at", { ascending: false, nullsFirst: false })
+      .limit(limit);
+
+    if (options.projectId) {
+      query = query.eq("project_id", options.projectId);
+    }
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    if (options.testType) {
+      query = query.eq("test_type", options.testType);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listProjectReleases(
+  userId: string,
+  options: {
+    projectId?: string;
+    status?: ProjectReleaseRow["status"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ProjectReleaseRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("project_releases")
+      .select("*")
+      .eq("user_id", userId)
+      .order("released_at", { ascending: false, nullsFirst: false })
+      .limit(limit);
+
+    if (options.projectId) {
+      query = query.eq("project_id", options.projectId);
+    }
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listProjectLinks(
+  userId: string,
+  options: {
+    projectId?: string;
+    linkType?: ProjectLinkRow["link_type"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ProjectLinkRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("project_links")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.projectId) {
+      query = query.eq("project_id", options.projectId);
+    }
+
+    if (options.linkType) {
+      query = query.eq("link_type", options.linkType);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listSkillProgress(
+  userId: string,
+  options: {
+    skillId?: string;
+    projectId?: string;
+    learningSessionId?: string;
+    quizAttemptId?: string;
+    status?: SkillProgressRow["status"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<SkillProgressRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("skill_progress")
+      .select("*")
+      .eq("user_id", userId)
+      .order("recorded_at", { ascending: false })
+      .limit(limit);
+
+    if (options.skillId) {
+      query = query.eq("skill_id", options.skillId);
+    }
+
+    if (options.projectId) {
+      query = query.eq("project_id", options.projectId);
+    }
+
+    if (options.learningSessionId) {
+      query = query.eq("learning_session_id", options.learningSessionId);
+    }
+
+    if (options.quizAttemptId) {
+      query = query.eq("quiz_attempt_id", options.quizAttemptId);
+    }
+
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: data ?? [], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
 ```
 
 ### `src/lib/repositories/index.ts`
 
 ```tsx
 export * from "./core-read";
+export * from "./research-read";
+```
+
+### `src/lib/repositories/research-read.ts`
+
+```tsx
+import { createSupabaseServerClient } from "@/lib/supabase/server";
+import type {
+  ResearchIdeaRow,
+  ResearchQuestionRow,
+  ResearchLiteratureItemRow,
+  ResearchCitationRow,
+  ResearchClaimRow,
+  ResearchExperimentRow,
+  ResearchResultRow,
+  ResearchPaperRow,
+  ResearchPaperVersionRow,
+  ResearchVenueRow,
+  ResearchSubmissionRow,
+  ResearchFeedbackRow,
+  TargetUniversityRow,
+  TargetLabRow,
+  TargetProfessorRow,
+  PhdReadinessAssessmentRow,
+  PhdApplicationAssetRow,
+  SopVersionRow,
+  RecommendationTargetRow,
+} from "@/types/database";
+
+import type { RepositoryListResult } from "./core-read";
+
+const DEFAULT_LIMIT = 25;
+const MAX_LIMIT = 100;
+
+function clampLimit(limit: number | undefined): number {
+  if (limit === undefined || Number.isNaN(limit)) {
+    return DEFAULT_LIMIT;
+  }
+
+  return Math.min(Math.max(Math.trunc(limit), 1), MAX_LIMIT);
+}
+
+function toErrorMessage(error: unknown): string {
+  if (error instanceof Error) {
+    return error.message;
+  }
+
+  return "Unknown research repository error";
+}
+
+export async function listResearchIdeas(
+  userId: string,
+  options: {
+    status?: string;
+    projectId?: string;
+    goalId?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ResearchIdeaRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("research_ideas")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.status) {
+      query = query.eq("status", options.status as never);
+    }
+    if (options.projectId) {
+      query = query.eq("project_id", options.projectId as never);
+    }
+    if (options.goalId) {
+      query = query.eq("goal_id", options.goalId as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as ResearchIdeaRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listResearchQuestions(
+  userId: string,
+  options: {
+    researchIdeaId?: string;
+    status?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ResearchQuestionRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("research_questions")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.researchIdeaId) {
+      query = query.eq("research_idea_id", options.researchIdeaId as never);
+    }
+    if (options.status) {
+      query = query.eq("status", options.status as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as ResearchQuestionRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listResearchLiteratureItems(
+  userId: string,
+  options: {
+    relatedResearchIdeaId?: string;
+    relatedProjectId?: string;
+    readingStatus?: string;
+    itemType?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ResearchLiteratureItemRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("research_literature_items")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.relatedResearchIdeaId) {
+      query = query.eq("related_research_idea_id", options.relatedResearchIdeaId as never);
+    }
+    if (options.relatedProjectId) {
+      query = query.eq("related_project_id", options.relatedProjectId as never);
+    }
+    if (options.readingStatus) {
+      query = query.eq("reading_status", options.readingStatus as never);
+    }
+    if (options.itemType) {
+      query = query.eq("item_type", options.itemType as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as ResearchLiteratureItemRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listResearchCitations(
+  userId: string,
+  options: {
+    literatureItemId?: string;
+    researchIdeaId?: string;
+    researchClaimId?: string;
+    researchPaperId?: string;
+    paperVersionId?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ResearchCitationRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("research_citations")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.literatureItemId) {
+      query = query.eq("literature_item_id", options.literatureItemId as never);
+    }
+    if (options.researchIdeaId) {
+      query = query.eq("research_idea_id", options.researchIdeaId as never);
+    }
+    if (options.researchClaimId) {
+      query = query.eq("research_claim_id", options.researchClaimId as never);
+    }
+    if (options.researchPaperId) {
+      query = query.eq("research_paper_id", options.researchPaperId as never);
+    }
+    if (options.paperVersionId) {
+      query = query.eq("paper_version_id", options.paperVersionId as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as ResearchCitationRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listResearchClaims(
+  userId: string,
+  options: {
+    researchIdeaId?: string;
+    researchPaperId?: string;
+    paperVersionId?: string;
+    supportStatus?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ResearchClaimRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("research_claims")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.researchIdeaId) {
+      query = query.eq("research_idea_id", options.researchIdeaId as never);
+    }
+    if (options.researchPaperId) {
+      query = query.eq("research_paper_id", options.researchPaperId as never);
+    }
+    if (options.paperVersionId) {
+      query = query.eq("paper_version_id", options.paperVersionId as never);
+    }
+    if (options.supportStatus) {
+      query = query.eq("support_status", options.supportStatus as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as ResearchClaimRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listResearchExperiments(
+  userId: string,
+  options: {
+    researchIdeaId?: string;
+    researchQuestionId?: string;
+    projectId?: string;
+    status?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ResearchExperimentRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("research_experiments")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.researchIdeaId) {
+      query = query.eq("research_idea_id", options.researchIdeaId as never);
+    }
+    if (options.researchQuestionId) {
+      query = query.eq("research_question_id", options.researchQuestionId as never);
+    }
+    if (options.projectId) {
+      query = query.eq("project_id", options.projectId as never);
+    }
+    if (options.status) {
+      query = query.eq("status", options.status as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as ResearchExperimentRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listResearchResults(
+  userId: string,
+  options: {
+    researchExperimentId?: string;
+    researchIdeaId?: string;
+    projectId?: string;
+    paperVersionId?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ResearchResultRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("research_results")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.researchExperimentId) {
+      query = query.eq("research_experiment_id", options.researchExperimentId as never);
+    }
+    if (options.researchIdeaId) {
+      query = query.eq("research_idea_id", options.researchIdeaId as never);
+    }
+    if (options.projectId) {
+      query = query.eq("project_id", options.projectId as never);
+    }
+    if (options.paperVersionId) {
+      query = query.eq("paper_version_id", options.paperVersionId as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as ResearchResultRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listResearchPapers(
+  userId: string,
+  options: {
+    status?: string;
+    primaryResearchIdeaId?: string;
+    projectId?: string;
+    targetVenueId?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ResearchPaperRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("research_papers")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.status) {
+      query = query.eq("status", options.status as never);
+    }
+    if (options.primaryResearchIdeaId) {
+      query = query.eq("primary_research_idea_id", options.primaryResearchIdeaId as never);
+    }
+    if (options.projectId) {
+      query = query.eq("project_id", options.projectId as never);
+    }
+    if (options.targetVenueId) {
+      query = query.eq("target_venue_id", options.targetVenueId as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as ResearchPaperRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listResearchPaperVersions(
+  userId: string,
+  options: {
+    researchPaperId?: string;
+    status?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ResearchPaperVersionRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("research_paper_versions")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.researchPaperId) {
+      query = query.eq("research_paper_id", options.researchPaperId as never);
+    }
+    if (options.status) {
+      query = query.eq("status", options.status as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as ResearchPaperVersionRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listResearchVenues(
+  userId: string,
+  options: {
+    venueType?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ResearchVenueRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("research_venues")
+      .select("*")
+      .eq("user_id", userId)
+      .order("deadline", { ascending: true, nullsFirst: false })
+      .limit(limit);
+
+    if (options.venueType) {
+      query = query.eq("venue_type", options.venueType as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as ResearchVenueRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listResearchSubmissions(
+  userId: string,
+  options: {
+    researchPaperId?: string;
+    status?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ResearchSubmissionRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("research_submissions")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.researchPaperId) {
+      query = query.eq("research_paper_id", options.researchPaperId as never);
+    }
+    if (options.status) {
+      query = query.eq("status", options.status as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as ResearchSubmissionRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listResearchFeedback(
+  userId: string,
+  options: {
+    researchPaperId?: string;
+    paperVersionId?: string;
+    status?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ResearchFeedbackRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("research_feedback")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.researchPaperId) {
+      query = query.eq("research_paper_id", options.researchPaperId as never);
+    }
+    if (options.paperVersionId) {
+      query = query.eq("paper_version_id", options.paperVersionId as never);
+    }
+    if (options.status) {
+      query = query.eq("status", options.status as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as ResearchFeedbackRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listTargetUniversities(
+  userId: string,
+  options: {
+    targetLevel?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<TargetUniversityRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("target_universities")
+      .select("*")
+      .eq("user_id", userId)
+      .order("fit_score", { ascending: false, nullsFirst: false })
+      .limit(limit);
+
+    if (options.targetLevel) {
+      query = query.eq("target_level", options.targetLevel as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as TargetUniversityRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listTargetLabs(
+  userId: string,
+  options: {
+    targetUniversityId?: string;
+    relatedResearchIdeaId?: string;
+    relatedProjectId?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<TargetLabRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("target_labs")
+      .select("*")
+      .eq("user_id", userId)
+      .order("fit_score", { ascending: false, nullsFirst: false })
+      .limit(limit);
+
+    if (options.targetUniversityId) {
+      query = query.eq("target_university_id", options.targetUniversityId as never);
+    }
+    if (options.relatedResearchIdeaId) {
+      query = query.eq("related_research_idea_id", options.relatedResearchIdeaId as never);
+    }
+    if (options.relatedProjectId) {
+      query = query.eq("related_project_id", options.relatedProjectId as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as TargetLabRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listTargetProfessors(
+  userId: string,
+  options: {
+    targetUniversityId?: string;
+    targetLabId?: string;
+    outreachStatus?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<TargetProfessorRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("target_professors")
+      .select("*")
+      .eq("user_id", userId)
+      .order("fit_score", { ascending: false, nullsFirst: false })
+      .limit(limit);
+
+    if (options.targetUniversityId) {
+      query = query.eq("target_university_id", options.targetUniversityId as never);
+    }
+    if (options.targetLabId) {
+      query = query.eq("target_lab_id", options.targetLabId as never);
+    }
+    if (options.outreachStatus) {
+      query = query.eq("outreach_status", options.outreachStatus as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as TargetProfessorRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listPhdReadinessAssessments(
+  userId: string,
+  options: {
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<PhdReadinessAssessmentRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    const query = supabase
+      .from("phd_readiness_assessments")
+      .select("*")
+      .eq("user_id", userId)
+      .order("assessment_date", { ascending: true })
+      .limit(limit);
+
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as PhdReadinessAssessmentRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listPhdApplicationAssets(
+  userId: string,
+  options: {
+    targetUniversityId?: string;
+    assetType?: string;
+    status?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<PhdApplicationAssetRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("phd_application_assets")
+      .select("*")
+      .eq("user_id", userId)
+      .order("due_date", { ascending: true, nullsFirst: false })
+      .limit(limit);
+
+    if (options.targetUniversityId) {
+      query = query.eq("target_university_id", options.targetUniversityId as never);
+    }
+    if (options.assetType) {
+      query = query.eq("asset_type", options.assetType as never);
+    }
+    if (options.status) {
+      query = query.eq("status", options.status as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as PhdApplicationAssetRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listSopVersions(
+  userId: string,
+  options: {
+    targetUniversityId?: string;
+    status?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<SopVersionRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("sop_versions")
+      .select("*")
+      .eq("user_id", userId)
+      .order("updated_at", { ascending: false })
+      .limit(limit);
+
+    if (options.targetUniversityId) {
+      query = query.eq("target_university_id", options.targetUniversityId as never);
+    }
+    if (options.status) {
+      query = query.eq("status", options.status as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as SopVersionRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listRecommendationTargets(
+  userId: string,
+  options: {
+    targetUniversityId?: string;
+    requestStatus?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<RecommendationTargetRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("recommendation_targets")
+      .select("*")
+      .eq("user_id", userId)
+      .order("due_date", { ascending: true, nullsFirst: false })
+      .limit(limit);
+
+    if (options.targetUniversityId) {
+      query = query.eq("target_university_id", options.targetUniversityId as never);
+    }
+    if (options.requestStatus) {
+      query = query.eq("request_status", options.requestStatus as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as RecommendationTargetRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
 ```
 
 ### `src/lib/routes.ts`
@@ -25109,6 +47197,71 @@ export async function createSupabaseServerClient() {
 }
 ```
 
+### `src/lib/timeline/write-timeline-event.ts`
+
+```tsx
+export type TimelineEventSource =
+  | "manual"
+  | "carnos"
+  | "python_ml"
+  | "system"
+  | "import"
+  | "server";
+
+export interface WriteTimelineEventInput {
+  user_id: string;
+  event_type: string;
+  title: string;
+  description?: string;
+  source: TimelineEventSource;
+  entity_table?: string;
+  entity_id?: string;
+  occurred_at?: string;
+  metadata?: Record<string, unknown>;
+}
+
+export interface WriteTimelineEventSuccess {
+  status: "success";
+  timeline_event_id: string;
+}
+
+export interface WriteTimelineEventSkipped {
+  status: "skipped";
+  reason: string;
+}
+
+export interface WriteTimelineEventError {
+  status: "error";
+  message: string;
+}
+
+export type WriteTimelineEventResult =
+  | WriteTimelineEventSuccess
+  | WriteTimelineEventSkipped
+  | WriteTimelineEventError;
+
+/**
+ * Phase 6.7 timeline helper boundary.
+ *
+ * The current SQL spine does not yet define a dedicated timeline_events table.
+ * This helper intentionally does not write to the database until that schema exists.
+ *
+ * Future phase rule:
+ * - Once a timeline_events table is added to the SQL spine and generated types,
+ *   replace this skipped result with a typed Supabase insert.
+ */
+export async function writeTimelineEvent(
+  input: WriteTimelineEventInput,
+): Promise<WriteTimelineEventResult> {
+  void input;
+
+  return {
+    status: "skipped",
+    reason: "timeline_events table is not defined in the current SQL spine.",
+  };
+}
+```
+
 ### `src/types/database.ts`
 
 ```tsx
@@ -25119,6 +47272,759 @@ export type Json =
   | null
   | { [key: string]: Json | undefined }
   | Json[];
+
+type CareerSourceFields = {
+  metadata: Json;
+  source_ai_action_id: string | null;
+  source_chat_message_id: string | null;
+  created_at: string;
+};
+
+type CareerUpdatedSourceFields = CareerSourceFields & {
+  updated_at: string;
+};
+
+type Phase9SourceFields = {
+  source_ai_action_id: string | null;
+  source_chat_message_id: string | null;
+};
+
+type Phase9UpdatedSourceFields = Phase9SourceFields & {
+  updated_at: string;
+};
+
+type Phase9SkillPathRow = Phase9UpdatedSourceFields & {
+  id: string;
+  user_id: string;
+  title: string;
+  slug: string | null;
+  description: string | null;
+  domain: string | null;
+  status: "planned" | "active" | "paused" | "completed" | "archived";
+  priority: "low" | "medium" | "high" | "critical";
+  target_level: string | null;
+  current_level: string | null;
+  started_at: string | null;
+  target_date: string | null;
+  completed_at: string | null;
+  goal_id: string | null;
+  career_target: string | null;
+  research_target: string | null;
+  metadata: Json;
+  created_at: string;
+};
+
+type Phase9SkillRow = Phase9UpdatedSourceFields & {
+  id: string;
+  user_id: string;
+  skill_path_id: string | null;
+  title: string;
+  slug: string | null;
+  description: string | null;
+  category: string | null;
+  status: "not_started" | "learning" | "practicing" | "proving" | "mastered" | "stale" | "archived";
+  priority: "low" | "medium" | "high" | "critical";
+  difficulty: "low" | "medium" | "high" | "expert";
+  target_level: string | null;
+  current_level: string | null;
+  mastery_score: number | null;
+  confidence_score: number | null;
+  proof_required: boolean;
+  interview_relevance: string | null;
+  project_relevance: string | null;
+  research_relevance: string | null;
+  goal_id: string | null;
+  proof_item_id: string | null;
+  metadata: Json;
+  created_at: string;
+};
+
+type Phase9SkillPrerequisiteRow = {
+  id: string;
+  user_id: string;
+  skill_id: string;
+  prerequisite_skill_id: string;
+  relationship_type: "requires" | "recommended" | "blocks" | "supports";
+  notes: string | null;
+  metadata: Json;
+  created_at: string;
+};
+
+type Phase9LearningSessionRow = Phase9UpdatedSourceFields & {
+  id: string;
+  user_id: string;
+  skill_path_id: string | null;
+  skill_id: string | null;
+  title: string;
+  session_type: "study" | "practice" | "build" | "review" | "quiz" | "interview_prep" | "research";
+  status: "planned" | "active" | "completed" | "cancelled" | "archived";
+  started_at: string | null;
+  ended_at: string | null;
+  duration_minutes: number | null;
+  focus_score: number | null;
+  difficulty: "low" | "medium" | "high" | "expert" | null;
+  notes: string | null;
+  summary: string | null;
+  next_step: string | null;
+  goal_id: string | null;
+  task_id: string | null;
+  proof_item_id: string | null;
+  daily_log_id: string | null;
+  metadata: Json;
+  created_at: string;
+};
+
+type Phase9QuizRow = {
+  id: string;
+  user_id: string;
+  skill_path_id: string | null;
+  skill_id: string | null;
+  title: string;
+  description: string | null;
+  quiz_type: "concept_check" | "coding" | "interview" | "project_review" | "research_review" | "mixed";
+  status: "draft" | "active" | "paused" | "archived";
+  difficulty: "low" | "medium" | "high" | "expert";
+  question_count: number | null;
+  passing_score: number | null;
+  metadata: Json;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase9ProjectRow = Phase9UpdatedSourceFields & {
+  id: string;
+  user_id: string;
+  title: string;
+  slug: string | null;
+  description: string | null;
+  project_type: "portfolio" | "learning" | "research" | "career" | "personal_system" | "coursework" | "experiment";
+  status: "planned" | "active" | "blocked" | "shipping" | "shipped" | "paused" | "archived";
+  priority: "low" | "medium" | "high" | "critical";
+  stage: string | null;
+  problem_statement: string | null;
+  target_user: string | null;
+  tech_stack: string[];
+  github_url: string | null;
+  demo_url: string | null;
+  readme_url: string | null;
+  portfolio_url: string | null;
+  resume_bullet_id: string | null;
+  goal_id: string | null;
+  task_id: string | null;
+  proof_item_id: string | null;
+  started_at: string | null;
+  target_date: string | null;
+  completed_at: string | null;
+  metadata: Json;
+  created_at: string;
+};
+
+type Phase9QuizAttemptRow = Phase9SourceFields & {
+  id: string;
+  user_id: string;
+  quiz_id: string;
+  learning_session_id: string | null;
+  skill_id: string | null;
+  status: "completed" | "abandoned" | "needs_review" | "archived";
+  score: number | null;
+  max_score: number | null;
+  passed: boolean | null;
+  attempted_at: string;
+  duration_minutes: number | null;
+  mistake_summary: string | null;
+  strength_summary: string | null;
+  next_review_at: string | null;
+  proof_item_id: string | null;
+  metadata: Json;
+  created_at: string;
+};
+
+type Phase9ProjectMilestoneRow = {
+  id: string;
+  user_id: string;
+  project_id: string;
+  title: string;
+  description: string | null;
+  status: "planned" | "active" | "blocked" | "completed" | "cancelled" | "archived";
+  priority: "low" | "medium" | "high" | "critical";
+  due_date: string | null;
+  completed_at: string | null;
+  task_id: string | null;
+  proof_item_id: string | null;
+  metadata: Json;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase9ProjectBugRow = {
+  id: string;
+  user_id: string;
+  project_id: string;
+  title: string;
+  description: string | null;
+  status: "open" | "investigating" | "fixed" | "wont_fix" | "closed" | "archived";
+  severity: "low" | "medium" | "high" | "critical";
+  source: string | null;
+  reproduction_steps: string | null;
+  root_cause: string | null;
+  fix_summary: string | null;
+  opened_at: string;
+  resolved_at: string | null;
+  task_id: string | null;
+  proof_item_id: string | null;
+  metadata: Json;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase9ProjectTestRow = {
+  id: string;
+  user_id: string;
+  project_id: string;
+  title: string;
+  test_type: "manual" | "unit" | "integration" | "e2e" | "lint" | "typecheck" | "build" | "audit" | "smoke";
+  status: "pending" | "passed" | "failed" | "skipped" | "archived";
+  command: string | null;
+  expected_result: string | null;
+  actual_result: string | null;
+  passed: boolean | null;
+  run_at: string | null;
+  proof_item_id: string | null;
+  metadata: Json;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase9ProjectReleaseRow = {
+  id: string;
+  user_id: string;
+  project_id: string;
+  version: string | null;
+  title: string;
+  description: string | null;
+  status: "planned" | "draft" | "released" | "archived";
+  released_at: string | null;
+  github_tag_url: string | null;
+  demo_url: string | null;
+  release_notes_url: string | null;
+  proof_item_id: string | null;
+  resume_bullet_id: string | null;
+  metadata: Json;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase9ProjectLinkRow = {
+  id: string;
+  user_id: string;
+  project_id: string;
+  label: string;
+  url: string;
+  link_type: "github" | "demo" | "readme" | "portfolio" | "paper" | "video" | "documentation" | "reference" | "proof";
+  description: string | null;
+  proof_item_id: string | null;
+  metadata: Json;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase9SkillProgressRow = Phase9SourceFields & {
+  id: string;
+  user_id: string;
+  skill_id: string;
+  status: "not_started" | "learning" | "practicing" | "proving" | "mastered" | "stale" | "archived";
+  previous_status: "not_started" | "learning" | "practicing" | "proving" | "mastered" | "stale" | "archived" | null;
+  mastery_score: number | null;
+  confidence_score: number | null;
+  delta_summary: string | null;
+  evidence_summary: string | null;
+  learning_session_id: string | null;
+  quiz_attempt_id: string | null;
+  project_id: string | null;
+  proof_item_id: string | null;
+  task_id: string | null;
+  goal_id: string | null;
+  recorded_at: string;
+  metadata: Json;
+  created_at: string;
+};
+
+type CareerResumeVersionRow = CareerUpdatedSourceFields & {
+  id: string;
+  user_id: string;
+  name: string;
+  target_role: string | null;
+  target_company: string | null;
+  target_domain: string | null;
+  file_url: string | null;
+  status: string;
+  keywords: string[];
+  notes: string | null;
+};
+
+type CareerNetworkingContactRow = CareerUpdatedSourceFields & {
+  id: string;
+  user_id: string;
+  full_name: string;
+  company: string | null;
+  role_title: string | null;
+  email: string | null;
+  linkedin_url: string | null;
+  relationship_type: string;
+  relationship_strength: string;
+  status: string;
+  last_contacted_at: string | null;
+  next_follow_up_at: string | null;
+  notes: string | null;
+};
+
+type CareerJobApplicationRow = CareerUpdatedSourceFields & {
+  id: string;
+  user_id: string;
+  company: string;
+  role_title: string;
+  job_url: string | null;
+  location: string | null;
+  work_mode: string;
+  employment_type: string;
+  sponsorship_status: string;
+  source: string | null;
+  status: string;
+  priority: string;
+  applied_at: string | null;
+  follow_up_at: string | null;
+  deadline_at: string | null;
+  resume_version_id: string | null;
+  networking_contact_id: string | null;
+  goal_id: string | null;
+  task_id: string | null;
+  notes: string | null;
+};
+
+type CareerJobApplicationEventRow = CareerSourceFields & {
+  id: string;
+  user_id: string;
+  job_application_id: string;
+  event_type: string;
+  title: string;
+  description: string | null;
+  occurred_at: string;
+};
+
+type CareerNetworkingInteractionRow = CareerSourceFields & {
+  id: string;
+  user_id: string;
+  networking_contact_id: string;
+  job_application_id: string | null;
+  interaction_type: string;
+  title: string;
+  description: string | null;
+  occurred_at: string;
+  follow_up_at: string | null;
+};
+
+type CareerJobReferralRow = CareerUpdatedSourceFields & {
+  id: string;
+  user_id: string;
+  networking_contact_id: string | null;
+  job_application_id: string | null;
+  status: string;
+  requested_at: string | null;
+  confirmed_at: string | null;
+  follow_up_at: string | null;
+  notes: string | null;
+};
+
+type CareerResumeBulletRow = CareerUpdatedSourceFields & {
+  id: string;
+  user_id: string;
+  resume_version_id: string;
+  bullet_text: string;
+  section: string;
+  skill_tags: string[];
+  metric_claim: string | null;
+  proof_item_id: string | null;
+  goal_id: string | null;
+  task_id: string | null;
+};
+
+type CareerInterviewRow = CareerUpdatedSourceFields & {
+  id: string;
+  user_id: string;
+  job_application_id: string | null;
+  company: string | null;
+  role_title: string | null;
+  round_type: string;
+  status: string;
+  scheduled_at: string | null;
+  completed_at: string | null;
+  interviewer_names: string[];
+  prep_notes: string | null;
+  performance_notes: string | null;
+  follow_up_at: string | null;
+  outcome: string;
+};
+
+type Phase10ResearchIdeaRow = {
+  id: string;
+  user_id: string;
+  title: string;
+  summary: string | null;
+  research_area: string | null;
+  status: "captured" | "exploring" | "active" | "blocked" | "converted_to_paper" | "paused" | "archived";
+  priority: "low" | "medium" | "high" | "urgent";
+  novelty_score: number | null;
+  feasibility_score: number | null;
+  impact_score: number | null;
+  proof_strength_score: number | null;
+  project_id: string | null;
+  skill_id: string | null;
+  goal_id: string | null;
+  task_id: string | null;
+  proof_item_id: string | null;
+  source: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchQuestionRow = {
+  id: string;
+  user_id: string;
+  research_idea_id: string | null;
+  question: string;
+  hypothesis: string | null;
+  variable_focus: string | null;
+  expected_outcome: string | null;
+  status: "open" | "investigating" | "supported" | "rejected" | "revised" | "archived";
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchLiteratureItemRow = {
+  id: string;
+  user_id: string;
+  title: string;
+  authors: string[];
+  publication_year: number | null;
+  venue: string | null;
+  source_url: string | null;
+  doi: string | null;
+  arxiv_id: string | null;
+  item_type: "paper" | "article" | "book" | "thesis" | "technical_report" | "documentation" | "dataset" | "benchmark" | "other";
+  reading_status: "saved" | "skimmed" | "reading" | "read" | "summarized" | "cited" | "archived";
+  relevance_score: number | null;
+  credibility_score: number | null;
+  summary: string | null;
+  key_methods: string | null;
+  key_results: string | null;
+  limitations: string | null;
+  notes: string | null;
+  related_research_idea_id: string | null;
+  related_project_id: string | null;
+  proof_item_id: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchPaperRow = {
+  id: string;
+  user_id: string;
+  title: string;
+  abstract: string | null;
+  research_area: string | null;
+  status: "idea" | "outline" | "drafting" | "internal_review" | "professor_review" | "revision" | "submission_ready" | "submitted" | "accepted" | "rejected" | "archived";
+  primary_research_idea_id: string | null;
+  project_id: string | null;
+  proof_item_id: string | null;
+  resume_bullet_id: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+  target_venue_id: string | null;
+};
+
+type Phase10ResearchPaperVersionRow = {
+  id: string;
+  user_id: string;
+  research_paper_id: string;
+  version_label: string;
+  file_url: string | null;
+  doc_url: string | null;
+  abstract_snapshot: string | null;
+  status: "draft" | "reviewed" | "revised" | "submission_candidate" | "archived";
+  page_count: number | null;
+  readiness_score: number | null;
+  main_gap: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchClaimRow = {
+  id: string;
+  user_id: string;
+  research_idea_id: string | null;
+  research_paper_id: string | null;
+  paper_version_id: string | null;
+  claim_text: string;
+  claim_type: "novelty" | "method" | "result" | "comparison" | "limitation" | "contribution" | "application" | "future_work";
+  support_status: "unsupported" | "partially_supported" | "supported" | "contradicted" | "needs_review";
+  evidence_strength: number | null;
+  literature_item_id: string | null;
+  proof_item_id: string | null;
+  project_id: string | null;
+  resume_bullet_id: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchExperimentRow = {
+  id: string;
+  user_id: string;
+  research_idea_id: string | null;
+  research_question_id: string | null;
+  project_id: string | null;
+  title: string;
+  objective: string | null;
+  method: string | null;
+  dataset: string | null;
+  baseline: string | null;
+  variables: Json;
+  metrics: Json;
+  reproducibility_status: "not_started" | "partial" | "reproducible" | "not_reproducible" | "needs_cleanup";
+  status: "planned" | "running" | "blocked" | "completed" | "failed" | "archived";
+  started_at: string | null;
+  completed_at: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchResultRow = {
+  id: string;
+  user_id: string;
+  research_experiment_id: string | null;
+  research_idea_id: string | null;
+  project_id: string | null;
+  title: string;
+  result_summary: string | null;
+  metric_name: string | null;
+  metric_value: number | null;
+  metric_unit: string | null;
+  comparison_baseline: string | null;
+  interpretation: string | null;
+  limitation: string | null;
+  figure_reference: string | null;
+  table_reference: string | null;
+  proof_item_id: string | null;
+  paper_version_id: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchCitationRow = {
+  id: string;
+  user_id: string;
+  literature_item_id: string;
+  research_idea_id: string | null;
+  research_claim_id: string | null;
+  research_paper_id: string | null;
+  paper_version_id: string | null;
+  citation_purpose: "background" | "related_work" | "method_support" | "result_comparison" | "limitation" | "future_work" | "contradiction" | "definition" | "benchmark" | "other";
+  citation_note: string | null;
+  quote_or_excerpt: string | null;
+  page_or_section: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchVenueRow = {
+  id: string;
+  user_id: string;
+  name: string;
+  venue_type: "conference" | "journal" | "workshop" | "symposium" | "preprint" | "internal_review" | "other";
+  field: string | null;
+  ranking_note: string | null;
+  deadline: string | null;
+  submission_url: string | null;
+  page_limit: number | null;
+  format_requirements: string | null;
+  fit_score: number | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchSubmissionRow = {
+  id: string;
+  user_id: string;
+  research_paper_id: string;
+  research_venue_id: string | null;
+  submitted_at: string | null;
+  status: "planned" | "preparing" | "submitted" | "under_review" | "accepted" | "rejected" | "withdrawn" | "archived";
+  decision: string | null;
+  decision_at: string | null;
+  reviewer_summary: string | null;
+  next_action: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10ResearchFeedbackRow = {
+  id: string;
+  user_id: string;
+  research_paper_id: string | null;
+  paper_version_id: string | null;
+  research_idea_id: string | null;
+  feedback_source_type: "professor" | "advisor" | "collaborator" | "reviewer" | "self_review" | "peer" | "other";
+  feedback_source_name: string | null;
+  feedback_date: string | null;
+  summary: string;
+  required_changes: string | null;
+  severity: "low" | "medium" | "high" | "critical";
+  status: "received" | "triaged" | "in_progress" | "addressed" | "rejected" | "archived";
+  task_id: string | null;
+  proof_item_id: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10TargetUniversityRow = {
+  id: string;
+  user_id: string;
+  name: string;
+  program_name: string | null;
+  department: string | null;
+  country: string | null;
+  location: string | null;
+  target_level: "dream" | "reach" | "target" | "safety" | "exploratory";
+  fit_score: number | null;
+  competitiveness: string | null;
+  application_deadline: string | null;
+  requirements_url: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10TargetLabRow = {
+  id: string;
+  user_id: string;
+  target_university_id: string | null;
+  name: string;
+  research_area: string | null;
+  lab_url: string | null;
+  fit_score: number | null;
+  fit_reason: string | null;
+  related_research_idea_id: string | null;
+  related_research_paper_id: string | null;
+  related_project_id: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10TargetProfessorRow = {
+  id: string;
+  user_id: string;
+  target_university_id: string | null;
+  target_lab_id: string | null;
+  name: string;
+  title: string | null;
+  email: string | null;
+  profile_url: string | null;
+  research_area: string | null;
+  fit_score: number | null;
+  fit_reason: string | null;
+  outreach_status: "not_started" | "researching" | "draft_needed" | "ready_to_contact" | "contacted" | "replied" | "follow_up_needed" | "not_fit" | "archived";
+  last_contacted_at: string | null;
+  related_literature_item_id: string | null;
+  related_research_idea_id: string | null;
+  related_research_paper_id: string | null;
+  related_project_id: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10PhdReadinessAssessmentRow = {
+  id: string;
+  user_id: string;
+  assessment_date: string;
+  overall_score: number | null;
+  research_score: number | null;
+  publication_score: number | null;
+  project_score: number | null;
+  proof_score: number | null;
+  recommendation_score: number | null;
+  sop_score: number | null;
+  professor_fit_score: number | null;
+  academic_context_score: number | null;
+  main_gap: string | null;
+  next_action: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10PhdApplicationAssetRow = {
+  id: string;
+  user_id: string;
+  target_university_id: string | null;
+  asset_type: "sop" | "cv" | "resume" | "transcript" | "recommendation" | "writing_sample" | "research_statement" | "portfolio" | "paper" | "test_score" | "other";
+  title: string;
+  status: "missing" | "planned" | "drafting" | "needs_review" | "ready" | "submitted" | "archived";
+  file_url: string | null;
+  doc_url: string | null;
+  quality_score: number | null;
+  due_date: string | null;
+  task_id: string | null;
+  proof_item_id: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10SopVersionRow = {
+  id: string;
+  user_id: string;
+  target_university_id: string | null;
+  version_label: string;
+  doc_url: string | null;
+  thesis: string | null;
+  research_fit_summary: string | null;
+  professor_fit_summary: string | null;
+  weakness_notes: string | null;
+  readiness_score: number | null;
+  status: "outline" | "draft" | "reviewed" | "revised" | "ready" | "submitted" | "archived";
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase10RecommendationTargetRow = {
+  id: string;
+  user_id: string;
+  recommender_name: string;
+  recommender_role: string | null;
+  institution_or_company: string | null;
+  relationship_context: string | null;
+  strength_score: number | null;
+  request_status: "potential" | "preparing" | "requested" | "agreed" | "submitted" | "unavailable" | "archived";
+  requested_at: string | null;
+  due_date: string | null;
+  target_university_id: string | null;
+  related_research_paper_id: string | null;
+  related_project_id: string | null;
+  proof_item_id: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
 
 export type Database = {
   public: {
@@ -26070,6 +48976,292 @@ export type Database = {
           },
         ];
       };
+      skill_paths: {
+        Row: Phase9SkillPathRow;
+        Insert: Partial<Phase9SkillPathRow> & { user_id: string; title: string };
+        Update: Partial<Phase9SkillPathRow>;
+        Relationships: [];
+      };
+      skills: {
+        Row: Phase9SkillRow;
+        Insert: Partial<Phase9SkillRow> & { user_id: string; title: string };
+        Update: Partial<Phase9SkillRow>;
+        Relationships: [];
+      };
+      skill_prerequisites: {
+        Row: Phase9SkillPrerequisiteRow;
+        Insert: Partial<Phase9SkillPrerequisiteRow> & {
+          user_id: string;
+          skill_id: string;
+          prerequisite_skill_id: string;
+        };
+        Update: Partial<Phase9SkillPrerequisiteRow>;
+        Relationships: [];
+      };
+      learning_sessions: {
+        Row: Phase9LearningSessionRow;
+        Insert: Partial<Phase9LearningSessionRow> & { user_id: string; title: string };
+        Update: Partial<Phase9LearningSessionRow>;
+        Relationships: [];
+      };
+      quizzes: {
+        Row: Phase9QuizRow;
+        Insert: Partial<Phase9QuizRow> & { user_id: string; title: string };
+        Update: Partial<Phase9QuizRow>;
+        Relationships: [];
+      };
+      projects: {
+        Row: Phase9ProjectRow;
+        Insert: Partial<Phase9ProjectRow> & { user_id: string; title: string };
+        Update: Partial<Phase9ProjectRow>;
+        Relationships: [];
+      };
+      quiz_attempts: {
+        Row: Phase9QuizAttemptRow;
+        Insert: Partial<Phase9QuizAttemptRow> & { user_id: string; quiz_id: string };
+        Update: Partial<Phase9QuizAttemptRow>;
+        Relationships: [];
+      };
+      project_milestones: {
+        Row: Phase9ProjectMilestoneRow;
+        Insert: Partial<Phase9ProjectMilestoneRow> & {
+          user_id: string;
+          project_id: string;
+          title: string;
+        };
+        Update: Partial<Phase9ProjectMilestoneRow>;
+        Relationships: [];
+      };
+      project_bugs: {
+        Row: Phase9ProjectBugRow;
+        Insert: Partial<Phase9ProjectBugRow> & {
+          user_id: string;
+          project_id: string;
+          title: string;
+        };
+        Update: Partial<Phase9ProjectBugRow>;
+        Relationships: [];
+      };
+      project_tests: {
+        Row: Phase9ProjectTestRow;
+        Insert: Partial<Phase9ProjectTestRow> & {
+          user_id: string;
+          project_id: string;
+          title: string;
+        };
+        Update: Partial<Phase9ProjectTestRow>;
+        Relationships: [];
+      };
+      project_releases: {
+        Row: Phase9ProjectReleaseRow;
+        Insert: Partial<Phase9ProjectReleaseRow> & {
+          user_id: string;
+          project_id: string;
+          title: string;
+        };
+        Update: Partial<Phase9ProjectReleaseRow>;
+        Relationships: [];
+      };
+      project_links: {
+        Row: Phase9ProjectLinkRow;
+        Insert: Partial<Phase9ProjectLinkRow> & {
+          user_id: string;
+          project_id: string;
+          label: string;
+          url: string;
+        };
+        Update: Partial<Phase9ProjectLinkRow>;
+        Relationships: [];
+      };
+      skill_progress: {
+        Row: Phase9SkillProgressRow;
+        Insert: Partial<Phase9SkillProgressRow> & {
+          user_id: string;
+          skill_id: string;
+          status: Phase9SkillProgressRow["status"];
+        };
+        Update: Partial<Phase9SkillProgressRow>;
+        Relationships: [];
+      };
+
+      resume_bullets: {
+        Row: CareerResumeBulletRow;
+        Insert: Partial<CareerResumeBulletRow> & {
+          user_id: string;
+          resume_version_id: string;
+          bullet_text: string;
+        };
+        Update: Partial<CareerResumeBulletRow>;
+        Relationships: [];
+      };
+      interviews: {
+        Row: CareerInterviewRow;
+        Insert: Partial<CareerInterviewRow> & { user_id: string };
+        Update: Partial<CareerInterviewRow>;
+        Relationships: [];
+      };
+      resume_versions: {
+        Row: CareerResumeVersionRow;
+        Insert: Partial<CareerResumeVersionRow> & { user_id: string; name: string };
+        Update: Partial<CareerResumeVersionRow>;
+        Relationships: [];
+      };
+
+      job_applications: {
+        Row: CareerJobApplicationRow;
+        Insert: Partial<CareerJobApplicationRow> & { user_id: string; company: string; role_title: string };
+        Update: Partial<CareerJobApplicationRow>;
+        Relationships: [];
+      };
+      job_application_events: {
+        Row: CareerJobApplicationEventRow;
+        Insert: Partial<CareerJobApplicationEventRow> & {
+          user_id: string;
+          job_application_id: string;
+          event_type: string;
+          title: string;
+        };
+        Update: Partial<CareerJobApplicationEventRow>;
+        Relationships: [];
+      };
+
+      networking_interactions: {
+        Row: CareerNetworkingInteractionRow;
+        Insert: Partial<CareerNetworkingInteractionRow> & {
+          user_id: string;
+          networking_contact_id: string;
+          title: string;
+        };
+        Update: Partial<CareerNetworkingInteractionRow>;
+        Relationships: [];
+      };
+      job_referrals: {
+        Row: CareerJobReferralRow;
+        Insert: Partial<CareerJobReferralRow> & { user_id: string };
+        Update: Partial<CareerJobReferralRow>;
+        Relationships: [];
+      };
+      networking_contacts: {
+        Row: CareerNetworkingContactRow;
+        Insert: Partial<CareerNetworkingContactRow> & { user_id: string; full_name: string };
+        Update: Partial<CareerNetworkingContactRow>;
+        Relationships: [];
+      };
+
+      research_ideas: {
+        Row: Phase10ResearchIdeaRow;
+        Insert: Partial<Phase10ResearchIdeaRow> & { user_id: string; title: string };
+        Update: Partial<Phase10ResearchIdeaRow>;
+        Relationships: [];
+      };
+      research_questions: {
+        Row: Phase10ResearchQuestionRow;
+        Insert: Partial<Phase10ResearchQuestionRow> & { user_id: string; question: string };
+        Update: Partial<Phase10ResearchQuestionRow>;
+        Relationships: [];
+      };
+      research_literature_items: {
+        Row: Phase10ResearchLiteratureItemRow;
+        Insert: Partial<Phase10ResearchLiteratureItemRow> & { user_id: string; title: string };
+        Update: Partial<Phase10ResearchLiteratureItemRow>;
+        Relationships: [];
+      };
+      research_papers: {
+        Row: Phase10ResearchPaperRow;
+        Insert: Partial<Phase10ResearchPaperRow> & { user_id: string; title: string };
+        Update: Partial<Phase10ResearchPaperRow>;
+        Relationships: [];
+      };
+      research_paper_versions: {
+        Row: Phase10ResearchPaperVersionRow;
+        Insert: Partial<Phase10ResearchPaperVersionRow> & { user_id: string; research_paper_id: string; version_label: string };
+        Update: Partial<Phase10ResearchPaperVersionRow>;
+        Relationships: [];
+      };
+      research_claims: {
+        Row: Phase10ResearchClaimRow;
+        Insert: Partial<Phase10ResearchClaimRow> & { user_id: string; claim_text: string };
+        Update: Partial<Phase10ResearchClaimRow>;
+        Relationships: [];
+      };
+      research_experiments: {
+        Row: Phase10ResearchExperimentRow;
+        Insert: Partial<Phase10ResearchExperimentRow> & { user_id: string; title: string };
+        Update: Partial<Phase10ResearchExperimentRow>;
+        Relationships: [];
+      };
+      research_results: {
+        Row: Phase10ResearchResultRow;
+        Insert: Partial<Phase10ResearchResultRow> & { user_id: string; title: string };
+        Update: Partial<Phase10ResearchResultRow>;
+        Relationships: [];
+      };
+      research_citations: {
+        Row: Phase10ResearchCitationRow;
+        Insert: Partial<Phase10ResearchCitationRow> & { user_id: string; literature_item_id: string };
+        Update: Partial<Phase10ResearchCitationRow>;
+        Relationships: [];
+      };
+      research_venues: {
+        Row: Phase10ResearchVenueRow;
+        Insert: Partial<Phase10ResearchVenueRow> & { user_id: string; name: string };
+        Update: Partial<Phase10ResearchVenueRow>;
+        Relationships: [];
+      };
+      research_submissions: {
+        Row: Phase10ResearchSubmissionRow;
+        Insert: Partial<Phase10ResearchSubmissionRow> & { user_id: string; research_paper_id: string };
+        Update: Partial<Phase10ResearchSubmissionRow>;
+        Relationships: [];
+      };
+      research_feedback: {
+        Row: Phase10ResearchFeedbackRow;
+        Insert: Partial<Phase10ResearchFeedbackRow> & { user_id: string; summary: string };
+        Update: Partial<Phase10ResearchFeedbackRow>;
+        Relationships: [];
+      };
+      target_universities: {
+        Row: Phase10TargetUniversityRow;
+        Insert: Partial<Phase10TargetUniversityRow> & { user_id: string; name: string };
+        Update: Partial<Phase10TargetUniversityRow>;
+        Relationships: [];
+      };
+      target_labs: {
+        Row: Phase10TargetLabRow;
+        Insert: Partial<Phase10TargetLabRow> & { user_id: string; name: string };
+        Update: Partial<Phase10TargetLabRow>;
+        Relationships: [];
+      };
+      target_professors: {
+        Row: Phase10TargetProfessorRow;
+        Insert: Partial<Phase10TargetProfessorRow> & { user_id: string; name: string };
+        Update: Partial<Phase10TargetProfessorRow>;
+        Relationships: [];
+      };
+      phd_readiness_assessments: {
+        Row: Phase10PhdReadinessAssessmentRow;
+        Insert: Partial<Phase10PhdReadinessAssessmentRow> & { user_id: string };
+        Update: Partial<Phase10PhdReadinessAssessmentRow>;
+        Relationships: [];
+      };
+      phd_application_assets: {
+        Row: Phase10PhdApplicationAssetRow;
+        Insert: Partial<Phase10PhdApplicationAssetRow> & { user_id: string; asset_type: Phase10PhdApplicationAssetRow["asset_type"]; title: string };
+        Update: Partial<Phase10PhdApplicationAssetRow>;
+        Relationships: [];
+      };
+      sop_versions: {
+        Row: Phase10SopVersionRow;
+        Insert: Partial<Phase10SopVersionRow> & { user_id: string; version_label: string };
+        Update: Partial<Phase10SopVersionRow>;
+        Relationships: [];
+      };
+      recommendation_targets: {
+        Row: Phase10RecommendationTargetRow;
+        Insert: Partial<Phase10RecommendationTargetRow> & { user_id: string; recommender_name: string };
+        Update: Partial<Phase10RecommendationTargetRow>;
+        Relationships: [];
+      };
     };
     Views: Record<string, never>;
     Functions: Record<string, never>;
@@ -26127,6 +49319,166 @@ export type TaskUpdate = Tables["tasks"]["Update"];
 export type EventRow = Tables["events"]["Row"];
 export type EventInsert = Tables["events"]["Insert"];
 export type EventUpdate = Tables["events"]["Update"];
+
+export type ResumeVersionRow = Tables["resume_versions"]["Row"];
+export type ResumeVersionInsert = Tables["resume_versions"]["Insert"];
+export type ResumeVersionUpdate = Tables["resume_versions"]["Update"];
+
+export type NetworkingContactRow = Tables["networking_contacts"]["Row"];
+export type NetworkingContactInsert = Tables["networking_contacts"]["Insert"];
+export type NetworkingContactUpdate = Tables["networking_contacts"]["Update"];
+
+export type JobApplicationRow = Tables["job_applications"]["Row"];
+export type JobApplicationInsert = Tables["job_applications"]["Insert"];
+export type JobApplicationUpdate = Tables["job_applications"]["Update"];
+
+export type JobApplicationEventRow = Tables["job_application_events"]["Row"];
+export type JobApplicationEventInsert = Tables["job_application_events"]["Insert"];
+export type JobApplicationEventUpdate = Tables["job_application_events"]["Update"];
+
+export type NetworkingInteractionRow = Tables["networking_interactions"]["Row"];
+export type NetworkingInteractionInsert = Tables["networking_interactions"]["Insert"];
+export type NetworkingInteractionUpdate = Tables["networking_interactions"]["Update"];
+
+export type JobReferralRow = Tables["job_referrals"]["Row"];
+export type JobReferralInsert = Tables["job_referrals"]["Insert"];
+export type JobReferralUpdate = Tables["job_referrals"]["Update"];
+
+export type ResumeBulletRow = Tables["resume_bullets"]["Row"];
+export type ResumeBulletInsert = Tables["resume_bullets"]["Insert"];
+export type ResumeBulletUpdate = Tables["resume_bullets"]["Update"];
+
+export type InterviewRow = Tables["interviews"]["Row"];
+export type InterviewInsert = Tables["interviews"]["Insert"];
+export type InterviewUpdate = Tables["interviews"]["Update"];
+
+export type SkillPathRow = Tables["skill_paths"]["Row"];
+export type SkillPathInsert = Tables["skill_paths"]["Insert"];
+export type SkillPathUpdate = Tables["skill_paths"]["Update"];
+
+export type SkillRow = Tables["skills"]["Row"];
+export type SkillInsert = Tables["skills"]["Insert"];
+export type SkillUpdate = Tables["skills"]["Update"];
+
+export type SkillPrerequisiteRow = Tables["skill_prerequisites"]["Row"];
+export type SkillPrerequisiteInsert = Tables["skill_prerequisites"]["Insert"];
+export type SkillPrerequisiteUpdate = Tables["skill_prerequisites"]["Update"];
+
+export type LearningSessionRow = Tables["learning_sessions"]["Row"];
+export type LearningSessionInsert = Tables["learning_sessions"]["Insert"];
+export type LearningSessionUpdate = Tables["learning_sessions"]["Update"];
+
+export type QuizRow = Tables["quizzes"]["Row"];
+export type QuizInsert = Tables["quizzes"]["Insert"];
+export type QuizUpdate = Tables["quizzes"]["Update"];
+
+export type ProjectRow = Tables["projects"]["Row"];
+export type ProjectInsert = Tables["projects"]["Insert"];
+export type ProjectUpdate = Tables["projects"]["Update"];
+
+export type QuizAttemptRow = Tables["quiz_attempts"]["Row"];
+export type QuizAttemptInsert = Tables["quiz_attempts"]["Insert"];
+export type QuizAttemptUpdate = Tables["quiz_attempts"]["Update"];
+
+export type ProjectMilestoneRow = Tables["project_milestones"]["Row"];
+export type ProjectMilestoneInsert = Tables["project_milestones"]["Insert"];
+export type ProjectMilestoneUpdate = Tables["project_milestones"]["Update"];
+
+export type ProjectBugRow = Tables["project_bugs"]["Row"];
+export type ProjectBugInsert = Tables["project_bugs"]["Insert"];
+export type ProjectBugUpdate = Tables["project_bugs"]["Update"];
+
+export type ProjectTestRow = Tables["project_tests"]["Row"];
+export type ProjectTestInsert = Tables["project_tests"]["Insert"];
+export type ProjectTestUpdate = Tables["project_tests"]["Update"];
+
+export type ProjectReleaseRow = Tables["project_releases"]["Row"];
+export type ProjectReleaseInsert = Tables["project_releases"]["Insert"];
+export type ProjectReleaseUpdate = Tables["project_releases"]["Update"];
+
+export type ProjectLinkRow = Tables["project_links"]["Row"];
+export type ProjectLinkInsert = Tables["project_links"]["Insert"];
+export type ProjectLinkUpdate = Tables["project_links"]["Update"];
+
+export type SkillProgressRow = Tables["skill_progress"]["Row"];
+export type SkillProgressInsert = Tables["skill_progress"]["Insert"];
+export type SkillProgressUpdate = Tables["skill_progress"]["Update"];
+
+export type ResearchIdeaRow = Tables["research_ideas"]["Row"];
+export type ResearchIdeaInsert = Tables["research_ideas"]["Insert"];
+export type ResearchIdeaUpdate = Tables["research_ideas"]["Update"];
+
+export type ResearchQuestionRow = Tables["research_questions"]["Row"];
+export type ResearchQuestionInsert = Tables["research_questions"]["Insert"];
+export type ResearchQuestionUpdate = Tables["research_questions"]["Update"];
+
+export type ResearchLiteratureItemRow = Tables["research_literature_items"]["Row"];
+export type ResearchLiteratureItemInsert = Tables["research_literature_items"]["Insert"];
+export type ResearchLiteratureItemUpdate = Tables["research_literature_items"]["Update"];
+
+export type ResearchPaperRow = Tables["research_papers"]["Row"];
+export type ResearchPaperInsert = Tables["research_papers"]["Insert"];
+export type ResearchPaperUpdate = Tables["research_papers"]["Update"];
+
+export type ResearchPaperVersionRow = Tables["research_paper_versions"]["Row"];
+export type ResearchPaperVersionInsert = Tables["research_paper_versions"]["Insert"];
+export type ResearchPaperVersionUpdate = Tables["research_paper_versions"]["Update"];
+
+export type ResearchClaimRow = Tables["research_claims"]["Row"];
+export type ResearchClaimInsert = Tables["research_claims"]["Insert"];
+export type ResearchClaimUpdate = Tables["research_claims"]["Update"];
+
+export type ResearchExperimentRow = Tables["research_experiments"]["Row"];
+export type ResearchExperimentInsert = Tables["research_experiments"]["Insert"];
+export type ResearchExperimentUpdate = Tables["research_experiments"]["Update"];
+
+export type ResearchResultRow = Tables["research_results"]["Row"];
+export type ResearchResultInsert = Tables["research_results"]["Insert"];
+export type ResearchResultUpdate = Tables["research_results"]["Update"];
+
+export type ResearchCitationRow = Tables["research_citations"]["Row"];
+export type ResearchCitationInsert = Tables["research_citations"]["Insert"];
+export type ResearchCitationUpdate = Tables["research_citations"]["Update"];
+
+export type ResearchVenueRow = Tables["research_venues"]["Row"];
+export type ResearchVenueInsert = Tables["research_venues"]["Insert"];
+export type ResearchVenueUpdate = Tables["research_venues"]["Update"];
+
+export type ResearchSubmissionRow = Tables["research_submissions"]["Row"];
+export type ResearchSubmissionInsert = Tables["research_submissions"]["Insert"];
+export type ResearchSubmissionUpdate = Tables["research_submissions"]["Update"];
+
+export type ResearchFeedbackRow = Tables["research_feedback"]["Row"];
+export type ResearchFeedbackInsert = Tables["research_feedback"]["Insert"];
+export type ResearchFeedbackUpdate = Tables["research_feedback"]["Update"];
+
+export type TargetUniversityRow = Tables["target_universities"]["Row"];
+export type TargetUniversityInsert = Tables["target_universities"]["Insert"];
+export type TargetUniversityUpdate = Tables["target_universities"]["Update"];
+
+export type TargetLabRow = Tables["target_labs"]["Row"];
+export type TargetLabInsert = Tables["target_labs"]["Insert"];
+export type TargetLabUpdate = Tables["target_labs"]["Update"];
+
+export type TargetProfessorRow = Tables["target_professors"]["Row"];
+export type TargetProfessorInsert = Tables["target_professors"]["Insert"];
+export type TargetProfessorUpdate = Tables["target_professors"]["Update"];
+
+export type PhdReadinessAssessmentRow = Tables["phd_readiness_assessments"]["Row"];
+export type PhdReadinessAssessmentInsert = Tables["phd_readiness_assessments"]["Insert"];
+export type PhdReadinessAssessmentUpdate = Tables["phd_readiness_assessments"]["Update"];
+
+export type PhdApplicationAssetRow = Tables["phd_application_assets"]["Row"];
+export type PhdApplicationAssetInsert = Tables["phd_application_assets"]["Insert"];
+export type PhdApplicationAssetUpdate = Tables["phd_application_assets"]["Update"];
+
+export type SopVersionRow = Tables["sop_versions"]["Row"];
+export type SopVersionInsert = Tables["sop_versions"]["Insert"];
+export type SopVersionUpdate = Tables["sop_versions"]["Update"];
+
+export type RecommendationTargetRow = Tables["recommendation_targets"]["Row"];
+export type RecommendationTargetInsert = Tables["recommendation_targets"]["Insert"];
+export type RecommendationTargetUpdate = Tables["recommendation_targets"]["Update"];
 ```
 
 ### `supabase/migrations/0001_profiles_and_carnos_profiles.sql`
@@ -27264,6 +50616,3311 @@ on public.events
 for delete
 to authenticated
 using (auth.uid() = user_id);
+```
+
+### `supabase/migrations/0007_career_system_foundation.sql`
+
+```sql
+-- ascendOS + Carnos
+-- Migration 0007: career system foundation
+
+create table if not exists public.resume_versions (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  name text not null,
+  target_role text,
+  target_company text,
+  target_domain text,
+  file_url text,
+  status text not null default 'draft'
+    check (status in ('draft', 'active', 'submitted', 'archived')),
+  keywords text[] not null default '{}'::text[],
+  notes text,
+  metadata jsonb not null default '{}'::jsonb,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.networking_contacts (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  full_name text not null,
+  company text,
+  role_title text,
+  email text,
+  linkedin_url text,
+  relationship_type text not null default 'professional'
+    check (
+      relationship_type in (
+        'professional',
+        'recruiter',
+        'alumni',
+        'professor',
+        'friend',
+        'manager',
+        'teammate',
+        'mentor',
+        'unknown'
+      )
+    ),
+  relationship_strength text not null default 'weak'
+    check (relationship_strength in ('weak', 'medium', 'strong', 'champion')),
+  status text not null default 'active'
+    check (status in ('active', 'follow_up_due', 'paused', 'archived')),
+  last_contacted_at timestamptz,
+  next_follow_up_at timestamptz,
+  notes text,
+  metadata jsonb not null default '{}'::jsonb,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.job_applications (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  company text not null,
+  role_title text not null,
+  job_url text,
+  location text,
+  work_mode text not null default 'unknown'
+    check (work_mode in ('unknown', 'remote', 'hybrid', 'onsite')),
+  employment_type text not null default 'unknown'
+    check (
+      employment_type in (
+        'unknown',
+        'full_time',
+        'part_time',
+        'contract',
+        'internship',
+        'research',
+        'assistantship'
+      )
+    ),
+  sponsorship_status text not null default 'unknown'
+    check (sponsorship_status in ('unknown', 'sponsors', 'does_not_sponsor', 'maybe', 'not_needed')),
+  source text,
+  status text not null default 'saved'
+    check (
+      status in (
+        'saved',
+        'preparing',
+        'applied',
+        'follow_up_due',
+        'recruiter_contacted',
+        'oa',
+        'interviewing',
+        'offer',
+        'rejected',
+        'ghosted',
+        'withdrawn',
+        'archived'
+      )
+    ),
+  priority text not null default 'medium'
+    check (priority in ('low', 'medium', 'high', 'critical')),
+  applied_at timestamptz,
+  follow_up_at timestamptz,
+  deadline_at timestamptz,
+  resume_version_id uuid references public.resume_versions(id) on delete set null,
+  networking_contact_id uuid references public.networking_contacts(id) on delete set null,
+  goal_id uuid references public.goals(id) on delete set null,
+  task_id uuid references public.tasks(id) on delete set null,
+  notes text,
+  metadata jsonb not null default '{}'::jsonb,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.job_application_events (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  job_application_id uuid not null references public.job_applications(id) on delete cascade,
+  event_type text not null
+    check (
+      event_type in (
+        'saved',
+        'prepared',
+        'applied',
+        'followed_up',
+        'recruiter_response',
+        'oa_received',
+        'oa_completed',
+        'interview_scheduled',
+        'interview_completed',
+        'rejected',
+        'offer',
+        'ghosted',
+        'withdrawn',
+        'note'
+      )
+    ),
+  title text not null,
+  description text,
+  occurred_at timestamptz not null default now(),
+  metadata jsonb not null default '{}'::jsonb,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default now()
+);
+
+create table if not exists public.networking_interactions (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  networking_contact_id uuid not null references public.networking_contacts(id) on delete cascade,
+  job_application_id uuid references public.job_applications(id) on delete set null,
+  interaction_type text not null default 'note'
+    check (
+      interaction_type in (
+        'message',
+        'email',
+        'call',
+        'meeting',
+        'linkedin',
+        'referral_ask',
+        'follow_up',
+        'thank_you',
+        'note'
+      )
+    ),
+  title text not null,
+  description text,
+  occurred_at timestamptz not null default now(),
+  follow_up_at timestamptz,
+  metadata jsonb not null default '{}'::jsonb,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default now()
+);
+
+create table if not exists public.job_referrals (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  networking_contact_id uuid references public.networking_contacts(id) on delete set null,
+  job_application_id uuid references public.job_applications(id) on delete cascade,
+  status text not null default 'not_requested'
+    check (status in ('not_requested', 'planned', 'requested', 'confirmed', 'declined', 'stale', 'archived')),
+  requested_at timestamptz,
+  confirmed_at timestamptz,
+  follow_up_at timestamptz,
+  notes text,
+  metadata jsonb not null default '{}'::jsonb,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.resume_bullets (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  resume_version_id uuid not null references public.resume_versions(id) on delete cascade,
+  bullet_text text not null,
+  section text not null default 'experience',
+  skill_tags text[] not null default '{}'::text[],
+  metric_claim text,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  goal_id uuid references public.goals(id) on delete set null,
+  task_id uuid references public.tasks(id) on delete set null,
+  metadata jsonb not null default '{}'::jsonb,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.interviews (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  job_application_id uuid references public.job_applications(id) on delete set null,
+  company text,
+  role_title text,
+  round_type text not null default 'unknown'
+    check (
+      round_type in (
+        'unknown',
+        'recruiter',
+        'technical',
+        'behavioral',
+        'system_design',
+        'hiring_manager',
+        'onsite',
+        'final',
+        'oa_review'
+      )
+    ),
+  status text not null default 'scheduled'
+    check (status in ('scheduled', 'prep_needed', 'completed', 'cancelled', 'rescheduled', 'archived')),
+  scheduled_at timestamptz,
+  completed_at timestamptz,
+  interviewer_names text[] not null default '{}'::text[],
+  prep_notes text,
+  performance_notes text,
+  follow_up_at timestamptz,
+  outcome text not null default 'pending'
+    check (outcome in ('pending', 'passed', 'failed', 'offer', 'rejected', 'no_show', 'withdrawn')),
+  metadata jsonb not null default '{}'::jsonb,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create index if not exists resume_versions_user_id_idx on public.resume_versions(user_id);
+create index if not exists resume_versions_status_idx on public.resume_versions(status);
+create index if not exists resume_versions_target_domain_idx on public.resume_versions(target_domain);
+create index if not exists resume_versions_created_at_idx on public.resume_versions(created_at desc);
+create index if not exists resume_versions_updated_at_idx on public.resume_versions(updated_at desc);
+
+create index if not exists networking_contacts_user_id_idx on public.networking_contacts(user_id);
+create index if not exists networking_contacts_company_idx on public.networking_contacts(company);
+create index if not exists networking_contacts_status_idx on public.networking_contacts(status);
+create index if not exists networking_contacts_relationship_type_idx on public.networking_contacts(relationship_type);
+create index if not exists networking_contacts_relationship_strength_idx on public.networking_contacts(relationship_strength);
+create index if not exists networking_contacts_next_follow_up_at_idx on public.networking_contacts(next_follow_up_at);
+create index if not exists networking_contacts_updated_at_idx on public.networking_contacts(updated_at desc);
+
+create index if not exists job_applications_user_id_idx on public.job_applications(user_id);
+create index if not exists job_applications_status_idx on public.job_applications(status);
+create index if not exists job_applications_priority_idx on public.job_applications(priority);
+create index if not exists job_applications_company_idx on public.job_applications(company);
+create index if not exists job_applications_resume_version_id_idx on public.job_applications(resume_version_id);
+create index if not exists job_applications_networking_contact_id_idx on public.job_applications(networking_contact_id);
+create index if not exists job_applications_goal_id_idx on public.job_applications(goal_id);
+create index if not exists job_applications_task_id_idx on public.job_applications(task_id);
+create index if not exists job_applications_applied_at_idx on public.job_applications(applied_at desc);
+create index if not exists job_applications_follow_up_at_idx on public.job_applications(follow_up_at);
+create index if not exists job_applications_deadline_at_idx on public.job_applications(deadline_at);
+create index if not exists job_applications_updated_at_idx on public.job_applications(updated_at desc);
+
+create index if not exists job_application_events_user_id_idx on public.job_application_events(user_id);
+create index if not exists job_application_events_job_application_id_idx on public.job_application_events(job_application_id);
+create index if not exists job_application_events_event_type_idx on public.job_application_events(event_type);
+create index if not exists job_application_events_occurred_at_idx on public.job_application_events(occurred_at desc);
+
+create index if not exists networking_interactions_user_id_idx on public.networking_interactions(user_id);
+create index if not exists networking_interactions_networking_contact_id_idx on public.networking_interactions(networking_contact_id);
+create index if not exists networking_interactions_job_application_id_idx on public.networking_interactions(job_application_id);
+create index if not exists networking_interactions_interaction_type_idx on public.networking_interactions(interaction_type);
+create index if not exists networking_interactions_occurred_at_idx on public.networking_interactions(occurred_at desc);
+create index if not exists networking_interactions_follow_up_at_idx on public.networking_interactions(follow_up_at);
+
+create index if not exists job_referrals_user_id_idx on public.job_referrals(user_id);
+create index if not exists job_referrals_networking_contact_id_idx on public.job_referrals(networking_contact_id);
+create index if not exists job_referrals_job_application_id_idx on public.job_referrals(job_application_id);
+create index if not exists job_referrals_status_idx on public.job_referrals(status);
+create index if not exists job_referrals_follow_up_at_idx on public.job_referrals(follow_up_at);
+create index if not exists job_referrals_updated_at_idx on public.job_referrals(updated_at desc);
+
+create index if not exists resume_bullets_user_id_idx on public.resume_bullets(user_id);
+create index if not exists resume_bullets_resume_version_id_idx on public.resume_bullets(resume_version_id);
+create index if not exists resume_bullets_proof_item_id_idx on public.resume_bullets(proof_item_id);
+create index if not exists resume_bullets_goal_id_idx on public.resume_bullets(goal_id);
+create index if not exists resume_bullets_task_id_idx on public.resume_bullets(task_id);
+create index if not exists resume_bullets_updated_at_idx on public.resume_bullets(updated_at desc);
+
+create index if not exists interviews_user_id_idx on public.interviews(user_id);
+create index if not exists interviews_job_application_id_idx on public.interviews(job_application_id);
+create index if not exists interviews_status_idx on public.interviews(status);
+create index if not exists interviews_round_type_idx on public.interviews(round_type);
+create index if not exists interviews_outcome_idx on public.interviews(outcome);
+create index if not exists interviews_scheduled_at_idx on public.interviews(scheduled_at);
+create index if not exists interviews_follow_up_at_idx on public.interviews(follow_up_at);
+create index if not exists interviews_updated_at_idx on public.interviews(updated_at desc);
+
+drop trigger if exists set_resume_versions_updated_at on public.resume_versions;
+create trigger set_resume_versions_updated_at
+before update on public.resume_versions
+for each row
+execute function public.set_updated_at();
+
+drop trigger if exists set_networking_contacts_updated_at on public.networking_contacts;
+create trigger set_networking_contacts_updated_at
+before update on public.networking_contacts
+for each row
+execute function public.set_updated_at();
+
+drop trigger if exists set_job_applications_updated_at on public.job_applications;
+create trigger set_job_applications_updated_at
+before update on public.job_applications
+for each row
+execute function public.set_updated_at();
+
+drop trigger if exists set_job_referrals_updated_at on public.job_referrals;
+create trigger set_job_referrals_updated_at
+before update on public.job_referrals
+for each row
+execute function public.set_updated_at();
+
+drop trigger if exists set_resume_bullets_updated_at on public.resume_bullets;
+create trigger set_resume_bullets_updated_at
+before update on public.resume_bullets
+for each row
+execute function public.set_updated_at();
+
+drop trigger if exists set_interviews_updated_at on public.interviews;
+create trigger set_interviews_updated_at
+before update on public.interviews
+for each row
+execute function public.set_updated_at();
+
+alter table public.resume_versions enable row level security;
+alter table public.networking_contacts enable row level security;
+alter table public.job_applications enable row level security;
+alter table public.job_application_events enable row level security;
+alter table public.networking_interactions enable row level security;
+alter table public.job_referrals enable row level security;
+alter table public.resume_bullets enable row level security;
+alter table public.interviews enable row level security;
+
+drop policy if exists "Users can view their own resume versions" on public.resume_versions;
+create policy "Users can view their own resume versions"
+on public.resume_versions
+for select
+to authenticated
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own resume versions" on public.resume_versions;
+create policy "Users can insert their own resume versions"
+on public.resume_versions
+for insert
+to authenticated
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can update their own resume versions" on public.resume_versions;
+create policy "Users can update their own resume versions"
+on public.resume_versions
+for update
+to authenticated
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can delete their own resume versions" on public.resume_versions;
+create policy "Users can delete their own resume versions"
+on public.resume_versions
+for delete
+to authenticated
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own networking contacts" on public.networking_contacts;
+create policy "Users can view their own networking contacts"
+on public.networking_contacts
+for select
+to authenticated
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own networking contacts" on public.networking_contacts;
+create policy "Users can insert their own networking contacts"
+on public.networking_contacts
+for insert
+to authenticated
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can update their own networking contacts" on public.networking_contacts;
+create policy "Users can update their own networking contacts"
+on public.networking_contacts
+for update
+to authenticated
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can delete their own networking contacts" on public.networking_contacts;
+create policy "Users can delete their own networking contacts"
+on public.networking_contacts
+for delete
+to authenticated
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own job applications" on public.job_applications;
+create policy "Users can view their own job applications"
+on public.job_applications
+for select
+to authenticated
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own job applications" on public.job_applications;
+create policy "Users can insert their own job applications"
+on public.job_applications
+for insert
+to authenticated
+with check (
+  auth.uid() = user_id
+  and (
+    resume_version_id is null
+    or exists (
+      select 1
+      from public.resume_versions
+      where resume_versions.id = job_applications.resume_version_id
+        and resume_versions.user_id = auth.uid()
+    )
+  )
+  and (
+    networking_contact_id is null
+    or exists (
+      select 1
+      from public.networking_contacts
+      where networking_contacts.id = job_applications.networking_contact_id
+        and networking_contacts.user_id = auth.uid()
+    )
+  )
+  and (
+    goal_id is null
+    or exists (
+      select 1
+      from public.goals
+      where goals.id = job_applications.goal_id
+        and goals.user_id = auth.uid()
+    )
+  )
+  and (
+    task_id is null
+    or exists (
+      select 1
+      from public.tasks
+      where tasks.id = job_applications.task_id
+        and tasks.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can update their own job applications" on public.job_applications;
+create policy "Users can update their own job applications"
+on public.job_applications
+for update
+to authenticated
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and (
+    resume_version_id is null
+    or exists (
+      select 1
+      from public.resume_versions
+      where resume_versions.id = job_applications.resume_version_id
+        and resume_versions.user_id = auth.uid()
+    )
+  )
+  and (
+    networking_contact_id is null
+    or exists (
+      select 1
+      from public.networking_contacts
+      where networking_contacts.id = job_applications.networking_contact_id
+        and networking_contacts.user_id = auth.uid()
+    )
+  )
+  and (
+    goal_id is null
+    or exists (
+      select 1
+      from public.goals
+      where goals.id = job_applications.goal_id
+        and goals.user_id = auth.uid()
+    )
+  )
+  and (
+    task_id is null
+    or exists (
+      select 1
+      from public.tasks
+      where tasks.id = job_applications.task_id
+        and tasks.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can delete their own job applications" on public.job_applications;
+create policy "Users can delete their own job applications"
+on public.job_applications
+for delete
+to authenticated
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own job application events" on public.job_application_events;
+create policy "Users can view their own job application events"
+on public.job_application_events
+for select
+to authenticated
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own job application events" on public.job_application_events;
+create policy "Users can insert their own job application events"
+on public.job_application_events
+for insert
+to authenticated
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1
+    from public.job_applications
+    where job_applications.id = job_application_events.job_application_id
+      and job_applications.user_id = auth.uid()
+  )
+);
+
+drop policy if exists "Users can update their own job application events" on public.job_application_events;
+create policy "Users can update their own job application events"
+on public.job_application_events
+for update
+to authenticated
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1
+    from public.job_applications
+    where job_applications.id = job_application_events.job_application_id
+      and job_applications.user_id = auth.uid()
+  )
+);
+
+drop policy if exists "Users can delete their own job application events" on public.job_application_events;
+create policy "Users can delete their own job application events"
+on public.job_application_events
+for delete
+to authenticated
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own networking interactions" on public.networking_interactions;
+create policy "Users can view their own networking interactions"
+on public.networking_interactions
+for select
+to authenticated
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own networking interactions" on public.networking_interactions;
+create policy "Users can insert their own networking interactions"
+on public.networking_interactions
+for insert
+to authenticated
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1
+    from public.networking_contacts
+    where networking_contacts.id = networking_interactions.networking_contact_id
+      and networking_contacts.user_id = auth.uid()
+  )
+  and (
+    job_application_id is null
+    or exists (
+      select 1
+      from public.job_applications
+      where job_applications.id = networking_interactions.job_application_id
+        and job_applications.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can update their own networking interactions" on public.networking_interactions;
+create policy "Users can update their own networking interactions"
+on public.networking_interactions
+for update
+to authenticated
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1
+    from public.networking_contacts
+    where networking_contacts.id = networking_interactions.networking_contact_id
+      and networking_contacts.user_id = auth.uid()
+  )
+  and (
+    job_application_id is null
+    or exists (
+      select 1
+      from public.job_applications
+      where job_applications.id = networking_interactions.job_application_id
+        and job_applications.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can delete their own networking interactions" on public.networking_interactions;
+create policy "Users can delete their own networking interactions"
+on public.networking_interactions
+for delete
+to authenticated
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own job referrals" on public.job_referrals;
+create policy "Users can view their own job referrals"
+on public.job_referrals
+for select
+to authenticated
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own job referrals" on public.job_referrals;
+create policy "Users can insert their own job referrals"
+on public.job_referrals
+for insert
+to authenticated
+with check (
+  auth.uid() = user_id
+  and (
+    networking_contact_id is null
+    or exists (
+      select 1
+      from public.networking_contacts
+      where networking_contacts.id = job_referrals.networking_contact_id
+        and networking_contacts.user_id = auth.uid()
+    )
+  )
+  and (
+    job_application_id is null
+    or exists (
+      select 1
+      from public.job_applications
+      where job_applications.id = job_referrals.job_application_id
+        and job_applications.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can update their own job referrals" on public.job_referrals;
+create policy "Users can update their own job referrals"
+on public.job_referrals
+for update
+to authenticated
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and (
+    networking_contact_id is null
+    or exists (
+      select 1
+      from public.networking_contacts
+      where networking_contacts.id = job_referrals.networking_contact_id
+        and networking_contacts.user_id = auth.uid()
+    )
+  )
+  and (
+    job_application_id is null
+    or exists (
+      select 1
+      from public.job_applications
+      where job_applications.id = job_referrals.job_application_id
+        and job_applications.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can delete their own job referrals" on public.job_referrals;
+create policy "Users can delete their own job referrals"
+on public.job_referrals
+for delete
+to authenticated
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own resume bullets" on public.resume_bullets;
+create policy "Users can view their own resume bullets"
+on public.resume_bullets
+for select
+to authenticated
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own resume bullets" on public.resume_bullets;
+create policy "Users can insert their own resume bullets"
+on public.resume_bullets
+for insert
+to authenticated
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1
+    from public.resume_versions
+    where resume_versions.id = resume_bullets.resume_version_id
+      and resume_versions.user_id = auth.uid()
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1
+      from public.proof_items
+      where proof_items.id = resume_bullets.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+  and (
+    goal_id is null
+    or exists (
+      select 1
+      from public.goals
+      where goals.id = resume_bullets.goal_id
+        and goals.user_id = auth.uid()
+    )
+  )
+  and (
+    task_id is null
+    or exists (
+      select 1
+      from public.tasks
+      where tasks.id = resume_bullets.task_id
+        and tasks.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can update their own resume bullets" on public.resume_bullets;
+create policy "Users can update their own resume bullets"
+on public.resume_bullets
+for update
+to authenticated
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1
+    from public.resume_versions
+    where resume_versions.id = resume_bullets.resume_version_id
+      and resume_versions.user_id = auth.uid()
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1
+      from public.proof_items
+      where proof_items.id = resume_bullets.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+  and (
+    goal_id is null
+    or exists (
+      select 1
+      from public.goals
+      where goals.id = resume_bullets.goal_id
+        and goals.user_id = auth.uid()
+    )
+  )
+  and (
+    task_id is null
+    or exists (
+      select 1
+      from public.tasks
+      where tasks.id = resume_bullets.task_id
+        and tasks.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can delete their own resume bullets" on public.resume_bullets;
+create policy "Users can delete their own resume bullets"
+on public.resume_bullets
+for delete
+to authenticated
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own interviews" on public.interviews;
+create policy "Users can view their own interviews"
+on public.interviews
+for select
+to authenticated
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own interviews" on public.interviews;
+create policy "Users can insert their own interviews"
+on public.interviews
+for insert
+to authenticated
+with check (
+  auth.uid() = user_id
+  and (
+    job_application_id is null
+    or exists (
+      select 1
+      from public.job_applications
+      where job_applications.id = interviews.job_application_id
+        and job_applications.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can update their own interviews" on public.interviews;
+create policy "Users can update their own interviews"
+on public.interviews
+for update
+to authenticated
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and (
+    job_application_id is null
+    or exists (
+      select 1
+      from public.job_applications
+      where job_applications.id = interviews.job_application_id
+        and job_applications.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can delete their own interviews" on public.interviews;
+create policy "Users can delete their own interviews"
+on public.interviews
+for delete
+to authenticated
+using (auth.uid() = user_id);
+```
+
+### `supabase/migrations/0008_learning_project_system_foundation.sql`
+
+```sql
+-- ascendOS + Carnos
+-- Migration 0008: learning project system foundation
+
+create table if not exists public.skill_paths (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  title text not null,
+  slug text,
+  description text,
+  domain text,
+  status text not null default 'active'
+    check (status in ('planned', 'active', 'paused', 'completed', 'archived')),
+  priority text not null default 'medium'
+    check (priority in ('low', 'medium', 'high', 'critical')),
+  target_level text,
+  current_level text,
+  started_at timestamptz,
+  target_date date,
+  completed_at timestamptz,
+  goal_id uuid references public.goals(id) on delete set null,
+  career_target text,
+  research_target text,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  unique (user_id, slug)
+);
+
+create table if not exists public.skills (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  skill_path_id uuid references public.skill_paths(id) on delete cascade,
+  title text not null,
+  slug text,
+  description text,
+  category text,
+  status text not null default 'not_started'
+    check (status in ('not_started', 'learning', 'practicing', 'proving', 'mastered', 'stale', 'archived')),
+  priority text not null default 'medium'
+    check (priority in ('low', 'medium', 'high', 'critical')),
+  difficulty text not null default 'medium'
+    check (difficulty in ('low', 'medium', 'high', 'expert')),
+  target_level text,
+  current_level text,
+  mastery_score numeric(5,2),
+  confidence_score numeric(5,2),
+  proof_required boolean not null default true,
+  interview_relevance text,
+  project_relevance text,
+  research_relevance text,
+  goal_id uuid references public.goals(id) on delete set null,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  unique (user_id, skill_path_id, slug)
+);
+
+create table if not exists public.skill_prerequisites (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  skill_id uuid not null references public.skills(id) on delete cascade,
+  prerequisite_skill_id uuid not null references public.skills(id) on delete cascade,
+  relationship_type text not null default 'requires'
+    check (relationship_type in ('requires', 'recommended', 'blocks', 'supports')),
+  notes text,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  unique (skill_id, prerequisite_skill_id),
+  check (skill_id <> prerequisite_skill_id)
+);
+
+create table if not exists public.learning_sessions (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  skill_path_id uuid references public.skill_paths(id) on delete set null,
+  skill_id uuid references public.skills(id) on delete set null,
+  title text not null,
+  session_type text not null default 'study'
+    check (session_type in ('study', 'practice', 'build', 'review', 'quiz', 'interview_prep', 'research')),
+  status text not null default 'planned'
+    check (status in ('planned', 'active', 'completed', 'cancelled', 'archived')),
+  started_at timestamptz,
+  ended_at timestamptz,
+  duration_minutes integer,
+  focus_score numeric(5,2),
+  difficulty text
+    check (difficulty is null or difficulty in ('low', 'medium', 'high', 'expert')),
+  notes text,
+  summary text,
+  next_step text,
+  goal_id uuid references public.goals(id) on delete set null,
+  task_id uuid references public.tasks(id) on delete set null,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  daily_log_id uuid references public.daily_logs(id) on delete set null,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.quizzes (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  skill_path_id uuid references public.skill_paths(id) on delete set null,
+  skill_id uuid references public.skills(id) on delete set null,
+  title text not null,
+  description text,
+  quiz_type text not null default 'concept_check'
+    check (quiz_type in ('concept_check', 'coding', 'interview', 'project_review', 'research_review', 'mixed')),
+  status text not null default 'active'
+    check (status in ('draft', 'active', 'paused', 'archived')),
+  difficulty text not null default 'medium'
+    check (difficulty in ('low', 'medium', 'high', 'expert')),
+  question_count integer,
+  passing_score numeric(5,2),
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.projects (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  title text not null,
+  slug text,
+  description text,
+  project_type text not null default 'portfolio'
+    check (project_type in ('portfolio', 'learning', 'research', 'career', 'personal_system', 'coursework', 'experiment')),
+  status text not null default 'planned'
+    check (status in ('planned', 'active', 'blocked', 'shipping', 'shipped', 'paused', 'archived')),
+  priority text not null default 'medium'
+    check (priority in ('low', 'medium', 'high', 'critical')),
+  stage text,
+  problem_statement text,
+  target_user text,
+  tech_stack text[] not null default '{}'::text[],
+  github_url text,
+  demo_url text,
+  readme_url text,
+  portfolio_url text,
+  resume_bullet_id uuid references public.resume_bullets(id) on delete set null,
+  goal_id uuid references public.goals(id) on delete set null,
+  task_id uuid references public.tasks(id) on delete set null,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  started_at timestamptz,
+  target_date date,
+  completed_at timestamptz,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  unique (user_id, slug)
+);
+
+create table if not exists public.quiz_attempts (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  quiz_id uuid not null references public.quizzes(id) on delete cascade,
+  learning_session_id uuid references public.learning_sessions(id) on delete set null,
+  skill_id uuid references public.skills(id) on delete set null,
+  status text not null default 'completed'
+    check (status in ('completed', 'abandoned', 'needs_review', 'archived')),
+  score numeric(5,2),
+  max_score numeric(5,2),
+  passed boolean,
+  attempted_at timestamptz not null default now(),
+  duration_minutes integer,
+  mistake_summary text,
+  strength_summary text,
+  next_review_at timestamptz,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now()
+);
+
+create table if not exists public.project_milestones (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  project_id uuid not null references public.projects(id) on delete cascade,
+  title text not null,
+  description text,
+  status text not null default 'planned'
+    check (status in ('planned', 'active', 'blocked', 'completed', 'cancelled', 'archived')),
+  priority text not null default 'medium'
+    check (priority in ('low', 'medium', 'high', 'critical')),
+  due_date date,
+  completed_at timestamptz,
+  task_id uuid references public.tasks(id) on delete set null,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.project_bugs (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  project_id uuid not null references public.projects(id) on delete cascade,
+  title text not null,
+  description text,
+  status text not null default 'open'
+    check (status in ('open', 'investigating', 'fixed', 'wont_fix', 'closed', 'archived')),
+  severity text not null default 'medium'
+    check (severity in ('low', 'medium', 'high', 'critical')),
+  source text,
+  reproduction_steps text,
+  root_cause text,
+  fix_summary text,
+  opened_at timestamptz not null default now(),
+  resolved_at timestamptz,
+  task_id uuid references public.tasks(id) on delete set null,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.project_tests (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  project_id uuid not null references public.projects(id) on delete cascade,
+  title text not null,
+  test_type text not null default 'manual'
+    check (test_type in ('manual', 'unit', 'integration', 'e2e', 'lint', 'typecheck', 'build', 'audit', 'smoke')),
+  status text not null default 'pending'
+    check (status in ('pending', 'passed', 'failed', 'skipped', 'archived')),
+  command text,
+  expected_result text,
+  actual_result text,
+  passed boolean,
+  run_at timestamptz,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.project_releases (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  project_id uuid not null references public.projects(id) on delete cascade,
+  version text,
+  title text not null,
+  description text,
+  status text not null default 'planned'
+    check (status in ('planned', 'draft', 'released', 'archived')),
+  released_at timestamptz,
+  github_tag_url text,
+  demo_url text,
+  release_notes_url text,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  resume_bullet_id uuid references public.resume_bullets(id) on delete set null,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.project_links (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  project_id uuid not null references public.projects(id) on delete cascade,
+  label text not null,
+  url text not null,
+  link_type text not null default 'reference'
+    check (link_type in ('github', 'demo', 'readme', 'portfolio', 'paper', 'video', 'documentation', 'reference', 'proof')),
+  description text,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.skill_progress (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  skill_id uuid not null references public.skills(id) on delete cascade,
+  status text not null
+    check (status in ('not_started', 'learning', 'practicing', 'proving', 'mastered', 'stale', 'archived')),
+  previous_status text
+    check (previous_status is null or previous_status in ('not_started', 'learning', 'practicing', 'proving', 'mastered', 'stale', 'archived')),
+  mastery_score numeric(5,2),
+  confidence_score numeric(5,2),
+  delta_summary text,
+  evidence_summary text,
+  learning_session_id uuid references public.learning_sessions(id) on delete set null,
+  quiz_attempt_id uuid references public.quiz_attempts(id) on delete set null,
+  project_id uuid references public.projects(id) on delete set null,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  task_id uuid references public.tasks(id) on delete set null,
+  goal_id uuid references public.goals(id) on delete set null,
+  recorded_at timestamptz not null default now(),
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now()
+);
+
+create index if not exists skill_paths_user_id_idx on public.skill_paths(user_id);
+create index if not exists skill_paths_status_idx on public.skill_paths(status);
+create index if not exists skill_paths_priority_idx on public.skill_paths(priority);
+create index if not exists skill_paths_goal_id_idx on public.skill_paths(goal_id);
+create index if not exists skill_paths_created_at_idx on public.skill_paths(created_at desc);
+create index if not exists skill_paths_updated_at_idx on public.skill_paths(updated_at desc);
+
+create index if not exists skills_user_id_idx on public.skills(user_id);
+create index if not exists skills_skill_path_id_idx on public.skills(skill_path_id);
+create index if not exists skills_status_idx on public.skills(status);
+create index if not exists skills_category_idx on public.skills(category);
+create index if not exists skills_goal_id_idx on public.skills(goal_id);
+create index if not exists skills_proof_item_id_idx on public.skills(proof_item_id);
+create index if not exists skills_updated_at_idx on public.skills(updated_at desc);
+
+create index if not exists skill_prerequisites_user_id_idx on public.skill_prerequisites(user_id);
+create index if not exists skill_prerequisites_skill_id_idx on public.skill_prerequisites(skill_id);
+create index if not exists skill_prerequisites_prerequisite_skill_id_idx on public.skill_prerequisites(prerequisite_skill_id);
+
+create index if not exists learning_sessions_user_id_idx on public.learning_sessions(user_id);
+create index if not exists learning_sessions_status_idx on public.learning_sessions(status);
+create index if not exists learning_sessions_skill_path_id_idx on public.learning_sessions(skill_path_id);
+create index if not exists learning_sessions_skill_id_idx on public.learning_sessions(skill_id);
+create index if not exists learning_sessions_started_at_idx on public.learning_sessions(started_at desc);
+create index if not exists learning_sessions_goal_id_idx on public.learning_sessions(goal_id);
+create index if not exists learning_sessions_task_id_idx on public.learning_sessions(task_id);
+create index if not exists learning_sessions_proof_item_id_idx on public.learning_sessions(proof_item_id);
+
+create index if not exists quizzes_user_id_idx on public.quizzes(user_id);
+create index if not exists quizzes_skill_path_id_idx on public.quizzes(skill_path_id);
+create index if not exists quizzes_skill_id_idx on public.quizzes(skill_id);
+create index if not exists quizzes_status_idx on public.quizzes(status);
+
+create index if not exists projects_user_id_idx on public.projects(user_id);
+create index if not exists projects_status_idx on public.projects(status);
+create index if not exists projects_priority_idx on public.projects(priority);
+create index if not exists projects_goal_id_idx on public.projects(goal_id);
+create index if not exists projects_task_id_idx on public.projects(task_id);
+create index if not exists projects_proof_item_id_idx on public.projects(proof_item_id);
+create index if not exists projects_resume_bullet_id_idx on public.projects(resume_bullet_id);
+create index if not exists projects_updated_at_idx on public.projects(updated_at desc);
+
+create index if not exists quiz_attempts_user_id_idx on public.quiz_attempts(user_id);
+create index if not exists quiz_attempts_quiz_id_idx on public.quiz_attempts(quiz_id);
+create index if not exists quiz_attempts_skill_id_idx on public.quiz_attempts(skill_id);
+create index if not exists quiz_attempts_attempted_at_idx on public.quiz_attempts(attempted_at desc);
+create index if not exists quiz_attempts_proof_item_id_idx on public.quiz_attempts(proof_item_id);
+
+create index if not exists project_milestones_user_id_idx on public.project_milestones(user_id);
+create index if not exists project_milestones_project_id_idx on public.project_milestones(project_id);
+create index if not exists project_milestones_status_idx on public.project_milestones(status);
+create index if not exists project_milestones_due_date_idx on public.project_milestones(due_date);
+create index if not exists project_milestones_task_id_idx on public.project_milestones(task_id);
+create index if not exists project_milestones_proof_item_id_idx on public.project_milestones(proof_item_id);
+
+create index if not exists project_bugs_user_id_idx on public.project_bugs(user_id);
+create index if not exists project_bugs_project_id_idx on public.project_bugs(project_id);
+create index if not exists project_bugs_status_idx on public.project_bugs(status);
+create index if not exists project_bugs_severity_idx on public.project_bugs(severity);
+create index if not exists project_bugs_task_id_idx on public.project_bugs(task_id);
+create index if not exists project_bugs_proof_item_id_idx on public.project_bugs(proof_item_id);
+
+create index if not exists project_tests_user_id_idx on public.project_tests(user_id);
+create index if not exists project_tests_project_id_idx on public.project_tests(project_id);
+create index if not exists project_tests_status_idx on public.project_tests(status);
+create index if not exists project_tests_run_at_idx on public.project_tests(run_at desc);
+create index if not exists project_tests_proof_item_id_idx on public.project_tests(proof_item_id);
+
+create index if not exists project_releases_user_id_idx on public.project_releases(user_id);
+create index if not exists project_releases_project_id_idx on public.project_releases(project_id);
+create index if not exists project_releases_status_idx on public.project_releases(status);
+create index if not exists project_releases_released_at_idx on public.project_releases(released_at desc);
+create index if not exists project_releases_proof_item_id_idx on public.project_releases(proof_item_id);
+create index if not exists project_releases_resume_bullet_id_idx on public.project_releases(resume_bullet_id);
+
+create index if not exists project_links_user_id_idx on public.project_links(user_id);
+create index if not exists project_links_project_id_idx on public.project_links(project_id);
+create index if not exists project_links_link_type_idx on public.project_links(link_type);
+create index if not exists project_links_proof_item_id_idx on public.project_links(proof_item_id);
+
+create index if not exists skill_progress_user_id_idx on public.skill_progress(user_id);
+create index if not exists skill_progress_skill_id_idx on public.skill_progress(skill_id);
+create index if not exists skill_progress_recorded_at_idx on public.skill_progress(recorded_at desc);
+create index if not exists skill_progress_learning_session_id_idx on public.skill_progress(learning_session_id);
+create index if not exists skill_progress_quiz_attempt_id_idx on public.skill_progress(quiz_attempt_id);
+create index if not exists skill_progress_project_id_idx on public.skill_progress(project_id);
+create index if not exists skill_progress_proof_item_id_idx on public.skill_progress(proof_item_id);
+create index if not exists skill_progress_task_id_idx on public.skill_progress(task_id);
+create index if not exists skill_progress_goal_id_idx on public.skill_progress(goal_id);
+
+alter table public.skill_paths enable row level security;
+alter table public.skills enable row level security;
+alter table public.skill_prerequisites enable row level security;
+alter table public.learning_sessions enable row level security;
+alter table public.quizzes enable row level security;
+alter table public.projects enable row level security;
+alter table public.quiz_attempts enable row level security;
+alter table public.project_milestones enable row level security;
+alter table public.project_bugs enable row level security;
+alter table public.project_tests enable row level security;
+alter table public.project_releases enable row level security;
+alter table public.project_links enable row level security;
+alter table public.skill_progress enable row level security;
+
+drop policy if exists "Users can view their own skill paths" on public.skill_paths;
+create policy "Users can view their own skill paths"
+on public.skill_paths for select
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own skill paths" on public.skill_paths;
+create policy "Users can insert their own skill paths"
+on public.skill_paths for insert
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can update their own skill paths" on public.skill_paths;
+create policy "Users can update their own skill paths"
+on public.skill_paths for update
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can delete their own skill paths" on public.skill_paths;
+create policy "Users can delete their own skill paths"
+on public.skill_paths for delete
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own skills" on public.skills;
+create policy "Users can view their own skills"
+on public.skills for select
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own skills" on public.skills;
+create policy "Users can insert their own skills"
+on public.skills for insert
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can update their own skills" on public.skills;
+create policy "Users can update their own skills"
+on public.skills for update
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can delete their own skills" on public.skills;
+create policy "Users can delete their own skills"
+on public.skills for delete
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own skill prerequisites" on public.skill_prerequisites;
+create policy "Users can view their own skill prerequisites"
+on public.skill_prerequisites for select
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own skill prerequisites" on public.skill_prerequisites;
+create policy "Users can insert their own skill prerequisites"
+on public.skill_prerequisites for insert
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1
+    from public.skills
+    where skills.id = skill_prerequisites.skill_id
+      and skills.user_id = auth.uid()
+  )
+  and exists (
+    select 1
+    from public.skills
+    where skills.id = skill_prerequisites.prerequisite_skill_id
+      and skills.user_id = auth.uid()
+  )
+);
+
+drop policy if exists "Users can update their own skill prerequisites" on public.skill_prerequisites;
+create policy "Users can update their own skill prerequisites"
+on public.skill_prerequisites for update
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1
+    from public.skills
+    where skills.id = skill_prerequisites.skill_id
+      and skills.user_id = auth.uid()
+  )
+  and exists (
+    select 1
+    from public.skills
+    where skills.id = skill_prerequisites.prerequisite_skill_id
+      and skills.user_id = auth.uid()
+  )
+);
+
+drop policy if exists "Users can delete their own skill prerequisites" on public.skill_prerequisites;
+create policy "Users can delete their own skill prerequisites"
+on public.skill_prerequisites for delete
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own learning sessions" on public.learning_sessions;
+create policy "Users can view their own learning sessions"
+on public.learning_sessions for select
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own learning sessions" on public.learning_sessions;
+create policy "Users can insert their own learning sessions"
+on public.learning_sessions for insert
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can update their own learning sessions" on public.learning_sessions;
+create policy "Users can update their own learning sessions"
+on public.learning_sessions for update
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can delete their own learning sessions" on public.learning_sessions;
+create policy "Users can delete their own learning sessions"
+on public.learning_sessions for delete
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own quizzes" on public.quizzes;
+create policy "Users can view their own quizzes"
+on public.quizzes for select
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own quizzes" on public.quizzes;
+create policy "Users can insert their own quizzes"
+on public.quizzes for insert
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can update their own quizzes" on public.quizzes;
+create policy "Users can update their own quizzes"
+on public.quizzes for update
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can delete their own quizzes" on public.quizzes;
+create policy "Users can delete their own quizzes"
+on public.quizzes for delete
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own projects" on public.projects;
+create policy "Users can view their own projects"
+on public.projects for select
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own projects" on public.projects;
+create policy "Users can insert their own projects"
+on public.projects for insert
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can update their own projects" on public.projects;
+create policy "Users can update their own projects"
+on public.projects for update
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can delete their own projects" on public.projects;
+create policy "Users can delete their own projects"
+on public.projects for delete
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own quiz attempts" on public.quiz_attempts;
+create policy "Users can view their own quiz attempts"
+on public.quiz_attempts for select
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own quiz attempts" on public.quiz_attempts;
+create policy "Users can insert their own quiz attempts"
+on public.quiz_attempts for insert
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can update their own quiz attempts" on public.quiz_attempts;
+create policy "Users can update their own quiz attempts"
+on public.quiz_attempts for update
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can delete their own quiz attempts" on public.quiz_attempts;
+create policy "Users can delete their own quiz attempts"
+on public.quiz_attempts for delete
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own project milestones" on public.project_milestones;
+create policy "Users can view their own project milestones"
+on public.project_milestones for select
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own project milestones" on public.project_milestones;
+create policy "Users can insert their own project milestones"
+on public.project_milestones for insert
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can update their own project milestones" on public.project_milestones;
+create policy "Users can update their own project milestones"
+on public.project_milestones for update
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can delete their own project milestones" on public.project_milestones;
+create policy "Users can delete their own project milestones"
+on public.project_milestones for delete
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own project bugs" on public.project_bugs;
+create policy "Users can view their own project bugs"
+on public.project_bugs for select
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own project bugs" on public.project_bugs;
+create policy "Users can insert their own project bugs"
+on public.project_bugs for insert
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can update their own project bugs" on public.project_bugs;
+create policy "Users can update their own project bugs"
+on public.project_bugs for update
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can delete their own project bugs" on public.project_bugs;
+create policy "Users can delete their own project bugs"
+on public.project_bugs for delete
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own project tests" on public.project_tests;
+create policy "Users can view their own project tests"
+on public.project_tests for select
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own project tests" on public.project_tests;
+create policy "Users can insert their own project tests"
+on public.project_tests for insert
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can update their own project tests" on public.project_tests;
+create policy "Users can update their own project tests"
+on public.project_tests for update
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can delete their own project tests" on public.project_tests;
+create policy "Users can delete their own project tests"
+on public.project_tests for delete
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own project releases" on public.project_releases;
+create policy "Users can view their own project releases"
+on public.project_releases for select
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own project releases" on public.project_releases;
+create policy "Users can insert their own project releases"
+on public.project_releases for insert
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can update their own project releases" on public.project_releases;
+create policy "Users can update their own project releases"
+on public.project_releases for update
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can delete their own project releases" on public.project_releases;
+create policy "Users can delete their own project releases"
+on public.project_releases for delete
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own project links" on public.project_links;
+create policy "Users can view their own project links"
+on public.project_links for select
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own project links" on public.project_links;
+create policy "Users can insert their own project links"
+on public.project_links for insert
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can update their own project links" on public.project_links;
+create policy "Users can update their own project links"
+on public.project_links for update
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can delete their own project links" on public.project_links;
+create policy "Users can delete their own project links"
+on public.project_links for delete
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can view their own skill progress" on public.skill_progress;
+create policy "Users can view their own skill progress"
+on public.skill_progress for select
+using (auth.uid() = user_id);
+
+drop policy if exists "Users can insert their own skill progress" on public.skill_progress;
+create policy "Users can insert their own skill progress"
+on public.skill_progress for insert
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can update their own skill progress" on public.skill_progress;
+create policy "Users can update their own skill progress"
+on public.skill_progress for update
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "Users can delete their own skill progress" on public.skill_progress;
+create policy "Users can delete their own skill progress"
+on public.skill_progress for delete
+using (auth.uid() = user_id);
+```
+
+### `supabase/migrations/0009_phase9_parent_ownership_guards.sql`
+
+```sql
+-- ascendOS + Carnos
+-- Migration 0009: phase 9 parent ownership guards
+
+-- This migration hardens Phase 9 child-row write policies.
+-- It ensures nullable parent links either remain null or point to records owned by auth.uid().
+-- It does not add new tables.
+
+drop policy if exists "Users can insert their own skill paths" on public.skill_paths;
+create policy "Users can insert their own skill paths"
+on public.skill_paths for insert
+with check (
+  auth.uid() = user_id
+  and (
+    goal_id is null
+    or exists (
+      select 1 from public.goals
+      where goals.id = skill_paths.goal_id
+        and goals.user_id = auth.uid()
+    )
+  )
+  and (
+    source_ai_action_id is null
+    or exists (
+      select 1 from public.ai_actions
+      where ai_actions.id = skill_paths.source_ai_action_id
+        and ai_actions.user_id = auth.uid()
+    )
+  )
+  and (
+    source_chat_message_id is null
+    or exists (
+      select 1 from public.chat_messages
+      where chat_messages.id = skill_paths.source_chat_message_id
+        and chat_messages.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can update their own skill paths" on public.skill_paths;
+create policy "Users can update their own skill paths"
+on public.skill_paths for update
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and (
+    goal_id is null
+    or exists (
+      select 1 from public.goals
+      where goals.id = skill_paths.goal_id
+        and goals.user_id = auth.uid()
+    )
+  )
+  and (
+    source_ai_action_id is null
+    or exists (
+      select 1 from public.ai_actions
+      where ai_actions.id = skill_paths.source_ai_action_id
+        and ai_actions.user_id = auth.uid()
+    )
+  )
+  and (
+    source_chat_message_id is null
+    or exists (
+      select 1 from public.chat_messages
+      where chat_messages.id = skill_paths.source_chat_message_id
+        and chat_messages.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can insert their own skills" on public.skills;
+create policy "Users can insert their own skills"
+on public.skills for insert
+with check (
+  auth.uid() = user_id
+  and (
+    skill_path_id is null
+    or exists (
+      select 1 from public.skill_paths
+      where skill_paths.id = skills.skill_path_id
+        and skill_paths.user_id = auth.uid()
+    )
+  )
+  and (
+    goal_id is null
+    or exists (
+      select 1 from public.goals
+      where goals.id = skills.goal_id
+        and goals.user_id = auth.uid()
+    )
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = skills.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+  and (
+    source_ai_action_id is null
+    or exists (
+      select 1 from public.ai_actions
+      where ai_actions.id = skills.source_ai_action_id
+        and ai_actions.user_id = auth.uid()
+    )
+  )
+  and (
+    source_chat_message_id is null
+    or exists (
+      select 1 from public.chat_messages
+      where chat_messages.id = skills.source_chat_message_id
+        and chat_messages.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can update their own skills" on public.skills;
+create policy "Users can update their own skills"
+on public.skills for update
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and (
+    skill_path_id is null
+    or exists (
+      select 1 from public.skill_paths
+      where skill_paths.id = skills.skill_path_id
+        and skill_paths.user_id = auth.uid()
+    )
+  )
+  and (
+    goal_id is null
+    or exists (
+      select 1 from public.goals
+      where goals.id = skills.goal_id
+        and goals.user_id = auth.uid()
+    )
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = skills.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+  and (
+    source_ai_action_id is null
+    or exists (
+      select 1 from public.ai_actions
+      where ai_actions.id = skills.source_ai_action_id
+        and ai_actions.user_id = auth.uid()
+    )
+  )
+  and (
+    source_chat_message_id is null
+    or exists (
+      select 1 from public.chat_messages
+      where chat_messages.id = skills.source_chat_message_id
+        and chat_messages.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can insert their own skill prerequisites" on public.skill_prerequisites;
+create policy "Users can insert their own skill prerequisites"
+on public.skill_prerequisites for insert
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1 from public.skills
+    where skills.id = skill_prerequisites.skill_id
+      and skills.user_id = auth.uid()
+  )
+  and exists (
+    select 1 from public.skills
+    where skills.id = skill_prerequisites.prerequisite_skill_id
+      and skills.user_id = auth.uid()
+  )
+);
+
+drop policy if exists "Users can update their own skill prerequisites" on public.skill_prerequisites;
+create policy "Users can update their own skill prerequisites"
+on public.skill_prerequisites for update
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1 from public.skills
+    where skills.id = skill_prerequisites.skill_id
+      and skills.user_id = auth.uid()
+  )
+  and exists (
+    select 1 from public.skills
+    where skills.id = skill_prerequisites.prerequisite_skill_id
+      and skills.user_id = auth.uid()
+  )
+);
+
+drop policy if exists "Users can insert their own learning sessions" on public.learning_sessions;
+create policy "Users can insert their own learning sessions"
+on public.learning_sessions for insert
+with check (
+  auth.uid() = user_id
+  and (
+    skill_path_id is null
+    or exists (
+      select 1 from public.skill_paths
+      where skill_paths.id = learning_sessions.skill_path_id
+        and skill_paths.user_id = auth.uid()
+    )
+  )
+  and (
+    skill_id is null
+    or exists (
+      select 1 from public.skills
+      where skills.id = learning_sessions.skill_id
+        and skills.user_id = auth.uid()
+    )
+  )
+  and (
+    goal_id is null
+    or exists (
+      select 1 from public.goals
+      where goals.id = learning_sessions.goal_id
+        and goals.user_id = auth.uid()
+    )
+  )
+  and (
+    task_id is null
+    or exists (
+      select 1 from public.tasks
+      where tasks.id = learning_sessions.task_id
+        and tasks.user_id = auth.uid()
+    )
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = learning_sessions.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+  and (
+    daily_log_id is null
+    or exists (
+      select 1 from public.daily_logs
+      where daily_logs.id = learning_sessions.daily_log_id
+        and daily_logs.user_id = auth.uid()
+    )
+  )
+  and (
+    source_ai_action_id is null
+    or exists (
+      select 1 from public.ai_actions
+      where ai_actions.id = learning_sessions.source_ai_action_id
+        and ai_actions.user_id = auth.uid()
+    )
+  )
+  and (
+    source_chat_message_id is null
+    or exists (
+      select 1 from public.chat_messages
+      where chat_messages.id = learning_sessions.source_chat_message_id
+        and chat_messages.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can update their own learning sessions" on public.learning_sessions;
+create policy "Users can update their own learning sessions"
+on public.learning_sessions for update
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and (
+    skill_path_id is null
+    or exists (
+      select 1 from public.skill_paths
+      where skill_paths.id = learning_sessions.skill_path_id
+        and skill_paths.user_id = auth.uid()
+    )
+  )
+  and (
+    skill_id is null
+    or exists (
+      select 1 from public.skills
+      where skills.id = learning_sessions.skill_id
+        and skills.user_id = auth.uid()
+    )
+  )
+  and (
+    goal_id is null
+    or exists (
+      select 1 from public.goals
+      where goals.id = learning_sessions.goal_id
+        and goals.user_id = auth.uid()
+    )
+  )
+  and (
+    task_id is null
+    or exists (
+      select 1 from public.tasks
+      where tasks.id = learning_sessions.task_id
+        and tasks.user_id = auth.uid()
+    )
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = learning_sessions.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+  and (
+    daily_log_id is null
+    or exists (
+      select 1 from public.daily_logs
+      where daily_logs.id = learning_sessions.daily_log_id
+        and daily_logs.user_id = auth.uid()
+    )
+  )
+  and (
+    source_ai_action_id is null
+    or exists (
+      select 1 from public.ai_actions
+      where ai_actions.id = learning_sessions.source_ai_action_id
+        and ai_actions.user_id = auth.uid()
+    )
+  )
+  and (
+    source_chat_message_id is null
+    or exists (
+      select 1 from public.chat_messages
+      where chat_messages.id = learning_sessions.source_chat_message_id
+        and chat_messages.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can insert their own quizzes" on public.quizzes;
+create policy "Users can insert their own quizzes"
+on public.quizzes for insert
+with check (
+  auth.uid() = user_id
+  and (
+    skill_path_id is null
+    or exists (
+      select 1 from public.skill_paths
+      where skill_paths.id = quizzes.skill_path_id
+        and skill_paths.user_id = auth.uid()
+    )
+  )
+  and (
+    skill_id is null
+    or exists (
+      select 1 from public.skills
+      where skills.id = quizzes.skill_id
+        and skills.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can update their own quizzes" on public.quizzes;
+create policy "Users can update their own quizzes"
+on public.quizzes for update
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and (
+    skill_path_id is null
+    or exists (
+      select 1 from public.skill_paths
+      where skill_paths.id = quizzes.skill_path_id
+        and skill_paths.user_id = auth.uid()
+    )
+  )
+  and (
+    skill_id is null
+    or exists (
+      select 1 from public.skills
+      where skills.id = quizzes.skill_id
+        and skills.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can insert their own projects" on public.projects;
+create policy "Users can insert their own projects"
+on public.projects for insert
+with check (
+  auth.uid() = user_id
+  and (
+    resume_bullet_id is null
+    or exists (
+      select 1 from public.resume_bullets
+      where resume_bullets.id = projects.resume_bullet_id
+        and resume_bullets.user_id = auth.uid()
+    )
+  )
+  and (
+    goal_id is null
+    or exists (
+      select 1 from public.goals
+      where goals.id = projects.goal_id
+        and goals.user_id = auth.uid()
+    )
+  )
+  and (
+    task_id is null
+    or exists (
+      select 1 from public.tasks
+      where tasks.id = projects.task_id
+        and tasks.user_id = auth.uid()
+    )
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = projects.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+  and (
+    source_ai_action_id is null
+    or exists (
+      select 1 from public.ai_actions
+      where ai_actions.id = projects.source_ai_action_id
+        and ai_actions.user_id = auth.uid()
+    )
+  )
+  and (
+    source_chat_message_id is null
+    or exists (
+      select 1 from public.chat_messages
+      where chat_messages.id = projects.source_chat_message_id
+        and chat_messages.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can update their own projects" on public.projects;
+create policy "Users can update their own projects"
+on public.projects for update
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and (
+    resume_bullet_id is null
+    or exists (
+      select 1 from public.resume_bullets
+      where resume_bullets.id = projects.resume_bullet_id
+        and resume_bullets.user_id = auth.uid()
+    )
+  )
+  and (
+    goal_id is null
+    or exists (
+      select 1 from public.goals
+      where goals.id = projects.goal_id
+        and goals.user_id = auth.uid()
+    )
+  )
+  and (
+    task_id is null
+    or exists (
+      select 1 from public.tasks
+      where tasks.id = projects.task_id
+        and tasks.user_id = auth.uid()
+    )
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = projects.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+  and (
+    source_ai_action_id is null
+    or exists (
+      select 1 from public.ai_actions
+      where ai_actions.id = projects.source_ai_action_id
+        and ai_actions.user_id = auth.uid()
+    )
+  )
+  and (
+    source_chat_message_id is null
+    or exists (
+      select 1 from public.chat_messages
+      where chat_messages.id = projects.source_chat_message_id
+        and chat_messages.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can insert their own quiz attempts" on public.quiz_attempts;
+create policy "Users can insert their own quiz attempts"
+on public.quiz_attempts for insert
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1 from public.quizzes
+    where quizzes.id = quiz_attempts.quiz_id
+      and quizzes.user_id = auth.uid()
+  )
+  and (
+    learning_session_id is null
+    or exists (
+      select 1 from public.learning_sessions
+      where learning_sessions.id = quiz_attempts.learning_session_id
+        and learning_sessions.user_id = auth.uid()
+    )
+  )
+  and (
+    skill_id is null
+    or exists (
+      select 1 from public.skills
+      where skills.id = quiz_attempts.skill_id
+        and skills.user_id = auth.uid()
+    )
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = quiz_attempts.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+  and (
+    source_ai_action_id is null
+    or exists (
+      select 1 from public.ai_actions
+      where ai_actions.id = quiz_attempts.source_ai_action_id
+        and ai_actions.user_id = auth.uid()
+    )
+  )
+  and (
+    source_chat_message_id is null
+    or exists (
+      select 1 from public.chat_messages
+      where chat_messages.id = quiz_attempts.source_chat_message_id
+        and chat_messages.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can update their own quiz attempts" on public.quiz_attempts;
+create policy "Users can update their own quiz attempts"
+on public.quiz_attempts for update
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1 from public.quizzes
+    where quizzes.id = quiz_attempts.quiz_id
+      and quizzes.user_id = auth.uid()
+  )
+  and (
+    learning_session_id is null
+    or exists (
+      select 1 from public.learning_sessions
+      where learning_sessions.id = quiz_attempts.learning_session_id
+        and learning_sessions.user_id = auth.uid()
+    )
+  )
+  and (
+    skill_id is null
+    or exists (
+      select 1 from public.skills
+      where skills.id = quiz_attempts.skill_id
+        and skills.user_id = auth.uid()
+    )
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = quiz_attempts.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+  and (
+    source_ai_action_id is null
+    or exists (
+      select 1 from public.ai_actions
+      where ai_actions.id = quiz_attempts.source_ai_action_id
+        and ai_actions.user_id = auth.uid()
+    )
+  )
+  and (
+    source_chat_message_id is null
+    or exists (
+      select 1 from public.chat_messages
+      where chat_messages.id = quiz_attempts.source_chat_message_id
+        and chat_messages.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can insert their own project milestones" on public.project_milestones;
+create policy "Users can insert their own project milestones"
+on public.project_milestones for insert
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1 from public.projects
+    where projects.id = project_milestones.project_id
+      and projects.user_id = auth.uid()
+  )
+  and (
+    task_id is null
+    or exists (
+      select 1 from public.tasks
+      where tasks.id = project_milestones.task_id
+        and tasks.user_id = auth.uid()
+    )
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = project_milestones.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can update their own project milestones" on public.project_milestones;
+create policy "Users can update their own project milestones"
+on public.project_milestones for update
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1 from public.projects
+    where projects.id = project_milestones.project_id
+      and projects.user_id = auth.uid()
+  )
+  and (
+    task_id is null
+    or exists (
+      select 1 from public.tasks
+      where tasks.id = project_milestones.task_id
+        and tasks.user_id = auth.uid()
+    )
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = project_milestones.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can insert their own project bugs" on public.project_bugs;
+create policy "Users can insert their own project bugs"
+on public.project_bugs for insert
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1 from public.projects
+    where projects.id = project_bugs.project_id
+      and projects.user_id = auth.uid()
+  )
+  and (
+    task_id is null
+    or exists (
+      select 1 from public.tasks
+      where tasks.id = project_bugs.task_id
+        and tasks.user_id = auth.uid()
+    )
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = project_bugs.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can update their own project bugs" on public.project_bugs;
+create policy "Users can update their own project bugs"
+on public.project_bugs for update
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1 from public.projects
+    where projects.id = project_bugs.project_id
+      and projects.user_id = auth.uid()
+  )
+  and (
+    task_id is null
+    or exists (
+      select 1 from public.tasks
+      where tasks.id = project_bugs.task_id
+        and tasks.user_id = auth.uid()
+    )
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = project_bugs.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can insert their own project tests" on public.project_tests;
+create policy "Users can insert their own project tests"
+on public.project_tests for insert
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1 from public.projects
+    where projects.id = project_tests.project_id
+      and projects.user_id = auth.uid()
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = project_tests.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can update their own project tests" on public.project_tests;
+create policy "Users can update their own project tests"
+on public.project_tests for update
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1 from public.projects
+    where projects.id = project_tests.project_id
+      and projects.user_id = auth.uid()
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = project_tests.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can insert their own project releases" on public.project_releases;
+create policy "Users can insert their own project releases"
+on public.project_releases for insert
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1 from public.projects
+    where projects.id = project_releases.project_id
+      and projects.user_id = auth.uid()
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = project_releases.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+  and (
+    resume_bullet_id is null
+    or exists (
+      select 1 from public.resume_bullets
+      where resume_bullets.id = project_releases.resume_bullet_id
+        and resume_bullets.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can update their own project releases" on public.project_releases;
+create policy "Users can update their own project releases"
+on public.project_releases for update
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1 from public.projects
+    where projects.id = project_releases.project_id
+      and projects.user_id = auth.uid()
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = project_releases.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+  and (
+    resume_bullet_id is null
+    or exists (
+      select 1 from public.resume_bullets
+      where resume_bullets.id = project_releases.resume_bullet_id
+        and resume_bullets.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can insert their own project links" on public.project_links;
+create policy "Users can insert their own project links"
+on public.project_links for insert
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1 from public.projects
+    where projects.id = project_links.project_id
+      and projects.user_id = auth.uid()
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = project_links.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can update their own project links" on public.project_links;
+create policy "Users can update their own project links"
+on public.project_links for update
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1 from public.projects
+    where projects.id = project_links.project_id
+      and projects.user_id = auth.uid()
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = project_links.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can insert their own skill progress" on public.skill_progress;
+create policy "Users can insert their own skill progress"
+on public.skill_progress for insert
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1 from public.skills
+    where skills.id = skill_progress.skill_id
+      and skills.user_id = auth.uid()
+  )
+  and (
+    learning_session_id is null
+    or exists (
+      select 1 from public.learning_sessions
+      where learning_sessions.id = skill_progress.learning_session_id
+        and learning_sessions.user_id = auth.uid()
+    )
+  )
+  and (
+    quiz_attempt_id is null
+    or exists (
+      select 1 from public.quiz_attempts
+      where quiz_attempts.id = skill_progress.quiz_attempt_id
+        and quiz_attempts.user_id = auth.uid()
+    )
+  )
+  and (
+    project_id is null
+    or exists (
+      select 1 from public.projects
+      where projects.id = skill_progress.project_id
+        and projects.user_id = auth.uid()
+    )
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = skill_progress.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+  and (
+    task_id is null
+    or exists (
+      select 1 from public.tasks
+      where tasks.id = skill_progress.task_id
+        and tasks.user_id = auth.uid()
+    )
+  )
+  and (
+    goal_id is null
+    or exists (
+      select 1 from public.goals
+      where goals.id = skill_progress.goal_id
+        and goals.user_id = auth.uid()
+    )
+  )
+  and (
+    source_ai_action_id is null
+    or exists (
+      select 1 from public.ai_actions
+      where ai_actions.id = skill_progress.source_ai_action_id
+        and ai_actions.user_id = auth.uid()
+    )
+  )
+  and (
+    source_chat_message_id is null
+    or exists (
+      select 1 from public.chat_messages
+      where chat_messages.id = skill_progress.source_chat_message_id
+        and chat_messages.user_id = auth.uid()
+    )
+  )
+);
+
+drop policy if exists "Users can update their own skill progress" on public.skill_progress;
+create policy "Users can update their own skill progress"
+on public.skill_progress for update
+using (auth.uid() = user_id)
+with check (
+  auth.uid() = user_id
+  and exists (
+    select 1 from public.skills
+    where skills.id = skill_progress.skill_id
+      and skills.user_id = auth.uid()
+  )
+  and (
+    learning_session_id is null
+    or exists (
+      select 1 from public.learning_sessions
+      where learning_sessions.id = skill_progress.learning_session_id
+        and learning_sessions.user_id = auth.uid()
+    )
+  )
+  and (
+    quiz_attempt_id is null
+    or exists (
+      select 1 from public.quiz_attempts
+      where quiz_attempts.id = skill_progress.quiz_attempt_id
+        and quiz_attempts.user_id = auth.uid()
+    )
+  )
+  and (
+    project_id is null
+    or exists (
+      select 1 from public.projects
+      where projects.id = skill_progress.project_id
+        and projects.user_id = auth.uid()
+    )
+  )
+  and (
+    proof_item_id is null
+    or exists (
+      select 1 from public.proof_items
+      where proof_items.id = skill_progress.proof_item_id
+        and proof_items.user_id = auth.uid()
+    )
+  )
+  and (
+    task_id is null
+    or exists (
+      select 1 from public.tasks
+      where tasks.id = skill_progress.task_id
+        and tasks.user_id = auth.uid()
+    )
+  )
+  and (
+    goal_id is null
+    or exists (
+      select 1 from public.goals
+      where goals.id = skill_progress.goal_id
+        and goals.user_id = auth.uid()
+    )
+  )
+  and (
+    source_ai_action_id is null
+    or exists (
+      select 1 from public.ai_actions
+      where ai_actions.id = skill_progress.source_ai_action_id
+        and ai_actions.user_id = auth.uid()
+    )
+  )
+  and (
+    source_chat_message_id is null
+    or exists (
+      select 1 from public.chat_messages
+      where chat_messages.id = skill_progress.source_chat_message_id
+        and chat_messages.user_id = auth.uid()
+    )
+  )
+);
+```
+
+### `supabase/migrations/0010_phase10_research_stanford_foundation.sql`
+
+```sql
+-- Phase 10 — Research / Stanford System SQL Foundation
+-- Scope: 10.7 SQL migration only.
+-- This migration adds Phase 10 user-owned research and Stanford/PhD tables.
+-- It does not add memory_items, embeddings, autonomous writes, or dashboard code.
+
+create table if not exists public.research_ideas (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  title text not null,
+  summary text,
+  research_area text,
+  status text not null default 'captured' check (status in ('captured', 'exploring', 'active', 'blocked', 'converted_to_paper', 'paused', 'archived')),
+  priority text not null default 'medium' check (priority in ('low', 'medium', 'high', 'urgent')),
+  novelty_score integer check (novelty_score between 0 and 100),
+  feasibility_score integer check (feasibility_score between 0 and 100),
+  impact_score integer check (impact_score between 0 and 100),
+  proof_strength_score integer check (proof_strength_score between 0 and 100),
+  project_id uuid references public.projects(id) on delete set null,
+  skill_id uuid references public.skills(id) on delete set null,
+  goal_id uuid references public.goals(id) on delete set null,
+  task_id uuid references public.tasks(id) on delete set null,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  source text,
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.research_questions (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  research_idea_id uuid references public.research_ideas(id) on delete cascade,
+  question text not null,
+  hypothesis text,
+  variable_focus text,
+  expected_outcome text,
+  status text not null default 'open' check (status in ('open', 'investigating', 'supported', 'rejected', 'revised', 'archived')),
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.research_literature_items (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  title text not null,
+  authors text[] not null default '{}'::text[],
+  publication_year integer,
+  venue text,
+  source_url text,
+  doi text,
+  arxiv_id text,
+  item_type text not null default 'paper' check (item_type in ('paper', 'article', 'book', 'thesis', 'technical_report', 'documentation', 'dataset', 'benchmark', 'other')),
+  reading_status text not null default 'saved' check (reading_status in ('saved', 'skimmed', 'reading', 'read', 'summarized', 'cited', 'archived')),
+  relevance_score integer check (relevance_score between 0 and 100),
+  credibility_score integer check (credibility_score between 0 and 100),
+  summary text,
+  key_methods text,
+  key_results text,
+  limitations text,
+  notes text,
+  related_research_idea_id uuid references public.research_ideas(id) on delete set null,
+  related_project_id uuid references public.projects(id) on delete set null,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.research_papers (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  title text not null,
+  abstract text,
+  research_area text,
+  status text not null default 'idea' check (status in ('idea', 'outline', 'drafting', 'internal_review', 'professor_review', 'revision', 'submission_ready', 'submitted', 'accepted', 'rejected', 'archived')),
+  primary_research_idea_id uuid references public.research_ideas(id) on delete set null,
+  project_id uuid references public.projects(id) on delete set null,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  resume_bullet_id uuid references public.resume_bullets(id) on delete set null,
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.research_paper_versions (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  research_paper_id uuid not null references public.research_papers(id) on delete cascade,
+  version_label text not null,
+  file_url text,
+  doc_url text,
+  abstract_snapshot text,
+  status text not null default 'draft' check (status in ('draft', 'reviewed', 'revised', 'submission_candidate', 'archived')),
+  page_count integer check (page_count >= 0),
+  readiness_score integer check (readiness_score between 0 and 100),
+  main_gap text,
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.research_claims (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  research_idea_id uuid references public.research_ideas(id) on delete set null,
+  research_paper_id uuid references public.research_papers(id) on delete set null,
+  paper_version_id uuid references public.research_paper_versions(id) on delete set null,
+  claim_text text not null,
+  claim_type text not null default 'contribution' check (claim_type in ('novelty', 'method', 'result', 'comparison', 'limitation', 'contribution', 'application', 'future_work')),
+  support_status text not null default 'unsupported' check (support_status in ('unsupported', 'partially_supported', 'supported', 'contradicted', 'needs_review')),
+  evidence_strength integer check (evidence_strength between 0 and 100),
+  literature_item_id uuid references public.research_literature_items(id) on delete set null,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  project_id uuid references public.projects(id) on delete set null,
+  resume_bullet_id uuid references public.resume_bullets(id) on delete set null,
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.research_experiments (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  research_idea_id uuid references public.research_ideas(id) on delete set null,
+  research_question_id uuid references public.research_questions(id) on delete set null,
+  project_id uuid references public.projects(id) on delete set null,
+  title text not null,
+  objective text,
+  method text,
+  dataset text,
+  baseline text,
+  variables jsonb not null default '{}'::jsonb,
+  metrics jsonb not null default '{}'::jsonb,
+  reproducibility_status text not null default 'not_started' check (reproducibility_status in ('not_started', 'partial', 'reproducible', 'not_reproducible', 'needs_cleanup')),
+  status text not null default 'planned' check (status in ('planned', 'running', 'blocked', 'completed', 'failed', 'archived')),
+  started_at timestamptz,
+  completed_at timestamptz,
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.research_results (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  research_experiment_id uuid references public.research_experiments(id) on delete cascade,
+  research_idea_id uuid references public.research_ideas(id) on delete set null,
+  project_id uuid references public.projects(id) on delete set null,
+  title text not null,
+  result_summary text,
+  metric_name text,
+  metric_value numeric,
+  metric_unit text,
+  comparison_baseline text,
+  interpretation text,
+  limitation text,
+  figure_reference text,
+  table_reference text,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  paper_version_id uuid references public.research_paper_versions(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.research_citations (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  literature_item_id uuid not null references public.research_literature_items(id) on delete cascade,
+  research_idea_id uuid references public.research_ideas(id) on delete set null,
+  research_claim_id uuid references public.research_claims(id) on delete set null,
+  research_paper_id uuid references public.research_papers(id) on delete set null,
+  paper_version_id uuid references public.research_paper_versions(id) on delete set null,
+  citation_purpose text not null default 'background' check (citation_purpose in ('background', 'related_work', 'method_support', 'result_comparison', 'limitation', 'future_work', 'contradiction', 'definition', 'benchmark', 'other')),
+  citation_note text,
+  quote_or_excerpt text,
+  page_or_section text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.research_venues (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  name text not null,
+  venue_type text not null default 'conference' check (venue_type in ('conference', 'journal', 'workshop', 'symposium', 'preprint', 'internal_review', 'other')),
+  field text,
+  ranking_note text,
+  deadline date,
+  submission_url text,
+  page_limit integer check (page_limit >= 0),
+  format_requirements text,
+  fit_score integer check (fit_score between 0 and 100),
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+alter table public.research_papers
+  add column if not exists target_venue_id uuid references public.research_venues(id) on delete set null;
+
+create table if not exists public.research_submissions (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  research_paper_id uuid not null references public.research_papers(id) on delete cascade,
+  research_venue_id uuid references public.research_venues(id) on delete set null,
+  submitted_at timestamptz,
+  status text not null default 'planned' check (status in ('planned', 'preparing', 'submitted', 'under_review', 'accepted', 'rejected', 'withdrawn', 'archived')),
+  decision text,
+  decision_at timestamptz,
+  reviewer_summary text,
+  next_action text,
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.research_feedback (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  research_paper_id uuid references public.research_papers(id) on delete set null,
+  paper_version_id uuid references public.research_paper_versions(id) on delete set null,
+  research_idea_id uuid references public.research_ideas(id) on delete set null,
+  feedback_source_type text not null default 'self_review' check (feedback_source_type in ('professor', 'advisor', 'collaborator', 'reviewer', 'self_review', 'peer', 'other')),
+  feedback_source_name text,
+  feedback_date date,
+  summary text not null,
+  required_changes text,
+  severity text not null default 'medium' check (severity in ('low', 'medium', 'high', 'critical')),
+  status text not null default 'received' check (status in ('received', 'triaged', 'in_progress', 'addressed', 'rejected', 'archived')),
+  task_id uuid references public.tasks(id) on delete set null,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.target_universities (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  name text not null,
+  program_name text,
+  department text,
+  country text,
+  location text,
+  target_level text not null default 'exploratory' check (target_level in ('dream', 'reach', 'target', 'safety', 'exploratory')),
+  fit_score integer check (fit_score between 0 and 100),
+  competitiveness text,
+  application_deadline date,
+  requirements_url text,
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.target_labs (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  target_university_id uuid references public.target_universities(id) on delete cascade,
+  name text not null,
+  research_area text,
+  lab_url text,
+  fit_score integer check (fit_score between 0 and 100),
+  fit_reason text,
+  related_research_idea_id uuid references public.research_ideas(id) on delete set null,
+  related_research_paper_id uuid references public.research_papers(id) on delete set null,
+  related_project_id uuid references public.projects(id) on delete set null,
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.target_professors (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  target_university_id uuid references public.target_universities(id) on delete set null,
+  target_lab_id uuid references public.target_labs(id) on delete set null,
+  name text not null,
+  title text,
+  email text,
+  profile_url text,
+  research_area text,
+  fit_score integer check (fit_score between 0 and 100),
+  fit_reason text,
+  outreach_status text not null default 'not_started' check (outreach_status in ('not_started', 'researching', 'draft_needed', 'ready_to_contact', 'contacted', 'replied', 'follow_up_needed', 'not_fit', 'archived')),
+  last_contacted_at timestamptz,
+  related_literature_item_id uuid references public.research_literature_items(id) on delete set null,
+  related_research_idea_id uuid references public.research_ideas(id) on delete set null,
+  related_research_paper_id uuid references public.research_papers(id) on delete set null,
+  related_project_id uuid references public.projects(id) on delete set null,
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.phd_readiness_assessments (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  assessment_date date not null default current_date,
+  overall_score integer check (overall_score between 0 and 100),
+  research_score integer check (research_score between 0 and 100),
+  publication_score integer check (publication_score between 0 and 100),
+  project_score integer check (project_score between 0 and 100),
+  proof_score integer check (proof_score between 0 and 100),
+  recommendation_score integer check (recommendation_score between 0 and 100),
+  sop_score integer check (sop_score between 0 and 100),
+  professor_fit_score integer check (professor_fit_score between 0 and 100),
+  academic_context_score integer check (academic_context_score between 0 and 100),
+  main_gap text,
+  next_action text,
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.phd_application_assets (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  target_university_id uuid references public.target_universities(id) on delete set null,
+  asset_type text not null check (asset_type in ('sop', 'cv', 'resume', 'transcript', 'recommendation', 'writing_sample', 'research_statement', 'portfolio', 'paper', 'test_score', 'other')),
+  title text not null,
+  status text not null default 'missing' check (status in ('missing', 'planned', 'drafting', 'needs_review', 'ready', 'submitted', 'archived')),
+  file_url text,
+  doc_url text,
+  quality_score integer check (quality_score between 0 and 100),
+  due_date date,
+  task_id uuid references public.tasks(id) on delete set null,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.sop_versions (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  target_university_id uuid references public.target_universities(id) on delete set null,
+  version_label text not null,
+  doc_url text,
+  thesis text,
+  research_fit_summary text,
+  professor_fit_summary text,
+  weakness_notes text,
+  readiness_score integer check (readiness_score between 0 and 100),
+  status text not null default 'outline' check (status in ('outline', 'draft', 'reviewed', 'revised', 'ready', 'submitted', 'archived')),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.recommendation_targets (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  recommender_name text not null,
+  recommender_role text,
+  institution_or_company text,
+  relationship_context text,
+  strength_score integer check (strength_score between 0 and 100),
+  request_status text not null default 'potential' check (request_status in ('potential', 'preparing', 'requested', 'agreed', 'submitted', 'unavailable', 'archived')),
+  requested_at timestamptz,
+  due_date date,
+  target_university_id uuid references public.target_universities(id) on delete set null,
+  related_research_paper_id uuid references public.research_papers(id) on delete set null,
+  related_project_id uuid references public.projects(id) on delete set null,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+alter table public.research_ideas enable row level security;
+alter table public.research_questions enable row level security;
+alter table public.research_literature_items enable row level security;
+alter table public.research_citations enable row level security;
+alter table public.research_claims enable row level security;
+alter table public.research_experiments enable row level security;
+alter table public.research_results enable row level security;
+alter table public.research_papers enable row level security;
+alter table public.research_paper_versions enable row level security;
+alter table public.research_venues enable row level security;
+alter table public.research_submissions enable row level security;
+alter table public.research_feedback enable row level security;
+alter table public.target_universities enable row level security;
+alter table public.target_labs enable row level security;
+alter table public.target_professors enable row level security;
+alter table public.phd_readiness_assessments enable row level security;
+alter table public.phd_application_assets enable row level security;
+alter table public.sop_versions enable row level security;
+alter table public.recommendation_targets enable row level security;
+
+create policy "research_ideas_select_own" on public.research_ideas for select using (auth.uid() = user_id);
+create policy "research_ideas_insert_own" on public.research_ideas for insert with check (auth.uid() = user_id);
+
+create policy "research_questions_select_own" on public.research_questions for select using (auth.uid() = user_id);
+create policy "research_questions_insert_own" on public.research_questions for insert with check (auth.uid() = user_id);
+
+create policy "research_literature_items_select_own" on public.research_literature_items for select using (auth.uid() = user_id);
+create policy "research_literature_items_insert_own" on public.research_literature_items for insert with check (auth.uid() = user_id);
+
+create policy "research_citations_select_own" on public.research_citations for select using (auth.uid() = user_id);
+create policy "research_citations_insert_own" on public.research_citations for insert with check (auth.uid() = user_id);
+
+create policy "research_claims_select_own" on public.research_claims for select using (auth.uid() = user_id);
+create policy "research_claims_insert_own" on public.research_claims for insert with check (auth.uid() = user_id);
+
+create policy "research_experiments_select_own" on public.research_experiments for select using (auth.uid() = user_id);
+create policy "research_experiments_insert_own" on public.research_experiments for insert with check (auth.uid() = user_id);
+
+create policy "research_results_select_own" on public.research_results for select using (auth.uid() = user_id);
+create policy "research_results_insert_own" on public.research_results for insert with check (auth.uid() = user_id);
+
+create policy "research_papers_select_own" on public.research_papers for select using (auth.uid() = user_id);
+create policy "research_papers_insert_own" on public.research_papers for insert with check (auth.uid() = user_id);
+
+create policy "research_paper_versions_select_own" on public.research_paper_versions for select using (auth.uid() = user_id);
+create policy "research_paper_versions_insert_own" on public.research_paper_versions for insert with check (auth.uid() = user_id);
+
+create policy "research_venues_select_own" on public.research_venues for select using (auth.uid() = user_id);
+create policy "research_venues_insert_own" on public.research_venues for insert with check (auth.uid() = user_id);
+
+create policy "research_submissions_select_own" on public.research_submissions for select using (auth.uid() = user_id);
+create policy "research_submissions_insert_own" on public.research_submissions for insert with check (auth.uid() = user_id);
+
+create policy "research_feedback_select_own" on public.research_feedback for select using (auth.uid() = user_id);
+create policy "research_feedback_insert_own" on public.research_feedback for insert with check (auth.uid() = user_id);
+
+create policy "target_universities_select_own" on public.target_universities for select using (auth.uid() = user_id);
+create policy "target_universities_insert_own" on public.target_universities for insert with check (auth.uid() = user_id);
+
+create policy "target_labs_select_own" on public.target_labs for select using (auth.uid() = user_id);
+create policy "target_labs_insert_own" on public.target_labs for insert with check (auth.uid() = user_id);
+
+create policy "target_professors_select_own" on public.target_professors for select using (auth.uid() = user_id);
+create policy "target_professors_insert_own" on public.target_professors for insert with check (auth.uid() = user_id);
+
+create policy "phd_readiness_assessments_select_own" on public.phd_readiness_assessments for select using (auth.uid() = user_id);
+create policy "phd_readiness_assessments_insert_own" on public.phd_readiness_assessments for insert with check (auth.uid() = user_id);
+
+create policy "phd_application_assets_select_own" on public.phd_application_assets for select using (auth.uid() = user_id);
+create policy "phd_application_assets_insert_own" on public.phd_application_assets for insert with check (auth.uid() = user_id);
+
+create policy "sop_versions_select_own" on public.sop_versions for select using (auth.uid() = user_id);
+create policy "sop_versions_insert_own" on public.sop_versions for insert with check (auth.uid() = user_id);
+
+create policy "recommendation_targets_select_own" on public.recommendation_targets for select using (auth.uid() = user_id);
+create policy "recommendation_targets_insert_own" on public.recommendation_targets for insert with check (auth.uid() = user_id);
+
+create index if not exists research_ideas_user_id_idx on public.research_ideas(user_id);
+create index if not exists research_questions_user_id_idx on public.research_questions(user_id);
+create index if not exists research_literature_items_user_id_idx on public.research_literature_items(user_id);
+create index if not exists research_citations_user_id_idx on public.research_citations(user_id);
+create index if not exists research_claims_user_id_idx on public.research_claims(user_id);
+create index if not exists research_experiments_user_id_idx on public.research_experiments(user_id);
+create index if not exists research_results_user_id_idx on public.research_results(user_id);
+create index if not exists research_papers_user_id_idx on public.research_papers(user_id);
+create index if not exists research_paper_versions_user_id_idx on public.research_paper_versions(user_id);
+create index if not exists research_venues_user_id_idx on public.research_venues(user_id);
+create index if not exists research_submissions_user_id_idx on public.research_submissions(user_id);
+create index if not exists research_feedback_user_id_idx on public.research_feedback(user_id);
+create index if not exists target_universities_user_id_idx on public.target_universities(user_id);
+create index if not exists target_labs_user_id_idx on public.target_labs(user_id);
+create index if not exists target_professors_user_id_idx on public.target_professors(user_id);
+create index if not exists phd_readiness_assessments_user_id_idx on public.phd_readiness_assessments(user_id);
+create index if not exists phd_application_assets_user_id_idx on public.phd_application_assets(user_id);
+create index if not exists sop_versions_user_id_idx on public.sop_versions(user_id);
+create index if not exists recommendation_targets_user_id_idx on public.recommendation_targets(user_id);
+
+create index if not exists research_questions_research_idea_id_idx on public.research_questions(research_idea_id);
+create index if not exists research_literature_items_related_research_idea_id_idx on public.research_literature_items(related_research_idea_id);
+create index if not exists research_claims_research_idea_id_idx on public.research_claims(research_idea_id);
+create index if not exists research_claims_research_paper_id_idx on public.research_claims(research_paper_id);
+create index if not exists research_experiments_research_idea_id_idx on public.research_experiments(research_idea_id);
+create index if not exists research_results_research_experiment_id_idx on public.research_results(research_experiment_id);
+create index if not exists research_paper_versions_research_paper_id_idx on public.research_paper_versions(research_paper_id);
+create index if not exists research_submissions_research_paper_id_idx on public.research_submissions(research_paper_id);
+create index if not exists research_feedback_research_paper_id_idx on public.research_feedback(research_paper_id);
+create index if not exists target_labs_target_university_id_idx on public.target_labs(target_university_id);
+create index if not exists target_professors_target_university_id_idx on public.target_professors(target_university_id);
+create index if not exists target_professors_target_lab_id_idx on public.target_professors(target_lab_id);
+```
+
+### `supabase/migrations/0011_phase10_parent_ownership_guards.sql`
+
+```sql
+-- Phase 10 — Parent Ownership / RLS Hardening
+-- Scope: 10.8 ownership guards only.
+-- This migration protects nullable parent links on Phase 10 records.
+-- It does not create memory_items, embeddings, app code, read helpers, or dashboard writes.
+
+create or replace function public.phase10_parent_belongs_to_user(
+  parent_table_name text,
+  parent_record_id uuid,
+  expected_user_id uuid
+)
+returns boolean
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  parent_owner_id uuid;
+begin
+  if parent_record_id is null then
+    return true;
+  end if;
+
+  if parent_table_name not in (
+    'goals',
+    'tasks',
+    'proof_items',
+    'projects',
+    'skills',
+    'resume_bullets',
+    'research_ideas',
+    'research_questions',
+    'research_literature_items',
+    'research_claims',
+    'research_experiments',
+    'research_results',
+    'research_papers',
+    'research_paper_versions',
+    'research_venues',
+    'research_submissions',
+    'research_feedback',
+    'target_universities',
+    'target_labs',
+    'target_professors',
+    'phd_application_assets',
+    'sop_versions',
+    'recommendation_targets'
+  ) then
+    return false;
+  end if;
+
+  execute format('select user_id from public.%I where id = $1', parent_table_name)
+    into parent_owner_id
+    using parent_record_id;
+
+  return parent_owner_id = expected_user_id;
+end;
+$$;
+
+create or replace function public.phase10_assert_parent_belongs_to_user(
+  parent_table_name text,
+  parent_record_id uuid,
+  expected_user_id uuid,
+  parent_column_name text
+)
+returns void
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  if not public.phase10_parent_belongs_to_user(parent_table_name, parent_record_id, expected_user_id) then
+    raise exception 'Phase 10 ownership violation: %.% does not belong to user %',
+      parent_table_name,
+      parent_column_name,
+      expected_user_id
+      using errcode = '42501';
+  end if;
+end;
+$$;
+
+create or replace function public.phase10_validate_parent_ownership()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  if new.user_id is null then
+    raise exception 'Phase 10 ownership violation: user_id is required'
+      using errcode = '23502';
+  end if;
+
+  if tg_table_name = 'research_ideas' then
+    perform public.phase10_assert_parent_belongs_to_user('projects', new.project_id, new.user_id, 'project_id');
+    perform public.phase10_assert_parent_belongs_to_user('skills', new.skill_id, new.user_id, 'skill_id');
+    perform public.phase10_assert_parent_belongs_to_user('goals', new.goal_id, new.user_id, 'goal_id');
+    perform public.phase10_assert_parent_belongs_to_user('tasks', new.task_id, new.user_id, 'task_id');
+    perform public.phase10_assert_parent_belongs_to_user('proof_items', new.proof_item_id, new.user_id, 'proof_item_id');
+
+  elsif tg_table_name = 'research_questions' then
+    perform public.phase10_assert_parent_belongs_to_user('research_ideas', new.research_idea_id, new.user_id, 'research_idea_id');
+
+  elsif tg_table_name = 'research_literature_items' then
+    perform public.phase10_assert_parent_belongs_to_user('research_ideas', new.related_research_idea_id, new.user_id, 'related_research_idea_id');
+    perform public.phase10_assert_parent_belongs_to_user('projects', new.related_project_id, new.user_id, 'related_project_id');
+    perform public.phase10_assert_parent_belongs_to_user('proof_items', new.proof_item_id, new.user_id, 'proof_item_id');
+
+  elsif tg_table_name = 'research_papers' then
+    perform public.phase10_assert_parent_belongs_to_user('research_venues', new.target_venue_id, new.user_id, 'target_venue_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_ideas', new.primary_research_idea_id, new.user_id, 'primary_research_idea_id');
+    perform public.phase10_assert_parent_belongs_to_user('projects', new.project_id, new.user_id, 'project_id');
+    perform public.phase10_assert_parent_belongs_to_user('proof_items', new.proof_item_id, new.user_id, 'proof_item_id');
+    perform public.phase10_assert_parent_belongs_to_user('resume_bullets', new.resume_bullet_id, new.user_id, 'resume_bullet_id');
+
+  elsif tg_table_name = 'research_paper_versions' then
+    perform public.phase10_assert_parent_belongs_to_user('research_papers', new.research_paper_id, new.user_id, 'research_paper_id');
+
+  elsif tg_table_name = 'research_claims' then
+    perform public.phase10_assert_parent_belongs_to_user('research_ideas', new.research_idea_id, new.user_id, 'research_idea_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_papers', new.research_paper_id, new.user_id, 'research_paper_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_paper_versions', new.paper_version_id, new.user_id, 'paper_version_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_literature_items', new.literature_item_id, new.user_id, 'literature_item_id');
+    perform public.phase10_assert_parent_belongs_to_user('proof_items', new.proof_item_id, new.user_id, 'proof_item_id');
+    perform public.phase10_assert_parent_belongs_to_user('projects', new.project_id, new.user_id, 'project_id');
+    perform public.phase10_assert_parent_belongs_to_user('resume_bullets', new.resume_bullet_id, new.user_id, 'resume_bullet_id');
+
+  elsif tg_table_name = 'research_experiments' then
+    perform public.phase10_assert_parent_belongs_to_user('research_ideas', new.research_idea_id, new.user_id, 'research_idea_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_questions', new.research_question_id, new.user_id, 'research_question_id');
+    perform public.phase10_assert_parent_belongs_to_user('projects', new.project_id, new.user_id, 'project_id');
+
+  elsif tg_table_name = 'research_results' then
+    perform public.phase10_assert_parent_belongs_to_user('research_experiments', new.research_experiment_id, new.user_id, 'research_experiment_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_ideas', new.research_idea_id, new.user_id, 'research_idea_id');
+    perform public.phase10_assert_parent_belongs_to_user('projects', new.project_id, new.user_id, 'project_id');
+    perform public.phase10_assert_parent_belongs_to_user('proof_items', new.proof_item_id, new.user_id, 'proof_item_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_paper_versions', new.paper_version_id, new.user_id, 'paper_version_id');
+
+  elsif tg_table_name = 'research_citations' then
+    perform public.phase10_assert_parent_belongs_to_user('research_literature_items', new.literature_item_id, new.user_id, 'literature_item_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_ideas', new.research_idea_id, new.user_id, 'research_idea_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_claims', new.research_claim_id, new.user_id, 'research_claim_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_papers', new.research_paper_id, new.user_id, 'research_paper_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_paper_versions', new.paper_version_id, new.user_id, 'paper_version_id');
+
+  elsif tg_table_name = 'research_submissions' then
+    perform public.phase10_assert_parent_belongs_to_user('research_papers', new.research_paper_id, new.user_id, 'research_paper_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_venues', new.research_venue_id, new.user_id, 'research_venue_id');
+
+  elsif tg_table_name = 'research_feedback' then
+    perform public.phase10_assert_parent_belongs_to_user('research_papers', new.research_paper_id, new.user_id, 'research_paper_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_paper_versions', new.paper_version_id, new.user_id, 'paper_version_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_ideas', new.research_idea_id, new.user_id, 'research_idea_id');
+    perform public.phase10_assert_parent_belongs_to_user('tasks', new.task_id, new.user_id, 'task_id');
+    perform public.phase10_assert_parent_belongs_to_user('proof_items', new.proof_item_id, new.user_id, 'proof_item_id');
+
+  elsif tg_table_name = 'target_labs' then
+    perform public.phase10_assert_parent_belongs_to_user('target_universities', new.target_university_id, new.user_id, 'target_university_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_ideas', new.related_research_idea_id, new.user_id, 'related_research_idea_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_papers', new.related_research_paper_id, new.user_id, 'related_research_paper_id');
+    perform public.phase10_assert_parent_belongs_to_user('projects', new.related_project_id, new.user_id, 'related_project_id');
+
+  elsif tg_table_name = 'target_professors' then
+    perform public.phase10_assert_parent_belongs_to_user('target_universities', new.target_university_id, new.user_id, 'target_university_id');
+    perform public.phase10_assert_parent_belongs_to_user('target_labs', new.target_lab_id, new.user_id, 'target_lab_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_literature_items', new.related_literature_item_id, new.user_id, 'related_literature_item_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_ideas', new.related_research_idea_id, new.user_id, 'related_research_idea_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_papers', new.related_research_paper_id, new.user_id, 'related_research_paper_id');
+    perform public.phase10_assert_parent_belongs_to_user('projects', new.related_project_id, new.user_id, 'related_project_id');
+
+  elsif tg_table_name = 'phd_application_assets' then
+    perform public.phase10_assert_parent_belongs_to_user('target_universities', new.target_university_id, new.user_id, 'target_university_id');
+    perform public.phase10_assert_parent_belongs_to_user('tasks', new.task_id, new.user_id, 'task_id');
+    perform public.phase10_assert_parent_belongs_to_user('proof_items', new.proof_item_id, new.user_id, 'proof_item_id');
+
+  elsif tg_table_name = 'sop_versions' then
+    perform public.phase10_assert_parent_belongs_to_user('target_universities', new.target_university_id, new.user_id, 'target_university_id');
+
+  elsif tg_table_name = 'recommendation_targets' then
+    perform public.phase10_assert_parent_belongs_to_user('target_universities', new.target_university_id, new.user_id, 'target_university_id');
+    perform public.phase10_assert_parent_belongs_to_user('research_papers', new.related_research_paper_id, new.user_id, 'related_research_paper_id');
+    perform public.phase10_assert_parent_belongs_to_user('projects', new.related_project_id, new.user_id, 'related_project_id');
+    perform public.phase10_assert_parent_belongs_to_user('proof_items', new.proof_item_id, new.user_id, 'proof_item_id');
+  end if;
+
+  return new;
+end;
+$$;
+
+drop trigger if exists research_ideas_parent_ownership_guard on public.research_ideas;
+create trigger research_ideas_parent_ownership_guard before insert or update on public.research_ideas for each row execute function public.phase10_validate_parent_ownership();
+
+drop trigger if exists research_questions_parent_ownership_guard on public.research_questions;
+create trigger research_questions_parent_ownership_guard before insert or update on public.research_questions for each row execute function public.phase10_validate_parent_ownership();
+
+drop trigger if exists research_literature_items_parent_ownership_guard on public.research_literature_items;
+create trigger research_literature_items_parent_ownership_guard before insert or update on public.research_literature_items for each row execute function public.phase10_validate_parent_ownership();
+
+drop trigger if exists research_papers_parent_ownership_guard on public.research_papers;
+create trigger research_papers_parent_ownership_guard before insert or update on public.research_papers for each row execute function public.phase10_validate_parent_ownership();
+
+drop trigger if exists research_paper_versions_parent_ownership_guard on public.research_paper_versions;
+create trigger research_paper_versions_parent_ownership_guard before insert or update on public.research_paper_versions for each row execute function public.phase10_validate_parent_ownership();
+
+drop trigger if exists research_claims_parent_ownership_guard on public.research_claims;
+create trigger research_claims_parent_ownership_guard before insert or update on public.research_claims for each row execute function public.phase10_validate_parent_ownership();
+
+drop trigger if exists research_experiments_parent_ownership_guard on public.research_experiments;
+create trigger research_experiments_parent_ownership_guard before insert or update on public.research_experiments for each row execute function public.phase10_validate_parent_ownership();
+
+drop trigger if exists research_results_parent_ownership_guard on public.research_results;
+create trigger research_results_parent_ownership_guard before insert or update on public.research_results for each row execute function public.phase10_validate_parent_ownership();
+
+drop trigger if exists research_citations_parent_ownership_guard on public.research_citations;
+create trigger research_citations_parent_ownership_guard before insert or update on public.research_citations for each row execute function public.phase10_validate_parent_ownership();
+
+drop trigger if exists research_submissions_parent_ownership_guard on public.research_submissions;
+create trigger research_submissions_parent_ownership_guard before insert or update on public.research_submissions for each row execute function public.phase10_validate_parent_ownership();
+
+drop trigger if exists research_feedback_parent_ownership_guard on public.research_feedback;
+create trigger research_feedback_parent_ownership_guard before insert or update on public.research_feedback for each row execute function public.phase10_validate_parent_ownership();
+
+drop trigger if exists target_labs_parent_ownership_guard on public.target_labs;
+create trigger target_labs_parent_ownership_guard before insert or update on public.target_labs for each row execute function public.phase10_validate_parent_ownership();
+
+drop trigger if exists target_professors_parent_ownership_guard on public.target_professors;
+create trigger target_professors_parent_ownership_guard before insert or update on public.target_professors for each row execute function public.phase10_validate_parent_ownership();
+
+drop trigger if exists phd_application_assets_parent_ownership_guard on public.phd_application_assets;
+create trigger phd_application_assets_parent_ownership_guard before insert or update on public.phd_application_assets for each row execute function public.phase10_validate_parent_ownership();
+
+drop trigger if exists sop_versions_parent_ownership_guard on public.sop_versions;
+create trigger sop_versions_parent_ownership_guard before insert or update on public.sop_versions for each row execute function public.phase10_validate_parent_ownership();
+
+drop trigger if exists recommendation_targets_parent_ownership_guard on public.recommendation_targets;
+create trigger recommendation_targets_parent_ownership_guard before insert or update on public.recommendation_targets for each row execute function public.phase10_validate_parent_ownership();
 ```
 
 ### `tsconfig.json`

@@ -742,3 +742,32 @@ Deferred to later phases:
 
 ### Next Recommended Phase
 Phase 11 — Health / Body System.
+
+## Phase 11 — Health / Body System — STARTED
+
+### Status
+Started.
+
+### Scope
+Phase 11 creates the SQL-backed, read-first health/body foundation for body, workouts, nutrition, supplements, sleep/energy, hair/skincare, and privacy-safe emotion tracking.
+
+### Plan
+See `docs/phase-plans/PHASE_11_HEALTH_BODY_SYSTEM.md`.
+
+### Starting Evidence
+- Phase 10 completed at `d5e300d Complete research system`.
+- `main` matched `origin/main` before Phase 11 planning.
+- `npm run audit:phase10` passed before Phase 11 planning.
+- `npm run check` passed before Phase 11 planning.
+- `CODE_SNAPSHOT.md` was regenerated before Phase 11 planning.
+
+### Step Count
+Phase 11 is planned as 44 steps split into safe build chunks.
+
+### Boundary
+Phase 11 starts as a read-first foundation.
+
+No direct SQL writes, autonomous Carnos writes, Python/ML worker execution, memory/RAG, voice, web tools, background jobs, medical advice, supplement claims, body-shaming language, unsafe diet language, fake photo persistence, or direct dashboard persistence are part of the plan-lock step.
+
+### Next Step
+Phase 11 Chunk A verification and plan commit.
