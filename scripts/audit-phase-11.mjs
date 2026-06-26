@@ -30,9 +30,12 @@ function requireIncludes(content, needle, message) {
   pass(message);
 }
 
-
 function createdPublicTables(sql) {
-  return [...sql.matchAll(/create\s+table\s+if\s+not\s+exists\s+public\.([a-z0-9_]+)/gi)]
+  return [
+    ...sql.matchAll(
+      /create\s+table\s+if\s+not\s+exists\s+public\.([a-z0-9_]+)/gi,
+    ),
+  ]
     .map((match) => match[1])
     .join("\n");
 }
@@ -59,6 +62,7 @@ const requiredFiles = [
   "docs/phase-reports/PHASE_11_HEALTH_BODY_DETAIL_PANEL_PATTERN_REPORT.md",
   "docs/qa/PHASE_11_HEALTH_BODY_MANUAL_SMOKE_CHECKLIST.md",
   "docs/phase-reports/PHASE_11_HEALTH_BODY_AUDIT_GATE.md",
+  "docs/phase-reports/PHASE_11_HEALTH_BODY_COMPLETION_REPORT.md",
   "supabase/migrations/0012_phase11_health_body_foundation.sql",
   "supabase/migrations/0013_phase11_parent_ownership_guards.sql",
   "src/types/database.ts",
@@ -92,11 +96,17 @@ for (const file of requiredFiles) {
 
 console.log("\n=== Phase 11 SQL and type contracts ===");
 
-const migration = fileText.get("supabase/migrations/0012_phase11_health_body_foundation.sql") ?? "";
+const migration =
+  fileText.get("supabase/migrations/0012_phase11_health_body_foundation.sql") ??
+  "";
 const phase11CreatedTablesText = createdPublicTables(migration);
-const ownership = fileText.get("supabase/migrations/0013_phase11_parent_ownership_guards.sql") ?? "";
+const ownership =
+  fileText.get(
+    "supabase/migrations/0013_phase11_parent_ownership_guards.sql",
+  ) ?? "";
 const databaseTypes = fileText.get("src/types/database.ts") ?? "";
-const readHelpers = fileText.get("src/lib/repositories/health-body-read.ts") ?? "";
+const readHelpers =
+  fileText.get("src/lib/repositories/health-body-read.ts") ?? "";
 const repositoryIndex = fileText.get("src/lib/repositories/index.ts") ?? "";
 
 for (const table of [
@@ -139,10 +149,18 @@ for (const helper of [
   "listHaircareLogs",
   "listProducts",
 ]) {
-  requireIncludes(readHelpers, helper, `Health/body read repository exports ${helper}`);
+  requireIncludes(
+    readHelpers,
+    helper,
+    `Health/body read repository exports ${helper}`,
+  );
 }
 
-requireIncludes(repositoryIndex, 'export * from "./health-body-read";', "Repository barrel exports health/body read helpers");
+requireIncludes(
+  repositoryIndex,
+  'export * from "./health-body-read";',
+  "Repository barrel exports health/body read helpers",
+);
 
 for (const marker of [
   "goal_id",
@@ -155,7 +173,11 @@ for (const marker of [
   "raise exception",
   "user_id",
 ]) {
-  requireIncludes(ownership, marker, `Phase 11 parent ownership guard includes ${marker}`);
+  requireIncludes(
+    ownership,
+    marker,
+    `Phase 11 parent ownership guard includes ${marker}`,
+  );
 }
 
 for (const forbiddenTable of [
@@ -163,18 +185,36 @@ for (const forbiddenTable of [
   "progress_photos",
   "analytics_snapshots",
 ]) {
-  forbidIncludes(phase11CreatedTablesText, forbiddenTable, `Phase 11 migration avoids deferred table ${forbiddenTable}`);
-  forbidIncludes(databaseTypes, forbiddenTable, `Database types avoid deferred table ${forbiddenTable}`);
-  forbidIncludes(readHelpers, forbiddenTable, `Read helpers avoid deferred table ${forbiddenTable}`);
+  forbidIncludes(
+    phase11CreatedTablesText,
+    forbiddenTable,
+    `Phase 11 migration avoids deferred table ${forbiddenTable}`,
+  );
+  forbidIncludes(
+    databaseTypes,
+    forbiddenTable,
+    `Database types avoid deferred table ${forbiddenTable}`,
+  );
+  forbidIncludes(
+    readHelpers,
+    forbiddenTable,
+    `Read helpers avoid deferred table ${forbiddenTable}`,
+  );
 }
 
 console.log("\n=== Phase 11 dashboard helper and components ===");
 
-const dashboardHelper = fileText.get("src/lib/dashboard/health-body-dashboard-data-helpers.ts") ?? "";
+const dashboardHelper =
+  fileText.get("src/lib/dashboard/health-body-dashboard-data-helpers.ts") ?? "";
 const dashboardIndex = fileText.get("src/components/dashboard/index.ts") ?? "";
-const detailPanels = fileText.get("src/components/dashboard/health-body-detail-panels.tsx") ?? "";
-const linkagePanels = fileText.get("src/components/dashboard/health-body-linkage-panels.tsx") ?? "";
-const actionBoundaryPanels = fileText.get("src/components/dashboard/health-body-action-boundary-panels.tsx") ?? "";
+const detailPanels =
+  fileText.get("src/components/dashboard/health-body-detail-panels.tsx") ?? "";
+const linkagePanels =
+  fileText.get("src/components/dashboard/health-body-linkage-panels.tsx") ?? "";
+const actionBoundaryPanels =
+  fileText.get(
+    "src/components/dashboard/health-body-action-boundary-panels.tsx",
+  ) ?? "";
 
 for (const marker of [
   "getHealthBodyDashboardDataSummary",
@@ -184,7 +224,11 @@ for (const marker of [
   "recent_health_signal_count",
   "source_tables",
 ]) {
-  requireIncludes(dashboardHelper, marker, `Health/body dashboard helper includes ${marker}`);
+  requireIncludes(
+    dashboardHelper,
+    marker,
+    `Health/body dashboard helper includes ${marker}`,
+  );
 }
 
 for (const marker of [
@@ -199,7 +243,11 @@ for (const marker of [
   'export * from "./health-body-linkage-panels";',
   'export * from "./health-body-action-boundary-panels";',
 ]) {
-  requireIncludes(dashboardIndex, marker, `Dashboard barrel includes ${marker}`);
+  requireIncludes(
+    dashboardIndex,
+    marker,
+    `Dashboard barrel includes ${marker}`,
+  );
 }
 
 for (const marker of [
@@ -246,7 +294,11 @@ for (const marker of [
   "/emotion",
   "/hair-skincare",
 ]) {
-  requireIncludes(actionBoundaryPanels, marker, `Action/state boundary panels include ${marker}`);
+  requireIncludes(
+    actionBoundaryPanels,
+    marker,
+    `Action/state boundary panels include ${marker}`,
+  );
 }
 
 console.log("\n=== Phase 11 route and dashboard wiring ===");
@@ -397,18 +449,25 @@ for (const file of protectedFiles) {
     "executeApprovedAction(",
     "createProposedAction",
   ]) {
-    forbidIncludes(content, marker, `${file} avoids forbidden marker: ${marker}`);
+    forbidIncludes(
+      content,
+      marker,
+      `${file} avoids forbidden marker: ${marker}`,
+    );
   }
 }
 
 console.log("\n=== Phase 11 health/body safety language ===");
 
 const combinedHealthUi = [
-  fileText.get("src/components/dashboard/health-body-dashboard-states.tsx") ?? "",
+  fileText.get("src/components/dashboard/health-body-dashboard-states.tsx") ??
+    "",
   detailPanels,
   linkagePanels,
   actionBoundaryPanels,
-  ...Object.keys(dashboardSurfaceRequirements).map((file) => fileText.get(file) ?? ""),
+  ...Object.keys(dashboardSurfaceRequirements).map(
+    (file) => fileText.get(file) ?? "",
+  ),
 ].join("\n\n");
 
 for (const marker of [
@@ -422,7 +481,11 @@ for (const marker of [
   "Progress photos and visual evidence remain deferred",
   "No medical, supplement, visual-evidence, or mental-health action is wired here.",
 ]) {
-  requireIncludes(combinedHealthUi, marker, `Phase 11 UI safety language includes ${marker}`);
+  requireIncludes(
+    combinedHealthUi,
+    marker,
+    `Phase 11 UI safety language includes ${marker}`,
+  );
 }
 
 for (const unsafe of [
@@ -434,13 +497,23 @@ for (const unsafe of [
   "you are underweight",
   "fix your face",
 ]) {
-  forbidIncludes(combinedHealthUi.toLowerCase(), unsafe, `Phase 11 UI avoids unsafe phrase: ${unsafe}`);
+  forbidIncludes(
+    combinedHealthUi.toLowerCase(),
+    unsafe,
+    `Phase 11 UI avoids unsafe phrase: ${unsafe}`,
+  );
 }
 
 console.log("\n=== Phase 11 docs and logs ===");
 
-const smoke = fileText.get("docs/qa/PHASE_11_HEALTH_BODY_MANUAL_SMOKE_CHECKLIST.md") ?? "";
-const auditGate = fileText.get("docs/phase-reports/PHASE_11_HEALTH_BODY_AUDIT_GATE.md") ?? "";
+const smoke =
+  fileText.get("docs/qa/PHASE_11_HEALTH_BODY_MANUAL_SMOKE_CHECKLIST.md") ?? "";
+const auditGate =
+  fileText.get("docs/phase-reports/PHASE_11_HEALTH_BODY_AUDIT_GATE.md") ?? "";
+const completionReport =
+  fileText.get(
+    "docs/phase-reports/PHASE_11_HEALTH_BODY_COMPLETION_REPORT.md",
+  ) ?? "";
 const executionLog = requireFile("PROJECT_EXECUTION_LOG.md");
 const codeLedger = requireFile("CODE_LEDGER.md");
 const changelog = requireFile("CHANGELOG.md");
@@ -471,6 +544,22 @@ for (const marker of [
 }
 
 for (const marker of [
+  "Phase 11 Completion Report",
+  "Status: Complete.",
+  "Completed scope",
+  "Verification gates",
+  "Protected boundaries",
+  "Deferred scope",
+  "Next phase",
+]) {
+  requireIncludes(
+    completionReport,
+    marker,
+    `Phase 11 completion report includes ${marker}`,
+  );
+}
+
+for (const marker of [
   "Phase 11 Chunk A",
   "Health/Body Detail Panels",
   "Health/Body Linkage Visibility",
@@ -494,4 +583,6 @@ if (failures > 0) {
   process.exit(1);
 }
 
-console.log("\nPhase 11 audit passed: health/body system is structurally present, route-wired, exported, documented, safety-bounded, and protected through J1.");
+console.log(
+  "\nPhase 11 audit passed: health/body system is structurally present, route-wired, exported, documented, safety-bounded, and protected through J1.",
+);
