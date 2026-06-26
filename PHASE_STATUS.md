@@ -854,3 +854,17 @@ Completed pending verification.
 
 ### Boundary
 No new tables, database TypeScript types, repositories, routes, dashboards, storage/upload behavior, Carnos writes, Python/ML execution, candidate baseline table, or progress photo table were added.
+
+## Phase 11 Chunk D — Database Types
+
+### Status
+Completed pending verification.
+
+### Completed Steps
+- 11.17 DB types
+
+### Files
+- `src/types/database.ts`
+
+### Boundary
+No SQL migration, RLS policy, parent ownership trigger, read helper, route, dashboard, storage/upload behavior, Carnos write behavior, Python/ML execution, candidate baseline table, or progress photo table was added.

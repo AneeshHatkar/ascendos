@@ -1609,3 +1609,10 @@ Boundary: Parent ownership triggers are deferred to Chunk C.1. Candidate tables 
 Purpose: Adds Phase 11 parent ownership validation functions and before insert/update triggers for Phase 11 tables with parent foreign keys.
 
 Boundary: No new tables, TypeScript types, read helpers, routes, dashboards, storage behavior, or Carnos writes are added.
+
+## Phase 11 Chunk D — Database Types
+
+### `src/types/database.ts`
+Purpose: Adds TypeScript database table definitions and aliases for Phase 11 health/body tables.
+
+Boundary: No SQL, repositories, read helpers, dashboards, routes, storage/upload behavior, or Carnos writes are added.

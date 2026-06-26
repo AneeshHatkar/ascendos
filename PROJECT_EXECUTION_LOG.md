@@ -2481,3 +2481,18 @@ Purpose:
 - No `progress_photos` table added.
 - No database TypeScript types changed.
 - No repositories, helpers, routes, dashboards, storage/upload behavior, or Carnos write behavior added.
+
+## 2026-06-25 — Phase 11 Chunk D Database Types
+
+### Scope
+- Added TypeScript database table definitions for Phase 11 health/body SQL tables.
+- Added row/insert/update aliases for Phase 11 health/body tables.
+
+### Files
+- `src/types/database.ts`
+
+### Boundary
+- No SQL migration added.
+- No RLS policy changed.
+- No parent ownership trigger changed.
+- No read helpers, repositories, dashboards, routes, storage/upload behavior, or Carnos write behavior added.

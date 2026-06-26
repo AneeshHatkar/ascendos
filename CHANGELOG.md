@@ -786,3 +786,12 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No new tables added.
 - No database TypeScript types changed.
 - No repositories, routes, dashboards, storage/upload behavior, or Carnos write behavior added.
+
+## 2026-06-25 — Phase 11 Chunk D Database Types
+
+### Added
+- Phase 11 database table types for health/body tables.
+- Row/insert/update aliases for Phase 11 health/body entities.
+
+### Notes
+- No SQL migrations, read helpers, dashboards, routes, storage/upload behavior, or Carnos write behavior added.
