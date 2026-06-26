@@ -7,6 +7,11 @@ import {
 } from "./health-body-dashboard-states";
 import { HealthBodyEmotionReflectionDetailPanel } from "./health-body-detail-panels";
 import { HealthBodyProofLinkagePanel } from "./health-body-linkage-panels";
+import {
+  HealthBodyCrossLinks,
+  HealthBodyProposedActionVisibilityPanel,
+  HealthBodyStateBoundaryPanel,
+} from "./health-body-action-boundary-panels";
 
 interface HealthBodyEmotionDashboardV1Props {
   userId: string;
@@ -96,6 +101,10 @@ export async function HealthBodyEmotionDashboardV1({
       />
       <HealthBodyPrivacyNotice />
       <HealthBodyWarningPanel warnings={data.warnings} />
+
+      <HealthBodyStateBoundaryPanel surface="emotion" readErrors={data.warnings} />
+      <HealthBodyCrossLinks activeRoute="/emotion" />
+      <HealthBodyProposedActionVisibilityPanel />
 
       <HealthBodyEmotionReflectionDetailPanel
         emotionLogs={data.detail_rows.emotion_logs}

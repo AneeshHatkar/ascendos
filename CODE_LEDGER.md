@@ -1849,3 +1849,15 @@ Purpose: Attach the linkage visibility panel to body, nutrition, supplements, sl
 Schema: No schema change needed.
 
 Boundary: No writes, SQL migration, database type change, storage/upload behavior, visual evidence storage, or Carnos action was added.
+
+## Health/Body Proposed-Action and State Boundaries
+
+### `src/components/dashboard/health-body-action-boundary-panels.tsx`
+Purpose: Provides preview-only proposed-action visibility, read-state/privacy boundary language, and cross-route links for health/body surfaces.
+
+### Health/body dashboard components
+Purpose: Attach proposed-action visibility, state boundary, and cross-route consistency panels to body, nutrition, supplements, sleep-energy, emotion, and hair-skincare surfaces.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, visual evidence storage, or Carnos execution was added.

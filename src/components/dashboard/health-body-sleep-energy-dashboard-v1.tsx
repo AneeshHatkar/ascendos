@@ -7,6 +7,11 @@ import {
 } from "./health-body-dashboard-states";
 import { HealthBodySleepEnergyDetailPanel } from "./health-body-detail-panels";
 import { HealthBodyProofLinkagePanel } from "./health-body-linkage-panels";
+import {
+  HealthBodyCrossLinks,
+  HealthBodyProposedActionVisibilityPanel,
+  HealthBodyStateBoundaryPanel,
+} from "./health-body-action-boundary-panels";
 
 interface HealthBodySleepEnergyDashboardV1Props {
   userId: string;
@@ -95,6 +100,10 @@ export async function HealthBodySleepEnergyDashboardV1({
       />
       <HealthBodyPrivacyNotice />
       <HealthBodyWarningPanel warnings={data.warnings} />
+
+      <HealthBodyStateBoundaryPanel surface="sleep_energy" readErrors={data.warnings} />
+      <HealthBodyCrossLinks activeRoute="/sleep-energy" />
+      <HealthBodyProposedActionVisibilityPanel />
 
       <HealthBodySleepEnergyDetailPanel
         sleepLogs={data.detail_rows.sleep_logs}

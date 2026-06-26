@@ -7,6 +7,11 @@ import {
 } from "./health-body-dashboard-states";
 import { HealthBodyTrainingDetailPanel } from "./health-body-detail-panels";
 import { HealthBodyProofLinkagePanel } from "./health-body-linkage-panels";
+import {
+  HealthBodyCrossLinks,
+  HealthBodyProposedActionVisibilityPanel,
+  HealthBodyStateBoundaryPanel,
+} from "./health-body-action-boundary-panels";
 
 interface HealthBodyDashboardV1Props {
   userId: string;
@@ -157,6 +162,10 @@ export async function HealthBodyDashboardV1({ userId }: HealthBodyDashboardV1Pro
       <HealthBodyBoundaryNotice />
       <HealthBodyPrivacyNotice />
       <HealthBodyWarningPanel warnings={data.warnings} />
+
+      <HealthBodyStateBoundaryPanel surface="body" readErrors={data.warnings} />
+      <HealthBodyCrossLinks activeRoute="/body" />
+      <HealthBodyProposedActionVisibilityPanel />
 
       <HealthBodyTrainingDetailPanel
         bodyLogs={data.detail_rows.body_logs}

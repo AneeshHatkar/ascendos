@@ -973,3 +973,14 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ### Notes
 - No schema change needed.
 - The panel only displays existing link fields and does not create or modify related records.
+
+## 2026-06-26 — Health/Body Proposed-Action and State Boundaries
+
+### Added
+- Preview-only health/body proposed-action visibility.
+- State and privacy boundary panels for all health/body dashboard surfaces.
+- Cross-route navigation consistency across health/body dashboards.
+
+### Notes
+- No schema change needed.
+- All proposed-action controls are disabled preview UI only.

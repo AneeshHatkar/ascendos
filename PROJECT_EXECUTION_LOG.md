@@ -2834,3 +2834,25 @@ Purpose:
 - No RLS policy changed.
 - No database type change added.
 - No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, baseline table, or visual evidence storage added.
+
+## 2026-06-26 — Health/Body Proposed-Action and State Boundaries
+
+### Scope
+- Added preview-only health/body proposed-action visibility.
+- Added state and privacy boundary panels for empty, loading, error, and privacy states.
+- Added cross-route navigation consistency for health/body surfaces.
+- Attached these panels to all six health/body dashboard surfaces.
+
+### Files
+- `src/components/dashboard/health-body-action-boundary-panels.tsx`
+- `src/components/dashboard/index.ts`
+- Health/body dashboard surface components.
+
+### Schema
+- No schema change needed.
+
+### Boundary
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action execution, storage/upload behavior, analytics snapshot, progress photo table, baseline table, or visual evidence storage added.
