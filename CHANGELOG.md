@@ -733,3 +733,16 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No database types changed.
 - No read helpers added.
 - No dashboard routes changed.
+
+## 2026-06-25 — Phase 11 Chunk B2 Hardening Design
+
+### Added
+- Phase 11 baseline, units, sleep tracking, and photo/storage boundary document.
+- B2 hardening notes in Phase 11 schema design.
+
+### Notes
+- No SQL migration added.
+- No database types changed.
+- No dashboard routes changed.
+- No upload/storage behavior added.
+- No Carnos silent write behavior added.

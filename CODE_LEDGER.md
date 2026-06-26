@@ -1576,3 +1576,11 @@ Purpose: Locks privacy and safety boundaries for sensitive health/body, sleep, s
 
 ### `docs/phase-reports/PHASE_11_SOURCE_TO_SCOPE_TRACEABILITY.md`
 Purpose: Maps Phase 11 source-confirmed routes and tables to implementation scope and identifies deferred/source-referenced items.
+
+## Phase 11 Chunk B2 — Baseline / Units / Sleep / Photo Boundary
+
+### `docs/phase-reports/PHASE_11_BASELINE_UNITS_SLEEP_PHOTO_BOUNDARY.md`
+Purpose: Locks baseline handling, unit clarity, daily sleep tracking, Carnos sleep natural-language proposal boundary, and progress photo/storage honesty before SQL or UI work.
+
+### `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+Purpose: Updated with B2 hardening decision notes for baselines, units, daily sleep, natural-language sleep capture, and progress photo honesty.

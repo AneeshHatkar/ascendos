@@ -2394,3 +2394,26 @@ Purpose:
 - No dashboard routes changed.
 - No Carnos write behavior added.
 - No medical, supplement, or body-image claims added.
+
+## 2026-06-25 — Phase 11 Chunk B2 Hardening Design
+
+### Scope
+- Documented health/body baseline strategy.
+- Documented unit and measurement clarity strategy.
+- Documented daily sleep tracking design.
+- Documented Carnos sleep natural-language capture boundary.
+- Documented progress photo/storage honesty boundary.
+- Added B2 decision notes to the Phase 11 schema design.
+
+### Files
+- `docs/phase-reports/PHASE_11_BASELINE_UNITS_SLEEP_PHOTO_BOUNDARY.md`
+- `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+
+### Boundary
+- No SQL migration added.
+- No RLS policy added.
+- No database types changed.
+- No read helpers added.
+- No dashboard routes changed.
+- No upload/storage behavior added.
+- No Carnos silent write behavior added.

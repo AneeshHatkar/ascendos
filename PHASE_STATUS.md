@@ -789,3 +789,21 @@ Completed pending verification.
 
 ### Boundary
 No SQL, types, repositories, routes, dashboards, Carnos writes, Python/ML execution, medical claims, supplement claims, or photo upload/storage were added.
+
+## Phase 11 Chunk B2 — Baseline / Units / Sleep / Photo Boundary
+
+### Status
+Completed pending verification.
+
+### Completed Steps
+- 11.7 Health/body baseline + unit strategy
+- 11.8 Daily sleep tracking design
+- 11.9 Sleep natural-language capture boundary
+- 11.10 Progress photo/storage honesty boundary
+
+### Files
+- `docs/phase-reports/PHASE_11_BASELINE_UNITS_SLEEP_PHOTO_BOUNDARY.md`
+- `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+
+### Boundary
+No SQL, types, repositories, routes, dashboards, upload/storage behavior, Carnos silent writes, Python/ML execution, or fake photo persistence were added.

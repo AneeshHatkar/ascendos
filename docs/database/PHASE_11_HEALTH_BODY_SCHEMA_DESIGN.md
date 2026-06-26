@@ -582,3 +582,29 @@ Not allowed:
 - Carnos silent writes
 - Python/ML mutation
 - dashboard fake saves
+
+## B2 Hardening Decision Notes
+
+Phase 11 Chunk B2 adds design boundaries for baseline, unit, daily sleep, sleep natural-language capture, and photo/storage honesty.
+
+### Baselines
+
+Phase 11 should support baseline-aware dashboards, but must not hardcode user targets or pretend targets exist.
+
+A `health_body_baselines` table remains a schema candidate, not an automatic requirement. The SQL step must explicitly decide whether to add it or defer it to existing goals/settings.
+
+### Units
+
+Unit labels must be explicit for bodyweight, lifting weight, waist/measurements, water, sleep, macros, and calories.
+
+### Daily Sleep
+
+Daily sleep tracking must preserve compatibility with existing `daily_logs.sleep_hours` while adding detailed `sleep_logs` visibility.
+
+### Natural-Language Sleep Capture
+
+Carnos may parse and calculate sleep duration only as a proposed action. It must not save silently.
+
+### Progress Photos
+
+Progress photos must not be faked. Photo references are allowed only when schema-backed; upload/storage is deferred unless explicitly implemented later.
