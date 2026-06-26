@@ -2693,3 +2693,29 @@ Purpose:
 - No RLS policy changed.
 - No database type change added.
 - No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.
+
+## 2026-06-26 — Emotion Dashboard Route Wiring
+
+### Scope
+- Rewired `/emotion` from a placeholder page to a read-only emotion dashboard.
+- Added an emotion-and-mental-state-focused dashboard component using existing health/body summary helpers.
+- Added dashboard component export wiring.
+- Cleaned small text spacing issues found during preflight in existing health/body UI copy.
+
+### Files
+- `src/app/emotion/page.tsx`
+- `src/components/dashboard/health-body-emotion-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Schema
+- No schema change needed.
+
+### Boundary
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.
