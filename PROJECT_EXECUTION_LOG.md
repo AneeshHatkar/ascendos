@@ -2441,3 +2441,23 @@ Purpose:
 - No dashboard routes changed.
 - No Carnos write behavior added.
 - No medical claims, supplement recommendations, body-shaming language, advanced analytics, or fake persistence added.
+
+## 2026-06-25 — Phase 11 Chunk C SQL Foundation
+
+### Scope
+- Added Phase 11 SQL foundation migration.
+- Created source-confirmed health/body tables only.
+- Added owner-scoped RLS policies.
+- Added updated_at triggers using existing `public.set_updated_at()`.
+- Added basic indexes for user/date and parent lookup reads.
+
+### Files
+- `supabase/migrations/0012_phase11_health_body_foundation.sql`
+
+### Boundary
+- No parent ownership trigger migration added yet.
+- No `health_body_baselines` table added.
+- No `progress_photos` table added.
+- No storage buckets or upload behavior added.
+- No database TypeScript types changed.
+- No repositories, helpers, routes, dashboards, or Carnos write behavior added.

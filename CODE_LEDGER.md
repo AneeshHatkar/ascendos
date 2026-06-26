@@ -1595,3 +1595,10 @@ Purpose: Updated with B3 safety hardening addendum.
 
 ### `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
 Purpose: Updated with B3 safety, duplicate-log, missing-vs-zero, target, and trend decision notes.
+
+## Phase 11 Chunk C — SQL Foundation
+
+### `supabase/migrations/0012_phase11_health_body_foundation.sql`
+Purpose: Creates the source-confirmed Phase 11 health/body SQL tables with owner-scoped RLS, updated_at triggers, and basic indexes.
+
+Boundary: Parent ownership triggers are deferred to Chunk C.1. Candidate tables such as `health_body_baselines` and `progress_photos` are not created.

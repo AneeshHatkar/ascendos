@@ -760,3 +760,17 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No dashboard routes changed.
 - No Carnos write behavior added.
 - Advanced analytics remain deferred to Phase 17.
+
+## 2026-06-25 — Phase 11 Chunk C SQL Foundation
+
+### Added
+- Phase 11 health/body SQL foundation migration.
+- Source-confirmed health/body tables.
+- Owner-scoped RLS policies.
+- Updated-at triggers and basic indexes.
+
+### Notes
+- Parent ownership guards are deferred to Chunk C.1.
+- No `health_body_baselines` table added.
+- No `progress_photos` table added.
+- No app routes, dashboards, repositories, or database TypeScript types changed.

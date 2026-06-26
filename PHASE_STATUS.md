@@ -826,3 +826,17 @@ Completed pending verification.
 
 ### Boundary
 No SQL, types, repositories, routes, dashboards, Carnos writes, Python/ML execution, medical claims, supplement recommendations, body-shaming language, advanced analytics, or fake persistence were added.
+
+## Phase 11 Chunk C — SQL Foundation
+
+### Status
+Completed pending verification.
+
+### Completed Steps
+- 11.15 SQL migration
+
+### Files
+- `supabase/migrations/0012_phase11_health_body_foundation.sql`
+
+### Boundary
+No parent ownership guards, database TypeScript types, repositories, routes, dashboards, storage/upload behavior, Carnos writes, Python/ML execution, candidate baseline table, or progress photo table were added.
