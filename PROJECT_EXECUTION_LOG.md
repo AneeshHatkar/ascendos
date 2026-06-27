@@ -3702,3 +3702,15 @@ This pass is not a rebuild. It patches only verified missing items before Grimoi
 Added a deterministic `POST /api/ai/extract` route and introduced a Zod envelope schema for proposed-action validation.
 
 The route validates proposed action payloads and returns confirmation-ready output without performing writes, calling an LLM, or bypassing the safe-write flow.
+
+## Phase 12.9C — Pending Update Confirmation Wiring
+
+Connected Carnos pending update review to persisted `ai_actions` rows when available.
+
+Added server-owned approve/reject API routes:
+- `/api/actions/[actionId]/approve`
+- `/api/actions/[actionId]/reject`
+
+The drawer no longer depends only on the static sample action. It can now approve or reject a real pending AI action through server-owned lifecycle helpers.
+
+No Grimoire implementation was started.

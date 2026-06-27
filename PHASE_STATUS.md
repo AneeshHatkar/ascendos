@@ -1958,3 +1958,14 @@ Completed:
 - Chunk 09 API extraction route exists.
 - Zod contract marker exists in proposed-action validation.
 - Extraction route remains no-write and confirmation-first.
+
+## Phase 12.9C — Pending Update Confirmation Wiring
+
+Status: Implemented locally pending validation.
+
+Scope:
+- Real pending `ai_actions` review wiring
+- Server-owned approve/reject API routes
+- No automatic execution
+- No autonomous writes
+- No Grimoire work

@@ -2580,3 +2580,15 @@ Changed:
 
 Purpose:
 - Complete missing Chunk 09 extraction route and Zod schema marker before Grimoire.
+
+## Phase 12.9C — Pending Update Confirmation Wiring
+
+Changed:
+- `src/app/api/actions/[actionId]/approve/route.ts`
+- `src/app/api/actions/[actionId]/reject/route.ts`
+- `src/components/actions/pending-updates-drawer.tsx`
+- `src/app/carnos/page.tsx`
+- `docs/phase-reports/PHASE_12_9C_PENDING_UPDATE_CONFIRMATION_WIRING.md`
+
+Purpose:
+- Connect persisted pending `ai_actions` rows to confirmation-first approve/reject lifecycle routes.

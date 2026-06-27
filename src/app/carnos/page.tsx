@@ -1,5 +1,6 @@
 import { PendingUpdatesDrawer } from "@/components/actions";
 // Phase 6.16 audit compatibility marker: ProposedActionReviewCard remains present through PendingUpdatesDrawer.
+import { isProposedActionType } from "@/lib/actions/action-types";
 import {
   AuthenticatedDashboardShell,
   CarnosPanelV1,
@@ -15,8 +16,7 @@ import { getDashboardDataSummary } from "@/lib/dashboard";
 import { listAiActions, listChatMessages, listChatSessions } from "@/lib/repositories";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
-type RecordValue = string | number | boolean | null | undefined;
-type CarnosRecord = Record<string, RecordValue>;
+type CarnosRecord = Record<string, unknown>;
 
 
 const SAMPLE_PHASE_6_REVIEW_ACTION: ProposedActionContract = {
@@ -91,6 +91,78 @@ function readText(row: CarnosRecord, key: string, fallback = "Not set") {
   }
 
   return fallback;
+}
+
+function readObject(row: CarnosRecord, key: string): Record<string, unknown> {
+  const value = row[key];
+
+  if (value && typeof value === "object" && !Array.isArray(value)) {
+    return value as Record<string, unknown>;
+  }
+
+  return {};
+}
+
+function toPendingActionContract(row: CarnosRecord): ProposedActionContract | null {
+  const actionType = readText(row, "action_type", "");
+
+  if (!isProposedActionType(actionType)) {
+    return null;
+  }
+
+  const baseContract = {
+    source: "carnos" as const,
+    confidence: 0.75,
+    reason:
+      readText(row, "description", "") ||
+      readText(row, "title", "") ||
+      "Persisted pending action loaded from ai_actions for confirmation review.",
+    evidence_refs: [readText(row, "id", "ai_action")],
+  };
+
+  const payload = readObject(row, "payload");
+
+  switch (actionType) {
+    case "create_task":
+      return {
+        ...baseContract,
+        action_type: "create_task",
+        payload: payload as unknown as Extract<
+          ProposedActionContract,
+          { action_type: "create_task" }
+        >["payload"],
+      };
+
+    case "create_goal":
+      return {
+        ...baseContract,
+        action_type: "create_goal",
+        payload: payload as unknown as Extract<
+          ProposedActionContract,
+          { action_type: "create_goal" }
+        >["payload"],
+      };
+
+    case "create_daily_log":
+      return {
+        ...baseContract,
+        action_type: "create_daily_log",
+        payload: payload as unknown as Extract<
+          ProposedActionContract,
+          { action_type: "create_daily_log" }
+        >["payload"],
+      };
+
+    case "create_proof_item":
+      return {
+        ...baseContract,
+        action_type: "create_proof_item",
+        payload: payload as unknown as Extract<
+          ProposedActionContract,
+          { action_type: "create_proof_item" }
+        >["payload"],
+      };
+  }
 }
 
 function readTimestamp(row: CarnosRecord) {
@@ -283,10 +355,21 @@ export default function CarnosPage() {
           const groups = [sessions, actions, messages];
           const totalRows = groups.reduce((sum, group) => sum + group.rows.length, 0);
           const readErrors = groups.filter((group) => group.error);
-          const pendingActions = actions.rows.filter((row) => {
+          const pendingActionRows = actions.rows.filter((row) => {
             const status = readText(row, "status", "").toLowerCase();
             return ["pending", "pending_confirmation", "draft", "proposed"].includes(status);
-          }).length;
+          });
+          const pendingActions = pendingActionRows.length;
+          const pendingActionEntry = pendingActionRows
+            .map((row) => ({
+              row,
+              contract: toPendingActionContract(row),
+            }))
+            .find((entry) => entry.contract !== null);
+          const pendingReviewAction = pendingActionEntry?.contract ?? SAMPLE_PHASE_6_REVIEW_ACTION;
+          const pendingReviewActionId = pendingActionEntry
+            ? readText(pendingActionEntry.row, "id", "")
+            : undefined;
 
           return (
             <>
@@ -306,18 +389,26 @@ export default function CarnosPage() {
               >
                 <div className="grid gap-4">
                   <PendingUpdatesDrawer
-                    initialAction={SAMPLE_PHASE_6_REVIEW_ACTION}
+                    initialAction={pendingReviewAction}
                     pendingCount={pendingActions}
-                    validationIssues={[
-                      "Confirmation callbacks are intentionally not connected in this drawer.",
-                      "The drawer component does not call Supabase or mutate SQL.",
-                    ]}
+                    actionId={pendingReviewActionId}
+                    confirmationEnabled={Boolean(pendingReviewActionId)}
+                    validationIssues={
+                      pendingReviewActionId
+                        ? [
+                            "Approval and rejection are connected through server-owned API routes.",
+                            "Target-table execution remains separate from this confirmation drawer.",
+                          ]
+                        : [
+                            "No persisted pending ai_actions row is available yet, so this shows the safe preview contract.",
+                            "The drawer does not call Supabase directly from the browser.",
+                          ]
+                    }
                   />
                   <p className="text-sm leading-6 text-slate-400">
-                    This drawer is intentionally wired as a safe review surface first.
-                    Confirmation-first persistence remains server-owned: the user reviews,
-                    edits, and confirms before any future route/server-owned action confirms
-                    a proposal.
+                    This drawer now reads persisted pending AI actions when available
+                    and sends approve/reject decisions through server-owned API routes.
+                    It does not execute target-table writes automatically.
                   </p>
                 </div>
               </SectionCard>

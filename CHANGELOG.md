@@ -1250,3 +1250,9 @@ Timestamp: 2026-06-27 06:21 UTC
 - Added deterministic AI extraction API route.
 - Added Zod proposed-action envelope schema.
 - Preserved confirmation-first, no-autonomous-write boundary.
+
+## Phase 12.9C — Pending Update Confirmation Wiring
+
+- Added server-owned approve/reject routes for pending AI actions.
+- Updated Carnos pending drawer to use real pending `ai_actions` records when available.
+- Preserved no-autonomous-write and no-auto-execution boundaries.
