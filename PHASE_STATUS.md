@@ -1538,3 +1538,32 @@ No SQL change in C03.
 ### Next Step
 
 Phase 12 C04 — SQL foundation tables.
+
+## Phase 12 C04 — SQL Foundation Tables
+
+Status: Complete pending verification.
+
+Completed:
+
+- 12.15 Add Phase 12 SQL migration.
+- 12.16 Add finance/rent/document/admin indexes.
+- 12.17 Add RLS policies.
+
+Touched:
+
+- SQL migration and logs only.
+
+Deferred:
+
+- 12.18 Parent ownership guards.
+- 12.19 Migration validation closeout after C05.
+- Database types.
+- Read helpers.
+- Dashboard helpers.
+- Dashboard components.
+- Route wiring.
+- Proposed-action execution.
+
+Next step:
+
+- Phase 12 C05 — parent ownership guards.

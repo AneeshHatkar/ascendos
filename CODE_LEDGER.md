@@ -2329,3 +2329,20 @@ Purpose: Maps FINAL_SYNCED source dashboards/tables to Phase 12 implementation s
 Schema: No SQL schema change in C03.
 
 Boundary: No app code, SQL migration, database type change, repository helper, route implementation, dashboard implementation, Carnos execution, Python/ML execution, background job, bank sync, document upload, auto-pay, or write behavior was added.
+
+## Phase 12 C04 — Life Admin / Finance SQL Foundation
+
+Files:
+
+- `supabase/migrations/0014_phase12_life_admin_finance_foundation.sql`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Summary:
+
+- Added Phase 12 SQL tables for finance, budget, subscriptions, housing admin, contacts, and document metadata.
+- Added RLS and indexes.
+- Preserved read/write safety boundaries.
+- Deferred parent ownership guards to C05.

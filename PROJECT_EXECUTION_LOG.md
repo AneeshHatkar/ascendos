@@ -3388,3 +3388,35 @@ Purpose:
 ### Boundary
 
 - No app code, SQL migration, RLS policy, database type, repository helper, route implementation, dashboard implementation, Carnos execution, Python/ML execution, background job, bank sync, document upload, auto-pay, or write behavior was added.
+
+## Phase 12 C04 — SQL Foundation Tables
+
+Status: Complete pending verification.
+
+Scope:
+
+- Added `supabase/migrations/0014_phase12_life_admin_finance_foundation.sql`.
+- Added Phase 12 source-aligned tables:
+  - `financial_accounts`
+  - `budget_categories`
+  - `financial_logs`
+  - `subscriptions`
+  - `documents`
+  - `housing_options`
+  - `housing_contacts`
+- Added indexes for user ownership, due dates, document dates, and linkage fields.
+- Added RLS policies for own-row select, insert, update, and delete.
+
+Boundaries:
+
+- No app code.
+- No TypeScript database types.
+- No repositories.
+- No dashboard wiring.
+- No parent ownership guards yet.
+- No autonomous Carnos writes.
+- No bank sync, auto-pay, document upload, OCR, tax/legal/immigration advice automation, or external integration.
+
+Next:
+
+- Phase 12 C05: parent ownership guards for nullable cross-table links.

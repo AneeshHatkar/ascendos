@@ -1157,3 +1157,10 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - No SQL migration added yet.
 - No app code added.
 - C04 will begin SQL foundation after schema design is committed.
+
+## Phase 12 C04 — SQL Foundation Tables
+
+- Added Life Admin / Finance SQL foundation migration.
+- Added tables for manual finance accounts, budget categories, financial logs, subscriptions, housing admin, housing contacts, and document metadata.
+- Added RLS and indexes.
+- Deferred parent ownership guards, database types, repositories, and UI wiring to later chunks.
