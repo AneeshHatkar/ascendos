@@ -39,8 +39,26 @@ check("goal milestone read helper exists", includes("src/lib/repositories/core-r
 check("proof read helper exists", includes("src/lib/repositories/core-read.ts", "listProofItems"));
 check("create goal flow exists", exists("src/lib/actions/flows/create-goal-flow.ts"));
 check("create proof item flow exists", exists("src/lib/actions/flows/create-proof-item-flow.ts"));
-check("goal page still says create/edit/delete disabled", includes("src/app/goals/page.tsx", "does not create, edit, delete"));
-check("goal page still says creation remains disabled", includes("src/app/goals/page.tsx", "Goal creation remains intentionally disabled"));
+check(
+  "goals proposal API exists",
+  exists("src/app/api/goals/proposals/route.ts"),
+);
+check(
+  "goals proof proposal composer exists",
+  exists("src/components/goals/goal-proof-proposal-composer.tsx"),
+);
+check(
+  "goal page has proposal composer",
+  includes("src/app/goals/page.tsx", "GoalProofProposalComposer"),
+);
+check(
+  "goal page no longer claims create/edit/delete disabled",
+  !includes("src/app/goals/page.tsx", "does not create, edit, delete"),
+);
+check(
+  "goal page no longer claims creation remains disabled",
+  !includes("src/app/goals/page.tsx", "Goal creation remains intentionally disabled"),
+);
 
 section("Chunk 07 — Calendar / Timeline");
 
