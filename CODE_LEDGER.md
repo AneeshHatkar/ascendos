@@ -2606,3 +2606,13 @@ Purpose:
 - `src/components/goals/goal-proof-proposal-composer.tsx` — client composer that posts proposal requests without direct SQL writes.
 - `src/app/goals/page.tsx` — wired composer and corrected disabled-creation language.
 - `docs/phase-reports/PHASE_12_9E_GOALS_PROOF_PROPOSAL_CREATION.md` — phase report.
+
+
+## Phase 12.9F — Calendar / Timeline Proposal Creation
+
+- `src/app/api/calendar/proposals/route.ts` — server-owned task proposal API for Calendar and Timeline.
+- `src/components/calendar/calendar-timeline-proposal-composer.tsx` — client proposal composer that submits pending task proposals.
+- `src/app/calendar/page.tsx` — Calendar page now exposes proposal-first task capture.
+- `src/app/timeline/page.tsx` — Timeline page now exposes proposal-first task capture.
+- `scripts/audit-pre-grimoire-core-gaps.mjs` — Chunk 07 audit now verifies proposal wiring.
+- `docs/phase-reports/PHASE_12_9F_CALENDAR_TIMELINE_PROPOSAL_CREATION.md` — completion report.

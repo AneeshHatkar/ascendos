@@ -1989,3 +1989,10 @@ Status: Verification pending.
 - `/goals` now supports confirmation-first proposal creation.
 - Goal/proof writes remain routed through `ai_actions` and the Phase 6 safe action flow.
 - Next pre-Grimoire checks: remaining Calendar/Timeline honesty gap, then final pre-Grimoire audit.
+
+
+## Phase 12.9F — Calendar / Timeline Proposal Creation
+
+Status: Complete.
+
+Calendar and Timeline now support proposal-first task capture through pending `ai_actions`. Direct event writes, reminders, calendar sync, and timeline table writes remain deferred. Next step: rerun full checks, commit, then begin Phase 13 Grimoire only if pre-Grimoire audit is clean.

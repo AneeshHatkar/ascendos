@@ -1,3 +1,4 @@
+import { CalendarTimelineProposalComposer } from "@/components/calendar/calendar-timeline-proposal-composer";
 import {
   AuthenticatedDashboardShell,
   DataList,
@@ -197,7 +198,7 @@ export default function TimelinePage() {
     <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
       <AuthenticatedDashboardShell
         title="Timeline Dashboard"
-        description="Read-only timeline view across events, proof, and audit records."
+        description="Timeline view across events, proof, and audit records with proposal-first task capture."
       >
         {async ({ user }) => {
           const supabase = await createSupabaseServerClient();
@@ -242,18 +243,20 @@ export default function TimelinePage() {
                       Timeline Read View
                     </h1>
                     <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-400">
-                      This page reads from events, proof items, and audit logs. It is a
-                      display-only timeline surface and does not create, edit, delete, or
-                      execute any records.
+                      This page reads from events, proof items, and audit logs.
+                      It can capture pending task proposals, but it does not
+                      directly edit, delete, execute, or write final records.
                     </p>
                   </div>
 
                   <StatusPill
-                    label={readErrors.length > 0 ? "Read warning" : "Read-only mode"}
+                    label={readErrors.length > 0 ? "Read warning" : "Proposal mode"}
                     tone={readErrors.length > 0 ? "warning" : "success"}
                   />
                 </div>
               </section>
+
+              <CalendarTimelineProposalComposer surface="timeline" />
 
               <section className="grid gap-4 md:grid-cols-3">
                 {groups.map((group) => (
@@ -288,7 +291,7 @@ export default function TimelinePage() {
                   emptyState={
                     <EmptyState
                       title="No timeline records found"
-                      description="The timeline read path is wired, but no events, proof items, or audit records are available for this user yet. Creation and mutation flows remain intentionally disabled until the safe write phase."
+                      description="The timeline read path is wired, but no events, proof items, or audit records are available for this user yet. Use the proposal composer above to create a pending task proposal for review."
                     />
                   }
                 />

@@ -1,3 +1,4 @@
+import { CalendarTimelineProposalComposer } from "@/components/calendar/calendar-timeline-proposal-composer";
 import {
   AuthenticatedDashboardShell,
   CalendarDashboardV1,
@@ -227,7 +228,7 @@ export default function CalendarPage() {
     <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
       <AuthenticatedDashboardShell
         title="Calendar Dashboard"
-        description="Read-only view of tasks and events stored in the Phase 4 SQL spine."
+        description="Task and event view with proposal-first calendar capture."
       >
         {async ({ user }) => {
           const supabase = await createSupabaseServerClient();
@@ -282,19 +283,22 @@ export default function CalendarPage() {
                     </h1>
                     <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-400">
                       This page reads task and event records for the
-                      authenticated user. It does not create, edit, reschedule,
-                      delete, remind, sync, or auto-execute anything in Phase 5.
+                      authenticated user and can create pending task proposals.
+                      Confirmed writes still happen only through the safe
+                      proposed-action approval flow.
                     </p>
                   </div>
 
                   <StatusPill
                     label={
-                      readErrors.length > 0 ? "Read warning" : "Read-only mode"
+                      readErrors.length > 0 ? "Read warning" : "Proposal mode"
                     }
                     tone={readErrors.length > 0 ? "warning" : "success"}
                   />
                 </div>
               </section>
+
+              <CalendarTimelineProposalComposer surface="calendar" />
 
               <section className="grid gap-4 md:grid-cols-3">
                 <MetricTile
@@ -343,7 +347,7 @@ export default function CalendarPage() {
                   emptyState={
                     <EmptyState
                       title="No tasks or events found"
-                      description="The calendar read path is wired, but no task or event records exist for this user yet. Scheduling and creation flows remain intentionally disabled until the safe write phase."
+                      description="The calendar read path is wired, but no task or event records exist for this user yet. Use the proposal composer above to create a pending task proposal for review."
                     />
                   }
                 />

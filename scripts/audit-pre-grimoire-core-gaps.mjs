@@ -71,8 +71,34 @@ check("event read helper exists", includes("src/lib/repositories/core-read.ts", 
 check("create task flow exists", exists("src/lib/actions/flows/create-task-flow.ts"));
 check("timeline write helper exists", exists("src/lib/timeline/write-timeline-event.ts"));
 check("timeline helper says table is not defined/skipped", includes("src/lib/timeline/write-timeline-event.ts", "timeline_events table is not defined"));
-check("calendar page says creation disabled", includes("src/app/calendar/page.tsx", "creation flows remain intentionally disabled"));
-check("timeline page says creation disabled", includes("src/app/timeline/page.tsx", "Creation and mutation flows remain intentionally disabled"));
+check("calendar proposal API exists", exists("src/app/api/calendar/proposals/route.ts"));
+check(
+  "calendar proposal API creates proposed actions",
+  includes("src/app/api/calendar/proposals/route.ts", "createProposedAction") &&
+    includes("src/app/api/calendar/proposals/route.ts", "confirmation_required"),
+);
+check(
+  "calendar timeline proposal composer exists",
+  exists("src/components/calendar/calendar-timeline-proposal-composer.tsx"),
+);
+check(
+  "calendar page has proposal composer",
+  includes("src/app/calendar/page.tsx", "CalendarTimelineProposalComposer") &&
+    includes("src/app/calendar/page.tsx", 'surface="calendar"'),
+);
+check(
+  "timeline page has proposal composer",
+  includes("src/app/timeline/page.tsx", "CalendarTimelineProposalComposer") &&
+    includes("src/app/timeline/page.tsx", 'surface="timeline"'),
+);
+check(
+  "calendar page no longer claims creation disabled",
+  !includes("src/app/calendar/page.tsx", "creation flows remain intentionally disabled"),
+);
+check(
+  "timeline page no longer claims creation disabled",
+  !includes("src/app/timeline/page.tsx", "Creation and mutation flows remain intentionally disabled"),
+);
 
 section("Chunk 08 — Carnos Chat");
 

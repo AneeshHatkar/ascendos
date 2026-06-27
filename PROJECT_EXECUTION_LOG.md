@@ -3728,3 +3728,12 @@ No Grimoire implementation was started.
 - Added `/api/goals/proposals` for server-owned creation of pending `ai_actions`.
 - Goal and proof item creation now enters the existing proposed-action confirmation lifecycle.
 - No direct goal/proof table writes were added from the client UI.
+
+
+## Phase 12.9F — Calendar / Timeline Proposal Creation
+
+- Added proposal-first task capture for Calendar and Timeline.
+- Added `/api/calendar/proposals` as a server-owned API route that creates pending `create_task` actions through the existing safe-write flow.
+- Added `CalendarTimelineProposalComposer` for `/calendar` and `/timeline`.
+- Removed stale UI language that claimed creation remained disabled on Calendar and Timeline.
+- Preserved confirmation-first writes: no direct task, event, reminder, sync, or timeline mutation was added.

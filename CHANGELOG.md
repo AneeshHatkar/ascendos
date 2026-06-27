@@ -1269,3 +1269,11 @@ Timestamp: 2026-06-27 06:21 UTC
 - Added confirmation-first goal/proof proposal creation on `/goals`.
 - Preserved the proposed-action safety lifecycle and avoided direct goal/proof mutations.
 - Updated goals copy to reflect current behavior honestly.
+
+
+## Phase 12.9F — Calendar / Timeline Proposal Creation
+
+- Added Calendar/Timeline task proposal creation through pending `ai_actions`.
+- Added proposal composer UI to `/calendar` and `/timeline`.
+- Updated pre-Grimoire audit checks for Chunk 07.
+- Preserved no-direct-write safety boundaries.
