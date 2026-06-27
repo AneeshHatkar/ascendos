@@ -74,6 +74,9 @@ const requiredFiles = [
   "docs/phase-reports/PHASE_12_LIFE_ADMIN_PRIVACY_SAFETY_REVIEW.md",
   "docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_TRACEABILITY.md",
   "docs/phase-reports/PHASE_12_SQL_FOUNDATION_VALIDATION_REPORT.md",
+  "docs/qa/PHASE_12_LIFE_ADMIN_FINANCE_MANUAL_SMOKE_CHECKLIST.md",
+  "docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_CLOSEOUT.md",
+  "docs/phase-reports/PHASE_12_LIFE_ADMIN_FINANCE_COMPLETION_REPORT.md",
   "docs/roadmap/POST_V1_EXPANSION_ROADMAP.md",
   "supabase/migrations/0014_phase12_life_admin_finance_foundation.sql",
   "supabase/migrations/0015_phase12_parent_ownership_guards.sql",
@@ -442,11 +445,66 @@ for (const forbiddenPath of forbiddenPaths) {
 
 pass("No deferred Phase 12 implementation paths exist");
 
+console.log("\n=== Phase 12 audit: C16 closeout docs ===");
+
+requireIncludes(
+  "docs/qa/PHASE_12_LIFE_ADMIN_FINANCE_MANUAL_SMOKE_CHECKLIST.md",
+  [
+    "Phase 12 Manual Smoke Checklist",
+    "/life-admin",
+    "/finance",
+    "/documents",
+    "/housing",
+    "/command",
+    "/calendar",
+    "ProposedActionReviewCard",
+    "Privacy and safety checks",
+    "No write behavior",
+    "bank sync",
+    "auto-pay",
+    "document upload/storage",
+    "Python/ML execution",
+    "autonomous Carnos write",
+  ],
+);
+
+requireIncludes("docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_CLOSEOUT.md", [
+  "Phase 12 Source-to-Scope Closeout",
+  "Status: Complete",
+  "source alignment",
+  "user-specific housing correction",
+  "financial_accounts",
+  "budget_categories",
+  "financial_logs",
+  "subscriptions",
+  "documents",
+  "housing_options",
+  "housing_contacts",
+  "Safe-write law preservation",
+]);
+
+requireIncludes(
+  "docs/phase-reports/PHASE_12_LIFE_ADMIN_FINANCE_COMPLETION_REPORT.md",
+  [
+    "Phase 12 Completion Report",
+    "Status: Complete.",
+    "Completed scope",
+    "Routes completed",
+    "Verification gates",
+    "Protected boundaries",
+    "Deferred scope",
+    "Final status",
+    "Phase 12 is complete.",
+  ],
+);
+
+pass("Phase 12 C16 closeout docs are present and content-checked");
+
 console.log("\n=== Phase 12 audit: logs and progress markers ===");
 
 requireIncludes("PHASE_STATUS.md", [
-  "Phase 12 C14 Status",
-  "Next step: Phase 12 C15",
+  "Phase 12 C16 Status",
+  "Next step: Phase 12 C17",
   "Completed after C08: 22 / 45",
   "Completed after this chunk: 23 / 45",
   "Completed after this chunk: 28 / 45",
@@ -457,21 +515,27 @@ requireIncludes("PROJECT_EXECUTION_LOG.md", [
   "Phase 12 C12",
   "Phase 12 C13",
   "Phase 12 C14",
+  "Phase 12 C15",
+  "Phase 12 C16",
 ]);
 
 requireIncludes("CODE_LEDGER.md", [
   "Phase 12 C12",
   "Phase 12 C13",
   "Phase 12 C14",
+  "Phase 12 C15",
+  "Phase 12 C16",
 ]);
 
 requireIncludes("CHANGELOG.md", [
   "Phase 12 C12",
   "Phase 12 C13",
   "Phase 12 C14",
+  "Phase 12 C15",
+  "Phase 12 C16",
 ]);
 
-pass("Phase 12 logs and status markers are present through C14");
+pass("Phase 12 logs and status markers are present through C16 closeout");
 
 console.log(checks.join("\\n"));
 if (failures.length > 0) {
