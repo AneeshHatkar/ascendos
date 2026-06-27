@@ -3776,4 +3776,3 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Confirmed source Grimoire rule: symbolism must become practical action, proof, corruption checks, and reversion.
 - Added docs/database/PHASE_13_GRIMOIRE_SCHEMA_DESIGN.md.
 - Next: Phase 13C — SQL migration + RLS.
-

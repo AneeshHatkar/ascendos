@@ -2049,4 +2049,3 @@ Added schema design for:
 - grimoire_reversions
 
 Next: Phase 13C — SQL migration + RLS.
-

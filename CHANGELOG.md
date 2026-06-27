@@ -1296,4 +1296,3 @@ Timestamp: 2026-06-27 06:21 UTC
 
 - Added the Phase 13 Grimoire schema design.
 - Locked the five source-backed Grimoire tables and practical mode -> mission -> proof -> corruption -> reversion data model before SQL migration work.
-
