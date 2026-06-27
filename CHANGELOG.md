@@ -1206,3 +1206,7 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - Wired Life Admin, Finance, Documents, and Housing routes to authenticated read-only dashboards.
 - Replaced placeholder pages for those surfaces.
 - Kept write behavior, SQL, repositories, dashboard helpers, and component internals unchanged.
+
+## Phase 12 C12 — Command Admin/Finance Visibility
+
+- Added Command dashboard visibility for Phase 12 admin/finance summaries, including due-soon and overdue pressure, subscriptions, documents, housing, warnings, and read-only boundary language.

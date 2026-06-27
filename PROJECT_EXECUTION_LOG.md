@@ -3605,3 +3605,10 @@ Boundaries:
 - No writes.
 - No proposed-action execution.
 - No bank sync, autopay, document upload/OCR/storage, legal/tax/immigration advice, or autonomous Carnos execution.
+
+## Phase 12 C12 — Command Admin/Finance Visibility
+
+- Wired Command dashboard to read the Phase 12 admin/finance dashboard summary alongside the existing core Command summary.
+- Added read-only Command visibility for admin queue count, overdue admin pressure, due-soon admin pressure, subscriptions, documents, housing, source tables, and read warnings.
+- Exported the admin/finance dashboard helper through the dashboard barrel for canonical app-level imports.
+- Preserved the no-write boundary: no SQL changes, no repository changes, no component-side mutations, no AI calls, no background jobs, and no proposed-action execution.

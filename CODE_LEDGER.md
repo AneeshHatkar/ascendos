@@ -2495,3 +2495,10 @@ Safety:
 
 - Read-only route wiring only.
 - No SQL, repository, helper, component, write, or AI execution changes.
+
+## Phase 12 C12 — Command Admin/Finance Visibility
+
+- `src/app/command/page.tsx` — fetched `getAdminFinanceDashboardDataSummary(user.id)` next to the existing core Command summary and passed it into `CommandDashboardV1`.
+- `src/components/dashboard/command-dashboard-v1.tsx` — added a read-only admin/finance visibility section with admin queue, overdue, due-soon, subscription, document, housing, warning, boundary, and source-table visibility.
+- `src/lib/dashboard/index.ts` — exported `admin-finance-dashboard-data-helpers` through the dashboard helper barrel.
+- No SQL, type, repository, script, package, direct write, proposed-action execution, AI, or background-job code was added.

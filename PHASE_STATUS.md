@@ -1786,3 +1786,26 @@ Deferred:
 - Audit gate.
 - Smoke checklist.
 - Completion report.
+
+## Phase 12 C12 Status
+
+Status: Complete pending verification.
+
+Completed:
+
+- Command dashboard reads the Phase 12 admin/finance dashboard summary.
+- Command dashboard exposes read-only admin queue, overdue, due-soon, subscription, document, housing, warning, and source-table visibility.
+- Admin/finance dashboard helper is exported from the dashboard barrel.
+
+Protected boundaries:
+
+- No SQL changes.
+- No database type changes.
+- No repository changes.
+- No dashboard writes.
+- No browser Supabase mutations.
+- No proposed-action execution.
+- No AI/OpenAI calls.
+- No background jobs.
+
+Next step: Phase 12 C13 — Calendar visibility for admin/finance deadlines.
