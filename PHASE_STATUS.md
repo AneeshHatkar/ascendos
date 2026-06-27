@@ -2113,3 +2113,12 @@ Next: Phase 13K — Carnos guide/throne boundary panels.
 Status: Complete after verification.
 Boundary: read-only UI, disabled previews only, no generation, no timers, no proposed-action persistence, no execution, and no direct database writes.
 Next: Phase 13L — manual smoke checklist, completion report, and final Phase 13 lock.
+
+## Phase 13L — Grimoire Final Closeout
+
+Status: Complete after final verification.
+Phase 13 status: Complete.
+Completed route: `/grimoire`.
+Completed system: Grimoire-to-Action read-only dashboard.
+Final boundary: no generation, no mode activation, no proposed-action persistence, no action execution, no timers, no browser Supabase, and no direct database writes.
+Next: Phase 14 planning can begin only after Phase 13 is pushed.

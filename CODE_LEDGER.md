@@ -2688,3 +2688,11 @@ Purpose:
 - Added `GrimoireThroneOverrideBoundaryPanel`.
 - Added `GrimoireFinalAuditBoundaryPanel`.
 - Wired the new panels into the `/grimoire` dashboard without introducing writes or generation behavior.
+
+## Phase 13L — Grimoire Final Closeout
+
+- Added `docs/qa/PHASE_13_GRIMOIRE_MANUAL_SMOKE_CHECKLIST.md`.
+- Added `docs/phase-reports/PHASE_13_GRIMOIRE_COMPLETION_REPORT.md`.
+- Added `scripts/audit-phase-13.mjs`.
+- Updated `package.json` with `audit:phase13` and added it to `npm run check`.
+- Patched `supabase/migrations/0016_phase13_grimoire_foundation.sql`.

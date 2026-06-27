@@ -1335,3 +1335,8 @@ Timestamp: 2026-06-27 06:21 UTC
 
 - Added final Carnos guide, throne override, and Grimoire safety audit boundary panels.
 - Preserved the read-only Grimoire dashboard contract.
+
+## Phase 13L — Grimoire Final Closeout
+
+- Completed Phase 13 Grimoire closeout with smoke checklist, completion report, audit script, and final check wiring.
+- Fixed Grimoire skills RLS migration typo before final lock.

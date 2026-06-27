@@ -3853,3 +3853,13 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Confirmed the `/grimoire` surface remains read-only and preview-only.
 - No SQL, route, AI generation, timer, browser Supabase, proposed-action persistence, or execution behavior was added.
 - Next: Phase 13L — manual smoke checklist, completion report, and final Phase 13 lock.
+
+## Phase 13L — Grimoire Final Closeout
+
+- Added Phase 13 manual smoke checklist.
+- Added Phase 13 completion report.
+- Added `scripts/audit-phase-13.mjs`.
+- Wired `npm run audit:phase13` into `npm run check`.
+- Fixed the Phase 13 Grimoire SQL RLS typo for `grimoire_skills`.
+- Final boundary remains read-only: no Carnos generation, no mode activation, no proposed-action persistence, no action execution, no timers, no browser Supabase, and no direct database writes.
+- Phase 13 is complete after final audit/check/build verification.
