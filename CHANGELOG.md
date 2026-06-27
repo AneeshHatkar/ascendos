@@ -1296,3 +1296,8 @@ Timestamp: 2026-06-27 06:21 UTC
 
 - Added the Phase 13 Grimoire schema design.
 - Locked the five source-backed Grimoire tables and practical mode -> mission -> proof -> corruption -> reversion data model before SQL migration work.
+
+## Phase 13C — Grimoire SQL Migration and RLS
+
+- Added the Grimoire SQL foundation migration.
+- Added parent ownership guards for Grimoire links to modes, tasks, goals, proof items, AI actions, and chat messages.

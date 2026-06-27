@@ -2049,3 +2049,17 @@ Added schema design for:
 - grimoire_reversions
 
 Next: Phase 13C — SQL migration + RLS.
+
+## Phase 13C — Grimoire SQL Migration and RLS
+
+Status: Complete after verification.
+
+Added SQL foundation and parent ownership guards for:
+
+- `grimoire_modes`
+- `grimoire_daily_logs`
+- `grimoire_skills`
+- `grimoire_corruption_checks`
+- `grimoire_reversions`
+
+Next: Phase 13D — database types and read helpers.

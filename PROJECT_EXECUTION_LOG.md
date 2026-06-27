@@ -3776,3 +3776,17 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Confirmed source Grimoire rule: symbolism must become practical action, proof, corruption checks, and reversion.
 - Added docs/database/PHASE_13_GRIMOIRE_SCHEMA_DESIGN.md.
 - Next: Phase 13C — SQL migration + RLS.
+
+## Phase 13C — Grimoire SQL Migration and RLS
+
+- Added `supabase/migrations/0016_phase13_grimoire_foundation.sql`.
+- Added `supabase/migrations/0017_phase13_parent_ownership_guards.sql`.
+- Implemented five source-backed Grimoire tables:
+  - `grimoire_modes`
+  - `grimoire_daily_logs`
+  - `grimoire_skills`
+  - `grimoire_corruption_checks`
+  - `grimoire_reversions`
+- Added RLS, indexes, constraints, updated-at triggers, and parent ownership guards.
+- Preserved boundaries: no autonomous Carnos writes, no memory, no voice, no analytics snapshots, no custom tracker implementation.
+- Next: Phase 13D — database types and read helpers.

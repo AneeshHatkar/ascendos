@@ -2632,3 +2632,8 @@ Purpose:
 ## Phase 13B — Grimoire SQL Schema Design
 
 - docs/database/PHASE_13_GRIMOIRE_SCHEMA_DESIGN.md defines the source-backed Grimoire schema, ownership model, RLS strategy, indexes, parent guard strategy, deferred scope, and 13C migration plan.
+
+## Phase 13C — Grimoire SQL Migration and RLS
+
+- `supabase/migrations/0016_phase13_grimoire_foundation.sql` adds Grimoire tables, RLS policies, constraints, indexes, and updated-at triggers.
+- `supabase/migrations/0017_phase13_parent_ownership_guards.sql` adds Phase 13 parent ownership guard functions and triggers.
