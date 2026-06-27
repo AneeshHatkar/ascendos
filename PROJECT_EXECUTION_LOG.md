@@ -3796,3 +3796,11 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Added Grimoire database types and read helpers.
 - Preserved read-only boundary.
 - Next: Phase 13E — Grimoire dashboard aggregation helper.
+
+## Phase 13E — Grimoire Dashboard Aggregation Helper
+
+- Added `src/lib/dashboard/grimoire-dashboard-data-helpers.ts`.
+- Added dashboard-ready Grimoire summary, detail rows, source table list, warnings, grounding rules, anti-corruption rules, and weekly throne audit questions.
+- Exported the helper from `src/lib/dashboard/index.ts`.
+- Preserved read-only boundary: no writes, no Carnos execution, no proposal creation, no memory/RAG, no voice, no analytics, and no custom tracker logic.
+- Next: Phase 13F — Core Grimoire dashboard UI.

@@ -2069,3 +2069,11 @@ Next: Phase 13D — database types and read helpers.
 Status: Complete after verification.
 
 Next: Phase 13E — Grimoire dashboard aggregation helper.
+
+## Phase 13E — Grimoire Dashboard Aggregation Helper
+
+Status: Complete after verification.
+
+Added read-only Grimoire dashboard aggregation helper.
+
+Next: Phase 13F — Core Grimoire dashboard UI.

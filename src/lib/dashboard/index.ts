@@ -6,3 +6,4 @@ export * from "./learning-project-dashboard-data-helpers";
 export * from "./research-stanford-dashboard-data-helpers";
 export * from "./health-body-dashboard-data-helpers";
 export * from "./admin-finance-dashboard-data-helpers";
+export * from "./grimoire-dashboard-data-helpers";

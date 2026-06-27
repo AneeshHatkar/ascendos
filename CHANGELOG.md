@@ -1305,3 +1305,7 @@ Timestamp: 2026-06-27 06:21 UTC
 ## Phase 13D — Grimoire Database Types and Read Helpers
 
 - Added TypeScript database types and read-only repository helpers for Grimoire.
+
+## Phase 13E — Grimoire Dashboard Aggregation Helper
+
+- Added read-only Grimoire dashboard aggregation helper with summary counts, detail rows, warnings, grounding rules, anti-corruption rules, and weekly throne audit questions.

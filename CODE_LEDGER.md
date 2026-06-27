@@ -2641,3 +2641,8 @@ Purpose:
 ## Phase 13D — Grimoire Database Types and Read Helpers
 
 - Added Grimoire database aliases and read repository exports.
+
+## Phase 13E — Grimoire Dashboard Aggregation Helper
+
+- `src/lib/dashboard/grimoire-dashboard-data-helpers.ts` aggregates Grimoire read helper output into summary/detail rows.
+- `src/lib/dashboard/index.ts` exports the Grimoire dashboard helper.
