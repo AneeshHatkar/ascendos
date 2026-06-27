@@ -500,40 +500,197 @@ function SymbolToActionTranslatorCard({
   );
 }
 
+function buildCorruptionCorrectionPreviews({
+  openChecks,
+  highSeverityChecks,
+}: {
+  openChecks: GrimoireCorruptionCheckRow[];
+  highSeverityChecks: GrimoireCorruptionCheckRow[];
+}): ProposedActionContract[] {
+  const primaryRisk = highSeverityChecks[0] ?? openChecks[0] ?? null;
+  const riskType = primaryRisk?.risk_type ?? "grimoire_corruption_risk";
+  const correctionText =
+    primaryRisk?.correction ??
+    "Name the corruption risk, separate facts from identity story, choose one corrective action, and require proof before continuing the mode.";
+
+  return [
+    {
+      action_type: "create_task",
+      source: "carnos",
+      confidence: highSeverityChecks.length > 0 ? 0.76 : 0.67,
+      reason:
+        "Corruption detector preview: convert an open Grimoire risk into one corrective task. This card is disabled and does not persist anything.",
+      payload: {
+        title: `Correct Grimoire risk: ${riskType}`,
+        description: correctionText,
+        domain: "creativity",
+        priority: highSeverityChecks.length > 0 ? "high" : "medium",
+        status: "todo",
+      },
+      evidence_refs: [
+        "grimoire_corruption_checks",
+        "grimoire_daily_logs",
+        "grimoire_reversions",
+      ],
+    },
+    {
+      action_type: "create_daily_log",
+      source: "carnos",
+      confidence: 0.66,
+      reason:
+        "Corruption detector preview: record the risk, evidence, correction, and mode grounding before continuing symbolic execution.",
+      payload: {
+        log_date: firstUsefulText(primaryRisk?.log_date, todayIsoDate()),
+        summary: `Grimoire corruption check: ${riskType}`,
+        notes:
+          "Separate facts from story. Record the corruption risk, evidence, correction, reversion need, and proof requirement before continuing the mode.",
+      },
+      evidence_refs: [
+        "grimoire_corruption_checks",
+        "grimoire_daily_logs",
+      ],
+    },
+  ];
+}
+
 function CorruptionDetectorCard({
   checks,
+  openChecks,
+  highSeverityChecks,
 }: {
   checks: GrimoireCorruptionCheckRow[];
+  openChecks: GrimoireCorruptionCheckRow[];
+  highSeverityChecks: GrimoireCorruptionCheckRow[];
 }) {
+  const correctionPreviews = buildCorruptionCorrectionPreviews({
+    openChecks,
+    highSeverityChecks,
+  });
+
   return (
     <SectionCard
       title="Corruption detector"
-      eyebrow="13F required card"
-      description="Read-only corruption risk visibility. Corrections remain manual until safe confirmation wiring exists."
+      eyebrow="13I expanded detector"
+      description="Read-only corruption risk visibility for fantasy loops, avoidance, overdrive, identity inflation, and proof replacement. Corrections are shown as disabled previews only."
     >
-      <DataList
-        items={checks.slice(0, 6).map((check) => ({
-          id: check.id,
-          title: check.risk_type,
-          description: corruptionDescription(check),
-          meta: (
-            <div className="flex flex-wrap gap-2">
-              <StatusPill label={formatDate(check.log_date)} />
-              <StatusPill
-                label={check.severity}
-                tone={toneForText(check.severity)}
-              />
-              <StatusPill label={check.status} tone={toneForText(check.status)} />
-            </div>
-          ),
-        }))}
-        emptyState={
-          <EmptyState
-            title="No corruption checks yet"
-            description="Add corruption checks when a mode risks fantasy loops, avoidance, overdrive, identity inflation, or proof replacement."
+      <div className="grid gap-4 md:grid-cols-3">
+        <MetricTile
+          label="Total checks"
+          value={checks.length}
+          description="All visible Grimoire corruption checks in the current read window."
+        />
+        <MetricTile
+          label="Open risks"
+          value={openChecks.length}
+          description="Checks still marked open and needing user review."
+        />
+        <MetricTile
+          label="High severity"
+          value={highSeverityChecks.length}
+          description="High-severity risks that should trigger grounding and reversion review."
+        />
+      </div>
+
+      <div className="mt-5 grid gap-4 lg:grid-cols-2">
+        <DataList
+          items={openChecks.slice(0, 5).map((check) => ({
+            id: check.id,
+            title: check.risk_type,
+            description: corruptionDescription(check),
+            meta: (
+              <div className="flex flex-wrap gap-2">
+                <StatusPill label={formatDate(check.log_date)} />
+                <StatusPill
+                  label={check.severity}
+                  tone={toneForText(check.severity)}
+                />
+                <StatusPill label={check.status} tone={toneForText(check.status)} />
+              </div>
+            ),
+          }))}
+          emptyState={
+            <EmptyState
+              title="No open corruption risks"
+              description="Open risks will appear here when a mode shows fantasy-loop, avoidance, overdrive, identity-inflation, or proof-replacement pressure."
+            />
+          }
+        />
+
+        <DataList
+          items={highSeverityChecks.slice(0, 5).map((check) => ({
+            id: check.id,
+            title: check.risk_type,
+            description: corruptionDescription(check),
+            meta: (
+              <div className="flex flex-wrap gap-2">
+                <StatusPill label={formatDate(check.log_date)} />
+                <StatusPill label="high severity" tone="danger" />
+                <StatusPill label={check.status} tone={toneForText(check.status)} />
+              </div>
+            ),
+          }))}
+          emptyState={
+            <EmptyState
+              title="No high-severity corruption checks"
+              description="High-severity checks should appear only when symbolic mode use threatens reality, safety, proof, or reversion boundaries."
+            />
+          }
+        />
+      </div>
+
+      <div className="mt-5 rounded-2xl border border-amber-400/20 bg-amber-400/10 p-4 text-sm leading-6 text-amber-100">
+        <p className="font-semibold">Corruption correction boundary</p>
+        <p className="mt-2 text-amber-100/80">
+          These correction cards are disabled previews. The detector does not save tasks,
+          create logs, activate modes, mark risks resolved, run background checks, or write
+          Grimoire records. User confirmation and server-owned persistence remain deferred.
+        </p>
+      </div>
+
+      <div className="mt-5 grid gap-4 xl:grid-cols-2">
+        {correctionPreviews.map((action) => (
+          <ProposedActionReviewCard
+            key={action.action_type}
+            initialAction={action}
+            disabled
+            saveLabel="Save / Confirm unavailable in Phase 13I corruption preview"
+            cancelLabel="Cancel unavailable in Phase 13I corruption preview"
+            editLabel="Edit payload unavailable in Phase 13I corruption preview"
+            reviewTitle="Grimoire corruption correction preview"
+            validationIssues={[
+              "Preview only: this dashboard does not persist correction proposals.",
+              "Corruption correction must remain separate from writes until explicit user confirmation exists.",
+              "No generation call, database write, background job, mode activation, or action execution is wired here.",
+            ]}
           />
-        }
-      />
+        ))}
+      </div>
+
+      <div className="mt-5">
+        <DataList
+          items={checks.slice(0, 6).map((check) => ({
+            id: check.id,
+            title: check.risk_type,
+            description: corruptionDescription(check),
+            meta: (
+              <div className="flex flex-wrap gap-2">
+                <StatusPill label={formatDate(check.log_date)} />
+                <StatusPill
+                  label={check.severity}
+                  tone={toneForText(check.severity)}
+                />
+                <StatusPill label={check.status} tone={toneForText(check.status)} />
+              </div>
+            ),
+          }))}
+          emptyState={
+            <EmptyState
+              title="No corruption checks yet"
+              description="Add corruption checks when a mode risks fantasy loops, avoidance, overdrive, identity inflation, or proof replacement."
+            />
+          }
+        />
+      </div>
     </SectionCard>
   );
 }
@@ -690,7 +847,11 @@ export async function GrimoireDashboardV1({ userId }: GrimoireDashboardV1Props) 
         logs={data.detail_rows.proof_mapped_logs}
         skills={data.detail_rows.skills}
       />
-      <CorruptionDetectorCard checks={data.detail_rows.corruption_checks} />
+      <CorruptionDetectorCard
+        checks={data.detail_rows.corruption_checks}
+        openChecks={data.detail_rows.open_corruption_checks}
+        highSeverityChecks={data.detail_rows.high_severity_corruption_checks}
+      />
       <ReversionCard reversions={data.detail_rows.reversions} />
       <WeeklyThroneAuditCard
         questions={data.weekly_throne_audit_questions}

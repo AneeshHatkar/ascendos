@@ -2664,3 +2664,10 @@ Purpose:
   - Added disabled `ProposedActionReviewCard` translator previews.
   - Added deterministic `buildGrimoireTranslatorPreviews` helper.
   - Added translator boundary copy explaining no save, no execution, no AI, and no database write behavior.
+
+## Phase 13I — Grimoire Corruption Detector Expansion
+- `src/components/dashboard/grimoire-dashboard-v1.tsx`
+  - Expanded `CorruptionDetectorCard` to accept all checks, open checks, and high-severity checks.
+  - Added deterministic `buildCorruptionCorrectionPreviews`.
+  - Added disabled correction previews using `ProposedActionReviewCard`.
+  - Fixed the Reversion card copy typo from `latersafe` to `later safe`.

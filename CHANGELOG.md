@@ -1321,3 +1321,7 @@ Timestamp: 2026-06-27 06:21 UTC
 ## Phase 13H — Grimoire Symbol-to-Action Translator Preview
 - Added preview-only Grimoire symbol-to-action translation cards.
 - The translator now displays safe proposed-action shapes for task, daily log, and proof item creation without persisting or executing anything.
+
+## Phase 13I — Grimoire Corruption Detector Expansion
+- Expanded Grimoire corruption detection with open-risk and high-severity panels.
+- Added preview-only correction cards for safe task/log review without writes or execution.

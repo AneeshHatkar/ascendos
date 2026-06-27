@@ -3829,3 +3829,10 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Purpose: show how symbolic mode language becomes practical mission action, daily logging, and proof capture before later confirmation wiring.
 - Verification required: lint, route/registry/migration audits, source/integration audits, build, forbidden-marker scan, and git diff check.
 - Next: Phase 13I — corruption detector expansion.
+
+## Phase 13I — Grimoire Corruption Detector Expansion
+- Expanded the `/grimoire` corruption detector with total, open, and high-severity corruption metrics.
+- Added focused open-risk and high-severity risk panels.
+- Added disabled correction-preview cards for `create_task` and `create_daily_log`.
+- Preserved boundary: preview-only, read-only, no generation call, no database writes, no proposed-action persistence, no action execution, no timers, and no mode activation.
+- Next: Phase 13J — reversion and weekly throne audit expansion.

@@ -2096,3 +2096,8 @@ Next: Phase 13H — Symbol-to-action translator.
 Status: Implemented locally.
 Boundary: read-only preview only; no AI generation, no proposed-action persistence, no action execution, and no Supabase writes.
 Next: Phase 13I — corruption detector expansion.
+
+## Phase 13I — Grimoire Corruption Detector Expansion
+Status: Implemented locally.
+Boundary: read-only preview only; no generation call, no proposed-action persistence, no action execution, no timers, no mode activation, and no database writes.
+Next: Phase 13J — reversion and weekly throne audit expansion.
