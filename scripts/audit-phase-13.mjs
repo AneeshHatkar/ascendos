@@ -77,14 +77,6 @@ for (const file of requiredFiles) {
 
 console.log("\n=== Phase 13 audit: SQL foundation ===");
 
-const grimoireTables = [
-  "grimoire_modes",
-  "grimoire_daily_logs",
-  "grimoire_skills",
-  "grimoire_corruption_checks",
-  "grimoire_reversions",
-];
-
 requireIncludes("supabase/migrations/0016_phase13_grimoire_foundation.sql", [
   "Phase 13",
   "create table if not exists public.grimoire_modes",
