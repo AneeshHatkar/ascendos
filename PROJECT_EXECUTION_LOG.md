@@ -3582,3 +3582,26 @@ Boundaries:
 - No route wiring.
 - No writes.
 - No bank sync, autopay, document upload/OCR/storage, legal/tax/immigration advice, or autonomous Carnos execution.
+
+## C11 — Admin / Finance Route Wiring
+
+Status: Complete pending verification.
+
+Completed:
+
+- Wired `/life-admin` to `LifeAdminDashboardV1`.
+- Wired `/finance` to `FinanceDashboardV1`.
+- Wired `/documents` to `DocumentsDashboardV1`.
+- Wired `/housing` to `HousingDashboardV1`.
+- Replaced placeholder pages with authenticated read-only dashboard shells.
+
+Boundaries:
+
+- No SQL migration.
+- No database type edits.
+- No repository edits.
+- No dashboard helper edits.
+- No component edits.
+- No writes.
+- No proposed-action execution.
+- No bank sync, autopay, document upload/OCR/storage, legal/tax/immigration advice, or autonomous Carnos execution.

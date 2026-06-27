@@ -1200,3 +1200,9 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - Added read-only dashboard components for Life Admin, Finance, Documents, and Housing.
 - Added shared warning, privacy, state, and proposed-action preview boundary panels.
 - Exported the new dashboard components without wiring routes yet.
+
+## Admin and Finance Route Wiring
+
+- Wired Life Admin, Finance, Documents, and Housing routes to authenticated read-only dashboards.
+- Replaced placeholder pages for those surfaces.
+- Kept write behavior, SQL, repositories, dashboard helpers, and component internals unchanged.

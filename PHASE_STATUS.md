@@ -1755,3 +1755,34 @@ Deferred:
 - Audit gate.
 - Smoke checklist.
 - Completion report.
+
+## C11 — Admin / Finance Route Wiring
+
+Status: Complete pending verification.
+
+Completed:
+
+- 12.30 Wire `/life-admin`.
+- 12.31 Wire `/finance`.
+- 12.32 Wire `/documents`.
+- 12.33 Wire `/housing`.
+
+Progress:
+
+- Completed before this chunk: 28 / 45.
+- Completed after this chunk: 32 / 45.
+- Remaining after this chunk: 13 / 45.
+
+Touched:
+
+- Four app routes.
+- Logs only.
+
+Deferred:
+
+- Command dashboard visibility.
+- Calendar visibility.
+- Proposed-action preview integration beyond component boundary language.
+- Audit gate.
+- Smoke checklist.
+- Completion report.

@@ -2471,3 +2471,27 @@ Summary:
 - Added `HousingDashboardV1`.
 - Added shared read-only state, warning, privacy, and proposed-action boundary panels.
 - Exported the components for route wiring in the next chunk.
+
+## C11 — Admin / Finance Route Wiring
+
+Files modified:
+
+- `src/app/life-admin/page.tsx`
+- `src/app/finance/page.tsx`
+- `src/app/documents/page.tsx`
+- `src/app/housing/page.tsx`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Summary:
+
+- Connected Life Admin, Finance, Documents, and Housing routes to authenticated read-only dashboard components.
+- Preserved server-rendered authenticated shell pattern.
+- Removed placeholder page usage from these four routes.
+
+Safety:
+
+- Read-only route wiring only.
+- No SQL, repository, helper, component, write, or AI execution changes.
