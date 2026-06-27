@@ -3844,3 +3844,12 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Expanded the weekly throne audit surface with disabled task/proof preview cards.
 - Preserved Phase 13 boundaries: no write execution, no Carnos generation, no timers, no browser Supabase, and no automatic mode activation.
 - Next: Phase 13K — Carnos guide/throne boundary panels.
+
+## Phase 13K — Grimoire Boundary and Audit Hardening
+
+- Added the Carnos Grimoire guide boundary panel.
+- Added the Throne override boundary panel.
+- Added the final Grimoire safety audit panel.
+- Confirmed the `/grimoire` surface remains read-only and preview-only.
+- No SQL, route, AI generation, timer, browser Supabase, proposed-action persistence, or execution behavior was added.
+- Next: Phase 13L — manual smoke checklist, completion report, and final Phase 13 lock.

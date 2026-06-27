@@ -2680,3 +2680,11 @@ Purpose:
 - Rewired `ReversionCard` to receive pending reversion rows and pending reversion log rows.
 - Rewired `WeeklyThroneAuditCard` to receive throne attention summary values.
 - Kept all preview actions disabled and non-persistent.
+
+## Phase 13K — Grimoire Boundary and Audit Hardening
+
+- Updated `src/components/dashboard/grimoire-dashboard-v1.tsx`.
+- Added `GrimoireCarnosGuideBoundaryPanel`.
+- Added `GrimoireThroneOverrideBoundaryPanel`.
+- Added `GrimoireFinalAuditBoundaryPanel`.
+- Wired the new panels into the `/grimoire` dashboard without introducing writes or generation behavior.

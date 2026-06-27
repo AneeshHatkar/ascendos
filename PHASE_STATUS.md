@@ -2107,3 +2107,9 @@ Next: Phase 13J — reversion and weekly throne audit expansion.
 Status: Complete after verification.
 Current boundary: read-only UI plus disabled preview cards only.
 Next: Phase 13K — Carnos guide/throne boundary panels.
+
+## Phase 13K — Grimoire Boundary and Audit Hardening
+
+Status: Complete after verification.
+Boundary: read-only UI, disabled previews only, no generation, no timers, no proposed-action persistence, no execution, and no direct database writes.
+Next: Phase 13L — manual smoke checklist, completion report, and final Phase 13 lock.

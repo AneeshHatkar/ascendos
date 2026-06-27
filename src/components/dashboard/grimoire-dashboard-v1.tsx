@@ -241,6 +241,189 @@ function GrimoireRulePanel({
   );
 }
 
+
+function GrimoireCarnosGuideBoundaryPanel() {
+  const guideRules = [
+    "Name the symbolic state before acting.",
+    "Separate facts from story.",
+    "Choose one mode support, not all modes at once.",
+    "Translate symbolic language into task, proof, correction, or reversion.",
+    "Ask for confirmation before saving anything.",
+  ];
+
+  const forbiddenPatterns = [
+    "No symbolic inflation.",
+    "No permanent overdrive.",
+    "No replacing proof with identity claims.",
+    "No health, money, housing, or safety decisions based on mythic language.",
+    "No automatic mode activation.",
+  ];
+
+  return (
+    <SectionCard
+      title="Carnos Grimoire guide boundary"
+      eyebrow="13K guide hardening"
+      description="Read-only guide contract for how Carnos should translate symbolic modes into practical action later."
+    >
+      <div className="grid gap-4 lg:grid-cols-2">
+        <div className="rounded-2xl border border-cyan-300/20 bg-cyan-300/[0.04] p-4">
+          <p className="text-sm font-semibold text-cyan-100">
+            Allowed guide structure
+          </p>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-300">
+            {guideRules.map((rule) => (
+              <li key={rule}>{rule}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="rounded-2xl border border-rose-300/20 bg-rose-300/[0.04] p-4">
+          <p className="text-sm font-semibold text-rose-100">
+            Forbidden guide behavior
+          </p>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-300">
+            {forbiddenPatterns.map((rule) => (
+              <li key={rule}>{rule}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </SectionCard>
+  );
+}
+
+function GrimoireThroneOverrideBoundaryPanel() {
+  const overrideRules = [
+    "Truth overrides mode intensity.",
+    "Safety overrides symbolic mission pressure.",
+    "Reality evidence overrides narrative identity.",
+    "Long-term direction overrides short-term overdrive.",
+    "The throne layer may pause modes but must not create fantasy authority.",
+  ];
+
+  return (
+    <SectionCard
+      title="Throne override boundary"
+      eyebrow="13K throne hardening"
+      description="Final read-only boundary for truth, safety, reality, long-term direction, and identity stability."
+    >
+      <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+        <ul className="grid gap-3 text-sm leading-6 text-slate-300 md:grid-cols-2">
+          {overrideRules.map((rule) => (
+            <li
+              key={rule}
+              className="rounded-2xl border border-white/10 bg-slate-950/70 p-4"
+            >
+              {rule}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </SectionCard>
+  );
+}
+
+function GrimoireFinalAuditBoundaryPanel({
+  summary,
+  warnings,
+}: {
+  summary: {
+    mode_count: number;
+    active_mode_count: number;
+    active_mission_log_count: number;
+    proof_mapped_log_count: number;
+    open_corruption_check_count: number;
+    high_severity_corruption_count: number;
+    pending_reversion_count: number;
+    pending_reversion_log_count: number;
+    throne_attention_count: number;
+    read_only_boundary: true;
+  };
+  warnings: string[];
+}) {
+  const auditRows = [
+    {
+      label: "Read-only boundary",
+      value: summary.read_only_boundary ? "locked" : "missing",
+      tone: summary.read_only_boundary ? "success" : "danger",
+    },
+    {
+      label: "Active modes",
+      value: String(summary.active_mode_count),
+      tone: summary.active_mode_count > 1 ? "warning" : "success",
+    },
+    {
+      label: "Mission mapping",
+      value: String(summary.active_mission_log_count),
+      tone: summary.active_mission_log_count > 0 ? "success" : "neutral",
+    },
+    {
+      label: "Proof mapping",
+      value: String(summary.proof_mapped_log_count),
+      tone: summary.proof_mapped_log_count > 0 ? "success" : "warning",
+    },
+    {
+      label: "Open corruption",
+      value: String(summary.open_corruption_check_count),
+      tone: summary.open_corruption_check_count > 0 ? "warning" : "success",
+    },
+    {
+      label: "High severity",
+      value: String(summary.high_severity_corruption_count),
+      tone: summary.high_severity_corruption_count > 0 ? "danger" : "success",
+    },
+    {
+      label: "Pending reversion",
+      value: String(summary.pending_reversion_count + summary.pending_reversion_log_count),
+      tone:
+        summary.pending_reversion_count + summary.pending_reversion_log_count > 0
+          ? "warning"
+          : "success",
+    },
+    {
+      label: "Read warnings",
+      value: String(warnings.length),
+      tone: warnings.length > 0 ? "warning" : "success",
+    },
+  ] as const;
+
+  return (
+    <SectionCard
+      title="Final Grimoire safety audit"
+      eyebrow="13K audit hardening"
+      description="Read-only safety summary before Phase 13 closeout. This panel only reports state; it does not repair, save, activate, or execute."
+    >
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {auditRows.map((row) => (
+          <div
+            key={row.label}
+            className="rounded-2xl border border-white/10 bg-black/20 p-4"
+          >
+            <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
+              {row.label}
+            </p>
+            <div className="mt-3 flex items-center justify-between gap-3">
+              <p className="text-lg font-semibold text-white">{row.value}</p>
+              <StatusPill label={row.tone} tone={row.tone} />
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-5 rounded-2xl border border-white/10 bg-slate-950/70 p-4 text-sm leading-6 text-slate-300">
+        <p className="font-semibold text-slate-100">Closeout boundary</p>
+        <p className="mt-2">
+          Phase 13 remains a read-only Grimoire-to-Action surface. All preview
+          cards are disabled. Carnos generation, proposed-action persistence,
+          action execution, timer behavior, and direct database writes remain
+          outside this phase.
+        </p>
+      </div>
+    </SectionCard>
+  );
+}
+
+
 function ModeSelectorCard({ modes }: { modes: GrimoireModeRow[] }) {
   return (
     <SectionCard
@@ -1040,6 +1223,8 @@ export async function GrimoireDashboardV1({ userId }: GrimoireDashboardV1Props) 
       <GrimoireReadOnlyBoundaryNotice />
       <GrimoireWarningPanel warnings={data.warnings} />
       <GrimoireStateBoundaryPanel warnings={data.warnings} />
+      <GrimoireCarnosGuideBoundaryPanel />
+      <GrimoireThroneOverrideBoundaryPanel />
       <GrimoireCrossDashboardLinks activeRoute="/grimoire" />
 
       {!hasAnyGrimoireData ? (
@@ -1105,6 +1290,11 @@ export async function GrimoireDashboardV1({ userId }: GrimoireDashboardV1Props) 
         eyebrow="source rule"
         description="These rules prevent fantasy loops, overdrive, avoidance, and identity inflation."
         items={data.anti_corruption_rules}
+      />
+
+      <GrimoireFinalAuditBoundaryPanel
+        summary={summary}
+        warnings={data.warnings}
       />
 
       <SectionCard

@@ -1330,3 +1330,8 @@ Timestamp: 2026-06-27 06:21 UTC
 
 - Expanded reversion and weekly throne audit panels with disabled proposed-action previews.
 - Added explicit reversion and throne boundaries.
+
+## Phase 13K — Grimoire Boundary and Audit Hardening
+
+- Added final Carnos guide, throne override, and Grimoire safety audit boundary panels.
+- Preserved the read-only Grimoire dashboard contract.
