@@ -178,7 +178,7 @@ export const DASHBOARD_REGISTRY: DashboardRegistryItem[] = [
     title: "Grimoire",
     route: "/grimoire",
     domain: "creativity",
-    description: "Symbolic intention translated into practical missions, proof, and reversion rules.",
+    description: "Read-only Grimoire surface for modes, mission mapping, proof translation, corruption checks, reversion, and throne audit.",
   },
   {
     title: "Decisions",

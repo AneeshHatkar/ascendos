@@ -1312,3 +1312,8 @@ Timestamp: 2026-06-27 06:21 UTC
 
 - Replaced the `/grimoire` placeholder with the first read-only Grimoire dashboard UI.
 - Added required cards for modes, missions, symbol-to-action mapping, corruption checks, reversions, and weekly throne audit.\n
+
+## Phase 13G — Grimoire Mode Selector and Mission Mapping Wiring
+
+- Added Grimoire dashboard surface/card registry wiring for Mode Selector and Mission Mapping.
+- Added Grimoire cross-dashboard navigation to keep symbolic modes grounded in Command, Goals, Timeline, Calendar, and Carnos.

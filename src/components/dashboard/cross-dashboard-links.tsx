@@ -102,6 +102,39 @@ const RESEARCH_DASHBOARD_LINKS: CrossDashboardLink[] = [
   },
 ];
 
+const GRIMOIRE_DASHBOARD_LINKS: CrossDashboardLink[] = [
+  {
+    label: "Grimoire",
+    route: "/grimoire",
+    description: "Modes, missions, proof translation, corruption checks, reversion, and throne audit.",
+  },
+  {
+    label: "Command",
+    route: "/command",
+    description: "Daily mission and proof pressure where symbolic plans must become execution.",
+  },
+  {
+    label: "Goals",
+    route: "/goals",
+    description: "Goal reality and proof requirements connected to Grimoire missions.",
+  },
+  {
+    label: "Timeline",
+    route: "/timeline",
+    description: "Chronological proof and evidence trail for mode-backed action.",
+  },
+  {
+    label: "Calendar",
+    route: "/calendar",
+    description: "Time blocks and scheduled action that ground symbolic intent.",
+  },
+  {
+    label: "Carnos",
+    route: "/carnos",
+    description: "Companion review surface for future Grimoire proposals and safety checks.",
+  },
+];
+
 interface CrossDashboardLinksProps {
   activeRoute: CanonicalRoute;
   title?: string;
@@ -170,6 +203,17 @@ export function ResearchCrossDashboardLinks({ activeRoute }: { activeRoute: Cano
       title="Research system links"
       description="Move between Phase 10 research surfaces and the proof, project, learning, career, and Carnos context that supports research execution."
       links={RESEARCH_DASHBOARD_LINKS}
+    />
+  );
+}
+
+export function GrimoireCrossDashboardLinks({ activeRoute }: { activeRoute: CanonicalRoute }) {
+  return (
+    <CrossDashboardLinks
+      activeRoute={activeRoute}
+      title="Grimoire operating links"
+      description="Move between Grimoire, Command, Goals, Timeline, Calendar, and Carnos so symbolic modes stay grounded in proof and schedule."
+      links={GRIMOIRE_DASHBOARD_LINKS}
     />
   );
 }

@@ -3811,3 +3811,13 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Added read-only boundary, warnings, state/privacy boundary, grounding rules, anti-corruption rules, source table provenance, and empty-state language.
 - Preserved boundary: no writes, no proposal execution, no Carnos execution, no memory/RAG, no voice, no timers, and no direct Supabase calls from UI.
 - Next: Phase 13G — mode selector + mission mapping route wiring.\n
+
+## Phase 13G — Grimoire Mode Selector and Mission Mapping Wiring
+
+- Added `grimoire` to the dashboard layout surface contract.
+- Registered Grimoire dashboard cards for Mode Selector and Mission Mapping.
+- Added Grimoire cross-dashboard navigation to Command, Goals, Timeline, Calendar, and Carnos.
+- Wired Grimoire dashboard UI to render `GrimoireCrossDashboardLinks`.
+- Updated dashboard registry description to reflect the read-only Grimoire operating surface.
+- Preserved boundary: no writes, no proposal execution, no Carnos execution, no memory/RAG, no voice, no timers, and no direct Supabase calls from UI.
+- Next: Phase 13H — Symbol-to-action translator.

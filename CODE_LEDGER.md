@@ -2650,3 +2650,11 @@ Purpose:
 - `src/components/dashboard/grimoire-dashboard-v1.tsx` renders read-only Grimoire dashboard sections from `getGrimoireDashboardDataSummary`.
 - `src/app/grimoire/page.tsx` now uses `AuthenticatedDashboardShell` and `GrimoireDashboardV1`.
 - `src/components/dashboard/index.ts` exports `GrimoireDashboardV1`.\n
+
+## Phase 13G — Grimoire Mode Selector and Mission Mapping Wiring
+
+- `src/lib/dashboard/dashboard-layout-contract.ts` now supports the `grimoire` dashboard surface.
+- `src/lib/dashboard/dashboard-card-registry.ts` now registers Grimoire Mode Selector and Mission Mapping cards.
+- `src/components/dashboard/cross-dashboard-links.tsx` exports `GrimoireCrossDashboardLinks`.
+- `src/components/dashboard/grimoire-dashboard-v1.tsx` renders Grimoire navigation links.
+- `src/lib/dashboard-registry.ts` uses updated Grimoire read-only operating description.

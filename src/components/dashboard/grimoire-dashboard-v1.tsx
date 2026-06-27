@@ -6,6 +6,7 @@ import {
   StatusPill,
 } from "@/components/dashboard";
 import { getGrimoireDashboardDataSummary } from "@/lib/dashboard";
+import { GrimoireCrossDashboardLinks } from "./cross-dashboard-links";
 import type {
   GrimoireCorruptionCheckRow,
   GrimoireDailyLogRow,
@@ -527,6 +528,7 @@ export async function GrimoireDashboardV1({ userId }: GrimoireDashboardV1Props) 
       <GrimoireReadOnlyBoundaryNotice />
       <GrimoireWarningPanel warnings={data.warnings} />
       <GrimoireStateBoundaryPanel warnings={data.warnings} />
+      <GrimoireCrossDashboardLinks activeRoute="/grimoire" />
 
       {!hasAnyGrimoireData ? (
         <EmptyState

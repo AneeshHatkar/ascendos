@@ -2083,3 +2083,11 @@ Status: Complete after verification.
 Added authenticated read-only Grimoire dashboard UI.
 
 Next: Phase 13G — mode selector + mission mapping route wiring.\n
+
+## Phase 13G — Grimoire Mode Selector and Mission Mapping Wiring
+
+Status: Complete after verification.
+
+Added Grimoire dashboard contract/card registry wiring and cross-dashboard navigation.
+
+Next: Phase 13H — Symbol-to-action translator.

@@ -278,6 +278,32 @@ export const PHASE_7_DASHBOARD_CARD_REGISTRY: DashboardCardContract[] = [
     emptyStateTitle: "No PhD readiness records found.",
     emptyStateDescription: "Readiness, SOP, assets, and recommendation records will appear after records exist.",
   },
+  {
+    id: "grimoire-mode-selector",
+    surface: "grimoire",
+    region: "primary",
+    title: "Mode Selector",
+    description: "Shows available symbolic modes, mission type, intensity, active state, and reversion requirement without activating anything.",
+    priority: "critical",
+    status: "ready",
+    sourceTables: ["grimoire_modes"],
+    emptyStateTitle: "No Grimoire modes found.",
+    emptyStateDescription: "Define a mode only after mission type, allowed use, proof requirement, corruption risk, and reversion rule are clear.",
+    privacyNote: "Modes remain private to the authenticated user and cannot activate from the read-only dashboard.",
+  },
+  {
+    id: "grimoire-mission-mapping",
+    surface: "grimoire",
+    region: "primary",
+    title: "Mission Mapping",
+    description: "Shows mode-to-mission logs, active mission statements, proof/action mapping, and reversion pressure without creating records.",
+    priority: "critical",
+    status: "ready",
+    sourceTables: ["grimoire_daily_logs", "grimoire_modes", "proof_items"],
+    emptyStateTitle: "No Grimoire mission mappings found.",
+    emptyStateDescription: "A symbolic mode should not be treated as active until it maps to one practical mission and one proof-producing action.",
+    privacyNote: "Mission mappings are read-only and must not become proposed actions until a later safe confirmation flow exists.",
+  },
 ];
 
 export function getDashboardCardsForSurface(surface: DashboardSurface): DashboardCardContract[] {
