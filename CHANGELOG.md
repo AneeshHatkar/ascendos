@@ -1284,3 +1284,10 @@ Timestamp: 2026-06-27 06:21 UTC
 - Locked the pre-Grimoire hardening pass.
 - Confirmed Goals/Proof, Calendar/Timeline, Carnos Chat, and Pending Updates gaps are closed enough to proceed to Grimoire.
 - Next implementation phase is Phase 13 / Source Chunk 15 — Grimoire.
+
+## Phase 13A — Grimoire Source Scope Lock
+
+- Started Phase 13 / Source Chunk 15 — Grimoire.
+- Locked the source-backed Grimoire scope before implementation.
+- Confirmed the current `/grimoire` route is still a placeholder.
+- Locked the Grimoire practical loop: mode -> mission -> proof -> corruption check -> reversion.

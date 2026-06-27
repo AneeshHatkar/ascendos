@@ -2623,3 +2623,8 @@ Purpose:
 - Added `docs/phase-reports/PHASE_12_9G_FINAL_PRE_GRIMOIRE_LOCK.md`.
 - Recorded the final pre-Grimoire status before starting Source Chunk 15 / Phase 13.
 - No runtime feature code was added in this lock step.
+
+## Phase 13A — Grimoire Source Scope Lock
+
+- `docs/phase-plans/PHASE_13_GRIMOIRE_ENGINE.md` locks the Phase 13 implementation chunks, required cards, data sources, safety boundaries, non-goals, and completion definition.
+- `docs/phase-reports/PHASE_13_A_GRIMOIRE_SOURCE_SCOPE_LOCK.md` records the source-backed Grimoire findings before code implementation.

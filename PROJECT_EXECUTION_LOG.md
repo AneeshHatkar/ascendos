@@ -3753,3 +3753,13 @@ Confirmed completed hardening:
 - 12.9G final pre-Grimoire lock.
 
 Next: Phase 13 / Source Chunk 15 — Grimoire.
+
+## Phase 13A — Grimoire Source Scope Lock
+
+- Started Phase 13 / Source Chunk 15 — Grimoire.
+- Verified `/grimoire` is currently a placeholder.
+- Confirmed FINAL_SYNCED DOCX/JSON contain the real Grimoire scope.
+- Locked Grimoire as practical mode -> mission -> proof -> corruption check -> reversion logic.
+- Locked required Grimoire tables: `grimoire_modes`, `grimoire_daily_logs`, `grimoire_skills`, `grimoire_corruption_checks`, `grimoire_reversions`.
+- Locked Phase 13 into 12 implementation subphases and 4 major code chunks.
+- Next chunk: Phase 13B — SQL schema design.

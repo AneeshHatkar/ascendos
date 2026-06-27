@@ -2010,3 +2010,28 @@ Pre-Grimoire hardening is locked through:
 - AI extraction contract boundary.
 
 Next step: Phase 13 / Source Chunk 15 — Grimoire.
+
+## Phase 13A — Grimoire Source Scope Lock
+
+Status: Complete after commit.
+
+Current phase: Phase 13 / Source Chunk 15 — Grimoire.
+
+Locked required Grimoire surfaces:
+
+- Mode Selector
+- Mission Mapping
+- Corruption Detector
+- Reversion
+- Weekly Throne Audit
+- Symbol-to-Action Translator
+
+Locked source-backed tables:
+
+- `grimoire_modes`
+- `grimoire_daily_logs`
+- `grimoire_skills`
+- `grimoire_corruption_checks`
+- `grimoire_reversions`
+
+Next: Phase 13B — SQL schema design.
