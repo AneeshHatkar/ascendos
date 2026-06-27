@@ -2645,4 +2645,8 @@ Purpose:
 ## Phase 13E — Grimoire Dashboard Aggregation Helper
 
 - `src/lib/dashboard/grimoire-dashboard-data-helpers.ts` aggregates Grimoire read helper output into summary/detail rows.
-- `src/lib/dashboard/index.ts` exports the Grimoire dashboard helper.
+- `src/lib/dashboard/index.ts` exports the Grimoire dashboard helper.\n\n## Phase 13F — Core Grimoire Dashboard UI
+
+- `src/components/dashboard/grimoire-dashboard-v1.tsx` renders read-only Grimoire dashboard sections from `getGrimoireDashboardDataSummary`.
+- `src/app/grimoire/page.tsx` now uses `AuthenticatedDashboardShell` and `GrimoireDashboardV1`.
+- `src/components/dashboard/index.ts` exports `GrimoireDashboardV1`.\n

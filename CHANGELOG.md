@@ -1308,4 +1308,7 @@ Timestamp: 2026-06-27 06:21 UTC
 
 ## Phase 13E — Grimoire Dashboard Aggregation Helper
 
-- Added read-only Grimoire dashboard aggregation helper with summary counts, detail rows, warnings, grounding rules, anti-corruption rules, and weekly throne audit questions.
+- Added read-only Grimoire dashboard aggregation helper with summary counts, detail rows, warnings, grounding rules, anti-corruption rules, and weekly throne audit questions.\n\n## Phase 13F — Core Grimoire Dashboard UI
+
+- Replaced the `/grimoire` placeholder with the first read-only Grimoire dashboard UI.
+- Added required cards for modes, missions, symbol-to-action mapping, corruption checks, reversions, and weekly throne audit.\n

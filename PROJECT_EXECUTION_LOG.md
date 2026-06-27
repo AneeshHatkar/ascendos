@@ -3803,4 +3803,11 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Added dashboard-ready Grimoire summary, detail rows, source table list, warnings, grounding rules, anti-corruption rules, and weekly throne audit questions.
 - Exported the helper from `src/lib/dashboard/index.ts`.
 - Preserved read-only boundary: no writes, no Carnos execution, no proposal creation, no memory/RAG, no voice, no analytics, and no custom tracker logic.
-- Next: Phase 13F — Core Grimoire dashboard UI.
+- Next: Phase 13F — Core Grimoire dashboard UI.\n\n## Phase 13F — Core Grimoire Dashboard UI
+
+- Added `src/components/dashboard/grimoire-dashboard-v1.tsx`.
+- Replaced `/grimoire` placeholder with authenticated read-only Grimoire dashboard wiring.
+- Added required read-only cards: Mode Selector, Mission Mapping, Symbol-to-Action Translator, Corruption Detector, Reversion, and Weekly Throne Audit.
+- Added read-only boundary, warnings, state/privacy boundary, grounding rules, anti-corruption rules, source table provenance, and empty-state language.
+- Preserved boundary: no writes, no proposal execution, no Carnos execution, no memory/RAG, no voice, no timers, and no direct Supabase calls from UI.
+- Next: Phase 13G — mode selector + mission mapping route wiring.\n

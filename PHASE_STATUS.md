@@ -2076,4 +2076,10 @@ Status: Complete after verification.
 
 Added read-only Grimoire dashboard aggregation helper.
 
-Next: Phase 13F — Core Grimoire dashboard UI.
+Next: Phase 13F — Core Grimoire dashboard UI.\n\n## Phase 13F — Core Grimoire Dashboard UI
+
+Status: Complete after verification.
+
+Added authenticated read-only Grimoire dashboard UI.
+
+Next: Phase 13G — mode selector + mission mapping route wiring.\n
