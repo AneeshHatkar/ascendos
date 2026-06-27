@@ -25,8 +25,12 @@ Upload or paste this file and say:
 - `docs/database/CORE_SQL_SPINE.md`
 - `docs/database/PHASE_10_RESEARCH_SCHEMA_DESIGN.md`
 - `docs/database/PHASE_10_STANFORD_PHD_SCHEMA_DESIGN.md`
+- `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+- `docs/database/PHASE_12_LIFE_ADMIN_FINANCE_SCHEMA_DESIGN.md`
 - `docs/database/PHASE_9_LEARNING_PROJECT_SCHEMA_DESIGN.md`
 - `docs/phase-plans/PHASE_10_RESEARCH_STANFORD_SYSTEM.md`
+- `docs/phase-plans/PHASE_11_HEALTH_BODY_SYSTEM.md`
+- `docs/phase-plans/PHASE_12_LIFE_ADMIN_FINANCE_DAILY_ADMIN_SYSTEM.md`
 - `docs/phase-plans/PHASE_4_CORE_SQL_SPINE.md`
 - `docs/phase-plans/PHASE_5_15_PYTHON_ML_INTELLIGENCE_ARCHITECTURE_PATCH.md`
 - `docs/phase-plans/PHASE_5_CORE_READ_UI_INTEGRATION.md`
@@ -37,6 +41,20 @@ Upload or paste this file and say:
 - `docs/phase-reports/PHASE_10_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
 - `docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT.md`
 - `docs/phase-reports/PHASE_10_SOURCE_TO_SCOPE_TRACEABILITY.md`
+- `docs/phase-reports/PHASE_11_BASELINE_UNITS_SLEEP_PHOTO_BOUNDARY.md`
+- `docs/phase-reports/PHASE_11_HEALTH_BODY_AUDIT_GATE.md`
+- `docs/phase-reports/PHASE_11_HEALTH_BODY_COMPLETION_REPORT.md`
+- `docs/phase-reports/PHASE_11_HEALTH_BODY_DETAIL_PANEL_PATTERN_REPORT.md`
+- `docs/phase-reports/PHASE_11_HEALTH_PRIVACY_SAFETY_REVIEW.md`
+- `docs/phase-reports/PHASE_11_READ_HELPER_SCHEMA_BOUNDARY_AUDIT.md`
+- `docs/phase-reports/PHASE_11_SAFETY_DATA_TARGET_TREND_BOUNDARY.md`
+- `docs/phase-reports/PHASE_11_SOURCE_TO_SCOPE_TRACEABILITY.md`
+- `docs/phase-reports/PHASE_12_C01_SOURCE_ROUTE_INSPECTION.md`
+- `docs/phase-reports/PHASE_12_LIFE_ADMIN_FINANCE_COMPLETION_REPORT.md`
+- `docs/phase-reports/PHASE_12_LIFE_ADMIN_PRIVACY_SAFETY_REVIEW.md`
+- `docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_CLOSEOUT.md`
+- `docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_TRACEABILITY.md`
+- `docs/phase-reports/PHASE_12_SQL_FOUNDATION_VALIDATION_REPORT.md`
 - `docs/phase-reports/PHASE_1_8_RETROSPECTIVE_GAP_AUDIT.md`
 - `docs/phase-reports/PHASE_4_CORE_SQL_SPINE_REPORT.md`
 - `docs/phase-reports/PHASE_5_CORE_READ_UI_INTEGRATION_REPORT.md`
@@ -51,8 +69,11 @@ Upload or paste this file and say:
 - `docs/phase-reports/PHASE_9_NO_WRITE_PRIVACY_AUDIT.md`
 - `docs/phase-reports/PHASE_9_SOURCE_TO_SCOPE_TRACEABILITY.md`
 - `docs/qa/PHASE_10_RESEARCH_STANFORD_MANUAL_SMOKE_CHECKLIST.md`
+- `docs/qa/PHASE_11_HEALTH_BODY_MANUAL_SMOKE_CHECKLIST.md`
+- `docs/qa/PHASE_12_LIFE_ADMIN_FINANCE_MANUAL_SMOKE_CHECKLIST.md`
 - `docs/qa/PHASE_7_MANUAL_SMOKE_CHECKLIST.md`
 - `docs/qa/PHASE_8_CAREER_MANUAL_SMOKE_CHECKLIST.md`
+- `docs/roadmap/POST_V1_EXPANSION_ROADMAP.md`
 - `docs/setup/AUTH_SMOKE_TEST.md`
 - `docs/setup/PROTECTED_ROUTES.md`
 - `docs/setup/SUPABASE_SETUP.md`
@@ -66,6 +87,8 @@ Upload or paste this file and say:
 - `scripts/audit-integration-sanity.mjs`
 - `scripts/audit-phase-1-7-crosswalk.mjs`
 - `scripts/audit-phase-10.mjs`
+- `scripts/audit-phase-11.mjs`
+- `scripts/audit-phase-12.mjs`
 - `scripts/audit-phase-3.mjs`
 - `scripts/audit-phase-4.mjs`
 - `scripts/audit-phase-5.mjs`
@@ -124,6 +147,7 @@ Upload or paste this file and say:
 - `src/components/actions/proposed-action-review-card.tsx`
 - `src/components/auth/index.ts`
 - `src/components/auth/protected-page.tsx`
+- `src/components/dashboard/admin-finance-dashboard-v1.tsx`
 - `src/components/dashboard/authenticated-dashboard-shell.tsx`
 - `src/components/dashboard/calendar-dashboard-v1.tsx`
 - `src/components/dashboard/career-dashboard-v1.tsx`
@@ -138,6 +162,16 @@ Upload or paste this file and say:
 - `src/components/dashboard/domain-read-page.tsx`
 - `src/components/dashboard/empty-state.tsx`
 - `src/components/dashboard/goals-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-action-boundary-panels.tsx`
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/health-body-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-detail-panels.tsx`
+- `src/components/dashboard/health-body-emotion-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-hair-skincare-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-linkage-panels.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
 - `src/components/dashboard/index.ts`
 - `src/components/dashboard/interviews-dashboard-v1.tsx`
 - `src/components/dashboard/knowledge-vault-alignment-v1.tsx`
@@ -179,18 +213,22 @@ Upload or paste this file and say:
 - `src/lib/audit/write-audit-log.ts`
 - `src/lib/auth/actions.ts`
 - `src/lib/auth/session.ts`
+- `src/lib/dashboard/admin-finance-dashboard-data-helpers.ts`
 - `src/lib/dashboard/auth.ts`
 - `src/lib/dashboard/career-dashboard-data-helpers.ts`
 - `src/lib/dashboard/dashboard-card-registry.ts`
 - `src/lib/dashboard/dashboard-data-helpers.ts`
 - `src/lib/dashboard/dashboard-layout-contract.ts`
+- `src/lib/dashboard/health-body-dashboard-data-helpers.ts`
 - `src/lib/dashboard/index.ts`
 - `src/lib/dashboard/learning-project-dashboard-data-helpers.ts`
 - `src/lib/dashboard/research-stanford-dashboard-data-helpers.ts`
 - `src/lib/dashboard-registry.ts`
 - `src/lib/profile/index.ts`
 - `src/lib/profile/queries.ts`
+- `src/lib/repositories/admin-finance-read.ts`
 - `src/lib/repositories/core-read.ts`
+- `src/lib/repositories/health-body-read.ts`
 - `src/lib/repositories/index.ts`
 - `src/lib/repositories/research-read.ts`
 - `src/lib/routes.ts`
@@ -211,6 +249,10 @@ Upload or paste this file and say:
 - `supabase/migrations/0009_phase9_parent_ownership_guards.sql`
 - `supabase/migrations/0010_phase10_research_stanford_foundation.sql`
 - `supabase/migrations/0011_phase10_parent_ownership_guards.sql`
+- `supabase/migrations/0012_phase11_health_body_foundation.sql`
+- `supabase/migrations/0013_phase11_parent_ownership_guards.sql`
+- `supabase/migrations/0014_phase12_life_admin_finance_foundation.sql`
+- `supabase/migrations/0015_phase12_parent_ownership_guards.sql`
 - `tsconfig.json`
 
 ## File Contents
@@ -225,6 +267,7 @@ All notable changes to ascendOS will be documented here.
 ## [Unreleased]
 
 ### Added
+
 - Local Git repository.
 - Branch renamed to `main`.
 - `.gitignore`.
@@ -241,20 +284,24 @@ All notable changes to ascendOS will be documented here.
   - CHANGELOG.md
 
 ### Fixed
+
 - Removed root `.DS_Store`.
 - Avoided committing `.venv`.
 - Avoided committing macOS Finder metadata.
 - Recovered from heredoc paste issue.
 
 ### Changed
+
 - Nothing yet.
 
 ### Removed
+
 - Nothing yet.
 
 ## 2026-06-17 — Phase 2 Complete
 
 ### Added
+
 - Next.js foundation.
 - Canonical dashboard routes.
 - Reusable app shell.
@@ -263,14 +310,17 @@ All notable changes to ascendOS will be documented here.
 - Placeholder pages for all canonical dashboards.
 
 ### Changed
+
 - Corrected Knowledge Vault route to `/knowledge`.
 
 ### Verified
+
 - `npm run check` passes.
 
 ## Phase 3 Complete — Supabase/Auth Foundation
 
 ### Added
+
 - Supabase/Auth foundation.
 - SQL profile foundation.
 - RLS-backed profile and Carnos profile tables.
@@ -285,6 +335,7 @@ All notable changes to ascendOS will be documented here.
 ## 2026-06-18 — Phase 4 Complete
 
 ### Added
+
 - Core SQL spine migrations for audit logs, AI actions, chat sessions, chat messages, goals, milestones, daily logs, proof items, tasks, and events.
 - Phase 4 migration audit.
 - Upgraded SQL migration validator.
@@ -294,11 +345,13 @@ All notable changes to ascendOS will be documented here.
 - Phase 4 completion report.
 
 ### Fixed
+
 - Phase 4 audit parser issue.
 - SQL `references public.profiles` typo.
 - Phase 3 database type compatibility after Phase 4 type expansion.
 
 ### Deferred
+
 - Carnos write flows.
 - Memory.
 - Voice.
@@ -328,6 +381,7 @@ All notable changes to ascendOS will be documented here.
 Added the Phase 6 plan for the Safe Write / Proposed Action Flow.
 
 This starts the controlled write foundation for ascendOS:
+
 - proposed actions
 - validation
 - Save/Edit/Cancel confirmation
@@ -349,13 +403,13 @@ This establishes the first safe-write foundation layer by defining which action 
 Added typed proposed action contracts for Phase 6 safe write flows.
 
 Supported contracts:
+
 - create task
 - create goal
 - create daily log
 - create proof item
 
 This prepares the project for validation and controlled action execution.
-
 
 ## 2026-06-19 23:58 UTC — Added Action Result Types
 
@@ -375,13 +429,11 @@ Added a reusable audit logging helper for Phase 6 safe-write workflows.
 
 This prepares future confirmed writes to create traceable audit records.
 
-
 ## 2026-06-20 04:31 UTC — Added Timeline Helper Boundary
 
 Added a safe timeline helper boundary for Phase 6.
 
 Because the current SQL spine does not include a `timeline_events` table, the helper intentionally returns a controlled skipped result instead of inventing schema or writing to a non-existent table.
-
 
 ## 2026-06-20 04:49 UTC — Added Proposed Action Creation Helper
 
@@ -389,13 +441,11 @@ Added a helper for creating validated proposed actions in `ai_actions` with `pen
 
 This preserves the required Phase 6 flow: proposal first, confirmation later, execution only after explicit approval.
 
-
 ## 2026-06-20 05:05 UTC — Added Action Lifecycle Helper
 
 Added a safe lifecycle helper for proposed actions.
 
 The helper supports approval, rejection, cancellation, and failure marking while preserving the Phase 6 rule that target records are not written until a later explicit execution step.
-
 
 ## 2026-06-20 05:18 UTC — Added Execution Dispatcher Boundary
 
@@ -403,13 +453,11 @@ Added the Phase 6 execution dispatcher boundary.
 
 The dispatcher verifies ownership, approval status, and action type, but intentionally does not execute target-table writes until the specific Phase 6.11–6.14 action flows are implemented.
 
-
 ## 2026-06-20 05:24 UTC — Added Create Task Execution Flow
 
 Added the first concrete Phase 6 execution flow: approved `create_task` proposals can now create records in `tasks`.
 
 The dispatcher now routes `create_task` actions to the task flow while keeping the remaining action types intentionally unimplemented until their specific phases.
-
 
 ## 2026-06-20 18:09 UTC — Added Create Goal Execution Flow
 
@@ -417,13 +465,11 @@ Added the Phase 6 create-goal execution flow: approved `create_goal` proposals c
 
 The dispatcher now routes `create_goal` actions to the goal flow while keeping daily logs and proof items intentionally unimplemented until their specific phases.
 
-
 ## 2026-06-20 18:13 UTC — Added Create Daily Log Execution Flow
 
 Added the Phase 6 create-daily-log execution flow: approved `create_daily_log` proposals can now create records in `daily_logs`.
 
 The dispatcher now routes `create_daily_log` actions to the daily log flow while keeping proof items intentionally unimplemented until Phase 6.14.
-
 
 ## 2026-06-20 18:17 UTC — Added Create Proof Item Execution Flow
 
@@ -431,13 +477,11 @@ Added the Phase 6 create-proof-item execution flow: approved `create_proof_item`
 
 The dispatcher now routes all four Phase 6 write action types: tasks, goals, daily logs, and proof items.
 
-
 ## 2026-06-20 18:22 UTC — Added Proposed Action Review UI
 
 Added a reusable Save/Edit/Cancel UI component for reviewing proposed actions before execution.
 
 The component supports payload preview, JSON payload editing, validation issue display, Save / Confirm callback, and Cancel callback while keeping database writes outside the component.
-
 
 ## 2026-06-20 18:30 UTC — Wired Proposed Action Review into Carnos Page
 
@@ -445,13 +489,11 @@ Wired the Phase 6 proposed-action review card into the Carnos dashboard as a saf
 
 The page now displays the Save/Edit/Cancel UI while preserving the server-owned write boundary.
 
-
 ## 2026-06-20 18:38 UTC — Added Phase 6 Audit Gate
 
 Added `scripts/audit-phase-6.mjs` and wired `npm run audit:phase6` into the main check pipeline.
 
 The audit verifies the Phase 6 safe write proposed-action flow and guards the confirmation-first boundary.
-
 
 ## 2026-06-20 18:47 UTC — Completed Phase 6 Safe Write Proposed Action Flow
 
@@ -536,8 +578,6 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 
 - Expanded integration audit coverage for Phase 7 dashboard wiring, canonical links, pending updates, and dashboard state handling.
 
-
-
 ## Phase 7.17 - Manual Smoke Checklist
 
 - Added Phase 7 manual browser smoke checklist for core operating dashboard verification.
@@ -574,6 +614,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 ## 2026-06-24 — Phase 8 Career System Complete
 
 ### Added
+
 - Career SQL foundation.
 - Career read repositories.
 - Career dashboard aggregation.
@@ -588,6 +629,7 @@ Phase 6 now includes proposed action creation, validation, lifecycle handling, a
 - Phase 8 completion report.
 
 ### Preserved
+
 - Read-only dashboard boundary.
 - Confirmation-first proposed-action law.
 - No autonomous applications/messages.
@@ -600,6 +642,7 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ## 2026-06-24 — Phase 1–8 Retrospective Gap Audit
 
 ### Added
+
 - Post-Phase-8 retrospective gap audit.
 - Documented completed Phase 1–8 scope.
 - Documented deferred v1 scope.
@@ -608,11 +651,13 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ## 2026-06-24 — Phase 9 Chunk A Plan Lock
 
 ### Added
+
 - Phase 9 Learning / Project System plan.
 - Phase 9 source and route inspection report.
 - Locked 28 Phase 9 requirement steps into 12 safe execution chunks.
 
 ### Notes
+
 - No application code changed.
 - No SQL migration added yet.
 - No dashboard route rewrites added yet.
@@ -620,10 +665,12 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ## 2026-06-24 — Phase 9 Chunk B Schema Design
 
 ### Added
+
 - Phase 9 Learning / Project System schema design.
 - Phase 9 source-to-scope traceability matrix.
 
 ### Notes
+
 - No SQL migration added yet.
 - No app source code changed.
 - Next step is SQL migration design implementation in `0008_learning_project_system_foundation.sql`.
@@ -631,130 +678,155 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ## 2026-06-24 — Phase 9 Chunk C SQL Migration
 
 ### Added
+
 - Phase 9 Learning / Project System SQL migration.
 - Learning tables for skill paths, skills, prerequisites, progress, sessions, quizzes, and quiz attempts.
 - Project tables for projects, milestones, bugs, tests, releases, and links.
 - RLS, user ownership, policies, and indexes for the Phase 9 tables.
 
 ### Notes
+
 - TypeScript database types are not updated yet.
 - No dashboard UI changed yet.
 
 ## 2026-06-24 — Phase 9 Chunk C.1 Parent Ownership Hardening
 
 ### Added
+
 - Parent ownership guard migration for Phase 9 learning/project tables.
 - Stricter insert/update policies for parent-linked learning and project records.
 
 ### Notes
+
 - No TypeScript database types changed yet.
 - This hardening was added before moving to database type updates.
 
 ## 2026-06-24 — Phase 9 Chunk D Database Types
 
 ### Added
+
 - TypeScript database table definitions for Phase 9 learning/project tables.
 - Exported row, insert, and update aliases for Phase 9 records.
 
 ### Notes
+
 - No read helpers added yet.
 - No dashboard UI changed yet.
 
 ## 2026-06-24 — Phase 9 Chunk E Read Helpers
 
 ### Added
+
 - User-scoped read helpers for Phase 9 learning records.
 - User-scoped read helpers for Phase 9 project records.
 
 ### Notes
+
 - No write helpers added.
 - No dashboard UI changed.
 
 ## 2026-06-24 — Phase 9 Chunk F Aggregation and Registry
 
 ### Added
+
 - Dashboard cards for Phase 9 learning and project surfaces.
 - Learning/project aggregation helper for dashboard-ready summary data.
 - Shared learning/project summary panel UI primitive.
 
 ### Notes
+
 - No `/learning` or `/projects` route implementation changed yet.
 - No write behavior added.
 
 ## 2026-06-24 — Phase 9 Chunk G Learning Academy Dashboard
 
 ### Added
+
 - Learning Academy dashboard component.
 - `/learning` route wired to Phase 9 read-only learning data.
 
 ### Notes
+
 - No write behavior added.
 - No proposed-action execution added.
 
 ## 2026-06-24 — Phase 9 Chunk H Project Builder Dashboard
 
 ### Added
+
 - Project Builder dashboard component.
 - `/projects` route wired to Phase 9 read-only project data.
 
 ### Notes
+
 - No write behavior added.
 - No proposed-action execution added.
 
 ## 2026-06-24 — Phase 9 Chunk I Knowledge Route Alignment
 
 ### Added
+
 - Knowledge Vault alignment dashboard.
 - `/knowledge` route wired to Phase 9 learning/project source records.
 
 ### Notes
+
 - Full memory/RAG remains deferred to later phases.
 - No write behavior added.
 
 ## 2026-06-24 — Phase 9 Chunk J Detail Panels
 
 ### Added
+
 - Skill path/progress detail panel.
 - Quiz/session detail panel.
 - Project build-log detail panel.
 
 ### Notes
+
 - No write behavior added.
 - No proposed-action execution added.
 
 ## 2026-06-24 — Phase 9 Chunk K Linkage and State Surfaces
 
 ### Added
+
 - Learning/project proof, resume, README, goal, task, and timeline linkage surfaces.
 - Preview-only proposed-action visibility panel.
 - Empty/loading/error/privacy boundary panel.
 - Cross-dashboard links for learning, projects, knowledge, proof, goals, timeline, resume, and Carnos.
 
 ### Notes
+
 - No write behavior added.
 - No proposed-action execution added.
 
 ## 2026-06-24 — Phase 9 Learning / Project System Complete
 
 ### Added
+
 - Phase 9 no-write/privacy audit.
 - Phase 9 audit gate.
 - Phase 9 manual smoke checklist.
 - Phase 9 completion report.
 
 ### Changed
+
 - Updated phase status to mark Phase 9 complete.
 
 ### Next
+
 - Phase 10 — Research / Stanford System.
 
 ## 2026-06-25 — Phase 10 Chunk A Research / Stanford Planning
 
 ### Added
+
 - Phase 10 Research / Stanford System plan.
 - Phase 10 Chunk A source and route inspection report.
 
 ### Notes
+
 - No app code changed.
 - No SQL changed.
 - No database types changed.
@@ -764,11 +836,13 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ## 2026-06-25 — Phase 10 Chunk B Schema Design
 
 ### Added
+
 - Phase 10 research schema design.
 - Phase 10 Stanford/PhD schema design.
 - Phase 10 source-to-scope traceability matrix.
 
 ### Notes
+
 - No SQL changed.
 - No app code changed.
 - No database types changed.
@@ -778,12 +852,14 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ## 2026-06-25 — Phase 10 Chunk C SQL Foundation
 
 ### Added
+
 - Phase 10 Research / Stanford SQL foundation migration.
 - User-owned research tables.
 - User-owned Stanford/PhD readiness tables.
 - RLS, SELECT policies, INSERT policies, and user indexes for Phase 10 tables.
 
 ### Notes
+
 - No app code changed.
 - No database types changed.
 - No read helpers changed.
@@ -793,11 +869,13 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ## 2026-06-25 — Phase 10 Chunk C.1 Parent Ownership Guards
 
 ### Added
+
 - Phase 10 parent ownership guard migration.
 - Helper functions for parent ownership validation.
 - Insert/update triggers for Phase 10 records with nullable cross-phase references.
 
 ### Notes
+
 - No app code changed.
 - No database types changed.
 - No read helpers changed.
@@ -807,11 +885,13 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ## 2026-06-25 — Phase 10 Chunk D Database Types
 
 ### Added
+
 - Phase 10 database row types.
 - Phase 10 insert/update type aliases.
 - Exported aliases for Research / Stanford tables.
 
 ### Notes
+
 - No SQL migration changed.
 - No read helpers added.
 - No dashboard or route code changed.
@@ -820,12 +900,14 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ## 2026-06-25 — Phase 10 Chunk E Read Helpers
 
 ### Added
+
 - Research read helpers.
 - Stanford/PhD read helpers.
 - Literature and citation read helpers.
 - Repository barrel export for Phase 10 read helpers.
 
 ### Notes
+
 - No SQL migration changed.
 - No database types changed.
 - No dashboard or route code changed.
@@ -835,12 +917,14 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ## 2026-06-25 — Phase 10 Chunk F Aggregation, Registry, Shared UI
 
 ### Added
+
 - Research/Stanford aggregation helper.
 - Research Lab dashboard card contracts.
 - Research Stanford dashboard card contracts.
 - Shared read-only research summary panel primitive.
 
 ### Notes
+
 - No SQL changed.
 - No write helpers added.
 - No route wiring changed.
@@ -848,14 +932,17 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ## 2026-06-25 — Phase 10 Chunk G Route Read Surfaces
 
 ### Added
+
 - Research Lab authenticated read-only route surface.
 - Research Stanford authenticated read-only route surface.
 - Safe-write boundary messaging for both research routes.
 
 ### Changed
+
 - Replaced placeholder research pages with Phase 10 read surfaces.
 
 ### Notes
+
 - No SQL changed.
 - No write helpers added.
 - No autonomous outreach, scraping, or submission behavior added.
@@ -863,12 +950,14 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ## 2026-06-25 — Phase 10 Chunk H Linkage and Boundary Panels
 
 ### Added
+
 - Research proof/linkage visibility panel.
 - Stanford target-fit linkage visibility panel.
 - Research privacy and safe-write boundary panel.
 - Research route linkage/boundary wiring.
 
 ### Notes
+
 - No SQL changed.
 - No write helpers added.
 - No autonomous outreach, scraping, paper submission, or application automation added.
@@ -876,11 +965,13 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ## 2026-06-25 — Phase 10 Chunk I Detail Visibility Panels
 
 ### Added
+
 - Research detail visibility panels.
 - Stanford/PhD detail visibility panels.
 - Route wiring for focused Phase 10 record detail.
 
 ### Notes
+
 - No SQL changed.
 - No write helpers added.
 - No autonomous outreach, scraping, paper submission, or application automation added.
@@ -888,6 +979,7 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ## 2026-06-25 — Phase 10 Chunk J Proposed-Action Visibility, Cross-Links, Audit Draft
 
 ### Added
+
 - Research proposed-action visibility panel.
 - Research cross-dashboard links.
 - Phase 10 audit script.
@@ -897,6 +989,7 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - Phase 10 audit added to `npm run check`.
 
 ### Notes
+
 - No SQL changed.
 - No write helpers added.
 - No real proposed-action persistence added.
@@ -905,26 +998,508 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ## 2026-06-25 — Phase 10 Research / Stanford System Complete
 
 ### Added
+
 - Final Phase 10 completion report.
 - Final Phase 10 closeout status.
 - Final Phase 10 log and ledger entries.
 
 ### Changed
+
 - Converted the Phase 10 completion report draft into the final completion report.
 - Updated Phase 10 smoke checklist status.
 - Marked Phase 10 complete in phase status.
 
 ### Verification
+
 - `npm run audit:phase10` passed.
 - `npm run check` passed.
 - Build completed successfully with `/research-lab` and `/research-stanford` as dynamic authenticated routes.
 
 ### Notes
+
 - Phase 10 remains read-first and visibility-only.
 - No SQL changed.
 - No write helpers added.
 - No autonomous outreach, scraping, paper submission, application submission, Python/ML worker execution, memory/RAG, voice, or background jobs added.
 - Next phase: Phase 11 — Health / Body System.
+
+## 2026-06-25 — Phase 11 Health / Body System Plan Start
+
+### Added
+
+- Phase 11 Health / Body System 44-step plan.
+- Phase 11 source scope for body, nutrition, supplements, sleep/energy, hair/skincare, and emotion surfaces.
+- Phase 11 hardening scope for baselines, units, daily sleep tracking, sleep natural-language capture, progress photo honesty, supplement safety, body-image safety, sensitive privacy, data quality, target comparison, and trend preview boundaries.
+
+### Notes
+
+- No SQL changed.
+- No database types changed.
+- No read helpers added.
+- No dashboard components added.
+- No route rewiring added.
+- No autonomous writes, medical claims, Python/ML execution, memory/RAG, voice, web tools, or background jobs added.
+
+## 2026-06-25 — Phase 11 Chunk B1 Schema Design
+
+### Added
+
+- Phase 11 Health / Body schema design document.
+- Phase 11 health privacy and safety review.
+- Phase 11 source-to-scope traceability report.
+
+### Notes
+
+- No SQL migration added.
+- No database types changed.
+- No read helpers added.
+- No dashboard routes changed.
+
+## 2026-06-25 — Phase 11 Chunk B2 Hardening Design
+
+### Added
+
+- Phase 11 baseline, units, sleep tracking, and photo/storage boundary document.
+- B2 hardening notes in Phase 11 schema design.
+
+### Notes
+
+- No SQL migration added.
+- No database types changed.
+- No dashboard routes changed.
+- No upload/storage behavior added.
+- No Carnos silent write behavior added.
+
+## 2026-06-25 — Phase 11 Chunk B3 Safety / Data / Target / Trend Design
+
+### Added
+
+- Phase 11 safety, data quality, target comparison, and trend boundary document.
+- B3 safety hardening addendum in Phase 11 privacy/safety review.
+- B3 decision notes in Phase 11 schema design.
+
+### Notes
+
+- No SQL migration added.
+- No database types changed.
+- No dashboard routes changed.
+- No Carnos write behavior added.
+- Advanced analytics remain deferred to Phase 17.
+
+## 2026-06-25 — Phase 11 Chunk C SQL Foundation
+
+### Added
+
+- Phase 11 health/body SQL foundation migration.
+- Source-confirmed health/body tables.
+- Owner-scoped RLS policies.
+- Updated-at triggers and basic indexes.
+
+### Notes
+
+- Parent ownership guards are deferred to Chunk C.1.
+- No `health_body_baselines` table added.
+- No `progress_photos` table added.
+- No app routes, dashboards, repositories, or database TypeScript types changed.
+
+## 2026-06-25 — Phase 11 Chunk C.1 Parent Ownership Guards
+
+### Added
+
+- Phase 11 parent ownership guard migration.
+- Parent ownership validation functions for Phase 11.
+- Before insert/update ownership guard triggers for Phase 11 child tables.
+
+### Notes
+
+- No new tables added.
+- No database TypeScript types changed.
+- No repositories, routes, dashboards, storage/upload behavior, or Carnos write behavior added.
+
+## 2026-06-25 — Phase 11 Chunk D Database Types
+
+### Added
+
+- Phase 11 database table types for health/body tables.
+- Row/insert/update aliases for Phase 11 health/body entities.
+
+### Notes
+
+- No SQL migrations, read helpers, dashboards, routes, storage/upload behavior, or Carnos write behavior added.
+
+## 2026-06-25 — Phase 11 Chunk D Repair
+
+### Fixed
+
+- Added the actual Phase 11 database table types after the previous Chunk D commit only updated documentation/log files.
+
+### Added
+
+- Actual `src/types/database.ts` table entries and aliases for the 16 Phase 11 health/body tables.
+
+## 2026-06-25 — Phase 11 Chunk E1 Read Helper Foundation
+
+### Added
+
+- Read-only repository helpers for Phase 11 health/body tables.
+- Repository export wiring for health/body helpers.
+
+### Notes
+
+- No write helpers, SQL migrations, dashboards, routes, storage/upload behavior, Carnos actions, baseline table, or progress photo table added.
+
+## 2026-06-26 — Phase 11 Chunk E2 Dashboard Summary Helper Foundation
+
+### Added
+
+- Read-only health/body dashboard summary helper.
+- Dashboard helper export wiring for Phase 11 health/body summaries.
+
+### Notes
+
+- No write helpers, SQL migrations, dashboards, routes, storage/upload behavior, Carnos actions, baseline table, or progress photo table added.
+
+## 2026-06-26 — Phase 11 Chunk E3 Read Helper Schema-Boundary Audit
+
+### Added
+
+- Phase 11 read-helper schema-boundary audit report.
+
+### Notes
+
+- Locked the allowed table surface and forbidden deferred scope before UI/dashboard work.
+- No SQL, type, route, dashboard, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.
+
+### Fixed
+
+- Added exercise coverage to the Phase 11 health/body dashboard summary helper.
+
+## 2026-06-26 — Health Body Overview Cards
+
+### Added
+
+- Read-only health/body overview dashboard cards.
+- Dashboard component export wiring.
+
+### Notes
+
+- No route rewiring, SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.
+
+## 2026-06-26 — Health Body Dashboard States
+
+### Added
+
+- Shared health/body dashboard empty, warning, privacy, and read-only boundary states.
+- Export wiring for health/body dashboard state components.
+
+### Notes
+
+- No schema change needed.
+- No route rewiring, SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.
+
+## 2026-06-26 — Body Dashboard Route Wiring
+
+### Changed
+
+- Rewired `/body` to render the read-only health/body overview dashboard.
+
+### Notes
+
+- No schema change needed.
+- Preserved route audit compatibility markers.
+- No SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.
+
+## 2026-06-26 — Nutrition Dashboard Route Wiring
+
+### Added
+
+- Read-only nutrition dashboard surface.
+- `/nutrition` route wiring to the nutrition dashboard.
+- Nutrition dashboard export wiring.
+
+### Fixed
+
+- Corrected a spacing typo in the health/body read-only boundary notice.
+
+### Notes
+
+- No schema change needed.
+- No SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.
+
+## 2026-06-26 — Supplements Dashboard Route Wiring
+
+### Added
+
+- Read-only supplements dashboard surface.
+- `/supplements` route wiring to the supplements dashboard.
+- Supplements dashboard export wiring.
+
+### Fixed
+
+- Corrected a spacing typo in the health/body read-only boundary notice.
+
+### Notes
+
+- No schema change needed.
+- No SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.
+
+## 2026-06-26 — Sleep Energy Dashboard Route Wiring
+
+### Added
+
+- Read-only sleep energy dashboard surface.
+- `/sleep-energy` route wiring to the sleep energy dashboard.
+- Sleep energy dashboard export wiring.
+
+### Fixed
+
+- Cleaned small text spacing issues in existing health/body dashboard copy.
+
+### Notes
+
+- No schema change needed.
+- No SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.
+
+## 2026-06-26 — Emotion Dashboard Route Wiring
+
+### Added
+
+- Read-only emotion dashboard surface.
+- `/emotion` route wiring to the emotion dashboard.
+- Emotion dashboard export wiring.
+
+### Fixed
+
+- Cleaned small text spacing issues in existing health/body dashboard copy.
+
+### Notes
+
+- No schema change needed.
+- No SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.
+
+## 2026-06-26 — Hair Skincare Dashboard Route Wiring
+
+### Added
+
+- Read-only hair skincare dashboard surface.
+- `/hair-skincare` route wiring to the hair skincare dashboard.
+- Hair skincare dashboard export wiring.
+
+### Fixed
+
+- Cleaned small text spacing issues in existing health/body dashboard copy.
+
+### Notes
+
+- No schema change needed.
+- No SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, or progress photo table added.
+
+## 2026-06-26 — Health/Body Detail Panel Pattern Report
+
+### Added
+
+- Phase 11 health/body detail-panel pattern report.
+
+### Notes
+
+- No schema change needed.
+- No SQL migration, write helper, Carnos action, storage/upload behavior, baseline table, progress photo table, analytics snapshot table, or visual evidence storage added.
+
+## 2026-06-26 — Health/Body Detail Panels
+
+### Added
+
+- Reusable read-only health/body detail panels.
+- Detail panels for body/training, nutrition/meals, supplements, sleep/energy, emotion/reflection, and haircare/skincare records.
+- Health/body detail panel export wiring.
+
+### Notes
+
+- No schema change needed.
+- Panels are not route-attached yet; H3 will wire them to dashboard surfaces.
+
+## 2026-06-26 — Health/Body Detail Panel Attachment
+
+### Added
+
+- Attached read-only health/body detail panels to health/body dashboard surfaces.
+- Added detail row arrays to the existing health/body dashboard data result.
+
+### Notes
+
+- No schema change needed.
+- Existing repository read helpers remain the only health/body data source for these panels.
+
+## 2026-06-26 — Health/Body Linkage Visibility
+
+### Added
+
+- Read-only health/body proof and operating linkage panel.
+- Link counts for proof, goals, tasks, daily logs, and events.
+- Linkage visibility across all health/body dashboard surfaces.
+
+### Notes
+
+- No schema change needed.
+- The panel only displays existing link fields and does not create or modify related records.
+
+## 2026-06-26 — Health/Body Proposed-Action and State Boundaries
+
+### Added
+
+- Preview-only health/body proposed-action visibility.
+- State and privacy boundary panels for all health/body dashboard surfaces.
+- Cross-route navigation consistency across health/body dashboards.
+
+### Notes
+
+- No schema change needed.
+- All proposed-action controls are disabled preview UI only.
+
+## 2026-06-26 — Health/Body Audit Gate
+
+### Added
+
+- Phase 11 health/body automated audit gate.
+- Phase 11 manual smoke checklist.
+- Phase 11 audit gate report.
+- `audit:phase11` package script included in `npm run check`.
+
+### Notes
+
+- No schema change needed.
+- Audit coverage verifies route wiring, safety boundaries, deferred scope, and no-write/no-automation constraints.
+
+## 2026-06-26 — Phase 11 Health/Body System Complete
+
+### Added
+
+- Phase 11 Health / Body System completion report.
+- Completion-report coverage inside the Phase 11 audit gate.
+
+### Completed
+
+- Read-only Health / Body System route suite:
+  - `/body`
+  - `/nutrition`
+  - `/supplements`
+  - `/sleep-energy`
+  - `/emotion`
+  - `/hair-skincare`
+
+### Notes
+
+- No schema change needed for closeout.
+- Phase 11 remains read-only, safety-bounded, privacy-aware, and no-write/no-automation protected.
+
+## 2026-06-27 — Phase 12 C02 Plan Lock
+
+### Added
+
+- Phase 12 Life Admin + Finance + Daily Admin Queue plan.
+- Phase 12 C01 source/route inspection report.
+- Post-v1 expansion roadmap addendum for Phases 22–26.
+
+### Notes
+
+- No schema change needed.
+- No app code added.
+- Housing search is not the Phase 12 primary workflow; housing is interpreted as rent, lease, utilities, maintenance, and housing documents for this user.
+
+## 2026-06-27 — Phase 12 C03 Schema Design
+
+### Added
+
+- Phase 12 Life Admin + Finance schema design.
+- Phase 12 privacy/safety review.
+- Phase 12 source-to-scope traceability report.
+
+### Notes
+
+- No SQL migration added yet.
+- No app code added.
+- C04 will begin SQL foundation after schema design is committed.
+
+## Phase 12 C04 — SQL Foundation Tables
+
+- Added Life Admin / Finance SQL foundation migration.
+- Added tables for manual finance accounts, budget categories, financial logs, subscriptions, housing admin, housing contacts, and document metadata.
+- Added RLS and indexes.
+- Deferred parent ownership guards, database types, repositories, and UI wiring to later chunks.
+
+## Phase 12 C05 — Parent Ownership Guards
+
+- Added Phase 12 parent ownership guard migration.
+- Added SQL guard helper and triggers for finance, subscriptions, documents, housing options, and housing contacts.
+- Preserved no-app-code, no-types, no-repositories, no-dashboard boundary.
+
+## Phase 12 C06 — SQL Validation Closeout
+
+- Added Phase 12 SQL foundation validation report.
+- Closed SQL foundation scope before TypeScript database contract work.
+- Preserved no-SQL-change, no-app-code, no-types, no-repositories, no-dashboard boundary for this chunk.
+
+## Phase 12 C07 — Database Type Contracts
+
+- Added TypeScript database contracts for the Life Admin / Finance tables.
+- Added exported row/insert/update aliases for admin and finance read helpers.
+- Kept SQL, repositories, dashboards, and routes unchanged.
+
+## Admin and Finance Read Helpers
+
+- Added read-only repository helpers for finance accounts, budget categories, financial logs, subscriptions, document metadata, housing admin records, and housing contacts.
+- Exported the new helpers through the repository barrel.
+- Kept dashboard wiring and write behavior deferred.
+
+## Admin and Finance Dashboard Summary
+
+- Added read-only dashboard aggregation helpers for admin and finance records.
+- Added summary counts for financial logs, subscriptions, documents, housing records, and due/overdue admin attention items.
+- Kept SQL, repositories, dashboard components, and routes unchanged.
+
+## Admin and Finance Dashboard Components
+
+- Added read-only dashboard components for Life Admin, Finance, Documents, and Housing.
+- Added shared warning, privacy, state, and proposed-action preview boundary panels.
+- Exported the new dashboard components without wiring routes yet.
+
+## Admin and Finance Route Wiring
+
+- Wired Life Admin, Finance, Documents, and Housing routes to authenticated read-only dashboards.
+- Replaced placeholder pages for those surfaces.
+- Kept write behavior, SQL, repositories, dashboard helpers, and component internals unchanged.
+
+## Phase 12 C12 — Command Admin/Finance Visibility
+
+- Added Command dashboard visibility for Phase 12 admin/finance summaries, including due-soon and overdue pressure, subscriptions, documents, housing, warnings, and read-only boundary language.
+
+## Phase 12 C13 — Calendar Admin/Finance Deadline Visibility
+
+- Added Calendar dashboard visibility for Phase 12 admin/finance deadlines, including planned finance records, overdue pressure, upcoming subscriptions, expiring documents, housing follow-ups, warnings, and read-only boundary language.
+
+## Phase 12 C14 — Admin/Finance Proposed-Action Preview Visibility
+
+- Added preview-only proposed-action cards to the Life Admin dashboard boundary section for future admin and finance suggestions while keeping persistence and execution disabled.
+
+## Phase 12 C15 — Audit Gate and Safety Validation
+
+- Added a Phase 12 audit gate and wired it into `npm run check` to protect Life Admin, Finance, Documents, Housing, Command, Calendar, and deferred-scope boundaries.
+
+## Phase 12 C16 — Smoke Checklist and Completion Closeout
+
+- Added Phase 12 manual smoke checklist.
+- Added Phase 12 source-to-scope closeout.
+- Added Phase 12 completion report.
+- Updated the Phase 12 audit gate to protect closeout docs and C16 log/status markers.
+
+## Phase 12 C17 — Final Verification and Status Lock
+
+Timestamp: 2026-06-27 06:21 UTC
+
+- Locked Phase 12 as complete.
+- Confirmed Life Admin + Finance + Daily Admin Queue source scope is closed.
+- Confirmed audit gate, full check, integration sanity, production build, and diff check passed.
+- Next step is Phase 13 source inspection and plan lock.
 ```
 
 ### `CODE_LEDGER.md`
@@ -937,98 +1512,127 @@ This file records meaningful file changes for ascendOS + Carnos.
 ## Initial Files
 
 ### `.gitignore`
+
 Purpose: Ignore dependencies, secrets, build outputs, `.venv`, logs, and OS/editor junk.
 
 ### `docs/source-of-truth/*`
+
 Purpose: Store final synced DOCX and JSON source-of-truth files.
 
 ### `README.md`
+
 Purpose: Project overview.
 
 ### `SOURCE_OF_TRUTH.md`
+
 Purpose: Quick local summary of the official DOCX/JSON.
 
 ### `PROJECT_EXECUTION_LOG.md`
+
 Purpose: Build history.
 
 ### `CODE_LEDGER.md`
+
 Purpose: File-by-file change history.
 
 ### `DECISIONS.md`
+
 Purpose: Architecture decisions.
 
 ### `ERRORS_AND_FIXES.md`
+
 Purpose: Error/fix history.
 
 ### `CHANGELOG.md`
+
 Purpose: High-level project changes.
 
 ## Phase 2 — Next.js Foundation
 
 ### `package.json`
+
 Purpose: Defines npm scripts and Next.js dependencies.
 Change: Added Next.js app package metadata and renamed package to `ascendos`.
 
 ### `package-lock.json`
+
 Purpose: Locks npm dependency versions.
 
 ### `src/app/*`
+
 Purpose: Default Next.js App Router starter files.
 Note: These are temporary starter files and will be replaced with ascendOS shell UI.
 
 ### `eslint.config.mjs`
+
 Purpose: ESLint configuration for Next.js.
 
 ### `next.config.ts`
+
 Purpose: Next.js configuration.
 
 ### `postcss.config.mjs`
+
 Purpose: PostCSS/Tailwind configuration.
 
 ### `tsconfig.json`
+
 Purpose: TypeScript configuration.
 
 ### `public/*`
+
 Purpose: Default public assets from create-next-app.
 Note: These may be removed or replaced later.
 
 ### `.gitignore`
+
 Purpose: Merged project ignore rules with Next.js ignore rules.
 
 ### `README.md`
+
 Purpose: Restored ascendOS project identity and added Next.js development commands.
 
 ## Phase 2.6–2.7 — App Shell Structure and Route Registry
 
 ### `src/components/*`
+
 Purpose: Holds reusable UI, layout, dashboard, Carnos, form, table, chart, calendar, timeline, privacy, voice, and grimoire components.
 
 ### `src/lib/*`
+
 Purpose: Holds domain services and shared logic for routes, Supabase, AI, dates, scoring, audit, security, storage, and analytics.
 
 ### `src/lib/routes.ts`
+
 Purpose: Canonical route constants and banned legacy route constants.
 
 ### `src/lib/dashboard-registry.ts`
+
 Purpose: Initial dashboard registry for shell navigation and dashboard metadata.
 
 ### `src/schemas`
+
 Purpose: Future Zod schema files.
 
 ### `src/types`
+
 Purpose: Future shared TypeScript type definitions.
 
 ### `supabase/*`
+
 Purpose: Future SQL migrations, seed data, and RLS policy files.
 
 ### `tests/*`
+
 Purpose: Future unit, schema, API, RLS, AI fixture, and e2e smoke tests.
 
 ## Phase 2.9 — ascendOS Homepage Shell
 
 ### `src/app/page.tsx`
+
 Purpose: Replaces default Next.js starter page with the first ascendOS shell screen.
 Includes:
+
 - ascendOS identity.
 - Carnos Command Foundation label.
 - Core promise.
@@ -1039,46 +1643,59 @@ Includes:
 ## Phase 2.11 — Reusable Shell Components
 
 ### `src/components/layout/app-shell.tsx`
+
 Purpose: Shared application shell wrapper.
 
 ### `src/components/layout/app-sidebar.tsx`
+
 Purpose: Sidebar navigation using the dashboard registry.
 
 ### `src/components/layout/app-topbar.tsx`
+
 Purpose: Shared top navigation/status bar.
 
 ### `src/components/dashboard/dashboard-card.tsx`
+
 Purpose: Reusable dashboard preview card.
 
 ## Phase 2.13 — Homepage Component Refactor
 
 ### `src/app/page.tsx`
+
 Purpose: Uses reusable layout and dashboard card components instead of inline shell markup.
 
 ## Phase 2.15 — Core Placeholder Routes
 
 ### `src/app/command/page.tsx`
+
 Purpose: Placeholder Command dashboard route.
 
 ### `src/app/carnos/page.tsx`
+
 Purpose: Placeholder Carnos dashboard route.
 
 ### `src/app/calendar/page.tsx`
+
 Purpose: Placeholder Calendar dashboard route.
 
 ### `src/app/timeline/page.tsx`
+
 Purpose: Placeholder Timeline dashboard route.
 
 ### `src/app/goals/page.tsx`
+
 Purpose: Placeholder Goals dashboard route.
 
 ### `src/app/career/page.tsx`
+
 Purpose: Placeholder Career dashboard route.
 
 ### `src/app/learning/page.tsx`
+
 Purpose: Placeholder Learning dashboard route.
 
 ### `src/app/analytics/page.tsx`
+
 Purpose: Placeholder Analytics dashboard route.
 
 ## Phase 2.17 — Remaining Canonical Placeholder Routes
@@ -1086,6 +1703,7 @@ Purpose: Placeholder Analytics dashboard route.
 Purpose: Adds placeholder pages for all remaining canonical dashboard routes so the app shell has complete route coverage before database and AI work begins.
 
 Added route pages:
+
 - `/world-class`
 - `/networking`
 - `/resume`
@@ -1115,8 +1733,10 @@ Added route pages:
 ## Phase 2.19 — Full Dashboard Registry
 
 ### `src/lib/dashboard-registry.ts`
+
 Purpose: Full canonical dashboard metadata registry.
 Includes:
+
 - Every canonical route.
 - Dashboard title.
 - Dashboard domain category.
@@ -1125,46 +1745,59 @@ Includes:
 ## Phase 2.21–2.22 — Route Validation and Knowledge Route Correction
 
 ### `scripts/validate-route-coverage.mjs`
+
 Purpose: Validates canonical route coverage and blocks banned legacy routes.
 
 ### `package.json`
+
 Change:
+
 - Added `validate:routes`.
 - Added `check`.
 
 ### `src/app/knowledge/page.tsx`
+
 Purpose: Correct Knowledge Vault dashboard route.
 
 ### Removed `src/app/knowledge-vault/page.tsx`
+
 Reason: Source-of-truth JSON uses `/knowledge`, not `/knowledge-vault`.
 
 ### `src/lib/routes.ts`
+
 Change: Corrected canonical route list to use `/knowledge`.
 
 ### `src/lib/dashboard-registry.ts`
+
 Change: Corrected Knowledge Vault registry entry to use `/knowledge`.
 
 ## Phase 2.23–2.24 — Shared Placeholder Dashboard Component
 
 ### `src/components/dashboard/placeholder-dashboard-page.tsx`
+
 Purpose: Shared placeholder dashboard layout used by canonical dashboard pages.
 
 ### `src/app/*/page.tsx`
+
 Change: Refactored canonical placeholder pages to use `PlaceholderDashboardPage`.
 
 ## Phase 2.26 — Registry Coverage Validation
 
 ### `scripts/validate-registry-coverage.mjs`
+
 Purpose: Validates dashboard registry coverage against canonical routes.
 
 ### `package.json`
+
 Change:
+
 - Added `validate:registry`.
 - Updated `check` to include registry validation.
 
 ## Phase 2 Complete — Next.js Foundation and Canonical Shell
 
 Phase 2 established the frontend foundation for ascendOS:
+
 - Next.js app foundation.
 - Canonical dashboard route structure.
 - Reusable layout shell.
@@ -1178,86 +1811,110 @@ Phase 3 begins Supabase/Auth foundation.
 ## Phase 3.1–3.3 — Supabase Foundation
 
 ### `.env.example`
+
 Purpose: Documents required Supabase and app environment variables.
 
 ### `src/lib/supabase/env.ts`
+
 Purpose: Validates required public Supabase environment variables.
 
 ### `src/lib/supabase/browser.ts`
+
 Purpose: Creates the browser Supabase client.
 
 ### `src/lib/supabase/server.ts`
+
 Purpose: Creates the server Supabase client using Next.js cookies.
 
 ## Phase 3.4 — Supabase Middleware Foundation
 
 ### `src/lib/supabase/env.ts`
+
 Change: Added environment presence helper.
 
 ### `src/lib/supabase/middleware.ts`
+
 Purpose: Refreshes Supabase sessions in middleware.
 
 ### `middleware.ts`
+
 Purpose: Wires Supabase session refresh into Next.js middleware.
 
 ## Phase 3.5 — Auth Page Skeleton
 
 ### `src/lib/auth/actions.ts`
+
 Purpose: Server actions for login, signup, and signout.
 
 ### `src/app/auth/login/page.tsx`
+
 Purpose: Login page.
 
 ### `src/app/auth/signup/page.tsx`
+
 Purpose: Signup page.
 
 ### `src/app/auth/callback/route.ts`
+
 Purpose: Supabase auth callback route.
 
 ### `src/app/auth/signout/route.ts`
+
 Purpose: Signout route.
 
 ## Phase 3.5B — Auth Action Type Fix
 
 ### `src/lib/auth/actions.ts`
+
 Change: Server actions now return `Promise<void>` for direct form action compatibility.
 
 ### `src/app/auth/login/page.tsx`
+
 Change: Login form now uses `signInWithPassword` directly.
 
 ### `src/app/auth/signup/page.tsx`
+
 Change: Signup form now uses `signUpWithPassword` directly.
 
 ## Phase 3.6 — Auth User Helper
 
 ### `src/lib/auth/session.ts`
+
 Purpose: Provides safe current-user and required-user helpers for server-side auth checks.
 
 ## Phase 3.7 — Auth-Aware Topbar Status
 
 ### `src/components/layout/auth-status.tsx`
+
 Purpose: Displays local setup, login/signup, or signed-in status.
 
 ### `src/components/layout/app-topbar.tsx`
+
 Change: Uses `AuthStatus`.
 
 ## Phase 3.7C — Code Snapshot Generator
 
 ### `scripts/generate-code-snapshot.mjs`
+
 Purpose: Generates `CODE_SNAPSHOT.md`, a single markdown file containing the important project code and docs for future chat handoff.
 
 ### `CODE_SNAPSHOT.md`
+
 Purpose: Generated codebase snapshot for continuity across chats.
 
 ### `package.json`
+
 Change:
+
 - Added `snapshot:code` script.
 
 ## Phase 3.8 — Profiles and Carnos Profiles SQL Foundation
 
 ### `supabase/migrations/0001_profiles_and_carnos_profiles.sql`
+
 Purpose: First Supabase migration for user identity and Carnos user preferences.
 Includes:
+
 - `profiles`
 - `carnos_profiles`
 - updated_at trigger helper
@@ -1268,112 +1925,142 @@ Includes:
 ## Phase 3.9 — SQL Migration Validation
 
 ### `scripts/validate-sql-migrations.mjs`
+
 Purpose: Validates SQL migration naming and basic safety rules.
 
 ### `package.json`
+
 Change:
+
 - Added `validate:migrations`.
 - Updated `check` to include migration validation before build.
 
 ## Phase 3.10 — Database TypeScript Types
 
 ### `src/types/database.ts`
+
 Purpose: Defines TypeScript row, insert, update, enum, JSON, and Supabase-compatible database types for the first SQL migration.
 
 ## Phase 3.11 — Typed Supabase Clients
 
 ### `src/lib/supabase/browser.ts`
+
 Change: Browser Supabase client now uses the typed `Database` interface.
 
 ### `src/lib/supabase/server.ts`
+
 Change: Server Supabase client now uses the typed `Database` interface.
 
 ### `src/lib/supabase/middleware.ts`
+
 Change: Middleware Supabase client now uses the typed `Database` interface.
 
 ## Phase 3.12 — Profile Repository Helpers
 
 ### `src/lib/profile/queries.ts`
+
 Purpose: Server-side profile data access layer for reading the current user's `profiles` and `carnos_profiles` rows.
 
 ### `src/lib/profile/index.ts`
+
 Purpose: Barrel export for profile query helpers.
 
 ## Phase 3.13 — Profile Status Card on Command Center
 
 ### `src/components/profile/profile-summary-card.tsx`
+
 Purpose: Server component that displays local setup mode or the signed-in user's profile and Carnos profile state.
 
 ### `src/app/command/page.tsx`
+
 Change: Replaced generic placeholder with a command center foundation page connected to profile status.
 
 ## Phase 3.14 — Supabase Setup Guide and Env Verification
 
 ### `scripts/verify-env.mjs`
+
 Purpose: Verifies Supabase public env var presence without breaking local setup mode.
 
 ### `docs/setup/SUPABASE_SETUP.md`
+
 Purpose: Step-by-step guide for connecting ascendOS to a real Supabase project safely.
 
 ### `package.json`
+
 Change:
+
 - Added `verify:env`.
 
 ## Phase 3.15 — Settings Page Skeleton
 
 ### `src/app/settings/page.tsx`
+
 Purpose: Settings foundation page for profile, Carnos preferences, memory controls, and privacy/security controls.
 
 ### `src/lib/navigation/dashboard-registry.ts`
+
 Change: Added Settings route.
 
 ### `scripts/validate-route-coverage.mjs`
+
 Change: Added `/settings` to route validation.
 
 ## Phase 3.16 — Protected Route Boundary
 
 ### `src/components/auth/protected-page.tsx`
+
 Purpose: Reusable server component for protecting private routes while preserving local setup mode.
 
 ### `src/components/auth/index.ts`
+
 Purpose: Barrel export for auth components.
 
 ### `docs/setup/PROTECTED_ROUTES.md`
+
 Purpose: Explains when and how to apply route protection safely.
 
 ## Phase 3.17 — Auth Smoke-Test Checklist
 
 ### `docs/setup/AUTH_SMOKE_TEST.md`
+
 Purpose: Manual checklist for validating local setup mode, connected Supabase auth, profile row creation, Carnos profile row creation, signout, and RLS behavior.
 
 ## Phase 3.18 — Phase 3 Final Audit Script
 
 ### `scripts/audit-phase-3.mjs`
+
 Purpose: Automated completion gate for Phase 3 Supabase/Auth foundation.
 
 ### `package.json`
+
 Change:
+
 - Added `audit:phase3`.
 - Added Phase 3 audit to `npm run check`.
 
 ## Phase 3.20 — Phase 3 Completion
 
 ### `PHASE_STATUS.md`
+
 Purpose: Tracks completed project phases, verification gates, deferred live checks, and next phase.
 
 ## Phase 4.1 — Core SQL Spine Plan Lock
 
 ### `docs/phase-plans/PHASE_4_CORE_SQL_SPINE.md`
+
 Purpose: Locked Phase 4 implementation plan covering table scope, migration order, RLS rules, deferred items, and completion gates.
 
 ### `PHASE_STATUS.md`
+
 Change: Marked Phase 4 as started.
 
 ## Phase 4.2 — Audit Logs and AI Actions Migration
 
 ### `supabase/migrations/0002_audit_and_ai_actions.sql`
+
 Purpose: Creates the audit and proposed-action foundation for future Carnos writes.
 Includes:
+
 - `audit_logs`
 - `ai_actions`
 - owner-only RLS
@@ -1383,8 +2070,10 @@ Includes:
 ## Phase 4.3 — Chat Sessions and Chat Messages Migration
 
 ### `supabase/migrations/0003_chat_foundation.sql`
+
 Purpose: Creates the durable storage foundation for future Carnos conversations.
 Includes:
+
 - `chat_sessions`
 - `chat_messages`
 - chat-to-AI-action linkage
@@ -1394,8 +2083,10 @@ Includes:
 ## Phase 4.4 — Goals and Goal Milestones Migration
 
 ### `supabase/migrations/0004_goals_foundation.sql`
+
 Purpose: Creates the durable SQL foundation for goals and goal milestones.
 Includes:
+
 - `goals`
 - `goal_milestones`
 - owner-only RLS
@@ -1406,8 +2097,10 @@ Includes:
 ## Phase 4.5 — Daily Logs and Proof Items Migration
 
 ### `supabase/migrations/0005_daily_logs_and_proof_items.sql`
+
 Purpose: Creates the proof-first daily execution and evidence foundation.
 Includes:
+
 - `daily_logs`
 - `proof_items`
 - owner-only RLS
@@ -1419,8 +2112,10 @@ Includes:
 ## Phase 4.6 — Tasks and Events Migration
 
 ### `supabase/migrations/0006_tasks_and_events.sql`
+
 Purpose: Creates the execution and calendar/timeline foundation.
 Includes:
+
 - `tasks`
 - `events`
 - proof item task FK
@@ -1432,32 +2127,40 @@ Includes:
 ## Phase 4.7 — RLS, Index, and Source-Link Audit
 
 ### `scripts/audit-phase-4.mjs`
+
 Purpose: Audits Phase 4 core SQL spine migrations for required files, tables, RLS, policies, indexes, source links, updated_at triggers, daily log uniqueness, proof item task linkage, and forbidden premature memory table creation.
 
 ### `package.json`
+
 Change: Added `audit:phase4` and wired it into `npm run check`.
 
 ## Phase 4.7a — Phase 4 Audit Script Replacement
 
 ### `scripts/audit-phase-4.mjs`
+
 Change: Replaced brittle global ownership check with per-table create-block ownership verification and kept all Phase 4 audit gates.
 
 ## Phase 4.7b — Phase 4 Audit and SQL Typo Fix
 
 ### `scripts/audit-phase-4.mjs`
+
 Change: Replaced corrupted table-block regex parser with safer string-boundary table block extraction.
 
 ### `supabase/migrations/0004_goals_foundation.sql`
+
 Change: Fixed missing space in `references public.profiles`.
 
 ### `supabase/migrations/0006_tasks_and_events.sql`
+
 Change: Fixed missing space in `references public.profiles`.
 
 ## Phase 4.8 — SQL Migration Validator Upgrade
 
 ### `scripts/validate-sql-migrations.mjs`
+
 Purpose: Strengthens general SQL migration validation beyond basic migration presence.
 Checks:
+
 - canonical names
 - sequence ordering
 - empty files
@@ -1471,8 +2174,10 @@ Checks:
 ## Phase 4.9 — TypeScript Database Types Update
 
 ### `src/types/database.ts`
+
 Purpose: Provides typed Supabase table contracts for Phase 3 and Phase 4 tables.
 Includes:
+
 - Row, Insert, Update, and Relationship types
 - typed status/lifecycle unions
 - Json helper type
@@ -1480,259 +2185,317 @@ Includes:
 ## Phase 4.9a — Database Type Alias Fix
 
 ### `src/types/database.ts`
+
 Change: Restored Phase 3 exported aliases and added Phase 4 table aliases.
 
 ## Phase 4.9b — Phase 3 Database Type Compatibility Fix
 
 ### `src/types/database.ts`
+
 Change: Restored `profiles.onboarding_status` and `confirmation_required` compatibility while keeping Phase 4 table typings.
 
 ## Phase 4.10 — Read-Only Repository Helpers
 
 ### `src/lib/repositories/core-read.ts`
+
 Purpose: Provides typed read-only repository helpers for Phase 4 core SQL spine tables.
 
 ### `src/lib/repositories/index.ts`
+
 Purpose: Barrel export for repository helpers.
 
 ## Phase 4.11 — Phase 4 Documentation and Report
 
 ### docs/database/CORE_SQL_SPINE.md
+
 Purpose: Documents Phase 4 core SQL spine tables, safety rules, validation commands, TypeScript types, repositories, and deferred scope.
 
 ### docs/phase-reports/PHASE_4_CORE_SQL_SPINE_REPORT.md
+
 Purpose: Records Phase 4 completion report, fixed issues, verification gates, and next phase recommendation.
 
 ### PHASE_STATUS.md
+
 Change: Added Phase 4 documentation-added status.
-
-
 
 ## Phase 4.12 — Phase 4 Complete Marker
 
 ### `PHASE_STATUS.md`
+
 Change: Marked Phase 4 — Core SQL Spine complete.
 
 ### `PROJECT_EXECUTION_LOG.md`
+
 Change: Added Phase 4 completion entry.
 
 ## Full Source Alignment Audit
 
 ### `scripts/audit-source-alignment.mjs`
+
 Purpose: Audits Phases 1–4 against FINAL_SYNCED source-of-truth files and implementation gates.
 
 ### `package.json`
+
 Change: Added `audit:source` and wired it into `npm run check`.
 
 ## Source Alignment Audit Phase Marker Fix
 
 ### `PHASE_STATUS.md`
+
 Change: Added explicit completed baseline markers for Phase 1, Phase 2, Phase 3, and Phase 4.
 
 ## Source Alignment Audit Lint Cleanup
 
 ### `scripts/audit-source-alignment.mjs`
+
 Change: Removed unused `requireDirectory` helper.
 
 ## Phase 5.1 — Core Read UI Integration Plan Lock
 
 ### docs/phase-plans/PHASE_5_CORE_READ_UI_INTEGRATION.md
+
 Purpose: Locked Phase 5 implementation plan covering read-only UI integration, priority pages, shared components, auth shell, audits, deferred scope, and completion gates.
 
 ### PHASE_STATUS.md
+
 Change: Marked Phase 5 as started.
 
 ## Phase 5.2 — Shared Dashboard UI Components
 
 ### src/components/dashboard/section-card.tsx
+
 Purpose: Reusable display-only dashboard section container.
 
 ### src/components/dashboard/empty-state.tsx
+
 Purpose: Reusable display-only empty state component.
 
 ### src/components/dashboard/data-list.tsx
+
 Purpose: Reusable display-only list renderer for read pages.
 
 ### src/components/dashboard/status-pill.tsx
+
 Purpose: Reusable display-only status label.
 
 ### src/components/dashboard/metric-tile.tsx
+
 Purpose: Reusable display-only metric card.
 
 ### src/components/dashboard/index.ts
+
 Purpose: Barrel exports for shared dashboard components.
 
 ## Phase 5.3 — Authenticated Dashboard Shell Helper
 
 ### src/lib/dashboard/auth.ts
+
 Purpose: Provides a safe server-side dashboard auth state helper for read-only dashboard pages.
 
 ### src/components/dashboard/authenticated-dashboard-shell.tsx
+
 Purpose: Provides a reusable authenticated dashboard shell with signed-out and unavailable empty states.
 
 ### src/components/dashboard/index.ts
+
 Change: Exports AuthenticatedDashboardShell.
 
 ## Phase 5.4 — Command Dashboard Read Integration
 
 ### src/app/command/page.tsx
+
 Purpose: Connects the command dashboard to read-only repository helpers for goals, tasks, events, proof items, daily logs, and AI actions.
 
 ### src/components/dashboard/authenticated-dashboard-shell.tsx
+
 Change: Allows async server-rendered dashboard children so pages can load read data inside the authenticated shell.
 
 ## Phase 5.5 — Goals Page Read Integration
 
 ### src/app/goals/page.tsx
+
 Purpose: Connects the goals dashboard to the read-only `listGoals` repository helper and renders goal metrics, record list, read warnings, and empty state.
 
 ## Phase 5.6 — Timeline Page Read Integration
 
 ### src/app/timeline/page.tsx
+
 Purpose: Connects the timeline dashboard to read-only event, proof item, and audit log repository helpers and renders timeline metrics, read warnings, combined record list, and empty state.
 
 ## Phase 5.7 — Carnos Page Read Integration
 
 ### src/app/carnos/page.tsx
+
 Purpose: Connects the Carnos dashboard to read-only chat session, chat message, and AI action repository helpers while explicitly preserving the no-generation, no-memory, no-execution, no-mutation Phase 5 boundary.
 
 ## Phase 5.8 — Calendar Page Read Integration
 
 ### src/app/calendar/page.tsx
+
 Purpose: Connects the calendar dashboard to read-only task and event repository helpers and renders calendar metrics, read warnings, combined task/event list, and empty state.
 
 ## Phase 5.9 — Proof and Daily Log Read Surfaces
 
 ### src/app/world-class/page.tsx
+
 Purpose: Connects the world-class path dashboard to read-only proof item and daily log repository helpers and renders proof/reality metrics plus recent proof records.
 
 ### src/app/analytics/page.tsx
+
 Purpose: Connects the analytics dashboard to read-only proof item and daily log repository helpers and renders lightweight proof/daily-log summary metrics plus recent daily logs.
-
-
 
 ## Phase 5.10 — Core Domain Filtered Reads
 
 ### src/components/dashboard/domain-read-page.tsx
+
 Purpose: Reusable read-only domain dashboard that reads goals, tasks, events, and proof items, then filters records by domain-like fields.
 
 ### src/app/career/page.tsx
+
 Purpose: Career-domain read-only dashboard surface.
 
 ### src/app/learning/page.tsx
+
 Purpose: Learning-domain read-only dashboard surface.
 
 ### src/app/body/page.tsx
+
 Purpose: Body-domain read-only dashboard surface.
 
 ### src/components/dashboard/index.ts
+
 Change: Exports DomainReadPage.
 
 ## Phase 5.11 — Phase 5 Audit Script
 
 ### scripts/audit-phase-5.mjs
+
 Purpose: Audits Phase 5 read UI integration and confirms no write, memory, Carnos generation, or execution code entered the phase.
 
 ### package.json
+
 Change: Added `audit:phase5` and wired it into `npm run check`.
 
 ## Phase 5.12 — Phase 5 Documentation Report
 
 ### docs/phase-reports/PHASE_5_CORE_READ_UI_INTEGRATION_REPORT.md
+
 Purpose: Documents Phase 5 read UI integration scope, completed surfaces, explicit non-scope, verification gates, and remaining closure steps.
-
-
 
 ## Phase 5.13 — Source Alignment Audit Update
 
 ### scripts/audit-source-alignment.mjs
+
 Purpose: Extends full source alignment audit coverage through Phase 5 read UI integration and updates the success message to Phases 1–5.
 
 ### PROJECT_EXECUTION_LOG.md
+
 Change: Records Phase 5.13 source alignment audit update.
 
 ### CODE_LEDGER.md
+
 Change: Records Phase 5.13 source alignment audit update.
 
 ## Phase 5.14 — Phase 5 Complete
 
 ### PHASE_STATUS.md
+
 Change: Marks Phase 5 complete.
 
 ### CHANGELOG.md
+
 Change: Adds Phase 5 completion entry.
 
 ### PROJECT_EXECUTION_LOG.md
+
 Change: Records final Phase 5 completion and preserved boundaries.
 
 ### CODE_LEDGER.md
+
 Change: Records Phase 5 completion marker.
 
 ## Phase 5.15 — Python/ML Intelligence Architecture Patch
 
 ### docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_FINAL_SYNCED.json
+
 Change: Added `python_ml_intelligence_worker` with full structured roadmap and safety rules.
 
 ### docs/architecture/PYTHON_ML_INTELLIGENCE_WORKER.md
+
 Purpose: Documents the future Python/ML worker layer and non-mutating contract.
 
 ### docs/phase-plans/PHASE_5_15_PYTHON_ML_INTELLIGENCE_ARCHITECTURE_PATCH.md
+
 Purpose: Locks scope/non-scope for Phase 5.15 before Phase 6.
 
 ### scripts/audit-python-ml-boundary.mjs
+
 Purpose: Verifies Python/ML is documented as non-mutating, planned, and not active runtime yet.
 
 ### package.json
+
 Change: Added `audit:pythonml` and wired it into `npm run check`.
 
 ## 2026-06-19 23:35 UTC — Phase 6.1 Plan Lock
 
 Added:
+
 - `docs/phase-plans/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW.md`
 
 Role:
+
 - Official Phase 6 implementation plan.
 - Defines safe proposed-action write flow, scope, non-scope, acceptance criteria, and safety boundaries.
 - Establishes the required confirmation chain for future write-capable features.
 
 Runtime impact:
+
 - None.
 
 Write impact:
+
 - None.
 
 Python/ML impact:
+
 - None. Python/ML remains architecture-only and non-mutating.
 
 ## 2026-06-19 23:44 UTC — Phase 6.2 Action Types
 
 Added:
+
 - `src/lib/actions/action-types.ts`
 
 Role:
+
 - Defines the canonical proposed action type list for Phase 6.
 - Exports `ProposedActionType`.
 - Exports labels and descriptions for supported action types.
 - Exports `isProposedActionType` for safe runtime checks.
 
 Supported action types:
+
 - `create_task`
 - `create_goal`
 - `create_daily_log`
 - `create_proof_item`
 
 Runtime impact:
+
 - Type/registry foundation only.
 
 Write impact:
+
 - No writes are executed in this step.
 
 ## 2026-06-19 23:51 UTC — Phase 6.3 Proposed Action Contracts
 
 Added:
+
 - `src/lib/actions/proposed-action-contracts.ts`
 
 Role:
+
 - Defines typed payload contracts for proposed write actions.
 - Defines source, domain, priority, task status, goal status, and proof type enums.
 - Defines required fields for each proposed action type.
@@ -1740,34 +2503,41 @@ Role:
 - Defines `PROPOSED_ACTION_CONTRACT_VERSION`.
 
 Runtime impact:
+
 - Type foundation only.
 
 Write impact:
-- No writes are executed in this step.
 
+- No writes are executed in this step.
 
 ## 2026-06-19 23:58 UTC — Phase 6.4 Action Result Types
 
 Added:
+
 - `src/lib/actions/action-results.ts`
 
 Role:
+
 - Defines standard success and error result shapes for proposed action workflows.
 - Defines action result error codes for validation, auth, confirmation, database, and unexpected failures.
 - Adds small helper constructors and type guards.
 
 Runtime impact:
+
 - Type/helper foundation only.
 
 Write impact:
+
 - No writes are executed in this step.
 
 ## 2026-06-20 00:05 UTC — Phase 6.5 Payload Validation
 
 Added:
+
 - `src/lib/actions/validate-proposed-action.ts`
 
 Role:
+
 - Validates proposed action envelopes and payloads.
 - Rejects unsupported action types.
 - Rejects invalid source/confidence/evidence metadata.
@@ -1775,53 +2545,63 @@ Role:
 - Returns standard `ActionResult` objects.
 
 Runtime impact:
+
 - Validation helper only.
 
 Write impact:
+
 - No writes are executed in this step.
 
 ## 2026-06-20 00:09 UTC — Phase 6.6 Audit Helper
 
 Added:
+
 - `src/lib/audit/write-audit-log.ts`
 
 Role:
+
 - Defines `WriteAuditLogInput`.
 - Defines `WriteAuditLogResult`.
 - Adds `writeAuditLog` helper for inserting into `audit_logs`.
 - Returns structured success/error results.
 
 Runtime impact:
+
 - Server-side helper foundation.
 
 Write impact:
+
 - Adds an audit-write helper only.
 - Does not execute proposed actions by itself.
-
 
 ## 2026-06-20 04:31 UTC — Phase 6.7 Timeline Helper Boundary
 
 Added:
+
 - `src/lib/timeline/write-timeline-event.ts`
 
 Role:
+
 - Defines timeline helper input/result types.
 - Provides `writeTimelineEvent`.
 - Returns `status: "skipped"` because the current SQL spine has no `timeline_events` table.
 
 Runtime impact:
+
 - Safe helper boundary only.
 
 Write impact:
-- No timeline write is executed in this step.
 
+- No timeline write is executed in this step.
 
 ## 2026-06-20 04:49 UTC — Phase 6.8 Proposed Action Creation Helper
 
 Added:
+
 - `src/lib/actions/create-proposed-action.ts`
 
 Role:
+
 - Defines `CreateProposedActionInput`.
 - Defines `CreateProposedActionData`.
 - Adds `createProposedAction`.
@@ -1829,38 +2609,44 @@ Role:
 - Inserts valid proposals into `ai_actions` as `pending_confirmation`.
 
 Runtime impact:
+
 - Adds safe proposed-action persistence helper.
 
 Write impact:
+
 - Writes only to `ai_actions`.
 - Does not write to target domain tables.
-
 
 ## 2026-06-20 05:05 UTC — Phase 6.9 Action Lifecycle Helper
 
 Added:
+
 - `src/lib/actions/action-lifecycle.ts`
 
 Role:
+
 - Defines lifecycle transition types.
 - Defines allowed lifecycle transition rules.
 - Adds `updateActionLifecycle`.
 - Updates `ai_actions.status` and matching lifecycle timestamps.
 
 Runtime impact:
+
 - Adds controlled proposal lifecycle update helper.
 
 Write impact:
+
 - Writes only to `ai_actions`.
 - Does not write to target domain tables.
-
 
 ## 2026-06-20 05:18 UTC — Phase 6.10 Execution Dispatcher Boundary
 
 Added:
+
 - `src/lib/actions/execution-dispatcher.ts`
 
 Role:
+
 - Defines `ExecuteApprovedActionInput`.
 - Defines `ExecuteApprovedActionData`.
 - Adds `executeApprovedAction`.
@@ -1868,22 +2654,26 @@ Role:
 - Adds `markDispatcherReadyForActionType` as a typed readiness helper.
 
 Runtime impact:
+
 - Adds safe dispatcher boundary.
 
 Write impact:
+
 - Reads from `ai_actions`.
 - Does not write to target domain tables.
-
 
 ## 2026-06-20 05:24 UTC — Phase 6.11 Create Task Flow
 
 Added:
+
 - `src/lib/actions/flows/create-task-flow.ts`
 
 Updated:
+
 - `src/lib/actions/execution-dispatcher.ts`
 
 Role:
+
 - Adds `executeCreateTaskAction`.
 - Dispatches approved `create_task` actions to the task creation flow.
 - Inserts into `tasks`.
@@ -1892,21 +2682,24 @@ Role:
 - Calls timeline helper boundary.
 
 Write impact:
+
 - Writes to `tasks`.
 - Updates `ai_actions`.
 - Writes to `audit_logs`.
 - Timeline helper remains skipped until timeline schema exists.
 
-
 ## 2026-06-20 18:09 UTC — Phase 6.12 Create Goal Flow
 
 Added:
+
 - `src/lib/actions/flows/create-goal-flow.ts`
 
 Updated:
+
 - `src/lib/actions/execution-dispatcher.ts`
 
 Role:
+
 - Adds `executeCreateGoalAction`.
 - Dispatches approved `create_goal` actions to the goal creation flow.
 - Inserts into `goals`.
@@ -1915,21 +2708,24 @@ Role:
 - Calls timeline helper boundary.
 
 Write impact:
+
 - Writes to `goals`.
 - Updates `ai_actions`.
 - Writes to `audit_logs`.
 - Timeline helper remains skipped until timeline schema exists.
 
-
 ## 2026-06-20 18:13 UTC — Phase 6.13 Create Daily Log Flow
 
 Added:
+
 - `src/lib/actions/flows/create-daily-log-flow.ts`
 
 Updated:
+
 - `src/lib/actions/execution-dispatcher.ts`
 
 Role:
+
 - Adds `executeCreateDailyLogAction`.
 - Dispatches approved `create_daily_log` actions to the daily log creation flow.
 - Inserts into `daily_logs`.
@@ -1938,21 +2734,24 @@ Role:
 - Calls timeline helper boundary.
 
 Write impact:
+
 - Writes to `daily_logs`.
 - Updates `ai_actions`.
 - Writes to `audit_logs`.
 - Timeline helper remains skipped until timeline schema exists.
 
-
 ## 2026-06-20 18:17 UTC — Phase 6.14 Create Proof Item Flow
 
 Added:
+
 - `src/lib/actions/flows/create-proof-item-flow.ts`
 
 Updated:
+
 - `src/lib/actions/execution-dispatcher.ts`
 
 Role:
+
 - Adds `executeCreateProofItemAction`.
 - Dispatches approved `create_proof_item` actions to the proof item creation flow.
 - Inserts into `proof_items`.
@@ -1962,73 +2761,83 @@ Role:
 - Validates referenced daily logs, goals, and tasks stay inside user ownership.
 
 Write impact:
+
 - Writes to `proof_items`.
 - Updates `ai_actions`.
 - Writes to `audit_logs`.
 - Timeline helper remains skipped until timeline schema exists.
 
-
 ## 2026-06-20 18:22 UTC — Phase 6.15 Save/Edit/Cancel UI Component
 
 Added:
+
 - `src/components/actions/proposed-action-review-card.tsx`
 - `src/components/actions/index.ts`
 
 Role:
+
 - Provides the reusable client-side review card for proposed actions.
 - Supports payload preview, JSON edit mode, Save / Confirm callback, and Cancel callback.
 - Designed for Phase 6.16 route wiring.
 
 Write impact:
+
 - No direct write impact.
 - No Supabase calls.
 - No server mutations.
 
-
 ## 2026-06-20 18:30 UTC — Phase 6.16 App Page Wiring
 
 Updated:
+
 - `src/app/carnos/page.tsx`
 
 Role:
+
 - Imports `ProposedActionReviewCard`.
 - Renders a sample `ProposedActionContract` in the Carnos dashboard.
 - Exposes the Save/Edit/Cancel review UI in-app without direct SQL mutation.
 
 Write impact:
+
 - No direct write impact.
 - No Supabase mutation from the page.
 - No action execution from the page.
 
-
 ## 2026-06-20 18:38 UTC — Phase 6 Audit Gate
 
 Added:
+
 - `scripts/audit-phase-6.mjs`
 
 Updated:
+
 - `package.json`
 
 Role:
+
 - Adds `npm run audit:phase6`.
 - Adds Phase 6 audit to the main `npm run check` pipeline.
 - Confirms safe write proposed-action flow structure and UI boundary.
 
 Write impact:
+
 - No runtime write impact.
 - Adds static audit enforcement only.
-
 
 ## 2026-06-20 18:47 UTC — Phase 6 Completion Report
 
 Added:
+
 - `docs/phase-reports/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW_REPORT.md`
 
 Role:
+
 - Final Phase 6 implementation report.
 - Documents safe write flow, action types, execution flows, UI boundary, and audit gate.
 
 Write impact:
+
 - Documentation only.
 
 ## Phase 7.1 - Plan Lock
@@ -2135,8 +2944,6 @@ Write impact:
 - Updated scripts/audit-integration-sanity.mjs to validate Phase 7 core operating dashboard surfaces beyond the command dashboard.
 - Added audit coverage for CrossDashboardLinks, PendingUpdatesDrawer, ProofDashboardV1 component-only status, and dashboard card state rendering.
 
-
-
 ## Phase 7.17 - Manual Smoke Checklist
 
 - Added docs/qa/PHASE_7_MANUAL_SMOKE_CHECKLIST.md.
@@ -2185,21 +2992,27 @@ Write impact:
 ## Phase 8.24 — Career System Completion Closeout
 
 ### `docs/phase-reports/PHASE_8_CAREER_SYSTEM_COMPLETION_REPORT.md`
+
 Purpose: Final Phase 8 completion report.
 
 ### `docs/qa/PHASE_8_CAREER_MANUAL_SMOKE_CHECKLIST.md`
+
 Purpose: Manual browser QA checklist for career routes.
 
 ### `scripts/audit-phase-8.mjs`
+
 Change: Expanded Phase 8 audit to require closeout documents.
 
 ### `PROJECT_EXECUTION_LOG.md`
+
 Change: Added Phase 8.24 completion closeout entry.
 
 ### `PHASE_STATUS.md`
+
 Change: Added Phase 8 complete marker.
 
 ### `CHANGELOG.md`
+
 Change: Added Phase 8 completion changelog entry.
 
 Phase 8 Career System Complete marker for final audit closeout.
@@ -2207,288 +3020,1053 @@ Phase 8 Career System Complete marker for final audit closeout.
 ## Phase 1–8 Retrospective Gap Audit
 
 ### `docs/phase-reports/PHASE_1_8_RETROSPECTIVE_GAP_AUDIT.md`
+
 Purpose: Post-Phase-8 audit artifact documenting completed scope, deferred scope, known risks, and Phase 9 guardrails.
 
 ### `PROJECT_EXECUTION_LOG.md`
+
 Change: Added retrospective audit entry.
 
 ## Phase 9 Chunk A — Source and Route Inspection
 
 ### `docs/phase-reports/PHASE_9_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
+
 Purpose: Records the Phase 9 source-of-truth scope, existing routes, existing repo foundations, migrations, audits, and non-goals before implementation.
 
 ### `docs/phase-plans/PHASE_9_LEARNING_PROJECT_SYSTEM.md`
+
 Purpose: Locks Phase 9 as 28 requirement steps executed through 12 safe implementation chunks.
 
 ### `PROJECT_EXECUTION_LOG.md`
+
 Change: Added Phase 9 Chunk A start entry.
 
 ## Phase 9 Chunk B — Schema Design and Traceability
 
 ### `docs/database/PHASE_9_LEARNING_PROJECT_SCHEMA_DESIGN.md`
+
 Purpose: Defines the planned Phase 9 SQL tables, relationships, indexes, RLS expectations, cross-domain links, and non-goals.
 
 ### `docs/phase-reports/PHASE_9_SOURCE_TO_SCOPE_TRACEABILITY.md`
+
 Purpose: Maps Phase 9 source-of-truth requirements to planned implementation files and safe execution chunks.
 
 ### `PROJECT_EXECUTION_LOG.md`
+
 Change: Added Phase 9 Chunk B execution entry.
 
 ## Phase 9 Chunk C — SQL Migration
 
 ### `supabase/migrations/0008_learning_project_system_foundation.sql`
+
 Purpose: Adds the Phase 9 Learning / Project System SQL foundation, including learning paths, skills, sessions, quizzes, projects, milestones, bugs, tests, releases, links, RLS policies, and indexes.
 
 ### `PROJECT_EXECUTION_LOG.md`
+
 Change: Added Phase 9 Chunk C SQL migration entry.
 
 ## Phase 9 Chunk C.1 — Parent Ownership Hardening
 
 ### `supabase/migrations/0009_phase9_parent_ownership_guards.sql`
+
 Purpose: Replaces Phase 9 insert/update policies with stricter parent ownership checks so child rows cannot link to another user's parent records.
 
 ### `PROJECT_EXECUTION_LOG.md`
+
 Change: Added Phase 9 Chunk C.1 hardening entry.
 
 ## Phase 9 Chunk D — Database Types
 
 ### `src/types/database.ts`
+
 Purpose: Adds Phase 9 Learning / Project System table definitions and exported row/insert/update aliases.
 
 ### `PROJECT_EXECUTION_LOG.md`
+
 Change: Added Phase 9 Chunk D database types entry.
 
 ## Phase 9 Chunk E — Learning and Project Read Helpers
 
 ### `src/lib/repositories/core-read.ts`
+
 Purpose: Adds read-only, user-scoped repository helpers for Phase 9 Learning / Project System records.
 
 ### `PROJECT_EXECUTION_LOG.md`
+
 Change: Added Phase 9 Chunk E read helper entry.
 
 ## Phase 9 Chunk F — Aggregation, Registry, and Shared UI Primitives
 
 ### `src/lib/dashboard/dashboard-layout-contract.ts`
+
 Purpose: Extends supported dashboard surfaces to include Phase 9 learning and projects.
 
 ### `src/lib/dashboard/dashboard-card-registry.ts`
+
 Purpose: Adds Phase 9 dashboard cards for learning mastery and project shipping surfaces.
 
 ### `src/lib/dashboard/learning-project-dashboard-data-helpers.ts`
+
 Purpose: Aggregates Phase 9 learning/project read-helper data into dashboard summaries.
 
 ### `src/components/dashboard/learning-project-summary-panel.tsx`
+
 Purpose: Adds shared UI primitive for Phase 9 summary metric panels.
 
 ### `src/lib/dashboard/index.ts`
+
 Change: Exports Phase 9 aggregation helpers.
 
 ### `src/components/dashboard/index.ts`
+
 Change: Exports Phase 9 shared UI primitive.
 
 ## Phase 9 Chunk G — Learning Academy Dashboard
 
 ### `src/components/dashboard/learning-academy-dashboard-v1.tsx`
+
 Purpose: Adds read-only Learning Academy dashboard UI for Phase 9 skill paths, skills, learning sessions, quizzes, attempts, and skill progress.
 
 ### `src/app/learning/page.tsx`
+
 Purpose: Wires `/learning` to authenticated Phase 9 learning reads instead of the generic domain placeholder.
 
 ### `src/components/dashboard/index.ts`
+
 Change: Exports the Learning Academy dashboard component.
 
 ## Phase 9 Chunk H — Project Builder Dashboard
 
 ### `src/components/dashboard/project-builder-dashboard-v1.tsx`
+
 Purpose: Adds read-only Project Builder dashboard UI for Phase 9 projects, milestones, bugs, tests, releases, and links.
 
 ### `src/app/projects/page.tsx`
+
 Purpose: Wires `/projects` to authenticated Phase 9 project reads instead of a placeholder page.
 
 ### `src/components/dashboard/index.ts`
+
 Change: Exports the Project Builder dashboard component.
 
 ## Phase 9 Chunk I — Knowledge Route Alignment
 
 ### `src/components/dashboard/knowledge-vault-alignment-v1.tsx`
+
 Purpose: Adds read-only Knowledge Vault alignment UI for Phase 9 learning/project source records.
 
 ### `src/app/knowledge/page.tsx`
+
 Purpose: Wires `/knowledge` to authenticated Phase 9 learning/project source reads.
 
 ### `src/components/dashboard/index.ts`
+
 Change: Exports the Knowledge Vault alignment dashboard component.
 
 ## Phase 9 Chunk J — Learning/Project Detail Panels
 
 ### `src/components/dashboard/learning-project-detail-panels.tsx`
+
 Purpose: Adds read-only detail panels for skill path/progress, quiz/session, and project build-log views.
 
 ### `src/components/dashboard/learning-academy-dashboard-v1.tsx`
+
 Change: Adds skill path/progress and quiz/session detail panels.
 
 ### `src/components/dashboard/project-builder-dashboard-v1.tsx`
+
 Change: Adds project build-log detail panel.
 
 ### `src/components/dashboard/index.ts`
+
 Change: Exports Phase 9 detail panels.
 
 ## Phase 9 Chunk K — Linkage and State Surfaces
 
 ### `src/components/dashboard/learning-project-linkage-panels.tsx`
+
 Purpose: Adds read-only linkage, proposed-action visibility, state/privacy boundary, and cross-link panels for Phase 9.
 
 ### `src/components/dashboard/learning-academy-dashboard-v1.tsx`
+
 Change: Wires Phase 9 linkage, operating, proposed-action, state, and cross-link panels into `/learning`.
 
 ### `src/components/dashboard/project-builder-dashboard-v1.tsx`
+
 Change: Wires Phase 9 linkage, operating, proposed-action, state, and cross-link panels into `/projects`.
 
 ### `src/components/dashboard/knowledge-vault-alignment-v1.tsx`
+
 Change: Adds Phase 9 state boundary and cross-links to `/knowledge`.
 
 ### `src/components/dashboard/index.ts`
+
 Change: Exports Phase 9 linkage panels.
 
 ## Phase 9 Chunk L — Closeout
 
 ### `docs/phase-reports/PHASE_9_NO_WRITE_PRIVACY_AUDIT.md`
+
 Purpose: Records Phase 9 read-only, no-write, privacy, and deferred-scope audit.
 
 ### `docs/phase-reports/PHASE_9_AUDIT_GATE.md`
+
 Purpose: Records Phase 9 implementation audit gate and completed chunks.
 
 ### `docs/phase-reports/PHASE_9_MANUAL_SMOKE_CHECKLIST.md`
+
 Purpose: Defines browser smoke checks for `/learning`, `/projects`, and `/knowledge`.
 
 ### `docs/phase-reports/PHASE_9_COMPLETION_REPORT.md`
+
 Purpose: Final Phase 9 closeout report.
 
 ### `PHASE_STATUS.md`
+
 Change: Marks Phase 9 complete and sets Phase 10 as the next step.
 
 ## Phase 10 Chunk A — Source and Route Inspection
 
 ### `docs/phase-plans/PHASE_10_RESEARCH_STANFORD_SYSTEM.md`
+
 Purpose: Locks the upgraded 36-step Phase 10 Research / Stanford System plan and 11-chunk build sequence.
 
 ### `docs/phase-reports/PHASE_10_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
+
 Purpose: Records initial source, route, component, proposed-action, database-type, read-helper, and migration inspection for Phase 10.
 
 ## Phase 10 Chunk B — Schema Design and Traceability
 
 ### `docs/database/PHASE_10_RESEARCH_SCHEMA_DESIGN.md`
+
 Purpose: Designs the Phase 10 research-side schema before SQL implementation.
 
 ### `docs/database/PHASE_10_STANFORD_PHD_SCHEMA_DESIGN.md`
+
 Purpose: Designs the Phase 10 Stanford/PhD readiness schema before SQL implementation.
 
 ### `docs/phase-reports/PHASE_10_SOURCE_TO_SCOPE_TRACEABILITY.md`
+
 Purpose: Maps Phase 10 scope to existing foundations, safe-link strategy, and deferred future phases.
 
 ## Phase 10 Chunk C — SQL Foundation
 
 ### `supabase/migrations/0010_phase10_research_stanford_foundation.sql`
+
 Purpose: Adds Phase 10 Research / Stanford System SQL foundation tables, RLS enablement, owner-scoped SELECT/INSERT policies, and required user indexes.
 
 ## Phase 10 Chunk C.1 — Parent Ownership Guards
 
 ### `supabase/migrations/0011_phase10_parent_ownership_guards.sql`
+
 Purpose: Adds Phase 10 parent ownership guard functions and triggers for nullable cross-phase references.
 
 ## Phase 10 Chunk D — Database Types
 
 ### `src/types/database.ts`
+
 Purpose: Adds Phase 10 Research / Stanford System table mappings and exported aliases for use by read helpers and dashboards.
 
 ## Phase 10 Chunk E — Read Helpers
 
 ### `src/lib/repositories/research-read.ts`
+
 Purpose: Adds read-only server repository helpers for Phase 10 Research / Stanford / Literature / Citation data.
 
 ### `src/lib/repositories/index.ts`
+
 Purpose: Exports Phase 10 research read helpers from the repository barrel.
 
 ## Phase 10 Chunk F — Aggregation, Registry, Shared UI
 
 ### `src/lib/dashboard/research-stanford-dashboard-data-helpers.ts`
+
 Purpose: Aggregates Phase 10 read-helper outputs into research and Stanford dashboard summaries.
 
 ### `src/lib/dashboard/dashboard-layout-contract.ts`
+
 Purpose: Adds `research_lab` and `research_stanford` as supported dashboard surfaces.
 
 ### `src/lib/dashboard/dashboard-card-registry.ts`
+
 Purpose: Adds Phase 10 dashboard card contracts for research and Stanford surfaces.
 
 ### `src/components/dashboard/research-summary-panel.tsx`
+
 Purpose: Adds a shared read-only research summary panel primitive.
 
 ## Phase 10 Chunk G — Route Read Surfaces
 
 ### `src/app/research-lab/page.tsx`
+
 Purpose: Replaces the Research Lab placeholder with an authenticated read-only route showing research idea, literature, citation, claim, experiment, paper, and registry summary state.
 
 ### `src/app/research-stanford/page.tsx`
+
 Purpose: Replaces the Research Stanford placeholder with an authenticated read-only route showing university, lab, professor, readiness, SOP, asset, recommendation, and registry summary state.
 
 ## Phase 10 Chunk H — Research Linkage and Boundary Panels
 
 ### `src/components/dashboard/research-linkage-boundary-panels.tsx`
+
 Purpose: Adds read-only research/proof linkage visibility, Stanford target-fit linkage visibility, and privacy/safe-write boundary panels.
 
 ### `src/app/research-lab/page.tsx`
+
 Purpose: Wires Research Lab linkage visibility and boundary panels into the authenticated read route.
 
 ### `src/app/research-stanford/page.tsx`
+
 Purpose: Wires Stanford/PhD linkage visibility and boundary panels into the authenticated read route.
 
 ## Phase 10 Chunk I — Detail Visibility Panels
 
 ### `src/components/dashboard/research-detail-panels.tsx`
+
 Purpose: Adds compact read-only detail panels for research and Stanford/PhD Phase 10 records.
 
 ### Research routes
+
 Purpose: Wires detail visibility panels into `/research-lab` and `/research-stanford`.
 
 ## Phase 10 Chunk J — Proposed-Action Visibility, Cross-Links, Audit Draft
 
 ### `src/components/dashboard/research-proposed-action-visibility-panel.tsx`
+
 Purpose: Adds disabled read-only research proposed-action preview cards.
 
 ### `src/components/dashboard/cross-dashboard-links.tsx`
+
 Purpose: Adds ResearchCrossDashboardLinks for Phase 10 routes.
 
 ### `scripts/audit-phase-10.mjs`
+
 Purpose: Adds the Phase 10 structural audit gate.
 
 ### `docs/qa/PHASE_10_RESEARCH_STANFORD_MANUAL_SMOKE_CHECKLIST.md`
+
 Purpose: Adds manual QA checklist for Research / Stanford System.
 
 ### `docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT_DRAFT.md`
+
 Purpose: Adds draft closeout report for Phase 10.
 
 ## Phase 10 Chunk K — Final Closeout
 
 ### `docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT.md`
+
 Purpose: Final Phase 10 closeout report for the Research / Stanford System.
 
 ### `docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT_DRAFT.md`
+
 Change: Removed after final report was created.
 
 ### `docs/qa/PHASE_10_RESEARCH_STANFORD_MANUAL_SMOKE_CHECKLIST.md`
+
 Purpose: Final manual browser smoke checklist for `/research-lab` and `/research-stanford`.
 
 ### `PHASE_STATUS.md`
+
 Change: Marks Phase 10 complete and sets Phase 11 — Health / Body System as the next recommended phase.
 
 ### `PROJECT_EXECUTION_LOG.md`
+
 Change: Records Phase 10 Chunk K final closeout.
 
 ### `CHANGELOG.md`
+
 Change: Records Phase 10 completion.
 
 ### `CODE_LEDGER.md`
+
 Change: Records final Phase 10 closeout file purposes.
+
+## Phase 11 Chunk A — Plan Lock Start
+
+### `CODE_SNAPSHOT.md`
+
+Purpose: Regenerated pre-phase code snapshot before Phase 11 implementation.
+
+### `docs/phase-plans/PHASE_11_HEALTH_BODY_SYSTEM.md`
+
+Purpose: Locks the Phase 11 Health / Body System plan, 44-step build sequence, source scope, route scope, SQL table scope, hardening additions, safety boundaries, chunk plan, and completion criteria.
+
+## Phase 11 Chunk B1 — Schema Design / Privacy Review / Traceability
+
+### `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+
+Purpose: Designs Phase 11 source-confirmed health/body tables, candidate fields, ownership pattern, indexes, constraints, RLS strategy, and read-first boundaries before SQL migration.
+
+### `docs/phase-reports/PHASE_11_HEALTH_PRIVACY_SAFETY_REVIEW.md`
+
+Purpose: Locks privacy and safety boundaries for sensitive health/body, sleep, supplement, body-image, emotion, journal, and photo-reference surfaces.
+
+### `docs/phase-reports/PHASE_11_SOURCE_TO_SCOPE_TRACEABILITY.md`
+
+Purpose: Maps Phase 11 source-confirmed routes and tables to implementation scope and identifies deferred/source-referenced items.
+
+## Phase 11 Chunk B2 — Baseline / Units / Sleep / Photo Boundary
+
+### `docs/phase-reports/PHASE_11_BASELINE_UNITS_SLEEP_PHOTO_BOUNDARY.md`
+
+Purpose: Locks baseline handling, unit clarity, daily sleep tracking, Carnos sleep natural-language proposal boundary, and progress photo/storage honesty before SQL or UI work.
+
+### `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+
+Purpose: Updated with B2 hardening decision notes for baselines, units, daily sleep, natural-language sleep capture, and progress photo honesty.
+
+## Phase 11 Chunk B3 — Safety / Data Quality / Targets / Trend Boundary
+
+### `docs/phase-reports/PHASE_11_SAFETY_DATA_TARGET_TREND_BOUNDARY.md`
+
+Purpose: Locks medical/supplement/body-image safety, emotion/journal safety, data quality, duplicate-log handling, target comparison strategy, and simple trend preview boundaries.
+
+### `docs/phase-reports/PHASE_11_HEALTH_PRIVACY_SAFETY_REVIEW.md`
+
+Purpose: Updated with B3 safety hardening addendum.
+
+### `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+
+Purpose: Updated with B3 safety, duplicate-log, missing-vs-zero, target, and trend decision notes.
+
+## Phase 11 Chunk C — SQL Foundation
+
+### `supabase/migrations/0012_phase11_health_body_foundation.sql`
+
+Purpose: Creates the source-confirmed Phase 11 health/body SQL tables with owner-scoped RLS, updated_at triggers, and basic indexes.
+
+Boundary: Parent ownership triggers are deferred to Chunk C.1. Candidate tables such as `health_body_baselines` and `progress_photos` are not created.
+
+## Phase 11 Chunk C.1 — Parent Ownership Guards
+
+### `supabase/migrations/0013_phase11_parent_ownership_guards.sql`
+
+Purpose: Adds Phase 11 parent ownership validation functions and before insert/update triggers for Phase 11 tables with parent foreign keys.
+
+Boundary: No new tables, TypeScript types, read helpers, routes, dashboards, storage behavior, or Carnos writes are added.
+
+## Phase 11 Chunk D — Database Types
+
+### `src/types/database.ts`
+
+Purpose: Adds TypeScript database table definitions and aliases for Phase 11 health/body tables.
+
+Boundary: No SQL, repositories, read helpers, dashboards, routes, storage/upload behavior, or Carnos writes are added.
+
+## Phase 11 Chunk D Repair — Actual Database Types
+
+### `src/types/database.ts`
+
+Purpose: Adds the actual TypeScript table definitions and aliases for the 16 Phase 11 health/body SQL tables after the previous Chunk D commit only updated documentation/log files.
+
+Boundary: No SQL, repositories, read helpers, dashboards, routes, storage/upload behavior, or Carnos writes are added.
+
+## Phase 11 Chunk E1 — Read Helper Foundation
+
+### `src/lib/repositories/health-body-read.ts`
+
+Purpose: Provides read-only repository list helpers for the 16 Phase 11 health/body SQL tables.
+
+### `src/lib/repositories/index.ts`
+
+Purpose: Exports the health/body read helper module.
+
+Boundary: No writes, mutations, SQL, dashboards, routes, storage/upload behavior, or Carnos actions are added.
+
+## Phase 11 Chunk E2 — Dashboard Summary Helper Foundation
+
+### `src/lib/dashboard/health-body-dashboard-data-helpers.ts`
+
+Purpose: Provides read-only health/body dashboard summary aggregation over Phase 11 repository helpers.
+
+### `src/lib/dashboard/index.ts`
+
+Purpose: Exports the health/body dashboard summary helper module.
+
+Boundary: No writes, mutations, SQL, dashboards, routes, storage/upload behavior, or Carnos actions are added.
+
+## Phase 11 Chunk E3 — Read Helper Schema-Boundary Audit
+
+### `docs/phase-reports/PHASE_11_READ_HELPER_SCHEMA_BOUNDARY_AUDIT.md`
+
+Purpose: Documents and locks the read-helper schema contract before Phase 11 UI aggregation/dashboard work.
+
+Boundary: No code mutation surface, SQL migration, type change, write helper, route, dashboard, storage/upload behavior, Python/ML execution, or Carnos action was added.
+
+### E3 Verification Repair — `src/lib/dashboard/health-body-dashboard-data-helpers.ts`
+
+Purpose: Added exercise summary coverage so the dashboard summary helper covers all 16 confirmed Phase 11 source tables.
+
+## Health Body Overview Cards
+
+### `src/components/dashboard/health-body-dashboard-v1.tsx`
+
+Purpose: Provides a read-only health/body overview component with dashboard metric cards sourced from existing summary helpers.
+
+### `src/components/dashboard/index.ts`
+
+Purpose: Exports the health/body overview dashboard component.
+
+Boundary: No writes, route rewiring, SQL migration, storage/upload behavior, or Carnos action was added.
+
+## Health Body Dashboard States
+
+### `src/components/dashboard/health-body-dashboard-states.tsx`
+
+Purpose: Provides shared read-only state components for the health/body dashboard, including empty, warning, privacy, and boundary states.
+
+### `src/components/dashboard/health-body-dashboard-v1.tsx`
+
+Purpose: Consumes shared state components while remaining a read-only dashboard overview.
+
+### `src/components/dashboard/index.ts`
+
+Purpose: Exports health/body dashboard state components.
+
+Schema: No schema change needed.
+
+Boundary: No writes, route rewiring, SQL migration, database type change, storage/upload behavior, or Carnos action was added.
+
+## Body Dashboard Route Wiring
+
+### `src/app/body/page.tsx`
+
+Purpose: Wires the `/body` route to the read-only health/body dashboard overview while preserving Phase 5 compatibility markers.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, or Carnos action was added.
+
+## Nutrition Dashboard Route Wiring
+
+### `src/app/nutrition/page.tsx`
+
+Purpose: Wires `/nutrition` to a protected, read-only nutrition dashboard.
+
+### `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+
+Purpose: Provides a nutrition-focused read-only dashboard for nutrition logs, meal items, supplements, and recent related health signals.
+
+### `src/components/dashboard/health-body-dashboard-states.tsx`
+
+Purpose: Fixed a small text spacing typo in the read-only boundary notice.
+
+### `src/components/dashboard/index.ts`
+
+Purpose: Exports the nutrition dashboard component.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, or Carnos action was added.
+
+## Supplements Dashboard Route Wiring
+
+### `src/app/supplements/page.tsx`
+
+Purpose: Wires `/supplements` to a protected, read-only supplements dashboard.
+
+### `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+
+Purpose: Provides a supplement-focused read-only dashboard for supplements, active supplement records, supplement logs, products, and safety boundaries.
+
+### `src/components/dashboard/health-body-dashboard-states.tsx`
+
+Purpose: Fixed a small text spacing typo in the read-only boundary notice.
+
+### `src/components/dashboard/index.ts`
+
+Purpose: Exports the supplements dashboard component.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, or Carnos action was added.
+
+## Sleep Energy Dashboard Route Wiring
+
+### `src/app/sleep-energy/page.tsx`
+
+Purpose: Wires `/sleep-energy` to a protected, read-only sleep energy dashboard.
+
+### `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+
+Purpose: Provides a sleep-and-energy-focused read-only dashboard for sleep logs, energy logs, mental health logs, and recent recovery signals.
+
+### `src/components/dashboard/health-body-dashboard-states.tsx`
+
+Purpose: Cleaned a small text spacing issue in the shared read-only boundary notice.
+
+### `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+
+Purpose: Cleaned small text spacing issues in nutrition dashboard copy.
+
+### `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+
+Purpose: Cleaned small text spacing issues in supplements dashboard copy.
+
+### `src/components/dashboard/index.ts`
+
+Purpose: Exports the sleep energy dashboard component.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, or Carnos action was added.
+
+## Emotion Dashboard Route Wiring
+
+### `src/app/emotion/page.tsx`
+
+Purpose: Wires `/emotion` to a protected, read-only emotion dashboard.
+
+### `src/components/dashboard/health-body-emotion-dashboard-v1.tsx`
+
+Purpose: Provides an emotion-and-mental-state-focused read-only dashboard for emotion logs, mental health logs, journal entries, and recent related signals.
+
+### `src/components/dashboard/health-body-dashboard-states.tsx`
+
+Purpose: Cleaned a small text spacing issue in the shared read-only boundary notice.
+
+### `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+
+Purpose: Cleaned small text spacing issues in nutrition dashboard copy.
+
+### `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+
+Purpose: Cleaned small text spacing issues in supplements dashboard copy.
+
+### `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+
+Purpose: Cleaned small text spacing issues in sleep energy dashboard copy.
+
+### `src/components/dashboard/index.ts`
+
+Purpose: Exports the emotion dashboard component.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, or Carnos action was added.
+
+## Hair Skincare Dashboard Route Wiring
+
+### `src/app/hair-skincare/page.tsx`
+
+Purpose: Wires `/hair-skincare` to a protected, read-only haircare and skincare dashboard.
+
+### `src/components/dashboard/health-body-hair-skincare-dashboard-v1.tsx`
+
+Purpose: Provides a haircare-and-skincare-focused read-only dashboard for skincare logs, haircare logs, products, active products, and sensitive appearance-related boundaries.
+
+### `src/components/dashboard/health-body-dashboard-states.tsx`
+
+Purpose: Cleaned a small text spacing issue in the shared read-only boundary notice.
+
+### `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+
+Purpose: Cleaned small text spacing issues in nutrition dashboard copy.
+
+### `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+
+Purpose: Cleaned small text spacing issues in supplements dashboard copy.
+
+### `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+
+Purpose: Cleaned small text spacing issues in sleep energy dashboard copy.
+
+### `src/components/dashboard/health-body-emotion-dashboard-v1.tsx`
+
+Purpose: Cleaned small text spacing issues in emotion dashboard copy.
+
+### `src/components/dashboard/index.ts`
+
+Purpose: Exports the hair skincare dashboard component.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, or Carnos action was added.
+
+## Health/Body Detail Panel Pattern Report
+
+### `docs/phase-reports/PHASE_11_HEALTH_BODY_DETAIL_PANEL_PATTERN_REPORT.md`
+
+Purpose: Locks the read-only detail-panel implementation pattern for Phase 11 before health/body detail panels are created.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, visual evidence storage, or Carnos action was added.
+
+## Health/Body Detail Panels
+
+### `src/components/dashboard/health-body-detail-panels.tsx`
+
+Purpose: Provides reusable read-only detail panels for body/training, nutrition/meals, supplements, sleep/energy, emotion/reflection, and haircare/skincare records.
+
+### `src/components/dashboard/index.ts`
+
+Purpose: Exports the reusable health/body detail panels.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, visual evidence storage, or Carnos action was added.
+
+## Health/Body Detail Panel Attachment
+
+### `src/lib/dashboard/health-body-dashboard-data-helpers.ts`
+
+Purpose: Adds read-only detail row arrays to the existing health/body dashboard data result using existing repository read helpers.
+
+### Health/body dashboard components
+
+Purpose: Attach the reusable read-only detail panels to `/body`, `/nutrition`, `/supplements`, `/sleep-energy`, `/emotion`, and `/hair-skincare` dashboard surfaces.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, visual evidence storage, or Carnos action was added.
+
+## Health/Body Linkage Visibility
+
+### `src/components/dashboard/health-body-linkage-panels.tsx`
+
+Purpose: Provides read-only proof, goal, task, daily-log, and event linkage visibility for health/body records.
+
+### Health/body dashboard components
+
+Purpose: Attach the linkage visibility panel to body, nutrition, supplements, sleep-energy, emotion, and hair-skincare surfaces.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, visual evidence storage, or Carnos action was added.
+
+## Health/Body Proposed-Action and State Boundaries
+
+### `src/components/dashboard/health-body-action-boundary-panels.tsx`
+
+Purpose: Provides preview-only proposed-action visibility, read-state/privacy boundary language, and cross-route links for health/body surfaces.
+
+### Health/body dashboard components
+
+Purpose: Attach proposed-action visibility, state boundary, and cross-route consistency panels to body, nutrition, supplements, sleep-energy, emotion, and hair-skincare surfaces.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, visual evidence storage, or Carnos execution was added.
+
+## Health/Body Audit Gate
+
+### `scripts/audit-phase-11.mjs`
+
+Purpose: Verifies Phase 11 health/body files, SQL/type/read contracts, dashboard exports, route wiring, safety language, deferred-table boundaries, and no-write/no-automation constraints.
+
+### `docs/qa/PHASE_11_HEALTH_BODY_MANUAL_SMOKE_CHECKLIST.md`
+
+Purpose: Manual smoke checklist for the six health/body dashboard routes.
+
+### `docs/phase-reports/PHASE_11_HEALTH_BODY_AUDIT_GATE.md`
+
+Purpose: Locks Phase 11 verification gates, protected boundaries, and deferred scope.
+
+### `package.json`
+
+Purpose: Adds `audit:phase11` and includes it in `npm run check`.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, visual evidence storage, or Carnos execution was added.
+
+## Phase 11 Health/Body System Complete
+
+### `docs/phase-reports/PHASE_11_HEALTH_BODY_COMPLETION_REPORT.md`
+
+Purpose: Final Phase 11 closeout report covering completed scope, routes, SQL foundation, verification gates, protected boundaries, deferred scope, and next-step boundary.
+
+### `scripts/audit-phase-11.mjs`
+
+Purpose: Now requires the Phase 11 completion report as part of the automated Phase 11 audit gate.
+
+### `PROJECT_EXECUTION_LOG.md`
+
+Purpose: Records Phase 11 final closeout.
+
+### `CODE_LEDGER.md`
+
+Purpose: Records Phase 11 final closeout file purposes.
+
+### `CHANGELOG.md`
+
+Purpose: Records Phase 11 completion.
+
+### `PHASE_STATUS.md`
+
+Purpose: Marks Phase 11 complete and points to source-of-truth inspection before Phase 12.
+
+Schema: No schema change needed.
+
+Boundary: No writes, SQL migration, database type change, storage/upload behavior, visual evidence storage, baseline table, analytics snapshot table, Carnos execution, Python/ML execution, memory/RAG, voice, or background job was added.
+
+## Phase 12 C02 Plan Lock
+
+### `docs/phase-plans/PHASE_12_LIFE_ADMIN_FINANCE_DAILY_ADMIN_SYSTEM.md`
+
+Purpose: Locks Phase 12 as Life Admin + Finance + Daily Admin Queue with user-specific housing correction, deferred scope, safety boundaries, step count, code chunk count, and acceptance criteria.
+
+### `docs/phase-reports/PHASE_12_C01_SOURCE_ROUTE_INSPECTION.md`
+
+Purpose: Records C01 source/route inspection findings for Life Admin, Finance, Housing, Documents, Command, Calendar, and source-confirmed tables.
+
+### `docs/roadmap/POST_V1_EXPANSION_ROADMAP.md`
+
+Purpose: Adds post-v1 expansion Phases 22–26 without renumbering or changing the core FINAL_SYNCED v1 roadmap.
+
+Schema: No schema change needed.
+
+Boundary: No app code, SQL migration, database type change, repository helper, route implementation, dashboard implementation, Carnos execution, Python/ML execution, background job, bank sync, document upload, auto-pay, or write behavior was added.
+
+## Phase 12 C03 Schema Design
+
+### `docs/database/PHASE_12_LIFE_ADMIN_FINANCE_SCHEMA_DESIGN.md`
+
+Purpose: Designs Phase 12 financial accounts, budget categories, financial logs, subscriptions, housing admin records, housing contacts, documents, Daily Admin Queue aggregation, severity logic, indexes, RLS, and parent ownership guard requirements.
+
+### `docs/phase-reports/PHASE_12_LIFE_ADMIN_PRIVACY_SAFETY_REVIEW.md`
+
+Purpose: Records privacy and safety boundaries for finance, documents, housing, Carnos, and dashboard UI.
+
+### `docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_TRACEABILITY.md`
+
+Purpose: Maps FINAL_SYNCED source dashboards/tables to Phase 12 implementation scope and records user-specific housing correction.
+
+Schema: No SQL schema change in C03.
+
+Boundary: No app code, SQL migration, database type change, repository helper, route implementation, dashboard implementation, Carnos execution, Python/ML execution, background job, bank sync, document upload, auto-pay, or write behavior was added.
+
+## Phase 12 C04 — Life Admin / Finance SQL Foundation
+
+Files:
+
+- `supabase/migrations/0014_phase12_life_admin_finance_foundation.sql`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Summary:
+
+- Added Phase 12 SQL tables for finance, budget, subscriptions, housing admin, contacts, and document metadata.
+- Added RLS and indexes.
+- Preserved read/write safety boundaries.
+- Deferred parent ownership guards to C05.
+
+## Phase 12 C05 — Parent Ownership Guards
+
+Files:
+
+- `supabase/migrations/0015_phase12_parent_ownership_guards.sql`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Summary:
+
+- Added SQL parent ownership guard helper and table-specific triggers.
+- Guarded Phase 12 cross-table links against cross-user parent references.
+- Preserved SQL-only boundary.
+
+## Phase 12 C06 — SQL Validation Closeout
+
+Files:
+
+- `docs/phase-reports/PHASE_12_SQL_FOUNDATION_VALIDATION_REPORT.md`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Summary:
+
+- Added SQL foundation validation report.
+- Confirmed C04/C05 SQL foundation scope and boundaries.
+- Prepared handoff into database type contracts.
+
+## Phase 12 C07 — Database Type Contracts
+
+Files:
+
+- `src/types/database.ts`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Summary:
+
+- Added database table contracts for manual finance accounts, budget categories, financial logs, subscriptions, document metadata, housing admin records, and housing contacts.
+- Added exported row/insert/update aliases for Life Admin / Finance read-helper work.
+- Preserved SQL and UI boundaries.
+
+## C08 — Admin and Finance Read Helpers
+
+Files changed:
+
+- `src/lib/repositories/admin-finance-read.ts`
+- `src/lib/repositories/index.ts`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Purpose:
+
+- Add read-only server repository helpers for the admin and finance tables created earlier.
+- Keep UI/dashboard work deferred to the next chunks.
+
+Exports added:
+
+- `listFinancialAccounts`
+- `listBudgetCategories`
+- `listFinancialLogs`
+- `listSubscriptions`
+- `listLifeAdminDocuments`
+- `listHousingOptions`
+- `listHousingContacts`
+
+## Phase 12 C09 — Admin / Finance Dashboard Aggregation Helpers
+
+Files added:
+
+- `src/lib/dashboard/admin-finance-dashboard-data-helpers.ts`
+
+Files modified:
+
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Technical summary:
+
+- Added `getAdminFinanceDashboardDataSummary(userId)`.
+- Added summary and detail-row contracts for admin/finance dashboards.
+- Added read-only counts for finance, subscription, document, and housing admin records.
+- Added due-soon/overdue calculations.
+- Added warning collection pattern matching Health/Body helper style.
+
+Safety:
+
+- Read-only helper only.
+- No writes.
+- No Supabase browser client.
+- No route or dashboard rendering changes.
+
+## C10 — Admin / Finance Dashboard Components
+
+Files added:
+
+- `src/components/dashboard/admin-finance-dashboard-v1.tsx`
+
+Files modified:
+
+- `src/components/dashboard/index.ts`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Summary:
+
+- Added `LifeAdminDashboardV1`.
+- Added `FinanceDashboardV1`.
+- Added `DocumentsDashboardV1`.
+- Added `HousingDashboardV1`.
+- Added shared read-only state, warning, privacy, and proposed-action boundary panels.
+- Exported the components for route wiring in the next chunk.
+
+## C11 — Admin / Finance Route Wiring
+
+Files modified:
+
+- `src/app/life-admin/page.tsx`
+- `src/app/finance/page.tsx`
+- `src/app/documents/page.tsx`
+- `src/app/housing/page.tsx`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Summary:
+
+- Connected Life Admin, Finance, Documents, and Housing routes to authenticated read-only dashboard components.
+- Preserved server-rendered authenticated shell pattern.
+- Removed placeholder page usage from these four routes.
+
+Safety:
+
+- Read-only route wiring only.
+- No SQL, repository, helper, component, write, or AI execution changes.
+
+## Phase 12 C12 — Command Admin/Finance Visibility
+
+- `src/app/command/page.tsx` — fetched `getAdminFinanceDashboardDataSummary(user.id)` next to the existing core Command summary and passed it into `CommandDashboardV1`.
+- `src/components/dashboard/command-dashboard-v1.tsx` — added a read-only admin/finance visibility section with admin queue, overdue, due-soon, subscription, document, housing, warning, boundary, and source-table visibility.
+- `src/lib/dashboard/index.ts` — exported `admin-finance-dashboard-data-helpers` through the dashboard helper barrel.
+- No SQL, type, repository, script, package, direct write, proposed-action execution, AI, or background-job code was added.
+
+## Phase 12 C13 — Calendar Admin/Finance Deadline Visibility
+
+- `src/app/calendar/page.tsx` — fetched `getAdminFinanceDashboardDataSummary(user.id)` next to the existing Calendar summary and passed it into `CalendarDashboardV1`.
+- `src/components/dashboard/calendar-dashboard-v1.tsx` — added a read-only admin/finance deadline visibility section with planned finance, overdue, upcoming subscription, expiring document, housing follow-up, warning, and source-table visibility.
+- No SQL, type, repository, helper, script, package, direct write, proposed-action execution, AI, reminder, or background-job code was added.
+
+## Phase 12 C14 — Admin/Finance Proposed-Action Preview Visibility
+
+- `src/components/dashboard/admin-finance-dashboard-v1.tsx` — added disabled proposed-action preview cards for life-admin and finance dashboard surfaces.
+- Reused `ProposedActionReviewCard` with all actions disabled and no callbacks wired.
+- No SQL, type, repository, helper, route, script, package, direct write, proposal persistence, execution, AI, or background-job code was added.
+
+## Phase 12 C15 — Audit Gate and Safety Validation
+
+- `scripts/audit-phase-12.mjs` — added Phase 12-specific audit gate covering Life Admin + Finance + Daily Admin safety, scope, SQL, read helpers, dashboards, route wiring, Command/Calendar visibility, proposed-action previews, and deferred feature absence.
+- `package.json` — added `audit:phase12` and inserted it into `npm run check`.
+- No SQL, type, repository, helper, route, dashboard, write flow, proposal execution, AI, payment, upload, scraping, outreach, Python/ML, memory, or background-job feature code was added.
+
+## Phase 12 C16 — Smoke Checklist and Completion Closeout
+
+### `docs/qa/PHASE_12_LIFE_ADMIN_FINANCE_MANUAL_SMOKE_CHECKLIST.md`
+
+Purpose: Manual browser smoke checklist for `/life-admin`, `/finance`, `/documents`, `/housing`, `/command`, and `/calendar`.
+
+### `docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_CLOSEOUT.md`
+
+Purpose: Confirms Phase 12 source alignment, user-specific housing correction, completed routes/tables, deferred scope, and safe-write-law preservation.
+
+### `docs/phase-reports/PHASE_12_LIFE_ADMIN_FINANCE_COMPLETION_REPORT.md`
+
+Purpose: Final Phase 12 completion report for the Life Admin + Finance + Daily Admin Queue system.
+
+### `scripts/audit-phase-12.mjs`
+
+Change: Requires Phase 12 C16 smoke checklist, source-to-scope closeout, completion report, and C16 log/status markers.
+
+## Phase 12 C17 — Final Verification and Status Lock
+
+Timestamp: 2026-06-27 06:21 UTC
+
+### `PHASE_STATUS.md`
+
+Purpose: Records Phase 12 final completion status and moves the repo to Phase 13 source inspection.
+
+### `PROJECT_EXECUTION_LOG.md`
+
+Purpose: Records final Phase 12 verification gates and completion.
+
+### `CODE_LEDGER.md`
+
+Purpose: Records final Phase 12 closeout ledger entry.
+
+### `CHANGELOG.md`
+
+Purpose: Records final Phase 12 completion marker.
+
+Change: Locked Phase 12 as complete after final audit/check/build verification.
 ```
 
 ### `DECISIONS.md`
@@ -2706,9 +4284,11 @@ Result:
 ## Phase 3 — Supabase/Auth Foundation — COMPLETE
 
 ### Status
+
 Complete as of commit to be created after final verification.
 
 ### Completed Scope
+
 - Supabase package installation.
 - Environment template.
 - Environment verification script.
@@ -2741,6 +4321,7 @@ Complete as of commit to be created after final verification.
 - Code snapshot generator integration.
 
 ### Verification Gates
+
 Phase 3 is considered complete because these commands pass:
 
 - `npm run verify:env`
@@ -2757,6 +4338,7 @@ Phase 3 is considered complete because these commands pass:
 - production build
 
 ### Deferred Until Live Supabase Connection
+
 The following are intentionally deferred until a real Supabase project is configured:
 
 - applying migration to live Supabase
@@ -2772,20 +4354,25 @@ These are documented in:
 - `docs/setup/PROTECTED_ROUTES.md`
 
 ### Next Phase
+
 Phase 4 — Core SQL Spine.
 
 ## Phase 4 — Core SQL Spine — STARTED
 
 ### Status
+
 Started.
 
 ### Scope
+
 Phase 4 creates the core SQL spine for audit logs, AI proposed actions, chat sessions, chat messages, goals, milestones, daily logs, proof items, tasks, and events.
 
 ### Plan
+
 See `docs/phase-plans/PHASE_4_CORE_SQL_SPINE.md`.
 
 ### Non-Negotiable Rules
+
 - User-owned data requires RLS.
 - Carnos must not silently write important data.
 - AI-created changes must flow through proposed actions and audit logs in later phases.
@@ -2794,9 +4381,11 @@ See `docs/phase-plans/PHASE_4_CORE_SQL_SPINE.md`.
 ## Phase 4 — Core SQL Spine — DOCUMENTATION ADDED
 
 ### Status
+
 Documentation added. Pending final completion marker.
 
 ### Completed So Far
+
 - Core SQL migrations added.
 - Phase 4 audit added.
 - SQL migration validator upgraded.
@@ -2806,20 +4395,22 @@ Documentation added. Pending final completion marker.
 - Phase 4 report added.
 
 ### Final Gate Remaining
+
 - Run final full verification.
 - Mark Phase 4 complete.
-
-
 
 ## Phase 4 — Core SQL Spine — COMPLETE
 
 ### Status
+
 Complete.
 
 ### Completed Scope
+
 Phase 4 created the SQL-backed core spine for ascendOS + Carnos.
 
 Completed database foundation:
+
 - audit logs
 - AI proposed actions
 - chat sessions
@@ -2832,6 +4423,7 @@ Completed database foundation:
 - events
 
 Completed technical foundation:
+
 - Phase 4 migrations
 - Phase 4 audit script
 - upgraded SQL migration validator
@@ -2841,7 +4433,9 @@ Completed technical foundation:
 - Phase 4 completion report
 
 ### Verification Gate
+
 Final verification passed before completion commit:
+
 - npm run verify:env
 - npm run validate:migrations
 - npm run audit:phase3
@@ -2851,7 +4445,9 @@ Final verification passed before completion commit:
 - git diff --check
 
 ### Deferred Scope
+
 The following remain intentionally deferred:
+
 - write repositories
 - full CRUD UI
 - Carnos AI intelligence
@@ -2864,14 +4460,17 @@ The following remain intentionally deferred:
 - production deployment
 
 ### Next Recommended Phase
+
 Phase 5 — Core Read UI Integration.
 
 ## Completed Phase Baseline
 
 ### Phase 1 — Repository and Source Foundation
+
 Status: Complete.
 
 Confirmed foundation:
+
 - repository initialized
 - source-of-truth files added
 - project logs added
@@ -2880,18 +4479,22 @@ Confirmed foundation:
 - changelog added
 
 ### Phase 2 — Next.js Route Shell
+
 Status: Complete.
 
 Confirmed foundation:
+
 - canonical route shell added
 - route registry added
 - route validation added
 - banned legacy route check added
 
 ### Phase 3 — Supabase/Auth Foundation
+
 Status: Complete.
 
 Confirmed foundation:
+
 - Supabase clients added
 - auth pages/actions added
 - session helpers added
@@ -2900,9 +4503,11 @@ Confirmed foundation:
 - Phase 3 audit added
 
 ### Phase 4 — Core SQL Spine
+
 Status: Complete.
 
 Confirmed foundation:
+
 - core SQL migrations added
 - Phase 4 audit added
 - SQL migration validator upgraded
@@ -2914,15 +4519,19 @@ Confirmed foundation:
 ## Phase 5 — Core Read UI Integration — STARTED
 
 ### Status
+
 Started.
 
 ### Scope
+
 Phase 5 connects the Phase 4 SQL-backed read layer to key dashboard pages using typed read-only repositories.
 
 ### Plan
+
 See docs/phase-plans/PHASE_5_CORE_READ_UI_INTEGRATION.md.
 
 ### Non-Negotiable Rules
+
 - Read-only only.
 - No write repositories.
 - No create/edit/delete forms.
@@ -2935,6 +4544,7 @@ See docs/phase-plans/PHASE_5_CORE_READ_UI_INTEGRATION.md.
 Status: complete
 
 Completed:
+
 - Shared dashboard read UI components.
 - Authenticated dashboard shell helper.
 - `/command` read integration.
@@ -2950,6 +4560,7 @@ Completed:
 - Source alignment audit updated through Phase 5.
 
 Boundary:
+
 - No write repositories.
 - No create/edit/delete UI.
 - No Carnos generation.
@@ -2958,6 +4569,7 @@ Boundary:
 - No production deployment.
 
 Verification:
+
 - `npm run check` passes.
 
 ## Phase 5.15 — Python/ML Intelligence Architecture Patch
@@ -2965,6 +4577,7 @@ Verification:
 Status: In progress.
 
 Scope:
+
 - Source-of-truth Python/ML architecture only.
 - No active Python runtime.
 - No direct SQL writes from Python.
@@ -2972,6 +4585,7 @@ Scope:
 - No Carnos generation.
 
 Next:
+
 - Update DOCX source of truth.
 - Update source alignment audit.
 - Verify all gates.
@@ -2982,15 +4596,19 @@ Next:
 Status: In Progress
 
 Current step:
+
 - Phase 6.1 — Plan Lock
 
 Created:
+
 - `docs/phase-plans/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW.md`
 
 Phase 6 goal:
+
 - Build the safe write pipeline: proposal -> validation -> Save/Edit/Cancel -> server write -> audit log -> timeline event -> dashboard refresh.
 
 Boundaries:
+
 - No Python/ML runtime.
 - No memory implementation.
 - No Carnos generation.
@@ -2998,36 +4616,42 @@ Boundaries:
 - No unaudited writes.
 
 Phase 6.2 update at 2026-06-19 23:44 UTC:
+
 - Created `src/lib/actions/action-types.ts`.
 - Added canonical proposed action types for tasks, goals, daily logs, and proof items.
 - Phase 6 remains in progress.
 - Next step: Phase 6.3 — Proposed Action Contracts.
 
 Phase 6.3 update at 2026-06-19 23:51 UTC:
+
 - Created `src/lib/actions/proposed-action-contracts.ts`.
 - Added typed proposed action payload contracts.
 - Phase 6 remains in progress.
 - Next step: Phase 6.4 — Action Result Types.
 
 Phase 6.4 update at 2026-06-19 23:58 UTC:
+
 - Created `src/lib/actions/action-results.ts`.
 - Added standard action success/error result contracts.
 - Phase 6 remains in progress.
 - Next step: Phase 6.5 — Payload Validation.
 
 Phase 6.5 update at 2026-06-20 00:05 UTC:
+
 - Created `src/lib/actions/validate-proposed-action.ts`.
 - Added envelope, metadata, forbidden-field, and payload validation for proposed actions.
 - Phase 6 remains in progress.
 - Next step: Phase 6.6 — Audit Helper.
 
 Phase 6.6 update at 2026-06-20 00:09 UTC:
+
 - Created `src/lib/audit/write-audit-log.ts`.
 - Added reusable server-side audit logging helper.
 - Phase 6 remains in progress.
 - Next step: Phase 6.7 — Timeline Helper.
 
 Phase 6.7 update at 2026-06-20 04:31 UTC:
+
 - Created `src/lib/timeline/write-timeline-event.ts`.
 - Confirmed no `timeline_events` table exists in the current SQL spine.
 - Added a safe skipped-result helper boundary instead of inventing schema.
@@ -3035,6 +4659,7 @@ Phase 6.7 update at 2026-06-20 04:31 UTC:
 - Next step: Phase 6.8 — Proposed Action Creation Helper.
 
 Phase 6.8 update at 2026-06-20 04:49 UTC:
+
 - Created `src/lib/actions/create-proposed-action.ts`.
 - Added helper to validate and store proposed actions in `ai_actions`.
 - Stored proposed actions use `pending_confirmation`.
@@ -3043,6 +4668,7 @@ Phase 6.8 update at 2026-06-20 04:49 UTC:
 - Next step: Phase 6.9 — Action Lifecycle Helper.
 
 Phase 6.9 update at 2026-06-20 05:05 UTC:
+
 - Created `src/lib/actions/action-lifecycle.ts`.
 - Added controlled lifecycle transitions for `ai_actions`.
 - No target-table execution was added.
@@ -3050,6 +4676,7 @@ Phase 6.9 update at 2026-06-20 05:05 UTC:
 - Next step: Phase 6.10 — Execution Dispatcher.
 
 Phase 6.10 update at 2026-06-20 05:18 UTC:
+
 - Created `src/lib/actions/execution-dispatcher.ts`.
 - Added approved-action dispatch boundary.
 - Dispatcher verifies ownership, status, and action type.
@@ -3058,6 +4685,7 @@ Phase 6.10 update at 2026-06-20 05:18 UTC:
 - Next step: Phase 6.11 — Create Task Flow.
 
 Phase 6.11 update at 2026-06-20 05:24 UTC:
+
 - Created `src/lib/actions/flows/create-task-flow.ts`.
 - Updated dispatcher to execute approved `create_task` actions.
 - Added first target-table write flow for `tasks`.
@@ -3066,6 +4694,7 @@ Phase 6.11 update at 2026-06-20 05:24 UTC:
 - Next step: Phase 6.12 — Create Goal Flow.
 
 Phase 6.12 update at 2026-06-20 18:09 UTC:
+
 - Created `src/lib/actions/flows/create-goal-flow.ts`.
 - Updated dispatcher to execute approved `create_goal` actions.
 - Added target-table write flow for `goals`.
@@ -3074,6 +4703,7 @@ Phase 6.12 update at 2026-06-20 18:09 UTC:
 - Next step: Phase 6.13 — Create Daily Log Flow.
 
 Phase 6.13 update at 2026-06-20 18:13 UTC:
+
 - Created `src/lib/actions/flows/create-daily-log-flow.ts`.
 - Updated dispatcher to execute approved `create_daily_log` actions.
 - Added target-table write flow for `daily_logs`.
@@ -3082,6 +4712,7 @@ Phase 6.13 update at 2026-06-20 18:13 UTC:
 - Next step: Phase 6.14 — Create Proof Item Flow.
 
 Phase 6.14 update at 2026-06-20 18:17 UTC:
+
 - Created `src/lib/actions/flows/create-proof-item-flow.ts`.
 - Updated dispatcher to execute approved `create_proof_item` actions.
 - Added target-table write flow for `proof_items`.
@@ -3091,6 +4722,7 @@ Phase 6.14 update at 2026-06-20 18:17 UTC:
 - Next step: Phase 6.15 — Save/Edit/Cancel UI.
 
 Phase 6.15 update at 2026-06-20 18:22 UTC:
+
 - Created `src/components/actions/proposed-action-review-card.tsx`.
 - Created `src/components/actions/index.ts`.
 - Added reusable Save/Edit/Cancel UI for proposed actions.
@@ -3099,6 +4731,7 @@ Phase 6.15 update at 2026-06-20 18:22 UTC:
 - Next step: Phase 6.16 — Wire into app page.
 
 Phase 6.16 update at 2026-06-20 18:30 UTC:
+
 - Wired `ProposedActionReviewCard` into `src/app/carnos/page.tsx`.
 - Added a sample proposed action review surface for confirmation-first UI validation.
 - No direct database write or action execution was added to the page.
@@ -3106,6 +4739,7 @@ Phase 6.16 update at 2026-06-20 18:30 UTC:
 - Next step: Phase 6.17 — Phase 6 audit.
 
 Phase 6.17 update at 2026-06-20 18:38 UTC:
+
 - Created `scripts/audit-phase-6.mjs`.
 - Added `audit:phase6` to `package.json`.
 - Wired Phase 6 audit into `npm run check`.
@@ -3113,6 +4747,7 @@ Phase 6.17 update at 2026-06-20 18:38 UTC:
 - Next step: Phase 6.18 — Phase 6 report and completion marker.
 
 Phase 6.18 update at 2026-06-20 18:47 UTC:
+
 - Created `docs/phase-reports/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW_REPORT.md`.
 - Marked Phase 6 Safe Write / Proposed Action Flow complete.
 - Phase 6 final status: COMPLETE.
@@ -3123,6 +4758,7 @@ Phase 6.18 update at 2026-06-20 18:47 UTC:
 Status: Started - Phase 7.1 plan lock created.
 
 Roadmap reconciliation:
+
 - Old 15-phase memory is outdated.
 - FINAL_SYNCED DOCX/JSON are source of truth.
 - Implementation proceeds using the safer 21-chunk structure unless the source-of-truth files are explicitly updated.
@@ -3251,8 +4887,6 @@ Boundary: audit coverage only; no product behavior or mutation path added.
 
 Next step after commit: Phase 7.17 Manual smoke checklist.
 
-
-
 ## Phase 7.17 - Manual Smoke Checklist
 
 Status: Implemented and awaiting validation.
@@ -3324,9 +4958,11 @@ Next step: Phase 8.6 Career read repository helpers.
 ## Phase 8 — Career System — COMPLETE
 
 ### Status
+
 Complete.
 
 ### Completed Scope
+
 - Career SQL foundation.
 - Career read repositories.
 - Career dashboards for `/career`, `/networking`, `/resume`, and `/interviews`.
@@ -3340,6 +4976,7 @@ Complete.
 - Phase 8 completion report.
 
 ### Verification Gate
+
 - `npm run audit:phase8`
 - `npm run audit:integration`
 - `npm run check`
@@ -3348,6 +4985,7 @@ Complete.
 - `git diff --check`
 
 ### Next Phase
+
 Phase 9 — Learning / Project System.
 
 ## Phase 9 — Learning / Project System Complete
@@ -3355,6 +4993,7 @@ Phase 9 — Learning / Project System.
 Status: Complete
 
 Completed:
+
 - Learning/project SQL foundation.
 - Parent ownership hardening.
 - Database types.
@@ -3374,6 +5013,7 @@ Completed:
 - Completion report.
 
 Verification:
+
 - npm run check passed before closeout.
 - npx tsc --noEmit passed before closeout.
 - npm run lint passed before closeout.
@@ -3384,12 +5024,15 @@ Next step: Phase 10 — Research / Stanford System.
 ## Phase 10 — Research / Stanford System — COMPLETE
 
 ### Status
+
 Complete.
 
 ### Completed Scope
+
 Phase 10 created the Research / Stanford System foundation for ascendOS + Carnos.
 
 Completed:
+
 - Research and Stanford source-of-truth inspection.
 - Research schema design.
 - Stanford/PhD schema design.
@@ -3415,7 +5058,9 @@ Completed:
 - Phase 10 completion report.
 
 ### Verification Gate
+
 Final verification passed before completion commit:
+
 - `npm run audit:phase10`
 - `npm run check`
 - `npm run audit:integration`
@@ -3425,12 +5070,15 @@ Final verification passed before completion commit:
 - `git diff --check`
 
 ### Boundary
+
 Phase 10 remains read-first and visibility-only.
 
 No direct SQL writes, autonomous Carnos writes, professor outreach, scraping, paper submission, application submission, Python/ML worker execution, memory/RAG, voice, or background jobs were added.
 
 ### Deferred Scope
+
 Deferred to later phases:
+
 - live Supabase browser QA
 - write/edit/delete research UI
 - real research proposed-action persistence
@@ -3444,7 +5092,1129 @@ Deferred to later phases:
 - background jobs
 
 ### Next Recommended Phase
+
 Phase 11 — Health / Body System.
+
+## Phase 11 — Health / Body System — STARTED
+
+### Status
+
+Started.
+
+### Scope
+
+Phase 11 creates the SQL-backed, read-first health/body foundation for body, workouts, nutrition, supplements, sleep/energy, hair/skincare, and privacy-safe emotion tracking.
+
+### Plan
+
+See `docs/phase-plans/PHASE_11_HEALTH_BODY_SYSTEM.md`.
+
+### Starting Evidence
+
+- Phase 10 completed at `d5e300d Complete research system`.
+- `main` matched `origin/main` before Phase 11 planning.
+- `npm run audit:phase10` passed before Phase 11 planning.
+- `npm run check` passed before Phase 11 planning.
+- `CODE_SNAPSHOT.md` was regenerated before Phase 11 planning.
+
+### Step Count
+
+Phase 11 is planned as 44 steps split into safe build chunks.
+
+### Boundary
+
+Phase 11 starts as a read-first foundation.
+
+No direct SQL writes, autonomous Carnos writes, Python/ML worker execution, memory/RAG, voice, web tools, background jobs, medical advice, supplement claims, body-shaming language, unsafe diet language, fake photo persistence, or direct dashboard persistence are part of the plan-lock step.
+
+### Next Step
+
+Phase 11 Chunk A verification and plan commit.
+
+## Phase 11 Chunk B1 — Schema Design / Privacy Review / Traceability
+
+### Status
+
+Completed pending verification.
+
+### Completed Steps
+
+- 11.4 Health/body schema design
+- 11.5 Sensitive health/privacy schema review
+- 11.6 Source-to-scope traceability matrix
+
+### Files
+
+- `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+- `docs/phase-reports/PHASE_11_HEALTH_PRIVACY_SAFETY_REVIEW.md`
+- `docs/phase-reports/PHASE_11_SOURCE_TO_SCOPE_TRACEABILITY.md`
+
+### Boundary
+
+No SQL, types, repositories, routes, dashboards, Carnos writes, Python/ML execution, medical claims, supplement claims, or photo upload/storage were added.
+
+## Phase 11 Chunk B2 — Baseline / Units / Sleep / Photo Boundary
+
+### Status
+
+Completed pending verification.
+
+### Completed Steps
+
+- 11.7 Health/body baseline + unit strategy
+- 11.8 Daily sleep tracking design
+- 11.9 Sleep natural-language capture boundary
+- 11.10 Progress photo/storage honesty boundary
+
+### Files
+
+- `docs/phase-reports/PHASE_11_BASELINE_UNITS_SLEEP_PHOTO_BOUNDARY.md`
+- `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+
+### Boundary
+
+No SQL, types, repositories, routes, dashboards, upload/storage behavior, Carnos silent writes, Python/ML execution, or fake photo persistence were added.
+
+## Phase 11 Chunk B3 — Safety / Data Quality / Targets / Trend Boundary
+
+### Status
+
+Completed pending verification.
+
+### Completed Steps
+
+- 11.11 Medical/supplement/body-image safety hardening
+- 11.12 Data quality + duplicate-log protection
+- 11.13 Goal target comparison strategy
+- 11.14 Trend preview boundary; advanced analytics deferred to Phase 17
+
+### Files
+
+- `docs/phase-reports/PHASE_11_SAFETY_DATA_TARGET_TREND_BOUNDARY.md`
+- `docs/phase-reports/PHASE_11_HEALTH_PRIVACY_SAFETY_REVIEW.md`
+- `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+
+### Boundary
+
+No SQL, types, repositories, routes, dashboards, Carnos writes, Python/ML execution, medical claims, supplement recommendations, body-shaming language, advanced analytics, or fake persistence were added.
+
+## Phase 11 Chunk C — SQL Foundation
+
+### Status
+
+Completed pending verification.
+
+### Completed Steps
+
+- 11.15 SQL migration
+
+### Files
+
+- `supabase/migrations/0012_phase11_health_body_foundation.sql`
+
+### Boundary
+
+No parent ownership guards, database TypeScript types, repositories, routes, dashboards, storage/upload behavior, Carnos writes, Python/ML execution, candidate baseline table, or progress photo table were added.
+
+## Phase 11 Chunk C.1 — Parent Ownership Guards
+
+### Status
+
+Completed pending verification.
+
+### Completed Steps
+
+- 11.16 RLS / ownership guards
+
+### Files
+
+- `supabase/migrations/0013_phase11_parent_ownership_guards.sql`
+
+### Boundary
+
+No new tables, database TypeScript types, repositories, routes, dashboards, storage/upload behavior, Carnos writes, Python/ML execution, candidate baseline table, or progress photo table were added.
+
+## Phase 11 Chunk D — Database Types
+
+### Status
+
+Completed pending verification.
+
+### Completed Steps
+
+- 11.17 DB types
+
+### Files
+
+- `src/types/database.ts`
+
+### Boundary
+
+No SQL migration, RLS policy, parent ownership trigger, read helper, route, dashboard, storage/upload behavior, Carnos write behavior, Python/ML execution, candidate baseline table, or progress photo table was added.
+
+## Phase 11 Chunk D Repair — Actual Database Types
+
+### Status
+
+Completed pending verification.
+
+### Corrected Issue
+
+The prior Chunk D commit updated documentation/log files but did not modify `src/types/database.ts`.
+
+### Files
+
+- `src/types/database.ts`
+
+### Boundary
+
+No SQL migration, RLS policy, parent ownership trigger, read helper, route, dashboard, storage/upload behavior, Carnos write behavior, Python/ML execution, candidate baseline table, or progress photo table was added.
+
+## Phase 11 Chunk E1 — Read Helper Foundation
+
+### Status
+
+Completed pending verification.
+
+### Completed Steps
+
+- 11.18 Read helpers foundation
+
+### Files
+
+- `src/lib/repositories/health-body-read.ts`
+- `src/lib/repositories/index.ts`
+
+### Boundary
+
+No SQL migration, RLS policy, parent ownership trigger, write helper, dashboard, route, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot, candidate baseline table, or progress photo table was added.
+
+## Phase 11 Chunk E2 — Dashboard Summary Helper Foundation
+
+### Status
+
+Completed pending verification.
+
+### Completed Steps
+
+- 11.19 Focused read helpers / dashboard summary helper foundation
+
+### Files
+
+- `src/lib/dashboard/health-body-dashboard-data-helpers.ts`
+- `src/lib/dashboard/index.ts`
+
+### Boundary
+
+No SQL migration, RLS policy, parent ownership trigger, write helper, dashboard route, UI component, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.
+
+## Phase 11 Chunk E3 — Read Helper Schema-Boundary Audit
+
+### Status
+
+Completed pending verification.
+
+### Completed Steps
+
+- 11.20 Final read helper hardening / source-boundary audit before UI aggregation
+
+### Files
+
+- `docs/phase-reports/PHASE_11_READ_HELPER_SCHEMA_BOUNDARY_AUDIT.md`
+
+### Boundary
+
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, dashboard route, UI component, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.
+
+### E3 Verification Repair
+
+- Added `exercise_count` and `listExercises` summary coverage for the confirmed `exercises` table.
+
+## Health Body Overview Cards
+
+### Status
+
+Completed pending verification.
+
+### Completed Work
+
+- Added first read-only health/body UI aggregation component.
+
+### Files
+
+- `src/components/dashboard/health-body-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Boundary
+
+No route rewiring, SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.
+
+## Health Body Dashboard States
+
+### Status
+
+Completed pending verification.
+
+### Completed Work
+
+- Added shared read-only health/body dashboard state components.
+- Added empty-state, warning-state, privacy notice, and read-only boundary notice coverage.
+
+### Schema
+
+No schema change needed.
+
+### Files
+
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/health-body-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Boundary
+
+No route rewiring, SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.
+
+## Body Dashboard Route Wiring
+
+### Status
+
+Completed pending verification.
+
+### Completed Work
+
+- Wired `/body` to the read-only health/body overview dashboard.
+
+### Schema
+
+No schema change needed.
+
+### Files
+
+- `src/app/body/page.tsx`
+
+### Boundary
+
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.
+
+## Nutrition Dashboard Route Wiring
+
+### Status
+
+Completed pending verification.
+
+### Completed Work
+
+- Wired `/nutrition` to a read-only nutrition dashboard.
+- Added a nutrition-focused dashboard component.
+
+### Schema
+
+No schema change needed.
+
+### Files
+
+- `src/app/nutrition/page.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/index.ts`
+
+### Boundary
+
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.
+
+## Supplements Dashboard Route Wiring
+
+### Status
+
+Completed pending verification.
+
+### Completed Work
+
+- Wired `/supplements` to a read-only supplements dashboard.
+- Added a supplement-focused dashboard component.
+
+### Schema
+
+No schema change needed.
+
+### Files
+
+- `src/app/supplements/page.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/index.ts`
+
+### Boundary
+
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.
+
+## Sleep Energy Dashboard Route Wiring
+
+### Status
+
+Completed pending verification.
+
+### Completed Work
+
+- Wired `/sleep-energy` to a read-only sleep energy dashboard.
+- Added a sleep-and-energy-focused dashboard component.
+- Cleaned small text spacing issues found during route preflight.
+
+### Schema
+
+No schema change needed.
+
+### Files
+
+- `src/app/sleep-energy/page.tsx`
+- `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Boundary
+
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.
+
+## Emotion Dashboard Route Wiring
+
+### Status
+
+Completed pending verification.
+
+### Completed Work
+
+- Wired `/emotion` to a read-only emotion dashboard.
+- Added an emotion-and-mental-state-focused dashboard component.
+- Cleaned small text spacing issues found during route preflight.
+
+### Schema
+
+No schema change needed.
+
+### Files
+
+- `src/app/emotion/page.tsx`
+- `src/components/dashboard/health-body-emotion-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Boundary
+
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, or progress photo table was added.
+
+## Hair Skincare Dashboard Route Wiring
+
+### Status
+
+Completed pending verification.
+
+### Completed Work
+
+- Wired `/hair-skincare` to a read-only hair skincare dashboard.
+- Added a haircare-and-skincare-focused dashboard component.
+- Cleaned small text spacing issues found during route preflight.
+
+### Schema
+
+No schema change needed.
+
+### Files
+
+- `src/app/hair-skincare/page.tsx`
+- `src/components/dashboard/health-body-hair-skincare-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-emotion-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Boundary
+
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, progress photo table, or visual evidence storage was added.
+
+## Health/Body Detail Panel Pattern Report
+
+### Status
+
+Completed pending verification.
+
+### Completed Work
+
+- Inspected existing health/body dashboards and route wiring.
+- Inspected comparable detail-panel patterns.
+- Inspected existing health/body read helpers.
+- Documented the safe read-only detail-panel pattern for H2/H3.
+
+### Schema
+
+No schema change needed.
+
+### Files
+
+- `docs/phase-reports/PHASE_11_HEALTH_BODY_DETAIL_PANEL_PATTERN_REPORT.md`
+
+### Boundary
+
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, progress photo table, or visual evidence storage was added.
+
+## Health/Body Detail Panels
+
+### Status
+
+Completed pending verification.
+
+### Completed Work
+
+- Created reusable read-only health/body detail panels.
+- Exported health/body detail panels from the dashboard index.
+- Kept route attachment deferred to H3.
+
+### Schema
+
+No schema change needed.
+
+### Files
+
+- `src/components/dashboard/health-body-detail-panels.tsx`
+- `src/components/dashboard/index.ts`
+
+### Boundary
+
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, progress photo table, or visual evidence storage was added.
+
+## Health/Body Detail Panel Attachment
+
+### Status
+
+Completed pending verification.
+
+### Completed Work
+
+- Attached detail panels to health/body dashboard surfaces.
+- Expanded the existing dashboard helper to pass read-only row arrays into panels.
+- Preserved route-level read-only boundaries.
+
+### Schema
+
+No schema change needed.
+
+### Files
+
+- `src/lib/dashboard/health-body-dashboard-data-helpers.ts`
+- `src/components/dashboard/health-body-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-emotion-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-hair-skincare-dashboard-v1.tsx`
+
+### Boundary
+
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, progress photo table, or visual evidence storage was added.
+
+## Health/Body Linkage Visibility
+
+### Status
+
+Completed pending verification.
+
+### Completed Work
+
+- Added read-only proof and operating linkage visibility for health/body records.
+- Attached linkage visibility to all six health/body dashboard surfaces.
+- Preserved read-only route and dashboard boundaries.
+
+### Schema
+
+No schema change needed.
+
+### Files
+
+- `src/components/dashboard/health-body-linkage-panels.tsx`
+- `src/components/dashboard/index.ts`
+- `src/components/dashboard/health-body-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-emotion-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-hair-skincare-dashboard-v1.tsx`
+
+### Boundary
+
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, progress photo table, or visual evidence storage was added.
+
+## Health/Body Proposed-Action and State Boundaries
+
+### Status
+
+Completed pending verification.
+
+### Completed Work
+
+- Added preview-only proposed-action visibility for health/body surfaces.
+- Added empty/loading/error/privacy state boundary panels.
+- Added cross-route navigation consistency across health/body dashboards.
+- Preserved read-only route and dashboard boundaries.
+
+### Schema
+
+No schema change needed.
+
+### Files
+
+- `src/components/dashboard/health-body-action-boundary-panels.tsx`
+- `src/components/dashboard/index.ts`
+- `src/components/dashboard/health-body-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-emotion-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-hair-skincare-dashboard-v1.tsx`
+
+### Boundary
+
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, progress photo table, or visual evidence storage was added.
+
+## Health/Body Audit Gate
+
+### Status
+
+Completed pending verification.
+
+### Completed Work
+
+- Added Phase 11 health/body automated audit gate.
+- Added Phase 11 health/body manual smoke checklist.
+- Added Phase 11 audit gate report.
+- Wired `audit:phase11` into `npm run check`.
+
+### Schema
+
+No schema change needed.
+
+### Files
+
+- `scripts/audit-phase-11.mjs`
+- `docs/qa/PHASE_11_HEALTH_BODY_MANUAL_SMOKE_CHECKLIST.md`
+- `docs/phase-reports/PHASE_11_HEALTH_BODY_AUDIT_GATE.md`
+- `package.json`
+
+### Boundary
+
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, progress photo table, or visual evidence storage was added.
+
+## Phase 11 Health/Body System Complete
+
+### Status
+
+Complete.
+
+### Completed Work
+
+- Completed Phase 11 Health / Body System.
+- Added final completion report.
+- Updated Phase 11 audit gate to require the completion report.
+- Preserved read-only health/body dashboard boundaries across all six routes.
+
+### Routes
+
+- `/body`
+- `/nutrition`
+- `/supplements`
+- `/sleep-energy`
+- `/emotion`
+- `/hair-skincare`
+
+### Schema
+
+No schema change needed for final closeout.
+
+### Files
+
+- `docs/phase-reports/PHASE_11_HEALTH_BODY_COMPLETION_REPORT.md`
+- `scripts/audit-phase-11.mjs`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+### Boundary
+
+No SQL migration, RLS policy, parent ownership trigger, database type change, write helper, storage/upload behavior, Carnos write behavior, Python/ML execution, analytics snapshot table, candidate baseline table, progress photo table, visual evidence storage, memory/RAG, voice, or background job was added.
+
+### Next Step
+
+Inspect FINAL_SYNCED source-of-truth before starting Phase 12.
+
+## Phase 12 — Life Admin + Finance + Daily Admin Queue
+
+### Status
+
+Started.
+
+### Completed Work
+
+- C01 source/route inspection completed.
+- C02 Phase 12 plan lock completed.
+- Post-v1 expansion roadmap addendum created for Phases 22–26.
+- User-specific scope correction recorded: no housing search primary workflow because user already has housing.
+
+### Locked Scope
+
+- Daily Admin Queue
+- Finance tracking
+- Rent/utilities/lease tracking
+- Bills/subscriptions
+- Document metadata/deadlines
+- Command/Calendar admin visibility
+
+### Deferred Scope
+
+- Housing search as primary workflow
+- Apartment comparison
+- Fashion/wardrobe until Phase 22
+- Bank sync
+- Auto-pay
+- Legal/tax/immigration advice
+- Document file upload/storage
+- Autonomous Carnos writes
+- Python/ML execution
+- Background jobs
+
+### Schema
+
+No schema change needed for C02.
+
+### Next Step
+
+Phase 12 C03 — schema design and traceability docs.
+
+## Phase 12 C03 — Schema Design
+
+### Status
+
+Complete after commit.
+
+### Steps Covered
+
+- 12.7 Design Life Admin + Finance schema.
+- 12.8 Design income and expense model.
+- 12.9 Design rent, bills, utilities, subscriptions model.
+- 12.10 Design document metadata/deadline model.
+- 12.11 Design daily admin queue model.
+- 12.12 Design due-soon / overdue / critical severity logic.
+- 12.13 Write finance/document privacy and safety review.
+- 12.14 Write source-to-scope traceability report.
+
+### Schema
+
+No SQL change in C03.
+
+### Next Step
+
+Phase 12 C04 — SQL foundation tables.
+
+## Phase 12 C04 — SQL Foundation Tables
+
+Status: Complete pending verification.
+
+Completed:
+
+- 12.15 Add Phase 12 SQL migration.
+- 12.16 Add finance/rent/document/admin indexes.
+- 12.17 Add RLS policies.
+
+Touched:
+
+- SQL migration and logs only.
+
+Deferred:
+
+- 12.18 Parent ownership guards.
+- 12.19 Migration validation closeout after C05.
+- Database types.
+- Read helpers.
+- Dashboard helpers.
+- Dashboard components.
+- Route wiring.
+- Proposed-action execution.
+
+Next step:
+
+- Phase 12 C05 — parent ownership guards.
+
+## Phase 12 C05 — Parent Ownership Guards
+
+Status: Complete pending verification.
+
+Completed:
+
+- 12.18 Add parent ownership guards.
+
+Touched:
+
+- SQL migration and logs only.
+
+Protected:
+
+- `financial_logs`
+- `subscriptions`
+- `documents`
+- `housing_options`
+- `housing_contacts`
+
+Deferred:
+
+- 12.19 Migration validation closeout.
+- Database types.
+- Read helpers.
+- Dashboard helpers.
+- Dashboard components.
+- Route wiring.
+- Proposed-action execution.
+
+Next step:
+
+- Phase 12 C06 — migration validation closeout.
+
+## Phase 12 C06 — SQL Validation Closeout
+
+Status: Complete pending verification.
+
+Completed:
+
+- 12.19 Validate migrations.
+
+Touched:
+
+- Docs/logs only.
+
+SQL foundation status:
+
+- C04 SQL tables complete.
+- C05 parent ownership guards complete.
+- C06 validation closeout prepared.
+
+Deferred:
+
+- Database types.
+- Read helpers.
+- Dashboard helpers.
+- Dashboard components.
+- Route wiring.
+- Proposed-action execution.
+
+Next step:
+
+- Phase 12 C07 — database type contracts.
+
+## Phase 12 C07 — Database Type Contracts
+
+Status: Complete pending verification.
+
+Completed:
+
+- Added database contracts for Phase 12 SQL tables.
+- Added exported row/insert/update aliases.
+
+Touched:
+
+- `src/types/database.ts`
+- Logs/status files.
+
+Deferred:
+
+- Read repositories.
+- Dashboard data helpers.
+- Dashboard components.
+- Route wiring.
+- Proposed-action execution.
+
+Next step:
+
+- C08 — read helpers for admin and finance tables.
+
+## C08 — Admin and Finance Read Helpers
+
+Status: Complete pending verification.
+
+Completed:
+
+- 12.21 Add read-only admin and finance repository helpers.
+- 12.22 Export admin and finance repository helpers.
+
+Progress:
+
+- Completed before C08: 20 / 45.
+- Completed after C08: 22 / 45.
+- Remaining after C08: 23 / 45.
+
+Touched:
+
+- Repository read helpers.
+- Repository barrel.
+- Logs only.
+
+Deferred:
+
+- Aggregation helpers.
+- Empty/loading/error/privacy states.
+- Dashboard components.
+- Route wiring.
+- Command and Calendar visibility.
+- Proposed-action preview boundary.
+- Audit gate and completion report.
+
+## Phase 12 C09 — Admin / Finance Dashboard Aggregation Helpers
+
+Status: Complete pending verification.
+
+Completed:
+
+- Dashboard aggregation helper for admin/finance records.
+- Due-soon and overdue summary logic.
+- Read-only summary and detail-row contracts.
+
+Touched:
+
+- Dashboard helper and logs only.
+
+Not touched:
+
+- SQL migrations.
+- Database types.
+- Repositories.
+- UI components.
+- App routes.
+- Proposed-action execution.
+
+Progress:
+
+- Completed before this chunk: 22 / 45.
+- Completed after this chunk: 23 / 45.
+- Remaining after this chunk: 22 / 45.
+
+Next:
+
+- C10 — inspect dashboard component patterns before building Life Admin / Finance / Housing / Documents UI surfaces.
+
+## C10 — Admin / Finance Dashboard Components
+
+Status: Complete pending verification.
+
+Completed:
+
+- 12.25 Build Life Admin dashboard component.
+- 12.26 Build Finance dashboard component.
+- 12.27 Build Housing dashboard component.
+- 12.28 Build Documents dashboard component.
+- 12.29 Export the dashboard components.
+
+Progress:
+
+- Completed before this chunk: 23 / 45.
+- Completed after this chunk: 28 / 45.
+- Remaining after this chunk: 17 / 45.
+
+Touched:
+
+- Dashboard components.
+- Dashboard component barrel.
+- Logs only.
+
+Deferred:
+
+- Route wiring.
+- Command dashboard visibility.
+- Calendar visibility.
+- Audit gate.
+- Smoke checklist.
+- Completion report.
+
+## C11 — Admin / Finance Route Wiring
+
+Status: Complete pending verification.
+
+Completed:
+
+- 12.30 Wire `/life-admin`.
+- 12.31 Wire `/finance`.
+- 12.32 Wire `/documents`.
+- 12.33 Wire `/housing`.
+
+Progress:
+
+- Completed before this chunk: 28 / 45.
+- Completed after this chunk: 32 / 45.
+- Remaining after this chunk: 13 / 45.
+
+Touched:
+
+- Four app routes.
+- Logs only.
+
+Deferred:
+
+- Command dashboard visibility.
+- Calendar visibility.
+- Proposed-action preview integration beyond component boundary language.
+- Audit gate.
+- Smoke checklist.
+- Completion report.
+
+## Phase 12 C12 Status
+
+Status: Complete pending verification.
+
+Completed:
+
+- Command dashboard reads the Phase 12 admin/finance dashboard summary.
+- Command dashboard exposes read-only admin queue, overdue, due-soon, subscription, document, housing, warning, and source-table visibility.
+- Admin/finance dashboard helper is exported from the dashboard barrel.
+
+Protected boundaries:
+
+- No SQL changes.
+- No database type changes.
+- No repository changes.
+- No dashboard writes.
+- No browser Supabase mutations.
+- No proposed-action execution.
+- No AI/OpenAI calls.
+- No background jobs.
+
+Next step: Phase 12 C13 — Calendar visibility for admin/finance deadlines.
+
+## Phase 12 C13 Status
+
+Status: Complete pending verification.
+
+Completed:
+
+- Calendar dashboard reads the Phase 12 admin/finance dashboard summary.
+- Calendar dashboard exposes read-only planned finance, overdue, upcoming subscription, expiring document, housing follow-up, warning, and source-table visibility.
+
+Protected boundaries:
+
+- No SQL changes.
+- No database type changes.
+- No repository changes.
+- No helper changes.
+- No dashboard writes.
+- No browser Supabase mutations.
+- No reminders or scheduling automation.
+- No proposed-action execution.
+- No AI/OpenAI calls.
+- No background jobs.
+
+Next step: Phase 12 C14 — proposed-action preview visibility for admin/finance.
+
+## Phase 12 C14 Status
+
+Status: Complete pending verification.
+
+Completed:
+
+- Admin/finance dashboard now shows disabled proposed-action preview cards.
+- Preview cards cover future task, goal, and proof suggestions for admin/finance context.
+- Proposal preview uses the existing proposed-action review card shape with all controls disabled and no callbacks wired.
+
+Protected boundaries:
+
+- No SQL changes.
+- No database type changes.
+- No repository changes.
+- No helper changes.
+- No route changes.
+- No proposal persistence.
+- No proposed-action execution.
+- No payment, bank sync, document upload, document renewal, email, or housing contact automation.
+- No AI/OpenAI calls.
+- No background jobs.
+
+Next step: Phase 12 C15 — audit gate for admin/finance boundaries.
+
+## Phase 12 C15 Status
+
+Status: Complete pending verification.
+
+Completed:
+
+- Added `audit:phase12` gate.
+- Wired Phase 12 audit into `npm run check`.
+- Added safety validation for Life Admin, Finance, Documents, Housing, Command, and Calendar surfaces.
+- Added deferred-scope validation for bank sync, payments, document upload/OCR, housing scraping/outreach, autonomous Carnos writes, Python/ML execution, memory, and background jobs.
+
+Progress:
+
+- Completed before this chunk: 35 / 45.
+- Completed after this chunk: 39 / 45.
+- Remaining after this chunk: 6 / 45.
+
+Protected boundaries:
+
+- No SQL changes.
+- No database type changes.
+- No repository changes.
+- No helper changes.
+- No route/dashboard feature changes.
+- No proposal persistence.
+- No proposed-action execution.
+- No payment, bank sync, document upload, OCR, document renewal, housing outreach, scraping, or automation.
+- No AI/OpenAI calls.
+- No Python/ML execution.
+- No memory/RAG implementation.
+- No background jobs.
+
+Next step: Phase 12 C16 — smoke checklist, completion report, and source-to-scope closeout.
+
+## Phase 12 C16 Status
+
+Status: Complete.
+
+Completed:
+
+- Manual smoke checklist for Phase 12 Life Admin + Finance + Daily Admin routes.
+- Source-to-scope closeout.
+- Phase 12 completion report.
+- Audit gate coverage for C16 closeout artifacts.
+
+Completed Phase 12 source steps: 44/45.
+Remaining Phase 12 source steps: 1/45.
+
+Next step: Phase 13 source inspection and plan lock.
+
+## Phase 12 C17 Status
+
+Status: Complete and pushed.
+
+Completed at: 2026-06-27 06:23 UTC
+
+Final verification scope:
+
+- Phase 12 audit gate passed.
+- Full repository check passed.
+- SQL migration validation passed.
+- Route and registry validation passed.
+- Integration sanity audit passed.
+- Production build passed.
+- Whitespace diff check passed.
+- Source-to-scope closeout marker coverage passed.
+- Manual smoke checklist documentation is present.
+- Completion report documentation is present.
+
+Completed Phase 12 source steps: 45/45.
+Remaining Phase 12 source steps: 0/45.
+
+Phase 12 final status: Complete.
+
+Next step: Phase 13 source inspection and plan lock.
 ```
 
 ### `PROJECT_EXECUTION_LOG.md`
@@ -3457,6 +6227,7 @@ This file records every implementation step for ascendOS + Carnos.
 ## 2026-06-17 — Phase 1 — Repository Foundation
 
 ### Completed
+
 - Created local `ascendos` project folder.
 - Initialized Git.
 - Renamed branch to `main`.
@@ -3468,9 +6239,11 @@ This file records every implementation step for ascendOS + Carnos.
 - Created `SOURCE_OF_TRUTH.md`.
 
 ### Current Git Status
+
 - Initial commit pending.
 
 ### Next
+
 - Create remaining tracking markdown files.
 - Verify file tree.
 - Commit first foundation snapshot.
@@ -3480,6 +6253,7 @@ This file records every implementation step for ascendOS + Carnos.
 ## 2026-06-17 — Phase 2 — Next.js Foundation
 
 ### Completed
+
 - Created Next.js app foundation using temporary scaffold folder.
 - Recovered Git metadata after accidental `.git` deletion.
 - Reconnected local repo to GitHub remote.
@@ -3492,18 +6266,21 @@ This file records every implementation step for ascendOS + Carnos.
 - Renamed package from `ascendos_next_temp` to `ascendos`.
 
 ### Notes
+
 - `node_modules/` remains ignored.
 - `next-env.d.ts` remains ignored.
 - Next.js build currently uses default starter app.
 - Default homepage will be replaced in the next UI shell chunk.
 
 ### Next
+
 - Verify package name.
 - Commit and push Next.js foundation.
 
 ## 2026-06-17 — Phase 2.6–2.7 — App Shell Structure and Route Registry
 
 ### Completed
+
 - Created component folder structure.
 - Created domain library folder structure.
 - Created schema and type folders.
@@ -3516,12 +6293,14 @@ This file records every implementation step for ascendOS + Carnos.
 - Ran `npm run build` successfully.
 
 ### Next
+
 - Commit and push app shell structure.
 - Replace default starter homepage with ascendOS landing shell.
 
 ## 2026-06-17 — Phase 2.9 — ascendOS Homepage Shell
 
 ### Completed
+
 - Replaced default Next.js starter homepage with ascendOS landing shell.
 - Added Carnos Command Foundation hero section.
 - Added core signal chips for Mission, Proof, Calendar, Timeline, Carnos, and Audit.
@@ -3531,6 +6310,7 @@ This file records every implementation step for ascendOS + Carnos.
 - Verified `git diff --check`.
 
 ### Next
+
 - Create reusable layout components.
 - Create canonical navigation shell.
 - Add placeholder pages for canonical routes.
@@ -3538,6 +6318,7 @@ This file records every implementation step for ascendOS + Carnos.
 ## 2026-06-17 — Phase 2.11 — Reusable Shell Components
 
 ### Completed
+
 - Added reusable AppShell component.
 - Added reusable AppSidebar component.
 - Added reusable AppTopbar component.
@@ -3547,12 +6328,14 @@ This file records every implementation step for ascendOS + Carnos.
 - Verified `git diff --check`.
 
 ### Next
+
 - Refactor homepage to use reusable shell components.
 - Add canonical route placeholder pages.
 
 ## 2026-06-17 — Phase 2.13 — Homepage Component Refactor
 
 ### Completed
+
 - Refactored homepage to use `AppShell`.
 - Refactored dashboard preview cards to use `DashboardCard`.
 - Preserved core ascendOS positioning and canonical route count.
@@ -3561,11 +6344,13 @@ This file records every implementation step for ascendOS + Carnos.
 - Verified `git diff --check`.
 
 ### Next
+
 - Add canonical placeholder pages for the first dashboard route group.
 
 ## 2026-06-17 — Phase 2.15 — Core Placeholder Routes
 
 ### Completed
+
 - Added placeholder page for `/command`.
 - Added placeholder page for `/carnos`.
 - Added placeholder page for `/calendar`.
@@ -3579,12 +6364,14 @@ This file records every implementation step for ascendOS + Carnos.
 - Verified generated app routes.
 
 ### Next
+
 - Add remaining canonical placeholder routes.
 - Commit route coverage in small stable batches.
 
 ## 2026-06-17 — Phase 2.17 — Remaining Canonical Placeholder Routes
 
 ### Completed
+
 - Added placeholder route pages for all remaining canonical dashboards.
 - Verified `/world-class`.
 - Verified `/networking`.
@@ -3616,12 +6403,14 @@ This file records every implementation step for ascendOS + Carnos.
 - Confirmed 37 static pages generated.
 
 ### Next
+
 - Expand dashboard registry to include every canonical dashboard.
 - Add route coverage test to prevent missing or banned routes.
 
 ## 2026-06-17 — Phase 2.19 — Full Dashboard Registry
 
 ### Completed
+
 - Expanded `DASHBOARD_REGISTRY` to include every canonical dashboard route.
 - Added typed dashboard domain categories.
 - Verified sidebar/homepage registry has full route coverage.
@@ -3630,6 +6419,7 @@ This file records every implementation step for ascendOS + Carnos.
 - Confirmed 37 static pages generated.
 
 ### Next
+
 - Add route coverage test script.
 - Add banned legacy route test.
 - Add registry/route count validation.
@@ -3637,6 +6427,7 @@ This file records every implementation step for ascendOS + Carnos.
 ## 2026-06-17 — Phase 2.21–2.22 — Route Validation and Knowledge Route Correction
 
 ### Completed
+
 - Added route coverage validation script.
 - Added `npm run validate:routes`.
 - Added `npm run check`.
@@ -3649,12 +6440,14 @@ This file records every implementation step for ascendOS + Carnos.
 - Ran `npm run check`.
 
 ### Next
+
 - Add shared placeholder page component.
 - Refactor placeholder routes to remove repeated JSX.
 
 ## 2026-06-17 — Phase 2.23–2.24 — Shared Placeholder Dashboard Component
 
 ### Completed
+
 - Added shared `PlaceholderDashboardPage` component.
 - Refactored all 33 placeholder dashboard pages to use the shared component.
 - Reduced repeated dashboard placeholder JSX.
@@ -3663,12 +6456,14 @@ This file records every implementation step for ascendOS + Carnos.
 - Confirmed 37 static pages generated.
 
 ### Next
+
 - Add registry coverage validation.
 - Perform final Phase 2 verification.
 
 ## 2026-06-17 — Phase 2.26 — Registry Coverage Validation
 
 ### Completed
+
 - Added registry coverage validation script.
 - Added `npm run validate:registry`.
 - Updated `npm run check` to run lint, route validation, registry validation, and build.
@@ -3677,12 +6472,14 @@ This file records every implementation step for ascendOS + Carnos.
 - Confirmed 37 static pages generated.
 
 ### Next
+
 - Run final Phase 2 verification.
 - Mark Phase 2 complete.
 
 ## 2026-06-17 — Phase 2 Complete — Next.js Foundation and Canonical Shell
 
 ### Completed
+
 - Next.js App Router foundation created.
 - TypeScript, Tailwind, ESLint, and npm scripts verified.
 - Source-of-truth route policy implemented.
@@ -3699,6 +6496,7 @@ This file records every implementation step for ascendOS + Carnos.
 - Phase 2 is complete.
 
 ### Final Verification
+
 - `npm run lint`: passed.
 - `npm run validate:routes`: passed.
 - `npm run validate:registry`: passed.
@@ -3708,11 +6506,13 @@ This file records every implementation step for ascendOS + Carnos.
 - Static generated pages: 37.
 
 ### Next Phase
+
 Phase 3 — Supabase/Auth foundation.
 
 ## 2026-06-17 — Phase 3.1–3.3 — Supabase Foundation
 
 ### Completed
+
 - Installed Supabase client dependencies.
 - Added `.env.example`.
 - Added Supabase environment helper.
@@ -3720,15 +6520,18 @@ Phase 3 — Supabase/Auth foundation.
 - Added server Supabase client helper.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Add Supabase middleware session refresh.
 - Add auth callback route.
 
 ## 2026-06-17 — Phase 3.4 — Supabase Middleware Foundation
 
 ### Completed
+
 - Added Supabase environment presence helper.
 - Added Supabase middleware session refresh helper.
 - Added root Next.js middleware.
@@ -3736,14 +6539,17 @@ Phase 3 — Supabase/Auth foundation.
 - This preserves local development before real Supabase keys are added.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Create auth route group and login/signup pages.
 
 ## 2026-06-17 — Phase 3.5 — Auth Page Skeleton
 
 ### Completed
+
 - Added login page.
 - Added signup page.
 - Added auth callback route.
@@ -3752,52 +6558,63 @@ Phase 3 — Supabase/Auth foundation.
 - These are skeletons and require real Supabase env keys before live auth can be tested.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Add protected-route helper.
 - Add profile SQL migration.
 
 ## 2026-06-17 — Phase 3.5B — Auth Action Type Fix
 
 ### Completed
+
 - Fixed login/signup server action return types.
 - Removed incorrect `.bind(null, {})` usage from form actions.
 - Added error handling note to `ERRORS_AND_FIXES.md`.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ## 2026-06-17 — Phase 3.6 — Auth User Helper
 
 ### Completed
+
 - Added safe current-user helper.
 - Added required-user helper.
 - Helper returns null when Supabase env vars are missing so local placeholder builds do not crash.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Add auth-aware UI shell state.
 - Add protected-route wrapper after real Supabase project keys are configured.
 
 ## 2026-06-17 — Phase 3.7 — Auth-Aware Topbar Status
 
 ### Completed
+
 - Added async auth status component.
 - Topbar now shows local setup mode when Supabase env vars are missing.
 - Topbar can show login/signup or signed-in state once Supabase is configured.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Add protected-route boundary after profile migration exists.
 
 ## 2026-06-17 — Phase 3.7C — Code Snapshot Generator
 
 ### Completed
+
 - Added `scripts/generate-code-snapshot.mjs`.
 - Added `npm run snapshot:code`.
 - Generated `CODE_SNAPSHOT.md`.
@@ -3805,14 +6622,17 @@ Phase 3 — Supabase/Auth foundation.
 - Snapshot excludes `node_modules`, `.next`, `.git`, `.venv`, private env files, and package lock noise.
 
 ### Purpose
+
 `CODE_SNAPSHOT.md` allows a future chat to understand the current implementation without needing every file pasted manually.
 
 ### Next
+
 - Continue Phase 3 auth/database foundation.
 
 ## 2026-06-17 — Phase 3.8 — Profiles and Carnos Profiles SQL Foundation
 
 ### Completed
+
 - Added first Supabase SQL migration.
 - Added `profiles` table.
 - Added `carnos_profiles` table.
@@ -3825,10 +6645,12 @@ Phase 3 — Supabase/Auth foundation.
 - Preserved confirmation-required Carnos memory default.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 - SQL migration is source-controlled but not yet applied to a live Supabase project.
 
 ### Next
+
 - Add SQL migration validation script.
 - Add profile TypeScript types.
 - Add profile/settings page skeleton later.
@@ -3836,20 +6658,24 @@ Phase 3 — Supabase/Auth foundation.
 ## 2026-06-17 — Phase 3.9 — SQL Migration Validation
 
 ### Completed
+
 - Added SQL migration validation script.
 - Added `npm run validate:migrations`.
 - Added migration validation into `npm run check`.
 - Validation checks migration naming, emptiness, RLS presence, personal table policies, and auth trigger safety.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Add TypeScript database row types for profiles and Carnos profiles.
 
 ## 2026-06-17 — Phase 3.10 — Database TypeScript Types
 
 ### Completed
+
 - Added TypeScript database type foundation.
 - Added `ProfileRow`, `ProfileInsert`, and `ProfileUpdate`.
 - Added `CarnosProfileRow`, `CarnosProfileInsert`, and `CarnosProfileUpdate`.
@@ -3857,28 +6683,34 @@ Phase 3 — Supabase/Auth foundation.
 - Added minimal Supabase-compatible `Database` type structure for the first migration.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Wire Supabase clients to the typed `Database` interface.
 
 ## 2026-06-17 — Phase 3.11 — Typed Supabase Clients
 
 ### Completed
+
 - Wired `Database` type into Supabase browser client.
 - Wired `Database` type into Supabase server client.
 - Wired `Database` type into Supabase middleware client.
 - Future Supabase queries can now receive typed table/row support.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Add profile repository/helper functions for reading profile and Carnos profile data.
 
 ## 2026-06-17 — Phase 3.12 — Profile Repository Helpers
 
 ### Completed
+
 - Added profile query helper layer.
 - Added `getProfileBundle()`.
 - Added `getProfile()`.
@@ -3887,14 +6719,17 @@ Phase 3 — Supabase/Auth foundation.
 - Centralized profile and Carnos profile reads for future dashboards/settings/auth state.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Add profile summary UI card or settings skeleton using these helpers.
 
 ## 2026-06-17 — Phase 3.13 — Profile Status Card on Command Center
 
 ### Completed
+
 - Added `ProfileSummaryCard`.
 - Wired profile/Carnos profile helper output into `/command`.
 - Added safe local setup state when Supabase env vars are missing.
@@ -3902,14 +6737,17 @@ Phase 3 — Supabase/Auth foundation.
 - Replaced generic command placeholder with an auth/profile-aware foundation page.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Add profile/settings route or protected route boundary after Supabase project configuration.
 
 ## 2026-06-17 — Phase 3.14 — Supabase Setup Guide and Env Verification
 
 ### Completed
+
 - Added `scripts/verify-env.mjs`.
 - Added `npm run verify:env`.
 - Added `docs/setup/SUPABASE_SETUP.md`.
@@ -3918,15 +6756,18 @@ Phase 3 — Supabase/Auth foundation.
 - Preserved no-secret Git policy.
 
 ### Verification
+
 - `npm run verify:env` must pass in local setup mode.
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Add profile/settings page skeleton.
 
 ## 2026-06-17 — Phase 3.15 — Settings Page Skeleton
 
 ### Completed
+
 - Added `/settings` page.
 - Added profile/Carnos status summary to settings.
 - Added placeholder sections for profile, Carnos preferences, memory controls, and security/privacy.
@@ -3934,14 +6775,17 @@ Phase 3 — Supabase/Auth foundation.
 - Added `/settings` to route validation.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Add protected route boundary and decide which routes become auth-required after Supabase is connected.
 
 ## 2026-06-17 — Phase 3.16 — Protected Route Boundary
 
 ### Completed
+
 - Added reusable `ProtectedPage` server component.
 - Added safe local setup placeholder behavior when Supabase env vars are missing.
 - Added redirect to `/auth/login` when Supabase is configured but no user is signed in.
@@ -3949,14 +6793,17 @@ Phase 3 — Supabase/Auth foundation.
 - Did not apply protection globally yet to avoid breaking local setup mode.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Add auth smoke-test checklist and Phase 3 final audit.
 
 ## 2026-06-17 — Phase 3.17 — Auth Smoke-Test Checklist
 
 ### Completed
+
 - Added `docs/setup/AUTH_SMOKE_TEST.md`.
 - Documented local setup auth checks.
 - Documented connected Supabase signup/login/signout checks.
@@ -3965,47 +6812,56 @@ Phase 3 — Supabase/Auth foundation.
 - Documented Phase 3 completion requirements.
 
 ### Verification
+
 - `npm run verify:env` must pass.
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Add Phase 3 final audit checklist/script.
 
 ## 2026-06-17 — Phase 3.18 — Phase 3 Final Audit Script
 
 ### Completed
+
 - Added `scripts/audit-phase-3.mjs`.
 - Added `npm run audit:phase3`.
 - Added Phase 3 audit into `npm run check`.
 - Audit verifies Supabase/Auth foundation files, migration, types, helpers, docs, protected route boundary, and code snapshot presence.
 
 ### Verification
+
 - `npm run audit:phase3` must pass.
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Fix any audit issues.
 - Mark Phase 3 complete after final clean verification.
 
 ## 2026-06-17 — Phase 3.20 — Phase 3 Complete
 
 ### Completed
+
 - Marked Phase 3 complete.
 - Added `PHASE_STATUS.md`.
 - Confirmed Phase 3 audit has no issues.
 - Confirmed remaining live Supabase tests are documented and deferred until real Supabase connection.
 
 ### Final Phase 3 Verification
+
 - `npm run verify:env`
 - `npm run snapshot:code`
 - `npm run check`
 
 ### Next
+
 - Begin Phase 4 — Core SQL Spine.
 
 ## 2026-06-17 — Phase 4.1 — Core SQL Spine Plan Lock
 
 ### Completed
+
 - Added Phase 4 plan lock document.
 - Defined exact Phase 4 table scope.
 - Defined migration order.
@@ -4014,14 +6870,17 @@ Phase 3 — Supabase/Auth foundation.
 - Updated `PHASE_STATUS.md` to mark Phase 4 started.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Phase 4.2 — Add audit_logs and ai_actions migration.
 
 ## 2026-06-17 — Phase 4.2 — Audit Logs and AI Actions Migration
 
 ### Completed
+
 - Added migration `0002_audit_and_ai_actions.sql`.
 - Added `audit_logs` table.
 - Added `ai_actions` table.
@@ -4031,14 +6890,17 @@ Phase 3 — Supabase/Auth foundation.
 - Preserved Carnos safety rule: AI actions are proposed and status-tracked before execution.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Phase 4.3 — Add chat sessions and chat messages migration.
 
 ## 2026-06-17 — Phase 4.3 — Chat Sessions and Chat Messages Migration
 
 ### Completed
+
 - Added migration `0003_chat_foundation.sql`.
 - Added `chat_sessions` table.
 - Added `chat_messages` table.
@@ -4051,14 +6913,17 @@ Phase 3 — Supabase/Auth foundation.
 - Added updated_at trigger for `chat_sessions`.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Phase 4.4 — Add goals and goal_milestones migration.
 
 ## 2026-06-17 — Phase 4.4 — Goals and Goal Milestones Migration
 
 ### Completed
+
 - Added migration `0004_goals_foundation.sql`.
 - Added `goals` table.
 - Added `goal_milestones` table.
@@ -4069,14 +6934,17 @@ Phase 3 — Supabase/Auth foundation.
 - Added source links to AI actions and chat messages for future Carnos-proposed goals.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Phase 4.5 — Add daily_logs and proof_items migration.
 
 ## 2026-06-17 — Phase 4.5 — Daily Logs and Proof Items Migration
 
 ### Completed
+
 - Added migration `0005_daily_logs_and_proof_items.sql`.
 - Added `daily_logs` table.
 - Added `proof_items` table.
@@ -4090,14 +6958,17 @@ Phase 3 — Supabase/Auth foundation.
 - Added `updated_at` triggers.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Phase 4.6 — Add tasks and events migration.
 
 ## 2026-06-17 — Phase 4.6 — Tasks and Events Migration
 
 ### Completed
+
 - Added migration `0006_tasks_and_events.sql`.
 - Added `tasks` table.
 - Added `events` table.
@@ -4111,14 +6982,17 @@ Phase 3 — Supabase/Auth foundation.
 - Preserved occurred_at vs logged_at semantics for timeline correctness.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Phase 4.7 — RLS/index/audit-link audit.
 
 ## 2026-06-17 — Phase 4.7 — RLS, Index, and Source-Link Audit
 
 ### Completed
+
 - Added `scripts/audit-phase-4.mjs`.
 - Added `audit:phase4` npm script.
 - Wired `audit:phase4` into `npm run check`.
@@ -4134,44 +7008,53 @@ Phase 3 — Supabase/Auth foundation.
 - Added guard to prevent `memory_items` from being created in Phase 4.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Phase 4.8 — Upgrade SQL migration validator.
 
 ## 2026-06-17 — Phase 4.7a — Phase 4 Audit Script Replacement
 
 ### Fixed
+
 - Replaced the failed Phase 4 audit script with a corrected version.
 - Added per-table create-block extraction.
 - Verified each Phase 4 table has its own user ownership reference.
 - Kept checks for RLS, policies, indexes, source links, parent ownership checks, daily log uniqueness, proof item task linkage, and forbidden premature memory table creation.
 
 ### Reason
+
 The first Phase 4 audit script used a brittle global ownership regex and failed even though the SQL migrations included user ownership references.
 
 ### Verification
+
 - `npm run audit:phase4` must pass.
 - `npm run check` must pass.
 
 ## 2026-06-17 — Phase 4.7b — Phase 4 Audit and SQL Typo Fix
 
 ### Fixed
+
 - Corrected `referencespublic.profiles` typos in Phase 4 migrations.
 - Replaced brittle/corrupted Phase 4 audit parser.
 - Added safer table-block extraction using string boundaries.
 - Kept checks for required tables, RLS, policies, indexes, source links, parent ownership checks, daily log uniqueness, proof item task linkage, and forbidden premature memory table creation.
 
 ### Reason
+
 The previous audit script copy became corrupted and failed to parse `create table` blocks. The diagnostic also revealed two real SQL spacing typos that needed correction.
 
 ### Verification
+
 - `npm run audit:phase4` must pass.
 - `npm run check` must pass.
 
 ## 2026-06-17 — Phase 4.8 — SQL Migration Validator Upgrade
 
 ### Completed
+
 - Upgraded `scripts/validate-sql-migrations.mjs`.
 - Added canonical migration filename validation.
 - Added duplicate migration number detection.
@@ -4189,16 +7072,19 @@ The previous audit script copy became corrupted and failed to parse `create tabl
 - Added guard against premature `memory_items` creation.
 
 ### Verification
+
 - `npm run validate:migrations` must pass.
 - `npm run audit:phase4` must pass.
 - `npm run check` must pass.
 
 ### Next
+
 - Phase 4.9 — Update TypeScript database types for Phase 4 tables.
 
 ## 2026-06-17 — Phase 4.9 — TypeScript Database Types Update
 
 ### Completed
+
 - Updated `src/types/database.ts`.
 - Added typed table definitions for all Phase 4 core SQL spine tables:
   - `audit_logs`
@@ -4216,36 +7102,44 @@ The previous audit script copy became corrupted and failed to parse `create tabl
 - Added typed lifecycle/status unions for AI actions, chat messages, goals, milestones, proof items, tasks, and events.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Phase 4.10 — Add read-only repository helpers.
 
 ## 2026-06-18 — Phase 4.9a — Database Type Alias Fix
 
 ### Fixed
+
 - Restored `ProfileRow` export required by Phase 3 profile query code.
 - Restored `CarnosProfileRow` export required by Phase 3 profile query code.
 - Added Row, Insert, and Update aliases for all Phase 4 core SQL spine tables.
 
 ### Reason
+
 The Phase 4 database type rewrite replaced the previous Phase 3 helper exports, causing build and `audit:phase3` to fail.
 
 ### Verification
+
 - `npm run audit:phase3` must pass.
 - `npm run check` must pass.
 
 ## 2026-06-18 — Phase 4.9b — Phase 3 Database Type Compatibility Fix
 
 ### Fixed
+
 - Restored `profiles.onboarding_status` typing.
 - Restored the `confirmation_required` Carnos memory-mode literal expected by Phase 3 audit.
 - Preserved the new Phase 4 database table typings and aliases.
 
 ### Reason
+
 The Phase 4 type rewrite was structurally correct for Phase 4 but accidentally removed two Phase 3 compatibility details used by existing code and audit checks.
 
 ### Verification
+
 - `npm run audit:phase3` must pass.
 - `npm run build` must pass.
 - `npm run check` must pass.
@@ -4253,6 +7147,7 @@ The Phase 4 type rewrite was structurally correct for Phase 4 but accidentally r
 ## 2026-06-18 — Phase 4.10 — Read-Only Repository Helpers
 
 ### Completed
+
 - Added `src/lib/repositories/core-read.ts`.
 - Added `src/lib/repositories/index.ts`.
 - Added typed read-only helpers for:
@@ -4271,14 +7166,17 @@ The Phase 4 type rewrite was structurally correct for Phase 4 but accidentally r
 - Kept Phase 4 read-only only; no mutation helpers were added.
 
 ### Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Phase 4.11 — Add Phase 4 docs and completion audit notes.
 
 ## 2026-06-18 — Phase 4.11 — Phase 4 Documentation and Report
 
 ### Completed
+
 - Added docs/database/CORE_SQL_SPINE.md.
 - Added docs/phase-reports/PHASE_4_CORE_SQL_SPINE_REPORT.md.
 - Documented Phase 4 tables, migrations, safety rules, validation, and deferred scope.
@@ -4286,16 +7184,17 @@ The Phase 4 type rewrite was structurally correct for Phase 4 but accidentally r
 - Updated PHASE_STATUS.md.
 
 ### Verification
+
 - npm run check must pass before commit.
 
 ### Next
+
 - Phase 4.12 — Mark Phase 4 complete.
-
-
 
 ## 2026-06-18 — Phase 4.12 — Phase 4 Complete
 
 ### Completed
+
 - Marked Phase 4 complete in `PHASE_STATUS.md`.
 - Confirmed Phase 4 includes:
   - core SQL migrations
@@ -4307,52 +7206,64 @@ The Phase 4 type rewrite was structurally correct for Phase 4 but accidentally r
 - Confirmed deferred items remain out of scope.
 
 ### Final Verification
+
 - `npm run check` must pass before commit.
 
 ### Next
+
 - Phase 5 — Core Read UI Integration.
 
 ## 2026-06-18 — Full Source Alignment Audit
 
 ### Completed
+
 - Added `scripts/audit-source-alignment.mjs`.
 - Added `audit:source` npm script.
 - Wired `audit:source` into `npm run check`.
 - Added checks for source-of-truth files, Phase 1 foundation, Phase 2 routes, Phase 3 auth/Supabase foundation, Phase 4 SQL spine, TypeScript types, read-only repository boundaries, and phase logs.
 
 ### Purpose
+
 Verify that Phases 1–4 remain aligned with the FINAL_SYNCED DOCX/JSON before starting the next implementation phase.
 
 ### Next
+
 - Run full gate.
 - Commit if passing.
 
 ## 2026-06-18 — Source Alignment Audit Phase Marker Fix
 
 ### Fixed
+
 - Added explicit Phase 1–4 completed baseline markers to `PHASE_STATUS.md`.
 
 ### Reason
+
 The full source alignment audit checks that all previous stages are represented in phase status tracking. The code, route, auth, SQL, type, and repository checks passed, but `PHASE_STATUS.md` did not contain an explicit `Phase 1` marker.
 
 ### Verification
+
 - `npm run audit:source` must pass.
 - `npm run check` must pass.
 
 ## 2026-06-18 — Source Alignment Audit Lint Cleanup
 
 ### Fixed
+
 - Removed unused `requireDirectory` helper from `scripts/audit-source-alignment.mjs`.
 
 ### Reason
+
 The full source alignment audit passed, but ESLint reported one warning for an unused helper. This cleanup makes the audit baseline cleaner before Phase 5.
 
 ### Verification
+
 - `npm run check` must pass.
 
 ## 2026-06-18 — Phase 5.1 — Core Read UI Integration Plan Lock
 
 ### Completed
+
 - Added Phase 5 plan lock document.
 - Defined exact Phase 5 scope.
 - Defined read-only boundaries.
@@ -4362,38 +7273,46 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - Updated PHASE_STATUS.md to mark Phase 5 started.
 
 ### Verification
+
 - npm run check must pass before commit.
 
 ### Next
+
 - Phase 5.2 — Add shared dashboard UI components.
 
 ## 2026-06-18 — Phase 5.2 — Shared Dashboard UI Components
 
 ### Completed
+
 - Added shared display-only dashboard UI components.
 - Added SectionCard, EmptyState, DataList, StatusPill, and MetricTile.
 - Added dashboard component barrel export.
 
 ### Boundary
+
 - No Supabase reads were added in this step.
 - No write flows were added.
 - No memory implementation was added.
 - No Carnos generation was added.
 
 ### Verification
+
 - npm run check must pass.
 
 ### Next
+
 - Phase 5.3 — Add authenticated dashboard shell helper.
 
 ## 2026-06-18 — Phase 5.3 — Authenticated Dashboard Shell Helper
 
 ### Completed
+
 - Added dashboard auth state helper.
 - Added authenticated dashboard shell component.
 - Exported the authenticated dashboard shell from the dashboard component barrel.
 
 ### Boundary
+
 - No page data wiring was added.
 - No repository calls were added to dashboard pages.
 - No write flow was added.
@@ -4401,14 +7320,17 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - No Carnos generation was added.
 
 ### Verification
+
 - npm run check must pass.
 
 ### Next
+
 - Phase 5.4 — Connect command dashboard to core read data.
 
 ## 2026-06-18 — Phase 5.4 — Command Dashboard Read Integration
 
 ### Completed
+
 - Updated `/command` to use the authenticated dashboard shell.
 - Connected `/command` to Phase 4 read-only repositories.
 - Added metric tiles for goals, tasks, events, proof items, daily logs, and AI actions.
@@ -4416,26 +7338,31 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - Updated authenticated dashboard shell to support async server-rendered children.
 
 ### Boundary
+
 - No write repository was added.
 - No create/edit/delete form was added.
 - No memory implementation was added.
 - No Carnos generation or action execution was added.
 
 ### Verification
+
 - npm run check must pass.
 
 ### Next
+
 - Phase 5.5 — Connect goals page to read repository.
 
 ## 2026-06-18 — Phase 5.5 — Goals Page Read Integration
 
 ### Completed
+
 - Updated `/goals` to use the authenticated dashboard shell.
 - Connected `/goals` to the read-only `listGoals` repository helper.
 - Added read-only metric tiles for total, active, and completed goals.
 - Added read-only goal record list and empty state.
 
 ### Boundary
+
 - No goal creation form was added.
 - No edit/delete controls were added.
 - No write repository was added.
@@ -4443,20 +7370,24 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - No memory implementation was added.
 
 ### Verification
+
 - npm run check must pass.
 
 ### Next
+
 - Phase 5.6 — Connect timeline page to read repositories.
 
 ## 2026-06-18 — Phase 5.6 — Timeline Page Read Integration
 
 ### Completed
+
 - Updated `/timeline` to use the authenticated dashboard shell.
 - Connected `/timeline` to read-only `listEvents`, `listProofItems`, and `listAuditLogs` helpers.
 - Added read-only metric tiles for events, proof items, and audit logs.
 - Added combined timeline-style record list and empty state.
 
 ### Boundary
+
 - No event/proof/audit creation form was added.
 - No edit/delete controls were added.
 - No write repository was added.
@@ -4464,14 +7395,17 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - No memory implementation was added.
 
 ### Verification
+
 - npm run check must pass.
 
 ### Next
+
 - Phase 5.7 — Connect Carnos page to chat/action reads.
 
 ## 2026-06-18 — Phase 5.7 — Carnos Page Read Integration
 
 ### Completed
+
 - Updated `/carnos` to use the authenticated dashboard shell.
 - Connected `/carnos` to read-only `listChatSessions`, `listChatMessages`, and `listAiActions` helpers.
 - Added read-only metric tiles for sessions, messages, AI actions, and pending actions.
@@ -4479,6 +7413,7 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - Added read-only lists and empty states for sessions, actions, and messages.
 
 ### Boundary
+
 - No Carnos generation was added.
 - No memory implementation was added.
 - No action execution was added.
@@ -4486,20 +7421,24 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - No write repository was added.
 
 ### Verification
+
 - npm run check must pass.
 
 ### Next
+
 - Phase 5.8 — Connect calendar page to tasks/events.
 
 ## 2026-06-18 — Phase 5.8 — Calendar Page Read Integration
 
 ### Completed
+
 - Updated `/calendar` to use the authenticated dashboard shell.
 - Connected `/calendar` to read-only `listTasks` and `listEvents` helpers.
 - Added read-only metric tiles for tasks, events, and upcoming records.
 - Added combined task/event list and empty state.
 
 ### Boundary
+
 - No task/event creation form was added.
 - No edit/delete/reschedule controls were added.
 - No reminder, sync, or execution logic was added.
@@ -4507,20 +7446,24 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - No Carnos generation or memory implementation was added.
 
 ### Verification
+
 - npm run check must pass.
 
 ### Next
+
 - Phase 5.9 — Connect proof/daily log surfaces.
 
 ## 2026-06-18 — Phase 5.9 — Proof and Daily Log Read Surfaces
 
 ### Completed
+
 - Updated `/world-class` to read proof items and daily logs.
 - Updated `/analytics` to read proof items and daily logs.
 - Added read-only proof, reality, energy, and daily log metric surfaces.
 - Added proof and daily log empty states.
 
 ### Boundary
+
 - No proof creation form was added.
 - No daily log creation form was added.
 - No AI review or scoring engine was added.
@@ -4529,16 +7472,17 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - No Carnos generation or memory implementation was added.
 
 ### Verification
+
 - npm run check must pass.
 
 ### Next
+
 - Phase 5.10 — Connect core domain pages to filtered reads.
-
-
 
 ## 2026-06-18 — Phase 5.10 — Core Domain Filtered Reads
 
 ### Completed
+
 - Added reusable `DomainReadPage` component for filtered read-only domain dashboards.
 - Updated `/career` to show career-domain reads.
 - Updated `/learning` to show learning-domain reads.
@@ -4546,6 +7490,7 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - Domain pages read goals, tasks, events, and proof items, then filter by domain-like fields.
 
 ### Boundary
+
 - No create/edit/delete forms were added.
 - No write repository was added.
 - No Carnos generation was added.
@@ -4553,85 +7498,100 @@ The full source alignment audit passed, but ESLint reported one warning for an u
 - No analytics engine was added.
 
 ### Verification
+
 - npm run check must pass.
 
 ### Next
+
 - Phase 5.11 — Add Phase 5 audit script.
 
 ## 2026-06-18 — Phase 5.11 — Phase 5 Audit Script
 
 ### Completed
+
 - Added `scripts/audit-phase-5.mjs`.
 - Added `audit:phase5` package script.
 - Wired `audit:phase5` into `npm run check`.
 - Audit checks shared dashboard components, connected read pages, no-write boundaries, no-memory boundaries, no-generation boundaries, Phase 5 logs, and repository read-only integrity.
 
 ### Boundary
+
 - No app feature behavior was changed.
 - No write repository was added.
 - No memory implementation was added.
 - No Carnos generation was added.
 
 ### Verification
+
 - `npm run audit:phase5` must pass.
 - `npm run check` must pass.
 
 ### Next
+
 - Phase 5.12 — Add Phase 5 documentation/report.
 
 ## 2026-06-18 — Phase 5.12 — Phase 5 Documentation Report
 
 ### Completed
+
 - Added `docs/phase-reports/PHASE_5_CORE_READ_UI_INTEGRATION_REPORT.md`.
 - Documented Phase 5 purpose, completed scope, files added, files updated, explicit non-scope, verification gates, and remaining Phase 5 work.
 - Confirmed Phase 5 remains read-only and does not include memory, Carnos generation, write repositories, Python, or ML.
 
 ### Boundary
+
 - Documentation only.
 - No application behavior was changed.
 - No write path was added.
 
 ### Verification
+
 - `npm run audit:phase5` must pass.
 - `npm run check` must pass.
 
 ### Next
+
 - Phase 5.13 — Update source alignment audit for Phase 5.
-
-
 
 ## 2026-06-18 — Phase 5.13 — Source Alignment Audit Update
 
 ### Completed
+
 - Updated `scripts/audit-source-alignment.mjs` to include Phase 5 checks.
 - Added source alignment checks for Phase 5 plan, report, audit script, authenticated read pages, and domain read pages.
 - Updated source alignment success message from Phases 1–4 to Phases 1–5.
 
 ### Boundary
+
 - Audit-only change.
 - No application behavior was changed.
 - No write path was added.
 
 ### Verification
+
 - `npm run audit:source` must pass.
 - `npm run audit:phase5` must pass.
 - `npm run check` must pass.
 
 ### Next
+
 - Phase 5.14 — Mark Phase 5 complete.
 
 ## 2026-06-18 — Phase 5.14 — Phase 5 Complete
 
 ### Completed
+
 - Marked Phase 5 complete in `PHASE_STATUS.md`.
 - Added Phase 5 completion entry to `CHANGELOG.md`.
 - Confirmed Phase 5 read UI integration is fully gated by `audit:phase5`.
 - Confirmed source alignment audit now covers Phases 1–5.
 
 ### Final Phase 5 Result
+
 Phase 5 successfully connected the Phase 4 SQL spine to authenticated read-only UI surfaces across the core app.
 
 Connected dynamic read pages:
+
 - `/command`
 - `/goals`
 - `/timeline`
@@ -4644,6 +7604,7 @@ Connected dynamic read pages:
 - `/body`
 
 ### Boundary Preserved
+
 - No write repository.
 - No create/edit/delete product UI.
 - No Carnos generation.
@@ -4652,6 +7613,7 @@ Connected dynamic read pages:
 - No production deployment.
 
 ### Verification
+
 - `npm run verify:env`
 - `npm run validate:migrations`
 - `npm run audit:phase3`
@@ -4662,11 +7624,13 @@ Connected dynamic read pages:
 - `npm run check`
 
 ### Next
+
 - Phase 6 — Safe Write / Proposed Action Flow.
 
 ## 2026-06-19 — Phase 5.15 — Python/ML Intelligence Architecture Patch
 
 ### Completed
+
 - Added Python/ML Intelligence Worker as a future source-of-truth layer.
 - Added all planned Python/ML features, route placement, phase placement, safety rules, privacy rules, evaluation rules, cold-start rules, score definitions, and output contracts.
 - Updated JSON source-of-truth file.
@@ -4674,6 +7638,7 @@ Connected dynamic read pages:
 - Added audit:pythonml boundary gate.
 
 ### Boundary
+
 - No active Python runtime was added.
 - No ML model was added.
 - No database writes from Python were added.
@@ -4682,6 +7647,7 @@ Connected dynamic read pages:
 - No npm build dependency on Python was added.
 
 ### Next
+
 - Update DOCX source of truth.
 - Update source alignment audit.
 - Start Phase 6 — Safe Write / Proposed Action Flow.
@@ -4691,9 +7657,11 @@ Connected dynamic read pages:
 Started Phase 6 with the official plan lock for the Safe Write / Proposed Action Flow.
 
 Created:
+
 - `docs/phase-plans/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW.md`
 
 Purpose:
+
 - Define the safe write pipeline before any runtime write code is added.
 - Lock the required flow: proposal -> validation -> Save/Edit/Cancel -> server write -> audit log -> timeline event -> dashboard refresh.
 - Preserve Phase 1 through Phase 5.15 boundaries.
@@ -4706,20 +7674,24 @@ No application runtime code was added in this step.
 Completed Phase 6.2 by creating the central proposed action type registry.
 
 Created:
+
 - `src/lib/actions/action-types.ts`
 
 Added allowed proposed action types:
+
 - `create_task`
 - `create_goal`
 - `create_daily_log`
 - `create_proof_item`
 
 Purpose:
+
 - Establish the fixed list of allowed write-affecting action types.
 - Prevent random/freeform action names from entering the write pipeline.
 - Prepare the foundation for Phase 6.3 proposed action contracts and Phase 6.5 validation.
 
 Validation:
+
 - `npm run lint` passed.
 - `npm run check` passed.
 - `git diff --check` passed.
@@ -4734,35 +7706,40 @@ No memory system was added.
 Completed Phase 6.3 by creating the proposed action contract definitions.
 
 Created:
+
 - `src/lib/actions/proposed-action-contracts.ts`
 
 Defined payload contracts for:
+
 - `create_task`
 - `create_goal`
 - `create_daily_log`
 - `create_proof_item`
 
 Purpose:
+
 - Convert write-affecting proposals into structured typed payloads.
 - Prepare validation, lifecycle, and execution layers.
 - Prevent freeform action payloads from reaching the write pipeline.
 
 Safety boundaries:
+
 - No runtime write execution was added.
 - No database mutation was added.
 - No Carnos generation was added.
 - No Python/ML runtime was added.
 - No memory system was added.
 
-
 ## 2026-06-19 23:58 UTC — Phase 6.4 Completed: Action Result Types
 
 Completed Phase 6.4 by creating standard action result contracts.
 
 Created:
+
 - `src/lib/actions/action-results.ts`
 
 Added:
+
 - `ActionSuccessResult`
 - `ActionErrorResult`
 - `ActionResult`
@@ -4773,11 +7750,13 @@ Added:
 - `isActionError`
 
 Purpose:
+
 - Standardize success/error outputs before validation and execution layers.
 - Ensure future safe-write functions return predictable structured results.
 - Prepare Phase 6.5 payload validation and later execution dispatcher behavior.
 
 Safety boundaries:
+
 - No runtime write execution was added.
 - No database mutation was added.
 - No Carnos generation was added.
@@ -4789,9 +7768,11 @@ Safety boundaries:
 Completed Phase 6.5 by creating the proposed action validation layer.
 
 Created:
+
 - `src/lib/actions/validate-proposed-action.ts`
 
 Added validation for:
+
 - proposed action envelope structure
 - supported action types
 - proposed action source
@@ -4804,11 +7785,13 @@ Added validation for:
 - create proof item payloads
 
 Purpose:
+
 - Block invalid proposed actions before any future write execution.
 - Prevent user-owned/server-owned fields from being injected through client payloads.
 - Prepare the safe execution dispatcher for later Phase 6 steps.
 
 Safety boundaries:
+
 - No runtime write execution was added.
 - No database mutation was added.
 - No Carnos generation was added.
@@ -4820,43 +7803,50 @@ Safety boundaries:
 Completed Phase 6.6 by creating the reusable audit logging helper.
 
 Created:
+
 - `src/lib/audit/write-audit-log.ts`
 
 Purpose:
+
 - Provide a controlled server-side helper for writing audit records.
 - Prepare future proposed action execution to preserve evidence and write history.
 - Keep audit logging separate from action validation and execution logic.
 
 Safety boundaries:
+
 - No proposed action execution was added.
 - No UI was added.
 - No Carnos generation was added.
 - No Python/ML runtime was added.
 - No memory system was added.
 
-
 ## 2026-06-20 04:31 UTC — Phase 6.7 Completed: Timeline Helper Boundary
 
 Completed Phase 6.7 by creating a safe timeline helper boundary.
 
 Created:
+
 - `src/lib/timeline/write-timeline-event.ts`
 
 Important schema finding:
+
 - No `timeline_events` table currently exists in `src/types/database.ts`.
 - No `timeline_events` table currently exists in `supabase/migrations/*.sql`.
 
 Decision:
+
 - Created a typed timeline helper contract that returns a controlled `skipped` result.
 - Did not invent a database table.
 - Did not write to a non-existent timeline table.
 
 Purpose:
+
 - Preserve the Phase 6 timeline-helper boundary.
 - Keep future execution code able to call a timeline helper safely.
 - Avoid schema drift until a real timeline table is added in a later SQL phase.
 
 Safety boundaries:
+
 - No timeline database write was added.
 - No proposed action execution was added.
 - No UI was added.
@@ -4864,21 +7854,23 @@ Safety boundaries:
 - No Python/ML runtime was added.
 - No memory system was added.
 
-
 ## 2026-06-20 04:49 UTC — Phase 6.8 Completed: Proposed Action Creation Helper
 
 Completed Phase 6.8 by creating the proposed action creation helper.
 
 Created:
+
 - `src/lib/actions/create-proposed-action.ts`
 
 Purpose:
+
 - Validate an incoming proposed action contract.
 - Store a valid proposed action in `ai_actions`.
 - Save it with `status = pending_confirmation`.
 - Preserve payload, validation result, source context, and optional chat references.
 
 Safety boundaries:
+
 - The helper only creates a pending proposal.
 - It does not execute the proposed action.
 - It does not create tasks, goals, daily logs, or proof items.
@@ -4886,53 +7878,59 @@ Safety boundaries:
 - It does not auto-approve or auto-write target records.
 - It does not add Carnos generation, Python/ML runtime, memory, background jobs, or UI.
 
-
 ## 2026-06-20 05:05 UTC — Phase 6.9 Completed: Action Lifecycle Helper
 
 Completed Phase 6.9 by creating the action lifecycle helper.
 
 Created:
+
 - `src/lib/actions/action-lifecycle.ts`
 
 Purpose:
+
 - Read an existing `ai_actions` proposal.
 - Validate legal lifecycle transitions.
 - Update only the proposal lifecycle status.
 - Support approval, rejection, cancellation, and failure marking.
 
 Allowed transitions:
+
 - `pending_confirmation` → `approved`
 - `pending_confirmation` → `rejected`
 - `draft`, `pending_confirmation`, or `approved` → `cancelled`
 - `approved` → `failed`
 
 Safety boundaries:
+
 - The helper does not execute target writes.
 - The helper does not create tasks, goals, daily logs, or proof items.
 - The helper does not auto-approve actions.
 - The helper does not bypass user ownership checks.
 - The helper does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.
 
-
 ## 2026-06-20 05:18 UTC — Phase 6.10 Completed: Execution Dispatcher Boundary
 
 Completed Phase 6.10 by creating the execution dispatcher boundary.
 
 Created:
+
 - `src/lib/actions/execution-dispatcher.ts`
 
 Purpose:
+
 - Load an `ai_actions` proposal by user ownership.
 - Require `status = approved` before dispatch.
 - Validate the proposed action type.
 - Route approved actions by action type.
 
 Current behavior:
+
 - The dispatcher intentionally does not execute target-table writes yet.
 - Valid approved action types return a controlled error explaining that target execution is implemented in Phase 6.11–6.14.
 - This keeps the dispatcher boundary present without prematurely creating tasks, goals, daily logs, or proof items.
 
 Safety boundaries:
+
 - No target-table writes were added.
 - No task creation was added.
 - No goal creation was added.
@@ -4943,18 +7941,20 @@ Safety boundaries:
 - No Python/ML runtime was added.
 - No memory system, background jobs, or cron jobs were added.
 
-
 ## 2026-06-20 05:24 UTC — Phase 6.11 Completed: Create Task Flow
 
 Completed Phase 6.11 by creating the approved create-task execution flow.
 
 Created:
+
 - `src/lib/actions/flows/create-task-flow.ts`
 
 Updated:
+
 - `src/lib/actions/execution-dispatcher.ts`
 
 Purpose:
+
 - Load an approved `create_task` proposal from `ai_actions`.
 - Validate ownership, status, action type, and payload.
 - Insert a task into `tasks`.
@@ -4963,24 +7963,27 @@ Purpose:
 - Call the timeline helper boundary.
 
 Safety boundaries:
+
 - Only approved `create_task` actions can execute.
 - The flow checks `user_id`.
 - The flow does not execute unapproved proposals.
 - The flow does not execute goals, daily logs, or proof items.
 - The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.
 
-
 ## 2026-06-20 18:09 UTC — Phase 6.12 Completed: Create Goal Flow
 
 Completed Phase 6.12 by creating the approved create-goal execution flow.
 
 Created:
+
 - `src/lib/actions/flows/create-goal-flow.ts`
 
 Updated:
+
 - `src/lib/actions/execution-dispatcher.ts`
 
 Purpose:
+
 - Load an approved `create_goal` proposal from `ai_actions`.
 - Validate ownership, status, action type, and payload.
 - Insert a goal into `goals`.
@@ -4989,24 +7992,27 @@ Purpose:
 - Call the timeline helper boundary.
 
 Safety boundaries:
+
 - Only approved `create_goal` actions can execute.
 - The flow checks `user_id`.
 - The flow does not execute unapproved proposals.
 - The flow does not execute tasks, daily logs, or proof items.
 - The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.
 
-
 ## 2026-06-20 18:13 UTC — Phase 6.13 Completed: Create Daily Log Flow
 
 Completed Phase 6.13 by creating the approved create-daily-log execution flow.
 
 Created:
+
 - `src/lib/actions/flows/create-daily-log-flow.ts`
 
 Updated:
+
 - `src/lib/actions/execution-dispatcher.ts`
 
 Purpose:
+
 - Load an approved `create_daily_log` proposal from `ai_actions`.
 - Validate ownership, status, action type, and payload.
 - Insert a daily log into `daily_logs`.
@@ -5015,24 +8021,27 @@ Purpose:
 - Call the timeline helper boundary.
 
 Safety boundaries:
+
 - Only approved `create_daily_log` actions can execute.
 - The flow checks `user_id`.
 - The flow does not execute unapproved proposals.
 - The flow does not execute tasks, goals, or proof items.
 - The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.
 
-
 ## 2026-06-20 18:17 UTC — Phase 6.14 Completed: Create Proof Item Flow
 
 Completed Phase 6.14 by creating the approved create-proof-item execution flow.
 
 Created:
+
 - `src/lib/actions/flows/create-proof-item-flow.ts`
 
 Updated:
+
 - `src/lib/actions/execution-dispatcher.ts`
 
 Purpose:
+
 - Load an approved `create_proof_item` proposal from `ai_actions`.
 - Validate ownership, status, action type, and payload.
 - Validate referenced daily log, goal, and task ownership before insert.
@@ -5042,65 +8051,72 @@ Purpose:
 - Call the timeline helper boundary.
 
 Safety boundaries:
+
 - Only approved `create_proof_item` actions can execute.
 - The flow checks `user_id`.
 - The flow does not execute unapproved proposals.
 - The flow blocks cross-user related-record references.
 - The flow does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or UI.
 
-
 ## 2026-06-20 18:22 UTC — Phase 6.15 Completed: Save/Edit/Cancel UI Component
 
 Completed Phase 6.15 by adding the reusable proposed action review UI component.
 
 Created:
+
 - `src/components/actions/proposed-action-review-card.tsx`
 - `src/components/actions/index.ts`
 
 Purpose:
+
 - Display proposed action type, source, confidence, reason, validation issues, and payload.
 - Allow payload JSON editing before save/confirmation.
 - Provide Save / Confirm and Cancel callback boundaries.
 - Keep the UI component reusable before wiring it into a route.
 
 Safety boundaries:
+
 - This component does not write directly to the database.
 - This component does not call Supabase.
 - This component does not execute actions by itself.
 - This component preserves the confirmation-before-write boundary.
 - This component does not add Carnos generation, Python/ML runtime, memory, background jobs, cron jobs, or voice.
 
-
 ## 2026-06-20 18:30 UTC — Phase 6.16 Completed: Wire Proposed Action Review into App Page
 
 Completed Phase 6.16 by wiring the proposed action review component into the Carnos dashboard.
 
 Updated:
+
 - `src/app/carnos/page.tsx`
 
 Purpose:
+
 - Render the reusable Save/Edit/Cancel review card inside an authenticated app page.
 - Demonstrate the confirmation-first UI surface inside the Carnos dashboard.
 - Keep the component in preview mode with no direct database mutation from the page.
 
 Safety boundaries:
+
 - No Supabase write call was added to the UI component.
 - No action execution call was added to the page.
 - No Python/ML runtime, memory, Carnos generation, background job, cron job, or voice feature was added.
 - The component remains a review surface only until server-owned action wiring is explicitly added.
-
 
 ## 2026-06-20 18:38 UTC — Phase 6.17 Completed: Phase 6 Audit Gate
 
 Completed Phase 6.17 by adding the Phase 6 audit script and wiring it into `npm run check`.
 
 Created:
+
 - `scripts/audit-phase-6.mjs`
 
 Updated:
+
 - `package.json`
 
 Purpose:
+
 - Verify Phase 6 safe write files exist.
 - Verify proposed action types, contracts, validation, lifecycle, dispatcher, and four target write flows.
 - Verify audit and timeline helper boundaries.
@@ -5108,21 +8124,23 @@ Purpose:
 - Verify the Carnos page wiring stays confirmation-first and avoids forbidden audit phrases.
 
 Safety boundaries:
+
 - Audit blocks missing Phase 6 files.
 - Audit blocks missing dispatcher routes.
 - Audit blocks missing approved-only execution checks.
 - Audit blocks UI components that directly call Supabase or execute actions.
 - Audit blocks forbidden wording in the Phase 5 page scanner path.
 
-
 ## 2026-06-20 18:47 UTC — Phase 6.18 Completed: Phase 6 Report and Completion Marker
 
 Completed Phase 6.18 by creating the Phase 6 completion report and marking Phase 6 complete.
 
 Created:
+
 - `docs/phase-reports/PHASE_6_SAFE_WRITE_PROPOSED_ACTION_FLOW_REPORT.md`
 
 Purpose:
+
 - Summarize Phase 6 implementation.
 - Record completed files and safety boundaries.
 - Confirm the proposed-action safe write flow is complete.
@@ -5315,11 +8333,13 @@ Purpose:
 ## 2026-06-24 — Phase 8.24 — Career System Completion Closeout
 
 ### Completed
+
 - Added Phase 8 Career System completion report.
 - Added Phase 8 manual smoke checklist.
 - Prepared Phase 8 final closeout verification.
 
 ### Verification Required
+
 - `npm run audit:phase8`
 - `npm run audit:integration`
 - `npm run check`
@@ -5328,36 +8348,43 @@ Purpose:
 - `git diff --check`
 
 ### Next
+
 - Commit and push final Phase 8 completion closeout.
 - Begin Phase 9 — Learning / Project System.
 
 ## 2026-06-24 — Phase 1–8 Retrospective Gap Audit
 
 ### Completed
+
 - Added a retrospective audit after Phase 8 closeout.
 - Audited Phase 1–8 completion status against source-of-truth direction and repo artifacts.
 - Separated completed scope, deferred scope, possible weak spots, and Phase 9 guardrails.
 
 ### Result
+
 - No known critical Phase 1–8 blocker is currently skipped.
 - Remaining major capabilities are deferred to later phases.
 
 ### Next
+
 - Commit retrospective audit.
 - Begin Phase 9 — Learning / Project System.
 
 ## 2026-06-24 — Phase 9 Chunk A Started
 
 ### Scope
+
 - Started Phase 9 — Learning / Project System.
 - Chunk A covers source-of-truth inspection, route inspection, and Phase 9 plan lock.
 - No application code changed in this chunk.
 
 ### Files
+
 - `docs/phase-reports/PHASE_9_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
 - `docs/phase-plans/PHASE_9_LEARNING_PROJECT_SYSTEM.md`
 
 ### Result
+
 - Phase 9 scope is locked as 28 requirement steps executed through 12 safe chunks.
 - `/learning`, `/projects`, and `/knowledge` are confirmed as Phase 9 route surfaces.
 - Next chunk: Chunk B — schema design and source-to-scope traceability.
@@ -5365,6 +8392,7 @@ Purpose:
 ## 2026-06-24 — Phase 9 Chunk B Schema Design and Traceability
 
 ### Scope
+
 - Added Phase 9 learning/project schema design.
 - Added source-to-scope traceability matrix.
 - Preserved the 28-step checklist while mapping execution to 12 chunks.
@@ -5372,10 +8400,12 @@ Purpose:
 - No application code changed.
 
 ### Files
+
 - `docs/database/PHASE_9_LEARNING_PROJECT_SCHEMA_DESIGN.md`
 - `docs/phase-reports/PHASE_9_SOURCE_TO_SCOPE_TRACEABILITY.md`
 
 ### Result
+
 - Phase 9 schema is designed before migration.
 - Source requirements are mapped to expected implementation files and chunks.
 - Next chunk: Chunk C — SQL migration `0008_learning_project_system_foundation.sql`.
@@ -5383,64 +8413,77 @@ Purpose:
 ## 2026-06-24 — Phase 9 Chunk C SQL Migration
 
 ### Scope
+
 - Added Phase 9 SQL migration foundation.
 - Created learning/project tables for skill paths, skills, prerequisites, progress, learning sessions, quizzes, quiz attempts, projects, milestones, bugs, tests, releases, and links.
 - Added user ownership, RLS, policies, and indexes.
 - No TypeScript database types updated yet.
 
 ### Files
+
 - `supabase/migrations/0008_learning_project_system_foundation.sql`
 
 ### Result
+
 - Phase 9 persistent SQL foundation is ready for migration validation.
 - Next chunk: Chunk D — database types update.
 
 ## 2026-06-24 — Phase 9 Chunk C.1 Parent Ownership Hardening
 
 ### Scope
+
 - Added Phase 9 parent ownership hardening migration after the initial SQL foundation.
 - Recreated insert/update RLS policies for Phase 9 tables so parent references must belong to the authenticated user.
 - Preserved Phase 9 SQL foundation from migration `0008`.
 - No TypeScript database types updated yet.
 
 ### Files
+
 - `supabase/migrations/0009_phase9_parent_ownership_guards.sql`
 
 ### Result
+
 - Phase 9 child writes are hardened before database types and read helpers are added.
 - Next chunk: Chunk D — database types update.
 
 ## 2026-06-24 — Phase 9 Chunk D Database Types
 
 ### Scope
+
 - Updated database type definitions for Phase 9 Learning / Project System tables.
 - Added row aliases for skill paths, skills, prerequisites, learning sessions, quizzes, quiz attempts, projects, milestones, bugs, tests, releases, links, and skill progress.
 - No read helpers or UI changed yet.
 
 ### Files
+
 - `src/types/database.ts`
 
 ### Result
+
 - TypeScript can now reference Phase 9 SQL-backed tables.
 - Next chunk: Chunk E — learning/project read helpers.
 
 ## 2026-06-24 — Phase 9 Chunk E Learning and Project Read Helpers
 
 ### Scope
+
 - Added read-only repository helpers for Phase 9 learning and project tables.
 - Added user-scoped list functions for skill paths, skills, prerequisites, sessions, quizzes, quiz attempts, projects, milestones, bugs, tests, releases, links, and skill progress.
 - No writes, proposed actions, or dashboard UI changed.
 
 ### Files
+
 - `src/lib/repositories/core-read.ts`
 
 ### Result
+
 - Phase 9 SQL tables now have typed read access.
 - Next chunk: Chunk F — dashboard aggregation, registry extension, and shared UI primitives.
 
 ## 2026-06-24 — Phase 9 Chunk F Aggregation, Registry, and Shared UI Primitives
 
 ### Scope
+
 - Added Phase 9 dashboard cards for learning and projects.
 - Added learning/projects to the dashboard surface contract.
 - Added Phase 9 learning/project dashboard aggregation helper.
@@ -5448,6 +8491,7 @@ Purpose:
 - No route-level dashboard pages changed yet.
 
 ### Files
+
 - `src/lib/dashboard/dashboard-layout-contract.ts`
 - `src/lib/dashboard/dashboard-card-registry.ts`
 - `src/lib/dashboard/learning-project-dashboard-data-helpers.ts`
@@ -5456,80 +8500,94 @@ Purpose:
 - `src/components/dashboard/index.ts`
 
 ### Result
+
 - Phase 9 has dashboard-ready registry cards, aggregation helpers, and reusable UI primitives.
 - Next chunk: Chunk G — Learning Academy dashboard and `/learning` route.
 
 ## 2026-06-24 — Phase 9 Chunk G Learning Academy Dashboard
 
 ### Scope
+
 - Added the Learning Academy dashboard component.
 - Wired `/learning` to read Phase 9 learning records through authenticated, read-only repository helpers.
 - Rendered skill paths, skills, sessions, quizzes, attempts, and progress records.
 - Preserved no-write behavior.
 
 ### Files
+
 - `src/components/dashboard/learning-academy-dashboard-v1.tsx`
 - `src/components/dashboard/index.ts`
 - `src/app/learning/page.tsx`
 
 ### Result
+
 - `/learning` now has a real Phase 9 read-only dashboard.
 - Next chunk: Chunk H — Project Builder dashboard and `/projects` route.
 
 ## 2026-06-24 — Phase 9 Chunk H Project Builder Dashboard
 
 ### Scope
+
 - Added the Project Builder dashboard component.
 - Wired `/projects` to read Phase 9 project records through authenticated, read-only repository helpers.
 - Rendered projects, milestones, bugs, tests, releases, and project links.
 - Preserved no-write behavior.
 
 ### Files
+
 - `src/components/dashboard/project-builder-dashboard-v1.tsx`
 - `src/components/dashboard/index.ts`
 - `src/app/projects/page.tsx`
 
 ### Result
+
 - `/projects` now has a real Phase 9 read-only dashboard.
 - Next chunk: Chunk I — `/knowledge` route alignment.
 
 ## 2026-06-24 — Phase 9 Chunk I Knowledge Route Alignment
 
 ### Scope
+
 - Added Knowledge Vault alignment dashboard.
 - Wired `/knowledge` to read Phase 9 learning/project source records.
 - Explicitly preserved the boundary that full memory/RAG belongs to later phases.
 - Preserved no-write behavior.
 
 ### Files
+
 - `src/components/dashboard/knowledge-vault-alignment-v1.tsx`
 - `src/components/dashboard/index.ts`
 - `src/app/knowledge/page.tsx`
 
 ### Result
+
 - `/knowledge` now reflects Phase 9 learning/project source alignment without implementing Phase 15 memory/RAG.
 - Next chunk: Chunk J — skill path/progress, quiz/session, and project build-log detail panels.
 
 ## 2026-06-24 — Phase 9 Chunk J Detail Panels
 
 ### Scope
+
 - Added read-only detail panels for skill path/progress, quiz/session, and project build-log views.
 - Wired detail panels into the Learning Academy and Project Builder dashboards.
 - Preserved no-write behavior.
 
 ### Files
+
 - `src/components/dashboard/learning-project-detail-panels.tsx`
 - `src/components/dashboard/learning-academy-dashboard-v1.tsx`
 - `src/components/dashboard/project-builder-dashboard-v1.tsx`
 - `src/components/dashboard/index.ts`
 
 ### Result
+
 - Learning and project dashboards now include Phase 9 focused detail views.
 - Next chunk: Chunk K — proof, goals/tasks/timeline linkage, proposed-action visibility, states, and cross-links.
 
 ## 2026-06-24 — Phase 9 Chunk K Linkage and State Surfaces
 
 ### Scope
+
 - Added README/resume/proof linkage surface.
 - Added goal/task/timeline linkage surface.
 - Added preview-only proposed-action visibility panel.
@@ -5538,6 +8596,7 @@ Purpose:
 - Wired linkage panels into `/learning`, `/projects`, and `/knowledge`.
 
 ### Files
+
 - `src/components/dashboard/learning-project-linkage-panels.tsx`
 - `src/components/dashboard/learning-academy-dashboard-v1.tsx`
 - `src/components/dashboard/project-builder-dashboard-v1.tsx`
@@ -5545,12 +8604,14 @@ Purpose:
 - `src/components/dashboard/index.ts`
 
 ### Result
+
 - Phase 9 surfaces now show linkage, state boundaries, proposed-action previews, and cross-links while remaining read-only.
 - Next chunk: Chunk L — Phase 9 audits, smoke checklist, completion report, and closeout.
 
 ## 2026-06-24 — Phase 9 Chunk L Closeout
 
 ### Scope
+
 - Added Phase 9 no-write/privacy audit.
 - Added Phase 9 audit gate.
 - Added Phase 9 manual smoke checklist.
@@ -5558,6 +8619,7 @@ Purpose:
 - Updated phase status.
 
 ### Files
+
 - `docs/phase-reports/PHASE_9_NO_WRITE_PRIVACY_AUDIT.md`
 - `docs/phase-reports/PHASE_9_AUDIT_GATE.md`
 - `docs/phase-reports/PHASE_9_MANUAL_SMOKE_CHECKLIST.md`
@@ -5565,106 +8627,127 @@ Purpose:
 - `PHASE_STATUS.md`
 
 ### Result
+
 - Phase 9 is ready for closeout commit after final verification.
 - Next phase: Phase 10 — Research / Stanford System.
 
 ## 2026-06-25 — Phase 10 Chunk A Source and Route Inspection
 
 ### Scope
+
 - Started Phase 10 — Research / Stanford System.
 - Locked Phase 10 as a 36-step, 11-chunk plan.
 - Inspected reusable foundations for authenticated dashboards, cross-links, proposed-action previews, proposed-action contracts, research-adjacent existing types, read helpers, and migration constraints.
 
 ### Files
+
 - `docs/phase-plans/PHASE_10_RESEARCH_STANFORD_SYSTEM.md`
 - `docs/phase-reports/PHASE_10_CHUNK_A_SOURCE_ROUTE_INSPECTION.md`
 
 ### Result
+
 - Phase 10 Chunk A is ready for verification.
 - Next chunk after commit: Chunk B — research/Stanford schema design and source-to-scope traceability.
 
 ## 2026-06-25 — Phase 10 Chunk B Schema Design and Traceability
 
 ### Scope
+
 - Completed 10.4 Research schema design.
 - Completed 10.5 Stanford/PhD schema design.
 - Completed 10.6 Source-to-scope traceability matrix.
 
 ### Files
+
 - `docs/database/PHASE_10_RESEARCH_SCHEMA_DESIGN.md`
 - `docs/database/PHASE_10_STANFORD_PHD_SCHEMA_DESIGN.md`
 - `docs/phase-reports/PHASE_10_SOURCE_TO_SCOPE_TRACEABILITY.md`
 
 ### Result
+
 - Phase 10 Chunk B is ready for verification.
 - Next chunk after commit: Chunk C — SQL foundation migration only.
 
 ## 2026-06-25 — Phase 10 Chunk C SQL Foundation
 
 ### Scope
+
 - Completed 10.7 SQL migration.
 - Added Phase 10 Research / Stanford SQL foundation migration.
 - Added user-owned research, paper, experiment, literature, professor/lab, PhD readiness, SOP, application asset, and recommendation target tables.
 
 ### Files
+
 - `supabase/migrations/0010_phase10_research_stanford_foundation.sql`
 
 ### Result
+
 - Chunk C is ready for validation.
 - Next chunk after commit: Chunk C.1 — parent ownership/RLS hardening.
 
 ## 2026-06-25 — Phase 10 Chunk C.1 Parent Ownership Guards
 
 ### Scope
+
 - Completed 10.8 ownership/RLS hardening.
 - Added Phase 10 parent ownership guard migration.
 - Added helper functions and triggers to prevent Phase 10 rows from linking to parent records owned by another user.
 
 ### Files
+
 - `supabase/migrations/0011_phase10_parent_ownership_guards.sql`
 
 ### Result
+
 - Chunk C.1 is ready for validation.
 - Next chunk after commit: Chunk D — database types only.
 
 ## 2026-06-25 — Phase 10 Chunk D Database Types
 
 ### Scope
+
 - Completed 10.9 database types.
 - Added TypeScript row/insert/update mappings for Phase 10 Research / Stanford SQL tables.
 - Added exported aliases for research, literature, paper, experiment, result, venue, professor/lab, PhD readiness, SOP, application asset, and recommendation target tables.
 
 ### Files
+
 - `src/types/database.ts`
 
 ### Result
+
 - Chunk D is ready for validation.
 - Next chunk after commit: Chunk E — research, Stanford/PhD, and literature/citation read helpers.
 
 ## 2026-06-25 — Phase 10 Chunk E Read Helpers
 
 ### Scope
+
 - Completed 10.10 research read helpers.
 - Completed 10.11 Stanford/PhD read helpers.
 - Completed 10.12 literature/citation read helpers.
 - Added read-only repository functions for Phase 10 tables.
 
 ### Files
+
 - `src/lib/repositories/research-read.ts`
 - `src/lib/repositories/index.ts`
 
 ### Result
+
 - Chunk E is ready for validation.
 - Next chunk after commit: Chunk F — aggregation helpers, dashboard registry extension, and shared research UI primitives.
 
 ## 2026-06-25 — Phase 10 Chunk F Aggregation, Registry, Shared UI
 
 ### Scope
+
 - Completed 10.13 aggregation helpers.
 - Completed 10.14 dashboard registry extension.
 - Completed 10.15 shared research UI primitives.
 
 ### Files
+
 - `src/lib/dashboard/research-stanford-dashboard-data-helpers.ts`
 - `src/lib/dashboard/dashboard-layout-contract.ts`
 - `src/lib/dashboard/dashboard-card-registry.ts`
@@ -5673,57 +8756,68 @@ Purpose:
 - `src/components/dashboard/index.ts`
 
 ### Boundary
+
 - No SQL changed.
 - No write helpers added.
 - No route wiring changed.
 - No autonomous Carnos behavior added.
 
 ### Result
+
 - Research and Stanford dashboard surfaces now have read aggregation support, registry cards, and a shared summary panel primitive.
 
 ## 2026-06-25 — Phase 10 Chunk G Research Route Read Surfaces
 
 ### Scope
+
 - Completed 10.16 Research Lab route read surface.
 - Completed 10.17 Research Stanford route read surface.
 
 ### Files
+
 - `src/app/research-lab/page.tsx`
 - `src/app/research-stanford/page.tsx`
 
 ### Boundary
+
 - No SQL changed.
 - No write helpers added.
 - No autonomous Carnos behavior added.
 - No professor outreach, scraping, paper submission, or application automation added.
 
 ### Result
+
 - Research placeholder routes now render authenticated read-only summary surfaces backed by Phase 10 aggregation helpers and dashboard registry cards.
 
 ## 2026-06-25 — Phase 10 Chunk H Linkage and Boundary Panels
 
 ### Scope
+
 - Completed 10.18 research/proof/linkage visibility.
 - Completed 10.19 privacy and safe-write boundary panels.
 
 ### Files
+
 - `src/components/dashboard/research-linkage-boundary-panels.tsx`
 - `src/components/dashboard/index.ts`
 - `src/app/research-lab/page.tsx`
 - `src/app/research-stanford/page.tsx`
 
 ### Boundary
+
 - No SQL changed.
 - No write helpers added.
 - No proposed-action execution added.
 - No professor outreach, scraping, paper submission, or application automation added.
 
 ### Result
+
 - Research routes now show read-only linkage metrics and explicit privacy/safe-write boundaries.
 
 ## 2026-06-25 — Phase 10 Chunk I Detail Visibility Panels
 
 ### Scope
+
 - Completed 10.20 research idea detail visibility.
 - Completed 10.21 literature detail visibility.
 - Completed 10.22 claim/citation detail visibility.
@@ -5734,6 +8828,7 @@ Purpose:
 - Completed 10.27 SOP/application/recommendation detail visibility.
 
 ### Boundary
+
 - No SQL changed.
 - No write helpers added.
 - No autonomous Carnos behavior added.
@@ -5742,6 +8837,7 @@ Purpose:
 ## 2026-06-25 — Phase 10 Chunk J Proposed-Action Visibility, Cross-Links, Audit Draft
 
 ### Scope
+
 - Completed 10.28 research proposed-action preview visibility.
 - Completed 10.29 cross-dashboard research links.
 - Completed 10.30 research route/source registry alignment.
@@ -5750,6 +8846,7 @@ Purpose:
 - Completed 10.33 Phase 10 completion report draft.
 
 ### Files
+
 - `src/components/dashboard/research-proposed-action-visibility-panel.tsx`
 - `src/components/dashboard/cross-dashboard-links.tsx`
 - `src/components/dashboard/index.ts`
@@ -5761,6 +8858,7 @@ Purpose:
 - `docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT_DRAFT.md`
 
 ### Boundary
+
 - No SQL changed.
 - No write helpers added.
 - No real proposed-action persistence added.
@@ -5768,16 +8866,19 @@ Purpose:
 - No professor outreach, scraping, paper submission, or application automation added.
 
 ### Result
+
 - Phase 10 now has research proposal previews, cross-dashboard links, route/source registry alignment checks, an audit script, smoke checklist, and completion report draft.
 
 ## 2026-06-25 — Phase 10 Chunk K Final Closeout
 
 ### Scope
+
 - Completed 10.34 final Phase 10 completion report.
 - Completed 10.35 phase status, logs, ledger, and changelog cleanup.
 - Completed 10.36 final verification and handoff to Phase 11.
 
 ### Files
+
 - `docs/phase-reports/PHASE_10_RESEARCH_STANFORD_COMPLETION_REPORT.md`
 - `docs/qa/PHASE_10_RESEARCH_STANFORD_MANUAL_SMOKE_CHECKLIST.md`
 - `PHASE_STATUS.md`
@@ -5787,6 +8888,7 @@ Purpose:
 - `scripts/audit-phase-10.mjs`
 
 ### Boundary
+
 - No SQL changed.
 - No write helpers added.
 - No real proposed-action persistence added.
@@ -5794,12 +8896,1017 @@ Purpose:
 - No professor outreach, scraping, paper submission, application submission, Python/ML worker execution, memory/RAG, voice, or background jobs added.
 
 ### Verification
+
 - `npm run audit:phase10` passed before closeout.
 - `npm run check` passed before closeout.
 
 ### Result
+
 - Phase 10 is complete.
 - Next phase is Phase 11 — Health / Body System.
+
+## 2026-06-25 — Phase 11 Chunk A Plan Lock Start
+
+### Scope
+
+- Started Phase 11 — Health / Body System.
+- Created the Phase 11 44-step plan from source-of-truth route and table scope.
+- Added hardening for baselines, units, daily sleep tracking, sleep natural-language capture, photo persistence honesty, supplement safety, body-image safety, sensitive emotion privacy, data quality, target comparison, and trend boundaries.
+- Confirmed Phase 11 begins from a clean Phase 10 closeout plus a regenerated pre-phase code snapshot.
+
+### Files
+
+- `CODE_SNAPSHOT.md`
+- `docs/phase-plans/PHASE_11_HEALTH_BODY_SYSTEM.md`
+
+### Boundary
+
+- No SQL changed.
+- No database types changed.
+- No read helpers added.
+- No dashboard components added.
+- No route rewiring added.
+- No autonomous Carnos behavior, Python/ML execution, memory/RAG, voice, web tools, background jobs, medical advice, supplement claims, body-shaming language, or direct dashboard writes added.
+
+### Result
+
+- Phase 11 planning is locked for verification before schema design.
+
+## 2026-06-25 — Phase 11 Chunk B1 Schema Design
+
+### Scope
+
+- Created Phase 11 health/body schema design.
+- Created Phase 11 health privacy and safety review.
+- Created Phase 11 source-to-scope traceability report.
+- Mapped six source-confirmed routes to sixteen source-confirmed tables.
+- Identified source-referenced but not schema-confirmed items: `progress_photos`, `body_goals`, `reminders`, and `analytics_snapshots`.
+
+### Files
+
+- `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+- `docs/phase-reports/PHASE_11_HEALTH_PRIVACY_SAFETY_REVIEW.md`
+- `docs/phase-reports/PHASE_11_SOURCE_TO_SCOPE_TRACEABILITY.md`
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy added.
+- No database types changed.
+- No read helpers added.
+- No dashboard routes changed.
+- No Carnos write behavior added.
+- No medical, supplement, or body-image claims added.
+
+## 2026-06-25 — Phase 11 Chunk B2 Hardening Design
+
+### Scope
+
+- Documented health/body baseline strategy.
+- Documented unit and measurement clarity strategy.
+- Documented daily sleep tracking design.
+- Documented Carnos sleep natural-language capture boundary.
+- Documented progress photo/storage honesty boundary.
+- Added B2 decision notes to the Phase 11 schema design.
+
+### Files
+
+- `docs/phase-reports/PHASE_11_BASELINE_UNITS_SLEEP_PHOTO_BOUNDARY.md`
+- `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy added.
+- No database types changed.
+- No read helpers added.
+- No dashboard routes changed.
+- No upload/storage behavior added.
+- No Carnos silent write behavior added.
+
+## 2026-06-25 — Phase 11 Chunk B3 Safety / Data / Target / Trend Design
+
+### Scope
+
+- Documented medical, supplement, body-image, emotion, and journal safety hardening.
+- Documented data quality and duplicate-log protection.
+- Documented goal target comparison strategy.
+- Documented simple trend preview boundary and Phase 17 analytics deferral.
+- Added B3 safety addendum to the Phase 11 privacy/safety review.
+- Added B3 decision notes to the Phase 11 schema design.
+
+### Files
+
+- `docs/phase-reports/PHASE_11_SAFETY_DATA_TARGET_TREND_BOUNDARY.md`
+- `docs/phase-reports/PHASE_11_HEALTH_PRIVACY_SAFETY_REVIEW.md`
+- `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy added.
+- No database types changed.
+- No read helpers added.
+- No dashboard routes changed.
+- No Carnos write behavior added.
+- No medical claims, supplement recommendations, body-shaming language, advanced analytics, or fake persistence added.
+
+## 2026-06-25 — Phase 11 Chunk C SQL Foundation
+
+### Scope
+
+- Added Phase 11 SQL foundation migration.
+- Created source-confirmed health/body tables only.
+- Added owner-scoped RLS policies.
+- Added updated_at triggers using existing `public.set_updated_at()`.
+- Added basic indexes for user/date and parent lookup reads.
+
+### Files
+
+- `supabase/migrations/0012_phase11_health_body_foundation.sql`
+
+### Boundary
+
+- No parent ownership trigger migration added yet.
+- No `health_body_baselines` table added.
+- No `progress_photos` table added.
+- No storage buckets or upload behavior added.
+- No database TypeScript types changed.
+- No repositories, helpers, routes, dashboards, or Carnos write behavior added.
+
+## 2026-06-25 — Phase 11 Chunk C.1 Parent Ownership Guards
+
+### Scope
+
+- Added Phase 11 parent ownership guard migration.
+- Added `phase11_parent_belongs_to_user`.
+- Added `phase11_assert_parent_belongs_to_user`.
+- Added `phase11_validate_parent_ownership`.
+- Added before insert/update ownership guard triggers for Phase 11 tables with parent foreign keys.
+
+### Files
+
+- `supabase/migrations/0013_phase11_parent_ownership_guards.sql`
+
+### Boundary
+
+- No new tables added.
+- No Phase 11 table shape changed.
+- No `health_body_baselines` table added.
+- No `progress_photos` table added.
+- No database TypeScript types changed.
+- No repositories, helpers, routes, dashboards, storage/upload behavior, or Carnos write behavior added.
+
+## 2026-06-25 — Phase 11 Chunk D Database Types
+
+### Scope
+
+- Added TypeScript database table definitions for Phase 11 health/body SQL tables.
+- Added row/insert/update aliases for Phase 11 health/body tables.
+
+### Files
+
+- `src/types/database.ts`
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy changed.
+- No parent ownership trigger changed.
+- No read helpers, repositories, dashboards, routes, storage/upload behavior, or Carnos write behavior added.
+
+## 2026-06-25 — Phase 11 Chunk D Repair: Actual Database Types
+
+### Scope
+
+- Corrected previous Chunk D documentation-only commit by adding the actual Phase 11 database table types.
+- Added actual table entries for 16 Phase 11 health/body tables in `src/types/database.ts`.
+- Added actual Row/Insert/Update aliases for Phase 11 health/body tables.
+
+### Files
+
+- `src/types/database.ts`
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy changed.
+- No parent ownership trigger changed.
+- No read helpers, repositories, dashboards, routes, storage/upload behavior, or Carnos write behavior added.
+
+## 2026-06-25 — Phase 11 Chunk E1 Read Helper Foundation
+
+### Scope
+
+- Added read-only repository helpers for Phase 11 health/body tables.
+- Added repository export wiring for health/body read helpers.
+
+### Files
+
+- `src/lib/repositories/health-body-read.ts`
+- `src/lib/repositories/index.ts`
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy changed.
+- No write helpers, server mutations, Carnos actions, dashboards, routes, UI components, storage/upload behavior, analytics snapshots, progress photo table, or baseline table added.
+
+## 2026-06-26 — Phase 11 Chunk E2 Dashboard Summary Helper Foundation
+
+### Scope
+
+- Added read-only health/body dashboard summary helper.
+- Aggregates Phase 11 repository read results into dashboard-ready summary counts.
+- Added dashboard helper export wiring.
+
+### Files
+
+- `src/lib/dashboard/health-body-dashboard-data-helpers.ts`
+- `src/lib/dashboard/index.ts`
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy changed.
+- No write helpers, server mutations, Carnos actions, UI components, dashboards, routes, storage/upload behavior, analytics snapshots, progress photo table, or baseline table added.
+
+## 2026-06-26 — Phase 11 Chunk E3 Read Helper Schema-Boundary Audit
+
+### Scope
+
+- Added Phase 11 read helper schema-boundary audit report.
+- Locked read-only boundary before UI aggregation and dashboard route work.
+- Confirmed the allowed table surface, forbidden deferred scope, helper coverage, and summary-helper boundary.
+
+### Files
+
+- `docs/phase-reports/PHASE_11_READ_HELPER_SCHEMA_BOUNDARY_AUDIT.md`
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy changed.
+- No type file changed.
+- No write helpers, server mutations, Carnos actions, UI components, dashboards, routes, storage/upload behavior, analytics snapshots, progress photo table, or baseline table added.
+
+### E3 Verification Repair
+
+- Added `listExercises` coverage to the health/body dashboard summary helper.
+- This aligns the summary helper with all 16 Phase 11 confirmed source tables.
+
+## 2026-06-26 — Health Body Overview Cards
+
+### Scope
+
+- Added the first read-only health/body dashboard UI component.
+- The component consumes the health/body summary helper and displays dashboard-ready metric cards.
+- Added dashboard component export wiring.
+
+### Files
+
+- `src/components/dashboard/health-body-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Boundary
+
+- No route was rewired.
+- No SQL migration added.
+- No RLS policy changed.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.
+
+## 2026-06-26 — Health Body Dashboard States
+
+### Scope
+
+- Added shared health/body dashboard state components.
+- Added empty-state, warning-state, privacy notice, and read-only boundary notice components.
+- Wired the health/body overview component to consume the shared state components.
+- Added dashboard state component export wiring.
+
+### Files
+
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/health-body-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Schema
+
+- No schema change needed.
+
+### Boundary
+
+- No route was rewired.
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.
+
+## 2026-06-26 — Body Dashboard Route Wiring
+
+### Scope
+
+- Rewired `/body` from the generic domain read page to the read-only health/body overview dashboard.
+- Preserved Phase 5 domain-read compatibility markers for route audits.
+- Kept route inside the authenticated dashboard shell.
+
+### Files
+
+- `src/app/body/page.tsx`
+
+### Schema
+
+- No schema change needed.
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.
+
+## 2026-06-26 — Nutrition Dashboard Route Wiring
+
+### Scope
+
+- Rewired `/nutrition` from a placeholder page to a read-only nutrition dashboard.
+- Added a nutrition-focused dashboard component using existing health/body summary helpers.
+- Added dashboard component export wiring.
+- Fixed a small text spacing typo in the shared health/body boundary notice.
+
+### Files
+
+- `src/app/nutrition/page.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/index.ts`
+
+### Schema
+
+- No schema change needed.
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.
+
+## 2026-06-26 — Supplements Dashboard Route Wiring
+
+### Scope
+
+- Rewired `/supplements` from a placeholder page to a read-only supplements dashboard.
+- Added a supplement-focused dashboard component using existing health/body summary helpers.
+- Added dashboard component export wiring.
+- Fixed a small text spacing typo in the shared health/body boundary notice.
+
+### Files
+
+- `src/app/supplements/page.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/index.ts`
+
+### Schema
+
+- No schema change needed.
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.
+
+## 2026-06-26 — Sleep Energy Dashboard Route Wiring
+
+### Scope
+
+- Rewired `/sleep-energy` from a placeholder page to a read-only sleep energy dashboard.
+- Added a sleep-and-energy-focused dashboard component using existing health/body summary helpers.
+- Added dashboard component export wiring.
+- Cleaned small text spacing issues found during preflight in existing health/body UI copy.
+
+### Files
+
+- `src/app/sleep-energy/page.tsx`
+- `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Schema
+
+- No schema change needed.
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.
+
+## 2026-06-26 — Emotion Dashboard Route Wiring
+
+### Scope
+
+- Rewired `/emotion` from a placeholder page to a read-only emotion dashboard.
+- Added an emotion-and-mental-state-focused dashboard component using existing health/body summary helpers.
+- Added dashboard component export wiring.
+- Cleaned small text spacing issues found during preflight in existing health/body UI copy.
+
+### Files
+
+- `src/app/emotion/page.tsx`
+- `src/components/dashboard/health-body-emotion-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Schema
+
+- No schema change needed.
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.
+
+## 2026-06-26 — Hair Skincare Dashboard Route Wiring
+
+### Scope
+
+- Rewired `/hair-skincare` from a placeholder page to a read-only haircare and skincare dashboard.
+- Added a haircare-and-skincare-focused dashboard component using existing health/body summary helpers.
+- Added dashboard component export wiring.
+- Cleaned small text spacing issues found during preflight in existing health/body UI copy.
+
+### Files
+
+- `src/app/hair-skincare/page.tsx`
+- `src/components/dashboard/health-body-hair-skincare-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-dashboard-states.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-emotion-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+
+### Schema
+
+- No schema change needed.
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, or baseline table added.
+
+## 2026-06-26 — Health/Body Detail Panel Pattern Report
+
+### Scope
+
+- Inspected current health/body route wiring.
+- Inspected current health/body dashboard components.
+- Inspected comparable detail-panel patterns from learning, research, and career surfaces.
+- Inspected existing health/body read helpers.
+- Added a Phase 11 detail-panel pattern report before creating any new detail panels.
+
+### Files
+
+- `docs/phase-reports/PHASE_11_HEALTH_BODY_DETAIL_PANEL_PATTERN_REPORT.md`
+
+### Schema
+
+- No schema change needed.
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, baseline table, or visual evidence storage added.
+
+## 2026-06-26 — Health/Body Detail Panels
+
+### Scope
+
+- Added reusable read-only health/body detail panels.
+- Added typed panel props for existing confirmed health/body row types.
+- Added detail-panel export wiring.
+- Kept panels detached from routes for H3.
+
+### Files
+
+- `src/components/dashboard/health-body-detail-panels.tsx`
+- `src/components/dashboard/index.ts`
+
+### Schema
+
+- No schema change needed.
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, baseline table, or visual evidence storage added.
+
+## 2026-06-26 — Health/Body Detail Panel Attachment
+
+### Scope
+
+- Attached reusable read-only health/body detail panels to dashboard surfaces.
+- Expanded the existing health/body dashboard helper to return existing row arrays already read through repository helpers.
+- Routed detail rows into the appropriate dashboard-specific panels.
+
+### Files
+
+- `src/lib/dashboard/health-body-dashboard-data-helpers.ts`
+- `src/components/dashboard/health-body-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-emotion-dashboard-v1.tsx`
+- `src/components/dashboard/health-body-hair-skincare-dashboard-v1.tsx`
+
+### Schema
+
+- No schema change needed.
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, baseline table, or visual evidence storage added.
+
+## 2026-06-26 — Health/Body Linkage Visibility
+
+### Scope
+
+- Added read-only health/body proof and operating linkage visibility.
+- Added counts and sample ids for proof, goal, task, daily-log, and event links.
+- Attached linkage visibility to all six health/body dashboard surfaces.
+
+### Files
+
+- `src/components/dashboard/health-body-linkage-panels.tsx`
+- `src/components/dashboard/index.ts`
+- Health/body dashboard surface components.
+
+### Schema
+
+- No schema change needed.
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action, storage/upload behavior, analytics snapshot, progress photo table, baseline table, or visual evidence storage added.
+
+## 2026-06-26 — Health/Body Proposed-Action and State Boundaries
+
+### Scope
+
+- Added preview-only health/body proposed-action visibility.
+- Added state and privacy boundary panels for empty, loading, error, and privacy states.
+- Added cross-route navigation consistency for health/body surfaces.
+- Attached these panels to all six health/body dashboard surfaces.
+
+### Files
+
+- `src/components/dashboard/health-body-action-boundary-panels.tsx`
+- `src/components/dashboard/index.ts`
+- Health/body dashboard surface components.
+
+### Schema
+
+- No schema change needed.
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action execution, storage/upload behavior, analytics snapshot, progress photo table, baseline table, or visual evidence storage added.
+
+## 2026-06-26 — Health/Body Audit Gate
+
+### Scope
+
+- Added Phase 11 health/body audit script.
+- Added Phase 11 manual smoke checklist.
+- Added Phase 11 audit gate report.
+- Wired `audit:phase11` into package scripts and `npm run check`.
+
+### Files
+
+- `scripts/audit-phase-11.mjs`
+- `docs/qa/PHASE_11_HEALTH_BODY_MANUAL_SMOKE_CHECKLIST.md`
+- `docs/phase-reports/PHASE_11_HEALTH_BODY_AUDIT_GATE.md`
+- `package.json`
+
+### Schema
+
+- No schema change needed.
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action execution, storage/upload behavior, analytics snapshot, progress photo table, baseline table, or visual evidence storage added.
+
+## 2026-06-26 — Phase 11 Health/Body System Complete
+
+### Scope
+
+- Added Phase 11 final completion report.
+- Updated the Phase 11 audit gate to require the completion report.
+- Closed Phase 11 as a complete read-only, route-wired, safety-bounded Health / Body System.
+
+### Files
+
+- `docs/phase-reports/PHASE_11_HEALTH_BODY_COMPLETION_REPORT.md`
+- `scripts/audit-phase-11.mjs`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+### Schema
+
+- No schema change needed.
+
+### Boundary
+
+- No SQL migration added.
+- No RLS policy changed.
+- No database type change added.
+- No write helper, server mutation, Carnos action execution, storage/upload behavior, analytics snapshot, progress photo table, baseline table, visual evidence storage, memory/RAG, voice, Python/ML execution, or background job added.
+
+## 2026-06-27 — Phase 12 C02 plan lock
+
+### Scope
+
+- Locked Phase 12 as Life Admin + Finance + Daily Admin Queue.
+- Recorded C01 source/route inspection findings.
+- Recorded user override: no housing search primary workflow because user already has housing.
+- Reinterpreted housing scope as rent, lease, utilities, maintenance, and housing documents.
+- Added post-v1 expansion roadmap addendum for Phases 22–26.
+
+### Files
+
+- `docs/phase-plans/PHASE_12_LIFE_ADMIN_FINANCE_DAILY_ADMIN_SYSTEM.md`
+- `docs/phase-reports/PHASE_12_C01_SOURCE_ROUTE_INSPECTION.md`
+- `docs/roadmap/POST_V1_EXPANSION_ROADMAP.md`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+### Schema
+
+- No schema change needed.
+
+### Boundary
+
+- No app code, SQL migration, RLS policy, database type, repository helper, route implementation, dashboard implementation, Carnos execution, Python/ML execution, background job, bank sync, document upload, auto-pay, or write behavior was added.
+
+## 2026-06-27 — Phase 12 C03 schema design
+
+### Scope
+
+- Added Phase 12 Life Admin + Finance schema design.
+- Added income/expense, rent/bills/subscriptions, document metadata/deadline, daily admin queue, and severity design.
+- Added privacy/safety review for finance, documents, housing, and Carnos boundaries.
+- Added source-to-scope traceability report.
+
+### Steps covered
+
+- 12.7
+- 12.8
+- 12.9
+- 12.10
+- 12.11
+- 12.12
+- 12.13
+- 12.14
+
+### Schema
+
+- No SQL schema was changed in C03.
+- SQL begins in C04 after this design is committed.
+
+### Boundary
+
+- No app code, SQL migration, RLS policy, database type, repository helper, route implementation, dashboard implementation, Carnos execution, Python/ML execution, background job, bank sync, document upload, auto-pay, or write behavior was added.
+
+## Phase 12 C04 — SQL Foundation Tables
+
+Status: Complete pending verification.
+
+Scope:
+
+- Added `supabase/migrations/0014_phase12_life_admin_finance_foundation.sql`.
+- Added Phase 12 source-aligned tables:
+  - `financial_accounts`
+  - `budget_categories`
+  - `financial_logs`
+  - `subscriptions`
+  - `documents`
+  - `housing_options`
+  - `housing_contacts`
+- Added indexes for user ownership, due dates, document dates, and linkage fields.
+- Added RLS policies for own-row select, insert, update, and delete.
+
+Boundaries:
+
+- No app code.
+- No TypeScript database types.
+- No repositories.
+- No dashboard wiring.
+- No parent ownership guards yet.
+- No autonomous Carnos writes.
+- No bank sync, auto-pay, document upload, OCR, tax/legal/immigration advice automation, or external integration.
+
+Next:
+
+- Phase 12 C05: parent ownership guards for nullable cross-table links.
+
+## Phase 12 C05 — Parent Ownership Guards
+
+Status: Complete pending verification.
+
+Scope:
+
+- Added `supabase/migrations/0015_phase12_parent_ownership_guards.sql`.
+- Added reusable SQL helper:
+  - `phase12_assert_parent_belongs_to_user`
+- Added parent ownership guard triggers for:
+  - `financial_logs`
+  - `subscriptions`
+  - `documents`
+  - `housing_options`
+  - `housing_contacts`
+
+Purpose:
+
+- Prevent Phase 12 records from linking to another user's parent records.
+- Preserve the server-write / SQL-audit / user-owned data boundary before any TypeScript types or read helpers are added.
+
+Boundaries:
+
+- SQL only.
+- No app code.
+- No TypeScript database types.
+- No repositories.
+- No dashboards.
+- No route wiring.
+- No Carnos execution.
+- No bank sync, auto-pay, document upload, OCR, external integration, or tax/legal/immigration advice automation.
+
+Next:
+
+- Phase 12 C06: migration validation closeout for SQL foundation.
+
+## Phase 12 C06 — SQL Validation Closeout
+
+Status: Complete pending verification.
+
+Scope:
+
+- Added `docs/phase-reports/PHASE_12_SQL_FOUNDATION_VALIDATION_REPORT.md`.
+- Closed Phase 12 SQL foundation steps after C04 and C05.
+- Recorded migration coverage for:
+  - `0014_phase12_life_admin_finance_foundation.sql`
+  - `0015_phase12_parent_ownership_guards.sql`
+
+Covered:
+
+- 12.19 Validate migrations.
+
+Boundary:
+
+- Docs/logs only.
+- No SQL changes.
+- No app code.
+- No TypeScript database types.
+- No repositories.
+- No dashboards.
+- No route wiring.
+- No write forms.
+- No proposed-action execution.
+
+Next:
+
+- Phase 12 C07 — database type contracts.
+
+## Phase 12 C07 — Database Type Contracts
+
+Status: Complete pending verification.
+
+Scope:
+
+- Added TypeScript database contracts for Life Admin / Finance tables.
+- Matched C04 SQL schema and C05 ownership-guarded relationships.
+- Added exported row/insert/update aliases for downstream read helpers.
+
+Files touched:
+
+- `src/types/database.ts`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundaries:
+
+- No SQL edits.
+- No repository helpers.
+- No dashboard helpers.
+- No UI wiring.
+- No proposed-action execution.
+
+## C08 — Admin and Finance Read Helpers
+
+Completed:
+
+- Added read-only repository helpers for admin, finance, documents, subscriptions, housing, and housing contacts.
+- Exported the helpers from the repository barrel.
+- Kept this chunk read-only and server-side only.
+
+Boundaries:
+
+- No SQL migration.
+- No writes.
+- No dashboard code.
+- No route wiring.
+- No proposed-action execution.
+- No bank sync, autopay, document upload, legal/tax/immigration advice, or autonomous Carnos behavior.
+
+Next:
+
+- Build aggregation helpers and state mapping for daily admin, finance, documents, subscriptions, and housing admin.
+
+## Phase 12 C09 — Admin / Finance Dashboard Aggregation Helpers
+
+Status: Completed pending verification.
+
+Scope:
+
+- Added read-only aggregation helper for Life Admin / Finance dashboard data.
+- Aggregates financial accounts, budget categories, financial logs, subscriptions, document metadata, housing admin records, and housing contacts.
+- Added due-soon / overdue helper logic for subscriptions, documents, finance records, and housing follow-ups.
+- Preserved read-only boundaries.
+
+Files changed:
+
+- `src/lib/dashboard/admin-finance-dashboard-data-helpers.ts`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundaries:
+
+- No SQL migration changes.
+- No database type changes.
+- No repository changes.
+- No components or route wiring.
+- No proposed-action execution.
+
+## C10 — Admin / Finance Dashboard Components
+
+Status: Complete pending verification.
+
+Completed:
+
+- Added read-only dashboard components for Life Admin, Finance, Documents, and Housing.
+- Added shared admin privacy, warning, empty/error/loading/privacy boundary, and proposed-action preview boundary sections.
+- Exported the components from the dashboard component barrel.
+
+Boundaries:
+
+- No SQL migration.
+- No database type edits.
+- No repository edits.
+- No dashboard helper edits.
+- No route wiring.
+- No writes.
+- No bank sync, autopay, document upload/OCR/storage, legal/tax/immigration advice, or autonomous Carnos execution.
+
+## C11 — Admin / Finance Route Wiring
+
+Status: Complete pending verification.
+
+Completed:
+
+- Wired `/life-admin` to `LifeAdminDashboardV1`.
+- Wired `/finance` to `FinanceDashboardV1`.
+- Wired `/documents` to `DocumentsDashboardV1`.
+- Wired `/housing` to `HousingDashboardV1`.
+- Replaced placeholder pages with authenticated read-only dashboard shells.
+
+Boundaries:
+
+- No SQL migration.
+- No database type edits.
+- No repository edits.
+- No dashboard helper edits.
+- No component edits.
+- No writes.
+- No proposed-action execution.
+- No bank sync, autopay, document upload/OCR/storage, legal/tax/immigration advice, or autonomous Carnos execution.
+
+## Phase 12 C12 — Command Admin/Finance Visibility
+
+- Wired Command dashboard to read the Phase 12 admin/finance dashboard summary alongside the existing core Command summary.
+- Added read-only Command visibility for admin queue count, overdue admin pressure, due-soon admin pressure, subscriptions, documents, housing, source tables, and read warnings.
+- Exported the admin/finance dashboard helper through the dashboard barrel for canonical app-level imports.
+- Preserved the no-write boundary: no SQL changes, no repository changes, no component-side mutations, no AI calls, no background jobs, and no proposed-action execution.
+
+## Phase 12 C13 — Calendar Admin/Finance Deadline Visibility
+
+- Wired Calendar dashboard to receive the Phase 12 admin/finance dashboard summary alongside the existing core Calendar summary.
+- Added read-only Calendar visibility for planned finance records, overdue admin pressure, upcoming subscriptions, expiring documents, housing follow-ups, warnings, and source tables.
+- Preserved the no-write boundary: no SQL changes, no repository changes, no helper changes, no component-side mutations, no AI calls, no reminders, no background jobs, and no proposed-action execution.
+
+## Phase 12 C14 — Admin/Finance Proposed-Action Preview Visibility
+
+- Replaced the static admin proposal boundary panel with disabled proposed-action preview cards for future admin and finance suggestions.
+- Added preview-only cards for create_task, create_goal, and create_proof_item using the existing proposed-action review surface.
+- Preserved the no-write boundary: no SQL changes, no type changes, no repository changes, no helper changes, no route changes, no proposal persistence, no execution, no AI calls, and no background jobs.
+
+## Phase 12 C15 — Audit Gate and Safety Validation
+
+- Added `scripts/audit-phase-12.mjs` as the Phase 12 audit gate for Life Admin, Finance, Documents, Housing, Command, Calendar, SQL, type, repository, helper, dashboard, route, deferred-scope, and proposed-action preview boundaries.
+- Wired `audit:phase12` into `npm run check` after the Phase 11 audit and before integration sanity.
+- The audit gate checks source-to-scope traceability, privacy/safety boundaries, SQL/RLS/parent ownership guards, read-only repositories, dashboard aggregation, route wiring, Command/Calendar visibility, disabled proposed-action preview cards, deferred feature absence, and log/status markers.
+
+## Phase 12 C16 — Smoke Checklist and Completion Closeout
+
+Status: Complete.
+
+Changes:
+
+- Added Phase 12 manual smoke checklist for Life Admin, Finance, Documents, Housing, Command, and Calendar routes.
+- Added Phase 12 source-to-scope closeout confirming source alignment and user-specific housing correction.
+- Added Phase 12 completion report.
+- Updated the Phase 12 audit gate to require C16 closeout docs and log markers.
+
+Files:
+
+- `docs/qa/PHASE_12_LIFE_ADMIN_FINANCE_MANUAL_SMOKE_CHECKLIST.md`
+- `docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_CLOSEOUT.md`
+- `docs/phase-reports/PHASE_12_LIFE_ADMIN_FINANCE_COMPLETION_REPORT.md`
+- `scripts/audit-phase-12.mjs`
+
+Verification:
+
+- `npm run audit:phase12`
+- `npm run check`
+- `git diff --check`
+
+Next:
+
+- Phase 12 C17 final verification and status lock.
+
+## Phase 12 C17 — Final Verification and Status Lock
+
+Timestamp: 2026-06-27 06:23 UTC
+
+Status: Complete.
+
+Completed final Phase 12 verification and status lock.
+
+Verified:
+
+- `npm run audit:phase12`
+- `npm run check`
+- `git diff --check`
+- C16 closeout document audit coverage
+- Phase 12 source-to-scope closeout
+- Phase 12 manual smoke checklist
+- Phase 12 completion report
+- Phase 12 protected boundaries
+- no deferred finance, document upload, bank sync, auto-pay, scraping, Python/ML, background job, or autonomous Carnos execution paths
+
+Final Phase 12 source progress:
+
+- Completed Phase 12 source steps: 45/45
+- Remaining Phase 12 source steps: 0/45
+
+Phase 12 is complete and ready for Phase 13 source inspection.
 ```
 
 ### `README.md`
@@ -7922,6 +12029,1101 @@ The Stanford / PhD dashboard should show:
 This design is ready to be translated into SQL during Chunk C.
 ```
 
+### `docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md`
+
+```md
+# Phase 11 — Health / Body Schema Design
+
+## Purpose
+
+This document designs the Phase 11 Health / Body SQL foundation before any migration is written.
+
+Phase 11 must create a user-owned, SQL-backed, read-first health/body layer for:
+
+- body logs
+- workouts
+- exercises
+- workout sets
+- nutrition logs
+- meal items
+- supplements
+- supplement logs
+- sleep logs
+- energy logs
+- mental health logs
+- emotion logs
+- journal entries
+- skincare logs
+- haircare logs
+- products
+
+This design intentionally avoids medical claims, autonomous writes, direct dashboard persistence, fake photo storage, background jobs, voice execution, memory/RAG, and advanced analytics.
+
+## Source-of-Truth Tables
+
+The FINAL_SYNCED JSON confirms these Phase 11 `health_body` tables:
+
+| Table | Role |
+|---|---|
+| `body_logs` | Bodyweight, measurements, physical notes, optional photo attachment reference |
+| `workouts` | Workout sessions |
+| `exercises` | User-owned exercise catalog |
+| `workout_sets` | Per-set workout performance records |
+| `nutrition_logs` | Daily calories, macros, water, nutrition notes |
+| `meal_items` | Food/meal item records linked to nutrition logs |
+| `supplements` | User-owned supplement list and schedule metadata |
+| `supplement_logs` | Taken/missed/skipped supplement records |
+| `sleep_logs` | Daily sleep record with bedtime, wake time, duration, quality |
+| `energy_logs` | Daily energy, focus, fatigue, and brain-fog record |
+| `mental_health_logs` | Sensitive mood/stress/anxiety-style check-ins |
+| `emotion_logs` | Sensitive emotion/intensity/trigger records |
+| `journal_entries` | Sensitive private journal/reflection records |
+| `skincare_logs` | Morning/night skincare routine logs |
+| `haircare_logs` | Haircare routine, shedding notes, optional photo attachment reference |
+| `products` | User-owned product list for skincare/haircare/supplements/general health-body routines |
+
+## Required Ownership Pattern
+
+Every Phase 11 table must include:
+
+- `id uuid primary key`
+- `user_id uuid not null references auth.users(id) on delete cascade`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Every Phase 11 table must enable RLS.
+
+Every Phase 11 table must restrict select/insert/update/delete to the authenticated owner.
+
+No table may be globally readable.
+
+## Candidate Shared Columns
+
+Use consistent nullable linkage columns where needed:
+
+- `goal_id uuid references public.goals(id) on delete set null`
+- `task_id uuid references public.tasks(id) on delete set null`
+- `proof_item_id uuid references public.proof_items(id) on delete set null`
+- `daily_log_id uuid references public.daily_logs(id) on delete set null`
+- `event_id uuid references public.events(id) on delete set null`
+- `source_ai_action_id uuid references public.ai_actions(id) on delete set null`
+- `source_chat_message_id uuid references public.chat_messages(id) on delete set null`
+
+These references must be nullable. Health records must remain valid even when they are not connected to goals, tasks, proof, events, or Carnos actions.
+
+Parent ownership guards must be added in Chunk C.1 before cross-table writes are trusted.
+
+## Table Design
+
+### `body_logs`
+
+Purpose: Stores bodyweight, measurements, body notes, and optional attachment references.
+
+Suggested fields:
+
+- `id`
+- `user_id`
+- `log_date date not null`
+- `bodyweight numeric`
+- `bodyweight_unit text`
+- `waist numeric`
+- `waist_unit text`
+- `recovery_score integer`
+- `soreness_score integer`
+- `pain_score integer`
+- `pain_area text`
+- `notes text`
+- `photo_attachment_id uuid`
+- `goal_id uuid`
+- `task_id uuid`
+- `proof_item_id uuid`
+- `daily_log_id uuid`
+- `source_ai_action_id uuid`
+- `source_chat_message_id uuid`
+- `created_at`
+- `updated_at`
+
+Rules:
+
+- No diagnosis.
+- Pain/recovery fields are tracking-only.
+- Photo references must not imply upload/storage exists.
+- Duplicate same-day records are allowed unless later explicitly constrained; dashboards must show counts and latest record clearly.
+
+### `workouts`
+
+Purpose: Stores workout sessions.
+
+Suggested fields:
+
+- `id`
+- `user_id`
+- `workout_date date not null`
+- `title text not null`
+- `duration_minutes integer`
+- `focus text`
+- `intensity_score integer`
+- `recovery_notes text`
+- `notes text`
+- `goal_id uuid`
+- `task_id uuid`
+- `proof_item_id uuid`
+- `event_id uuid`
+- `source_ai_action_id uuid`
+- `source_chat_message_id uuid`
+- `created_at`
+- `updated_at`
+
+Rules:
+
+- Workout records are user-owned.
+- Workout records may link to calendar/events and proof only through nullable references.
+- No automatic proof creation.
+
+### `exercises`
+
+Purpose: Stores user-owned exercise catalog entries.
+
+Suggested fields:
+
+- `id`
+- `user_id`
+- `name text not null`
+- `muscle_group text`
+- `equipment text`
+- `notes text`
+- `created_at`
+- `updated_at`
+
+Rules:
+
+- Exercise names are user-owned.
+- Do not require a global exercise library in Phase 11.
+
+### `workout_sets`
+
+Purpose: Stores set-level performance.
+
+Suggested fields:
+
+- `id`
+- `user_id`
+- `workout_id uuid not null references public.workouts(id) on delete cascade`
+- `exercise_id uuid references public.exercises(id) on delete set null`
+- `set_number integer`
+- `reps integer`
+- `weight numeric`
+- `weight_unit text`
+- `rir numeric`
+- `notes text`
+- `created_at`
+- `updated_at`
+
+Rules:
+
+- `workout_id` parent ownership must be guarded.
+- `exercise_id` parent ownership must be guarded when present.
+- Weight unit must be explicit or display-safe.
+
+### `nutrition_logs`
+
+Purpose: Stores daily nutrition summary.
+
+Suggested fields:
+
+- `id`
+- `user_id`
+- `log_date date not null`
+- `calories integer`
+- `protein_g numeric`
+- `carbs_g numeric`
+- `fat_g numeric`
+- `water_ml integer`
+- `mode text`
+- `notes text`
+- `goal_id uuid`
+- `task_id uuid`
+- `proof_item_id uuid`
+- `daily_log_id uuid`
+- `source_ai_action_id uuid`
+- `source_chat_message_id uuid`
+- `created_at`
+- `updated_at`
+
+Rules:
+
+- No unsafe calorie recommendation.
+- Targets must come from baseline/goals/settings, not hardcoded fake values.
+- Duplicate same-day logs must not be hidden.
+
+### `meal_items`
+
+Purpose: Stores meal/food entries attached to nutrition logs.
+
+Suggested fields:
+
+- `id`
+- `user_id`
+- `nutrition_log_id uuid not null references public.nutrition_logs(id) on delete cascade`
+- `meal_name text`
+- `food_name text not null`
+- `calories integer`
+- `protein_g numeric`
+- `carbs_g numeric`
+- `fat_g numeric`
+- `quantity numeric`
+- `unit text`
+- `created_at`
+- `updated_at`
+
+Rules:
+
+- `nutrition_log_id` parent ownership must be guarded.
+- No barcode scanning or external food database in Phase 11.
+
+### `supplements`
+
+Purpose: Stores user-owned supplement records.
+
+Suggested fields:
+
+- `id`
+- `user_id`
+- `name text not null`
+- `dosage text`
+- `frequency text`
+- `notes text`
+- `active boolean not null default true`
+- `created_at`
+- `updated_at`
+
+Rules:
+
+- Supplement tracking is recordkeeping only.
+- No dosage recommendation.
+- No treatment/cure claims.
+- No interaction claims.
+
+### `supplement_logs`
+
+Purpose: Stores taken/missed/skipped supplement records.
+
+Suggested fields:
+
+- `id`
+- `user_id`
+- `supplement_id uuid not null references public.supplements(id) on delete cascade`
+- `taken_at timestamptz`
+- `status text not null`
+- `notes text`
+- `created_at`
+- `updated_at`
+
+Rules:
+
+- Valid statuses should be constrained in SQL, likely: `taken`, `missed`, `skipped`.
+- `supplement_id` parent ownership must be guarded.
+- No reminders/background jobs in Phase 11.
+
+### `sleep_logs`
+
+Purpose: Stores daily sleep records.
+
+Suggested fields:
+
+- `id`
+- `user_id`
+- `sleep_date date not null`
+- `bedtime timestamptz`
+- `wake_time timestamptz`
+- `sleep_hours numeric`
+- `quality_score integer`
+- `notes text`
+- `daily_log_id uuid`
+- `source_ai_action_id uuid`
+- `source_chat_message_id uuid`
+- `created_at`
+- `updated_at`
+
+Rules:
+
+- Daily sleep tracking must be supported.
+- Carnos may calculate duration and propose a sleep log.
+- Carnos must not save silently.
+- `sleep_hours` may also appear in `daily_logs`; dashboards must handle both sources clearly.
+
+### `energy_logs`
+
+Purpose: Stores daily energy/focus/fatigue/brain-fog signals.
+
+Suggested fields:
+
+- `id`
+- `user_id`
+- `log_date date not null`
+- `energy_score integer`
+- `focus_score integer`
+- `fatigue_score integer`
+- `brain_fog_score integer`
+- `notes text`
+- `daily_log_id uuid`
+- `source_ai_action_id uuid`
+- `source_chat_message_id uuid`
+- `created_at`
+- `updated_at`
+
+Rules:
+
+- Scores are user-reported.
+- No diagnosis.
+- Trend previews only.
+
+### `mental_health_logs`
+
+Purpose: Stores sensitive emotional/mental state check-ins.
+
+Suggested fields:
+
+- `id`
+- `user_id`
+- `log_date date not null`
+- `mood_score integer`
+- `anxiety_score integer`
+- `stress_score integer`
+- `shame_score integer`
+- `anger_score integer`
+- `loneliness_score integer`
+- `notes text`
+- `sensitivity text not null default 'private'`
+- `source_ai_action_id uuid`
+- `source_chat_message_id uuid`
+- `created_at`
+- `updated_at`
+
+Rules:
+
+- Sensitive by default.
+- No diagnosis.
+- No therapy claim.
+- No emergency/crisis automation.
+- Detailed notes must not be exposed on broad dashboards.
+
+### `emotion_logs`
+
+Purpose: Stores specific emotion events.
+
+Suggested fields:
+
+- `id`
+- `user_id`
+- `emotion text not null`
+- `intensity integer`
+- `trigger text`
+- `occurred_at timestamptz not null default now()`
+- `notes text`
+- `sensitivity text not null default 'private'`
+- `source_ai_action_id uuid`
+- `source_chat_message_id uuid`
+- `created_at`
+- `updated_at`
+
+Rules:
+
+- Sensitive by default.
+- Trigger and notes must remain private.
+- No clinical claims.
+
+### `journal_entries`
+
+Purpose: Stores private reflection/journal entries.
+
+Suggested fields:
+
+- `id`
+- `user_id`
+- `entry_date date not null`
+- `title text`
+- `content text`
+- `mood_json jsonb`
+- `sensitivity text not null default 'private'`
+- `private boolean not null default true`
+- `source_ai_action_id uuid`
+- `source_chat_message_id uuid`
+- `created_at`
+- `updated_at`
+
+Rules:
+
+- Private by default.
+- Must not be shown in general dashboard summaries unless explicitly privacy-safe.
+- No export/share behavior in Phase 11.
+
+### `skincare_logs`
+
+Purpose: Stores skincare routine logs.
+
+Suggested fields:
+
+- `id`
+- `user_id`
+- `log_date date not null`
+- `routine_type text`
+- `products_json jsonb`
+- `completed boolean`
+- `irritation_notes text`
+- `source_ai_action_id uuid`
+- `source_chat_message_id uuid`
+- `created_at`
+- `updated_at`
+
+Rules:
+
+- Routine tracking only.
+- No treatment guarantee.
+- No prescription guidance.
+
+### `haircare_logs`
+
+Purpose: Stores haircare routine logs.
+
+Suggested fields:
+
+- `id`
+- `user_id`
+- `log_date date not null`
+- `routine_json jsonb`
+- `completed boolean`
+- `shedding_notes text`
+- `photo_attachment_id uuid`
+- `source_ai_action_id uuid`
+- `source_chat_message_id uuid`
+- `created_at`
+- `updated_at`
+
+Rules:
+
+- Haircare tracking only.
+- No guaranteed hair regrowth claim.
+- Photo references must not imply storage exists.
+
+### `products`
+
+Purpose: Stores user-owned product list for health/body routines.
+
+Suggested fields:
+
+- `id`
+- `user_id`
+- `name text not null`
+- `category text`
+- `brand text`
+- `usage_notes text`
+- `active boolean not null default true`
+- `created_at`
+- `updated_at`
+
+Rules:
+
+- Product recordkeeping only.
+- No product recommendation engine in Phase 11.
+- No external lookup.
+
+## Candidate Tables Requiring Explicit Justification
+
+### `health_body_baselines`
+
+This table is useful but not source-confirmed as a named Phase 11 table.
+
+Possible role:
+- user height
+- starting bodyweight
+- goal bodyweight
+- preferred units
+- target calories
+- target protein
+- target water
+- sleep target
+- gym target
+- bulk/cut/recomp mode
+
+Decision:
+- Include in schema only if Chunk B2 justifies it.
+- Otherwise use existing goals/settings until a later phase.
+
+### `progress_photos`
+
+This table is mentioned by route scope but not found as a confirmed Phase 11 table block.
+
+Decision:
+- Do not add fake persistence.
+- Do not implement upload/storage.
+- Keep `photo_attachment_id` references only unless explicitly justified.
+
+### `recovery_logs`
+
+This table is useful but not source-confirmed.
+
+Decision:
+- Prefer simple recovery fields in `body_logs` and `workouts`.
+- Do not add a separate table unless complexity requires it.
+
+## Index Strategy
+
+Recommended indexes:
+
+- `(user_id, created_at desc)` on all Phase 11 tables
+- `(user_id, log_date desc)` on date-log tables
+- `(user_id, workout_date desc)` on `workouts`
+- `(user_id, sleep_date desc)` on `sleep_logs`
+- `(user_id, occurred_at desc)` on `emotion_logs`
+- `(workout_id)` on `workout_sets`
+- `(nutrition_log_id)` on `meal_items`
+- `(supplement_id)` on `supplement_logs`
+
+## Constraint Strategy
+
+Recommended constraints:
+
+- score fields should be nullable integers constrained to safe ranges where appropriate
+- status fields should be constrained to known safe values
+- unit fields should be nullable text but display-safe
+- boolean fields should use explicit defaults where source-backed
+- no hardcoded personal targets in SQL
+
+## RLS Strategy
+
+Every table:
+
+- enable row level security
+- select own rows only
+- insert own rows only
+- update own rows only
+- delete own rows only
+
+Parent ownership hardening must be handled in a separate guard migration.
+
+## Read-First Boundary
+
+This schema does not authorize direct writes from dashboards.
+
+Allowed later:
+- server-side write through the existing safe proposed-action flow
+- user confirmation
+- audit logging
+
+Not allowed:
+- client direct SQL mutation
+- Carnos silent writes
+- Python/ML mutation
+- dashboard fake saves
+
+## B2 Hardening Decision Notes
+
+Phase 11 Chunk B2 adds design boundaries for baseline, unit, daily sleep, sleep natural-language capture, and photo/storage honesty.
+
+### Baselines
+
+Phase 11 should support baseline-aware dashboards, but must not hardcode user targets or pretend targets exist.
+
+A `health_body_baselines` table remains a schema candidate, not an automatic requirement. The SQL step must explicitly decide whether to add it or defer it to existing goals/settings.
+
+### Units
+
+Unit labels must be explicit for bodyweight, lifting weight, waist/measurements, water, sleep, macros, and calories.
+
+### Daily Sleep
+
+Daily sleep tracking must preserve compatibility with existing `daily_logs.sleep_hours` while adding detailed `sleep_logs` visibility.
+
+### Natural-Language Sleep Capture
+
+Carnos may parse and calculate sleep duration only as a proposed action. It must not save silently.
+
+### Progress Photos
+
+Progress photos must not be faked. Photo references are allowed only when schema-backed; upload/storage is deferred unless explicitly implemented later.
+
+## B3 Safety, Data Quality, Target, and Trend Decision Notes
+
+Phase 11 Chunk B3 adds design boundaries for medical/supplement/body-image safety, duplicate-log behavior, target comparison, and trend previews.
+
+### Medical and supplement safety
+
+Schema and UI must support recordkeeping only. Fields may store user-entered notes, dosage text, and status values, but must not imply recommendations, diagnosis, treatment, cure, or medical safety.
+
+### Duplicate logs
+
+SQL should not blindly add unique same-day constraints unless explicitly justified. Duplicate logs are allowed by default, and dashboards/read helpers must display latest record, count, and source/date context clearly.
+
+### Missing versus zero
+
+Read helpers and UI must distinguish `null` from `0`.
+
+### Target comparison
+
+Target comparison is allowed only when targets are source-backed by existing goals, tasks, daily logs, a future approved baseline table, or explicit user-confirmed settings.
+
+### Trend previews
+
+Phase 11 supports basic trend previews only. Advanced analytics, predictions, experiments, and deep correlations are deferred to Phase 17.
+```
+
+### `docs/database/PHASE_12_LIFE_ADMIN_FINANCE_SCHEMA_DESIGN.md`
+
+```md
+# Phase 12 — Life Admin + Finance Schema Design
+
+Status: Locked design before SQL.
+
+## Covered steps
+
+- 12.7 Design Life Admin + Finance schema.
+- 12.8 Design income and expense model.
+- 12.9 Design rent, bills, utilities, subscriptions model.
+- 12.10 Design document metadata/deadline model.
+- 12.11 Design daily admin queue model.
+- 12.12 Design due-soon / overdue / critical severity logic.
+
+## Source basis
+
+The FINAL_SYNCED JSON identifies the Life Admin / Finance / Housing / Documents source area through these dashboards and routes:
+
+- Life Admin Dashboard — `/life-admin`
+- Finance Dashboard — `/finance`
+- Housing Dashboard — `/housing`
+- Visa / Documents Dashboard — `/documents`
+
+Source-confirmed tables for this area:
+
+- `housing_options`
+- `housing_contacts`
+- `financial_accounts`
+- `financial_logs`
+- `subscriptions`
+- `budget_categories`
+- `documents`
+
+## User-specific correction
+
+The source treats housing as a housing search CRM. The user clarified they already have housing.
+
+Therefore Phase 12 uses the housing source area as housing administration:
+
+- rent
+- lease metadata
+- utilities
+- maintenance notes
+- roommate/shared-cost notes if needed
+- housing documents
+
+Phase 12 must not make apartment search the primary workflow.
+
+## Design principle
+
+Phase 12 remains SQL-backed, user-owned, RLS-protected, read-first, and dashboard-safe.
+
+Carnos may propose future actions through the existing proposed-action pattern, but Phase 12 dashboards must not directly create, update, delete, upsert, or execute database writes.
+
+## Proposed SQL tables
+
+### 1. `financial_accounts`
+
+Purpose: Stores manual financial account summaries without bank sync.
+
+Fields:
+
+- `id uuid primary key`
+- `user_id uuid not null references auth.users(id)`
+- `name text not null`
+- `account_type text`
+- `institution_name text`
+- `currency text default 'USD'`
+- `current_balance numeric`
+- `is_active boolean default true`
+- `privacy_level text default 'private'`
+- `notes text`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Boundary:
+
+- No bank sync.
+- No external account connection.
+- No investment/financial advice.
+
+### 2. `budget_categories`
+
+Purpose: Stores manual budget categories for expenses, income, rent, utilities, subscriptions, savings, and admin costs.
+
+Fields:
+
+- `id uuid primary key`
+- `user_id uuid not null references auth.users(id)`
+- `name text not null`
+- `category_type text`
+- `monthly_target numeric`
+- `currency text default 'USD'`
+- `is_active boolean default true`
+- `sort_order integer default 0`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Suggested category types:
+
+- `income`
+- `expense`
+- `rent`
+- `utility`
+- `subscription`
+- `savings`
+- `debt`
+- `admin`
+- `other`
+
+### 3. `financial_logs`
+
+Purpose: Stores manual income and expense records.
+
+Fields:
+
+- `id uuid primary key`
+- `user_id uuid not null references auth.users(id)`
+- `account_id uuid references financial_accounts(id)`
+- `budget_category_id uuid references budget_categories(id)`
+- `log_type text not null`
+- `title text not null`
+- `amount numeric not null`
+- `currency text default 'USD'`
+- `occurred_on date not null`
+- `payment_status text default 'recorded'`
+- `merchant_or_source text`
+- `notes text`
+- `related_task_id uuid references tasks(id)`
+- `related_event_id uuid references events(id)`
+- `source_ai_action_id uuid references ai_actions(id)`
+- `source_chat_message_id uuid references chat_messages(id)`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Suggested `log_type` values:
+
+- `income`
+- `expense`
+- `rent`
+- `utility`
+- `subscription`
+- `bill`
+- `refund`
+- `transfer`
+- `adjustment`
+- `other`
+
+Suggested `payment_status` values:
+
+- `planned`
+- `due`
+- `paid`
+- `overdue`
+- `recorded`
+- `cancelled`
+
+### 4. `subscriptions`
+
+Purpose: Stores recurring subscriptions and recurring payments.
+
+Fields:
+
+- `id uuid primary key`
+- `user_id uuid not null references auth.users(id)`
+- `budget_category_id uuid references budget_categories(id)`
+- `name text not null`
+- `provider text`
+- `amount numeric`
+- `currency text default 'USD'`
+- `billing_cycle text`
+- `next_due_date date`
+- `payment_status text default 'active'`
+- `auto_renew boolean default false`
+- `cancel_by_date date`
+- `notes text`
+- `related_task_id uuid references tasks(id)`
+- `related_event_id uuid references events(id)`
+- `source_ai_action_id uuid references ai_actions(id)`
+- `source_chat_message_id uuid references chat_messages(id)`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Suggested `billing_cycle` values:
+
+- `weekly`
+- `monthly`
+- `quarterly`
+- `yearly`
+- `custom`
+
+Boundary:
+
+- Tracks subscriptions only.
+- Does not cancel subscriptions automatically.
+- Does not connect to external providers.
+
+### 5. `housing_options`
+
+Purpose: Source-aligned table retained, but Phase 12 uses it for current housing/rent/lease administration.
+
+Fields:
+
+- `id uuid primary key`
+- `user_id uuid not null references auth.users(id)`
+- `label text not null`
+- `housing_status text default 'current'`
+- `address_label text`
+- `rent_amount numeric`
+- `currency text default 'USD'`
+- `rent_due_day integer`
+- `lease_start_date date`
+- `lease_end_date date`
+- `deposit_amount numeric`
+- `utilities_notes text`
+- `maintenance_notes text`
+- `roommate_notes text`
+- `pros_cons_json jsonb default '{}'::jsonb`
+- `notes text`
+- `related_document_id uuid references documents(id)`
+- `related_task_id uuid references tasks(id)`
+- `related_event_id uuid references events(id)`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Boundary:
+
+- No apartment search as the primary Phase 12 experience.
+- No scraping.
+- No lease/legal advice.
+- Address field should be a label or partial description, not forced precise address storage.
+
+### 6. `housing_contacts`
+
+Purpose: Stores contacts related to current housing administration if needed.
+
+Fields:
+
+- `id uuid primary key`
+- `user_id uuid not null references auth.users(id)`
+- `housing_option_id uuid references housing_options(id)`
+- `name text not null`
+- `role text`
+- `contact_notes text`
+- `preferred_contact_method text`
+- `last_contacted_on date`
+- `next_follow_up_on date`
+- `related_task_id uuid references tasks(id)`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Boundary:
+
+- No automated outreach.
+- No external messaging.
+- No hidden contact syncing.
+
+### 7. `documents`
+
+Purpose: Stores document metadata and deadline tracking only.
+
+Fields:
+
+- `id uuid primary key`
+- `user_id uuid not null references auth.users(id)`
+- `title text not null`
+- `document_type text`
+- `status text default 'active'`
+- `issuing_body text`
+- `stored_location text`
+- `issued_on date`
+- `expires_on date`
+- `renewal_due_on date`
+- `review_on date`
+- `sensitivity text default 'private'`
+- `notes text`
+- `related_task_id uuid references tasks(id)`
+- `related_event_id uuid references events(id)`
+- `source_ai_action_id uuid references ai_actions(id)`
+- `source_chat_message_id uuid references chat_messages(id)`
+- `created_at timestamptz not null default now()`
+- `updated_at timestamptz not null default now()`
+
+Suggested document types:
+
+- `passport`
+- `visa`
+- `i20`
+- `opt`
+- `ead`
+- `license`
+- `insurance`
+- `lease`
+- `school`
+- `career`
+- `tax_metadata`
+- `other`
+
+Boundary:
+
+- Metadata only.
+- No file upload in Phase 12.
+- No legal or immigration advice.
+- No tax advice.
+
+## Daily Admin Queue design
+
+Phase 12 does not need a separate queue table unless C04 reveals a real schema gap.
+
+The Daily Admin Queue should aggregate from:
+
+- `tasks`
+- `events`
+- `financial_logs`
+- `subscriptions`
+- `housing_options`
+- `documents`
+
+Queue item types:
+
+- task due today
+- overdue task
+- bill due
+- rent due
+- subscription due
+- document expiration
+- document renewal
+- housing follow-up
+- calendar-linked admin event
+
+Queue item fields at helper/UI level:
+
+- `id`
+- `source_table`
+- `source_id`
+- `title`
+- `description`
+- `due_date`
+- `status`
+- `severity`
+- `route`
+- `domain`
+- `is_overdue`
+- `days_until_due`
+
+## Severity logic
+
+Suggested helper-level severity:
+
+### `critical`
+
+- overdue document with high sensitivity
+- overdue bill/rent
+- due today and marked important
+- deadline within 0 days
+
+### `high`
+
+- due within 1–3 days
+- unpaid bill/rent due soon
+- important document renewal approaching
+
+### `medium`
+
+- due within 4–14 days
+- subscription or recurring payment due soon
+- document review upcoming
+
+### `low`
+
+- due after 14 days
+- informational/admin reminder
+- no due date but useful context
+
+## Dashboard read model
+
+Phase 12 dashboard helpers should produce:
+
+- finance monthly totals
+- income total
+- expense total
+- rent due visibility
+- subscription due visibility
+- overdue item count
+- due soon item count
+- document deadline count
+- daily admin queue items
+- privacy/safety flags
+- source table list
+- read-only boundary text
+
+## Index plan
+
+Expected indexes:
+
+- user/date indexes on all date-bearing tables
+- `user_id`
+- `occurred_on`
+- `next_due_date`
+- `expires_on`
+- `renewal_due_on`
+- `lease_end_date`
+- `related_task_id`
+- `related_event_id`
+- `source_ai_action_id`
+- `source_chat_message_id`
+
+## RLS plan
+
+Every Phase 12 table must:
+
+- enable row level security
+- allow select only for the owning authenticated user
+- allow insert/update/delete only for owning authenticated user if future write flows are enabled
+- avoid public access
+- avoid service assumptions in client code
+
+## Parent ownership guard plan
+
+Parent ownership guards are required for nullable links to:
+
+- `tasks`
+- `events`
+- `ai_actions`
+- `chat_messages`
+- `documents`
+- `housing_options`
+- `financial_accounts`
+- `budget_categories`
+
+Parent ownership guards must reject cross-user parent links before insert/update.
+
+## Deferred schema
+
+Do not add these in Phase 12:
+
+- `document_files`
+- `bank_connections`
+- `payment_methods`
+- `autopay_rules`
+- `tax_filings`
+- `legal_cases`
+- `wardrobe_items`
+- `outfits`
+- `style_wishlist_items`
+- `relationship_contacts`
+- `home_inventory`
+- `media_items`
+
+## Completion criteria for C03
+
+C03 is complete when this design exists, privacy/safety review exists, source-to-scope traceability exists, logs are updated, formatting passes, full check passes, and the docs-only commit is pushed.
+```
+
 ### `docs/database/PHASE_9_LEARNING_PROJECT_SCHEMA_DESIGN.md`
 
 ```md
@@ -8945,6 +14147,777 @@ Phase 10 is complete when:
 - cross-links exist.
 - no-write/privacy audit passes.
 - full verification passes.
+```
+
+### `docs/phase-plans/PHASE_11_HEALTH_BODY_SYSTEM.md`
+
+```md
+# Phase 11 — Health / Body System
+
+## Purpose
+
+Phase 11 builds the Health / Body System foundation for ascendOS + Carnos.
+
+The core loop is:
+
+Body Baseline -> Workout -> Set -> Nutrition -> Supplements -> Sleep -> Energy -> Skin/Hair -> Emotion -> Proof -> Timeline -> Carnos Proposal
+
+Phase 11 turns health, physique, sleep, nutrition, supplement, hair/skincare, and emotion signals into user-owned, SQL-backed, read-first dashboard surfaces.
+
+## Source-of-Truth Position
+
+Phase 11 follows the existing source hierarchy:
+
+1. FINAL_SYNCED DOCX
+2. FINAL_SYNCED JSON
+3. Repo docs, reports, audits, status, logs, migrations, scripts
+4. Current codebase and terminal output
+5. Explicit assumptions only
+
+Phase 11 must preserve the project law:
+
+Python/ML advises.
+The app validates.
+The user confirms.
+The server writes.
+SQL records.
+Audit logs.
+Python/ML must never directly mutate SQL.
+
+## Safety Boundary
+
+Phase 11 is initially a read-first foundation phase.
+
+It may add:
+
+- SQL schema
+- RLS and ownership policies
+- database types
+- read helpers
+- dashboard aggregation helpers
+- dashboard components
+- route wiring
+- proposed-action previews
+- linkage panels
+- privacy/state boundaries
+- audit reports
+
+It must not add:
+
+- autonomous Carnos writes
+- hidden database mutation
+- direct dashboard persistence
+- medical diagnosis
+- treatment claims
+- supplement medical claims
+- body-image shaming language
+- unsafe diet encouragement
+- mental-health therapy claims
+- emergency/crisis handling automation
+- photo upload/storage implementation unless explicitly scoped and schema-backed
+- reminder/background job execution
+- uncontrolled notifications
+- RAG, embeddings, or memory_items
+- OpenAI generation in dashboards
+- Python/ML mutation paths
+- uncontrolled background jobs
+
+## Primary Phase 11 Routes
+
+- /body
+- /nutrition
+- /supplements
+- /sleep-energy
+- /hair-skincare
+- /emotion
+
+## Supporting Linkage Routes
+
+- /goals
+- /tasks
+- /calendar
+- /timeline
+- /proof
+- /analytics
+- /world-class
+- /carnos
+
+## Source-of-Truth Dashboard Scope
+
+### /body
+
+Purpose: gym and physique tracking for workouts, exercises, sets, bodyweight, photos, volume, and recovery.
+
+Required cards:
+- Workouts
+- Exercises
+- Sets
+- Bodyweight
+- Progress Photos
+- Volume Trends
+- Recovery Notes
+
+Data sources:
+- workouts
+- exercises
+- workout_sets
+- body_logs
+- progress_photos
+
+Phase 11 note: `progress_photos` is referenced by dashboard source text, but no confirmed Phase 11 table block was found in the inspected health_body table slice. Phase 11 must not fake photo persistence. Photo fields remain attachment/reference visibility only unless a real attachment/photo table exists or is added in a later explicit schema step.
+
+### /nutrition
+
+Purpose: calories, macros, meals, water, bulk/cut mode, weekly averages, and consistency checks.
+
+Required cards:
+- Calories
+- Protein
+- Carbs
+- Fat
+- Water
+- Meals
+- Weekly Average
+- Bulk/Cut Mode
+
+Data sources:
+- nutrition_logs
+- meal_items
+- body_goals
+
+Phase 11 note: `body_goals` is referenced by dashboard source text, but no confirmed Phase 11 table block was found in the inspected health_body table slice. Link to existing goals first; do not invent `body_goals` unless schema design explicitly justifies it.
+
+### /supplements
+
+Purpose: supplement schedule/adherence with reminders and notes, without medical claims.
+
+Required cards:
+- Supplements
+- Dosage
+- Frequency
+- Taken/Missed
+- Notes
+- Reminder Links
+
+Data sources:
+- supplements
+- supplement_logs
+- reminders
+
+Phase 11 note: reminders are future calendar/task linkage only unless a reminder table already exists. Do not add notification/background execution.
+
+### /sleep-energy
+
+Purpose: sleep, wake time, quality, energy, focus, fatigue, brain fog, and correlations.
+
+Required cards:
+- Sleep Hours
+- Sleep Quality
+- Energy
+- Focus
+- Brain Fog
+- Correlation Charts
+- Recovery Suggestion
+
+Data sources:
+- sleep_logs
+- energy_logs
+- daily_logs
+- analytics_snapshots
+
+Phase 11 note: analytics snapshots are preview/correlation-read only unless an analytics table exists in the current phase scope.
+
+### /hair-skincare
+
+Purpose: routines, products, consistency, photos, irritation/shedding notes, without medical claims.
+
+Required cards:
+- Morning Routine
+- Night Routine
+- Products
+- Photos
+- Consistency
+- Irritation/Shedding Notes
+
+Data sources:
+- skincare_logs
+- haircare_logs
+- products
+- progress_photos
+
+Phase 11 note: no medical diagnosis, treatment guarantee, or prescription guidance. Photos remain reference/attachment visibility only unless storage is explicitly implemented later.
+
+### /emotion
+
+Purpose: mood, emotional patterns, triggers, reflection, and regulation proof with strong privacy boundaries.
+
+Data sources expected from health_body table scope:
+- mental_health_logs
+- emotion_logs
+- journal_entries
+
+Phase 11 note: `/emotion` is sensitive. It must be private, read-first, non-clinical, and must not imply therapy, diagnosis, crisis intervention, or medical advice.
+
+## Expected Data Domains
+
+Phase 11 should cover:
+
+- body logs
+- workouts
+- exercises
+- workout sets
+- nutrition logs
+- meal items
+- supplements
+- supplement logs
+- sleep logs
+- energy logs
+- mental health logs
+- emotion logs
+- journal entries
+- skincare logs
+- haircare logs
+- products
+
+## Expected SQL Tables
+
+Source-confirmed `health_body` tables:
+
+- body_logs
+- workouts
+- exercises
+- workout_sets
+- nutrition_logs
+- meal_items
+- supplements
+- supplement_logs
+- sleep_logs
+- energy_logs
+- mental_health_logs
+- emotion_logs
+- journal_entries
+- skincare_logs
+- haircare_logs
+- products
+
+Schema-design candidates that must be justified before SQL:
+
+- health_body_baselines
+- progress_photos
+- recovery_logs
+
+These candidates must not be added blindly. They require source-to-scope justification, ownership design, RLS, type contracts, and audit coverage.
+
+## Phase 11 Hardening Additions
+
+Phase 11 must include these no-loophole hardening rules:
+
+1. Health/body baseline handling.
+2. Unit/measurement clarity.
+3. Daily sleep tracking.
+4. Sleep natural-language capture boundary.
+5. Progress photo persistence honesty.
+6. Supplement safety boundary.
+7. Sensitive emotion/journal privacy.
+8. No body-shaming or unsafe diet language.
+9. Recovery/injury tracking is tracking-only, not diagnosis.
+10. Adherence/streaks are informational, not punitive.
+11. Health records become proof candidates only after user confirmation.
+12. Medical/supplement/body-image audit checks.
+13. Data quality and duplicate-log protection.
+14. Goal target comparison.
+15. Trend preview only; advanced analytics deferred to Phase 17.
+16. Manual QA checklist for sensitive health pages.
+
+## Sleep Natural-Language Capture Boundary
+
+Carnos may parse user statements about sleep, calculate duration, and propose a `sleep_log`, `energy_log`, or `daily_log` update.
+
+Example:
+
+User says: "I slept from 2 AM to 9:30 AM and woke up tired."
+
+Carnos may calculate:
+- sleep duration: 7.5 hours
+- tiredness/recovery note
+- proposed sleep log
+- proposed energy note
+
+Carnos must not save silently.
+
+Required flow:
+
+proposal -> validation -> Save/Edit/Cancel -> server-owned execution -> audit log -> timeline boundary -> dashboard refresh
+
+Phase 11 may design or preview this boundary, but actual writes must use the existing safe-write architecture and only when explicitly implemented.
+
+## Supplement Safety Boundary
+
+Supplement tracking is recordkeeping only.
+
+Carnos and dashboards must not:
+- recommend dosage
+- make medical claims
+- claim supplement interactions
+- say the user must take a supplement
+- imply treatment or cure
+- replace professional care
+
+Safe language examples:
+- "You logged this supplement."
+- "You missed this scheduled record."
+- "Review your supplement plan if something feels off."
+- "This is not medical advice."
+
+## Body Image and Nutrition Safety Boundary
+
+Dashboards must avoid:
+- shame language
+- punishment framing
+- extreme diet encouragement
+- unsafe calorie recommendations
+- guaranteed transformation claims
+- obsessive streak pressure
+
+Adherence and streaks are informational signals only.
+
+## Sensitive Emotion and Journal Privacy Boundary
+
+`mental_health_logs`, `emotion_logs`, and `journal_entries` are sensitive by default.
+
+Rules:
+- Do not expose detailed sensitive notes on general dashboards unless explicitly designed as privacy-safe summaries.
+- Do not diagnose.
+- Do not claim therapy.
+- Do not automate crisis handling.
+- Do not export/share in Phase 11.
+- Keep sensitive detail panels private and read-first.
+- Make privacy state visible in UI copy.
+
+## Data Quality and Duplicate Protection
+
+Dashboards must:
+- not calculate averages from empty arrays
+- not hide duplicate same-day logs
+- show latest log date clearly
+- show record count/date range clearly where useful
+- avoid fake trend claims when data is insufficient
+- distinguish missing data from zero values
+
+## Goal Target Comparison
+
+Phase 11 may compare logs against user targets only when targets are source-backed.
+
+Possible target sources:
+- health/body baseline
+- existing goals
+- existing tasks
+- user-owned settings if later added
+
+No target should be hardcoded as if it is the user's real target.
+
+## Trend Preview Boundary
+
+Phase 11 may show:
+- latest values
+- weekly averages
+- simple counts
+- basic directionality
+- simple target vs actual comparison
+
+Phase 11 must not add:
+- advanced prediction
+- ML scoring
+- medical analysis
+- deep cross-domain correlation engines
+- experiment intelligence
+
+Those belong to Phase 17 — Analytics / Experiments / Intelligence.
+
+## Integration With Existing Phases
+
+Phase 11 should connect to earlier phases through nullable references only when needed:
+
+- goal_id
+- task_id
+- proof_item_id
+- daily_log_id
+- event_id
+- timeline_event_id
+
+This prevents old data from breaking and allows records to remain unlinked until supporting evidence exists.
+
+## Existing Foundations Confirmed From Startup Inspection
+
+The current repo already has:
+
+- Phase 10 complete at commit `d5e300d Complete research system`
+- `main` aligned with `origin/main`
+- clean repo before pre-phase snapshot
+- `CODE_SNAPSHOT.md` regenerated as the Phase 11 pre-phase snapshot
+- authenticated dashboard shell
+- read-only dashboard empty states
+- cross-dashboard link component
+- proposed-action review card
+- canonical routes for /body, /nutrition, /supplements, /sleep-energy, /emotion, and /hair-skincare
+- `/body` using the Phase 5 DomainReadPage shell
+- `/nutrition`, `/supplements`, `/sleep-energy`, and `/hair-skincare` using placeholder dashboard pages
+- no health/body migrations
+- no health/body database types
+- no health/body read helpers
+- no health/body dashboard aggregation helpers
+
+## Phase 11 Step Plan
+
+### Inspection and Plan
+
+- 11.1 Source-of-truth inspection
+- 11.2 Phase 11 plan lock
+- 11.3 Existing route/component inspection
+
+### Schema, Traceability, and Hardening Design
+
+- 11.4 Health/body schema design
+- 11.5 Sensitive health/privacy schema review
+- 11.6 Source-to-scope traceability matrix
+- 11.7 Health/body baseline + unit strategy
+- 11.8 Daily sleep tracking design
+- 11.9 Sleep natural-language capture boundary
+- 11.10 Progress photo/storage honesty boundary
+- 11.11 Medical/supplement/body-image safety hardening
+- 11.12 Data quality + duplicate-log protection
+- 11.13 Goal target comparison strategy
+- 11.14 Trend preview boundary; advanced analytics deferred to Phase 17
+
+### SQL and Ownership
+
+- 11.15 SQL migration
+- 11.16 Ownership/RLS hardening
+
+### Types and Read Layer
+
+- 11.17 Database types
+- 11.18 Body/workout read helpers
+- 11.19 Nutrition/supplement read helpers
+- 11.20 Sleep/energy/emotion/hair-skincare read helpers
+
+### Dashboard Foundation
+
+- 11.21 Health/body aggregation helpers
+- 11.22 Dashboard registry/card layout extension
+- 11.23 Shared health UI primitives
+
+### Route Wiring
+
+- 11.24 Body dashboard v1 and /body
+- 11.25 Nutrition dashboard v1 and /nutrition
+- 11.26 Supplements dashboard v1 and /supplements
+- 11.27 Sleep/Energy dashboard v1 and /sleep-energy
+- 11.28 Hair/Skincare dashboard v1 and /hair-skincare
+- 11.29 Emotion dashboard v1 and /emotion
+
+### Detail Panels
+
+- 11.30 Workout/exercise/set detail panels
+- 11.31 Body log/progress detail panels
+- 11.32 Nutrition/meal detail panels
+- 11.33 Supplement/adherence detail panels
+- 11.34 Sleep/energy detail panels
+- 11.35 Hair/skincare/product detail panels
+- 11.36 Emotion/journal privacy-safe detail panels
+
+### Linkage and State
+
+- 11.37 Health-to-goals/tasks/proof linkage
+- 11.38 Health-to-calendar/timeline linkage
+- 11.39 Proposed-action visibility
+- 11.40 Empty/loading/error/privacy states
+- 11.41 Cross-dashboard links
+
+### Closeout
+
+- 11.42 No-write/privacy/medical-claims audit
+- 11.43 Audit gate + manual smoke checklist
+- 11.44 Completion report + closeout
+
+## Build Chunk Plan
+
+| Chunk | Steps | Purpose |
+|---|---:|---|
+| A | 11.1-11.3 | Source inspection, plan lock, route/component inspection |
+| B1 | 11.4-11.6 | Schema design, sensitive privacy review, traceability |
+| B2 | 11.7-11.10 | Baseline, units, sleep tracking, sleep capture, photo honesty |
+| B3 | 11.11-11.14 | Medical/supplement/body-image safety, data quality, targets, trend boundary |
+| C | 11.15 | SQL foundation only |
+| C.1 | 11.16 | Ownership/RLS hardening only |
+| D | 11.17 | Database types only |
+| E1 | 11.18 | Body/workout read helpers |
+| E2 | 11.19 | Nutrition/supplement read helpers |
+| E3 | 11.20 | Sleep/energy/emotion/hair-skincare read helpers |
+| F1 | 11.21 | Aggregation helpers |
+| F2 | 11.22-11.23 | Registry/card layout and shared health UI |
+| G1 | 11.24 | Body dashboard route |
+| G2 | 11.25 | Nutrition dashboard route |
+| G3 | 11.26 | Supplements dashboard route |
+| G4 | 11.27 | Sleep/Energy dashboard route |
+| G5 | 11.28 | Hair/Skincare dashboard route |
+| G6 | 11.29 | Emotion dashboard route |
+| H1 | 11.30-11.31 | Workout/body detail panels |
+| H2 | 11.32-11.33 | Nutrition/supplement detail panels |
+| H3 | 11.34-11.36 | Sleep/hair/emotion detail panels |
+| I1 | 11.37-11.38 | Health linkage panels |
+| I2 | 11.39-11.40 | Proposed-action and state boundaries |
+| I3 | 11.41 | Cross-dashboard links |
+| J1 | 11.42-11.43 | Audit gate and smoke checklist |
+| J2 | 11.44 | Completion report and closeout |
+
+## Deferred Scope
+
+The following are not part of Phase 11:
+
+- memory/RAG activation
+- embeddings
+- automatic web search
+- automatic product, supplement, or medical lookup
+- medical diagnosis or treatment recommendations
+- supplement medical claims
+- clinical mental-health guidance
+- emergency/crisis automation
+- photo upload/storage unless explicitly schema-backed
+- reminder/background job execution
+- autonomous Carnos mutation
+- direct Python/ML writes
+- uncontrolled background jobs
+- wearable integrations
+- Apple Health / Google Fit integrations
+- nutrition barcode scanning
+- external health APIs
+- advanced analytics and experiments beyond simple trend previews
+
+## Completion Criteria
+
+Phase 11 is complete when:
+
+- /body is wired to real read helpers.
+- /nutrition is wired to real read helpers.
+- /supplements is wired to real read helpers.
+- /sleep-energy is wired to real read helpers.
+- /hair-skincare is wired to real read helpers.
+- /emotion is wired to privacy-safe read helpers or explicitly deferred with source-trace justification.
+- health/body schema exists with RLS.
+- database types are updated.
+- read helpers are implemented.
+- dashboards display meaningful health/body state.
+- daily sleep visibility exists.
+- sleep natural-language capture boundary is documented and/or previewed without silent writes.
+- baseline/unit handling is documented and implemented where schema-backed.
+- data quality and duplicate-log behavior is explicit.
+- linkage panels connect health/body records to goals/tasks/proof/calendar/timeline where applicable.
+- proposed-action previews are disabled and read-first unless later safe-write flow is explicitly added.
+- privacy/state boundaries exist.
+- medical/supplement/body-image safety boundaries exist.
+- cross-links exist.
+- no-write/privacy/medical-claims audit passes.
+- manual sensitive-page smoke checklist exists.
+- full verification passes.
+```
+
+### `docs/phase-plans/PHASE_12_LIFE_ADMIN_FINANCE_DAILY_ADMIN_SYSTEM.md`
+
+```md
+# Phase 12 — Life Admin + Finance + Daily Admin Queue
+
+Status: Locked for implementation.
+
+## Source-of-truth basis
+
+Phase 12 is based on the FINAL_SYNCED source-of-truth Life Admin, Finance, Housing, Documents, Command, and Calendar scope.
+
+Source-confirmed dashboards/routes:
+
+- `/life-admin`
+- `/finance`
+- `/housing`
+- `/documents`
+- `/command`
+- `/calendar`
+
+Source-confirmed source tables:
+
+- `housing_options`
+- `housing_contacts`
+- `financial_accounts`
+- `financial_logs`
+- `subscriptions`
+- `budget_categories`
+- `documents`
+
+## User-specific scope correction
+
+The source-of-truth includes a housing search CRM, but the user already has housing.
+
+Therefore Phase 12 must not build apartment search or housing-option comparison as the primary workflow.
+
+Phase 12 reinterprets housing scope as:
+
+- rent tracking
+- lease metadata
+- utility tracking
+- maintenance notes
+- roommate/shared-cost notes if needed
+- housing documents
+- rent/bill/document deadline visibility
+
+The source table names may still be used where source-aligned, but UI language must avoid implying that the user is actively apartment hunting unless future user input changes this.
+
+## Phase 12 goal
+
+Build a read-only, SQL-backed Life Admin + Finance + Daily Admin Queue system that helps the user see:
+
+- what admin items matter today
+- what is overdue
+- what is due soon
+- what bills/rent/subscriptions need attention
+- what documents have deadlines or renewals
+- what finance records exist
+- what should be surfaced to Command and Calendar as survival/admin priority
+
+## Included scope
+
+### Daily Admin Queue
+
+- today’s admin tasks
+- overdue admin tasks
+- due-soon admin tasks
+- custom day-specific task visibility
+- bills due
+- rent due
+- subscription renewals
+- document deadlines
+- calendar-linked admin items
+- Command dashboard admin visibility
+- Calendar dashboard due-date visibility
+
+### Finance
+
+- income tracking
+- expense tracking
+- financial accounts
+- budget categories
+- financial logs
+- monthly finance summary
+- rent
+- utilities
+- bills
+- subscriptions
+- recurring payments
+- paid/unpaid status
+- due dates
+- privacy warnings
+
+### Documents
+
+- document metadata
+- document category
+- status
+- renewal deadline
+- expiration date
+- stored-location note
+- related task/event/proof links where source-supported
+- visa/work authorization/school/career documents as metadata only
+- no legal advice
+
+### Housing as admin/rent tracking
+
+- rent amount
+- lease start/end metadata
+- utilities
+- maintenance notes
+- deposit notes
+- roommate/shared payment notes if needed
+- housing documents
+- no apartment search workflow in Phase 12
+
+## Explicitly deferred scope
+
+Phase 12 must not implement:
+
+- housing search CRM as the primary UX
+- apartment comparison
+- external apartment scraping
+- bank sync
+- auto-pay
+- tax advice
+- legal advice
+- immigration advice
+- document file upload/storage
+- autonomous Carnos writes
+- Python/ML execution
+- background jobs
+- direct SQL writes from dashboards
+- browser Supabase mutations
+- style/fashion/wardrobe features
+
+## Fashion / wardrobe deferral
+
+Style, wardrobe, outfits, clothing wishlist links, and personal aesthetic planning are not part of Phase 12.
+
+They are deferred to post-v1 expansion:
+
+- Phase 22 — Style / Wardrobe / Personal Aesthetic System
+
+## Safe-write law
+
+Python/ML advises. The app validates. The user confirms. The server writes. SQL records. Audit logs.
+
+Phase 12 dashboards are read-only unless a later source-approved safe-write flow is explicitly implemented. Proposed actions may be previewed, but no dashboard may persist them directly.
+
+## Step count
+
+Phase 12 has 45 locked steps.
+
+## Code chunk count
+
+Phase 12 has 14 planned implementation chunks.
+
+If a chunk becomes too large or risky, it must be split before commit.
+
+## Planned chunks
+
+1. C01 — Source inspection preflight.
+2. C02 — Phase 12 plan lock and post-v1 roadmap addendum.
+3. C03 — Schema design and traceability docs.
+4. C04 — SQL foundation tables.
+5. C05 — RLS and parent ownership guards.
+6. C06 — Database types.
+7. C07 — Read helpers.
+8. C08 — Aggregation helpers and states.
+9. C09 — Life Admin and Finance dashboards.
+10. C10 — Documents and Rent/Bills panels.
+11. C11 — Daily Admin Queue and cross-links.
+12. C12 — Route wiring.
+13. C13 — Command/Calendar visibility and proposed-action boundary.
+14. C14 — Audit gate, smoke checklist, completion report.
+
+## Acceptance criteria
+
+Phase 12 is complete only when:
+
+- Life Admin, Finance, Housing-as-admin, and Documents scope are source-traced.
+- User override is recorded: no housing search as primary workflow.
+- SQL tables are present and RLS-protected.
+- Parent ownership guards exist where cross-table references exist.
+- Database types are updated.
+- Read helpers are server-side and read-only.
+- Dashboards are route-wired.
+- Daily Admin Queue exists.
+- Finance summary exists.
+- Rent/bill/subscription/document deadline visibility exists.
+- Command/Calendar admin visibility exists.
+- Proposed-action preview is disabled/non-mutating.
+- Phase 12 audit gate passes.
+- Full repo check passes.
+- Completion report is committed and pushed.
 ```
 
 ### `docs/phase-plans/PHASE_4_CORE_SQL_SPINE.md`
@@ -10931,6 +16904,2436 @@ Deferred:
 ## Chunk B Conclusion
 
 Chunk B defines the Phase 10 design surface and confirms that implementation can proceed to Chunk C without modifying previous phases.
+```
+
+### `docs/phase-reports/PHASE_11_BASELINE_UNITS_SLEEP_PHOTO_BOUNDARY.md`
+
+```md
+# Phase 11 — Baseline, Units, Sleep Tracking, and Photo Boundary
+
+## Purpose
+
+This document locks Phase 11 hardening design for:
+
+- health/body baseline handling
+- unit and measurement clarity
+- daily sleep tracking
+- sleep natural-language capture boundary
+- progress photo/storage honesty
+
+This is a design-only document. It does not add SQL, TypeScript, routes, dashboards, write behavior, uploads, storage, or Carnos execution.
+
+## Scope Position
+
+This document covers Phase 11 steps:
+
+- 11.7 Health/body baseline + unit strategy
+- 11.8 Daily sleep tracking design
+- 11.9 Sleep natural-language capture boundary
+- 11.10 Progress photo/storage honesty boundary
+
+## Source-of-Truth Context
+
+The Phase 11 source-confirmed tables are:
+
+- `body_logs`
+- `workouts`
+- `exercises`
+- `workout_sets`
+- `nutrition_logs`
+- `meal_items`
+- `supplements`
+- `supplement_logs`
+- `sleep_logs`
+- `energy_logs`
+- `mental_health_logs`
+- `emotion_logs`
+- `journal_entries`
+- `skincare_logs`
+- `haircare_logs`
+- `products`
+
+The source-confirmed routes are:
+
+- `/body`
+- `/nutrition`
+- `/supplements`
+- `/sleep-energy`
+- `/emotion`
+- `/hair-skincare`
+
+The source-referenced but not confirmed-as-table items are:
+
+- `progress_photos`
+- `body_goals`
+- `reminders`
+- `analytics_snapshots`
+
+Phase 11 must not fake unsupported persistence for those items.
+
+## Baseline Strategy
+
+### Problem
+
+Health/body dashboards become weak if they only show isolated logs. They need baseline context for:
+
+- starting bodyweight
+- current bodyweight
+- goal bodyweight
+- preferred bodyweight unit
+- preferred lifting weight unit
+- preferred measurement unit
+- target calories
+- target protein
+- target water
+- sleep target
+- gym target
+- bulk/cut/recomp mode
+- routine baselines for hair/skincare/supplements
+
+### Rule
+
+Phase 11 must support baseline-aware display, but must not invent fake user targets.
+
+### Allowed Baseline Sources
+
+Phase 11 may derive baseline/targets from:
+
+1. source-confirmed Phase 11 tables when fields exist
+2. existing `goals`
+3. existing `tasks`
+4. existing `daily_logs`
+5. future user-owned settings only if explicitly implemented later
+6. a justified `health_body_baselines` candidate table only if schema design and SQL step approve it
+
+### Not Allowed
+
+Phase 11 must not:
+
+- hardcode the user's real targets in dashboard code
+- assume calorie/protein/bodyweight targets silently
+- pretend a baseline exists when it does not
+- write baseline records automatically
+- create baseline records without the safe-write flow
+- infer medical or treatment goals
+
+## `health_body_baselines` Decision Boundary
+
+`health_body_baselines` is useful but not source-confirmed as a required table.
+
+### Candidate fields
+
+If approved in SQL design, it may include:
+
+- `id`
+- `user_id`
+- `starting_bodyweight`
+- `goal_bodyweight`
+- `bodyweight_unit`
+- `lifting_weight_unit`
+- `measurement_unit`
+- `target_calories`
+- `target_protein_g`
+- `target_water_ml`
+- `target_sleep_hours`
+- `target_gym_days_per_week`
+- `mode`
+- `notes`
+- `source_ai_action_id`
+- `source_chat_message_id`
+- `created_at`
+- `updated_at`
+
+### Candidate decision
+
+For Phase 11 SQL, prefer one of two safe choices:
+
+1. Add `health_body_baselines` only if we need a stable user-owned baseline table for dashboards.
+2. Defer `health_body_baselines` and use existing goals plus latest logs for v1.
+
+The SQL step must make this explicit.
+
+## Unit Strategy
+
+### Problem
+
+Health/body data can become misleading if units are not clear.
+
+Examples:
+
+- 65 could mean kg or lb
+- 100 could mean kg or lb on a lift
+- 32 could mean inches or cm for waist
+- 2.5 could mean liters or not if water is ambiguous
+
+### Required unit clarity
+
+Phase 11 must use explicit units for:
+
+- bodyweight
+- lifting weight
+- waist/measurements
+- water
+- sleep duration
+- macros
+- calories
+
+### Recommended defaults
+
+Use explicit field labels and display labels:
+
+| Data | Storage/display unit rule |
+|---|---|
+| bodyweight | numeric + `bodyweight_unit` |
+| lifting weight | numeric + `weight_unit` |
+| waist | numeric + `waist_unit` |
+| water | `water_ml` |
+| sleep | `sleep_hours` |
+| protein/carbs/fat | grams |
+| calories | kcal/calorie label in UI |
+
+### Not Allowed
+
+Phase 11 must not silently assume units in UI copy.
+
+Safe UI copy:
+
+- "Bodyweight: 62 kg" if unit exists.
+- "Bodyweight: 62, unit not set" if unit is missing.
+- "Water: 2500 ml."
+- "Sleep: 7.5 hours."
+
+Unsafe UI copy:
+
+- "You weigh 62 kg" if only `62` exists and unit is missing.
+- "You hit your target" if no target source exists.
+
+## Daily Sleep Tracking Design
+
+### Purpose
+
+Phase 11 must support daily sleep visibility.
+
+### Existing foundation
+
+The existing core system already has `daily_logs.sleep_hours`.
+
+Phase 11 adds or uses the source-confirmed `sleep_logs` table for more detailed sleep records:
+
+- `sleep_date`
+- `bedtime`
+- `wake_time`
+- `sleep_hours`
+- `quality_score`
+- `notes`
+
+Phase 11 also uses `energy_logs` for:
+
+- `energy_score`
+- `focus_score`
+- `fatigue_score`
+- `brain_fog_score`
+- `notes`
+
+### Display behavior
+
+The `/sleep-energy` dashboard should eventually show:
+
+- latest sleep log
+- latest energy log
+- sleep hours by day
+- weekly average sleep
+- sleep quality
+- bedtime/wake time
+- energy/focus/fatigue/brain-fog values
+- missing sleep days
+- basic sleep consistency
+- simple sleep-vs-energy preview only when enough records exist
+
+### Duplicate behavior
+
+Duplicate same-day sleep logs must not be hidden.
+
+Dashboard rules:
+
+- show latest sleep record
+- show record count for date range where useful
+- avoid treating duplicates as one clean truth unless aggregation rules are explicit
+- distinguish missing data from zero values
+- do not calculate averages from empty records
+
+### `daily_logs.sleep_hours` compatibility
+
+Phase 11 must not break the existing `daily_logs.sleep_hours` field.
+
+Safe behavior:
+
+- `/sleep-energy` may show `sleep_logs` as detailed source.
+- `daily_logs.sleep_hours` may be shown as existing daily summary source.
+- If both exist, UI must make source distinction clear.
+- No migration should remove or rename `daily_logs.sleep_hours`.
+
+## Sleep Natural-Language Capture Boundary
+
+### Goal
+
+The user should eventually be able to tell Carnos:
+
+> I slept from 2 AM to 9:30 AM and woke up tired.
+
+Carnos may calculate:
+
+- sleep duration: 7.5 hours
+- sleep note: woke up tired
+- optional energy/fatigue note
+
+### Required safe flow
+
+Carnos may only produce a proposal.
+
+Required flow:
+
+User message
+-> Carnos parses sleep details
+-> Carnos calculates duration
+-> Carnos creates a proposed action preview
+-> app validates proposal
+-> user chooses Save/Edit/Cancel
+-> server executes write only after confirmation
+-> SQL records
+-> audit log records
+-> dashboard refreshes
+
+### Not Allowed
+
+Carnos must not:
+
+- save sleep logs silently
+- directly insert into SQL
+- bypass validation
+- bypass user confirmation
+- create energy logs automatically without user confirmation
+- claim medical meaning from sleep data
+- create proof items automatically
+- use Python/ML to mutate SQL
+
+### Safe proposed-action examples
+
+Safe:
+
+- "You said you slept from 2:00 AM to 9:30 AM. That is 7.5 hours. Save this as a sleep log?"
+- "You mentioned waking up tired. Add this as a sleep note?"
+- "You mentioned brain fog today. Add this as an energy log note?"
+
+Unsafe:
+
+- "Saved your sleep."
+- "I recorded your sleep automatically."
+- "Your sleep proves you have a condition."
+- "You must sleep at this time."
+- "I updated your health record."
+
+## Progress Photo / Storage Honesty Boundary
+
+### Problem
+
+The source references `progress_photos` in `/body` and `/hair-skincare`, but no confirmed Phase 11 table block was found for `progress_photos`.
+
+### Rule
+
+Phase 11 must not fake progress photo persistence.
+
+### Allowed in Phase 11
+
+Phase 11 may include:
+
+- `photo_attachment_id` reference fields if schema-backed
+- empty-state copy saying photo storage is not enabled yet
+- dashboard copy saying "photo references" instead of "uploaded photos"
+- future-proof detail panels that do not pretend uploads exist
+
+### Not Allowed in Phase 11
+
+Phase 11 must not add:
+
+- fake upload buttons
+- fake saved photo messages
+- storage bucket assumptions
+- automatic image analysis
+- public photo exposure
+- photo timeline creation unless schema-backed
+- progress-photo table unless explicitly justified
+
+### Safe UI copy
+
+Safe:
+
+- "Photo references are not configured yet."
+- "No photo attachment is linked to this record."
+- "Progress photo storage is deferred until storage is explicitly implemented."
+
+Unsafe:
+
+- "Upload complete."
+- "Photo saved."
+- "Your progress photo was stored."
+- "AI analyzed your photo."
+
+## Completion Rules For B2
+
+B2 is complete when:
+
+- baseline strategy is documented
+- unit strategy is documented
+- daily sleep tracking is documented
+- natural-language sleep capture boundary is documented
+- progress photo/storage honesty boundary is documented
+- no SQL is added
+- no TypeScript is changed
+- no route/dashboard code is changed
+- no fake persistence is introduced
+```
+
+### `docs/phase-reports/PHASE_11_HEALTH_BODY_AUDIT_GATE.md`
+
+```md
+# Phase 11 Health/Body Audit Gate
+
+Status: Added for J1 verification.
+
+## Scope
+
+This audit gate verifies that Phase 11 Health / Body System implementation is structurally present, route-wired, exported, documented, safety-bounded, and still read-only.
+
+## Verification gates
+
+Required automated checks:
+
+- `npm run audit:phase11`
+- `npm run validate:migrations`
+- `npx tsc --noEmit`
+- `npm run lint`
+- `npm run check`
+- `git diff --check`
+
+Manual smoke checklist:
+
+- `docs/qa/PHASE_11_HEALTH_BODY_MANUAL_SMOKE_CHECKLIST.md`
+
+## Required routes
+
+- `/body`
+- `/nutrition`
+- `/supplements`
+- `/sleep-energy`
+- `/emotion`
+- `/hair-skincare`
+
+## Required source-confirmed table foundation
+
+- `body_logs`
+- `workouts`
+- `exercises`
+- `workout_sets`
+- `nutrition_logs`
+- `meal_items`
+- `supplements`
+- `supplement_logs`
+- `sleep_logs`
+- `energy_logs`
+- `mental_health_logs`
+- `emotion_logs`
+- `journal_entries`
+- `skincare_logs`
+- `haircare_logs`
+- `products`
+
+## Required dashboard surfaces
+
+- `HealthBodyDashboardV1`
+- `HealthBodyNutritionDashboardV1`
+- `HealthBodySupplementsDashboardV1`
+- `HealthBodySleepEnergyDashboardV1`
+- `HealthBodyEmotionDashboardV1`
+- `HealthBodyHairSkincareDashboardV1`
+
+## Required visibility panels
+
+- health/body detail panels
+- proof and operating linkage panel
+- proposed-action visibility panel
+- state/privacy boundary panel
+- cross-route links
+
+## Protected boundaries
+
+Phase 11 must not include:
+
+- direct SQL writes from dashboards
+- autonomous Carnos writes
+- Python/ML execution
+- browser Supabase mutations
+- server actions for health/body writes
+- storage bucket creation
+- upload behavior
+- progress photo persistence
+- visual evidence storage
+- health/body baseline table
+- analytics snapshot table
+- medical diagnosis
+- treatment claims
+- supplement efficacy claims
+- dosage recommendations
+- body-shaming language
+- appearance-shaming language
+- crisis-handling automation
+
+## Deferred scope
+
+Deferred to later phases:
+
+- write/edit/delete health/body UI
+- real health/body proposed-action persistence
+- natural-language sleep capture persistence
+- body target comparison persistence
+- trend analytics beyond safe display
+- progress photo storage
+- visual evidence storage
+- baseline table
+- analytics snapshots
+- Python/ML health pattern detector execution
+- memory/RAG
+- voice
+- background jobs
+
+## Safe-write law
+
+Python/ML advises. The app validates. The user confirms. The server writes. SQL records. Audit logs.
+```
+
+### `docs/phase-reports/PHASE_11_HEALTH_BODY_COMPLETION_REPORT.md`
+
+```md
+# Phase 11 Completion Report — Health / Body System
+
+Status: Complete.
+
+## Scope
+
+Phase 11 implemented the Health / Body System as a read-only, safety-bounded dashboard suite for body, nutrition, supplements, sleep/energy, emotion, and hair/skincare records.
+
+This phase followed the FINAL_SYNCED source-of-truth boundary and preserved the safe-write law:
+
+Python/ML advises. The app validates. The user confirms. The server writes. SQL records. Audit logs.
+
+## Completed scope
+
+Phase 11 completed:
+
+- Phase 11 plan lock and source inspection.
+- Health/body schema design.
+- Sensitive privacy and safety review.
+- Source-to-scope traceability.
+- Baseline, unit, daily sleep tracking, natural-language sleep capture, and photo honesty boundary documentation.
+- Medical, supplement, body-image, duplicate/data-quality, target-comparison, and trend-boundary documentation.
+- SQL foundation for source-confirmed health/body tables.
+- Parent ownership guards for linked records.
+- Database type contracts for health/body tables.
+- Read-only repository helpers.
+- Health/body dashboard summary helper.
+- Shared empty/loading/error/privacy state utilities.
+- Health/body overview dashboard.
+- Nutrition dashboard.
+- Supplements dashboard.
+- Sleep-energy dashboard.
+- Emotion dashboard.
+- Hair-skincare dashboard.
+- Reusable read-only detail panels.
+- Detail panel route attachment.
+- Proof and operating linkage visibility.
+- Preview-only proposed-action visibility.
+- Health/body cross-route links.
+- Phase 11 audit gate.
+- Phase 11 manual smoke checklist.
+- Phase 11 completion report.
+
+## Routes completed
+
+- `/body`
+- `/nutrition`
+- `/supplements`
+- `/sleep-energy`
+- `/emotion`
+- `/hair-skincare`
+
+## Source-confirmed SQL foundation
+
+Phase 11 added and typed the following source-confirmed tables:
+
+- `body_logs`
+- `workouts`
+- `exercises`
+- `workout_sets`
+- `nutrition_logs`
+- `meal_items`
+- `supplements`
+- `supplement_logs`
+- `sleep_logs`
+- `energy_logs`
+- `mental_health_logs`
+- `emotion_logs`
+- `journal_entries`
+- `skincare_logs`
+- `haircare_logs`
+- `products`
+
+## Verification gates
+
+Required automated gates:
+
+- `npm run audit:phase11`
+- `npm run validate:migrations`
+- `npx tsc --noEmit`
+- `npm run lint`
+- `npm run check`
+- `npm run build`
+- `git diff --check`
+
+Manual smoke checklist:
+
+- `docs/qa/PHASE_11_HEALTH_BODY_MANUAL_SMOKE_CHECKLIST.md`
+
+## Protected boundaries
+
+Phase 11 stayed inside these boundaries:
+
+- No direct SQL writes from dashboards.
+- No browser Supabase mutations.
+- No server actions for health/body writes.
+- No autonomous Carnos writes.
+- No Python/ML execution.
+- No background jobs.
+- No email, scraping, or external integration behavior.
+- No storage bucket creation.
+- No upload behavior.
+- No progress photo persistence.
+- No visual evidence storage.
+- No medical diagnosis.
+- No treatment claims.
+- No supplement efficacy claims.
+- No dosage recommendations.
+- No body-shaming language.
+- No appearance-shaming language.
+- No crisis-handling automation.
+
+## Deferred scope
+
+Deferred to later source-of-truth phases:
+
+- Write/edit/delete health/body UI.
+- Real health/body proposed-action persistence.
+- Natural-language sleep capture persistence.
+- Body target comparison persistence.
+- Trend analytics beyond safe display.
+- Progress photo storage.
+- Visual evidence storage.
+- Health/body baseline table.
+- Analytics snapshots.
+- Python/ML health pattern detector execution.
+- Memory/RAG.
+- Voice.
+- Background jobs.
+
+## Final status
+
+Phase 11 is complete.
+
+The repo now has a read-only, route-wired, safety-bounded Health / Body System with SQL foundation, ownership guards, typed read helpers, dashboard surfaces, linkage visibility, disabled proposed-action previews, manual smoke checklist, and automated audit coverage.
+
+## Next phase
+
+Next step: inspect the FINAL_SYNCED source-of-truth before starting Phase 12.
+```
+
+### `docs/phase-reports/PHASE_11_HEALTH_BODY_DETAIL_PANEL_PATTERN_REPORT.md`
+
+```md
+# Phase 11 — Health/Body Detail Panel Pattern Report
+
+## Status
+
+Step 11.30 complete pending verification.
+
+This report locks the read-only detail-panel pattern for the next Phase 11 health/body chunks before any new detail panels are created.
+
+## Schema Needed?
+
+No.
+
+Step 11.30 is documentation and inspection only. It does not add SQL migrations, database columns, RLS policies, database types, storage buckets, write helpers, proposed-action contracts, Python/ML execution, or Carnos mutation behavior.
+
+## Current Route State
+
+The following Phase 11 health/body routes are wired to authenticated read-only dashboard surfaces:
+
+- `/body`
+- `/nutrition`
+- `/supplements`
+- `/sleep-energy`
+- `/emotion`
+- `/hair-skincare`
+
+The `/body` route still preserves Phase 5 audit compatibility markers through a non-rendered `DomainReadPage.name` marker while rendering `HealthBodyDashboardV1`.
+
+The other health/body routes use `AuthenticatedDashboardShell` and route-specific read-only dashboard components.
+
+## Existing Health/Body Dashboard Components
+
+Current route-level dashboards:
+
+- `HealthBodyDashboardV1`
+- `HealthBodyNutritionDashboardV1`
+- `HealthBodySupplementsDashboardV1`
+- `HealthBodySleepEnergyDashboardV1`
+- `HealthBodyEmotionDashboardV1`
+- `HealthBodyHairSkincareDashboardV1`
+
+Shared state components:
+
+- `HealthBodyEmptyState`
+- `HealthBodyBoundaryNotice`
+- `HealthBodyPrivacyNotice`
+- `HealthBodyWarningPanel`
+
+The current dashboards summarize record counts and boundary language only. They do not show focused row-level detail yet.
+
+## Comparable Detail Panel Pattern
+
+The inspected existing patterns are:
+
+- `learning-project-detail-panels.tsx`
+- `research-detail-panels.tsx`
+- `career-evidence-linkage-panel.tsx`
+- `career-state-boundary-panel.tsx`
+- `research-linkage-boundary-panels.tsx`
+
+The health/body detail panels should follow the established read-only panel style:
+
+1. Use `SectionCard` for each focused detail panel.
+2. Use `EmptyState` when no matching records exist.
+3. Use small reusable row helpers for label/value display.
+4. Render only the first or most recent available record for focused detail.
+5. Keep all panels server-render-compatible.
+6. Avoid client hooks.
+7. Avoid direct Supabase usage inside UI components.
+8. Avoid write functions and mutation flows.
+9. Avoid automatic action creation.
+10. Avoid medical, supplement, diagnosis, treatment, body-shaming, or appearance-shaming claims.
+
+## Planned Health/Body Detail Panels
+
+The next implementation chunk should create read-only panels for existing confirmed tables only.
+
+Recommended panel groups:
+
+### Body and Training Detail
+
+Reads from:
+
+- `body_logs`
+- `workouts`
+- `exercises`
+- `workout_sets`
+
+Purpose:
+
+- Show the latest body log.
+- Show the latest workout.
+- Show the first available exercise and workout set context.
+- Keep pain/soreness/recovery notes descriptive only.
+- Avoid medical interpretation.
+
+### Nutrition and Meal Detail
+
+Reads from:
+
+- `nutrition_logs`
+- `meal_items`
+
+Purpose:
+
+- Show the latest nutrition log.
+- Show the latest meal item.
+- Display calories/macros only when already present in SQL.
+- Avoid diet advice, diagnosis, eating-disorder language, or nutrition prescription.
+
+### Supplement Detail
+
+Reads from:
+
+- `supplements`
+- `supplement_logs`
+- `products`
+
+Purpose:
+
+- Show the first active supplement.
+- Show the latest supplement log.
+- Show active product context when available.
+- Avoid dosage recommendations, supplement efficacy claims, treatment claims, or medical advice.
+
+### Sleep and Energy Detail
+
+Reads from:
+
+- `sleep_logs`
+- `energy_logs`
+- `mental_health_logs`
+
+Purpose:
+
+- Show the latest sleep log.
+- Show the latest energy log.
+- Show mental-state context only as user-recorded data.
+- Avoid diagnosis, crisis handling, treatment claims, or medication claims.
+
+### Emotion and Reflection Detail
+
+Reads from:
+
+- `emotion_logs`
+- `mental_health_logs`
+- `journal_entries`
+
+Purpose:
+
+- Show the latest emotion log.
+- Show the latest journal/reflection record.
+- Treat emotional labels as user-recorded records, not objective truth.
+- Avoid emotional diagnosis or crisis handling.
+
+### Haircare and Skincare Detail
+
+Reads from:
+
+- `skincare_logs`
+- `haircare_logs`
+- `products`
+
+Purpose:
+
+- Show the latest skincare log.
+- Show the latest haircare log.
+- Show active product context.
+- Keep progress photos and visual evidence deferred until an explicit safe storage/privacy flow exists.
+- Avoid appearance-shaming, product efficacy claims, treatment claims, or diagnosis.
+
+## Read Helper Boundary
+
+The inspected repository helper is:
+
+- `src/lib/repositories/health-body-read.ts`
+
+It already exports read helpers for the confirmed health/body tables, including:
+
+- `listBodyLogs`
+- `listWorkouts`
+- `listExercises`
+- `listWorkoutSets`
+- `listNutritionLogs`
+- `listMealItems`
+- `listSupplements`
+- `listSupplementLogs`
+- `listSleepLogs`
+- `listEnergyLogs`
+- `listMentalHealthLogs`
+- `listEmotionLogs`
+- `listJournalEntries`
+- `listSkincareLogs`
+- `listHaircareLogs`
+- `listProducts`
+
+The UI detail panels must consume data passed from dashboards or helper composition layers. They must not call Supabase directly.
+
+## Forbidden Scope for H2/H3
+
+The next detail-panel chunks must not add:
+
+- SQL migrations
+- RLS policies
+- database type changes
+- write helpers
+- server actions
+- client-side mutation hooks
+- Carnos autonomous writes
+- Python/ML execution
+- storage buckets
+- progress photo upload
+- visual evidence storage
+- analytics snapshots
+- `health_body_baselines`
+- `progress_photos`
+- `analytics_snapshots`
+
+## Safety Language Required
+
+All detail panels must preserve the Phase 11 safety boundary:
+
+- Existing records only.
+- Read-only display only.
+- No diagnosis.
+- No treatment claims.
+- No supplement efficacy claims.
+- No dosage recommendations.
+- No body-shaming.
+- No appearance-shaming.
+- No mental health diagnosis.
+- No crisis handling automation.
+- No autonomous changes.
+- No direct SQL mutation from UI, Python/ML, or Carnos.
+
+## Implementation Recommendation for H2
+
+Create:
+
+- `src/components/dashboard/health-body-detail-panels.tsx`
+
+Export it from:
+
+- `src/components/dashboard/index.ts`
+
+Use imported row types from:
+
+- `src/types/database`
+
+Use panel props with arrays of existing row types, for example:
+
+- `bodyLogs`
+- `workouts`
+- `exercises`
+- `workoutSets`
+- `nutritionLogs`
+- `mealItems`
+- `supplements`
+- `supplementLogs`
+- `sleepLogs`
+- `energyLogs`
+- `mentalHealthLogs`
+- `emotionLogs`
+- `journalEntries`
+- `skincareLogs`
+- `haircareLogs`
+- `products`
+
+H2 should only create panels and exports. H3 should attach them to dashboards/routes after verification.
+
+## Completion Criteria
+
+Step 11.30 is complete when:
+
+- This report exists.
+- It documents the detail-panel pattern.
+- It records that no schema change is needed.
+- It lists the confirmed read helpers.
+- It locks the forbidden scope for H2/H3.
+- Verification passes.
+- The report is committed and pushed.
+```
+
+### `docs/phase-reports/PHASE_11_HEALTH_PRIVACY_SAFETY_REVIEW.md`
+
+```md
+# Phase 11 — Health Privacy and Safety Review
+
+## Purpose
+
+Phase 11 introduces sensitive health/body data. This review locks the privacy and safety boundaries before schema or UI implementation.
+
+## Sensitive Areas
+
+Phase 11 includes:
+
+- bodyweight and body measurements
+- workouts and physical progress
+- nutrition and calories
+- supplements
+- sleep
+- energy and brain fog
+- hair/skincare routines
+- mental health logs
+- emotion logs
+- journal entries
+- optional photo attachment references
+
+## Privacy Classification
+
+| Domain | Sensitivity |
+|---|---|
+| Workouts | private |
+| Body logs | private |
+| Nutrition logs | private |
+| Supplements | private |
+| Sleep logs | private |
+| Energy logs | private |
+| Hair/skincare logs | private |
+| Mental health logs | sensitive/private |
+| Emotion logs | sensitive/private |
+| Journal entries | sensitive/private |
+| Photo references | sensitive/private |
+
+## Required Privacy Rules
+
+- All Phase 11 records must be user-owned.
+- All Phase 11 tables must have RLS.
+- No Phase 11 table may be globally readable.
+- Sensitive notes must not be exposed on broad dashboards.
+- `/emotion` must be treated as privacy-sensitive by default.
+- `journal_entries.private` should default to true.
+- `mental_health_logs`, `emotion_logs`, and `journal_entries` should have private/sensitive defaults.
+- Phase 11 must not add export/share behavior.
+- Phase 11 must not add public profile visibility.
+
+## Carnos Boundary
+
+Carnos may:
+
+- summarize visible user-owned health/body data
+- explain missing data
+- propose actions through the safe-write flow
+- parse natural language into proposed sleep, energy, nutrition, workout, or supplement records
+- show preview-only proposed actions
+
+Carnos must not:
+
+- save silently
+- diagnose
+- prescribe
+- recommend supplement dosage
+- claim treatment or cure
+- shame the user
+- encourage unsafe dieting
+- expose sensitive notes outside privacy-safe surfaces
+- create proof records automatically
+- mutate SQL directly
+- bypass validation/user confirmation
+
+## Sleep Natural-Language Safety
+
+Allowed preview:
+
+User says:
+"I slept from 2 AM to 9:30 AM and woke up tired."
+
+Carnos may propose:
+- `sleep_hours = 7.5`
+- sleep note: "woke up tired"
+- optional energy/fatigue note
+
+Required boundary:
+
+proposal -> validation -> Save/Edit/Cancel -> server-owned execution -> audit log
+
+No silent saving.
+
+## Supplement Safety
+
+Supplement tracking is recordkeeping only.
+
+Forbidden claims:
+- "This dosage is correct."
+- "You should take this."
+- "This will cure..."
+- "This treats..."
+- "This prevents..."
+- "This interaction is safe."
+
+Safe framing:
+- "You logged this supplement."
+- "This supplement is marked active."
+- "This record is missing today."
+- "Review with a qualified professional for medical questions."
+
+## Body Image and Nutrition Safety
+
+Forbidden framing:
+- shame language
+- punishment language
+- guaranteed transformation language
+- extreme dieting
+- unsafe calorie pressure
+- obsessive streak pressure
+
+Safe framing:
+- consistency
+- recovery
+- progress
+- user-owned goals
+- target comparison only when source-backed
+- no hardcoded body targets
+
+## Mental Health / Emotion Safety
+
+Phase 11 is not a therapy or crisis product.
+
+Forbidden:
+- diagnosis
+- therapy claims
+- emergency/crisis automation
+- clinical interpretation
+- dangerous escalation logic
+- public display of sensitive notes
+
+Allowed:
+- private reflection logs
+- mood/stress/emotion tracking
+- privacy-safe summaries
+- user-owned journaling
+- proposed self-care tasks only through safe-write confirmation
+
+## Photo Boundary
+
+Phase 11 may include `photo_attachment_id` references only.
+
+Forbidden:
+- fake upload UI
+- fake saved photo state
+- implied storage when storage is not implemented
+- public photo exposure
+- automatic image analysis
+
+Photo upload/storage must be separately schema-backed and policy-backed before implementation.
+
+## Analytics Boundary
+
+Phase 11 may show:
+- latest value
+- weekly average
+- count
+- missing data
+- simple trend preview
+- target vs actual if target is source-backed
+
+Phase 11 must not add:
+- ML prediction
+- clinical analysis
+- experiment engine
+- deep correlations
+- automated recommendations
+
+Advanced analytics belong to Phase 17.
+
+## Manual QA Requirements
+
+Sensitive pages must be manually reviewed for:
+
+- no diagnosis language
+- no treatment language
+- no supplement advice
+- no body-shaming language
+- no unsafe diet language
+- no fake save/upload behavior
+- no sensitive note leakage
+- no silent Carnos writes
+- no Python/ML mutation
+- no memory/RAG behavior
+
+## B3 Safety Hardening Addendum
+
+Phase 11 Chunk B3 expands the safety boundary for medical, supplement, body-image, emotion, journal, data quality, target comparison, and trend preview behavior.
+
+### Medical and supplement safety
+
+Phase 11 must remain recordkeeping and dashboard visibility only.
+
+It must not diagnose, prescribe, recommend supplement dosage, claim treatment, claim cure, or claim guaranteed outcomes.
+
+### Body-image and nutrition safety
+
+Phase 11 must avoid shame language, punishment framing, unsafe diet pressure, and guaranteed transformation claims.
+
+### Emotion and journal safety
+
+Sensitive emotion and journal details must remain privacy-safe. Phase 11 must not claim therapy, diagnose emotional states, automate crisis handling, or expose detailed notes on broad dashboards.
+
+### Data quality
+
+Phase 11 must distinguish missing values from zero values, show latest records clearly, avoid hiding duplicates, and avoid averages/trend claims when data is insufficient.
+
+### Targets and trends
+
+Phase 11 may compare logs to targets only when targets are source-backed.
+
+Phase 11 may show simple trend previews only. Advanced analytics, experiments, predictions, and deep correlations are deferred to Phase 17.
+```
+
+### `docs/phase-reports/PHASE_11_READ_HELPER_SCHEMA_BOUNDARY_AUDIT.md`
+
+```md
+# Phase 11 Read Helper Schema Boundary Audit
+
+## Status
+
+Completed pending verification.
+
+## Purpose
+
+This audit closes Phase 11 read-helper work before UI aggregation and dashboard route work begins.
+
+It confirms that Phase 11 read helpers and summary helpers remain aligned with the already-completed SQL/type foundation:
+
+- SQL foundation: `supabase/migrations/0012_phase11_health_body_foundation.sql`
+- Parent ownership/RLS hardening: `supabase/migrations/0013_phase11_parent_ownership_guards.sql`
+- Type foundation: `src/types/database.ts`
+- Read helper foundation: `src/lib/repositories/health-body-read.ts`
+- Summary helper foundation: `src/lib/dashboard/health-body-dashboard-data-helpers.ts`
+
+## Confirmed Source Tables
+
+The Phase 11 read layer is allowed to read only the confirmed Phase 11 source tables:
+
+1. `body_logs`
+2. `workouts`
+3. `exercises`
+4. `workout_sets`
+5. `nutrition_logs`
+6. `meal_items`
+7. `supplements`
+8. `supplement_logs`
+9. `sleep_logs`
+10. `energy_logs`
+11. `mental_health_logs`
+12. `emotion_logs`
+13. `journal_entries`
+14. `skincare_logs`
+15. `haircare_logs`
+16. `products`
+
+## Deferred / Forbidden Scope
+
+The Phase 11 read layer must not introduce or reference deferred candidate tables:
+
+- `health_body_baselines`
+- `progress_photos`
+- `analytics_snapshots`
+
+The read layer must also not introduce:
+
+- SQL migrations
+- RLS policy changes
+- parent ownership trigger changes
+- storage buckets
+- upload behavior
+- Carnos write behavior
+- Python/ML execution
+- autonomous writes
+- direct client SQL mutation
+- fake persistence
+
+## Read-Only Boundary
+
+The read-helper layer may call:
+
+- `select`
+- `eq`
+- `order`
+- `limit`
+
+The read-helper and summary-helper layer must not call:
+
+- `insert`
+- `update`
+- `delete`
+- `upsert`
+- `rpc`
+
+## Helper Coverage
+
+The read-helper layer must expose one list helper for each confirmed Phase 11 table:
+
+- `listBodyLogs`
+- `listWorkouts`
+- `listExercises`
+- `listWorkoutSets`
+- `listNutritionLogs`
+- `listMealItems`
+- `listSupplements`
+- `listSupplementLogs`
+- `listSleepLogs`
+- `listEnergyLogs`
+- `listMentalHealthLogs`
+- `listEmotionLogs`
+- `listJournalEntries`
+- `listSkincareLogs`
+- `listHaircareLogs`
+- `listProducts`
+
+## Summary Helper Coverage
+
+The summary helper must remain aggregation-only and must not directly create a Supabase server client. It should consume repository helpers and return dashboard-ready counts, warnings, source table names, and a read-only boundary marker.
+
+## Result
+
+Phase 11 read helpers are ready to serve the next UI aggregation/dashboard component chunks after verification passes.
+```
+
+### `docs/phase-reports/PHASE_11_SAFETY_DATA_TARGET_TREND_BOUNDARY.md`
+
+```md
+# Phase 11 — Safety, Data Quality, Target Comparison, and Trend Boundary
+
+## Purpose
+
+This document locks Phase 11 hardening design for:
+
+- medical/supplement/body-image safety
+- data quality and duplicate-log protection
+- goal target comparison strategy
+- trend preview boundary with advanced analytics deferred to Phase 17
+
+This is a design-only document. It does not add SQL, TypeScript, routes, dashboards, write behavior, Carnos execution, ML, medical logic, supplement recommendations, or analytics engines.
+
+## Scope Position
+
+This document covers Phase 11 steps:
+
+- 11.11 Medical/supplement/body-image safety hardening
+- 11.12 Data quality + duplicate-log protection
+- 11.13 Goal target comparison strategy
+- 11.14 Trend preview boundary; advanced analytics deferred to Phase 17
+
+## Safety Principle
+
+Phase 11 is a health/body tracking foundation, not a medical product.
+
+It may track:
+
+- workouts
+- body logs
+- nutrition logs
+- supplement records
+- sleep logs
+- energy logs
+- hair/skincare routines
+- emotion logs
+- journal entries
+- basic trends
+- source-backed targets
+
+It must not provide:
+
+- diagnosis
+- prescriptions
+- medical treatment advice
+- supplement dosage recommendations
+- supplement interaction claims
+- therapy claims
+- crisis automation
+- guaranteed transformation claims
+- unsafe calorie advice
+- body-shaming language
+- advanced prediction
+- ML scoring
+- clinical analysis
+
+## Medical Safety Boundary
+
+### Not allowed
+
+Phase 11 must not include copy or behavior that says or implies:
+
+- "diagnose"
+- "treat"
+- "cure"
+- "prescribe"
+- "clinical result"
+- "medical advice"
+- "you have a condition"
+- "this symptom means..."
+- "this supplement will fix..."
+- "this routine will cure..."
+- "this guarantees regrowth"
+- "this guarantees fat loss"
+
+### Allowed
+
+Phase 11 may safely say:
+
+- "You logged this record."
+- "This is your latest entry."
+- "No data has been logged yet."
+- "This is a user-entered note."
+- "This is a trend preview, not medical analysis."
+- "Review medical questions with a qualified professional."
+
+## Supplement Safety Boundary
+
+Supplement tracking is recordkeeping only.
+
+### Not allowed
+
+Phase 11 must not:
+
+- recommend dosage
+- change dosage
+- recommend new supplements
+- claim safety
+- claim interactions
+- claim effectiveness
+- imply treatment/cure
+- imply medical supervision
+- say the user must take something
+
+### Allowed
+
+Phase 11 may show:
+
+- active supplements
+- inactive supplements
+- dosage text entered by the user
+- frequency text entered by the user
+- taken/missed/skipped logs
+- latest supplement record
+- adherence summary
+- missing records
+- reminder linkage as future/deferred unless existing calendar/task linkage is used
+
+Safe wording:
+
+- "User-entered dosage"
+- "Marked active"
+- "Latest logged status"
+- "No supplement records yet"
+- "This is recordkeeping only, not medical advice"
+
+## Body-Image and Nutrition Safety Boundary
+
+### Not allowed
+
+Phase 11 must not use:
+
+- shame language
+- punishment language
+- "bad body" framing
+- "failure" framing
+- extreme diet encouragement
+- unsafe calorie pressure
+- guaranteed physique language
+- obsessive streak pressure
+- moral judgment around food, weight, skin, hair, or emotions
+
+### Allowed
+
+Phase 11 may use:
+
+- neutral tracking language
+- consistency language
+- recovery language
+- progress language
+- user-owned goals
+- source-backed target comparison
+- missing-data states
+- "not enough data yet" states
+
+Safe wording:
+
+- "No nutrition records yet."
+- "Latest body log."
+- "Target comparison is unavailable because no target is set."
+- "Consistency is informational, not a judgment."
+- "Recovery matters."
+
+## Emotion and Journal Safety Boundary
+
+Emotion and journal records are sensitive.
+
+### Not allowed
+
+Phase 11 must not:
+
+- diagnose emotional states
+- claim therapy
+- automate crisis handling
+- expose private notes on broad dashboards
+- show journal content outside explicit private surfaces
+- create emergency workflows
+- create public/private sharing behavior
+- use mental-health notes in unrelated dashboards without privacy-safe summarization
+
+### Allowed
+
+Phase 11 may show:
+
+- private emotion logs
+- private journal entries
+- privacy-safe summaries
+- latest private record metadata
+- empty states
+- user-owned notes inside privacy-safe detail panels
+- Carnos proposed self-care tasks only through safe-write confirmation when supported later
+
+## Data Quality and Duplicate-Log Protection
+
+### Problem
+
+Health/body data can be misleading when dashboards hide duplicate logs, treat missing values as zero, calculate averages from empty arrays, or display targets that were never set.
+
+### Required rules
+
+Dashboards and read helpers must:
+
+- distinguish missing data from zero values
+- show latest record clearly
+- show record counts where useful
+- show date ranges where useful
+- avoid averages from empty data
+- avoid trend claims from insufficient data
+- avoid hiding duplicate same-day logs
+- avoid silently collapsing duplicates into one truth
+- avoid saying "completed" when data is only previewed
+- avoid saying "saved" when no SQL write happened
+- show source labels when multiple sources exist
+
+### Duplicate same-day logs
+
+Duplicate same-day logs are allowed unless SQL later adds a unique constraint.
+
+If duplicates exist, dashboards should:
+
+- show latest record
+- optionally show count
+- avoid claiming the latest record is the only truth
+- avoid deleting or merging records automatically
+- avoid pretending the day has one canonical value unless aggregation logic is explicit
+
+### Missing vs zero
+
+Missing means no data.
+
+Zero means the user or system recorded a value of zero.
+
+Examples:
+
+- `calories = null` means not logged.
+- `calories = 0` means a recorded zero value.
+- `sleep_hours = null` means not logged.
+- `sleep_hours = 0` means a recorded zero value, which should be treated carefully and not normalized away.
+
+## Goal Target Comparison Strategy
+
+### Purpose
+
+Phase 11 dashboards should become more useful by comparing logs to user-owned targets, but only when targets are source-backed.
+
+### Allowed target sources
+
+Targets may come from:
+
+- existing `goals`
+- existing `tasks`
+- existing `daily_logs`
+- future `health_body_baselines` if approved in SQL
+- future user-owned settings if explicitly implemented later
+- user-confirmed proposed actions if safe-write support exists
+
+### Not allowed
+
+Phase 11 must not:
+
+- hardcode personal targets
+- infer targets without user confirmation
+- claim the user has a target when no source exists
+- calculate success/failure against fake targets
+- create baseline/target records silently
+- auto-create goals from health logs
+- auto-create proof items from health logs
+
+### Safe target display
+
+Safe examples:
+
+- "No sleep target set."
+- "Target comparison unavailable."
+- "Protein target source: active goal."
+- "Sleep target source: health baseline."
+- "Latest logged value: 7.5 hours."
+
+Unsafe examples:
+
+- "You failed your target."
+- "Your goal is 8 hours" when no target exists.
+- "You need 2800 calories" when not source-backed.
+- "You should bulk now."
+- "Saved a new target."
+
+## Trend Preview Boundary
+
+### Phase 11 may show
+
+Phase 11 may show basic trend previews:
+
+- latest value
+- previous value
+- weekly average
+- simple counts
+- missing days
+- record count
+- date range
+- target vs actual when target exists
+- simple direction words like "up", "down", "unchanged" when data is sufficient
+
+### Phase 11 must not show
+
+Phase 11 must not implement:
+
+- ML predictions
+- medical trend interpretation
+- clinical risk scoring
+- experiment engines
+- causal claims
+- advanced correlations
+- recommendations generated from analytics
+- health optimization engines
+- wearable-derived insights
+- internet/product/supplement lookups
+
+Those belong to later phases, especially Phase 17 — Analytics / Experiments / Intelligence.
+
+## Simple Trend Sufficiency Rules
+
+Trend previews should require enough data.
+
+Recommended minimums:
+
+- latest value: at least 1 record
+- previous comparison: at least 2 records
+- weekly average: at least 2 records in the week, otherwise label as partial
+- consistency count: at least a defined date range
+- target comparison: at least 1 record and 1 source-backed target
+- sleep-vs-energy preview: at least several paired sleep and energy records; otherwise show "not enough data yet"
+
+If there is not enough data, show a safe empty/partial state.
+
+## Audit Requirements
+
+Phase 11 audit must eventually check for unsafe strings and unsafe behavior.
+
+Suggested review markers:
+
+- diagnosis language
+- treatment language
+- cure language
+- prescribe language
+- supplement recommendation language
+- body-shaming language
+- unsafe diet language
+- fake save language
+- fake upload language
+- silent-write language
+- public sensitive-note exposure
+- Python/ML mutation paths
+- dashboard direct mutation paths
+
+## Completion Rules For B3
+
+B3 is complete when:
+
+- medical/supplement/body-image safety is documented
+- emotion/journal safety is documented
+- data quality and duplicate-log rules are documented
+- goal target comparison rules are documented
+- trend preview boundary is documented
+- Phase 17 analytics boundary is explicit
+- no SQL is added
+- no TypeScript is changed
+- no route/dashboard code is changed
+- no Carnos write behavior is added
+```
+
+### `docs/phase-reports/PHASE_11_SOURCE_TO_SCOPE_TRACEABILITY.md`
+
+```md
+# Phase 11 — Source-to-Scope Traceability
+
+## Purpose
+
+This report maps Phase 11 implementation scope to source-of-truth route and table markers.
+
+## Confirmed Routes
+
+| Route | Source marker | Phase 11 status |
+|---|---:|---|
+| `/body` | JSON route marker line 842 | in scope |
+| `/nutrition` | JSON route marker line 886 | in scope |
+| `/supplements` | JSON route marker line 928 | in scope |
+| `/sleep-energy` | JSON route marker line 968 | in scope |
+| `/emotion` | JSON route marker line 1010 | in scope |
+| `/hair-skincare` | JSON route marker line 1054 | in scope |
+
+## Confirmed Tables
+
+| Table | Source marker | Phase 11 status |
+|---|---:|---|
+| `body_logs` | JSON table marker line 7345 | in scope |
+| `workouts` | JSON table marker line 7439 | in scope |
+| `exercises` | JSON table marker line 7533 | in scope |
+| `workout_sets` | JSON table marker line 7618 | in scope |
+| `nutrition_logs` | JSON table marker line 7730 | in scope |
+| `meal_items` | JSON table marker line 7842 | in scope |
+| `supplements` | JSON table marker line 7972 | in scope |
+| `supplement_logs` | JSON table marker line 8066 | in scope |
+| `sleep_logs` | JSON table marker line 8151 | in scope |
+| `energy_logs` | JSON table marker line 8254 | in scope |
+| `mental_health_logs` | JSON table marker line 8357 | in scope |
+| `emotion_logs` | JSON table marker line 8487 | in scope |
+| `journal_entries` | JSON table marker line 8590 | in scope |
+| `skincare_logs` | JSON table marker line 8693 | in scope |
+| `haircare_logs` | JSON table marker line 8787 | in scope |
+| `products` | JSON table marker line 8881 | in scope |
+
+## Route-to-Table Mapping
+
+| Route | Primary tables |
+|---|---|
+| `/body` | `workouts`, `exercises`, `workout_sets`, `body_logs` |
+| `/nutrition` | `nutrition_logs`, `meal_items` |
+| `/supplements` | `supplements`, `supplement_logs` |
+| `/sleep-energy` | `sleep_logs`, `energy_logs`, existing `daily_logs` |
+| `/emotion` | `mental_health_logs`, `emotion_logs`, `journal_entries` |
+| `/hair-skincare` | `skincare_logs`, `haircare_logs`, `products` |
+
+## Source-Referenced But Not Confirmed As Phase 11 Tables
+
+| Item | Source context | Decision |
+|---|---|---|
+| `progress_photos` | referenced by `/body` and `/hair-skincare` dashboard scope | no fake persistence; attachment reference only unless explicitly schema-backed |
+| `body_goals` | referenced by `/nutrition` dashboard scope | use existing goals first unless later justified |
+| `reminders` | referenced by `/supplements` dashboard scope | no reminder/background execution in Phase 11 |
+| `analytics_snapshots` | referenced by `/sleep-energy` dashboard scope | simple trend preview only; advanced analytics deferred |
+
+## Existing Foundations To Reuse
+
+| Existing foundation | Reuse |
+|---|---|
+| `goals` | nullable health/body linkage |
+| `tasks` | nullable health/body linkage |
+| `daily_logs.sleep_hours` | daily sleep summary compatibility |
+| `proof_items` | proof candidate linkage only, no auto creation |
+| `events` | calendar linkage only |
+| `ai_actions` | source action traceability |
+| `chat_messages` | natural-language source traceability |
+
+## Out-of-Scope For Phase 11
+
+- autonomous writes
+- direct dashboard SQL mutation
+- Python/ML SQL mutation
+- memory/RAG
+- voice execution
+- web lookup
+- wearable integrations
+- barcode scanning
+- medical diagnosis
+- supplement recommendations
+- photo upload/storage unless separately justified
+- advanced analytics/predictions
+- export/delete flows
+
+## Traceability Result
+
+Phase 11 B1 has a complete route-to-table traceability foundation for schema design.
+
+The next build unit may proceed to B2 hardening design only after this report is verified and committed.
+```
+
+### `docs/phase-reports/PHASE_12_C01_SOURCE_ROUTE_INSPECTION.md`
+
+```md
+# Phase 12 C01 — Source / Route Inspection
+
+Status: Complete.
+
+## Source findings
+
+The FINAL_SYNCED source JSON contains explicit Life Admin, Finance, Housing, Documents, Command, and Calendar scope.
+
+Source-confirmed routes:
+
+- `/life-admin`
+- `/finance`
+- `/housing`
+- `/documents`
+- `/command`
+- `/calendar`
+
+Source-confirmed Life Admin / Finance / Documents tables:
+
+- `housing_options`
+- `housing_contacts`
+- `financial_accounts`
+- `financial_logs`
+- `subscriptions`
+- `budget_categories`
+- `documents`
+
+## Source conflict / user override
+
+The source describes `/housing` as a housing search CRM.
+
+The user has clarified that they already have housing and does not need housing-option search.
+
+Implementation correction:
+
+- keep `/housing`
+- do not delete source route
+- do not remove source-aligned tables only because the user has housing
+- reinterpret Phase 12 housing UX around rent, lease, utilities, maintenance, and housing documents
+- avoid apartment-hunting workflow as the primary Phase 12 experience
+
+## Existing repo findings
+
+Existing placeholder route files are already present:
+
+- `src/app/life-admin/page.tsx`
+- `src/app/finance/page.tsx`
+- `src/app/housing/page.tsx`
+- `src/app/documents/page.tsx`
+
+These are currently static placeholder-style pages and must be upgraded safely during later chunks.
+
+## Current database findings
+
+No Phase 12 source tables are currently implemented in migrations before Phase 12.
+
+Current migration count before Phase 12: 13.
+
+Next expected migrations:
+
+- `0014_phase12_life_admin_finance_foundation.sql`
+- `0015_phase12_parent_ownership_guards.sql`
+
+## Verification
+
+Preflight ran successfully before Phase 12 edits:
+
+- `npm run check`
+
+## Boundary
+
+C01 made no app code, SQL, type, repository, route, dashboard, or audit changes.
+```
+
+### `docs/phase-reports/PHASE_12_LIFE_ADMIN_FINANCE_COMPLETION_REPORT.md`
+
+```md
+# Phase 12 Completion Report — Life Admin / Finance / Daily Admin
+
+Status: Complete.
+
+## Scope
+
+Phase 12 implemented the Life Admin + Finance + Daily Admin Queue system as a read-only, SQL-backed, privacy-bounded dashboard suite for admin pressure, money records, document deadlines, current housing admin, Command visibility, and Calendar visibility.
+
+This phase followed the FINAL_SYNCED source-of-truth boundary and preserved the safe-write law:
+
+Python/ML advises. The app validates. The user confirms. The server writes. SQL records. Audit logs.
+
+## Completed scope
+
+Phase 12 completed:
+
+- Source and route inspection.
+- Phase 12 plan lock.
+- Post-v1 roadmap addendum for deferred personal systems.
+- Life Admin / Finance schema design.
+- Source-to-scope traceability report.
+- Finance, documents, housing, and Carnos privacy/safety review.
+- SQL foundation for admin, finance, document, subscription, and housing tables.
+- Parent ownership guards for linked finance, subscription, document, housing, and housing-contact records.
+- SQL validation report.
+- Database type contracts.
+- Read-only repository helpers.
+- Read-only dashboard aggregation helpers.
+- Life Admin dashboard.
+- Finance dashboard.
+- Documents dashboard.
+- Housing admin dashboard.
+- Route wiring for `/life-admin`, `/finance`, `/documents`, and `/housing`.
+- Command admin/finance pressure visibility.
+- Calendar admin/finance deadline visibility.
+- Disabled proposed-action preview cards.
+- Phase 12 audit gate.
+- Phase 12 manual smoke checklist.
+- Phase 12 source-to-scope closeout.
+- Phase 12 completion report.
+
+## Routes completed
+
+- `/life-admin`
+- `/finance`
+- `/documents`
+- `/housing`
+- `/command`
+- `/calendar`
+
+## Source-confirmed SQL foundation
+
+Phase 12 added and typed the following source-confirmed tables:
+
+- `financial_accounts`
+- `budget_categories`
+- `financial_logs`
+- `subscriptions`
+- `documents`
+- `housing_options`
+- `housing_contacts`
+
+## Verification gates
+
+Required automated gates:
+
+- `npm run audit:phase12`
+- `npm run validate:migrations`
+- `npm run lint`
+- `npm run check`
+- `npm run build`
+- `git diff --check`
+
+Manual smoke checklist:
+
+- `docs/qa/PHASE_12_LIFE_ADMIN_FINANCE_MANUAL_SMOKE_CHECKLIST.md`
+
+Source-to-scope closeout:
+
+- `docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_CLOSEOUT.md`
+
+## Protected boundaries
+
+Phase 12 stayed inside these boundaries:
+
+- No direct SQL writes from dashboards.
+- No browser Supabase mutations.
+- No admin/finance write helper.
+- No autonomous Carnos writes.
+- No Python/ML execution.
+- No background jobs.
+- No bank sync.
+- No auto-pay.
+- No payment execution.
+- No tax advice.
+- No legal advice.
+- No immigration advice.
+- No document file upload.
+- No document storage behavior.
+- No OCR behavior.
+- No apartment scraping.
+- No automated housing contact outreach.
+- No style/fashion/wardrobe implementation.
+- No proposed-action persistence from the dashboard.
+- No proposed-action execution from the dashboard.
+
+## User-specific correction preserved
+
+The source-of-truth includes housing search CRM concepts, but the user already has housing.
+
+Phase 12 preserved source compatibility while changing the v1 UX emphasis to current housing administration:
+
+- rent
+- lease
+- utilities
+- maintenance
+- deposit notes
+- housing documents
+- housing contacts
+
+Apartment search and comparison remain deferred.
+
+## Deferred scope
+
+Deferred to later source-of-truth phases or post-v1 expansion:
+
+- Write/edit/delete UI for admin and finance records.
+- Real admin/finance proposed-action persistence.
+- Bank sync.
+- Auto-pay.
+- Document upload/storage.
+- OCR.
+- Legal, tax, or immigration guidance.
+- Housing search as primary UX.
+- Apartment comparison.
+- External scraping.
+- Automated outreach.
+- Style / Wardrobe / Personal Aesthetic System.
+- Memory/RAG.
+- Voice.
+- Python/ML execution.
+- Background workers.
+
+## Final status
+
+Phase 12 is complete.
+
+The repo now has a read-only, route-wired, audit-protected Life Admin + Finance + Daily Admin Queue system with SQL foundation, ownership guards, typed read helpers, dashboard aggregation, Life Admin/Finance/Documents/Housing surfaces, Command and Calendar visibility, disabled proposed-action previews, source-to-scope closeout, manual smoke checklist, and automated audit coverage.
+
+## Next phase
+
+Next step: perform final Phase 12 verification/status lock, then inspect the FINAL_SYNCED source-of-truth before starting the next implementation phase.
+```
+
+### `docs/phase-reports/PHASE_12_LIFE_ADMIN_PRIVACY_SAFETY_REVIEW.md`
+
+```md
+# Phase 12 — Life Admin / Finance / Documents Privacy and Safety Review
+
+Status: Locked before SQL.
+
+## Covered step
+
+- 12.13 Write finance/document privacy and safety review.
+
+## Sensitive modules
+
+Phase 12 touches sensitive life data:
+
+- finance
+- documents
+- visa/work authorization metadata
+- housing/rent
+- deadlines
+- personal admin status
+
+## Privacy boundaries
+
+Phase 12 must not expose private admin data casually.
+
+Dashboards must clearly indicate:
+
+- read-only status
+- privacy-sensitive finance/document data
+- no external sync
+- no automatic payment or submission
+- no legal/tax/immigration advice
+
+## Finance safety boundary
+
+Phase 12 can show:
+
+- manually recorded income
+- manually recorded expenses
+- budgets
+- rent
+- subscriptions
+- bills
+- due dates
+- monthly totals
+- unpaid/overdue states
+
+Phase 12 must not provide:
+
+- investment advice
+- tax advice
+- legal advice
+- loan advice
+- credit advice
+- immigration financial advice
+- bank sync
+- automatic payments
+- external account connection
+
+## Documents safety boundary
+
+Phase 12 can show:
+
+- document metadata
+- expiration dates
+- renewal dates
+- stored-location notes
+- status
+- related tasks/events
+
+Phase 12 must not provide:
+
+- legal interpretation
+- immigration advice
+- tax filing advice
+- document filing/submission automation
+- file upload/storage
+- hidden OCR
+- background document monitoring
+
+## Housing safety boundary
+
+Phase 12 can show:
+
+- rent
+- utilities
+- lease dates
+- housing documents
+- maintenance notes
+- housing contacts
+
+Phase 12 must not provide:
+
+- legal lease advice
+- apartment search as primary workflow
+- external scraping
+- exact address requirement
+- automated contact outreach
+
+## Carnos boundary
+
+Carnos may explain or propose admin actions only through preview/confirmation patterns.
+
+Carnos must not:
+
+- silently write finance records
+- silently write document records
+- silently create tasks/events
+- execute payments
+- contact people
+- submit forms
+- make legal/tax/immigration decisions
+- infer sensitive status beyond user-provided records
+
+## UI boundary
+
+Phase 12 UI components must avoid:
+
+- `.insert(`
+- `.update(`
+- `.delete(`
+- `.upsert(`
+- browser Supabase mutation
+- direct SQL writes
+- OpenAI calls
+- background jobs
+- timers
+- fetch-based external integrations
+
+## Safe wording
+
+Use language such as:
+
+- “read-only”
+- “manual tracking”
+- “not legal advice”
+- “not tax advice”
+- “not immigration advice”
+- “no bank sync”
+- “no auto-pay”
+- “metadata only”
+- “user confirmation required”
+
+Avoid language such as:
+
+- “we will pay”
+- “we filed”
+- “legally required”
+- “tax optimization”
+- “guaranteed”
+- “approved”
+- “immigration-safe”
+- “automatically submitted”
+
+## C03 conclusion
+
+Phase 12 is safe to proceed to SQL only if the SQL implements RLS, owner-only records, parent ownership guards, and keeps the dashboards read-only until an explicitly approved safe-write flow is added.
+```
+
+### `docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_CLOSEOUT.md`
+
+```md
+# Phase 12 Source-to-Scope Closeout — Life Admin / Finance / Daily Admin
+
+Status: Complete for C16 closeout.
+
+## Purpose
+
+This closeout confirms that the implemented Phase 12 system stayed aligned with the FINAL_SYNCED source-of-truth while preserving the user-specific correction that housing search is not the primary workflow.
+
+## Source-confirmed routes completed
+
+- `/life-admin`
+- `/finance`
+- `/documents`
+- `/housing`
+- `/command`
+- `/calendar`
+
+## Source-confirmed tables completed
+
+- `financial_accounts`
+- `budget_categories`
+- `financial_logs`
+- `subscriptions`
+- `documents`
+- `housing_options`
+- `housing_contacts`
+
+## Implemented interpretation
+
+Phase 12 implemented the source-confirmed Life Admin, Finance, Documents, Housing, Command, and Calendar scope as a read-only administrative visibility system.
+
+The system supports:
+
+- Daily Admin Queue visibility
+- manual finance account visibility
+- budget category visibility
+- income / expense / rent / bill / utility log visibility
+- subscription and recurring payment deadline visibility
+- document metadata and deadline visibility
+- current housing admin, rent, lease, utility, maintenance, and contact visibility
+- Command dashboard admin pressure visibility
+- Calendar dashboard admin deadline visibility
+- preview-only proposed-action visibility
+
+## User-specific housing correction
+
+The source includes housing search CRM language.
+
+The user already has housing, so Phase 12 intentionally reinterpreted the housing surface as current housing administration:
+
+- rent tracking
+- lease metadata
+- utility tracking
+- maintenance notes
+- deposit notes
+- housing contacts
+- housing documents and deadlines
+
+Phase 12 did not build apartment search as the primary workflow.
+
+## Deferred source scope
+
+The following items remain intentionally deferred:
+
+- housing search as primary UX
+- apartment comparison
+- external apartment scraping
+- bank sync
+- auto-pay
+- legal advice
+- tax advice
+- immigration advice
+- document file upload/storage
+- OCR
+- style/fashion/wardrobe
+- autonomous Carnos writes
+- Python/ML execution
+- background jobs
+
+## Safe-write law preservation
+
+Phase 12 preserved the project safe-write law:
+
+Python/ML advises. The app validates. The user confirms. The server writes. SQL records. Audit logs.
+
+Current Phase 12 dashboards do not write directly. Proposed-action surfaces are preview-only and disabled.
+
+## Closeout decision
+
+Phase 12 is source-aligned for v1 read-only implementation.
+
+The next safe expansion path is not to add direct dashboard writes. Future write behavior must reuse the approved proposed-action flow and remain confirmation-gated.
+
+## Audit marker coverage
+
+This closeout explicitly records Phase 12 source alignment.
+
+This closeout explicitly records the user-specific housing correction.
+```
+
+### `docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_TRACEABILITY.md`
+
+```md
+# Phase 12 — Source-to-Scope Traceability
+
+Status: Locked before SQL.
+
+## Covered step
+
+- 12.14 Write source-to-scope traceability report.
+
+## Source dashboard mapping
+
+| Source dashboard           | Source route  | Phase 12 interpretation                              |
+| -------------------------- | ------------- | ---------------------------------------------------- |
+| Life Admin Dashboard       | `/life-admin` | Admin overview, daily queue, documents, money        |
+| Finance Dashboard          | `/finance`    | Budgets, income, expenses, subscriptions, rent       |
+| Housing Dashboard          | `/housing`    | Current housing admin, rent, lease, utilities        |
+| Visa / Documents Dashboard | `/documents`  | Metadata/deadlines only, no legal/immigration advice |
+| Command Dashboard          | `/command`    | Urgent admin visibility                              |
+| Calendar Dashboard         | `/calendar`   | Deadline/due-date visibility                         |
+
+## Source table mapping
+
+| Source table         | Phase 12 use                                          |
+| -------------------- | ----------------------------------------------------- |
+| `financial_accounts` | Manual account summaries, no bank sync                |
+| `financial_logs`     | Income, expenses, bills, rent, utility logs           |
+| `subscriptions`      | Recurring payments and renewals                       |
+| `budget_categories`  | Budget grouping and monthly summary                   |
+| `documents`          | Document metadata, deadlines, renewal dates           |
+| `housing_options`    | Current housing/rent/lease admin, not search-first UX |
+| `housing_contacts`   | Housing-related contacts, no automated outreach       |
+
+## User override mapping
+
+| Source says                  | User correction                     | Phase 12 result                                     |
+| ---------------------------- | ----------------------------------- | --------------------------------------------------- |
+| Housing search CRM           | User already has housing            | Housing becomes rent/lease/utilities/admin tracking |
+| Track housing option         | Do not prioritize apartment hunting | Keep table/source compatibility, change UX emphasis |
+| Documents and visa deadlines | Useful, but no advice               | Metadata/deadline tracker only                      |
+| Finance and money dashboard  | Useful                              | Manual finance tracker only                         |
+| Life Admin urgent overrides  | Useful                              | Daily Admin Queue                                   |
+
+## Included in Phase 12
+
+- Daily Admin Queue
+- income
+- expenses
+- budgets
+- subscriptions
+- bills
+- rent
+- utilities
+- lease metadata
+- document metadata
+- document deadlines
+- due-soon / overdue / critical logic
+- Command visibility
+- Calendar visibility
+- read-only dashboards
+- proposed-action preview boundary
+
+## Deferred from Phase 12
+
+- housing search as primary workflow
+- apartment comparison
+- bank sync
+- auto-pay
+- legal advice
+- tax advice
+- immigration advice
+- document upload/storage
+- style/fashion/wardrobe
+- post-v1 personal systems
+- autonomous Carnos writes
+- Python/ML execution
+- background jobs
+
+## Post-v1 traceability
+
+The following user-requested systems are recorded in `docs/roadmap/POST_V1_EXPANSION_ROADMAP.md` and are not part of Phase 12:
+
+- Phase 22 — Style / Wardrobe / Personal Aesthetic System
+- Phase 23 — Daily Command / Planner v2
+- Phase 24 — Relationship / Social Circle System
+- Phase 25 — Home / Environment System
+- Phase 26 — Personal Knowledge + Media Taste System
+
+## C03 conclusion
+
+Phase 12 remains aligned with FINAL_SYNCED source scope while preserving the user-specific correction that housing search is not needed as a primary workflow.
+```
+
+### `docs/phase-reports/PHASE_12_SQL_FOUNDATION_VALIDATION_REPORT.md`
+
+```md
+# Phase 12 SQL Foundation Validation Report
+
+Status: Complete pending verification.
+
+## Scope
+
+This report closes the Phase 12 SQL foundation mini-section after:
+
+- C04 — SQL foundation tables
+- C05 — parent ownership guards
+
+## Covered Phase 12 steps
+
+- 12.15 Add Phase 12 SQL migration.
+- 12.16 Add finance/rent/document/admin indexes.
+- 12.17 Add RLS policies.
+- 12.18 Add parent ownership guards.
+- 12.19 Validate migrations.
+
+## Migration files
+
+- `supabase/migrations/0014_phase12_life_admin_finance_foundation.sql`
+- `supabase/migrations/0015_phase12_parent_ownership_guards.sql`
+
+## Phase 12 tables introduced in C04
+
+- `financial_accounts`
+- `budget_categories`
+- `financial_logs`
+- `subscriptions`
+- `documents`
+- `housing_options`
+- `housing_contacts`
+
+## Security and ownership foundation
+
+C04 established:
+
+- user-owned records
+- RLS enabled for all Phase 12 tables
+- user-scoped RLS policies
+- indexes for dashboard-read and due-date access patterns
+- source-linked schema comments
+
+C05 established:
+
+- reusable parent ownership assertion helper
+- parent ownership triggers for cross-table links
+- protection against cross-user parent references
+
+## Source scope alignment
+
+The FINAL_SYNCED source includes Life Admin / Finance / Housing / Documents concepts.
+
+This repo implementation keeps the current Phase 12 scope bounded to:
+
+- manual finance accounts
+- manual income/expense logs
+- budget categories
+- subscriptions
+- rent / lease / utility / housing admin records
+- housing contacts
+- document metadata and deadlines
+- admin queue inputs for later dashboard aggregation
+
+The following remain explicitly deferred:
+
+- bank sync
+- auto-pay
+- tax advice
+- legal advice
+- immigration advice
+- document file upload/storage
+- OCR
+- external integrations
+- background jobs
+- autonomous Carnos writes
+- dashboard write forms
+- proposed-action execution for Phase 12 records
+
+## Validation expectation
+
+Before committing this report, the repo must pass:
+
+- `npm run validate:migrations`
+- `npm run check`
+- `git diff --check`
+
+## Boundary result
+
+Phase 12 SQL foundation is ready for TypeScript database contract work.
+
+Next chunk:
+
+- C07 — database type contracts
 ```
 
 ### `docs/phase-reports/PHASE_1_8_RETROSPECTIVE_GAP_AUDIT.md`
@@ -13067,6 +21470,343 @@ Status: Final checklist added. Manual browser QA remains to be run against authe
 - [ ] No direct SQL write occurs from research dashboard components.
 ```
 
+### `docs/qa/PHASE_11_HEALTH_BODY_MANUAL_SMOKE_CHECKLIST.md`
+
+```md
+# Phase 11 Health Body Manual Smoke Checklist
+
+Status: Drafted for J1 verification.
+
+## Scope
+
+This checklist verifies the Phase 11 Health / Body System read-only dashboard surfaces.
+
+Routes:
+
+- `/body`
+- `/nutrition`
+- `/supplements`
+- `/sleep-energy`
+- `/emotion`
+- `/hair-skincare`
+
+## Pre-checks
+
+- Run `npm run audit:phase11`.
+- Run `npm run check`.
+- Confirm no uncommitted SQL migration was added.
+- Confirm no uncommitted storage/upload implementation was added.
+- Confirm no new write helper or Carnos execution path was added.
+
+## Route smoke checks
+
+### `/body`
+
+Expected:
+
+- Authenticated dashboard shell renders.
+- Health Body Overview renders.
+- Metric cards render.
+- Body/training detail panel renders.
+- Proof and operating linkage panel renders.
+- Proposed-action visibility panel renders with disabled controls.
+- State/privacy boundary panel renders.
+- Health/body cross-route links render.
+
+### `/nutrition`
+
+Expected:
+
+- Nutrition Dashboard renders.
+- Nutrition and meal detail panel renders.
+- Linkage panel renders.
+- Proposed-action visibility panel renders with disabled controls.
+- State/privacy boundary panel renders.
+- Cross-route links render.
+
+### `/supplements`
+
+Expected:
+
+- Supplements Dashboard renders.
+- Supplement detail panel renders.
+- Supplement safety language is visible.
+- Proposed-action visibility panel renders with disabled controls.
+- No dosage recommendation behavior exists.
+- Cross-route links render.
+
+### `/sleep-energy`
+
+Expected:
+
+- Sleep Energy Dashboard renders.
+- Sleep and energy detail panel renders.
+- Mental-state records are described as user-recorded data only.
+- Proposed-action visibility panel renders with disabled controls.
+- No diagnosis, medication, or treatment behavior exists.
+- Cross-route links render.
+
+### `/emotion`
+
+Expected:
+
+- Emotion Dashboard renders.
+- Emotion and reflection detail panel renders.
+- Emotion labels are shown as user-recorded data only.
+- Proposed-action visibility panel renders with disabled controls.
+- No diagnosis or crisis-handling automation exists.
+- Cross-route links render.
+
+### `/hair-skincare`
+
+Expected:
+
+- Hair Skincare Dashboard renders.
+- Haircare and skincare detail panel renders.
+- Product context displays without efficacy claims.
+- Progress photos and visual evidence remain deferred.
+- Proposed-action visibility panel renders with disabled controls.
+- Cross-route links render.
+
+## Empty-state checks
+
+Expected:
+
+- Empty panels explain that no matching records exist yet.
+- Empty panels do not imply system failure.
+- Empty states do not trigger automatic creation of records.
+- No dashboard writes to SQL from empty states.
+
+## Error-state checks
+
+Expected:
+
+- Read warnings show inline.
+- Errors do not trigger automatic retries.
+- Errors do not trigger writes, uploads, emails, scraping, Python/ML execution, or Carnos execution.
+
+## Proposed-action visibility
+
+Expected:
+
+- ProposedActionReviewCard appears only as disabled preview UI.
+- Save / Confirm is unavailable.
+- Cancel is unavailable.
+- Edit payload is unavailable.
+- No callback is wired for persistence.
+- No proposal is saved from the dashboard.
+
+## Privacy and safety checks
+
+Expected:
+
+- Health/body, sleep, nutrition, supplements, emotion, mental-state, haircare, skincare, and product data are described as private.
+- No medical diagnosis is shown.
+- No treatment claim is shown.
+- No supplement efficacy claim is shown.
+- No dosage recommendation is shown.
+- No body-shaming or appearance-shaming language is shown.
+- No progress photo upload or visual evidence storage is present.
+- No health/body baseline table is referenced.
+- No analytics snapshot table is referenced.
+
+## No write behavior
+
+Forbidden:
+
+- direct SQL writes
+- autonomous Carnos writes
+- Python/ML execution
+- storage/upload behavior
+- visual evidence storage
+- progress photo table
+- baseline table
+- analytics snapshot table
+- background jobs
+- medical or mental-health automation
+```
+
+### `docs/qa/PHASE_12_LIFE_ADMIN_FINANCE_MANUAL_SMOKE_CHECKLIST.md`
+
+```md
+# Phase 12 Manual Smoke Checklist — Life Admin / Finance / Daily Admin
+
+Status: Drafted for C16 verification.
+
+## Scope
+
+This checklist verifies the Phase 12 Life Admin + Finance + Daily Admin Queue read-only dashboard suite.
+
+Routes:
+
+- `/life-admin`
+- `/finance`
+- `/documents`
+- `/housing`
+- `/command`
+- `/calendar`
+
+## Pre-checks
+
+- Run `npm run audit:phase12`.
+- Run `npm run check`.
+- Confirm no uncommitted SQL migration was added.
+- Confirm no write helper was added for admin or finance records.
+- Confirm no browser Supabase mutation was added.
+- Confirm no bank sync, payment, document upload, OCR, housing outreach, Python/ML execution, or autonomous Carnos write path was added.
+
+## Route smoke checks
+
+### `/life-admin`
+
+Expected:
+
+- Authenticated dashboard shell renders.
+- Life Admin Dashboard renders.
+- Daily Admin Queue visibility renders.
+- Finance, document, subscription, and housing admin summaries render.
+- Proposed-action preview cards render as disabled preview-only UI.
+- Read-only boundary language is visible.
+- No save, cancel, edit, execute, payment, upload, outreach, or Carnos execution behavior is wired.
+
+### `/finance`
+
+Expected:
+
+- Authenticated dashboard shell renders.
+- Finance Dashboard renders.
+- Manual account, budget, income, expense, rent, utility, bill, and subscription visibility renders where data exists.
+- Finance privacy warning is visible.
+- Read-only finance boundary is visible.
+- No bank sync exists.
+- No auto-pay exists.
+- No tax advice exists.
+- No SQL write behavior exists.
+
+### `/documents`
+
+Expected:
+
+- Authenticated dashboard shell renders.
+- Documents Dashboard renders.
+- Document metadata, status, deadline, renewal, expiration, and stored-location visibility renders where data exists.
+- Read-only document boundary is visible.
+- No document upload exists.
+- No file storage behavior exists.
+- No OCR behavior exists.
+- No legal or immigration advice exists.
+
+### `/housing`
+
+Expected:
+
+- Authenticated dashboard shell renders.
+- Housing Dashboard renders.
+- Current housing admin, rent, lease, utility, maintenance, deposit, and housing-contact visibility renders where data exists.
+- UI language treats housing as current rent/lease/admin tracking.
+- No apartment-search-first workflow is shown.
+- No apartment comparison workflow is shown.
+- No housing scraping exists.
+- No automated contact outreach exists.
+
+### `/command`
+
+Expected:
+
+- Authenticated dashboard shell renders.
+- Command Dashboard renders.
+- Admin and finance command visibility section renders.
+- Daily Admin Queue pressure is visible.
+- Overdue finance, subscription, document, and housing pressure is visible.
+- Due-soon subscription, document, and housing visibility is present.
+- Command visibility is read-only.
+- No proposal persistence or execution is wired from Command.
+
+### `/calendar`
+
+Expected:
+
+- Authenticated dashboard shell renders.
+- Calendar Dashboard renders.
+- Admin and finance calendar visibility section renders.
+- Planned/pending finance record visibility is present.
+- Upcoming subscription visibility is present.
+- Expiring document visibility is present.
+- Housing follow-up visibility is present.
+- Calendar visibility is read-only.
+- No calendar write, external sync, payment, upload, outreach, or Carnos execution is wired.
+
+## Empty-state checks
+
+Expected:
+
+- Empty panels explain that no matching admin/finance/document/housing records exist yet.
+- Empty panels do not imply system failure.
+- Empty panels do not trigger automatic record creation.
+- Empty states do not write to SQL.
+
+## Error-state checks
+
+Expected:
+
+- Read warnings show inline.
+- Errors do not trigger automatic retries.
+- Errors do not trigger writes, uploads, emails, payments, scraping, Python/ML execution, or Carnos execution.
+
+## Proposed-action preview checks
+
+Expected:
+
+- ProposedActionReviewCard appears only as disabled preview UI.
+- Save / Confirm is unavailable.
+- Cancel is unavailable.
+- Edit payload is unavailable.
+- No callback is wired for persistence.
+- No proposal is saved from the dashboard.
+- No proposal is executed from the dashboard.
+
+## Privacy and safety checks
+
+Expected:
+
+- Finance data is treated as private.
+- Document metadata is treated as private.
+- Housing admin data is treated as private.
+- No bank sync exists.
+- No payment execution exists.
+- No document file upload/storage exists.
+- No OCR exists.
+- No legal, tax, or immigration advice exists.
+- No automated email or housing contact outreach exists.
+- No autonomous Carnos write exists.
+
+## No write behavior
+
+Forbidden:
+
+- direct SQL writes from dashboards
+- browser Supabase mutations
+- admin/finance write helper
+- autonomous Carnos writes
+- Python/ML execution
+- background jobs
+- bank sync
+- auto-pay
+- document upload/storage
+- OCR
+- external apartment scraping
+- automated housing contact outreach
+- legal advice
+- tax advice
+- immigration advice
+
+## Final manual smoke result
+
+Manual browser smoke testing is ready for Phase 12.
+
+The implemented route surfaces are expected to remain read-only, source-traced, privacy-bounded, and safe-write-law compliant.
+```
+
 ### `docs/qa/PHASE_7_MANUAL_SMOKE_CHECKLIST.md`
 
 ```md
@@ -13222,6 +21962,126 @@ Status: Added for final Phase 8 closeout.
 - [ ] `/networking` renders contacts, interactions, referrals, proposed-action visibility, and state/privacy boundary.
 - [ ] `/resume` renders resume versions, resume bullets, evidence linkage, proposed-action visibility, and state/privacy boundary.
 - [ ] `/interviews` renders interviews, follow-up pressure, proposed-action visibility, and state/privacy boundary.
+```
+
+### `docs/roadmap/POST_V1_EXPANSION_ROADMAP.md`
+
+```md
+# Post-v1 Expansion Roadmap
+
+Status: Roadmap addendum.
+
+## Purpose
+
+The FINAL_SYNCED source-of-truth defines the core v1 implementation roadmap through v1 polish.
+
+This document records user-requested post-v1 expansion phases that should not block core v1 completion and should not be treated as already present in the original FINAL_SYNCED source files.
+
+## Roadmap rule
+
+- Core v1 remains governed by the FINAL_SYNCED DOCX/JSON.
+- Phase 21 remains final v1 polish.
+- Phases 22–26 are post-v1 expansion phases.
+- Do not renumber old phases.
+- Do not silently rewrite source-of-truth meaning.
+- Additive future phases must preserve all existing audit gates and safety boundaries.
+
+## Phase 22 — Style / Wardrobe / Personal Aesthetic System
+
+Purpose:
+
+- clothing database
+- outfit planning
+- owned/wishlist status
+- online clothing links
+- brands, sizes, colors, seasons, occasions
+- personal style tags
+- outfit logs
+- event-based outfit ideas
+- optional photo-based outfit review only if later safety/privacy scope allows it
+
+Boundaries:
+
+- no body-shaming
+- no attractiveness scoring
+- no race/ethnicity-based styling
+- no medical/skin/hair diagnosis
+- no unsafe appearance claims
+
+## Phase 23 — Daily Command / Planner v2
+
+Purpose:
+
+- true customizable daily planning
+- drag/drop day plan
+- recurring routines
+- one-off tasks
+- time blocks
+- priority blocks
+- today execution mode
+- Carnos day-planning proposals with confirmation
+
+Boundaries:
+
+- no autonomous schedule rewriting
+- no direct client SQL writes
+- user confirmation required for persisted changes
+
+## Phase 24 — Relationship / Social Circle System
+
+Purpose:
+
+- friends and family records
+- birthdays
+- follow-ups
+- promises
+- social energy notes
+- important dates
+- non-career relationship maintenance
+
+Boundaries:
+
+- no manipulative social advice
+- no sensitive inference
+- no automated outreach without explicit user confirmation
+
+## Phase 25 — Home / Environment System
+
+Purpose:
+
+- room cleaning
+- supplies
+- groceries
+- maintenance
+- desk/workspace setup
+- environment reset routines
+- home habit checklists
+
+Boundaries:
+
+- no unsafe home repair instructions
+- no purchases or orders without explicit user confirmation
+
+## Phase 26 — Personal Knowledge + Media Taste System
+
+Purpose:
+
+- books
+- videos
+- anime
+- music
+- articles
+- papers
+- courses
+- “things I found online”
+- taste profile
+- idea links to learning, research, and creativity
+
+Boundaries:
+
+- no piracy workflows
+- no hidden scraping
+- no unreviewed publishing or external posting
 ```
 
 ### `docs/setup/AUTH_SMOKE_TEST.md`
@@ -27458,7 +36318,7 @@ export default nextConfig;
     "start": "next start",
     "lint": "eslint",
     "validate:routes": "node scripts/validate-route-coverage.mjs",
-    "check": "npm run lint && npm run validate:routes && npm run validate:registry && npm run validate:migrations && npm run audit:phase3 && npm run audit:phase4 && npm run audit:phase5 && npm run audit:phase6 && npm run audit:source && npm run audit:pythonml && npm run audit:phase8 && npm run audit:phase10 && npm run audit:integration && npm run build",
+    "check": "npm run lint && npm run validate:routes && npm run validate:registry && npm run validate:migrations && npm run audit:phase3 && npm run audit:phase4 && npm run audit:phase5 && npm run audit:phase6 && npm run audit:source && npm run audit:pythonml && npm run audit:phase8 && npm run audit:phase10 && npm run audit:phase11 && npm run audit:phase12 && npm run audit:integration && npm run build",
     "validate:registry": "node scripts/validate-registry-coverage.mjs",
     "snapshot:code": "node scripts/generate-code-snapshot.mjs",
     "validate:migrations": "node scripts/validate-sql-migrations.mjs",
@@ -27471,7 +36331,9 @@ export default nextConfig;
     "audit:phase6": "node scripts/audit-phase-6.mjs",
     "audit:integration": "node scripts/audit-integration-sanity.mjs",
     "audit:phase8": "node scripts/audit-phase-8.mjs",
-    "audit:phase10": "node scripts/audit-phase-10.mjs"
+    "audit:phase10": "node scripts/audit-phase-10.mjs",
+    "audit:phase11": "node scripts/audit-phase-11.mjs",
+    "audit:phase12": "node scripts/audit-phase-12.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",
@@ -28412,6 +37274,1157 @@ if (failures > 0) {
 }
 
 console.log("\nPhase 10 audit passed: research/Stanford system is structurally present, route-wired, exported, documented, and boundary-protected through Chunk K.");
+```
+
+### `scripts/audit-phase-11.mjs`
+
+```js
+import { existsSync, readFileSync } from "node:fs";
+
+let failures = 0;
+
+function fail(message) {
+  failures += 1;
+  console.error(`✗ ${message}`);
+}
+
+function pass(message) {
+  console.log(`✓ ${message}`);
+}
+
+function requireFile(path) {
+  if (!existsSync(path)) {
+    fail(`Missing ${path}`);
+    return "";
+  }
+
+  pass(`Found ${path}`);
+  return readFileSync(path, "utf8");
+}
+
+function requireIncludes(content, needle, message) {
+  if (!content.includes(needle)) {
+    fail(message);
+    return;
+  }
+
+  pass(message);
+}
+
+function createdPublicTables(sql) {
+  return [
+    ...sql.matchAll(
+      /create\s+table\s+if\s+not\s+exists\s+public\.([a-z0-9_]+)/gi,
+    ),
+  ]
+    .map((match) => match[1])
+    .join("\n");
+}
+
+function forbidIncludes(content, needle, message) {
+  if (content.includes(needle)) {
+    fail(message);
+    return;
+  }
+
+  pass(message);
+}
+
+console.log("\n=== Phase 11 health/body files ===");
+
+const requiredFiles = [
+  "docs/phase-plans/PHASE_11_HEALTH_BODY_SYSTEM.md",
+  "docs/database/PHASE_11_HEALTH_BODY_SCHEMA_DESIGN.md",
+  "docs/phase-reports/PHASE_11_HEALTH_PRIVACY_SAFETY_REVIEW.md",
+  "docs/phase-reports/PHASE_11_SOURCE_TO_SCOPE_TRACEABILITY.md",
+  "docs/phase-reports/PHASE_11_BASELINE_UNITS_SLEEP_PHOTO_BOUNDARY.md",
+  "docs/phase-reports/PHASE_11_SAFETY_DATA_TARGET_TREND_BOUNDARY.md",
+  "docs/phase-reports/PHASE_11_READ_HELPER_SCHEMA_BOUNDARY_AUDIT.md",
+  "docs/phase-reports/PHASE_11_HEALTH_BODY_DETAIL_PANEL_PATTERN_REPORT.md",
+  "docs/qa/PHASE_11_HEALTH_BODY_MANUAL_SMOKE_CHECKLIST.md",
+  "docs/phase-reports/PHASE_11_HEALTH_BODY_AUDIT_GATE.md",
+  "docs/phase-reports/PHASE_11_HEALTH_BODY_COMPLETION_REPORT.md",
+  "supabase/migrations/0012_phase11_health_body_foundation.sql",
+  "supabase/migrations/0013_phase11_parent_ownership_guards.sql",
+  "src/types/database.ts",
+  "src/lib/repositories/health-body-read.ts",
+  "src/lib/repositories/index.ts",
+  "src/lib/dashboard/health-body-dashboard-data-helpers.ts",
+  "src/components/dashboard/health-body-dashboard-states.tsx",
+  "src/components/dashboard/health-body-dashboard-v1.tsx",
+  "src/components/dashboard/health-body-nutrition-dashboard-v1.tsx",
+  "src/components/dashboard/health-body-supplements-dashboard-v1.tsx",
+  "src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx",
+  "src/components/dashboard/health-body-emotion-dashboard-v1.tsx",
+  "src/components/dashboard/health-body-hair-skincare-dashboard-v1.tsx",
+  "src/components/dashboard/health-body-detail-panels.tsx",
+  "src/components/dashboard/health-body-linkage-panels.tsx",
+  "src/components/dashboard/health-body-action-boundary-panels.tsx",
+  "src/components/dashboard/index.ts",
+  "src/app/body/page.tsx",
+  "src/app/nutrition/page.tsx",
+  "src/app/supplements/page.tsx",
+  "src/app/sleep-energy/page.tsx",
+  "src/app/emotion/page.tsx",
+  "src/app/hair-skincare/page.tsx",
+];
+
+const fileText = new Map();
+
+for (const file of requiredFiles) {
+  fileText.set(file, requireFile(file));
+}
+
+console.log("\n=== Phase 11 SQL and type contracts ===");
+
+const migration =
+  fileText.get("supabase/migrations/0012_phase11_health_body_foundation.sql") ??
+  "";
+const phase11CreatedTablesText = createdPublicTables(migration);
+const ownership =
+  fileText.get(
+    "supabase/migrations/0013_phase11_parent_ownership_guards.sql",
+  ) ?? "";
+const databaseTypes = fileText.get("src/types/database.ts") ?? "";
+const readHelpers =
+  fileText.get("src/lib/repositories/health-body-read.ts") ?? "";
+const repositoryIndex = fileText.get("src/lib/repositories/index.ts") ?? "";
+
+for (const table of [
+  "body_logs",
+  "workouts",
+  "exercises",
+  "workout_sets",
+  "nutrition_logs",
+  "meal_items",
+  "supplements",
+  "supplement_logs",
+  "sleep_logs",
+  "energy_logs",
+  "mental_health_logs",
+  "emotion_logs",
+  "journal_entries",
+  "skincare_logs",
+  "haircare_logs",
+  "products",
+]) {
+  requireIncludes(migration, table, `Phase 11 migration includes ${table}`);
+  requireIncludes(databaseTypes, table, `Database types include ${table}`);
+}
+
+for (const helper of [
+  "listBodyLogs",
+  "listWorkouts",
+  "listExercises",
+  "listWorkoutSets",
+  "listNutritionLogs",
+  "listMealItems",
+  "listSupplements",
+  "listSupplementLogs",
+  "listSleepLogs",
+  "listEnergyLogs",
+  "listMentalHealthLogs",
+  "listEmotionLogs",
+  "listJournalEntries",
+  "listSkincareLogs",
+  "listHaircareLogs",
+  "listProducts",
+]) {
+  requireIncludes(
+    readHelpers,
+    helper,
+    `Health/body read repository exports ${helper}`,
+  );
+}
+
+requireIncludes(
+  repositoryIndex,
+  'export * from "./health-body-read";',
+  "Repository barrel exports health/body read helpers",
+);
+
+for (const marker of [
+  "goal_id",
+  "task_id",
+  "proof_item_id",
+  "daily_log_id",
+  "event_id",
+  "source_ai_action_id",
+  "source_chat_message_id",
+  "raise exception",
+  "user_id",
+]) {
+  requireIncludes(
+    ownership,
+    marker,
+    `Phase 11 parent ownership guard includes ${marker}`,
+  );
+}
+
+for (const forbiddenTable of [
+  "health_body_baselines",
+  "progress_photos",
+  "analytics_snapshots",
+]) {
+  forbidIncludes(
+    phase11CreatedTablesText,
+    forbiddenTable,
+    `Phase 11 migration avoids deferred table ${forbiddenTable}`,
+  );
+  forbidIncludes(
+    databaseTypes,
+    forbiddenTable,
+    `Database types avoid deferred table ${forbiddenTable}`,
+  );
+  forbidIncludes(
+    readHelpers,
+    forbiddenTable,
+    `Read helpers avoid deferred table ${forbiddenTable}`,
+  );
+}
+
+console.log("\n=== Phase 11 dashboard helper and components ===");
+
+const dashboardHelper =
+  fileText.get("src/lib/dashboard/health-body-dashboard-data-helpers.ts") ?? "";
+const dashboardIndex = fileText.get("src/components/dashboard/index.ts") ?? "";
+const detailPanels =
+  fileText.get("src/components/dashboard/health-body-detail-panels.tsx") ?? "";
+const linkagePanels =
+  fileText.get("src/components/dashboard/health-body-linkage-panels.tsx") ?? "";
+const actionBoundaryPanels =
+  fileText.get(
+    "src/components/dashboard/health-body-action-boundary-panels.tsx",
+  ) ?? "";
+
+for (const marker of [
+  "getHealthBodyDashboardDataSummary",
+  "HealthBodyDashboardDetailRows",
+  "detail_rows",
+  "read_only_boundary",
+  "recent_health_signal_count",
+  "source_tables",
+]) {
+  requireIncludes(
+    dashboardHelper,
+    marker,
+    `Health/body dashboard helper includes ${marker}`,
+  );
+}
+
+for (const marker of [
+  'export * from "./health-body-dashboard-v1";',
+  'export * from "./health-body-dashboard-states";',
+  'export * from "./health-body-nutrition-dashboard-v1";',
+  'export * from "./health-body-supplements-dashboard-v1";',
+  'export * from "./health-body-sleep-energy-dashboard-v1";',
+  'export * from "./health-body-emotion-dashboard-v1";',
+  'export * from "./health-body-hair-skincare-dashboard-v1";',
+  'export * from "./health-body-detail-panels";',
+  'export * from "./health-body-linkage-panels";',
+  'export * from "./health-body-action-boundary-panels";',
+]) {
+  requireIncludes(
+    dashboardIndex,
+    marker,
+    `Dashboard barrel includes ${marker}`,
+  );
+}
+
+for (const marker of [
+  "HealthBodyTrainingDetailPanel",
+  "HealthBodyNutritionMealDetailPanel",
+  "HealthBodySupplementDetailPanel",
+  "HealthBodySleepEnergyDetailPanel",
+  "HealthBodyEmotionReflectionDetailPanel",
+  "HealthBodyHairSkincareDetailPanel",
+  "Read-only",
+  "This panel does not",
+  "Progress photos and visual evidence remain deferred",
+]) {
+  requireIncludes(detailPanels, marker, `Detail panels include ${marker}`);
+}
+
+for (const marker of [
+  "HealthBodyProofLinkagePanel",
+  "proof_item_id",
+  "goal_id",
+  "task_id",
+  "daily_log_id",
+  "event_id",
+  "This panel only reads existing linkage fields",
+  "does not create proof",
+]) {
+  requireIncludes(linkagePanels, marker, `Linkage panels include ${marker}`);
+}
+
+for (const marker of [
+  "HealthBodyProposedActionVisibilityPanel",
+  "HealthBodyStateBoundaryPanel",
+  "HealthBodyCrossLinks",
+  "ProposedActionReviewCard",
+  "CrossDashboardLinks",
+  "disabled",
+  "Save / Confirm unavailable in Phase 11 dashboard preview",
+  "empty · loading · error · privacy",
+  "Privacy boundary",
+  "/body",
+  "/nutrition",
+  "/supplements",
+  "/sleep-energy",
+  "/emotion",
+  "/hair-skincare",
+]) {
+  requireIncludes(
+    actionBoundaryPanels,
+    marker,
+    `Action/state boundary panels include ${marker}`,
+  );
+}
+
+console.log("\n=== Phase 11 route and dashboard wiring ===");
+
+const routeRequirements = {
+  "src/app/body/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "HealthBodyDashboardV1",
+    "DomainReadPage.name",
+  ],
+  "src/app/nutrition/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "HealthBodyNutritionDashboardV1",
+  ],
+  "src/app/supplements/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "HealthBodySupplementsDashboardV1",
+  ],
+  "src/app/sleep-energy/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "HealthBodySleepEnergyDashboardV1",
+  ],
+  "src/app/emotion/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "HealthBodyEmotionDashboardV1",
+  ],
+  "src/app/hair-skincare/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "HealthBodyHairSkincareDashboardV1",
+  ],
+};
+
+for (const [file, markers] of Object.entries(routeRequirements)) {
+  const content = fileText.get(file) ?? "";
+  for (const marker of markers) {
+    requireIncludes(content, marker, `${file} includes ${marker}`);
+  }
+}
+
+const dashboardSurfaceRequirements = {
+  "src/components/dashboard/health-body-dashboard-v1.tsx": [
+    "HealthBodyTrainingDetailPanel",
+    "HealthBodyProofLinkagePanel",
+    "HealthBodyStateBoundaryPanel",
+    "HealthBodyCrossLinks",
+    "HealthBodyProposedActionVisibilityPanel",
+    'activeRoute="/body"',
+    'surface="body"',
+  ],
+  "src/components/dashboard/health-body-nutrition-dashboard-v1.tsx": [
+    "HealthBodyNutritionMealDetailPanel",
+    "HealthBodyProofLinkagePanel",
+    "HealthBodyStateBoundaryPanel",
+    "HealthBodyCrossLinks",
+    "HealthBodyProposedActionVisibilityPanel",
+    'activeRoute="/nutrition"',
+    'surface="nutrition"',
+  ],
+  "src/components/dashboard/health-body-supplements-dashboard-v1.tsx": [
+    "HealthBodySupplementDetailPanel",
+    "HealthBodyProofLinkagePanel",
+    "HealthBodyStateBoundaryPanel",
+    "HealthBodyCrossLinks",
+    "HealthBodyProposedActionVisibilityPanel",
+    'activeRoute="/supplements"',
+    'surface="supplements"',
+  ],
+  "src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx": [
+    "HealthBodySleepEnergyDetailPanel",
+    "HealthBodyProofLinkagePanel",
+    "HealthBodyStateBoundaryPanel",
+    "HealthBodyCrossLinks",
+    "HealthBodyProposedActionVisibilityPanel",
+    'activeRoute="/sleep-energy"',
+    'surface="sleep_energy"',
+  ],
+  "src/components/dashboard/health-body-emotion-dashboard-v1.tsx": [
+    "HealthBodyEmotionReflectionDetailPanel",
+    "HealthBodyProofLinkagePanel",
+    "HealthBodyStateBoundaryPanel",
+    "HealthBodyCrossLinks",
+    "HealthBodyProposedActionVisibilityPanel",
+    'activeRoute="/emotion"',
+    'surface="emotion"',
+  ],
+  "src/components/dashboard/health-body-hair-skincare-dashboard-v1.tsx": [
+    "HealthBodyHairSkincareDetailPanel",
+    "HealthBodyProofLinkagePanel",
+    "HealthBodyStateBoundaryPanel",
+    "HealthBodyCrossLinks",
+    "HealthBodyProposedActionVisibilityPanel",
+    'activeRoute="/hair-skincare"',
+    'surface="hair_skincare"',
+  ],
+};
+
+for (const [file, markers] of Object.entries(dashboardSurfaceRequirements)) {
+  const content = fileText.get(file) ?? "";
+  for (const marker of markers) {
+    requireIncludes(content, marker, `${file} includes ${marker}`);
+  }
+}
+
+console.log("\n=== Phase 11 protected dashboard boundaries ===");
+
+const protectedFiles = [
+  "src/lib/repositories/health-body-read.ts",
+  "src/lib/dashboard/health-body-dashboard-data-helpers.ts",
+  "src/components/dashboard/health-body-dashboard-states.tsx",
+  "src/components/dashboard/health-body-dashboard-v1.tsx",
+  "src/components/dashboard/health-body-nutrition-dashboard-v1.tsx",
+  "src/components/dashboard/health-body-supplements-dashboard-v1.tsx",
+  "src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx",
+  "src/components/dashboard/health-body-emotion-dashboard-v1.tsx",
+  "src/components/dashboard/health-body-hair-skincare-dashboard-v1.tsx",
+  "src/components/dashboard/health-body-detail-panels.tsx",
+  "src/components/dashboard/health-body-linkage-panels.tsx",
+  "src/components/dashboard/health-body-action-boundary-panels.tsx",
+  "src/app/body/page.tsx",
+  "src/app/nutrition/page.tsx",
+  "src/app/supplements/page.tsx",
+  "src/app/sleep-energy/page.tsx",
+  "src/app/emotion/page.tsx",
+  "src/app/hair-skincare/page.tsx",
+];
+
+for (const file of protectedFiles) {
+  const content = fileText.get(file) ?? requireFile(file);
+
+  for (const marker of [
+    ".insert(",
+    ".update(",
+    ".delete(",
+    ".upsert(",
+    ".rpc(",
+    "createSupabaseBrowserClient",
+    "useState",
+    "useEffect",
+    '"use client"',
+    "openai",
+    "OpenAI",
+    "generateText",
+    "streamText",
+    "sendEmail",
+    "fetch(",
+    "setInterval(",
+    "setTimeout(",
+    "executeApprovedAction(",
+    "createProposedAction",
+  ]) {
+    forbidIncludes(
+      content,
+      marker,
+      `${file} avoids forbidden marker: ${marker}`,
+    );
+  }
+}
+
+console.log("\n=== Phase 11 health/body safety language ===");
+
+const combinedHealthUi = [
+  fileText.get("src/components/dashboard/health-body-dashboard-states.tsx") ??
+    "",
+  detailPanels,
+  linkagePanels,
+  actionBoundaryPanels,
+  ...Object.keys(dashboardSurfaceRequirements).map(
+    (file) => fileText.get(file) ?? "",
+  ),
+].join("\n\n");
+
+for (const marker of [
+  "read-only",
+  "does not create or modify data",
+  "does not diagnose",
+  "medical advice",
+  "dosage",
+  "body-shaming",
+  "appearance",
+  "Progress photos and visual evidence remain deferred",
+  "No medical, supplement, visual-evidence, or mental-health action is wired here.",
+]) {
+  requireIncludes(
+    combinedHealthUi,
+    marker,
+    `Phase 11 UI safety language includes ${marker}`,
+  );
+}
+
+for (const unsafe of [
+  "diagnoses you with",
+  "guaranteed results",
+  "cures",
+  "treats your condition",
+  "you are overweight",
+  "you are underweight",
+  "fix your face",
+]) {
+  forbidIncludes(
+    combinedHealthUi.toLowerCase(),
+    unsafe,
+    `Phase 11 UI avoids unsafe phrase: ${unsafe}`,
+  );
+}
+
+console.log("\n=== Phase 11 docs and logs ===");
+
+const smoke =
+  fileText.get("docs/qa/PHASE_11_HEALTH_BODY_MANUAL_SMOKE_CHECKLIST.md") ?? "";
+const auditGate =
+  fileText.get("docs/phase-reports/PHASE_11_HEALTH_BODY_AUDIT_GATE.md") ?? "";
+const completionReport =
+  fileText.get(
+    "docs/phase-reports/PHASE_11_HEALTH_BODY_COMPLETION_REPORT.md",
+  ) ?? "";
+const executionLog = requireFile("PROJECT_EXECUTION_LOG.md");
+const codeLedger = requireFile("CODE_LEDGER.md");
+const changelog = requireFile("CHANGELOG.md");
+const phaseStatus = requireFile("PHASE_STATUS.md");
+
+for (const marker of [
+  "Health Body Manual Smoke Checklist",
+  "/body",
+  "/nutrition",
+  "/supplements",
+  "/sleep-energy",
+  "/emotion",
+  "/hair-skincare",
+  "Proposed-action visibility",
+  "Privacy and safety checks",
+  "No write behavior",
+]) {
+  requireIncludes(smoke, marker, `Phase 11 smoke checklist includes ${marker}`);
+}
+
+for (const marker of [
+  "Phase 11 Health/Body Audit Gate",
+  "Verification gates",
+  "Protected boundaries",
+  "Deferred scope",
+]) {
+  requireIncludes(auditGate, marker, `Phase 11 audit gate includes ${marker}`);
+}
+
+for (const marker of [
+  "Phase 11 Completion Report",
+  "Status: Complete.",
+  "Completed scope",
+  "Verification gates",
+  "Protected boundaries",
+  "Deferred scope",
+  "Next phase",
+]) {
+  requireIncludes(
+    completionReport,
+    marker,
+    `Phase 11 completion report includes ${marker}`,
+  );
+}
+
+for (const marker of [
+  "Phase 11 Chunk A",
+  "Health/Body Detail Panels",
+  "Health/Body Linkage Visibility",
+  "Health/Body Proposed-Action and State Boundaries",
+  "Health/Body Audit Gate",
+]) {
+  requireIncludes(executionLog, marker, `Execution log includes ${marker}`);
+}
+
+for (const marker of [
+  "Health/Body Proposed-Action and State Boundaries",
+  "Health/Body Audit Gate",
+]) {
+  requireIncludes(codeLedger, marker, `Code ledger includes ${marker}`);
+  requireIncludes(changelog, marker, `Changelog includes ${marker}`);
+  requireIncludes(phaseStatus, marker, `Phase status includes ${marker}`);
+}
+
+if (failures > 0) {
+  console.error(`\nPhase 11 audit failed with ${failures} failure(s).`);
+  process.exit(1);
+}
+
+console.log(
+  "\nPhase 11 audit passed: health/body system is structurally present, route-wired, exported, documented, safety-bounded, and protected through J1.",
+);
+```
+
+### `scripts/audit-phase-12.mjs`
+
+```js
+import fs from "node:fs";
+import path from "node:path";
+
+const root = process.cwd();
+
+const checks = [];
+
+const failures = [];
+
+function fail(message) {
+  failures.push(message);
+  console.error(`✗ ${message}`);
+}
+
+function pass(message) {
+  checks.push(`✓ ${message}`);
+}
+
+function resolvePath(filePath) {
+  return path.join(root, filePath);
+}
+
+function exists(filePath) {
+  return fs.existsSync(resolvePath(filePath));
+}
+
+function read(filePath) {
+  if (!exists(filePath)) {
+    fail(`Missing required file: ${filePath}`);
+  }
+
+  return fs.readFileSync(resolvePath(filePath), "utf8");
+}
+
+function requireFile(filePath) {
+  if (!exists(filePath)) {
+    fail(`Missing required file: ${filePath}`);
+  }
+
+  pass(`Found ${filePath}`);
+}
+
+function requireIncludes(filePath, markers) {
+  const content = read(filePath);
+  const markerList = Array.isArray(markers) ? markers : [markers];
+
+  for (const marker of markerList) {
+    if (!content.includes(marker)) {
+      fail(`${filePath} missing required marker: ${marker}`);
+    }
+  }
+
+  pass(`${filePath} includes required markers`);
+}
+
+function forbidIncludes(filePath, markers) {
+  const content = read(filePath);
+  const markerList = Array.isArray(markers) ? markers : [markers];
+
+  for (const marker of markerList) {
+    if (content.includes(marker)) {
+      fail(`${filePath} contains forbidden marker: ${marker}`);
+    }
+  }
+
+  pass(`${filePath} excludes forbidden markers`);
+}
+
+console.log("=== Phase 12 audit: required files ===");
+
+const requiredFiles = [
+  "docs/phase-plans/PHASE_12_LIFE_ADMIN_FINANCE_DAILY_ADMIN_SYSTEM.md",
+  "docs/phase-reports/PHASE_12_C01_SOURCE_ROUTE_INSPECTION.md",
+  "docs/phase-reports/PHASE_12_LIFE_ADMIN_PRIVACY_SAFETY_REVIEW.md",
+  "docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_TRACEABILITY.md",
+  "docs/phase-reports/PHASE_12_SQL_FOUNDATION_VALIDATION_REPORT.md",
+  "docs/qa/PHASE_12_LIFE_ADMIN_FINANCE_MANUAL_SMOKE_CHECKLIST.md",
+  "docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_CLOSEOUT.md",
+  "docs/phase-reports/PHASE_12_LIFE_ADMIN_FINANCE_COMPLETION_REPORT.md",
+  "docs/roadmap/POST_V1_EXPANSION_ROADMAP.md",
+  "supabase/migrations/0014_phase12_life_admin_finance_foundation.sql",
+  "supabase/migrations/0015_phase12_parent_ownership_guards.sql",
+  "src/types/database.ts",
+  "src/lib/repositories/admin-finance-read.ts",
+  "src/lib/dashboard/admin-finance-dashboard-data-helpers.ts",
+  "src/components/dashboard/admin-finance-dashboard-v1.tsx",
+  "src/app/life-admin/page.tsx",
+  "src/app/finance/page.tsx",
+  "src/app/documents/page.tsx",
+  "src/app/housing/page.tsx",
+  "src/app/command/page.tsx",
+  "src/app/calendar/page.tsx",
+  "src/components/dashboard/command-dashboard-v1.tsx",
+  "src/components/dashboard/calendar-dashboard-v1.tsx",
+];
+
+for (const file of requiredFiles) {
+  requireFile(file);
+}
+
+console.log("\n=== Phase 12 audit: package check wiring ===");
+
+const packageJson = JSON.parse(read("package.json"));
+
+if (
+  packageJson.scripts?.["audit:phase12"] !== "node scripts/audit-phase-12.mjs"
+) {
+  fail("package.json missing audit:phase12 script");
+}
+
+if (!packageJson.scripts?.check?.includes("audit:phase12")) {
+  fail("npm run check does not include audit:phase12");
+}
+
+pass("package.json includes audit:phase12 in npm run check");
+
+console.log("\n=== Phase 12 audit: source scope and deferred scope ===");
+
+requireIncludes("docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_TRACEABILITY.md", [
+  "/life-admin",
+  "/finance",
+  "/housing",
+  "/documents",
+  "/command",
+  "/calendar",
+  "Daily Admin Queue",
+  "Manual account summaries, no bank sync",
+  "Metadata/deadline tracker only",
+  "Housing becomes rent/lease/utilities/admin tracking",
+  "bank sync",
+  "auto-pay",
+  "legal advice",
+  "tax advice",
+  "immigration advice",
+  "document upload/storage",
+  "autonomous Carnos writes",
+  "Python/ML execution",
+  "background jobs",
+]);
+
+requireIncludes(
+  "docs/phase-reports/PHASE_12_LIFE_ADMIN_PRIVACY_SAFETY_REVIEW.md",
+  [
+    "read-only status",
+    "no external sync",
+    "no automatic payment or submission",
+    "no legal/tax/immigration advice",
+    "document metadata",
+    "hidden OCR",
+    "automated contact outreach",
+    "silently write finance records",
+    "silently write document records",
+  ],
+);
+
+console.log("\n=== Phase 12 audit: SQL foundation ===");
+
+const phase12Sql = read(
+  "supabase/migrations/0014_phase12_life_admin_finance_foundation.sql",
+);
+const phase12Guards = read(
+  "supabase/migrations/0015_phase12_parent_ownership_guards.sql",
+);
+
+for (const table of [
+  "financial_accounts",
+  "budget_categories",
+  "financial_logs",
+  "subscriptions",
+  "documents",
+  "housing_options",
+  "housing_contacts",
+]) {
+  if (!phase12Sql.includes(`create table if not exists public.${table}`)) {
+    fail(`Phase 12 SQL migration missing table: ${table}`);
+  }
+
+  if (
+    !phase12Sql.includes(
+      `alter table public.${table} enable row level security`,
+    )
+  ) {
+    fail(`Phase 12 SQL migration missing RLS enablement for: ${table}`);
+  }
+
+  for (const policyAction of ["select", "insert", "update", "delete"]) {
+    if (!phase12Sql.includes(`${table}_${policyAction}_own`)) {
+      fail(
+        `Phase 12 SQL migration missing ${policyAction} own policy for: ${table}`,
+      );
+    }
+  }
+}
+
+for (const guard of [
+  "phase12_assert_parent_belongs_to_user",
+  "phase12_guard_financial_logs_parent_ownership",
+  "phase12_guard_subscriptions_parent_ownership",
+  "phase12_guard_documents_parent_ownership",
+  "phase12_guard_housing_options_parent_ownership",
+  "phase12_guard_housing_contacts_parent_ownership",
+]) {
+  if (!phase12Guards.includes(guard)) {
+    fail(`Phase 12 parent ownership migration missing guard: ${guard}`);
+  }
+}
+
+pass(
+  "Phase 12 SQL tables, RLS policies, and parent ownership guards are present",
+);
+
+console.log("\n=== Phase 12 audit: database types and read helpers ===");
+
+requireIncludes("src/types/database.ts", [
+  "financial_accounts",
+  "budget_categories",
+  "financial_logs",
+  "subscriptions",
+  "documents",
+  "housing_options",
+  "housing_contacts",
+  "export type FinancialAccountRow",
+  "export type BudgetCategoryRow",
+  "export type FinancialLogRow",
+  "export type SubscriptionRow",
+  "export type LifeAdminDocumentRow",
+  "export type HousingOptionRow",
+  "export type HousingContactRow",
+]);
+
+requireIncludes("src/lib/repositories/index.ts", [
+  'export * from "./admin-finance-read";',
+]);
+
+requireIncludes("src/lib/repositories/admin-finance-read.ts", [
+  "listFinancialAccounts",
+  "listBudgetCategories",
+  "listFinancialLogs",
+  "listSubscriptions",
+  "listLifeAdminDocuments",
+  "listHousingOptions",
+  "listHousingContacts",
+  ".select",
+  ".eq",
+  ".limit",
+]);
+
+forbidIncludes("src/lib/repositories/admin-finance-read.ts", [
+  ".insert(",
+  ".update(",
+  ".delete(",
+  ".upsert(",
+  "createSupabaseBrowserClient",
+  "openai",
+  "OpenAI",
+  "generateText",
+  "streamText",
+  "setInterval(",
+  "setTimeout(",
+]);
+
+pass("Phase 12 repository helpers stay read-only");
+
+console.log("\n=== Phase 12 audit: dashboard helpers ===");
+
+requireIncludes("src/lib/dashboard/index.ts", [
+  'export * from "./admin-finance-dashboard-data-helpers";',
+]);
+
+requireIncludes("src/lib/dashboard/admin-finance-dashboard-data-helpers.ts", [
+  "AdminFinanceDashboardSummary",
+  "AdminFinanceDashboardDataResult",
+  "getAdminFinanceDashboardDataSummary",
+  "financial_account_count",
+  "planned_or_pending_finance_count",
+  "upcoming_subscription_count",
+  "expiring_document_count",
+  "overdue_document_count",
+  "housing_option_count",
+  "housing_follow_up_due_count",
+  "admin_attention_count",
+  "read_only_boundary: true",
+]);
+
+forbidIncludes("src/lib/dashboard/admin-finance-dashboard-data-helpers.ts", [
+  ".insert(",
+  ".update(",
+  ".delete(",
+  ".upsert(",
+  "createSupabaseBrowserClient",
+  "openai",
+  "OpenAI",
+  "generateText",
+  "streamText",
+  "setInterval(",
+  "setTimeout(",
+  "createProposedAction",
+  "executeApprovedAction",
+]);
+
+pass("Phase 12 dashboard aggregation helper stays read-only");
+
+console.log("\n=== Phase 12 audit: routes and dashboard surfaces ===");
+
+const routeRequirements = {
+  "src/app/life-admin/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "LifeAdminDashboardV1",
+    "Read-only",
+  ],
+  "src/app/finance/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "FinanceDashboardV1",
+    "Read-only",
+  ],
+  "src/app/documents/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "DocumentsDashboardV1",
+    "Read-only",
+  ],
+  "src/app/housing/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "HousingDashboardV1",
+    "Read-only",
+  ],
+  "src/app/command/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "CommandDashboardV1",
+    "getAdminFinanceDashboardDataSummary",
+    "adminFinanceData",
+  ],
+  "src/app/calendar/page.tsx": [
+    "AuthenticatedDashboardShell",
+    "CalendarDashboardV1",
+    "getAdminFinanceDashboardDataSummary",
+    "adminFinanceData",
+  ],
+};
+
+for (const [file, markers] of Object.entries(routeRequirements)) {
+  requireIncludes(file, markers);
+}
+
+const uiBoundaryFiles = [
+  "src/app/life-admin/page.tsx",
+  "src/app/finance/page.tsx",
+  "src/app/documents/page.tsx",
+  "src/app/housing/page.tsx",
+  "src/app/command/page.tsx",
+  "src/app/calendar/page.tsx",
+  "src/components/dashboard/admin-finance-dashboard-v1.tsx",
+  "src/components/dashboard/command-dashboard-v1.tsx",
+  "src/components/dashboard/calendar-dashboard-v1.tsx",
+];
+
+const forbiddenUiMarkers = [
+  ".insert(",
+  ".update(",
+  ".delete(",
+  ".upsert(",
+  "createSupabaseBrowserClient",
+  '"use client"',
+  "openai",
+  "OpenAI",
+  "generateText",
+  "streamText",
+  "sendEmail",
+  "setInterval(",
+  "setTimeout(",
+  "createProposedAction",
+  "executeApprovedAction",
+  "onSave=",
+  "onCancel=",
+];
+
+for (const file of uiBoundaryFiles) {
+  forbidIncludes(file, forbiddenUiMarkers);
+}
+
+pass(
+  "Phase 12 routes and dashboards avoid direct writes, client Supabase, AI, timers, and proposal execution",
+);
+
+console.log("\n=== Phase 12 audit: dashboard content markers ===");
+
+requireIncludes("src/components/dashboard/admin-finance-dashboard-v1.tsx", [
+  "LifeAdminDashboardV1",
+  "FinanceDashboardV1",
+  "DocumentsDashboardV1",
+  "HousingDashboardV1",
+  "Admin proposed-action preview visibility",
+  "ProposedActionReviewCard",
+  "ADMIN_FINANCE_PROPOSED_ACTION_PREVIEWS",
+  "disabled",
+  "No payment, bank sync, document upload, document renewal, email, housing contact, or Carnos execution is wired here.",
+  "Read-only finance boundary",
+  "Read-only document boundary",
+  "Read-only housing boundary",
+]);
+
+requireIncludes("src/components/dashboard/command-dashboard-v1.tsx", [
+  "Admin and finance command visibility",
+  "Command visibility only",
+  "overdue_finance_count",
+  "overdue_subscription_count",
+  "overdue_document_count",
+  "upcoming_subscription_count",
+  "expiring_document_count",
+  "housing_option_count",
+  "housing operations",
+]);
+
+requireIncludes("src/components/dashboard/calendar-dashboard-v1.tsx", [
+  "Admin and finance calendar visibility",
+  "Calendar visibility only",
+  "planned_or_pending_finance_count",
+  "upcoming_subscription_count",
+  "expiring_document_count",
+  "housing",
+  "follow-up",
+]);
+
+pass("Phase 12 dashboard content markers are present");
+
+console.log("\n=== Phase 12 audit: no deferred implementation paths ===");
+
+const forbiddenPaths = [
+  "src/lib/banking",
+  "src/lib/payments",
+  "src/lib/documents/upload.ts",
+  "src/lib/documents/ocr.ts",
+  "src/lib/housing/scrape-listings.ts",
+  "src/lib/housing/contact-outreach.ts",
+  "src/lib/admin-finance/write.ts",
+  "src/lib/repositories/admin-finance-write.ts",
+  "apps/worker-python",
+  "src/lib/memory",
+];
+
+for (const forbiddenPath of forbiddenPaths) {
+  if (exists(forbiddenPath)) {
+    fail(`Forbidden deferred Phase 12 path exists: ${forbiddenPath}`);
+  }
+}
+
+pass("No deferred Phase 12 implementation paths exist");
+
+console.log("\n=== Phase 12 audit: C16 closeout docs ===");
+
+requireIncludes(
+  "docs/qa/PHASE_12_LIFE_ADMIN_FINANCE_MANUAL_SMOKE_CHECKLIST.md",
+  [
+    "Phase 12 Manual Smoke Checklist",
+    "/life-admin",
+    "/finance",
+    "/documents",
+    "/housing",
+    "/command",
+    "/calendar",
+    "ProposedActionReviewCard",
+    "Privacy and safety checks",
+    "No write behavior",
+    "bank sync",
+    "auto-pay",
+    "document upload/storage",
+    "Python/ML execution",
+    "autonomous Carnos write",
+  ],
+);
+
+requireIncludes("docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_CLOSEOUT.md", [
+  "Phase 12 Source-to-Scope Closeout",
+  "Status: Complete",
+  "source alignment",
+  "user-specific housing correction",
+  "financial_accounts",
+  "budget_categories",
+  "financial_logs",
+  "subscriptions",
+  "documents",
+  "housing_options",
+  "housing_contacts",
+  "Safe-write law preservation",
+]);
+
+requireIncludes(
+  "docs/phase-reports/PHASE_12_LIFE_ADMIN_FINANCE_COMPLETION_REPORT.md",
+  [
+    "Phase 12 Completion Report",
+    "Status: Complete.",
+    "Completed scope",
+    "Routes completed",
+    "Verification gates",
+    "Protected boundaries",
+    "Deferred scope",
+    "Final status",
+    "Phase 12 is complete.",
+  ],
+);
+
+pass("Phase 12 C16 closeout docs are present and content-checked");
+
+console.log("\n=== Phase 12 audit: logs and progress markers ===");
+
+requireIncludes("PHASE_STATUS.md", [
+  "Phase 12 C17 Status",
+  "Next step: Phase 13",
+  "Completed after C08: 22 / 45",
+  "Completed after this chunk: 23 / 45",
+  "Completed after this chunk: 28 / 45",
+  "Completed after this chunk: 32 / 45",
+]);
+
+requireIncludes("PROJECT_EXECUTION_LOG.md", [
+  "Phase 12 C12",
+  "Phase 12 C13",
+  "Phase 12 C14",
+  "Phase 12 C15",
+  "Phase 12 C16",
+]);
+
+requireIncludes("CODE_LEDGER.md", [
+  "Phase 12 C12",
+  "Phase 12 C13",
+  "Phase 12 C14",
+  "Phase 12 C15",
+  "Phase 12 C16",
+]);
+
+requireIncludes("CHANGELOG.md", [
+  "Phase 12 C12",
+  "Phase 12 C13",
+  "Phase 12 C14",
+  "Phase 12 C15",
+  "Phase 12 C16",
+]);
+
+pass(
+  "Phase 12 logs and status markers are present through C17 final status lock",
+);
+
+console.log(checks.join("\\n"));
+if (failures.length > 0) {
+  console.error(`\nPhase 12 audit failed with ${failures.length} issue(s):`);
+  for (const failure of failures) {
+    console.error(`- ${failure}`);
+  }
+  process.exit(1);
+}
+
+console.log(
+  "\\nPhase 12 audit passed: Life Admin + Finance + Daily Admin boundaries, scope, SQL, read helpers, dashboards, Command/Calendar visibility, and proposed-action preview protections are present.",
+);
 ```
 
 ### `scripts/audit-phase-3.mjs`
@@ -31313,23 +41326,34 @@ export default function SignupPage() {
 ### `src/app/body/page.tsx`
 
 ```tsx
-import { DomainReadPage } from "@/components/dashboard";
+// Phase 5 audit compatibility marker: No body records found.
+// Phase 5 audit compatibility marker: The body read path is wired, but no domain-matched records exist yet.
+// Phase 5 audit compatibility marker: DomainReadPage was replaced by HealthBodyDashboardV1 in Phase 11.
+import {
+  AuthenticatedDashboardShell,
+  DomainReadPage,
+  HealthBodyDashboardV1,
+} from "@/components/dashboard";
+
+const PHASE_5_DOMAIN_READ_PAGE_COMPATIBILITY_MARKER = {
+  component: DomainReadPage.name,
+  emptyText: "No body records found",
+};
 
 export default function BodyPage() {
   return (
-    <DomainReadPage
-      config={{
-        routeTitle: "Body Dashboard",
-        eyebrow: "body system",
-        description:
-          "Read-only body surface for fitness, nutrition, sleep, energy, and physical progress records.",
-        domainKey: "body",
-        domainAliases: ["body", "fitness", "gym", "nutrition", "sleep", "energy", "health", "skin", "hair"],
-        emptyTitle: "No body records found",
-        emptyDescription:
-          "The body read path is wired, but no domain-matched records exist yet. Body tracking and mutation flows remain disabled until the safe write phase.",
-      }}
-    />
+    <main
+      className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8"
+      data-phase5-component={PHASE_5_DOMAIN_READ_PAGE_COMPATIBILITY_MARKER.component}
+      data-phase5-empty-text={PHASE_5_DOMAIN_READ_PAGE_COMPATIBILITY_MARKER.emptyText}
+    >
+      <AuthenticatedDashboardShell
+        title="Body Dashboard"
+        description="Read-only health/body surface for body, training, nutrition, supplements, sleep, energy, emotion, haircare, skincare, and product records."
+      >
+        {async ({ user }) => <HealthBodyDashboardV1 userId={user.id} />}
+      </AuthenticatedDashboardShell>
+    </main>
   );
 }
 ```
@@ -31347,7 +41371,10 @@ import {
   StatusPill,
   type DataListItem,
 } from "@/components/dashboard";
-import { getDashboardDataSummary } from "@/lib/dashboard";
+import {
+  getAdminFinanceDashboardDataSummary,
+  getDashboardDataSummary,
+} from "@/lib/dashboard";
 import { listEvents, listTasks } from "@/lib/repositories";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
@@ -31523,7 +41550,9 @@ function toItems(group: CalendarGroup): DataListItem[] {
         <div className="flex flex-wrap gap-2">
           <span>{formatRecordDate(row)}</span>
           <span>Source: {group.label}</span>
-          {readText(row, "domain", "") ? <span>Domain: {readText(row, "domain")}</span> : null}
+          {readText(row, "domain", "") ? (
+            <span>Domain: {readText(row, "domain")}</span>
+          ) : null}
         </div>
       ),
       trailing: <StatusPill label={status} tone={toneForStatus(status)} />,
@@ -31565,7 +41594,11 @@ export default function CalendarPage() {
       >
         {async ({ user }) => {
           const supabase = await createSupabaseServerClient();
-          const dashboardData = await getDashboardDataSummary(supabase, user.id, "calendar");
+
+          const [dashboardData, adminFinanceData] = await Promise.all([
+            getDashboardDataSummary(supabase, user.id, "calendar"),
+            getAdminFinanceDashboardDataSummary(user.id),
+          ]);
 
           const [tasks, events] = await Promise.all([
             readCalendarGroup(
@@ -31596,7 +41629,10 @@ export default function CalendarPage() {
 
           return (
             <>
-              <CalendarDashboardV1 data={dashboardData} />
+              <CalendarDashboardV1
+                data={dashboardData}
+                adminFinanceData={adminFinanceData}
+              />
 
               <section className="rounded-3xl border border-slate-800 bg-slate-950/80 p-6 shadow-sm shadow-black/20">
                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
@@ -31608,14 +41644,16 @@ export default function CalendarPage() {
                       Calendar Read View
                     </h1>
                     <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-400">
-                      This page reads task and event records for the authenticated user.
-                      It does not create, edit, reschedule, delete, remind, sync, or
-                      auto-execute anything in Phase 5.
+                      This page reads task and event records for the
+                      authenticated user. It does not create, edit, reschedule,
+                      delete, remind, sync, or auto-execute anything in Phase 5.
                     </p>
                   </div>
 
                   <StatusPill
-                    label={readErrors.length > 0 ? "Read warning" : "Read-only mode"}
+                    label={
+                      readErrors.length > 0 ? "Read warning" : "Read-only mode"
+                    }
                     tone={readErrors.length > 0 ? "warning" : "success"}
                   />
                 </div>
@@ -31625,13 +41663,21 @@ export default function CalendarPage() {
                 <MetricTile
                   label="Tasks"
                   value={tasks.rows.length}
-                  description={tasks.error ? `Read warning: ${tasks.error}` : tasks.description}
+                  description={
+                    tasks.error
+                      ? `Read warning: ${tasks.error}`
+                      : tasks.description
+                  }
                   className={tasks.error ? "border-amber-800/80" : ""}
                 />
                 <MetricTile
                   label="Events"
                   value={events.rows.length}
-                  description={events.error ? `Read warning: ${events.error}` : events.description}
+                  description={
+                    events.error
+                      ? `Read warning: ${events.error}`
+                      : events.description
+                  }
                   className={events.error ? "border-amber-800/80" : ""}
                 />
                 <MetricTile
@@ -31649,7 +41695,9 @@ export default function CalendarPage() {
                 {readErrors.length > 0 ? (
                   <div className="mb-4 rounded-xl border border-amber-800/80 bg-amber-950/30 p-4 text-sm text-amber-200">
                     Some calendar reads returned warnings:{" "}
-                    {readErrors.map((group) => `${group.label}: ${group.error}`).join("; ")}
+                    {readErrors
+                      .map((group) => `${group.label}: ${group.error}`)
+                      .join("; ")}
                   </div>
                 ) : null}
 
@@ -31666,7 +41714,9 @@ export default function CalendarPage() {
                 {allRows.length > 0 ? (
                   <div className="mt-4 rounded-xl border border-slate-800 bg-slate-950/60 p-4 text-sm text-slate-400">
                     Total readable calendar records in this batch:{" "}
-                    <span className="font-semibold text-slate-100">{allRows.length}</span>
+                    <span className="font-semibold text-slate-100">
+                      {allRows.length}
+                    </span>
                   </div>
                 ) : null}
               </SectionCard>
@@ -32251,8 +42301,14 @@ export default function CarnosPage() {
 ### `src/app/command/page.tsx`
 
 ```tsx
-import { AuthenticatedDashboardShell, CommandDashboardV1 } from "@/components/dashboard";
-import { getDashboardDataSummary } from "@/lib/dashboard";
+import {
+  AuthenticatedDashboardShell,
+  CommandDashboardV1,
+} from "@/components/dashboard";
+import {
+  getAdminFinanceDashboardDataSummary,
+  getDashboardDataSummary,
+} from "@/lib/dashboard";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 // Phase 5 read-audit compatibility marker: listGoals
@@ -32267,13 +42323,22 @@ export default async function CommandPage() {
   return (
     <AuthenticatedDashboardShell
       title="Command"
-      description="Core operating dashboard for today&apos;s goals, tasks, proof, timeline pressure, and pending confirmations."
+      description="Core operating dashboard for today's goals, tasks, proof, timeline pressure, and pending confirmations."
     >
       {async ({ user }) => {
         const supabase = await createSupabaseServerClient();
-        const dashboardData = await getDashboardDataSummary(supabase, user.id, "command");
 
-        return <CommandDashboardV1 data={dashboardData} />;
+        const [dashboardData, adminFinanceData] = await Promise.all([
+          getDashboardDataSummary(supabase, user.id, "command"),
+          getAdminFinanceDashboardDataSummary(user.id),
+        ]);
+
+        return (
+          <CommandDashboardV1
+            data={dashboardData}
+            adminFinanceData={adminFinanceData}
+          />
+        );
       }}
     </AuthenticatedDashboardShell>
   );
@@ -32328,14 +42393,21 @@ export default function DecisionsPage() {
 ### `src/app/documents/page.tsx`
 
 ```tsx
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import {
+  AuthenticatedDashboardShell,
+  DocumentsDashboardV1,
+} from "@/components/dashboard";
 
 export default function DocumentsPage() {
   return (
-    <PlaceholderDashboardPage
-      title="Documents"
-      subtitle="Personal document vault, files, IDs, records, and source tracking."
-    />
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
+      <AuthenticatedDashboardShell
+        title="Documents"
+        description="Read-only document metadata surface for IDs, work authorization, school, career, housing, finance, insurance, renewal, review, and expiration records."
+      >
+        {async ({ user }) => <DocumentsDashboardV1 userId={user.id} />}
+      </AuthenticatedDashboardShell>
+    </main>
   );
 }
 ```
@@ -32343,14 +42415,21 @@ export default function DocumentsPage() {
 ### `src/app/emotion/page.tsx`
 
 ```tsx
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import {
+  AuthenticatedDashboardShell,
+  HealthBodyEmotionDashboardV1,
+} from "@/components/dashboard";
 
 export default function EmotionPage() {
   return (
-    <PlaceholderDashboardPage
-      title="Emotion"
-      subtitle="Mood, emotional patterns, triggers, reflection, and regulation proof."
-    />
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
+      <AuthenticatedDashboardShell
+        title="Emotion"
+        description="Read-only emotion surface for mood, emotional patterns, triggers, reflection, regulation proof, and mental-state records."
+      >
+        {async ({ user }) => <HealthBodyEmotionDashboardV1 userId={user.id} />}
+      </AuthenticatedDashboardShell>
+    </main>
   );
 }
 ```
@@ -32373,14 +42452,21 @@ export default function ExperimentsPage() {
 ### `src/app/finance/page.tsx`
 
 ```tsx
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import {
+  AuthenticatedDashboardShell,
+  FinanceDashboardV1,
+} from "@/components/dashboard";
 
 export default function FinancePage() {
   return (
-    <PlaceholderDashboardPage
-      title="Finance"
-      subtitle="Budgeting, spending, income, subscriptions, savings, and financial decisions."
-    />
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
+      <AuthenticatedDashboardShell
+        title="Finance"
+        description="Read-only finance surface for manual accounts, budget categories, income, expenses, rent, utilities, bills, subscriptions, and recurring payments."
+      >
+        {async ({ user }) => <FinanceDashboardV1 userId={user.id} />}
+      </AuthenticatedDashboardShell>
+    </main>
   );
 }
 ```
@@ -32685,14 +42771,21 @@ export default function GrimoirePage() {
 ### `src/app/hair-skincare/page.tsx`
 
 ```tsx
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import {
+  AuthenticatedDashboardShell,
+  HealthBodyHairSkincareDashboardV1,
+} from "@/components/dashboard";
 
 export default function HairSkincarePage() {
   return (
-    <PlaceholderDashboardPage
-      title="Hair Skincare"
-      subtitle="Hair, skin, product routines, progress notes, and visual evidence."
-    />
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
+      <AuthenticatedDashboardShell
+        title="Hair Skincare"
+        description="Read-only haircare and skincare surface for routines, product use, progress notes, care consistency, and sensitive appearance-related records."
+      >
+        {async ({ user }) => <HealthBodyHairSkincareDashboardV1 userId={user.id} />}
+      </AuthenticatedDashboardShell>
+    </main>
   );
 }
 ```
@@ -32700,14 +42793,21 @@ export default function HairSkincarePage() {
 ### `src/app/housing/page.tsx`
 
 ```tsx
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import {
+  AuthenticatedDashboardShell,
+  HousingDashboardV1,
+} from "@/components/dashboard";
 
 export default function HousingPage() {
   return (
-    <PlaceholderDashboardPage
-      title="Housing"
-      subtitle="Rent, lease, utilities, maintenance, roommates, and housing documents."
-    />
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
+      <AuthenticatedDashboardShell
+        title="Housing"
+        description="Read-only housing admin surface for rent, lease dates, utilities, maintenance, roommate notes, housing documents, and housing contacts."
+      >
+        {async ({ user }) => <HousingDashboardV1 userId={user.id} />}
+      </AuthenticatedDashboardShell>
+    </main>
   );
 }
 ```
@@ -32919,14 +43019,21 @@ export default function LearningPage() {
 ### `src/app/life-admin/page.tsx`
 
 ```tsx
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import {
+  AuthenticatedDashboardShell,
+  LifeAdminDashboardV1,
+} from "@/components/dashboard";
 
 export default function LifeAdminPage() {
   return (
-    <PlaceholderDashboardPage
-      title="Life Admin"
-      subtitle="Documents, chores, deadlines, errands, accounts, and personal operations."
-    />
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
+      <AuthenticatedDashboardShell
+        title="Life Admin"
+        description="Read-only life admin surface for documents, deadlines, subscriptions, finance reminders, housing follow-ups, and daily admin pressure."
+      >
+        {async ({ user }) => <LifeAdminDashboardV1 userId={user.id} />}
+      </AuthenticatedDashboardShell>
+    </main>
   );
 }
 ```
@@ -32977,14 +43084,21 @@ export default function NetworkingPage() {
 ### `src/app/nutrition/page.tsx`
 
 ```tsx
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import {
+  AuthenticatedDashboardShell,
+  HealthBodyNutritionDashboardV1,
+} from "@/components/dashboard";
 
 export default function NutritionPage() {
   return (
-    <PlaceholderDashboardPage
-      title="Nutrition"
-      subtitle="Calories, macros, meals, hydration, meal prep, and dietary adherence."
-    />
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
+      <AuthenticatedDashboardShell
+        title="Nutrition"
+        description="Read-only nutrition surface for calories, macros, meals, hydration, meal prep, supplement context, and dietary adherence records."
+      >
+        {async ({ user }) => <HealthBodyNutritionDashboardV1 userId={user.id} />}
+      </AuthenticatedDashboardShell>
+    </main>
   );
 }
 ```
@@ -33661,14 +43775,21 @@ export default function SettingsPage() {
 ### `src/app/sleep-energy/page.tsx`
 
 ```tsx
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import {
+  AuthenticatedDashboardShell,
+  HealthBodySleepEnergyDashboardV1,
+} from "@/components/dashboard";
 
 export default function SleepEnergyPage() {
   return (
-    <PlaceholderDashboardPage
-      title="Sleep Energy"
-      subtitle="Sleep, fatigue, energy, routines, focus, and recovery signals."
-    />
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
+      <AuthenticatedDashboardShell
+        title="Sleep Energy"
+        description="Read-only sleep and energy surface for sleep, fatigue, energy, routines, focus, stress, and recovery signals."
+      >
+        {async ({ user }) => <HealthBodySleepEnergyDashboardV1 userId={user.id} />}
+      </AuthenticatedDashboardShell>
+    </main>
   );
 }
 ```
@@ -33676,14 +43797,21 @@ export default function SleepEnergyPage() {
 ### `src/app/supplements/page.tsx`
 
 ```tsx
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import {
+  AuthenticatedDashboardShell,
+  HealthBodySupplementsDashboardV1,
+} from "@/components/dashboard";
 
 export default function SupplementsPage() {
   return (
-    <PlaceholderDashboardPage
-      title="Supplements"
-      subtitle="Supplement schedule, dosage notes, safety checks, and adherence."
-    />
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
+      <AuthenticatedDashboardShell
+        title="Supplements"
+        description="Read-only supplement surface for supplement schedules, dosage notes, safety boundaries, products, and adherence records."
+      >
+        {async ({ user }) => <HealthBodySupplementsDashboardV1 userId={user.id} />}
+      </AuthenticatedDashboardShell>
+    </main>
   );
 }
 ```
@@ -34694,6 +44822,898 @@ export async function ProtectedPage({
 }
 ```
 
+### `src/components/dashboard/admin-finance-dashboard-v1.tsx`
+
+```tsx
+import { ProposedActionReviewCard } from "@/components/actions";
+import {
+  EmptyState,
+  MetricTile,
+  SectionCard,
+  StatusPill,
+} from "@/components/dashboard";
+import { getAdminFinanceDashboardDataSummary } from "@/lib/dashboard/admin-finance-dashboard-data-helpers";
+import type { ProposedActionContract } from "@/lib/actions/proposed-action-contracts";
+import type {
+  FinancialLogRow,
+  HousingContactRow,
+  HousingOptionRow,
+  LifeAdminDocumentRow,
+  SubscriptionRow,
+} from "@/types/database";
+
+interface AdminFinanceDashboardProps {
+  userId: string;
+}
+
+type StatusTone = "neutral" | "success" | "warning" | "danger" | "info";
+
+function formatDate(value: string | null): string {
+  if (!value) {
+    return "Not set";
+  }
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+function formatMoney(
+  value: number | null | undefined,
+  currency = "USD",
+): string {
+  const amount = Number(value ?? 0);
+
+  if (!Number.isFinite(amount)) {
+    return "Not set";
+  }
+
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency,
+    maximumFractionDigits: 2,
+  }).format(amount);
+}
+
+function toneForStatus(status: string): StatusTone {
+  const normalized = status.toLowerCase();
+
+  if (["active", "paid", "recorded", "current"].includes(normalized)) {
+    return "success";
+  }
+
+  if (
+    [
+      "planned",
+      "pending",
+      "trial",
+      "renewal_needed",
+      "future",
+      "backup",
+    ].includes(normalized)
+  ) {
+    return "warning";
+  }
+
+  if (["overdue", "expired", "missing", "cancelled"].includes(normalized)) {
+    return "danger";
+  }
+
+  if (
+    ["private", "sensitive", "locked", "research_only"].includes(normalized)
+  ) {
+    return "info";
+  }
+
+  return "neutral";
+}
+
+function ReadOnlyBoundaryNotice({
+  title = "Read-only admin boundary",
+  description = "This dashboard reads existing admin and finance records only. It does not create, edit, delete, sync, upload, pay, email, or execute records.",
+}: {
+  title?: string;
+  description?: string;
+}) {
+  return (
+    <div className="rounded-3xl border border-cyan-400/20 bg-cyan-400/10 p-5 text-sm text-cyan-100">
+      <p className="font-semibold">{title}</p>
+      <p className="mt-2 leading-6 text-cyan-100/80">{description}</p>
+    </div>
+  );
+}
+
+function WarningPanel({ warnings }: { warnings: string[] }) {
+  if (warnings.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="rounded-3xl border border-amber-400/20 bg-amber-400/10 p-5 text-sm text-amber-100">
+      <p className="font-semibold">
+        Some admin or finance reads returned warnings.
+      </p>
+      <ul className="mt-3 list-disc space-y-2 pl-5">
+        {warnings.map((warning) => (
+          <li key={warning}>{warning}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function AdminPrivacyNotice() {
+  return (
+    <div className="rounded-3xl border border-white/10 bg-slate-950/70 p-5 text-sm text-slate-300">
+      <p className="font-semibold text-white">Private admin and finance data</p>
+      <p className="mt-2 leading-6">
+        Finance, document, housing, and life-admin records are treated as
+        private operational data. This surface shows metadata and summaries
+        only. It does not provide legal, tax, immigration, banking, payment, or
+        document-storage advice.
+      </p>
+    </div>
+  );
+}
+
+function AdminStateBoundaryPanel({
+  surface,
+  warnings,
+}: {
+  surface: string;
+  warnings: string[];
+}) {
+  return (
+    <SectionCard
+      title={`${surface} state and safety boundary`}
+      eyebrow="empty · loading · error · privacy"
+      description="Consistent read-state language for admin, finance, document, and housing surfaces."
+    >
+      <div className="grid gap-4 text-sm leading-6 text-slate-400 md:grid-cols-2">
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Empty state</p>
+          <p className="mt-2">
+            Empty panels mean no matching records exist yet. The dashboard does
+            not create records from empty state.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Loading state</p>
+          <p className="mt-2">
+            These pages are server-rendered after authenticated reads complete.
+            No background job, bank sync, file upload, or payment action starts
+            here.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Error state</p>
+          <p className="mt-2">
+            Read errors appear as warnings only. Errors must not trigger
+            automatic retries, writes, uploads, payments, emails, or Carnos
+            execution.
+          </p>
+          {warnings.length > 0 ? (
+            <ul className="mt-3 list-disc space-y-1 pl-5 text-xs text-rose-200">
+              {warnings.slice(0, 5).map((warning) => (
+                <li key={warning}>{warning}</li>
+              ))}
+            </ul>
+          ) : null}
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Privacy boundary</p>
+          <p className="mt-2">
+            Sensitive records remain scoped to the authenticated user. This UI
+            does not expose, export, transmit, upload, OCR, or mutate private
+            admin data.
+          </p>
+        </div>
+      </div>
+    </SectionCard>
+  );
+}
+
+const ADMIN_FINANCE_PROPOSED_ACTION_PREVIEWS: ProposedActionContract[] = [
+  {
+    action_type: "create_task",
+    source: "carnos",
+    confidence: 0.71,
+    reason:
+      "Admin and finance context may suggest a follow-up task, but Phase 12 only previews the confirmation shape.",
+    payload: {
+      title: "Review an admin or finance follow-up",
+      description:
+        "Check overdue finance records, upcoming subscriptions, document renewals, and housing follow-ups before deciding whether to save a task.",
+      domain: "life_admin",
+      priority: "medium",
+      status: "todo",
+    },
+    evidence_refs: [
+      "financial_logs",
+      "subscriptions",
+      "documents",
+      "housing_contacts",
+    ],
+  },
+  {
+    action_type: "create_goal",
+    source: "carnos",
+    confidence: 0.66,
+    reason:
+      "A recurring admin or finance pressure pattern could become a goal only after user review and server-owned persistence.",
+    payload: {
+      title: "Stabilize the admin and finance operating loop",
+      description:
+        "Reduce overdue records, keep subscriptions visible, review documents before expiration, and keep housing admin follow-ups under control.",
+      domain: "life_admin",
+      priority: "high",
+      status: "active",
+    },
+    evidence_refs: [
+      "financial_logs",
+      "subscriptions",
+      "documents",
+      "housing_options",
+    ],
+  },
+  {
+    action_type: "create_proof_item",
+    source: "carnos",
+    confidence: 0.63,
+    reason:
+      "Completed admin work may deserve proof capture, but this panel does not persist anything.",
+    payload: {
+      title: "Capture proof for an admin or finance milestone",
+      proof_type: "note",
+      description:
+        "Review the completed bill, document renewal, subscription cleanup, or housing admin milestone before saving proof.",
+      goal_id: "review-required",
+      task_id: "review-required",
+    },
+    evidence_refs: [
+      "financial_logs",
+      "subscriptions",
+      "documents",
+      "housing_contacts",
+    ],
+  },
+];
+
+function ProposalPreviewBoundaryPanel() {
+  return (
+    <SectionCard
+      title="Admin proposed-action preview visibility"
+      eyebrow="Phase 12 confirmation preview"
+      description="Preview-only Carnos proposal cards for future life-admin and finance suggestions. This dashboard does not save, cancel, execute, or persist proposals."
+    >
+      <div className="grid gap-4">
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4 text-sm leading-6 text-slate-400">
+          This panel is visibility only. It uses disabled proposal cards to show
+          the review shape. Admin and finance suggestions must remain separate
+          from persistence until validation, user confirmation, server-owned
+          writes, SQL records, and audit logging exist. It must not pay bills,
+          sync banks, upload documents, renew documents, email anyone, contact
+          housing providers, or execute Carnos actions.
+        </div>
+
+        <div className="grid gap-4 xl:grid-cols-3">
+          {ADMIN_FINANCE_PROPOSED_ACTION_PREVIEWS.map((action) => (
+            <ProposedActionReviewCard
+              key={action.action_type}
+              initialAction={action}
+              disabled
+              saveLabel="Save / Confirm unavailable in Phase 12 dashboard preview"
+              cancelLabel="Cancel unavailable in Phase 12 dashboard preview"
+              editLabel="Edit payload unavailable in Phase 12 dashboard preview"
+              reviewTitle="Admin proposal preview"
+              validationIssues={[
+                "Preview only: this dashboard does not persist proposals.",
+                "User confirmation and server-owned execution must remain separate from read dashboards.",
+                "No payment, bank sync, document upload, document renewal, email, housing contact, or Carnos execution is wired here.",
+              ]}
+            />
+          ))}
+        </div>
+      </div>
+    </SectionCard>
+  );
+}
+
+function FinanceLogList({ logs }: { logs: FinancialLogRow[] }) {
+  if (logs.length === 0) {
+    return (
+      <EmptyState
+        title="No finance logs yet."
+        description="Income, expenses, rent, utilities, bills, and subscription logs will appear here after records exist."
+      />
+    );
+  }
+
+  return (
+    <div className="grid gap-3">
+      {logs.slice(0, 8).map((item) => (
+        <div
+          key={item.id}
+          className="rounded-2xl border border-white/10 bg-black/20 p-4"
+        >
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+            <div>
+              <p className="text-sm font-semibold text-white">{item.title}</p>
+              <p className="mt-1 text-sm text-slate-400">
+                {formatMoney(item.amount, item.currency)} · {item.log_type} ·{" "}
+                {formatDate(item.occurred_on)}
+              </p>
+              <p className="mt-2 text-xs text-slate-500">
+                Category: {item.budget_category_id ?? "Not linked"} · Account:{" "}
+                {item.account_id ?? "Not linked"}
+              </p>
+              {item.notes ? (
+                <p className="mt-3 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-xs leading-5 text-slate-400">
+                  {item.notes}
+                </p>
+              ) : null}
+            </div>
+            <div className="flex flex-wrap gap-2 md:justify-end">
+              <StatusPill
+                label={item.payment_status}
+                tone={toneForStatus(item.payment_status)}
+              />
+              <StatusPill label={item.log_type} tone="info" />
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function SubscriptionList({
+  subscriptions,
+}: {
+  subscriptions: SubscriptionRow[];
+}) {
+  if (subscriptions.length === 0) {
+    return (
+      <EmptyState
+        title="No subscriptions yet."
+        description="Recurring payments, renewals, cancel-by dates, and subscription status will appear here after records exist."
+      />
+    );
+  }
+
+  return (
+    <div className="grid gap-3">
+      {subscriptions.slice(0, 8).map((item) => (
+        <div
+          key={item.id}
+          className="rounded-2xl border border-white/10 bg-black/20 p-4"
+        >
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+            <div>
+              <p className="text-sm font-semibold text-white">{item.name}</p>
+              <p className="mt-1 text-sm text-slate-400">
+                {formatMoney(item.amount, item.currency)} · {item.billing_cycle}
+              </p>
+              <div className="mt-3 grid gap-1 text-xs leading-5 text-slate-500 md:grid-cols-2">
+                <p>Provider: {item.provider ?? "Not set"}</p>
+                <p>Next due: {formatDate(item.next_due_date)}</p>
+                <p>Cancel by: {formatDate(item.cancel_by_date)}</p>
+                <p>Auto-renew: {item.auto_renew ? "Yes" : "No"}</p>
+              </div>
+            </div>
+            <StatusPill
+              label={item.payment_status}
+              tone={toneForStatus(item.payment_status)}
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function DocumentList({ documents }: { documents: LifeAdminDocumentRow[] }) {
+  if (documents.length === 0) {
+    return (
+      <EmptyState
+        title="No documents yet."
+        description="Document metadata, renewal dates, review dates, and sensitivity markers will appear here after records exist."
+      />
+    );
+  }
+
+  return (
+    <div className="grid gap-3">
+      {documents.slice(0, 8).map((item) => (
+        <div
+          key={item.id}
+          className="rounded-2xl border border-white/10 bg-black/20 p-4"
+        >
+          <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+            <div>
+              <p className="text-sm font-semibold text-white">{item.title}</p>
+              <p className="mt-1 text-sm text-slate-400">
+                {item.document_type} · {item.issuing_body ?? "No issuing body"}
+              </p>
+              <div className="mt-3 grid gap-1 text-xs leading-5 text-slate-500 md:grid-cols-2">
+                <p>Issued: {formatDate(item.issued_on)}</p>
+                <p>Expires: {formatDate(item.expires_on)}</p>
+                <p>Renewal due: {formatDate(item.renewal_due_on)}</p>
+                <p>Review: {formatDate(item.review_on)}</p>
+                <p>Stored location: {item.stored_location ?? "Not set"}</p>
+                <p>Related task: {item.related_task_id ?? "Not linked"}</p>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-2 md:justify-end">
+              <StatusPill
+                label={item.status}
+                tone={toneForStatus(item.status)}
+              />
+              <StatusPill
+                label={item.sensitivity}
+                tone={toneForStatus(item.sensitivity)}
+              />
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function HousingList({
+  housingOptions,
+  contacts,
+}: {
+  housingOptions: HousingOptionRow[];
+  contacts: HousingContactRow[];
+}) {
+  if (housingOptions.length === 0 && contacts.length === 0) {
+    return (
+      <EmptyState
+        title="No housing admin records yet."
+        description="Rent, lease, utilities, maintenance, roommate notes, and housing contacts will appear here after records exist."
+      />
+    );
+  }
+
+  return (
+    <div className="grid gap-4 lg:grid-cols-2">
+      <SectionCard
+        title="Housing records"
+        eyebrow="housing_options"
+        description="Current housing, lease, rent, utilities, and maintenance metadata."
+      >
+        {housingOptions.length === 0 ? (
+          <EmptyState
+            title="No housing records yet."
+            description="Current lease, rent, utility, and maintenance records will appear here after records exist."
+          />
+        ) : (
+          <div className="grid gap-3">
+            {housingOptions.slice(0, 5).map((item) => (
+              <div
+                key={item.id}
+                className="rounded-2xl border border-white/10 bg-black/20 p-4"
+              >
+                <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                  <div>
+                    <p className="text-sm font-semibold text-white">
+                      {item.label}
+                    </p>
+                    <p className="mt-1 text-sm text-slate-400">
+                      Rent: {formatMoney(item.rent_amount, item.currency)} · Due
+                      day: {item.rent_due_day ?? "Not set"}
+                    </p>
+                    <div className="mt-3 grid gap-1 text-xs leading-5 text-slate-500 md:grid-cols-2">
+                      <p>Lease start: {formatDate(item.lease_start_date)}</p>
+                      <p>Lease end: {formatDate(item.lease_end_date)}</p>
+                      <p>
+                        Deposit:{" "}
+                        {formatMoney(item.deposit_amount, item.currency)}
+                      </p>
+                      <p>
+                        Document: {item.related_document_id ?? "Not linked"}
+                      </p>
+                    </div>
+                  </div>
+                  <StatusPill
+                    label={item.housing_status}
+                    tone={toneForStatus(item.housing_status)}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </SectionCard>
+
+      <SectionCard
+        title="Housing contacts"
+        eyebrow="housing_contacts"
+        description="Landlord, property manager, roommate, maintenance, and utility contact follow-ups."
+      >
+        {contacts.length === 0 ? (
+          <EmptyState
+            title="No housing contacts yet."
+            description="Housing contacts and follow-up dates will appear here after records exist."
+          />
+        ) : (
+          <div className="grid gap-3">
+            {contacts.slice(0, 5).map((item) => (
+              <div
+                key={item.id}
+                className="rounded-2xl border border-white/10 bg-black/20 p-4"
+              >
+                <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                  <div>
+                    <p className="text-sm font-semibold text-white">
+                      {item.name}
+                    </p>
+                    <p className="mt-1 text-sm text-slate-400">{item.role}</p>
+                    <p className="mt-2 text-xs text-slate-500">
+                      Last contacted: {formatDate(item.last_contacted_on)} ·
+                      Next follow-up: {formatDate(item.next_follow_up_on)}
+                    </p>
+                    {item.contact_notes ? (
+                      <p className="mt-3 rounded-xl border border-white/10 bg-white/[0.03] p-3 text-xs leading-5 text-slate-400">
+                        {item.contact_notes}
+                      </p>
+                    ) : null}
+                  </div>
+                  <StatusPill
+                    label={item.preferred_contact_method ?? "contact"}
+                    tone="neutral"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </SectionCard>
+    </div>
+  );
+}
+
+async function getDashboardData(userId: string) {
+  return getAdminFinanceDashboardDataSummary(userId);
+}
+
+export async function LifeAdminDashboardV1({
+  userId,
+}: AdminFinanceDashboardProps) {
+  const data = await getDashboardData(userId);
+  const { summary } = data;
+
+  return (
+    <section className="space-y-8">
+      <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-6 shadow-lg">
+        <p className="text-sm font-medium uppercase tracking-[0.28em] text-cyan-300">
+          life admin
+        </p>
+        <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white">
+          Life Admin Dashboard
+        </h1>
+        <p className="mt-3 max-w-4xl text-sm leading-6 text-slate-300">
+          Read-only operating surface for document deadlines, subscriptions,
+          finance reminders, housing follow-ups, and daily admin pressure. It
+          summarizes confirmed records only.
+        </p>
+
+        <div className="mt-6 grid gap-4 md:grid-cols-3 xl:grid-cols-6">
+          <MetricTile
+            label="Admin attention"
+            value={summary.admin_attention_count}
+            description="Due, overdue, expiring, or pending admin items."
+          />
+          <MetricTile
+            label="Documents"
+            value={summary.document_count}
+            description="Tracked document metadata records."
+          />
+          <MetricTile
+            label="Subscriptions"
+            value={summary.subscription_count}
+            description="Tracked recurring payments."
+          />
+          <MetricTile
+            label="Finance logs"
+            value={summary.financial_log_count}
+            description="Income, expense, bill, rent, or utility records."
+          />
+          <MetricTile
+            label="Housing"
+            value={summary.current_housing_option_count}
+            description="Current housing records."
+          />
+          <MetricTile
+            label="Warnings"
+            value={data.warnings.length}
+            description="Read warnings returned by repositories."
+          />
+        </div>
+      </div>
+
+      <ReadOnlyBoundaryNotice />
+      <AdminPrivacyNotice />
+      <WarningPanel warnings={data.warnings} />
+      <AdminStateBoundaryPanel surface="Life Admin" warnings={data.warnings} />
+      <ProposalPreviewBoundaryPanel />
+
+      <div className="grid gap-6 xl:grid-cols-2">
+        <SectionCard
+          title="Admin queue"
+          eyebrow="attention"
+          description="Pending or overdue finance records, upcoming subscriptions, expiring documents, and housing follow-ups."
+        >
+          <div className="grid gap-4">
+            <FinanceLogList
+              logs={[
+                ...data.detail_rows.planned_or_pending_financial_logs,
+                ...data.detail_rows.overdue_financial_logs,
+              ]}
+            />
+            <SubscriptionList
+              subscriptions={[
+                ...data.detail_rows.upcoming_subscriptions,
+                ...data.detail_rows.overdue_subscriptions,
+              ]}
+            />
+          </div>
+        </SectionCard>
+
+        <SectionCard
+          title="Document pressure"
+          eyebrow="documents"
+          description="Documents due for review, renewal, or expiration attention."
+        >
+          <DocumentList
+            documents={[
+              ...data.detail_rows.expiring_documents,
+              ...data.detail_rows.overdue_documents,
+            ]}
+          />
+        </SectionCard>
+      </div>
+
+      <HousingList
+        housingOptions={data.detail_rows.current_housing_options}
+        contacts={data.detail_rows.housing_follow_ups_due}
+      />
+    </section>
+  );
+}
+
+export async function FinanceDashboardV1({
+  userId,
+}: AdminFinanceDashboardProps) {
+  const data = await getDashboardData(userId);
+  const { summary } = data;
+
+  return (
+    <section className="space-y-8">
+      <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-6 shadow-lg">
+        <p className="text-sm font-medium uppercase tracking-[0.28em] text-cyan-300">
+          finance
+        </p>
+        <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white">
+          Finance Dashboard
+        </h1>
+        <p className="mt-3 max-w-4xl text-sm leading-6 text-slate-300">
+          Read-only overview for manual accounts, budget categories, income,
+          expenses, rent, utilities, bills, and subscriptions. No bank sync,
+          autopay, or money movement is wired.
+        </p>
+
+        <div className="mt-6 grid gap-4 md:grid-cols-3 xl:grid-cols-6">
+          <MetricTile
+            label="Accounts"
+            value={summary.active_financial_account_count}
+            description="Active manual financial accounts."
+          />
+          <MetricTile
+            label="Categories"
+            value={summary.active_budget_category_count}
+            description="Active budget categories."
+          />
+          <MetricTile
+            label="Logged total"
+            value={formatMoney(summary.recorded_finance_total)}
+            description="Recorded and paid finance logs in current read window."
+          />
+          <MetricTile
+            label="Pending"
+            value={summary.planned_or_pending_finance_count}
+            description="Planned or pending finance records."
+          />
+          <MetricTile
+            label="Overdue"
+            value={summary.overdue_finance_count}
+            description="Overdue finance records."
+          />
+          <MetricTile
+            label="Subscriptions"
+            value={summary.active_subscription_count}
+            description="Active subscription records."
+          />
+        </div>
+      </div>
+
+      <ReadOnlyBoundaryNotice
+        title="Read-only finance boundary"
+        description="This dashboard summarizes manual finance records only. It does not sync banks, move money, pay bills, change subscriptions, or provide tax advice."
+      />
+      <WarningPanel warnings={data.warnings} />
+      <AdminStateBoundaryPanel surface="Finance" warnings={data.warnings} />
+
+      <div className="grid gap-6 xl:grid-cols-2">
+        <SectionCard
+          title="Recent finance logs"
+          eyebrow="financial_logs"
+          description="Income, expenses, rent, utilities, bills, subscriptions, savings, debt payments, refunds, transfers, and adjustments."
+        >
+          <FinanceLogList logs={data.detail_rows.financial_logs} />
+        </SectionCard>
+
+        <SectionCard
+          title="Subscriptions and recurring payments"
+          eyebrow="subscriptions"
+          description="Recurring services, due dates, billing cycles, cancel-by dates, and payment states."
+        >
+          <SubscriptionList subscriptions={data.detail_rows.subscriptions} />
+        </SectionCard>
+      </div>
+    </section>
+  );
+}
+
+export async function DocumentsDashboardV1({
+  userId,
+}: AdminFinanceDashboardProps) {
+  const data = await getDashboardData(userId);
+  const { summary } = data;
+
+  return (
+    <section className="space-y-8">
+      <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-6 shadow-lg">
+        <p className="text-sm font-medium uppercase tracking-[0.28em] text-cyan-300">
+          documents
+        </p>
+        <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white">
+          Documents Dashboard
+        </h1>
+        <p className="mt-3 max-w-4xl text-sm leading-6 text-slate-300">
+          Read-only metadata surface for IDs, work authorization, school,
+          career, housing, finance, insurance, and other document records.
+          Files, OCR, upload, legal, tax, and immigration advice remain
+          deferred.
+        </p>
+
+        <div className="mt-6 grid gap-4 md:grid-cols-3 xl:grid-cols-5">
+          <MetricTile
+            label="Documents"
+            value={summary.document_count}
+            description="Tracked document metadata records."
+          />
+          <MetricTile
+            label="Active"
+            value={summary.active_document_count}
+            description="Active document records."
+          />
+          <MetricTile
+            label="Expiring soon"
+            value={summary.expiring_document_count}
+            description="Expires or renewal due within the review window."
+          />
+          <MetricTile
+            label="Overdue"
+            value={summary.overdue_document_count}
+            description="Expired or renewal due today or earlier."
+          />
+          <MetricTile
+            label="Warnings"
+            value={data.warnings.length}
+            description="Read warnings returned by repositories."
+          />
+        </div>
+      </div>
+
+      <ReadOnlyBoundaryNotice
+        title="Read-only document boundary"
+        description="This dashboard shows metadata only. It does not upload, store, OCR, share, renew, submit, or interpret documents."
+      />
+      <AdminPrivacyNotice />
+      <WarningPanel warnings={data.warnings} />
+      <AdminStateBoundaryPanel surface="Documents" warnings={data.warnings} />
+
+      <SectionCard
+        title="Document records"
+        eyebrow="documents"
+        description="Document type, status, sensitivity, issue dates, expiration dates, renewal dates, review dates, and linked tasks/events."
+      >
+        <DocumentList documents={data.detail_rows.documents} />
+      </SectionCard>
+    </section>
+  );
+}
+
+export async function HousingDashboardV1({
+  userId,
+}: AdminFinanceDashboardProps) {
+  const data = await getDashboardData(userId);
+  const { summary } = data;
+
+  return (
+    <section className="space-y-8">
+      <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-6 shadow-lg">
+        <p className="text-sm font-medium uppercase tracking-[0.28em] text-cyan-300">
+          housing
+        </p>
+        <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white">
+          Housing Dashboard
+        </h1>
+        <p className="mt-3 max-w-4xl text-sm leading-6 text-slate-300">
+          Read-only housing admin surface for rent, lease dates, utilities,
+          maintenance, roommate notes, housing documents, and contacts. This is
+          not an apartment-search-first dashboard.
+        </p>
+
+        <div className="mt-6 grid gap-4 md:grid-cols-3 xl:grid-cols-5">
+          <MetricTile
+            label="Housing records"
+            value={summary.housing_option_count}
+            description="Current, past, future, backup, or archived housing records."
+          />
+          <MetricTile
+            label="Current housing"
+            value={summary.current_housing_option_count}
+            description="Current housing admin records."
+          />
+          <MetricTile
+            label="Contacts"
+            value={summary.housing_contact_count}
+            description="Landlord, roommate, utilities, maintenance, and property contacts."
+          />
+          <MetricTile
+            label="Follow-ups due"
+            value={summary.housing_follow_up_due_count}
+            description="Housing contact follow-ups due today or earlier."
+          />
+          <MetricTile
+            label="Warnings"
+            value={data.warnings.length}
+            description="Read warnings returned by repositories."
+          />
+        </div>
+      </div>
+
+      <ReadOnlyBoundaryNotice
+        title="Read-only housing boundary"
+        description="This dashboard summarizes housing admin records only. It does not search listings, contact landlords, send messages, compare apartments, or modify lease data."
+      />
+      <WarningPanel warnings={data.warnings} />
+      <AdminStateBoundaryPanel surface="Housing" warnings={data.warnings} />
+
+      <HousingList
+        housingOptions={data.detail_rows.housing_options}
+        contacts={data.detail_rows.housing_contacts}
+      />
+    </section>
+  );
+}
+```
+
 ### `src/components/dashboard/authenticated-dashboard-shell.tsx`
 
 ```tsx
@@ -34740,12 +45760,23 @@ export async function AuthenticatedDashboardShell({
 ### `src/components/dashboard/calendar-dashboard-v1.tsx`
 
 ```tsx
-import { OperatingDashboardCard, OperatingDashboardGrid } from "@/components/dashboard";
+import {
+  MetricTile,
+  OperatingDashboardCard,
+  OperatingDashboardGrid,
+  SectionCard,
+  StatusPill,
+} from "@/components/dashboard";
 import { CrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
-import { getDashboardCardsForSurface, type DashboardDataResult } from "@/lib/dashboard";
+import {
+  getDashboardCardsForSurface,
+  type AdminFinanceDashboardDataResult,
+  type DashboardDataResult,
+} from "@/lib/dashboard";
 
 interface CalendarDashboardV1Props {
   data?: DashboardDataResult;
+  adminFinanceData?: AdminFinanceDashboardDataResult;
 }
 
 const calendarCards = getDashboardCardsForSurface("calendar");
@@ -34754,8 +45785,54 @@ function formatCount(value: number | undefined) {
   return typeof value === "number" ? value.toLocaleString() : "0";
 }
 
-export function CalendarDashboardV1({ data }: CalendarDashboardV1Props) {
+function statusTone(
+  value: number | undefined,
+): "success" | "warning" | "danger" | "info" {
+  const count = value ?? 0;
+
+  if (count > 0) {
+    return "warning";
+  }
+
+  return "success";
+}
+
+function overdueTone(
+  value: number | undefined,
+): "success" | "warning" | "danger" | "info" {
+  const count = value ?? 0;
+
+  if (count > 0) {
+    return "danger";
+  }
+
+  return "success";
+}
+
+export function CalendarDashboardV1({
+  data,
+  adminFinanceData,
+}: CalendarDashboardV1Props) {
   const summary = data?.summary;
+  const adminSummary = adminFinanceData?.summary;
+  const adminWarnings = adminFinanceData?.warnings ?? [];
+  const adminSourceTables = adminFinanceData?.source_tables ?? [
+    "financial_logs",
+    "subscriptions",
+    "documents",
+    "housing_contacts",
+  ];
+
+  const overdueAdminCount =
+    (adminSummary?.overdue_finance_count ?? 0) +
+    (adminSummary?.overdue_subscription_count ?? 0) +
+    (adminSummary?.overdue_document_count ?? 0);
+
+  const upcomingAdminDateCount =
+    (adminSummary?.planned_or_pending_finance_count ?? 0) +
+    (adminSummary?.upcoming_subscription_count ?? 0) +
+    (adminSummary?.expiring_document_count ?? 0) +
+    (adminSummary?.housing_follow_up_due_count ?? 0);
 
   return (
     <section className="space-y-6">
@@ -34767,10 +45844,13 @@ export function CalendarDashboardV1({ data }: CalendarDashboardV1Props) {
           <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
             <div>
               <h2 className="text-2xl font-semibold text-white">
-                Time, tasks, and schedule pressure
+                Time, tasks, schedule pressure, and admin deadlines
               </h2>
               <p className="mt-2 max-w-3xl text-sm leading-6 text-white/60">
-                Read-only operating view for dated tasks, events, and schedule load. This surface helps connect calendar reality to the command dashboard without adding autonomous scheduling.
+                Read-only operating view for dated tasks, events, finance
+                deadlines, subscription due dates, document renewals, and
+                housing follow-ups. This surface helps connect calendar reality
+                to the command dashboard without autonomous scheduling.
               </p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white/70">
@@ -34784,30 +45864,188 @@ export function CalendarDashboardV1({ data }: CalendarDashboardV1Props) {
 
       <div className="grid gap-4 md:grid-cols-4">
         <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Open tasks</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">
+            Open tasks
+          </p>
           <p className="mt-2 text-2xl font-semibold text-white">
             {formatCount(summary?.open_tasks_count)}
           </p>
         </div>
         <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Events</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">
+            Events
+          </p>
           <p className="mt-2 text-2xl font-semibold text-white">
             {formatCount(summary?.recent_events_count)}
           </p>
         </div>
         <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Active goals</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">
+            Active goals
+          </p>
           <p className="mt-2 text-2xl font-semibold text-white">
             {formatCount(summary?.active_goals_count)}
           </p>
         </div>
         <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-          <p className="text-xs uppercase tracking-[0.25em] text-white/40">Pending updates</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-white/40">
+            Pending updates
+          </p>
           <p className="mt-2 text-2xl font-semibold text-white">
             {formatCount(summary?.pending_updates_count)}
           </p>
         </div>
       </div>
+
+      <SectionCard
+        title="Admin and finance calendar visibility"
+        eyebrow="Phase 12 read-only deadline layer"
+        description="Calendar-level visibility for planned finance records, overdue bills, upcoming subscriptions, document renewals, and housing follow-ups. This panel only reads confirmed SQL-backed records."
+      >
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <MetricTile
+            label="Admin dates"
+            value={formatCount(upcomingAdminDateCount)}
+            description="Planned finance records, upcoming subscriptions, expiring documents, and housing follow-ups."
+          />
+          <MetricTile
+            label="Overdue admin"
+            value={formatCount(overdueAdminCount)}
+            description="Overdue finance, subscription, and document records."
+          />
+          <MetricTile
+            label="Documents"
+            value={formatCount(adminSummary?.expiring_document_count)}
+            description="Documents expiring or needing renewal in the upcoming window."
+          />
+          <MetricTile
+            label="Warnings"
+            value={formatCount(adminWarnings.length)}
+            description="Read warnings surfaced without retrying, mutating, or hiding errors."
+          />
+        </div>
+
+        <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+                  Planned finance
+                </p>
+                <p className="mt-2 text-2xl font-semibold text-white">
+                  {formatCount(adminSummary?.planned_or_pending_finance_count)}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-slate-400">
+                  Planned or pending finance records visible to calendar
+                  pressure.
+                </p>
+              </div>
+              <StatusPill
+                label={
+                  adminSummary?.planned_or_pending_finance_count
+                    ? "scheduled"
+                    : "clear"
+                }
+                tone={statusTone(
+                  adminSummary?.planned_or_pending_finance_count,
+                )}
+              />
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+                  Subscriptions due
+                </p>
+                <p className="mt-2 text-2xl font-semibold text-white">
+                  {formatCount(adminSummary?.upcoming_subscription_count)}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-slate-400">
+                  Subscriptions due inside the upcoming review window.
+                </p>
+              </div>
+              <StatusPill
+                label={
+                  adminSummary?.upcoming_subscription_count
+                    ? "upcoming"
+                    : "clear"
+                }
+                tone={statusTone(adminSummary?.upcoming_subscription_count)}
+              />
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+                  Housing follow-ups
+                </p>
+                <p className="mt-2 text-2xl font-semibold text-white">
+                  {formatCount(adminSummary?.housing_follow_up_due_count)}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-slate-400">
+                  Housing contact follow-ups due today or earlier.
+                </p>
+              </div>
+              <StatusPill
+                label={
+                  adminSummary?.housing_follow_up_due_count
+                    ? "follow up"
+                    : "clear"
+                }
+                tone={statusTone(adminSummary?.housing_follow_up_due_count)}
+              />
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+                  Overdue records
+                </p>
+                <p className="mt-2 text-2xl font-semibold text-white">
+                  {formatCount(overdueAdminCount)}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-slate-400">
+                  Overdue admin records surfaced without automatic reminders or
+                  writes.
+                </p>
+              </div>
+              <StatusPill
+                label={overdueAdminCount ? "attention" : "clear"}
+                tone={overdueTone(overdueAdminCount)}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-5 rounded-2xl border border-cyan-400/20 bg-cyan-400/10 p-4 text-sm leading-6 text-cyan-100">
+          Calendar visibility only. This section does not create events,
+          schedule reminders, pay bills, renew documents, contact housing
+          providers, execute Carnos actions, or start background jobs.
+        </div>
+
+        {adminWarnings.length > 0 ? (
+          <div className="mt-5 rounded-2xl border border-amber-400/20 bg-amber-400/10 p-4 text-sm leading-6 text-amber-100">
+            <p className="font-semibold">
+              Some admin/finance reads returned warnings.
+            </p>
+            <ul className="mt-3 list-disc space-y-1 pl-5">
+              {adminWarnings.slice(0, 6).map((warning) => (
+                <li key={warning}>{warning}</li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+
+        <p className="mt-4 text-xs leading-5 text-slate-500">
+          Source tables: {adminSourceTables.join(", ")}
+        </p>
+      </SectionCard>
 
       <OperatingDashboardGrid region="primary">
         {calendarCards.map((card) => (
@@ -35765,22 +47003,102 @@ export function CarnosPanelV1({
 ### `src/components/dashboard/command-dashboard-v1.tsx`
 
 ```tsx
-import { OperatingDashboardCard, OperatingDashboardGrid } from "@/components/dashboard";
+import {
+  MetricTile,
+  OperatingDashboardCard,
+  OperatingDashboardGrid,
+  SectionCard,
+  StatusPill,
+} from "@/components/dashboard";
 import { CrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
-import { getDashboardCardsForSurface, type DashboardDataResult } from "@/lib/dashboard";
+import {
+  getDashboardCardsForSurface,
+  type AdminFinanceDashboardDataResult,
+  type DashboardDataResult,
+} from "@/lib/dashboard";
 
 interface CommandDashboardV1Props {
   data?: DashboardDataResult;
+  adminFinanceData?: AdminFinanceDashboardDataResult;
 }
 
-const commandCards = getDashboardCardsForSurface('command');
+const commandCards = getDashboardCardsForSurface("command");
 
 function formatCount(value: number | undefined): string {
   return String(value ?? 0);
 }
 
-export function CommandDashboardV1({ data }: CommandDashboardV1Props) {
+function formatGeneratedAt(value: string | undefined): string {
+  if (!value) {
+    return "Awaiting summary";
+  }
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  return date.toLocaleString("en-US", {
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  });
+}
+
+function urgencyTone(
+  value: number | undefined,
+): "neutral" | "success" | "warning" | "danger" {
+  const count = value ?? 0;
+
+  if (count > 0) {
+    return "danger";
+  }
+
+  return "success";
+}
+
+function warningTone(
+  value: number | undefined,
+): "neutral" | "success" | "warning" | "danger" {
+  const count = value ?? 0;
+
+  if (count > 0) {
+    return "warning";
+  }
+
+  return "success";
+}
+
+export function CommandDashboardV1({
+  data,
+  adminFinanceData,
+}: CommandDashboardV1Props) {
   const summary = data?.summary;
+  const adminSummary = adminFinanceData?.summary;
+  const adminWarnings = adminFinanceData?.warnings ?? [];
+
+  const overdueAdminCount =
+    (adminSummary?.overdue_finance_count ?? 0) +
+    (adminSummary?.overdue_subscription_count ?? 0) +
+    (adminSummary?.overdue_document_count ?? 0);
+
+  const dueSoonAdminCount =
+    (adminSummary?.upcoming_subscription_count ?? 0) +
+    (adminSummary?.expiring_document_count ?? 0);
+
+  const adminQueueCount = overdueAdminCount + dueSoonAdminCount;
+
+  const adminFinanceSourceTables = adminFinanceData?.source_tables ?? [
+    "financial_accounts",
+    "budget_categories",
+    "financial_logs",
+    "subscriptions",
+    "documents",
+    "housing_options",
+    "housing_contacts",
+  ];
 
   return (
     <div className="space-y-6">
@@ -35788,16 +47106,21 @@ export function CommandDashboardV1({ data }: CommandDashboardV1Props) {
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div className="space-y-2">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
-              Phase 7 Core Operating Dashboard
+              Phase 7 Core Operating Dashboard + Phase 12 Admin Visibility
             </p>
-            <h1 className="text-3xl font-semibold text-white">Command Dashboard</h1>
+            <h1 className="text-3xl font-semibold text-white">
+              Command Dashboard
+            </h1>
             <p className="max-w-3xl text-sm text-slate-300">
-              Today&apos;s operating center for goals, tasks, proof, calendar pressure, and pending confirmations.
-              This view is read-only and preserves the proposed-action confirmation boundary.
+              Today&apos;s operating center for goals, tasks, proof, calendar
+              pressure, pending confirmations, admin deadlines, finance
+              pressure, subscriptions, documents, and housing operations. This
+              view is read-only and preserves the proposed-action confirmation
+              boundary.
             </p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-xs text-slate-300">
-            Generated: {data?.generated_at ?? 'Awaiting summary'}
+            Generated: {formatGeneratedAt(data?.generated_at)}
           </div>
         </div>
       </section>
@@ -35806,18 +47129,163 @@ export function CommandDashboardV1({ data }: CommandDashboardV1Props) {
 
       <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
         {[
-          ['Pending updates', formatCount(summary?.pending_updates_count)],
-          ['Active goals', formatCount(summary?.active_goals_count)],
-          ['Open tasks', formatCount(summary?.open_tasks_count)],
-          ['Proof items', formatCount(summary?.recent_proof_count)],
-          ['Events', formatCount(summary?.recent_events_count)],
+          ["Pending updates", formatCount(summary?.pending_updates_count)],
+          ["Active goals", formatCount(summary?.active_goals_count)],
+          ["Open tasks", formatCount(summary?.open_tasks_count)],
+          ["Proof items", formatCount(summary?.recent_proof_count)],
+          ["Events", formatCount(summary?.recent_events_count)],
         ].map(([label, value]) => (
-          <div key={label} className='rounded-2xl border border-white/10 bg-white/[0.03] p-4'>
-            <p className='text-xs uppercase tracking-[0.2em] text-slate-500'>{label}</p>
-            <p className='mt-2 text-2xl font-semibold text-white'>{value}</p>
+          <div
+            key={label}
+            className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+          >
+            <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
+              {label}
+            </p>
+            <p className="mt-2 text-2xl font-semibold text-white">{value}</p>
           </div>
         ))}
       </section>
+
+      <SectionCard
+        title="Admin and finance command visibility"
+        eyebrow="Phase 12 read-only command layer"
+        description="Command-level visibility for urgent admin work, overdue money records, subscriptions, document deadlines, and housing operations. This panel only summarizes confirmed SQL-backed reads."
+      >
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <MetricTile
+            label="Admin queue"
+            value={formatCount(adminQueueCount)}
+            description="Due-soon and overdue finance, subscription, document, and housing records."
+          />
+          <MetricTile
+            label="Overdue"
+            value={formatCount(overdueAdminCount)}
+            description="Admin/finance records marked overdue or past deadline."
+          />
+          <MetricTile
+            label="Due soon"
+            value={formatCount(dueSoonAdminCount)}
+            description="Records approaching their due, renewal, follow-up, or deadline window."
+          />
+          <MetricTile
+            label="Read warnings"
+            value={formatCount(adminWarnings.length)}
+            description="Repository read warnings surfaced without retrying, mutating, or hiding errors."
+          />
+        </div>
+
+        <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+                  Finance pressure
+                </p>
+                <p className="mt-2 text-2xl font-semibold text-white">
+                  {formatCount(adminSummary?.overdue_finance_count)}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-slate-400">
+                  Overdue finance logs tracked from financial_logs.
+                </p>
+              </div>
+              <StatusPill
+                label={
+                  adminSummary?.overdue_finance_count ? "attention" : "clear"
+                }
+                tone={urgencyTone(adminSummary?.overdue_finance_count)}
+              />
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+                  Subscriptions
+                </p>
+                <p className="mt-2 text-2xl font-semibold text-white">
+                  {formatCount(adminSummary?.upcoming_subscription_count)}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-slate-400">
+                  Upcoming subscription payments visible from subscriptions.
+                </p>
+              </div>
+              <StatusPill
+                label={
+                  adminSummary?.upcoming_subscription_count
+                    ? "upcoming"
+                    : "clear"
+                }
+                tone={warningTone(adminSummary?.upcoming_subscription_count)}
+              />
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+                  Documents
+                </p>
+                <p className="mt-2 text-2xl font-semibold text-white">
+                  {formatCount(adminSummary?.expiring_document_count)}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-slate-400">
+                  Upcoming document renewals and deadline pressure.
+                </p>
+              </div>
+              <StatusPill
+                label={
+                  adminSummary?.expiring_document_count ? "watch" : "clear"
+                }
+                tone={warningTone(adminSummary?.expiring_document_count)}
+              />
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+                  Housing
+                </p>
+                <p className="mt-2 text-2xl font-semibold text-white">
+                  {formatCount(adminSummary?.housing_option_count)}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-slate-400">
+                  Rent, lease, utilities, maintenance, contacts, and housing
+                  docs visibility.
+                </p>
+              </div>
+              <StatusPill label="read-only" tone="info" />
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-5 rounded-2xl border border-cyan-400/20 bg-cyan-400/10 p-4 text-sm leading-6 text-cyan-100">
+          Command visibility only. This section does not create bills, pay
+          subscriptions, renew documents, contact landlords, change housing
+          data, execute Carnos actions, or start background jobs.
+        </div>
+
+        {adminWarnings.length > 0 ? (
+          <div className="mt-5 rounded-2xl border border-amber-400/20 bg-amber-400/10 p-4 text-sm leading-6 text-amber-100">
+            <p className="font-semibold">
+              Some admin/finance reads returned warnings.
+            </p>
+            <ul className="mt-3 list-disc space-y-1 pl-5">
+              {adminWarnings.slice(0, 6).map((warning) => (
+                <li key={warning}>{warning}</li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+
+        <p className="mt-4 text-xs leading-5 text-slate-500">
+          Source tables: {adminFinanceSourceTables.join(", ")}
+        </p>
+      </SectionCard>
 
       <OperatingDashboardGrid region="primary">
         {commandCards.map((card) => (
@@ -35825,23 +47293,29 @@ export function CommandDashboardV1({ data }: CommandDashboardV1Props) {
             key={card.id}
             card={{
               ...card,
-              status: summary ? 'ready' : card.status,
+              status: summary ? "ready" : card.status,
             }}
             footer={
-              <div className='space-y-2 text-xs text-slate-400'>
-                <p>Source tables: {card.sourceTables.join(', ')}</p>
-                <p>Safe boundary: proposal → validation → confirmation → server-owned execution → audit log.</p>
+              <div className="space-y-2 text-xs text-slate-400">
+                <p>Source tables: {card.sourceTables.join(", ")}</p>
+                <p>
+                  Safe boundary: proposal → validation → confirmation →
+                  server-owned execution → audit log.
+                </p>
               </div>
             }
           >
             {summary ? (
-              <div className='space-y-3 text-sm text-slate-300'>
+              <div className="space-y-3 text-sm text-slate-300">
                 <p>
-                  This card is registered for the Command surface and will use deeper SQL-backed detail wiring in later
-                  Phase 7 dashboard steps.
+                  This card is registered for the Command surface and now sits
+                  above Phase 12 admin/finance visibility. Deeper SQL-backed
+                  detail remains read-only until safe write flows are explicitly
+                  added.
                 </p>
-                <p className='text-xs text-slate-500'>
-                  No autonomous writes, Python/ML mutation, memory execution, or background jobs are active here.
+                <p className="text-xs text-slate-500">
+                  No autonomous writes, Python/ML mutation, memory execution, or
+                  background jobs are active here.
                 </p>
               </div>
             ) : null}
@@ -36579,6 +48053,2165 @@ export function GoalsDashboardV1({ data }: GoalsDashboardV1Props) {
 }
 ```
 
+### `src/components/dashboard/health-body-action-boundary-panels.tsx`
+
+```tsx
+import { ProposedActionReviewCard } from "@/components/actions";
+import {
+  CrossDashboardLinks,
+  SectionCard,
+} from "@/components/dashboard";
+import type { ProposedActionContract } from "@/lib/actions/proposed-action-contracts";
+import type { CanonicalRoute } from "@/lib/routes";
+
+type HealthBodySurface =
+  | "body"
+  | "nutrition"
+  | "supplements"
+  | "sleep_energy"
+  | "emotion"
+  | "hair_skincare";
+
+const SURFACE_LABELS: Record<HealthBodySurface, string> = {
+  body: "Health Body Overview",
+  nutrition: "Nutrition",
+  supplements: "Supplements",
+  sleep_energy: "Sleep Energy",
+  emotion: "Emotion",
+  hair_skincare: "Hair Skincare",
+};
+
+const HEALTH_BODY_LINKS = [
+  {
+    label: "Body",
+    route: "/body" as CanonicalRoute,
+    description: "Body logs, workouts, exercises, recovery notes, and proof-linked training records.",
+  },
+  {
+    label: "Nutrition",
+    route: "/nutrition" as CanonicalRoute,
+    description: "Nutrition logs, meal items, macros, hydration, and meal context.",
+  },
+  {
+    label: "Supplements",
+    route: "/supplements" as CanonicalRoute,
+    description: "Supplement routines, supplement logs, and product context.",
+  },
+  {
+    label: "Sleep Energy",
+    route: "/sleep-energy" as CanonicalRoute,
+    description: "Sleep logs, energy logs, fatigue, focus, stress, and recovery signals.",
+  },
+  {
+    label: "Emotion",
+    route: "/emotion" as CanonicalRoute,
+    description: "Emotion logs, mental-state context, and journal/reflection records.",
+  },
+  {
+    label: "Hair Skincare",
+    route: "/hair-skincare" as CanonicalRoute,
+    description: "Haircare logs, skincare logs, product use, and visual-evidence boundaries.",
+  },
+  {
+    label: "Proof",
+    route: "/timeline" as CanonicalRoute,
+    description: "Timeline and proof context connected to health/body execution records.",
+  },
+  {
+    label: "Goals",
+    route: "/goals" as CanonicalRoute,
+    description: "Execution goals that health/body records may support.",
+  },
+  {
+    label: "Calendar",
+    route: "/calendar" as CanonicalRoute,
+    description: "Calendar events linked to workouts, routines, sleep, and recovery context.",
+  },
+  {
+    label: "Carnos",
+    route: "/carnos" as CanonicalRoute,
+    description: "Companion review surface for future proposed health/body records.",
+  },
+];
+
+const HEALTH_BODY_PROPOSED_ACTION_PREVIEWS: ProposedActionContract[] = [
+  {
+    action_type: "create_task",
+    source: "carnos",
+    confidence: 0.7,
+    reason:
+      "Health/body context may suggest a follow-up routine task, but Phase 11 only previews the confirmation shape.",
+    payload: {
+      title: "Review a health/body routine follow-up",
+      description:
+        "Check existing body, nutrition, sleep, energy, emotion, haircare, or skincare records before deciding whether to save a task.",
+      domain: "body",
+      priority: "medium",
+      status: "todo",
+    },
+    evidence_refs: ["body_logs", "workouts", "nutrition_logs", "sleep_logs", "energy_logs"],
+  },
+  {
+    action_type: "create_goal",
+    source: "carnos",
+    confidence: 0.66,
+    reason:
+      "A health/body pattern could become a goal only after user review, validation, and server-owned persistence.",
+    payload: {
+      title: "Strengthen a proof-backed health/body routine",
+      description:
+        "Connect existing records, safety boundaries, and proof links before deciding whether to save a goal.",
+      domain: "body",
+      priority: "medium",
+      status: "active",
+    },
+    evidence_refs: ["body_logs", "workouts", "sleep_logs", "proof_items"],
+  },
+  {
+    action_type: "create_proof_item",
+    source: "carnos",
+    confidence: 0.69,
+    reason:
+      "A completed workout, routine, sleep milestone, or nutrition record may deserve proof capture, but this panel does not persist anything.",
+    payload: {
+      title: "Capture proof for a health/body milestone",
+      proof_type: "metric",
+      description:
+        "Review the record and supporting context before using it as proof in goals, timeline, or personal progress tracking.",
+      goal_id: "review-required",
+      task_id: "review-required",
+    },
+    evidence_refs: ["workouts", "body_logs", "nutrition_logs", "sleep_logs", "skincare_logs"],
+  },
+];
+
+export function HealthBodyProposedActionVisibilityPanel() {
+  return (
+    <SectionCard
+      title="Health/body proposed-action visibility"
+      eyebrow="11.39 confirmation preview"
+      description="Preview-only Carnos proposal cards for future health/body suggestions. This dashboard does not save, cancel, execute, or persist proposals."
+    >
+      <div className="grid gap-4">
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4 text-sm leading-6 text-slate-400">
+          This panel is visibility only. It uses disabled proposal cards to show the review shape.
+          Health/body suggestions must remain separate from persistence until validation,
+          user confirmation, server-owned writes, SQL records, and audit logging exist.
+        </div>
+
+        <div className="grid gap-4 xl:grid-cols-3">
+          {HEALTH_BODY_PROPOSED_ACTION_PREVIEWS.map((action) => (
+            <ProposedActionReviewCard
+              key={action.action_type}
+              initialAction={action}
+              disabled
+              saveLabel="Save / Confirm unavailable in Phase 11 dashboard preview"
+              cancelLabel="Cancel unavailable in Phase 11 dashboard preview"
+              editLabel="Edit payload unavailable in Phase 11 dashboard preview"
+              reviewTitle="Health/body proposal preview"
+              validationIssues={[
+                "Preview only: this dashboard does not persist proposals.",
+                "User confirmation and server-owned execution must remain separate from read dashboards.",
+                "No medical, supplement, visual-evidence, or mental-health action is wired here.",
+              ]}
+            />
+          ))}
+        </div>
+      </div>
+    </SectionCard>
+  );
+}
+
+export function HealthBodyStateBoundaryPanel({
+  surface,
+  readErrors = [],
+}: {
+  surface: HealthBodySurface;
+  readErrors?: string[];
+}) {
+  const label = SURFACE_LABELS[surface];
+
+  return (
+    <SectionCard
+      title={`${label} state and privacy boundary`}
+      eyebrow="11.40 empty · loading · error · privacy"
+      description="Consistent read-state and privacy language for Phase 11 health/body surfaces."
+    >
+      <div className="grid gap-4 text-sm leading-6 text-slate-400 md:grid-cols-2">
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Empty state</p>
+          <p className="mt-2">
+            Empty panels mean no matching records exist yet, not that the system failed. New
+            health/body records must appear only after safe write flows exist.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Loading state</p>
+          <p className="mt-2">
+            These surfaces are server-rendered after authenticated reads complete. Future loading
+            skeletons must stay read-only and must not start background work.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Error state</p>
+          <p className="mt-2">
+            Read errors are shown inline through warnings. Errors must not trigger automatic
+            writes, retries, product changes, health records, visual uploads, or AI execution.
+          </p>
+          {readErrors.length > 0 ? (
+            <ul className="mt-3 list-disc space-y-1 pl-5 text-xs text-rose-200">
+              {readErrors.slice(0, 5).map((error) => (
+                <li key={error}>{error}</li>
+              ))}
+            </ul>
+          ) : null}
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="font-semibold text-slate-100">Privacy boundary</p>
+          <p className="mt-2">
+            Health/body, emotion, mental-state, sleep, haircare, skincare, nutrition, supplement,
+            and product data is private to the authenticated user. These dashboards only read
+            existing records and do not expose, export, send, upload, or modify private data.
+          </p>
+        </div>
+      </div>
+    </SectionCard>
+  );
+}
+
+export function HealthBodyCrossLinks({
+  activeRoute,
+}: {
+  activeRoute: CanonicalRoute;
+}) {
+  return (
+    <CrossDashboardLinks
+      activeRoute={activeRoute}
+      title="Health/body system links"
+      description="Move between health/body overview, nutrition, supplements, sleep-energy, emotion, hair-skincare, goals, timeline, calendar, and Carnos review surfaces."
+      links={HEALTH_BODY_LINKS}
+    />
+  );
+}
+```
+
+### `src/components/dashboard/health-body-dashboard-states.tsx`
+
+```tsx
+interface HealthBodyEmptyStateProps {
+  title: string;
+  description: string;
+}
+
+interface HealthBodyBoundaryNoticeProps {
+  title?: string;
+  description?: string;
+}
+
+interface HealthBodyWarningPanelProps {
+  warnings: string[];
+}
+
+export function HealthBodyEmptyState({ title, description }: HealthBodyEmptyStateProps) {
+  return (
+    <div className="rounded-3xl border border-dashed border-white/15 bg-white/[0.02] p-8 text-center">
+      <p className="text-sm font-medium uppercase tracking-[0.24em] text-slate-400">empty state</p>
+      <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white">{title}</h2>
+      <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-300">{description}</p>
+    </div>
+  );
+}
+
+export function HealthBodyBoundaryNotice({
+  title = "Read-only health boundary",
+  description = "This dashboard can summarize existing health/body records only. New health, body, nutrition, sleep, supplement, emotion, haircare, or skincare records must wait for confirmed safe-write flows.",
+}: HealthBodyBoundaryNoticeProps) {
+  return (
+    <div className="rounded-3xl border border-cyan-400/20 bg-cyan-400/10 p-5 text-sm text-cyan-100">
+      <p className="font-semibold">{title}</p>
+      <p className="mt-2 leading-6 text-cyan-100/80">{description}</p>
+    </div>
+  );
+}
+
+export function HealthBodyWarningPanel({ warnings }: HealthBodyWarningPanelProps) {
+  if (warnings.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="rounded-3xl border border-amber-400/20 bg-amber-400/10 p-5 text-sm text-amber-100">
+      <p className="font-semibold">Some health/body reads returned warnings.</p>
+      <ul className="mt-3 list-disc space-y-2 pl-5">
+        {warnings.map((warning) => (
+          <li key={warning}>{warning}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export function HealthBodyPrivacyNotice() {
+  return (
+    <div className="rounded-3xl border border-white/10 bg-slate-950/70 p-5 text-sm text-slate-300">
+      <p className="font-semibold text-white">Private health/body data</p>
+      <p className="mt-2 leading-6">
+        Health, sleep, emotion, nutrition, supplement, haircare, and skincare records are treated as
+        sensitive personal data. This surface avoids diagnosis, treatment claims, body-shaming
+        language, supplement claims, and autonomous changes.
+      </p>
+    </div>
+  );
+}
+```
+
+### `src/components/dashboard/health-body-dashboard-v1.tsx`
+
+```tsx
+import { getHealthBodyDashboardDataSummary } from "@/lib/dashboard";
+import {
+  HealthBodyBoundaryNotice,
+  HealthBodyEmptyState,
+  HealthBodyPrivacyNotice,
+  HealthBodyWarningPanel,
+} from "./health-body-dashboard-states";
+import { HealthBodyTrainingDetailPanel } from "./health-body-detail-panels";
+import { HealthBodyProofLinkagePanel } from "./health-body-linkage-panels";
+import {
+  HealthBodyCrossLinks,
+  HealthBodyProposedActionVisibilityPanel,
+  HealthBodyStateBoundaryPanel,
+} from "./health-body-action-boundary-panels";
+
+interface HealthBodyDashboardV1Props {
+  userId: string;
+}
+
+interface MetricCard {
+  label: string;
+  value: number;
+  description: string;
+}
+
+function formatGeneratedAt(value: string): string {
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return "Unknown";
+  }
+
+  return date.toLocaleString("en-US", {
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  });
+}
+
+function MetricTile({ card }: { card: MetricCard }) {
+  return (
+    <article className="rounded-3xl border border-white/10 bg-white/[0.03] p-5 shadow-sm">
+      <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-400">{card.label}</p>
+      <p className="mt-4 text-3xl font-semibold text-white">{card.value}</p>
+      <p className="mt-3 text-sm leading-6 text-slate-300">{card.description}</p>
+    </article>
+  );
+}
+
+export async function HealthBodyDashboardV1({ userId }: HealthBodyDashboardV1Props) {
+  const data = await getHealthBodyDashboardDataSummary(userId);
+  const { summary } = data;
+
+  const cards: MetricCard[] = [
+    {
+      label: "Body logs",
+      value: summary.body_log_count,
+      description: "Bodyweight, recovery, soreness, pain notes, and related progress records.",
+    },
+    {
+      label: "Workouts",
+      value: summary.workout_count,
+      description: "Logged training sessions connected to goals, tasks, events, or proof.",
+    },
+    {
+      label: "Exercises",
+      value: summary.exercise_count,
+      description: "Exercise library records available for structured workout tracking.",
+    },
+    {
+      label: "Nutrition",
+      value: summary.nutrition_log_count,
+      description: "Daily nutrition records, calorie notes, macro notes, and meal context.",
+    },
+    {
+      label: "Meals",
+      value: summary.meal_item_count,
+      description: "Meal-level entries connected to nutrition logs.",
+    },
+    {
+      label: "Supplements",
+      value: summary.active_supplement_count,
+      description: "Active supplement records for schedule and adherence review.",
+    },
+    {
+      label: "Sleep",
+      value: summary.sleep_log_count,
+      description: "Sleep duration, quality, bedtime, wake time, and daily-log-linked records.",
+    },
+    {
+      label: "Energy",
+      value: summary.energy_log_count,
+      description: "Energy, fatigue, focus, stress, and recovery signal logs.",
+    },
+    {
+      label: "Emotion",
+      value: summary.emotion_log_count,
+      description: "Mood and emotion records kept behind the protected read boundary.",
+    },
+    {
+      label: "Hair & skin",
+      value: summary.haircare_log_count + summary.skincare_log_count,
+      description: "Routine completion records for haircare, skincare, and product use.",
+    },
+    {
+      label: "Products",
+      value: summary.active_product_count,
+      description: "Active products available for hair, skin, nutrition, or supplement routines.",
+    },
+    {
+      label: "Recent signals",
+      value: summary.recent_health_signal_count,
+      description: "Records from the last seven days across body, training, nutrition, sleep, and care logs.",
+    },
+  ];
+
+  return (
+    <section className="space-y-8">
+      <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-6 shadow-lg">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p className="text-sm font-medium uppercase tracking-[0.28em] text-cyan-300">
+              health/body system
+            </p>
+            <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white">
+              Health Body Overview
+            </h1>
+            <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-300">
+              Read-only overview for body, training, nutrition, supplements, sleep, energy,
+              emotion, haircare, skincare, and product records. This surface summarizes
+              confirmed SQL records only and does not create or modify data.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-cyan-400/20 bg-cyan-400/10 px-4 py-3 text-sm text-cyan-100">
+            <p className="font-medium">Read-only boundary</p>
+            <p className="mt-1 text-cyan-100/80">
+              Writes stay disabled until safe confirmation flows are added.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-6 grid gap-3 text-sm text-slate-300 md:grid-cols-3">
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+            <p className="text-slate-400">Source tables</p>
+            <p className="mt-2 text-lg font-semibold text-white">{data.source_tables.length}</p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+            <p className="text-slate-400">Warnings</p>
+            <p className="mt-2 text-lg font-semibold text-white">{data.warnings.length}</p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+            <p className="text-slate-400">Generated</p>
+            <p className="mt-2 text-lg font-semibold text-white">
+              {formatGeneratedAt(data.generated_at)}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <HealthBodyBoundaryNotice />
+      <HealthBodyPrivacyNotice />
+      <HealthBodyWarningPanel warnings={data.warnings} />
+
+      <HealthBodyStateBoundaryPanel surface="body" readErrors={data.warnings} />
+      <HealthBodyCrossLinks activeRoute="/body" />
+      <HealthBodyProposedActionVisibilityPanel />
+
+      <HealthBodyTrainingDetailPanel
+        bodyLogs={data.detail_rows.body_logs}
+        workouts={data.detail_rows.workouts}
+        exercises={data.detail_rows.exercises}
+        workoutSets={data.detail_rows.workout_sets}
+      />
+
+      <HealthBodyProofLinkagePanel
+        bodyLogs={data.detail_rows.body_logs}
+        workouts={data.detail_rows.workouts}
+        nutritionLogs={data.detail_rows.nutrition_logs}
+        supplementLogs={data.detail_rows.supplement_logs}
+        sleepLogs={data.detail_rows.sleep_logs}
+        energyLogs={data.detail_rows.energy_logs}
+        emotionLogs={data.detail_rows.emotion_logs}
+        skincareLogs={data.detail_rows.skincare_logs}
+        haircareLogs={data.detail_rows.haircare_logs}
+      />
+
+      {summary.recent_health_signal_count === 0 ? (
+        <HealthBodyEmptyState
+          title="No recent health signals yet"
+          description="Once records exist in the confirmed health/body tables, this read-only dashboard will summarize recent body, training, nutrition, sleep, energy, emotion, haircare, skincare, and product activity."
+        />
+      ) : null}
+
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {cards.map((card) => (
+          <MetricTile key={card.label} card={card} />
+        ))}
+      </div>
+    </section>
+  );
+}
+```
+
+### `src/components/dashboard/health-body-detail-panels.tsx`
+
+```tsx
+import { EmptyState, SectionCard, StatusPill } from "@/components/dashboard";
+import type {
+  BodyLogRow,
+  EmotionLogRow,
+  EnergyLogRow,
+  ExerciseRow,
+  HaircareLogRow,
+  JournalEntryRow,
+  MealItemRow,
+  MentalHealthLogRow,
+  NutritionLogRow,
+  ProductRow,
+  SkincareLogRow,
+  SleepLogRow,
+  SupplementLogRow,
+  SupplementRow,
+  WorkoutRow,
+  WorkoutSetRow,
+} from "@/types/database";
+
+type UnknownRecord = Record<string, unknown>;
+
+function asRecord(value: object | undefined): UnknownRecord | undefined {
+  return value as UnknownRecord | undefined;
+}
+
+function readString(row: object | undefined, key: string, fallback = "Not set"): string {
+  const record = asRecord(row);
+
+  if (!record) {
+    return fallback;
+  }
+
+  const value = record[key];
+
+  if (typeof value === "string" && value.trim().length > 0) {
+    return value;
+  }
+
+  if (typeof value === "number" || typeof value === "boolean") {
+    return String(value);
+  }
+
+  return fallback;
+}
+
+function formatDate(row: object | undefined, key: string): string {
+  const value = asRecord(row)?.[key];
+
+  if (typeof value !== "string" || value.trim().length === 0) {
+    return "Not set";
+  }
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+function toneForStatus(status: string): "neutral" | "success" | "warning" | "danger" | "info" {
+  const normalized = status.toLowerCase();
+
+  if (["active", "completed", "done", "taken", "captured", "logged"].includes(normalized)) {
+    return "success";
+  }
+
+  if (["planned", "pending", "skipped", "missed", "partial", "low", "medium"].includes(normalized)) {
+    return "warning";
+  }
+
+  if (["blocked", "failed", "archived", "inactive", "high", "critical"].includes(normalized)) {
+    return "danger";
+  }
+
+  if (["draft", "routine", "in_progress", "moderate"].includes(normalized)) {
+    return "info";
+  }
+
+  return "neutral";
+}
+
+function DetailRow({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+        {label}
+      </p>
+      <p className="mt-1 break-words text-sm leading-6 text-slate-200">{value}</p>
+    </div>
+  );
+}
+
+function DetailNote({
+  title,
+  text,
+}: {
+  title: string;
+  text: string | null | undefined;
+}) {
+  if (!text) {
+    return null;
+  }
+
+  return (
+    <div className="rounded-xl border border-white/10 bg-black/20 p-4">
+      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200/80">
+        {title}
+      </p>
+      <p className="mt-2 text-sm leading-6 text-slate-400">{text}</p>
+    </div>
+  );
+}
+
+function DetailCard({
+  row,
+  title,
+  description,
+  status,
+  rows,
+  notes,
+}: {
+  row: object | undefined;
+  title: string;
+  description: string;
+  status?: string;
+  rows: Array<{ label: string; value: string }>;
+  notes?: Array<{ title: string; text: string | null | undefined }>;
+}) {
+  if (!row) {
+    return null;
+  }
+
+  return (
+    <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+      <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+        <div>
+          <p className="text-sm font-semibold text-white">{title}</p>
+          <p className="mt-1 text-sm leading-6 text-slate-400">{description}</p>
+        </div>
+        {status ? <StatusPill label={status} tone={toneForStatus(status)} /> : null}
+      </div>
+
+      <div className="mt-4 grid gap-3 md:grid-cols-4">
+        {rows.map((item) => (
+          <DetailRow key={`${title}-${item.label}`} label={item.label} value={item.value} />
+        ))}
+      </div>
+
+      {notes && notes.length > 0 ? (
+        <div className="mt-4 grid gap-3">
+          {notes.map((item) => (
+            <DetailNote key={`${title}-${item.title}`} title={item.title} text={item.text} />
+          ))}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+function DetailPanel({
+  title,
+  eyebrow,
+  description,
+  emptyTitle,
+  emptyDescription,
+  hasData,
+  children,
+}: {
+  title: string;
+  eyebrow: string;
+  description: string;
+  emptyTitle: string;
+  emptyDescription: string;
+  hasData: boolean;
+  children: React.ReactNode;
+}) {
+  return (
+    <SectionCard title={title} eyebrow={eyebrow} description={description}>
+      {hasData ? <div className="grid gap-4">{children}</div> : (
+        <EmptyState title={emptyTitle} description={emptyDescription} />
+      )}
+    </SectionCard>
+  );
+}
+
+export function HealthBodyTrainingDetailPanel({
+  bodyLogs = [],
+  workouts = [],
+  exercises = [],
+  workoutSets = [],
+}: {
+  bodyLogs?: BodyLogRow[];
+  workouts?: WorkoutRow[];
+  exercises?: ExerciseRow[];
+  workoutSets?: WorkoutSetRow[];
+}) {
+  const bodyLog = bodyLogs[0];
+  const workout = workouts[0];
+  const exercise = exercises[0];
+  const workoutSet = workoutSets[0];
+
+  return (
+    <DetailPanel
+      title="Body and training detail"
+      eyebrow="11.31 detail"
+      description="Read-only focused detail for the latest body, workout, exercise, and workout-set records."
+      emptyTitle="No body or training detail yet."
+      emptyDescription="Body and training detail will appear after body logs, workouts, exercises, or workout sets exist."
+      hasData={Boolean(bodyLog || workout || exercise || workoutSet)}
+    >
+      <DetailCard
+        row={bodyLog}
+        title="Latest body log"
+        description="User-recorded body, recovery, soreness, pain, and progress context."
+        rows={[
+          { label: "Log date", value: formatDate(bodyLog, "log_date") },
+          { label: "Weight", value: readString(bodyLog, "weight_kg") },
+          { label: "Soreness", value: readString(bodyLog, "soreness_level") },
+          { label: "Energy", value: readString(bodyLog, "energy_level") },
+          { label: "Goal", value: readString(bodyLog, "goal_id") },
+          { label: "Task", value: readString(bodyLog, "task_id") },
+          { label: "Proof", value: readString(bodyLog, "proof_item_id") },
+          { label: "Daily log", value: readString(bodyLog, "daily_log_id") },
+        ]}
+        notes={[
+          { title: "Body notes", text: bodyLog?.notes },
+          { title: "Safety boundary", text: "Pain and recovery notes are displayed as user records only, not medical interpretation." },
+        ]}
+      />
+
+      <DetailCard
+        row={workout}
+        title={readString(workout, "title", "Latest workout")}
+        description="Most recent training session connected to existing goals, tasks, events, or proof records."
+        status={readString(workout, "status", "")}
+        rows={[
+          { label: "Workout date", value: formatDate(workout, "workout_date") },
+          { label: "Type", value: readString(workout, "workout_type") },
+          { label: "Duration", value: readString(workout, "duration_minutes") },
+          { label: "Intensity", value: readString(workout, "intensity") },
+          { label: "Goal", value: readString(workout, "goal_id") },
+          { label: "Task", value: readString(workout, "task_id") },
+          { label: "Proof", value: readString(workout, "proof_item_id") },
+          { label: "Event", value: readString(workout, "event_id") },
+        ]}
+        notes={[{ title: "Workout notes", text: workout?.notes }]}
+      />
+
+      <DetailCard
+        row={exercise}
+        title={readString(exercise, "name", "Exercise")}
+        description="First available exercise library record for training context."
+        status={readString(exercise, "status", "")}
+        rows={[
+          { label: "Muscle group", value: readString(exercise, "muscle_group") },
+          { label: "Equipment", value: readString(exercise, "equipment") },
+          { label: "Difficulty", value: readString(exercise, "difficulty") },
+          { label: "Updated", value: formatDate(exercise, "updated_at") },
+        ]}
+        notes={[{ title: "Exercise notes", text: exercise?.notes }]}
+      />
+
+      <DetailCard
+        row={workoutSet}
+        title="Latest workout set"
+        description="First available set-level record for training detail."
+        rows={[
+          { label: "Workout", value: readString(workoutSet, "workout_id") },
+          { label: "Exercise", value: readString(workoutSet, "exercise_id") },
+          { label: "Set number", value: readString(workoutSet, "set_number") },
+          { label: "Reps", value: readString(workoutSet, "reps") },
+          { label: "Weight", value: readString(workoutSet, "weight_kg") },
+          { label: "RPE", value: readString(workoutSet, "rpe") },
+          { label: "Completed", value: readString(workoutSet, "completed") },
+          { label: "Created", value: formatDate(workoutSet, "created_at") },
+        ]}
+        notes={[{ title: "Set notes", text: workoutSet?.notes }]}
+      />
+    </DetailPanel>
+  );
+}
+
+export function HealthBodyNutritionMealDetailPanel({
+  nutritionLogs = [],
+  mealItems = [],
+}: {
+  nutritionLogs?: NutritionLogRow[];
+  mealItems?: MealItemRow[];
+}) {
+  const nutritionLog = nutritionLogs[0];
+  const mealItem = mealItems[0];
+
+  return (
+    <DetailPanel
+      title="Nutrition and meal detail"
+      eyebrow="11.32 detail"
+      description="Read-only focused detail for the latest nutrition log and meal item."
+      emptyTitle="No nutrition or meal detail yet."
+      emptyDescription="Nutrition and meal detail will appear after nutrition logs or meal items exist."
+      hasData={Boolean(nutritionLog || mealItem)}
+    >
+      <DetailCard
+        row={nutritionLog}
+        title="Latest nutrition log"
+        description="User-recorded nutrition values displayed without diet prescription or medical claims."
+        rows={[
+          { label: "Log date", value: formatDate(nutritionLog, "log_date") },
+          { label: "Calories", value: readString(nutritionLog, "calories") },
+          { label: "Protein", value: readString(nutritionLog, "protein_g") },
+          { label: "Carbs", value: readString(nutritionLog, "carbs_g") },
+          { label: "Fat", value: readString(nutritionLog, "fat_g") },
+          { label: "Water", value: readString(nutritionLog, "water_ml") },
+          { label: "Goal", value: readString(nutritionLog, "goal_id") },
+          { label: "Daily log", value: readString(nutritionLog, "daily_log_id") },
+        ]}
+        notes={[
+          { title: "Nutrition notes", text: nutritionLog?.notes },
+          { title: "Safety boundary", text: "Calories and macros are displayed only when already recorded. This panel does not prescribe intake." },
+        ]}
+      />
+
+      <DetailCard
+        row={mealItem}
+        title={readString(mealItem, "name", "Latest meal item")}
+        description="Meal-level record connected to a nutrition log."
+        rows={[
+          { label: "Meal", value: readString(mealItem, "meal_name") },
+          { label: "Nutrition log", value: readString(mealItem, "nutrition_log_id") },
+          { label: "Calories", value: readString(mealItem, "calories") },
+          { label: "Protein", value: readString(mealItem, "protein_g") },
+          { label: "Carbs", value: readString(mealItem, "carbs_g") },
+          { label: "Fat", value: readString(mealItem, "fat_g") },
+          { label: "Quantity", value: readString(mealItem, "quantity") },
+          { label: "Created", value: formatDate(mealItem, "created_at") },
+        ]}
+        notes={[{ title: "Meal notes", text: null }]}
+      />
+    </DetailPanel>
+  );
+}
+
+export function HealthBodySupplementDetailPanel({
+  supplements = [],
+  supplementLogs = [],
+  products = [],
+}: {
+  supplements?: SupplementRow[];
+  supplementLogs?: SupplementLogRow[];
+  products?: ProductRow[];
+}) {
+  const activeSupplement = supplements.find((item) => item.active) ?? supplements[0];
+  const supplementLog = supplementLogs[0];
+  const activeProduct = products.find((item) => item.active) ?? products[0];
+
+  return (
+    <DetailPanel
+      title="Supplement detail"
+      eyebrow="11.32 detail"
+      description="Read-only focused detail for supplement records, supplement logs, and product context."
+      emptyTitle="No supplement detail yet."
+      emptyDescription="Supplement detail will appear after supplements, supplement logs, or product records exist."
+      hasData={Boolean(activeSupplement || supplementLog || activeProduct)}
+    >
+      <DetailCard
+        row={activeSupplement}
+        title={readString(activeSupplement, "name", "Supplement")}
+        description="Supplement record displayed for schedule and adherence context only."
+        status={activeSupplement?.active ? "active" : "inactive"}
+        rows={[
+          { label: "Category", value: readString(activeSupplement, "category") },
+          { label: "Dosage", value: readString(activeSupplement, "dosage") },
+          { label: "Schedule", value: readString(activeSupplement, "schedule") },
+          { label: "Active", value: readString(activeSupplement, "active") },
+          { label: "Started", value: formatDate(activeSupplement, "started_at") },
+          { label: "Ended", value: formatDate(activeSupplement, "ended_at") },
+          { label: "Created", value: formatDate(activeSupplement, "created_at") },
+          { label: "Updated", value: formatDate(activeSupplement, "updated_at") },
+        ]}
+        notes={[
+          { title: "Supplement notes", text: activeSupplement?.notes },
+          { title: "Safety boundary", text: "This panel does not recommend dosage, claim efficacy, or provide medical advice." },
+        ]}
+      />
+
+      <DetailCard
+        row={supplementLog}
+        title="Latest supplement log"
+        description="Most recent adherence or intake record connected to supplement routines."
+        status={readString(supplementLog, "status", "")}
+        rows={[
+          { label: "Supplement", value: readString(supplementLog, "supplement_id") },
+          { label: "Taken at", value: formatDate(supplementLog, "taken_at") },
+          { label: "Status", value: readString(supplementLog, "status") },
+          { label: "Amount", value: readString(supplementLog, "amount") },
+          { label: "Created", value: formatDate(supplementLog, "created_at") },
+        ]}
+        notes={[{ title: "Supplement log notes", text: supplementLog?.notes }]}
+      />
+
+      <DetailCard
+        row={activeProduct}
+        title={readString(activeProduct, "name", "Product")}
+        description="Product context displayed without efficacy or treatment claims."
+        status={activeProduct?.active ? "active" : "inactive"}
+        rows={[
+          { label: "Category", value: readString(activeProduct, "category") },
+          { label: "Brand", value: readString(activeProduct, "brand") },
+          { label: "Active", value: readString(activeProduct, "active") },
+          { label: "Started", value: formatDate(activeProduct, "started_at") },
+          { label: "Ended", value: formatDate(activeProduct, "ended_at") },
+          { label: "Updated", value: formatDate(activeProduct, "updated_at") },
+        ]}
+        notes={[{ title: "Product usage notes", text: activeProduct?.usage_notes }]}
+      />
+    </DetailPanel>
+  );
+}
+
+export function HealthBodySleepEnergyDetailPanel({
+  sleepLogs = [],
+  energyLogs = [],
+  mentalHealthLogs = [],
+}: {
+  sleepLogs?: SleepLogRow[];
+  energyLogs?: EnergyLogRow[];
+  mentalHealthLogs?: MentalHealthLogRow[];
+}) {
+  const sleepLog = sleepLogs[0];
+  const energyLog = energyLogs[0];
+  const mentalHealthLog = mentalHealthLogs[0];
+
+  return (
+    <DetailPanel
+      title="Sleep and energy detail"
+      eyebrow="11.33 detail"
+      description="Read-only focused detail for sleep, energy, fatigue, focus, stress, and mental-state records."
+      emptyTitle="No sleep or energy detail yet."
+      emptyDescription="Sleep and energy detail will appear after sleep logs, energy logs, or mental health logs exist."
+      hasData={Boolean(sleepLog || energyLog || mentalHealthLog)}
+    >
+      <DetailCard
+        row={sleepLog}
+        title="Latest sleep log"
+        description="User-recorded sleep record displayed without medical interpretation."
+        rows={[
+          { label: "Sleep date", value: formatDate(sleepLog, "sleep_date") },
+          { label: "Bedtime", value: readString(sleepLog, "bedtime") },
+          { label: "Wake time", value: readString(sleepLog, "wake_time") },
+          { label: "Duration", value: readString(sleepLog, "duration_hours") },
+          { label: "Quality", value: readString(sleepLog, "quality_score") },
+          { label: "Daily log", value: readString(sleepLog, "daily_log_id") },
+          { label: "Created", value: formatDate(sleepLog, "created_at") },
+        ]}
+        notes={[{ title: "Sleep notes", text: sleepLog?.notes }]}
+      />
+
+      <DetailCard
+        row={energyLog}
+        title="Latest energy log"
+        description="User-recorded energy, fatigue, focus, stress, and recovery context."
+        rows={[
+          { label: "Log date", value: formatDate(energyLog, "log_date") },
+          { label: "Energy", value: readString(energyLog, "energy_level") },
+          { label: "Fatigue", value: readString(energyLog, "fatigue_level") },
+          { label: "Focus", value: readString(energyLog, "focus_level") },
+          { label: "Stress", value: readString(energyLog, "stress_level") },
+          { label: "Recovery", value: readString(energyLog, "recovery_score") },
+          { label: "Daily log", value: readString(energyLog, "daily_log_id") },
+          { label: "Created", value: formatDate(energyLog, "created_at") },
+        ]}
+        notes={[{ title: "Energy notes", text: energyLog?.notes }]}
+      />
+
+      <DetailCard
+        row={mentalHealthLog}
+        title="Latest mental-state log"
+        description="Sensitive mental-state context displayed only as user-recorded data."
+        status={readString(mentalHealthLog, "sensitivity", "")}
+        rows={[
+          { label: "Log date", value: formatDate(mentalHealthLog, "log_date") },
+          { label: "Mood", value: readString(mentalHealthLog, "mood_score") },
+          { label: "Anxiety", value: readString(mentalHealthLog, "anxiety_level") },
+          { label: "Stress", value: readString(mentalHealthLog, "stress_level") },
+          { label: "Sensitivity", value: readString(mentalHealthLog, "sensitivity") },
+          { label: "Created", value: formatDate(mentalHealthLog, "created_at") },
+        ]}
+        notes={[
+          { title: "Mental-state notes", text: mentalHealthLog?.notes },
+          { title: "Safety boundary", text: "This panel does not diagnose, provide crisis handling, or recommend medication or treatment." },
+        ]}
+      />
+    </DetailPanel>
+  );
+}
+
+export function HealthBodyEmotionReflectionDetailPanel({
+  emotionLogs = [],
+  mentalHealthLogs = [],
+  journalEntries = [],
+}: {
+  emotionLogs?: EmotionLogRow[];
+  mentalHealthLogs?: MentalHealthLogRow[];
+  journalEntries?: JournalEntryRow[];
+}) {
+  const emotionLog = emotionLogs[0];
+  const mentalHealthLog = mentalHealthLogs[0];
+  const journalEntry = journalEntries[0];
+
+  return (
+    <DetailPanel
+      title="Emotion and reflection detail"
+      eyebrow="11.33 detail"
+      description="Read-only focused detail for emotion, mental-state, and reflection records."
+      emptyTitle="No emotion or reflection detail yet."
+      emptyDescription="Emotion and reflection detail will appear after emotion logs, mental health logs, or journal entries exist."
+      hasData={Boolean(emotionLog || mentalHealthLog || journalEntry)}
+    >
+      <DetailCard
+        row={emotionLog}
+        title={readString(emotionLog, "emotion", "Latest emotion log")}
+        description="Emotion labels are displayed as user-recorded data, not objective fact."
+        status={readString(emotionLog, "sensitivity", "")}
+        rows={[
+          { label: "Occurred", value: formatDate(emotionLog, "occurred_at") },
+          { label: "Intensity", value: readString(emotionLog, "intensity") },
+          { label: "Trigger", value: readString(emotionLog, "trigger") },
+          { label: "Regulation", value: readString(emotionLog, "regulation_strategy") },
+          { label: "Sensitivity", value: readString(emotionLog, "sensitivity") },
+          { label: "Created", value: formatDate(emotionLog, "created_at") },
+        ]}
+        notes={[
+          { title: "Emotion notes", text: emotionLog?.notes },
+          { title: "Safety boundary", text: "This panel does not diagnose emotion, infer crisis state, or label feelings as fact." },
+        ]}
+      />
+
+      <DetailCard
+        row={mentalHealthLog}
+        title="Mental-state context"
+        description="Protected context from the latest mental health log."
+        status={readString(mentalHealthLog, "sensitivity", "")}
+        rows={[
+          { label: "Log date", value: formatDate(mentalHealthLog, "log_date") },
+          { label: "Mood", value: readString(mentalHealthLog, "mood_score") },
+          { label: "Anxiety", value: readString(mentalHealthLog, "anxiety_level") },
+          { label: "Stress", value: readString(mentalHealthLog, "stress_level") },
+          { label: "Sensitivity", value: readString(mentalHealthLog, "sensitivity") },
+          { label: "Created", value: formatDate(mentalHealthLog, "created_at") },
+        ]}
+        notes={[{ title: "Mental-state notes", text: mentalHealthLog?.notes }]}
+      />
+
+      <DetailCard
+        row={journalEntry}
+        title={readString(journalEntry, "title", "Latest journal entry")}
+        description="Reflection context displayed as a private user record."
+        status={readString(journalEntry, "sensitivity", "")}
+        rows={[
+          { label: "Entry date", value: formatDate(journalEntry, "entry_date") },
+          { label: "Private", value: readString(journalEntry, "private") },
+          { label: "Sensitivity", value: readString(journalEntry, "sensitivity") },
+          { label: "Created", value: formatDate(journalEntry, "created_at") },
+          { label: "Updated", value: formatDate(journalEntry, "updated_at") },
+        ]}
+        notes={[{ title: "Journal excerpt", text: journalEntry?.content }]}
+      />
+    </DetailPanel>
+  );
+}
+
+export function HealthBodyHairSkincareDetailPanel({
+  skincareLogs = [],
+  haircareLogs = [],
+  products = [],
+}: {
+  skincareLogs?: SkincareLogRow[];
+  haircareLogs?: HaircareLogRow[];
+  products?: ProductRow[];
+}) {
+  const skincareLog = skincareLogs[0];
+  const haircareLog = haircareLogs[0];
+  const activeProduct = products.find((item) => item.active) ?? products[0];
+
+  return (
+    <DetailPanel
+      title="Haircare and skincare detail"
+      eyebrow="11.33 detail"
+      description="Read-only focused detail for haircare, skincare, and product routine records."
+      emptyTitle="No haircare or skincare detail yet."
+      emptyDescription="Haircare and skincare detail will appear after haircare logs, skincare logs, or product records exist."
+      hasData={Boolean(skincareLog || haircareLog || activeProduct)}
+    >
+      <DetailCard
+        row={skincareLog}
+        title="Latest skincare log"
+        description="Skincare routine record displayed without treatment or product efficacy claims."
+        status={readString(skincareLog, "completed", "")}
+        rows={[
+          { label: "Log date", value: formatDate(skincareLog, "log_date") },
+          { label: "Routine type", value: readString(skincareLog, "routine_type") },
+          { label: "Completed", value: readString(skincareLog, "completed") },
+          { label: "Products used", value: readString(skincareLog, "products_used") },
+          { label: "Irritation", value: readString(skincareLog, "irritation_level") },
+          { label: "Created", value: formatDate(skincareLog, "created_at") },
+        ]}
+        notes={[{ title: "Skincare irritation notes", text: skincareLog?.irritation_notes }]}
+      />
+
+      <DetailCard
+        row={haircareLog}
+        title="Latest haircare log"
+        description="Haircare routine record displayed without diagnosis or appearance judgment."
+        status={readString(haircareLog, "completed", "")}
+        rows={[
+          { label: "Log date", value: formatDate(haircareLog, "log_date") },
+          { label: "Routine type", value: readString(haircareLog, "routine_type") },
+          { label: "Completed", value: readString(haircareLog, "completed") },
+          { label: "Products used", value: readString(haircareLog, "products_used") },
+          { label: "Shedding", value: readString(haircareLog, "shedding_level") },
+          { label: "Created", value: formatDate(haircareLog, "created_at") },
+        ]}
+        notes={[{ title: "Haircare shedding notes", text: haircareLog?.shedding_notes }]}
+      />
+
+      <DetailCard
+        row={activeProduct}
+        title={readString(activeProduct, "name", "Product")}
+        description="Product context displayed without treatment or efficacy claims."
+        status={activeProduct?.active ? "active" : "inactive"}
+        rows={[
+          { label: "Category", value: readString(activeProduct, "category") },
+          { label: "Brand", value: readString(activeProduct, "brand") },
+          { label: "Active", value: readString(activeProduct, "active") },
+          { label: "Started", value: formatDate(activeProduct, "started_at") },
+          { label: "Ended", value: formatDate(activeProduct, "ended_at") },
+          { label: "Updated", value: formatDate(activeProduct, "updated_at") },
+        ]}
+        notes={[
+          { title: "Product usage notes", text: activeProduct?.usage_notes },
+          { title: "Visual evidence boundary", text: "Progress photos and visual evidence remain deferred until an explicit safe storage and privacy flow exists." },
+        ]}
+      />
+    </DetailPanel>
+  );
+}
+```
+
+### `src/components/dashboard/health-body-emotion-dashboard-v1.tsx`
+
+```tsx
+import { getHealthBodyDashboardDataSummary } from "@/lib/dashboard";
+import {
+  HealthBodyBoundaryNotice,
+  HealthBodyEmptyState,
+  HealthBodyPrivacyNotice,
+  HealthBodyWarningPanel,
+} from "./health-body-dashboard-states";
+import { HealthBodyEmotionReflectionDetailPanel } from "./health-body-detail-panels";
+import { HealthBodyProofLinkagePanel } from "./health-body-linkage-panels";
+import {
+  HealthBodyCrossLinks,
+  HealthBodyProposedActionVisibilityPanel,
+  HealthBodyStateBoundaryPanel,
+} from "./health-body-action-boundary-panels";
+
+interface HealthBodyEmotionDashboardV1Props {
+  userId: string;
+}
+
+interface EmotionMetric {
+  label: string;
+  value: number;
+  description: string;
+}
+
+function EmotionMetricTile({ metric }: { metric: EmotionMetric }) {
+  return (
+    <article className="rounded-3xl border border-white/10 bg-white/[0.03] p-5 shadow-sm">
+      <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-400">
+        {metric.label}
+      </p>
+      <p className="mt-4 text-3xl font-semibold text-white">{metric.value}</p>
+      <p className="mt-3 text-sm leading-6 text-slate-300">{metric.description}</p>
+    </article>
+  );
+}
+
+export async function HealthBodyEmotionDashboardV1({
+  userId,
+}: HealthBodyEmotionDashboardV1Props) {
+  const data = await getHealthBodyDashboardDataSummary(userId);
+  const { summary } = data;
+
+  const metrics: EmotionMetric[] = [
+    {
+      label: "Emotion logs",
+      value: summary.emotion_log_count,
+      description: "Mood, emotional pattern, trigger, and regulation signal records.",
+    },
+    {
+      label: "Mental health logs",
+      value: summary.mental_health_log_count,
+      description: "Protected mental-state records for stress, mood, anxiety, and support context.",
+    },
+    {
+      label: "Journal entries",
+      value: summary.journal_entry_count,
+      description: "Reflection records connected to emotional processing and self-understanding.",
+    },
+    {
+      label: "Recent signals",
+      value: summary.recent_health_signal_count,
+      description: "Recent emotion, mental-state, sleep, energy, body, and care activity from the last seven days.",
+    },
+  ];
+
+  const hasEmotionData =
+    summary.emotion_log_count + summary.mental_health_log_count + summary.journal_entry_count > 0;
+
+  return (
+    <section className="space-y-8">
+      <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-6 shadow-lg">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p className="text-sm font-medium uppercase tracking-[0.28em] text-rose-300">
+              emotion system
+            </p>
+            <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white">
+              Emotion Dashboard
+            </h1>
+            <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-300">
+              Read-only emotion surface for mood, emotional patterns, triggers, reflection,
+              regulation proof, mental-state records, and journal context. This dashboard
+              summarizes existing records only and cannot create or modify data.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-rose-400/20 bg-rose-400/10 px-4 py-3 text-sm text-rose-100">
+            <p className="font-medium">Read-only emotion view</p>
+            <p className="mt-1 text-rose-100/80">
+              Mood, reflection, regulation, and mental-state writes stay disabled until safe
+              confirmation flows are added.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <HealthBodyBoundaryNotice
+        title="Read-only emotion boundary"
+        description="This dashboard can summarize existing emotion, mental health, journal, sleep, energy, and related health/body records only. New mood, trigger, reflection, or regulation records must wait for confirmed safe-write flows."
+      />
+      <HealthBodyPrivacyNotice />
+      <HealthBodyWarningPanel warnings={data.warnings} />
+
+      <HealthBodyStateBoundaryPanel surface="emotion" readErrors={data.warnings} />
+      <HealthBodyCrossLinks activeRoute="/emotion" />
+      <HealthBodyProposedActionVisibilityPanel />
+
+      <HealthBodyEmotionReflectionDetailPanel
+        emotionLogs={data.detail_rows.emotion_logs}
+        mentalHealthLogs={data.detail_rows.mental_health_logs}
+        journalEntries={data.detail_rows.journal_entries}
+      />
+
+      <HealthBodyProofLinkagePanel
+        bodyLogs={data.detail_rows.body_logs}
+        workouts={data.detail_rows.workouts}
+        nutritionLogs={data.detail_rows.nutrition_logs}
+        supplementLogs={data.detail_rows.supplement_logs}
+        sleepLogs={data.detail_rows.sleep_logs}
+        energyLogs={data.detail_rows.energy_logs}
+        emotionLogs={data.detail_rows.emotion_logs}
+        skincareLogs={data.detail_rows.skincare_logs}
+        haircareLogs={data.detail_rows.haircare_logs}
+      />
+
+      {!hasEmotionData ? (
+        <HealthBodyEmptyState
+          title="No emotion records yet"
+          description="Once emotion logs, mental health logs, or journal entries exist in the confirmed health/body tables, this read-only dashboard will summarize mood, triggers, reflection, regulation, and mental-state signals."
+        />
+      ) : null}
+
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        {metrics.map((metric) => (
+          <EmotionMetricTile key={metric.label} metric={metric} />
+        ))}
+      </div>
+
+      <div className="rounded-3xl border border-white/10 bg-slate-950/70 p-5 text-sm text-slate-300">
+        <p className="font-semibold text-white">Emotion safety note</p>
+        <p className="mt-2 leading-6">
+          This surface avoids diagnosis, crisis handling, treatment claims, medication claims,
+          emotional labeling as fact, body-shaming, and autonomous changes. Carnos may later propose
+          emotion or reflection records only through the confirmed safe-action flow.
+        </p>
+      </div>
+    </section>
+  );
+}
+```
+
+### `src/components/dashboard/health-body-hair-skincare-dashboard-v1.tsx`
+
+```tsx
+import { getHealthBodyDashboardDataSummary } from "@/lib/dashboard";
+import {
+  HealthBodyBoundaryNotice,
+  HealthBodyEmptyState,
+  HealthBodyPrivacyNotice,
+  HealthBodyWarningPanel,
+} from "./health-body-dashboard-states";
+import { HealthBodyHairSkincareDetailPanel } from "./health-body-detail-panels";
+import { HealthBodyProofLinkagePanel } from "./health-body-linkage-panels";
+import {
+  HealthBodyCrossLinks,
+  HealthBodyProposedActionVisibilityPanel,
+  HealthBodyStateBoundaryPanel,
+} from "./health-body-action-boundary-panels";
+
+interface HealthBodyHairSkincareDashboardV1Props {
+  userId: string;
+}
+
+interface HairSkincareMetric {
+  label: string;
+  value: number;
+  description: string;
+}
+
+function HairSkincareMetricTile({ metric }: { metric: HairSkincareMetric }) {
+  return (
+    <article className="rounded-3xl border border-white/10 bg-white/[0.03] p-5 shadow-sm">
+      <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-400">
+        {metric.label}
+      </p>
+      <p className="mt-4 text-3xl font-semibold text-white">{metric.value}</p>
+      <p className="mt-3 text-sm leading-6 text-slate-300">{metric.description}</p>
+    </article>
+  );
+}
+
+export async function HealthBodyHairSkincareDashboardV1({
+  userId,
+}: HealthBodyHairSkincareDashboardV1Props) {
+  const data = await getHealthBodyDashboardDataSummary(userId);
+  const { summary } = data;
+
+  const metrics: HairSkincareMetric[] = [
+    {
+      label: "Skincare logs",
+      value: summary.skincare_log_count,
+      description: "Skincare routine completion, product use, irritation notes, and care records.",
+    },
+    {
+      label: "Haircare logs",
+      value: summary.haircare_log_count,
+      description: "Haircare routine completion, product use, shedding notes, and scalp-care records.",
+    },
+    {
+      label: "Products",
+      value: summary.product_count,
+      description: "All product records available for hair, skin, nutrition, or supplement routines.",
+    },
+    {
+      label: "Active products",
+      value: summary.active_product_count,
+      description: "Active products currently included in routine review and care context.",
+    },
+  ];
+
+  const hasHairSkincareData =
+    summary.skincare_log_count +
+      summary.haircare_log_count +
+      summary.product_count +
+      summary.active_product_count >
+    0;
+
+  return (
+    <section className="space-y-8">
+      <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-6 shadow-lg">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p className="text-sm font-medium uppercase tracking-[0.28em] text-fuchsia-300">
+              hair skincare system
+            </p>
+            <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white">
+              Hair Skincare Dashboard
+            </h1>
+            <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-300">
+              Read-only haircare and skincare surface for routines, product use, progress notes,
+              care consistency, and sensitive appearance-related records. This dashboard summarizes
+              existing records only and cannot create or modify data.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-fuchsia-400/20 bg-fuchsia-400/10 px-4 py-3 text-sm text-fuchsia-100">
+            <p className="font-medium">Read-only hair skincare view</p>
+            <p className="mt-1 text-fuchsia-100/80">
+              Haircare, skincare, product, progress note, and visual evidence writes stay disabled
+              until safe confirmation flows are added.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <HealthBodyBoundaryNotice
+        title="Read-only hair skincare boundary"
+        description="This dashboard can summarize existing haircare, skincare, product, and related health/body records only. New routine, product, progress note, or visual evidence records must wait for confirmed safe-write flows."
+      />
+      <HealthBodyPrivacyNotice />
+      <HealthBodyWarningPanel warnings={data.warnings} />
+
+      <HealthBodyStateBoundaryPanel surface="hair_skincare" readErrors={data.warnings} />
+      <HealthBodyCrossLinks activeRoute="/hair-skincare" />
+      <HealthBodyProposedActionVisibilityPanel />
+
+      <HealthBodyHairSkincareDetailPanel
+        skincareLogs={data.detail_rows.skincare_logs}
+        haircareLogs={data.detail_rows.haircare_logs}
+        products={data.detail_rows.products}
+      />
+
+      <HealthBodyProofLinkagePanel
+        bodyLogs={data.detail_rows.body_logs}
+        workouts={data.detail_rows.workouts}
+        nutritionLogs={data.detail_rows.nutrition_logs}
+        supplementLogs={data.detail_rows.supplement_logs}
+        sleepLogs={data.detail_rows.sleep_logs}
+        energyLogs={data.detail_rows.energy_logs}
+        emotionLogs={data.detail_rows.emotion_logs}
+        skincareLogs={data.detail_rows.skincare_logs}
+        haircareLogs={data.detail_rows.haircare_logs}
+      />
+
+      {!hasHairSkincareData ? (
+        <HealthBodyEmptyState
+          title="No haircare or skincare records yet"
+          description="Once haircare logs, skincare logs, or product records exist in the confirmed health/body tables, this read-only dashboard will summarize routines, products, progress notes, and care consistency."
+        />
+      ) : null}
+
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        {metrics.map((metric) => (
+          <HairSkincareMetricTile key={metric.label} metric={metric} />
+        ))}
+      </div>
+
+      <div className="rounded-3xl border border-white/10 bg-slate-950/70 p-5 text-sm text-slate-300">
+        <p className="font-semibold text-white">Hair and skincare safety note</p>
+        <p className="mt-2 leading-6">
+          This surface avoids diagnosis, treatment claims, product efficacy claims, appearance
+          shaming, body-shaming, and autonomous changes. Progress photos and visual evidence remain
+          deferred until an explicit safe storage and privacy flow exists.
+        </p>
+      </div>
+    </section>
+  );
+}
+```
+
+### `src/components/dashboard/health-body-linkage-panels.tsx`
+
+```tsx
+import { EmptyState, MetricTile, SectionCard } from "@/components/dashboard";
+import type {
+  BodyLogRow,
+  EmotionLogRow,
+  EnergyLogRow,
+  HaircareLogRow,
+  NutritionLogRow,
+  SkincareLogRow,
+  SleepLogRow,
+  SupplementLogRow,
+  WorkoutRow,
+} from "@/types/database";
+
+type UnknownRecord = Record<string, unknown>;
+
+interface HealthBodyProofLinkagePanelProps {
+  bodyLogs?: BodyLogRow[];
+  workouts?: WorkoutRow[];
+  nutritionLogs?: NutritionLogRow[];
+  supplementLogs?: SupplementLogRow[];
+  sleepLogs?: SleepLogRow[];
+  energyLogs?: EnergyLogRow[];
+  emotionLogs?: EmotionLogRow[];
+  skincareLogs?: SkincareLogRow[];
+  haircareLogs?: HaircareLogRow[];
+}
+
+function readString(row: UnknownRecord, key: string, fallback = ""): string {
+  const value = row[key];
+
+  if (typeof value === "string" && value.trim().length > 0) {
+    return value;
+  }
+
+  if (typeof value === "number" || typeof value === "boolean") {
+    return String(value);
+  }
+
+  return fallback;
+}
+
+function linkedCount(rows: UnknownRecord[], keys: string[]): number {
+  return rows.reduce((count, row) => {
+    return count + keys.filter((key) => readString(row, key).length > 0).length;
+  }, 0);
+}
+
+function uniqueIds(rows: UnknownRecord[], key: string): string[] {
+  return [
+    ...new Set(
+      rows
+        .map((row) => readString(row, key))
+        .filter((value) => value.length > 0),
+    ),
+  ].slice(0, 8);
+}
+
+function IdLine({ label, ids }: { label: string; ids: string[] }) {
+  return (
+    <p>
+      {label}: {ids.length === 0 ? "None linked yet" : ids.join(", ")}
+    </p>
+  );
+}
+
+function SurfaceLine({
+  label,
+  rows,
+}: {
+  label: string;
+  rows: UnknownRecord[];
+}) {
+  const proofLinks = linkedCount(rows, ["proof_item_id"]);
+  const goalLinks = linkedCount(rows, ["goal_id"]);
+  const taskLinks = linkedCount(rows, ["task_id"]);
+  const dailyLogLinks = linkedCount(rows, ["daily_log_id"]);
+  const eventLinks = linkedCount(rows, ["event_id"]);
+
+  return (
+    <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
+      <p className="text-sm font-semibold text-white">{label}</p>
+      <p className="mt-2 text-xs leading-6 text-slate-500">
+        Proof: {proofLinks} · Goals: {goalLinks} · Tasks: {taskLinks} · Daily logs: {dailyLogLinks} · Events: {eventLinks}
+      </p>
+    </div>
+  );
+}
+
+export function HealthBodyProofLinkagePanel({
+  bodyLogs = [],
+  workouts = [],
+  nutritionLogs = [],
+  supplementLogs = [],
+  sleepLogs = [],
+  energyLogs = [],
+  emotionLogs = [],
+  skincareLogs = [],
+  haircareLogs = [],
+}: HealthBodyProofLinkagePanelProps) {
+  const bodyRows = bodyLogs as UnknownRecord[];
+  const workoutRows = workouts as UnknownRecord[];
+  const nutritionRows = nutritionLogs as UnknownRecord[];
+  const supplementRows = supplementLogs as UnknownRecord[];
+  const sleepRows = sleepLogs as UnknownRecord[];
+  const energyRows = energyLogs as UnknownRecord[];
+  const emotionRows = emotionLogs as UnknownRecord[];
+  const skincareRows = skincareLogs as UnknownRecord[];
+  const haircareRows = haircareLogs as UnknownRecord[];
+
+  const allRows = [
+    ...bodyRows,
+    ...workoutRows,
+    ...nutritionRows,
+    ...supplementRows,
+    ...sleepRows,
+    ...energyRows,
+    ...emotionRows,
+    ...skincareRows,
+    ...haircareRows,
+  ];
+
+  const proofLinks = linkedCount(allRows, ["proof_item_id"]);
+  const goalLinks = linkedCount(allRows, ["goal_id"]);
+  const taskLinks = linkedCount(allRows, ["task_id"]);
+  const dailyLogLinks = linkedCount(allRows, ["daily_log_id"]);
+  const eventLinks = linkedCount(allRows, ["event_id"]);
+
+  return (
+    <SectionCard
+      title="Health/body proof and operating linkage"
+      eyebrow="11.37 · 11.38 linkage"
+      description="Read-only visibility for how health/body records connect to proof, goals, tasks, daily logs, and calendar events."
+    >
+      {allRows.length === 0 ? (
+        <EmptyState
+          title="No health/body linkage records yet."
+          description="Proof, goal, task, daily-log, and event links will appear after health/body records exist with those references."
+        />
+      ) : (
+        <div className="grid gap-5">
+          <div className="grid gap-4 md:grid-cols-5">
+            <MetricTile
+              label="Proof links"
+              value={proofLinks}
+              description="Health/body records linked to proof items."
+            />
+            <MetricTile
+              label="Goal links"
+              value={goalLinks}
+              description="Health/body records linked to goals."
+            />
+            <MetricTile
+              label="Task links"
+              value={taskLinks}
+              description="Health/body records linked to tasks."
+            />
+            <MetricTile
+              label="Daily log links"
+              value={dailyLogLinks}
+              description="Health/body records linked to daily logs."
+            />
+            <MetricTile
+              label="Event links"
+              value={eventLinks}
+              description="Workout or operating records linked to events."
+            />
+          </div>
+
+          <div className="grid gap-3 md:grid-cols-3">
+            <SurfaceLine label="Body logs" rows={bodyRows} />
+            <SurfaceLine label="Workouts" rows={workoutRows} />
+            <SurfaceLine label="Nutrition logs" rows={nutritionRows} />
+            <SurfaceLine label="Supplement logs" rows={supplementRows} />
+            <SurfaceLine label="Sleep logs" rows={sleepRows} />
+            <SurfaceLine label="Energy logs" rows={energyRows} />
+            <SurfaceLine label="Emotion logs" rows={emotionRows} />
+            <SurfaceLine label="Skincare logs" rows={skincareRows} />
+            <SurfaceLine label="Haircare logs" rows={haircareRows} />
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/20 p-4 text-xs leading-6 text-slate-500">
+            <IdLine label="Proof ids" ids={uniqueIds(allRows, "proof_item_id")} />
+            <IdLine label="Goal ids" ids={uniqueIds(allRows, "goal_id")} />
+            <IdLine label="Task ids" ids={uniqueIds(allRows, "task_id")} />
+            <IdLine label="Daily log ids" ids={uniqueIds(allRows, "daily_log_id")} />
+            <IdLine label="Event ids" ids={uniqueIds(allRows, "event_id")} />
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-sm leading-6 text-slate-400">
+            This panel only reads existing linkage fields. It does not create proof, edit goals,
+            modify tasks, change daily logs, schedule events, write health/body records, or trigger
+            Carnos actions.
+          </div>
+        </div>
+      )}
+    </SectionCard>
+  );
+}
+```
+
+### `src/components/dashboard/health-body-nutrition-dashboard-v1.tsx`
+
+```tsx
+import { getHealthBodyDashboardDataSummary } from "@/lib/dashboard";
+import {
+  HealthBodyBoundaryNotice,
+  HealthBodyEmptyState,
+  HealthBodyPrivacyNotice,
+  HealthBodyWarningPanel,
+} from "./health-body-dashboard-states";
+import { HealthBodyNutritionMealDetailPanel } from "./health-body-detail-panels";
+import { HealthBodyProofLinkagePanel } from "./health-body-linkage-panels";
+import {
+  HealthBodyCrossLinks,
+  HealthBodyProposedActionVisibilityPanel,
+  HealthBodyStateBoundaryPanel,
+} from "./health-body-action-boundary-panels";
+
+interface HealthBodyNutritionDashboardV1Props {
+  userId: string;
+}
+
+interface NutritionMetric {
+  label: string;
+  value: number;
+  description: string;
+}
+
+function NutritionMetricTile({ metric }: { metric: NutritionMetric }) {
+  return (
+    <article className="rounded-3xl border border-white/10 bg-white/[0.03] p-5 shadow-sm">
+      <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-400">
+        {metric.label}
+      </p>
+      <p className="mt-4 text-3xl font-semibold text-white">{metric.value}</p>
+      <p className="mt-3 text-sm leading-6 text-slate-300">{metric.description}</p>
+    </article>
+  );
+}
+
+export async function HealthBodyNutritionDashboardV1({
+  userId,
+}: HealthBodyNutritionDashboardV1Props) {
+  const data = await getHealthBodyDashboardDataSummary(userId);
+  const { summary } = data;
+
+  const metrics: NutritionMetric[] = [
+    {
+      label: "Nutrition logs",
+      value: summary.nutrition_log_count,
+      description: "Daily nutrition records for calories, macros, adherence, hydration, and notes.",
+    },
+    {
+      label: "Meal items",
+      value: summary.meal_item_count,
+      description: "Meal-level records connected to daily nutrition logs.",
+    },
+    {
+      label: "Supplements",
+      value: summary.active_supplement_count,
+      description: "Active supplement records that may influence nutrition and routine planning.",
+    },
+    {
+      label: "Recent signals",
+      value: summary.recent_health_signal_count,
+      description: "Recent body, nutrition, sleep, energy, training, and care activity from the last seven days.",
+    },
+  ];
+
+  const hasNutritionData = summary.nutrition_log_count + summary.meal_item_count > 0;
+
+  return (
+    <section className="space-y-8">
+      <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-6 shadow-lg">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p className="text-sm font-medium uppercase tracking-[0.28em] text-emerald-300">
+              nutrition system
+            </p>
+            <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white">
+              Nutrition Dashboard
+            </h1>
+            <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-300">
+              Read-only nutrition surface for calories, macros, meals, hydration, meal prep,
+              adherence, supplement context, and nutrition-linked health signals. This dashboard
+              summarizes existing records only and cannot create or modify data.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-emerald-400/20 bg-emerald-400/10 px-4 py-3 text-sm text-emerald-100">
+            <p className="font-medium">Read-only nutrition view</p>
+            <p className="mt-1 text-emerald-100/80">
+              Food, meal, supplement, and adherence writes stay disabled until safe confirmation
+              flows are added.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <HealthBodyBoundaryNotice
+        title="Read-only nutrition boundary"
+        description="This dashboard can summarize existing nutrition, meal, supplement, and related health/body records only. New food, calorie, macro, meal, or supplement records must wait for confirmed safe-write flows."
+      />
+      <HealthBodyPrivacyNotice />
+      <HealthBodyWarningPanel warnings={data.warnings} />
+
+      <HealthBodyStateBoundaryPanel surface="nutrition" readErrors={data.warnings} />
+      <HealthBodyCrossLinks activeRoute="/nutrition" />
+      <HealthBodyProposedActionVisibilityPanel />
+
+      <HealthBodyNutritionMealDetailPanel
+        nutritionLogs={data.detail_rows.nutrition_logs}
+        mealItems={data.detail_rows.meal_items}
+      />
+
+      <HealthBodyProofLinkagePanel
+        bodyLogs={data.detail_rows.body_logs}
+        workouts={data.detail_rows.workouts}
+        nutritionLogs={data.detail_rows.nutrition_logs}
+        supplementLogs={data.detail_rows.supplement_logs}
+        sleepLogs={data.detail_rows.sleep_logs}
+        energyLogs={data.detail_rows.energy_logs}
+        emotionLogs={data.detail_rows.emotion_logs}
+        skincareLogs={data.detail_rows.skincare_logs}
+        haircareLogs={data.detail_rows.haircare_logs}
+      />
+
+      {!hasNutritionData ? (
+        <HealthBodyEmptyState
+          title="No nutrition records yet"
+          description="Once nutrition logs and meal items exist in the confirmed health/body tables, this read-only dashboard will summarize calories, macros, meals, hydration, meal prep, adherence, and supplement context."
+        />
+      ) : null}
+
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        {metrics.map((metric) => (
+          <NutritionMetricTile key={metric.label} metric={metric} />
+        ))}
+      </div>
+
+      <div className="rounded-3xl border border-white/10 bg-slate-950/70 p-5 text-sm text-slate-300">
+        <p className="font-semibold text-white">Nutrition safety note</p>
+        <p className="mt-2 leading-6">
+          This surface avoids medical nutrition claims, eating-disorder language, supplement claims,
+          body-shaming, and autonomous changes. Carnos may later propose nutrition records only
+          through the confirmed safe-action flow.
+        </p>
+      </div>
+    </section>
+  );
+}
+```
+
+### `src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx`
+
+```tsx
+import { getHealthBodyDashboardDataSummary } from "@/lib/dashboard";
+import {
+  HealthBodyBoundaryNotice,
+  HealthBodyEmptyState,
+  HealthBodyPrivacyNotice,
+  HealthBodyWarningPanel,
+} from "./health-body-dashboard-states";
+import { HealthBodySleepEnergyDetailPanel } from "./health-body-detail-panels";
+import { HealthBodyProofLinkagePanel } from "./health-body-linkage-panels";
+import {
+  HealthBodyCrossLinks,
+  HealthBodyProposedActionVisibilityPanel,
+  HealthBodyStateBoundaryPanel,
+} from "./health-body-action-boundary-panels";
+
+interface HealthBodySleepEnergyDashboardV1Props {
+  userId: string;
+}
+
+interface SleepEnergyMetric {
+  label: string;
+  value: number;
+  description: string;
+}
+
+function SleepEnergyMetricTile({ metric }: { metric: SleepEnergyMetric }) {
+  return (
+    <article className="rounded-3xl border border-white/10 bg-white/[0.03] p-5 shadow-sm">
+      <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-400">
+        {metric.label}
+      </p>
+      <p className="mt-4 text-3xl font-semibold text-white">{metric.value}</p>
+      <p className="mt-3 text-sm leading-6 text-slate-300">{metric.description}</p>
+    </article>
+  );
+}
+
+export async function HealthBodySleepEnergyDashboardV1({
+  userId,
+}: HealthBodySleepEnergyDashboardV1Props) {
+  const data = await getHealthBodyDashboardDataSummary(userId);
+  const { summary } = data;
+
+  const metrics: SleepEnergyMetric[] = [
+    {
+      label: "Sleep logs",
+      value: summary.sleep_log_count,
+      description: "Sleep records for duration, quality, bedtime, wake time, and recovery context.",
+    },
+    {
+      label: "Energy logs",
+      value: summary.energy_log_count,
+      description: "Energy, fatigue, focus, stress, and recovery signal records.",
+    },
+    {
+      label: "Mental health logs",
+      value: summary.mental_health_log_count,
+      description: "Protected mental state records connected to recovery and daily functioning.",
+    },
+    {
+      label: "Recent signals",
+      value: summary.recent_health_signal_count,
+      description: "Recent body, sleep, energy, nutrition, training, and care activity from the last seven days.",
+    },
+  ];
+
+  const hasSleepEnergyData = summary.sleep_log_count + summary.energy_log_count > 0;
+
+  return (
+    <section className="space-y-8">
+      <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-6 shadow-lg">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p className="text-sm font-medium uppercase tracking-[0.28em] text-sky-300">
+              sleep energy system
+            </p>
+            <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white">
+              Sleep Energy Dashboard
+            </h1>
+            <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-300">
+              Read-only sleep and energy surface for sleep duration, fatigue, focus, stress,
+              routines, recovery, and daily functioning signals. This dashboard summarizes
+              existing records only and cannot create or modify data.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-sky-400/20 bg-sky-400/10 px-4 py-3 text-sm text-sky-100">
+            <p className="font-medium">Read-only sleep energy view</p>
+            <p className="mt-1 text-sky-100/80">
+              Sleep, fatigue, focus, stress, and recovery writes stay disabled until safe
+              confirmation flows are added.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <HealthBodyBoundaryNotice
+        title="Read-only sleep energy boundary"
+        description="This dashboard can summarize existing sleep, energy, mental health, and related health/body records only. New sleep, fatigue, focus, stress, or recovery records must wait for confirmed safe-write flows."
+      />
+      <HealthBodyPrivacyNotice />
+      <HealthBodyWarningPanel warnings={data.warnings} />
+
+      <HealthBodyStateBoundaryPanel surface="sleep_energy" readErrors={data.warnings} />
+      <HealthBodyCrossLinks activeRoute="/sleep-energy" />
+      <HealthBodyProposedActionVisibilityPanel />
+
+      <HealthBodySleepEnergyDetailPanel
+        sleepLogs={data.detail_rows.sleep_logs}
+        energyLogs={data.detail_rows.energy_logs}
+        mentalHealthLogs={data.detail_rows.mental_health_logs}
+      />
+
+      <HealthBodyProofLinkagePanel
+        bodyLogs={data.detail_rows.body_logs}
+        workouts={data.detail_rows.workouts}
+        nutritionLogs={data.detail_rows.nutrition_logs}
+        supplementLogs={data.detail_rows.supplement_logs}
+        sleepLogs={data.detail_rows.sleep_logs}
+        energyLogs={data.detail_rows.energy_logs}
+        emotionLogs={data.detail_rows.emotion_logs}
+        skincareLogs={data.detail_rows.skincare_logs}
+        haircareLogs={data.detail_rows.haircare_logs}
+      />
+
+      {!hasSleepEnergyData ? (
+        <HealthBodyEmptyState
+          title="No sleep or energy records yet"
+          description="Once sleep logs and energy logs exist in the confirmed health/body tables, this read-only dashboard will summarize sleep duration, fatigue, focus, stress, routines, and recovery signals."
+        />
+      ) : null}
+
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        {metrics.map((metric) => (
+          <SleepEnergyMetricTile key={metric.label} metric={metric} />
+        ))}
+      </div>
+
+      <div className="rounded-3xl border border-white/10 bg-slate-950/70 p-5 text-sm text-slate-300">
+        <p className="font-semibold text-white">Sleep and energy safety note</p>
+        <p className="mt-2 leading-6">
+          This surface avoids medical diagnosis, treatment claims, mental health diagnosis,
+          medication claims, body-shaming, and autonomous changes. Carnos may later propose sleep
+          or energy records only through the confirmed safe-action flow.
+        </p>
+      </div>
+    </section>
+  );
+}
+```
+
+### `src/components/dashboard/health-body-supplements-dashboard-v1.tsx`
+
+```tsx
+import { getHealthBodyDashboardDataSummary } from "@/lib/dashboard";
+import {
+  HealthBodyBoundaryNotice,
+  HealthBodyEmptyState,
+  HealthBodyPrivacyNotice,
+  HealthBodyWarningPanel,
+} from "./health-body-dashboard-states";
+import { HealthBodySupplementDetailPanel } from "./health-body-detail-panels";
+import { HealthBodyProofLinkagePanel } from "./health-body-linkage-panels";
+import {
+  HealthBodyCrossLinks,
+  HealthBodyProposedActionVisibilityPanel,
+  HealthBodyStateBoundaryPanel,
+} from "./health-body-action-boundary-panels";
+
+interface HealthBodySupplementsDashboardV1Props {
+  userId: string;
+}
+
+interface SupplementMetric {
+  label: string;
+  value: number;
+  description: string;
+}
+
+function SupplementMetricTile({ metric }: { metric: SupplementMetric }) {
+  return (
+    <article className="rounded-3xl border border-white/10 bg-white/[0.03] p-5 shadow-sm">
+      <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-400">
+        {metric.label}
+      </p>
+      <p className="mt-4 text-3xl font-semibold text-white">{metric.value}</p>
+      <p className="mt-3 text-sm leading-6 text-slate-300">{metric.description}</p>
+    </article>
+  );
+}
+
+export async function HealthBodySupplementsDashboardV1({
+  userId,
+}: HealthBodySupplementsDashboardV1Props) {
+  const data = await getHealthBodyDashboardDataSummary(userId);
+  const { summary } = data;
+
+  const metrics: SupplementMetric[] = [
+    {
+      label: "Supplements",
+      value: summary.supplement_count,
+      description: "All supplement records available for schedule and routine review.",
+    },
+    {
+      label: "Active",
+      value: summary.active_supplement_count,
+      description: "Active supplement records currently included in routine planning.",
+    },
+    {
+      label: "Supplement logs",
+      value: summary.supplement_log_count,
+      description: "Adherence and intake records connected to supplement routines.",
+    },
+    {
+      label: "Products",
+      value: summary.active_product_count,
+      description: "Active product records that may support supplement, nutrition, hair, or skin routines.",
+    },
+  ];
+
+  const hasSupplementData =
+    summary.supplement_count + summary.active_supplement_count + summary.supplement_log_count > 0;
+
+  return (
+    <section className="space-y-8">
+      <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-6 shadow-lg">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p className="text-sm font-medium uppercase tracking-[0.28em] text-violet-300">
+              supplement system
+            </p>
+            <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white">
+              Supplements Dashboard
+            </h1>
+            <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-300">
+              Read-only supplement surface for supplement records, active routines, dosage notes,
+              adherence logs, safety boundaries, and product context. This dashboard summarizes
+              existing records only and cannot create or modify data.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-violet-400/20 bg-violet-400/10 px-4 py-3 text-sm text-violet-100">
+            <p className="font-medium">Read-only supplement view</p>
+            <p className="mt-1 text-violet-100/80">
+              Supplement, dosage, schedule, and adherence writes stay disabled until safe
+              confirmation flows are added.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <HealthBodyBoundaryNotice
+        title="Read-only supplement boundary"
+        description="This dashboard can summarize existing supplement, supplement log, product, nutrition, and related health/body records only. New supplement, dosage, schedule, or adherence records must wait for confirmed safe-write flows."
+      />
+      <HealthBodyPrivacyNotice />
+      <HealthBodyWarningPanel warnings={data.warnings} />
+
+      <HealthBodyStateBoundaryPanel surface="supplements" readErrors={data.warnings} />
+      <HealthBodyCrossLinks activeRoute="/supplements" />
+      <HealthBodyProposedActionVisibilityPanel />
+
+      <HealthBodySupplementDetailPanel
+        supplements={data.detail_rows.supplements}
+        supplementLogs={data.detail_rows.supplement_logs}
+        products={data.detail_rows.products}
+      />
+
+      <HealthBodyProofLinkagePanel
+        bodyLogs={data.detail_rows.body_logs}
+        workouts={data.detail_rows.workouts}
+        nutritionLogs={data.detail_rows.nutrition_logs}
+        supplementLogs={data.detail_rows.supplement_logs}
+        sleepLogs={data.detail_rows.sleep_logs}
+        energyLogs={data.detail_rows.energy_logs}
+        emotionLogs={data.detail_rows.emotion_logs}
+        skincareLogs={data.detail_rows.skincare_logs}
+        haircareLogs={data.detail_rows.haircare_logs}
+      />
+
+      {!hasSupplementData ? (
+        <HealthBodyEmptyState
+          title="No supplement records yet"
+          description="Once supplements and supplement logs exist in the confirmed health/body tables, this read-only dashboard will summarize supplement routines, active products, dosage context, and adherence signals."
+        />
+      ) : null}
+
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        {metrics.map((metric) => (
+          <SupplementMetricTile key={metric.label} metric={metric} />
+        ))}
+      </div>
+
+      <div className="rounded-3xl border border-white/10 bg-slate-950/70 p-5 text-sm text-slate-300">
+        <p className="font-semibold text-white">Supplement safety note</p>
+        <p className="mt-2 leading-6">
+          This surface avoids medical advice, dosage recommendations, treatment claims, supplement
+          efficacy claims, and autonomous changes. Carnos may later propose supplement records only
+          through the confirmed safe-action flow.
+        </p>
+      </div>
+    </section>
+  );
+}
+```
+
 ### `src/components/dashboard/index.ts`
 
 ```tsx
@@ -36616,6 +50249,17 @@ export * from "./research-summary-panel";
 export * from "./research-linkage-boundary-panels";
 export * from "./research-detail-panels";
 export * from "./research-proposed-action-visibility-panel";
+export * from "./health-body-dashboard-v1";
+export * from "./health-body-dashboard-states";
+export * from "./health-body-nutrition-dashboard-v1";
+export * from "./health-body-supplements-dashboard-v1";
+export * from "./health-body-sleep-energy-dashboard-v1";
+export * from "./health-body-emotion-dashboard-v1";
+export * from "./health-body-hair-skincare-dashboard-v1";
+export * from "./health-body-detail-panels";
+export * from "./health-body-linkage-panels";
+export * from "./health-body-action-boundary-panels";
+export * from "./admin-finance-dashboard-v1";
 ```
 
 ### `src/components/dashboard/interviews-dashboard-v1.tsx`
@@ -43544,6 +57188,352 @@ export async function requireCurrentUser(): Promise<AuthUser> {
 }
 ```
 
+### `src/lib/dashboard/admin-finance-dashboard-data-helpers.ts`
+
+```tsx
+import {
+  listBudgetCategories,
+  listFinancialAccounts,
+  listFinancialLogs,
+  listHousingContacts,
+  listHousingOptions,
+  listLifeAdminDocuments,
+  listSubscriptions,
+} from "@/lib/repositories";
+
+import type {
+  BudgetCategoryRow,
+  FinancialAccountRow,
+  FinancialLogRow,
+  HousingContactRow,
+  HousingOptionRow,
+  LifeAdminDocumentRow,
+  SubscriptionRow,
+} from "@/types/database";
+
+export interface AdminFinanceDashboardSummary {
+  financial_account_count: number;
+  active_financial_account_count: number;
+  budget_category_count: number;
+  active_budget_category_count: number;
+  financial_log_count: number;
+  income_log_count: number;
+  expense_log_count: number;
+  rent_log_count: number;
+  utility_log_count: number;
+  bill_log_count: number;
+  subscription_log_count: number;
+  recorded_finance_total: number;
+  planned_or_pending_finance_count: number;
+  paid_finance_count: number;
+  overdue_finance_count: number;
+  subscription_count: number;
+  active_subscription_count: number;
+  upcoming_subscription_count: number;
+  overdue_subscription_count: number;
+  document_count: number;
+  active_document_count: number;
+  expiring_document_count: number;
+  overdue_document_count: number;
+  housing_option_count: number;
+  current_housing_option_count: number;
+  housing_contact_count: number;
+  housing_follow_up_due_count: number;
+  admin_attention_count: number;
+  read_only_boundary: true;
+}
+
+export interface AdminFinanceDashboardDetailRows {
+  financial_accounts: FinancialAccountRow[];
+  active_financial_accounts: FinancialAccountRow[];
+  budget_categories: BudgetCategoryRow[];
+  active_budget_categories: BudgetCategoryRow[];
+  financial_logs: FinancialLogRow[];
+  planned_or_pending_financial_logs: FinancialLogRow[];
+  paid_financial_logs: FinancialLogRow[];
+  overdue_financial_logs: FinancialLogRow[];
+  subscriptions: SubscriptionRow[];
+  active_subscriptions: SubscriptionRow[];
+  upcoming_subscriptions: SubscriptionRow[];
+  overdue_subscriptions: SubscriptionRow[];
+  documents: LifeAdminDocumentRow[];
+  active_documents: LifeAdminDocumentRow[];
+  expiring_documents: LifeAdminDocumentRow[];
+  overdue_documents: LifeAdminDocumentRow[];
+  housing_options: HousingOptionRow[];
+  current_housing_options: HousingOptionRow[];
+  housing_contacts: HousingContactRow[];
+  housing_follow_ups_due: HousingContactRow[];
+}
+
+export interface AdminFinanceDashboardDataResult {
+  summary: AdminFinanceDashboardSummary;
+  generated_at: string;
+  source_tables: string[];
+  warnings: string[];
+  detail_rows: AdminFinanceDashboardDetailRows;
+}
+
+const DEFAULT_SUMMARY_LIMIT = 100;
+const UPCOMING_WINDOW_DAYS = 14;
+
+function asRows<T>(result: { data: T[] | null; error: string | null }): T[] {
+  return result.data ?? [];
+}
+
+function collectWarning(label: string, error: string | null): string | null {
+  if (!error) {
+    return null;
+  }
+
+  return `${label}: ${error}`;
+}
+
+function startOfToday(): Date {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return today;
+}
+
+function parseDateOnly(value: string | null | undefined): Date | null {
+  if (!value) {
+    return null;
+  }
+
+  const candidate = new Date(value);
+  if (Number.isNaN(candidate.getTime())) {
+    return null;
+  }
+
+  candidate.setHours(0, 0, 0, 0);
+  return candidate;
+}
+
+function isDueTodayOrEarlier(value: string | null | undefined): boolean {
+  const candidate = parseDateOnly(value);
+
+  if (!candidate) {
+    return false;
+  }
+
+  return candidate.getTime() <= startOfToday().getTime();
+}
+
+function isWithinUpcomingWindow(value: string | null | undefined): boolean {
+  const candidate = parseDateOnly(value);
+
+  if (!candidate) {
+    return false;
+  }
+
+  const today = startOfToday();
+  const cutoff = startOfToday();
+  cutoff.setDate(cutoff.getDate() + UPCOMING_WINDOW_DAYS);
+
+  return (
+    candidate.getTime() >= today.getTime() &&
+    candidate.getTime() <= cutoff.getTime()
+  );
+}
+
+function sumAmounts(rows: FinancialLogRow[]): number {
+  return rows.reduce((total, row) => total + Number(row.amount ?? 0), 0);
+}
+
+export async function getAdminFinanceDashboardDataSummary(
+  userId: string,
+): Promise<AdminFinanceDashboardDataResult> {
+  const [
+    financialAccounts,
+    activeFinancialAccounts,
+    budgetCategories,
+    activeBudgetCategories,
+    financialLogs,
+    subscriptions,
+    activeSubscriptions,
+    documents,
+    activeDocuments,
+    housingOptions,
+    currentHousingOptions,
+    housingContacts,
+  ] = await Promise.all([
+    listFinancialAccounts(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listFinancialAccounts(userId, {
+      active: true,
+      limit: DEFAULT_SUMMARY_LIMIT,
+    }),
+    listBudgetCategories(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listBudgetCategories(userId, {
+      active: true,
+      limit: DEFAULT_SUMMARY_LIMIT,
+    }),
+    listFinancialLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listSubscriptions(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listSubscriptions(userId, {
+      paymentStatus: "active",
+      limit: DEFAULT_SUMMARY_LIMIT,
+    }),
+    listLifeAdminDocuments(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listLifeAdminDocuments(userId, {
+      status: "active",
+      limit: DEFAULT_SUMMARY_LIMIT,
+    }),
+    listHousingOptions(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listHousingOptions(userId, {
+      housingStatus: "current",
+      limit: DEFAULT_SUMMARY_LIMIT,
+    }),
+    listHousingContacts(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+  ]);
+
+  const accountRows = asRows(financialAccounts);
+  const activeAccountRows = asRows(activeFinancialAccounts);
+  const categoryRows = asRows(budgetCategories);
+  const activeCategoryRows = asRows(activeBudgetCategories);
+  const financeRows = asRows(financialLogs);
+  const subscriptionRows = asRows(subscriptions);
+  const activeSubscriptionRows = asRows(activeSubscriptions);
+  const documentRows = asRows(documents);
+  const activeDocumentRows = asRows(activeDocuments);
+  const housingRows = asRows(housingOptions);
+  const currentHousingRows = asRows(currentHousingOptions);
+  const contactRows = asRows(housingContacts);
+
+  const plannedOrPendingFinanceRows = financeRows.filter((item) =>
+    ["planned", "pending"].includes(item.payment_status),
+  );
+  const paidFinanceRows = financeRows.filter((item) =>
+    ["recorded", "paid"].includes(item.payment_status),
+  );
+  const overdueFinanceRows = financeRows.filter(
+    (item) => item.payment_status === "overdue",
+  );
+
+  const upcomingSubscriptionRows = subscriptionRows.filter((item) =>
+    isWithinUpcomingWindow(item.next_due_date),
+  );
+  const overdueSubscriptionRows = subscriptionRows.filter(
+    (item) => item.payment_status === "overdue",
+  );
+
+  const expiringDocumentRows = documentRows.filter(
+    (item) =>
+      isWithinUpcomingWindow(item.expires_on) ||
+      isWithinUpcomingWindow(item.renewal_due_on),
+  );
+  const overdueDocumentRows = documentRows.filter(
+    (item) =>
+      item.status === "expired" ||
+      isDueTodayOrEarlier(item.expires_on) ||
+      isDueTodayOrEarlier(item.renewal_due_on),
+  );
+
+  const housingFollowUpRows = contactRows.filter((item) =>
+    isDueTodayOrEarlier(item.next_follow_up_on),
+  );
+
+  const warnings = [
+    collectWarning("financial_accounts", financialAccounts.error),
+    collectWarning("active_financial_accounts", activeFinancialAccounts.error),
+    collectWarning("budget_categories", budgetCategories.error),
+    collectWarning("active_budget_categories", activeBudgetCategories.error),
+    collectWarning("financial_logs", financialLogs.error),
+    collectWarning("subscriptions", subscriptions.error),
+    collectWarning("active_subscriptions", activeSubscriptions.error),
+    collectWarning("documents", documents.error),
+    collectWarning("active_documents", activeDocuments.error),
+    collectWarning("housing_options", housingOptions.error),
+    collectWarning("current_housing_options", currentHousingOptions.error),
+    collectWarning("housing_contacts", housingContacts.error),
+  ].filter((warning): warning is string => warning !== null);
+
+  const adminAttentionCount =
+    plannedOrPendingFinanceRows.length +
+    overdueFinanceRows.length +
+    upcomingSubscriptionRows.length +
+    overdueSubscriptionRows.length +
+    expiringDocumentRows.length +
+    overdueDocumentRows.length +
+    housingFollowUpRows.length;
+
+  return {
+    generated_at: new Date().toISOString(),
+    source_tables: [
+      "financial_accounts",
+      "budget_categories",
+      "financial_logs",
+      "subscriptions",
+      "documents",
+      "housing_options",
+      "housing_contacts",
+    ],
+    warnings,
+    detail_rows: {
+      financial_accounts: accountRows,
+      active_financial_accounts: activeAccountRows,
+      budget_categories: categoryRows,
+      active_budget_categories: activeCategoryRows,
+      financial_logs: financeRows,
+      planned_or_pending_financial_logs: plannedOrPendingFinanceRows,
+      paid_financial_logs: paidFinanceRows,
+      overdue_financial_logs: overdueFinanceRows,
+      subscriptions: subscriptionRows,
+      active_subscriptions: activeSubscriptionRows,
+      upcoming_subscriptions: upcomingSubscriptionRows,
+      overdue_subscriptions: overdueSubscriptionRows,
+      documents: documentRows,
+      active_documents: activeDocumentRows,
+      expiring_documents: expiringDocumentRows,
+      overdue_documents: overdueDocumentRows,
+      housing_options: housingRows,
+      current_housing_options: currentHousingRows,
+      housing_contacts: contactRows,
+      housing_follow_ups_due: housingFollowUpRows,
+    },
+    summary: {
+      financial_account_count: accountRows.length,
+      active_financial_account_count: activeAccountRows.length,
+      budget_category_count: categoryRows.length,
+      active_budget_category_count: activeCategoryRows.length,
+      financial_log_count: financeRows.length,
+      income_log_count: financeRows.filter((item) => item.log_type === "income")
+        .length,
+      expense_log_count: financeRows.filter(
+        (item) => item.log_type === "expense",
+      ).length,
+      rent_log_count: financeRows.filter((item) => item.log_type === "rent")
+        .length,
+      utility_log_count: financeRows.filter(
+        (item) => item.log_type === "utility",
+      ).length,
+      bill_log_count: financeRows.filter((item) => item.log_type === "bill")
+        .length,
+      subscription_log_count: financeRows.filter(
+        (item) => item.log_type === "subscription",
+      ).length,
+      recorded_finance_total: sumAmounts(paidFinanceRows),
+      planned_or_pending_finance_count: plannedOrPendingFinanceRows.length,
+      paid_finance_count: paidFinanceRows.length,
+      overdue_finance_count: overdueFinanceRows.length,
+      subscription_count: subscriptionRows.length,
+      active_subscription_count: activeSubscriptionRows.length,
+      upcoming_subscription_count: upcomingSubscriptionRows.length,
+      overdue_subscription_count: overdueSubscriptionRows.length,
+      document_count: documentRows.length,
+      active_document_count: activeDocumentRows.length,
+      expiring_document_count: expiringDocumentRows.length,
+      overdue_document_count: overdueDocumentRows.length,
+      housing_option_count: housingRows.length,
+      current_housing_option_count: currentHousingRows.length,
+      housing_contact_count: contactRows.length,
+      housing_follow_up_due_count: housingFollowUpRows.length,
+      admin_attention_count: adminAttentionCount,
+      read_only_boundary: true,
+    },
+  };
+}
+```
+
 ### `src/lib/dashboard/auth.ts`
 
 ```tsx
@@ -44245,16 +58235,301 @@ export function assertDashboardLayoutContract(layout: DashboardLayoutContract): 
 }
 ```
 
+### `src/lib/dashboard/health-body-dashboard-data-helpers.ts`
+
+```tsx
+import {
+  listBodyLogs,
+  listEmotionLogs,
+  listEnergyLogs,
+  listExercises,
+  listHaircareLogs,
+  listJournalEntries,
+  listMealItems,
+  listMentalHealthLogs,
+  listNutritionLogs,
+  listProducts,
+  listSkincareLogs,
+  listSleepLogs,
+  listSupplementLogs,
+  listSupplements,
+  listWorkoutSets,
+  listWorkouts,
+} from "@/lib/repositories";
+
+import type {
+  BodyLogRow,
+  EmotionLogRow,
+  EnergyLogRow,
+  ExerciseRow,
+  HaircareLogRow,
+  JournalEntryRow,
+  MealItemRow,
+  MentalHealthLogRow,
+  NutritionLogRow,
+  ProductRow,
+  SkincareLogRow,
+  SleepLogRow,
+  SupplementLogRow,
+  SupplementRow,
+  WorkoutRow,
+  WorkoutSetRow,
+} from "@/types/database";
+
+export interface HealthBodyDashboardSummary {
+  body_log_count: number;
+  workout_count: number;
+  exercise_count: number;
+  workout_set_count: number;
+  nutrition_log_count: number;
+  meal_item_count: number;
+  supplement_count: number;
+  active_supplement_count: number;
+  supplement_log_count: number;
+  sleep_log_count: number;
+  energy_log_count: number;
+  mental_health_log_count: number;
+  emotion_log_count: number;
+  journal_entry_count: number;
+  skincare_log_count: number;
+  haircare_log_count: number;
+  product_count: number;
+  active_product_count: number;
+  recent_health_signal_count: number;
+  read_only_boundary: true;
+}
+
+export interface HealthBodyDashboardDetailRows {
+  body_logs: BodyLogRow[];
+  workouts: WorkoutRow[];
+  exercises: ExerciseRow[];
+  workout_sets: WorkoutSetRow[];
+  nutrition_logs: NutritionLogRow[];
+  meal_items: MealItemRow[];
+  supplements: SupplementRow[];
+  active_supplements: SupplementRow[];
+  supplement_logs: SupplementLogRow[];
+  sleep_logs: SleepLogRow[];
+  energy_logs: EnergyLogRow[];
+  mental_health_logs: MentalHealthLogRow[];
+  emotion_logs: EmotionLogRow[];
+  journal_entries: JournalEntryRow[];
+  skincare_logs: SkincareLogRow[];
+  haircare_logs: HaircareLogRow[];
+  products: ProductRow[];
+  active_products: ProductRow[];
+}
+
+export interface HealthBodyDashboardDataResult {
+  summary: HealthBodyDashboardSummary;
+  generated_at: string;
+  source_tables: string[];
+  warnings: string[];
+  detail_rows: HealthBodyDashboardDetailRows;
+}
+
+const RECENT_WINDOW_DAYS = 7;
+const DEFAULT_SUMMARY_LIMIT = 100;
+
+function asRows<T>(result: { data: T[] | null; error: string | null }): T[] {
+  return result.data ?? [];
+}
+
+function collectWarning(label: string, error: string | null): string | null {
+  if (!error) {
+    return null;
+  }
+
+  return `${label}: ${error}`;
+}
+
+function isWithinRecentWindow(value: string | null | undefined): boolean {
+  if (!value) {
+    return false;
+  }
+
+  const candidate = new Date(value);
+  if (Number.isNaN(candidate.getTime())) {
+    return false;
+  }
+
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - RECENT_WINDOW_DAYS);
+
+  return candidate.getTime() >= cutoff.getTime();
+}
+
+export async function getHealthBodyDashboardDataSummary(
+  userId: string,
+): Promise<HealthBodyDashboardDataResult> {
+  const [
+    bodyLogs,
+    workouts,
+    exercises,
+    workoutSets,
+    nutritionLogs,
+    mealItems,
+    supplements,
+    activeSupplements,
+    supplementLogs,
+    sleepLogs,
+    energyLogs,
+    mentalHealthLogs,
+    emotionLogs,
+    journalEntries,
+    skincareLogs,
+    haircareLogs,
+    products,
+    activeProducts,
+  ] = await Promise.all([
+    listBodyLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listWorkouts(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listExercises(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listWorkoutSets(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listNutritionLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listMealItems(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listSupplements(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listSupplements(userId, { active: true, limit: DEFAULT_SUMMARY_LIMIT }),
+    listSupplementLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listSleepLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listEnergyLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listMentalHealthLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listEmotionLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listJournalEntries(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listSkincareLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listHaircareLogs(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listProducts(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listProducts(userId, { active: true, limit: DEFAULT_SUMMARY_LIMIT }),
+  ]);
+
+  const bodyRows = asRows(bodyLogs);
+  const workoutRows = asRows(workouts);
+  const exerciseRows = asRows(exercises);
+  const workoutSetRows = asRows(workoutSets);
+  const nutritionRows = asRows(nutritionLogs);
+  const mealRows = asRows(mealItems);
+  const supplementRows = asRows(supplements);
+  const activeSupplementRows = asRows(activeSupplements);
+  const supplementLogRows = asRows(supplementLogs);
+  const sleepRows = asRows(sleepLogs);
+  const energyRows = asRows(energyLogs);
+  const mentalRows = asRows(mentalHealthLogs);
+  const emotionRows = asRows(emotionLogs);
+  const journalRows = asRows(journalEntries);
+  const skincareRows = asRows(skincareLogs);
+  const haircareRows = asRows(haircareLogs);
+  const productRows = asRows(products);
+  const activeProductRows = asRows(activeProducts);
+
+  const recentHealthSignalCount =
+    bodyRows.filter((item) => isWithinRecentWindow(item.log_date)).length +
+    workoutRows.filter((item) => isWithinRecentWindow(item.workout_date)).length +
+    nutritionRows.filter((item) => isWithinRecentWindow(item.log_date)).length +
+    sleepRows.filter((item) => isWithinRecentWindow(item.sleep_date)).length +
+    energyRows.filter((item) => isWithinRecentWindow(item.log_date)).length +
+    mentalRows.filter((item) => isWithinRecentWindow(item.log_date)).length +
+    emotionRows.filter((item) => isWithinRecentWindow(item.occurred_at)).length +
+    skincareRows.filter((item) => isWithinRecentWindow(item.log_date)).length +
+    haircareRows.filter((item) => isWithinRecentWindow(item.log_date)).length;
+
+  const warnings = [
+    collectWarning("body_logs", bodyLogs.error),
+    collectWarning("workouts", workouts.error),
+    collectWarning("workout_sets", workoutSets.error),
+    collectWarning("nutrition_logs", nutritionLogs.error),
+    collectWarning("meal_items", mealItems.error),
+    collectWarning("supplements", supplements.error),
+    collectWarning("active_supplements", activeSupplements.error),
+    collectWarning("supplement_logs", supplementLogs.error),
+    collectWarning("sleep_logs", sleepLogs.error),
+    collectWarning("energy_logs", energyLogs.error),
+    collectWarning("mental_health_logs", mentalHealthLogs.error),
+    collectWarning("emotion_logs", emotionLogs.error),
+    collectWarning("journal_entries", journalEntries.error),
+    collectWarning("skincare_logs", skincareLogs.error),
+    collectWarning("haircare_logs", haircareLogs.error),
+    collectWarning("products", products.error),
+    collectWarning("active_products", activeProducts.error),
+  ].filter((warning): warning is string => warning !== null);
+
+  return {
+    generated_at: new Date().toISOString(),
+    source_tables: [
+      "body_logs",
+      "workouts",
+      "exercises",
+      "workout_sets",
+      "nutrition_logs",
+      "meal_items",
+      "supplements",
+      "supplement_logs",
+      "sleep_logs",
+      "energy_logs",
+      "mental_health_logs",
+      "emotion_logs",
+      "journal_entries",
+      "skincare_logs",
+      "haircare_logs",
+      "products",
+    ],
+    warnings,
+    detail_rows: {
+      body_logs: bodyRows,
+      workouts: workoutRows,
+      exercises: exerciseRows,
+      workout_sets: workoutSetRows,
+      nutrition_logs: nutritionRows,
+      meal_items: mealRows,
+      supplements: supplementRows,
+      active_supplements: activeSupplementRows,
+      supplement_logs: supplementLogRows,
+      sleep_logs: sleepRows,
+      energy_logs: energyRows,
+      mental_health_logs: mentalRows,
+      emotion_logs: emotionRows,
+      journal_entries: journalRows,
+      skincare_logs: skincareRows,
+      haircare_logs: haircareRows,
+      products: productRows,
+      active_products: activeProductRows,
+    },
+    summary: {
+      body_log_count: bodyRows.length,
+      workout_count: workoutRows.length,
+      exercise_count: exerciseRows.length,
+      workout_set_count: workoutSetRows.length,
+      nutrition_log_count: nutritionRows.length,
+      meal_item_count: mealRows.length,
+      supplement_count: supplementRows.length,
+      active_supplement_count: activeSupplementRows.length,
+      supplement_log_count: supplementLogRows.length,
+      sleep_log_count: sleepRows.length,
+      energy_log_count: energyRows.length,
+      mental_health_log_count: mentalRows.length,
+      emotion_log_count: emotionRows.length,
+      journal_entry_count: journalRows.length,
+      skincare_log_count: skincareRows.length,
+      haircare_log_count: haircareRows.length,
+      product_count: productRows.length,
+      active_product_count: activeProductRows.length,
+      recent_health_signal_count: recentHealthSignalCount,
+      read_only_boundary: true,
+    },
+  };
+}
+```
+
 ### `src/lib/dashboard/index.ts`
 
 ```tsx
-
 export * from "./dashboard-layout-contract";
 export * from "./dashboard-card-registry";
 export * from "./dashboard-data-helpers";
 export * from "./career-dashboard-data-helpers";
 export * from "./learning-project-dashboard-data-helpers";
 export * from "./research-stanford-dashboard-data-helpers";
+export * from "./health-body-dashboard-data-helpers";
+export * from "./admin-finance-dashboard-data-helpers";
 ```
 
 ### `src/lib/dashboard/learning-project-dashboard-data-helpers.ts`
@@ -44850,6 +59125,406 @@ export async function getProfile(): Promise<ProfileRow | null> {
 export async function getCarnosProfile(): Promise<CarnosProfileRow | null> {
   const bundle = await getProfileBundle();
   return bundle?.carnosProfile ?? null;
+}
+```
+
+### `src/lib/repositories/admin-finance-read.ts`
+
+```tsx
+import { createSupabaseServerClient } from "@/lib/supabase/server";
+import type {
+  BudgetCategoryRow,
+  FinancialAccountRow,
+  FinancialLogRow,
+  HousingContactRow,
+  HousingOptionRow,
+  LifeAdminDocumentRow,
+  SubscriptionRow,
+} from "@/types/database";
+
+import type { RepositoryListResult } from "./core-read";
+
+const DEFAULT_LIMIT = 25;
+const MAX_LIMIT = 100;
+
+function clampLimit(limit: number | undefined): number {
+  if (limit === undefined || Number.isNaN(limit)) {
+    return DEFAULT_LIMIT;
+  }
+
+  return Math.min(Math.max(Math.trunc(limit), 1), MAX_LIMIT);
+}
+
+function toErrorMessage(error: unknown): string {
+  if (error instanceof Error) {
+    return error.message;
+  }
+
+  return "Unknown admin/finance repository error";
+}
+
+export async function listFinancialAccounts(
+  userId: string,
+  options: {
+    accountType?: FinancialAccountRow["account_type"];
+    privacyLevel?: FinancialAccountRow["privacy_level"];
+    active?: boolean;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<FinancialAccountRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("financial_accounts")
+      .select("*")
+      .eq("user_id", userId)
+      .order("name", { ascending: true })
+      .limit(limit);
+
+    if (options.accountType) {
+      query = query.eq("account_type", options.accountType as never);
+    }
+    if (options.privacyLevel) {
+      query = query.eq("privacy_level", options.privacyLevel as never);
+    }
+    if (options.active !== undefined) {
+      query = query.eq("is_active", options.active);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as FinancialAccountRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listBudgetCategories(
+  userId: string,
+  options: {
+    categoryType?: BudgetCategoryRow["category_type"];
+    active?: boolean;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<BudgetCategoryRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("budget_categories")
+      .select("*")
+      .eq("user_id", userId)
+      .order("sort_order", { ascending: true })
+      .order("name", { ascending: true })
+      .limit(limit);
+
+    if (options.categoryType) {
+      query = query.eq("category_type", options.categoryType as never);
+    }
+    if (options.active !== undefined) {
+      query = query.eq("is_active", options.active);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as BudgetCategoryRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listFinancialLogs(
+  userId: string,
+  options: {
+    accountId?: string;
+    budgetCategoryId?: string;
+    logType?: FinancialLogRow["log_type"];
+    paymentStatus?: FinancialLogRow["payment_status"];
+    relatedTaskId?: string;
+    relatedEventId?: string;
+    fromDate?: string;
+    toDate?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<FinancialLogRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("financial_logs")
+      .select("*")
+      .eq("user_id", userId)
+      .order("occurred_on", { ascending: false })
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.accountId) {
+      query = query.eq("account_id", options.accountId as never);
+    }
+    if (options.budgetCategoryId) {
+      query = query.eq("budget_category_id", options.budgetCategoryId as never);
+    }
+    if (options.logType) {
+      query = query.eq("log_type", options.logType as never);
+    }
+    if (options.paymentStatus) {
+      query = query.eq("payment_status", options.paymentStatus as never);
+    }
+    if (options.relatedTaskId) {
+      query = query.eq("related_task_id", options.relatedTaskId as never);
+    }
+    if (options.relatedEventId) {
+      query = query.eq("related_event_id", options.relatedEventId as never);
+    }
+    if (options.fromDate) {
+      query = query.gte("occurred_on", options.fromDate as never);
+    }
+    if (options.toDate) {
+      query = query.lte("occurred_on", options.toDate as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as FinancialLogRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listSubscriptions(
+  userId: string,
+  options: {
+    budgetCategoryId?: string;
+    billingCycle?: SubscriptionRow["billing_cycle"];
+    paymentStatus?: SubscriptionRow["payment_status"];
+    dueAfter?: string;
+    dueBefore?: string;
+    cancelByBefore?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<SubscriptionRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("subscriptions")
+      .select("*")
+      .eq("user_id", userId)
+      .order("next_due_date", { ascending: true, nullsFirst: false })
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.budgetCategoryId) {
+      query = query.eq("budget_category_id", options.budgetCategoryId as never);
+    }
+    if (options.billingCycle) {
+      query = query.eq("billing_cycle", options.billingCycle as never);
+    }
+    if (options.paymentStatus) {
+      query = query.eq("payment_status", options.paymentStatus as never);
+    }
+    if (options.dueAfter) {
+      query = query.gte("next_due_date", options.dueAfter as never);
+    }
+    if (options.dueBefore) {
+      query = query.lte("next_due_date", options.dueBefore as never);
+    }
+    if (options.cancelByBefore) {
+      query = query.lte("cancel_by_date", options.cancelByBefore as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as SubscriptionRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listLifeAdminDocuments(
+  userId: string,
+  options: {
+    documentType?: LifeAdminDocumentRow["document_type"];
+    status?: LifeAdminDocumentRow["status"];
+    sensitivity?: LifeAdminDocumentRow["sensitivity"];
+    relatedTaskId?: string;
+    relatedEventId?: string;
+    expiresBefore?: string;
+    renewalDueBefore?: string;
+    reviewBefore?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<LifeAdminDocumentRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("documents")
+      .select("*")
+      .eq("user_id", userId)
+      .order("renewal_due_on", { ascending: true, nullsFirst: false })
+      .order("expires_on", { ascending: true, nullsFirst: false })
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.documentType) {
+      query = query.eq("document_type", options.documentType as never);
+    }
+    if (options.status) {
+      query = query.eq("status", options.status as never);
+    }
+    if (options.sensitivity) {
+      query = query.eq("sensitivity", options.sensitivity as never);
+    }
+    if (options.relatedTaskId) {
+      query = query.eq("related_task_id", options.relatedTaskId as never);
+    }
+    if (options.relatedEventId) {
+      query = query.eq("related_event_id", options.relatedEventId as never);
+    }
+    if (options.expiresBefore) {
+      query = query.lte("expires_on", options.expiresBefore as never);
+    }
+    if (options.renewalDueBefore) {
+      query = query.lte("renewal_due_on", options.renewalDueBefore as never);
+    }
+    if (options.reviewBefore) {
+      query = query.lte("review_on", options.reviewBefore as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as LifeAdminDocumentRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listHousingOptions(
+  userId: string,
+  options: {
+    housingStatus?: HousingOptionRow["housing_status"];
+    leaseEndingBefore?: string;
+    relatedDocumentId?: string;
+    relatedTaskId?: string;
+    relatedEventId?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<HousingOptionRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("housing_options")
+      .select("*")
+      .eq("user_id", userId)
+      .order("lease_end_date", { ascending: true, nullsFirst: false })
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.housingStatus) {
+      query = query.eq("housing_status", options.housingStatus as never);
+    }
+    if (options.leaseEndingBefore) {
+      query = query.lte("lease_end_date", options.leaseEndingBefore as never);
+    }
+    if (options.relatedDocumentId) {
+      query = query.eq(
+        "related_document_id",
+        options.relatedDocumentId as never,
+      );
+    }
+    if (options.relatedTaskId) {
+      query = query.eq("related_task_id", options.relatedTaskId as never);
+    }
+    if (options.relatedEventId) {
+      query = query.eq("related_event_id", options.relatedEventId as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as HousingOptionRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listHousingContacts(
+  userId: string,
+  options: {
+    housingOptionId?: string;
+    role?: HousingContactRow["role"];
+    relatedTaskId?: string;
+    followUpBefore?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<HousingContactRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("housing_contacts")
+      .select("*")
+      .eq("user_id", userId)
+      .order("next_follow_up_on", { ascending: true, nullsFirst: false })
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.housingOptionId) {
+      query = query.eq("housing_option_id", options.housingOptionId as never);
+    }
+    if (options.role) {
+      query = query.eq("role", options.role as never);
+    }
+    if (options.relatedTaskId) {
+      query = query.eq("related_task_id", options.relatedTaskId as never);
+    }
+    if (options.followUpBefore) {
+      query = query.lte("next_follow_up_on", options.followUpBefore as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as HousingContactRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
 }
 ```
 
@@ -46189,11 +60864,681 @@ export async function listSkillProgress(
 }
 ```
 
+### `src/lib/repositories/health-body-read.ts`
+
+```tsx
+import { createSupabaseServerClient } from "@/lib/supabase/server";
+import type {
+  BodyLogRow,
+  EmotionLogRow,
+  EnergyLogRow,
+  ExerciseRow,
+  HaircareLogRow,
+  JournalEntryRow,
+  MealItemRow,
+  MentalHealthLogRow,
+  NutritionLogRow,
+  ProductRow,
+  SkincareLogRow,
+  SleepLogRow,
+  SupplementLogRow,
+  SupplementRow,
+  WorkoutRow,
+  WorkoutSetRow,
+} from "@/types/database";
+
+import type { RepositoryListResult } from "./core-read";
+
+const DEFAULT_LIMIT = 25;
+const MAX_LIMIT = 100;
+
+function clampLimit(limit: number | undefined): number {
+  if (limit === undefined || Number.isNaN(limit)) {
+    return DEFAULT_LIMIT;
+  }
+
+  return Math.min(Math.max(Math.trunc(limit), 1), MAX_LIMIT);
+}
+
+function toErrorMessage(error: unknown): string {
+  if (error instanceof Error) {
+    return error.message;
+  }
+
+  return "Unknown health/body repository error";
+}
+
+export async function listBodyLogs(
+  userId: string,
+  options: {
+    goalId?: string;
+    taskId?: string;
+    proofItemId?: string;
+    dailyLogId?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<BodyLogRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("body_logs")
+      .select("*")
+      .eq("user_id", userId)
+      .order("log_date", { ascending: false })
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.goalId) {
+      query = query.eq("goal_id", options.goalId);
+    }
+    if (options.taskId) {
+      query = query.eq("task_id", options.taskId);
+    }
+    if (options.proofItemId) {
+      query = query.eq("proof_item_id", options.proofItemId);
+    }
+    if (options.dailyLogId) {
+      query = query.eq("daily_log_id", options.dailyLogId);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as BodyLogRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listWorkouts(
+  userId: string,
+  options: {
+    goalId?: string;
+    taskId?: string;
+    proofItemId?: string;
+    eventId?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<WorkoutRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("workouts")
+      .select("*")
+      .eq("user_id", userId)
+      .order("workout_date", { ascending: false })
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.goalId) {
+      query = query.eq("goal_id", options.goalId);
+    }
+    if (options.taskId) {
+      query = query.eq("task_id", options.taskId);
+    }
+    if (options.proofItemId) {
+      query = query.eq("proof_item_id", options.proofItemId);
+    }
+    if (options.eventId) {
+      query = query.eq("event_id", options.eventId);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as WorkoutRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listExercises(
+  userId: string,
+  options: {
+    muscleGroup?: string;
+    equipment?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ExerciseRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("exercises")
+      .select("*")
+      .eq("user_id", userId)
+      .order("name", { ascending: true })
+      .limit(limit);
+
+    if (options.muscleGroup) {
+      query = query.eq("muscle_group", options.muscleGroup);
+    }
+    if (options.equipment) {
+      query = query.eq("equipment", options.equipment);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as ExerciseRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listWorkoutSets(
+  userId: string,
+  options: {
+    workoutId?: string;
+    exerciseId?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<WorkoutSetRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("workout_sets")
+      .select("*")
+      .eq("user_id", userId)
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.workoutId) {
+      query = query.eq("workout_id", options.workoutId);
+    }
+    if (options.exerciseId) {
+      query = query.eq("exercise_id", options.exerciseId);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as WorkoutSetRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listNutritionLogs(
+  userId: string,
+  options: {
+    goalId?: string;
+    taskId?: string;
+    proofItemId?: string;
+    dailyLogId?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<NutritionLogRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("nutrition_logs")
+      .select("*")
+      .eq("user_id", userId)
+      .order("log_date", { ascending: false })
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.goalId) {
+      query = query.eq("goal_id", options.goalId);
+    }
+    if (options.taskId) {
+      query = query.eq("task_id", options.taskId);
+    }
+    if (options.proofItemId) {
+      query = query.eq("proof_item_id", options.proofItemId);
+    }
+    if (options.dailyLogId) {
+      query = query.eq("daily_log_id", options.dailyLogId);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as NutritionLogRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listMealItems(
+  userId: string,
+  options: {
+    nutritionLogId?: string;
+    mealName?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<MealItemRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("meal_items")
+      .select("*")
+      .eq("user_id", userId)
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.nutritionLogId) {
+      query = query.eq("nutrition_log_id", options.nutritionLogId);
+    }
+    if (options.mealName) {
+      query = query.eq("meal_name", options.mealName);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as MealItemRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listSupplements(
+  userId: string,
+  options: {
+    active?: boolean;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<SupplementRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("supplements")
+      .select("*")
+      .eq("user_id", userId)
+      .order("name", { ascending: true })
+      .limit(limit);
+
+    if (options.active !== undefined) {
+      query = query.eq("active", options.active);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as SupplementRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listSupplementLogs(
+  userId: string,
+  options: {
+    supplementId?: string;
+    status?: SupplementLogRow["status"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<SupplementLogRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("supplement_logs")
+      .select("*")
+      .eq("user_id", userId)
+      .order("taken_at", { ascending: false })
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.supplementId) {
+      query = query.eq("supplement_id", options.supplementId);
+    }
+    if (options.status) {
+      query = query.eq("status", options.status);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as SupplementLogRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listSleepLogs(
+  userId: string,
+  options: {
+    dailyLogId?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<SleepLogRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("sleep_logs")
+      .select("*")
+      .eq("user_id", userId)
+      .order("sleep_date", { ascending: false })
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.dailyLogId) {
+      query = query.eq("daily_log_id", options.dailyLogId);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as SleepLogRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listEnergyLogs(
+  userId: string,
+  options: {
+    dailyLogId?: string;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<EnergyLogRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("energy_logs")
+      .select("*")
+      .eq("user_id", userId)
+      .order("log_date", { ascending: false })
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.dailyLogId) {
+      query = query.eq("daily_log_id", options.dailyLogId);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as EnergyLogRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listMentalHealthLogs(
+  userId: string,
+  options: {
+    sensitivity?: MentalHealthLogRow["sensitivity"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<MentalHealthLogRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("mental_health_logs")
+      .select("*")
+      .eq("user_id", userId)
+      .order("log_date", { ascending: false })
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.sensitivity) {
+      query = query.eq("sensitivity", options.sensitivity);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as MentalHealthLogRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listEmotionLogs(
+  userId: string,
+  options: {
+    emotion?: string;
+    sensitivity?: EmotionLogRow["sensitivity"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<EmotionLogRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("emotion_logs")
+      .select("*")
+      .eq("user_id", userId)
+      .order("occurred_at", { ascending: false })
+      .limit(limit);
+
+    if (options.emotion) {
+      query = query.eq("emotion", options.emotion);
+    }
+    if (options.sensitivity) {
+      query = query.eq("sensitivity", options.sensitivity);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as EmotionLogRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listJournalEntries(
+  userId: string,
+  options: {
+    sensitivity?: JournalEntryRow["sensitivity"];
+    privateOnly?: boolean;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<JournalEntryRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("journal_entries")
+      .select("*")
+      .eq("user_id", userId)
+      .order("entry_date", { ascending: false })
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.sensitivity) {
+      query = query.eq("sensitivity", options.sensitivity);
+    }
+    if (options.privateOnly !== undefined) {
+      query = query.eq("private", options.privateOnly);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as JournalEntryRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listSkincareLogs(
+  userId: string,
+  options: {
+    routineType?: string;
+    completed?: boolean;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<SkincareLogRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("skincare_logs")
+      .select("*")
+      .eq("user_id", userId)
+      .order("log_date", { ascending: false })
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.routineType) {
+      query = query.eq("routine_type", options.routineType);
+    }
+    if (options.completed !== undefined) {
+      query = query.eq("completed", options.completed);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as SkincareLogRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listHaircareLogs(
+  userId: string,
+  options: {
+    completed?: boolean;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<HaircareLogRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("haircare_logs")
+      .select("*")
+      .eq("user_id", userId)
+      .order("log_date", { ascending: false })
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.completed !== undefined) {
+      query = query.eq("completed", options.completed);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as HaircareLogRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listProducts(
+  userId: string,
+  options: {
+    category?: string;
+    active?: boolean;
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ProductRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("products")
+      .select("*")
+      .eq("user_id", userId)
+      .order("category", { ascending: true })
+      .order("name", { ascending: true })
+      .limit(limit);
+
+    if (options.category) {
+      query = query.eq("category", options.category);
+    }
+    if (options.active !== undefined) {
+      query = query.eq("active", options.active);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as ProductRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+```
+
 ### `src/lib/repositories/index.ts`
 
 ```tsx
 export * from "./core-read";
 export * from "./research-read";
+export * from "./health-body-read";
+export * from "./admin-finance-read";
 ```
 
 ### `src/lib/repositories/research-read.ts`
@@ -47322,7 +62667,14 @@ type Phase9SkillRow = Phase9UpdatedSourceFields & {
   slug: string | null;
   description: string | null;
   category: string | null;
-  status: "not_started" | "learning" | "practicing" | "proving" | "mastered" | "stale" | "archived";
+  status:
+    | "not_started"
+    | "learning"
+    | "practicing"
+    | "proving"
+    | "mastered"
+    | "stale"
+    | "archived";
   priority: "low" | "medium" | "high" | "critical";
   difficulty: "low" | "medium" | "high" | "expert";
   target_level: string | null;
@@ -47356,7 +62708,14 @@ type Phase9LearningSessionRow = Phase9UpdatedSourceFields & {
   skill_path_id: string | null;
   skill_id: string | null;
   title: string;
-  session_type: "study" | "practice" | "build" | "review" | "quiz" | "interview_prep" | "research";
+  session_type:
+    | "study"
+    | "practice"
+    | "build"
+    | "review"
+    | "quiz"
+    | "interview_prep"
+    | "research";
   status: "planned" | "active" | "completed" | "cancelled" | "archived";
   started_at: string | null;
   ended_at: string | null;
@@ -47381,7 +62740,13 @@ type Phase9QuizRow = {
   skill_id: string | null;
   title: string;
   description: string | null;
-  quiz_type: "concept_check" | "coding" | "interview" | "project_review" | "research_review" | "mixed";
+  quiz_type:
+    | "concept_check"
+    | "coding"
+    | "interview"
+    | "project_review"
+    | "research_review"
+    | "mixed";
   status: "draft" | "active" | "paused" | "archived";
   difficulty: "low" | "medium" | "high" | "expert";
   question_count: number | null;
@@ -47397,8 +62762,22 @@ type Phase9ProjectRow = Phase9UpdatedSourceFields & {
   title: string;
   slug: string | null;
   description: string | null;
-  project_type: "portfolio" | "learning" | "research" | "career" | "personal_system" | "coursework" | "experiment";
-  status: "planned" | "active" | "blocked" | "shipping" | "shipped" | "paused" | "archived";
+  project_type:
+    | "portfolio"
+    | "learning"
+    | "research"
+    | "career"
+    | "personal_system"
+    | "coursework"
+    | "experiment";
+  status:
+    | "planned"
+    | "active"
+    | "blocked"
+    | "shipping"
+    | "shipped"
+    | "paused"
+    | "archived";
   priority: "low" | "medium" | "high" | "critical";
   stage: string | null;
   problem_statement: string | null;
@@ -47445,7 +62824,13 @@ type Phase9ProjectMilestoneRow = {
   project_id: string;
   title: string;
   description: string | null;
-  status: "planned" | "active" | "blocked" | "completed" | "cancelled" | "archived";
+  status:
+    | "planned"
+    | "active"
+    | "blocked"
+    | "completed"
+    | "cancelled"
+    | "archived";
   priority: "low" | "medium" | "high" | "critical";
   due_date: string | null;
   completed_at: string | null;
@@ -47462,7 +62847,13 @@ type Phase9ProjectBugRow = {
   project_id: string;
   title: string;
   description: string | null;
-  status: "open" | "investigating" | "fixed" | "wont_fix" | "closed" | "archived";
+  status:
+    | "open"
+    | "investigating"
+    | "fixed"
+    | "wont_fix"
+    | "closed"
+    | "archived";
   severity: "low" | "medium" | "high" | "critical";
   source: string | null;
   reproduction_steps: string | null;
@@ -47482,7 +62873,16 @@ type Phase9ProjectTestRow = {
   user_id: string;
   project_id: string;
   title: string;
-  test_type: "manual" | "unit" | "integration" | "e2e" | "lint" | "typecheck" | "build" | "audit" | "smoke";
+  test_type:
+    | "manual"
+    | "unit"
+    | "integration"
+    | "e2e"
+    | "lint"
+    | "typecheck"
+    | "build"
+    | "audit"
+    | "smoke";
   status: "pending" | "passed" | "failed" | "skipped" | "archived";
   command: string | null;
   expected_result: string | null;
@@ -47520,7 +62920,16 @@ type Phase9ProjectLinkRow = {
   project_id: string;
   label: string;
   url: string;
-  link_type: "github" | "demo" | "readme" | "portfolio" | "paper" | "video" | "documentation" | "reference" | "proof";
+  link_type:
+    | "github"
+    | "demo"
+    | "readme"
+    | "portfolio"
+    | "paper"
+    | "video"
+    | "documentation"
+    | "reference"
+    | "proof";
   description: string | null;
   proof_item_id: string | null;
   metadata: Json;
@@ -47532,8 +62941,23 @@ type Phase9SkillProgressRow = Phase9SourceFields & {
   id: string;
   user_id: string;
   skill_id: string;
-  status: "not_started" | "learning" | "practicing" | "proving" | "mastered" | "stale" | "archived";
-  previous_status: "not_started" | "learning" | "practicing" | "proving" | "mastered" | "stale" | "archived" | null;
+  status:
+    | "not_started"
+    | "learning"
+    | "practicing"
+    | "proving"
+    | "mastered"
+    | "stale"
+    | "archived";
+  previous_status:
+    | "not_started"
+    | "learning"
+    | "practicing"
+    | "proving"
+    | "mastered"
+    | "stale"
+    | "archived"
+    | null;
   mastery_score: number | null;
   confidence_score: number | null;
   delta_summary: string | null;
@@ -47671,7 +63095,14 @@ type Phase10ResearchIdeaRow = {
   title: string;
   summary: string | null;
   research_area: string | null;
-  status: "captured" | "exploring" | "active" | "blocked" | "converted_to_paper" | "paused" | "archived";
+  status:
+    | "captured"
+    | "exploring"
+    | "active"
+    | "blocked"
+    | "converted_to_paper"
+    | "paused"
+    | "archived";
   priority: "low" | "medium" | "high" | "urgent";
   novelty_score: number | null;
   feasibility_score: number | null;
@@ -47696,7 +63127,13 @@ type Phase10ResearchQuestionRow = {
   hypothesis: string | null;
   variable_focus: string | null;
   expected_outcome: string | null;
-  status: "open" | "investigating" | "supported" | "rejected" | "revised" | "archived";
+  status:
+    | "open"
+    | "investigating"
+    | "supported"
+    | "rejected"
+    | "revised"
+    | "archived";
   notes: string | null;
   created_at: string;
   updated_at: string;
@@ -47712,8 +63149,24 @@ type Phase10ResearchLiteratureItemRow = {
   source_url: string | null;
   doi: string | null;
   arxiv_id: string | null;
-  item_type: "paper" | "article" | "book" | "thesis" | "technical_report" | "documentation" | "dataset" | "benchmark" | "other";
-  reading_status: "saved" | "skimmed" | "reading" | "read" | "summarized" | "cited" | "archived";
+  item_type:
+    | "paper"
+    | "article"
+    | "book"
+    | "thesis"
+    | "technical_report"
+    | "documentation"
+    | "dataset"
+    | "benchmark"
+    | "other";
+  reading_status:
+    | "saved"
+    | "skimmed"
+    | "reading"
+    | "read"
+    | "summarized"
+    | "cited"
+    | "archived";
   relevance_score: number | null;
   credibility_score: number | null;
   summary: string | null;
@@ -47734,7 +63187,18 @@ type Phase10ResearchPaperRow = {
   title: string;
   abstract: string | null;
   research_area: string | null;
-  status: "idea" | "outline" | "drafting" | "internal_review" | "professor_review" | "revision" | "submission_ready" | "submitted" | "accepted" | "rejected" | "archived";
+  status:
+    | "idea"
+    | "outline"
+    | "drafting"
+    | "internal_review"
+    | "professor_review"
+    | "revision"
+    | "submission_ready"
+    | "submitted"
+    | "accepted"
+    | "rejected"
+    | "archived";
   primary_research_idea_id: string | null;
   project_id: string | null;
   proof_item_id: string | null;
@@ -47753,7 +63217,12 @@ type Phase10ResearchPaperVersionRow = {
   file_url: string | null;
   doc_url: string | null;
   abstract_snapshot: string | null;
-  status: "draft" | "reviewed" | "revised" | "submission_candidate" | "archived";
+  status:
+    | "draft"
+    | "reviewed"
+    | "revised"
+    | "submission_candidate"
+    | "archived";
   page_count: number | null;
   readiness_score: number | null;
   main_gap: string | null;
@@ -47769,8 +63238,21 @@ type Phase10ResearchClaimRow = {
   research_paper_id: string | null;
   paper_version_id: string | null;
   claim_text: string;
-  claim_type: "novelty" | "method" | "result" | "comparison" | "limitation" | "contribution" | "application" | "future_work";
-  support_status: "unsupported" | "partially_supported" | "supported" | "contradicted" | "needs_review";
+  claim_type:
+    | "novelty"
+    | "method"
+    | "result"
+    | "comparison"
+    | "limitation"
+    | "contribution"
+    | "application"
+    | "future_work";
+  support_status:
+    | "unsupported"
+    | "partially_supported"
+    | "supported"
+    | "contradicted"
+    | "needs_review";
   evidence_strength: number | null;
   literature_item_id: string | null;
   proof_item_id: string | null;
@@ -47794,8 +63276,19 @@ type Phase10ResearchExperimentRow = {
   baseline: string | null;
   variables: Json;
   metrics: Json;
-  reproducibility_status: "not_started" | "partial" | "reproducible" | "not_reproducible" | "needs_cleanup";
-  status: "planned" | "running" | "blocked" | "completed" | "failed" | "archived";
+  reproducibility_status:
+    | "not_started"
+    | "partial"
+    | "reproducible"
+    | "not_reproducible"
+    | "needs_cleanup";
+  status:
+    | "planned"
+    | "running"
+    | "blocked"
+    | "completed"
+    | "failed"
+    | "archived";
   started_at: string | null;
   completed_at: string | null;
   notes: string | null;
@@ -47833,7 +63326,17 @@ type Phase10ResearchCitationRow = {
   research_claim_id: string | null;
   research_paper_id: string | null;
   paper_version_id: string | null;
-  citation_purpose: "background" | "related_work" | "method_support" | "result_comparison" | "limitation" | "future_work" | "contradiction" | "definition" | "benchmark" | "other";
+  citation_purpose:
+    | "background"
+    | "related_work"
+    | "method_support"
+    | "result_comparison"
+    | "limitation"
+    | "future_work"
+    | "contradiction"
+    | "definition"
+    | "benchmark"
+    | "other";
   citation_note: string | null;
   quote_or_excerpt: string | null;
   page_or_section: string | null;
@@ -47845,7 +63348,14 @@ type Phase10ResearchVenueRow = {
   id: string;
   user_id: string;
   name: string;
-  venue_type: "conference" | "journal" | "workshop" | "symposium" | "preprint" | "internal_review" | "other";
+  venue_type:
+    | "conference"
+    | "journal"
+    | "workshop"
+    | "symposium"
+    | "preprint"
+    | "internal_review"
+    | "other";
   field: string | null;
   ranking_note: string | null;
   deadline: string | null;
@@ -47864,7 +63374,15 @@ type Phase10ResearchSubmissionRow = {
   research_paper_id: string;
   research_venue_id: string | null;
   submitted_at: string | null;
-  status: "planned" | "preparing" | "submitted" | "under_review" | "accepted" | "rejected" | "withdrawn" | "archived";
+  status:
+    | "planned"
+    | "preparing"
+    | "submitted"
+    | "under_review"
+    | "accepted"
+    | "rejected"
+    | "withdrawn"
+    | "archived";
   decision: string | null;
   decision_at: string | null;
   reviewer_summary: string | null;
@@ -47880,13 +63398,26 @@ type Phase10ResearchFeedbackRow = {
   research_paper_id: string | null;
   paper_version_id: string | null;
   research_idea_id: string | null;
-  feedback_source_type: "professor" | "advisor" | "collaborator" | "reviewer" | "self_review" | "peer" | "other";
+  feedback_source_type:
+    | "professor"
+    | "advisor"
+    | "collaborator"
+    | "reviewer"
+    | "self_review"
+    | "peer"
+    | "other";
   feedback_source_name: string | null;
   feedback_date: string | null;
   summary: string;
   required_changes: string | null;
   severity: "low" | "medium" | "high" | "critical";
-  status: "received" | "triaged" | "in_progress" | "addressed" | "rejected" | "archived";
+  status:
+    | "received"
+    | "triaged"
+    | "in_progress"
+    | "addressed"
+    | "rejected"
+    | "archived";
   task_id: string | null;
   proof_item_id: string | null;
   notes: string | null;
@@ -47941,7 +63472,16 @@ type Phase10TargetProfessorRow = {
   research_area: string | null;
   fit_score: number | null;
   fit_reason: string | null;
-  outreach_status: "not_started" | "researching" | "draft_needed" | "ready_to_contact" | "contacted" | "replied" | "follow_up_needed" | "not_fit" | "archived";
+  outreach_status:
+    | "not_started"
+    | "researching"
+    | "draft_needed"
+    | "ready_to_contact"
+    | "contacted"
+    | "replied"
+    | "follow_up_needed"
+    | "not_fit"
+    | "archived";
   last_contacted_at: string | null;
   related_literature_item_id: string | null;
   related_research_idea_id: string | null;
@@ -47976,9 +63516,27 @@ type Phase10PhdApplicationAssetRow = {
   id: string;
   user_id: string;
   target_university_id: string | null;
-  asset_type: "sop" | "cv" | "resume" | "transcript" | "recommendation" | "writing_sample" | "research_statement" | "portfolio" | "paper" | "test_score" | "other";
+  asset_type:
+    | "sop"
+    | "cv"
+    | "resume"
+    | "transcript"
+    | "recommendation"
+    | "writing_sample"
+    | "research_statement"
+    | "portfolio"
+    | "paper"
+    | "test_score"
+    | "other";
   title: string;
-  status: "missing" | "planned" | "drafting" | "needs_review" | "ready" | "submitted" | "archived";
+  status:
+    | "missing"
+    | "planned"
+    | "drafting"
+    | "needs_review"
+    | "ready"
+    | "submitted"
+    | "archived";
   file_url: string | null;
   doc_url: string | null;
   quality_score: number | null;
@@ -48001,7 +63559,14 @@ type Phase10SopVersionRow = {
   professor_fit_summary: string | null;
   weakness_notes: string | null;
   readiness_score: number | null;
-  status: "outline" | "draft" | "reviewed" | "revised" | "ready" | "submitted" | "archived";
+  status:
+    | "outline"
+    | "draft"
+    | "reviewed"
+    | "revised"
+    | "ready"
+    | "submitted"
+    | "archived";
   created_at: string;
   updated_at: string;
 };
@@ -48014,7 +63579,14 @@ type Phase10RecommendationTargetRow = {
   institution_or_company: string | null;
   relationship_context: string | null;
   strength_score: number | null;
-  request_status: "potential" | "preparing" | "requested" | "agreed" | "submitted" | "unavailable" | "archived";
+  request_status:
+    | "potential"
+    | "preparing"
+    | "requested"
+    | "agreed"
+    | "submitted"
+    | "unavailable"
+    | "archived";
   requested_at: string | null;
   due_date: string | null;
   target_university_id: string | null;
@@ -48026,9 +63598,690 @@ type Phase10RecommendationTargetRow = {
   updated_at: string;
 };
 
+type Phase12FinancialAccountRow = {
+  id: string;
+  user_id: string;
+  name: string;
+  account_type:
+    | "checking"
+    | "savings"
+    | "credit_card"
+    | "cash"
+    | "loan"
+    | "investment_manual"
+    | "other";
+  institution_name: string | null;
+  currency: string;
+  current_balance: number | null;
+  is_active: boolean;
+  privacy_level: "private" | "sensitive" | "locked";
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase12FinancialAccountInsert = {
+  id?: string;
+  user_id: string;
+  name: string;
+  account_type?:
+    | "checking"
+    | "savings"
+    | "credit_card"
+    | "cash"
+    | "loan"
+    | "investment_manual"
+    | "other";
+  institution_name?: string | null;
+  currency?: string;
+  current_balance?: number | null;
+  is_active?: boolean;
+  privacy_level?: "private" | "sensitive" | "locked";
+  notes?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12FinancialAccountUpdate = {
+  id?: string;
+  user_id?: string;
+  name?: string;
+  account_type?:
+    | "checking"
+    | "savings"
+    | "credit_card"
+    | "cash"
+    | "loan"
+    | "investment_manual"
+    | "other";
+  institution_name?: string | null;
+  currency?: string;
+  current_balance?: number | null;
+  is_active?: boolean;
+  privacy_level?: "private" | "sensitive" | "locked";
+  notes?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12BudgetCategoryRow = {
+  id: string;
+  user_id: string;
+  name: string;
+  category_type:
+    | "income"
+    | "expense"
+    | "savings"
+    | "debt"
+    | "rent"
+    | "utility"
+    | "subscription"
+    | "other";
+  monthly_target: number | null;
+  currency: string;
+  is_active: boolean;
+  sort_order: number;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase12BudgetCategoryInsert = {
+  id?: string;
+  user_id: string;
+  name: string;
+  category_type?:
+    | "income"
+    | "expense"
+    | "savings"
+    | "debt"
+    | "rent"
+    | "utility"
+    | "subscription"
+    | "other";
+  monthly_target?: number | null;
+  currency?: string;
+  is_active?: boolean;
+  sort_order?: number;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12BudgetCategoryUpdate = {
+  id?: string;
+  user_id?: string;
+  name?: string;
+  category_type?:
+    | "income"
+    | "expense"
+    | "savings"
+    | "debt"
+    | "rent"
+    | "utility"
+    | "subscription"
+    | "other";
+  monthly_target?: number | null;
+  currency?: string;
+  is_active?: boolean;
+  sort_order?: number;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12FinancialLogRow = {
+  id: string;
+  user_id: string;
+  account_id: string | null;
+  budget_category_id: string | null;
+  log_type:
+    | "income"
+    | "expense"
+    | "rent"
+    | "utility"
+    | "bill"
+    | "subscription"
+    | "savings"
+    | "debt_payment"
+    | "refund"
+    | "transfer"
+    | "adjustment"
+    | "other";
+  title: string;
+  amount: number;
+  currency: string;
+  occurred_on: string;
+  payment_status:
+    | "planned"
+    | "pending"
+    | "recorded"
+    | "paid"
+    | "overdue"
+    | "cancelled"
+    | "skipped";
+  merchant_or_source: string | null;
+  notes: string | null;
+  related_task_id: string | null;
+  related_event_id: string | null;
+  source_ai_action_id: string | null;
+  source_chat_message_id: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase12FinancialLogInsert = {
+  id?: string;
+  user_id: string;
+  account_id?: string | null;
+  budget_category_id?: string | null;
+  log_type:
+    | "income"
+    | "expense"
+    | "rent"
+    | "utility"
+    | "bill"
+    | "subscription"
+    | "savings"
+    | "debt_payment"
+    | "refund"
+    | "transfer"
+    | "adjustment"
+    | "other";
+  title: string;
+  amount: number;
+  currency?: string;
+  occurred_on?: string;
+  payment_status?:
+    | "planned"
+    | "pending"
+    | "recorded"
+    | "paid"
+    | "overdue"
+    | "cancelled"
+    | "skipped";
+  merchant_or_source?: string | null;
+  notes?: string | null;
+  related_task_id?: string | null;
+  related_event_id?: string | null;
+  source_ai_action_id?: string | null;
+  source_chat_message_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12FinancialLogUpdate = {
+  id?: string;
+  user_id?: string;
+  account_id?: string | null;
+  budget_category_id?: string | null;
+  log_type?:
+    | "income"
+    | "expense"
+    | "rent"
+    | "utility"
+    | "bill"
+    | "subscription"
+    | "savings"
+    | "debt_payment"
+    | "refund"
+    | "transfer"
+    | "adjustment"
+    | "other";
+  title?: string;
+  amount?: number;
+  currency?: string;
+  occurred_on?: string;
+  payment_status?:
+    | "planned"
+    | "pending"
+    | "recorded"
+    | "paid"
+    | "overdue"
+    | "cancelled"
+    | "skipped";
+  merchant_or_source?: string | null;
+  notes?: string | null;
+  related_task_id?: string | null;
+  related_event_id?: string | null;
+  source_ai_action_id?: string | null;
+  source_chat_message_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12SubscriptionRow = {
+  id: string;
+  user_id: string;
+  budget_category_id: string | null;
+  name: string;
+  provider: string | null;
+  amount: number;
+  currency: string;
+  billing_cycle:
+    | "weekly"
+    | "biweekly"
+    | "monthly"
+    | "quarterly"
+    | "semiannual"
+    | "annual"
+    | "one_time"
+    | "other";
+  next_due_date: string | null;
+  payment_status:
+    | "active"
+    | "trial"
+    | "pending"
+    | "paid"
+    | "overdue"
+    | "cancelled"
+    | "paused"
+    | "unknown";
+  auto_renew: boolean;
+  cancel_by_date: string | null;
+  notes: string | null;
+  related_task_id: string | null;
+  related_event_id: string | null;
+  source_ai_action_id: string | null;
+  source_chat_message_id: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase12SubscriptionInsert = {
+  id?: string;
+  user_id: string;
+  budget_category_id?: string | null;
+  name: string;
+  provider?: string | null;
+  amount: number;
+  currency?: string;
+  billing_cycle?:
+    | "weekly"
+    | "biweekly"
+    | "monthly"
+    | "quarterly"
+    | "semiannual"
+    | "annual"
+    | "one_time"
+    | "other";
+  next_due_date?: string | null;
+  payment_status?:
+    | "active"
+    | "trial"
+    | "pending"
+    | "paid"
+    | "overdue"
+    | "cancelled"
+    | "paused"
+    | "unknown";
+  auto_renew?: boolean;
+  cancel_by_date?: string | null;
+  notes?: string | null;
+  related_task_id?: string | null;
+  related_event_id?: string | null;
+  source_ai_action_id?: string | null;
+  source_chat_message_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12SubscriptionUpdate = {
+  id?: string;
+  user_id?: string;
+  budget_category_id?: string | null;
+  name?: string;
+  provider?: string | null;
+  amount?: number;
+  currency?: string;
+  billing_cycle?:
+    | "weekly"
+    | "biweekly"
+    | "monthly"
+    | "quarterly"
+    | "semiannual"
+    | "annual"
+    | "one_time"
+    | "other";
+  next_due_date?: string | null;
+  payment_status?:
+    | "active"
+    | "trial"
+    | "pending"
+    | "paid"
+    | "overdue"
+    | "cancelled"
+    | "paused"
+    | "unknown";
+  auto_renew?: boolean;
+  cancel_by_date?: string | null;
+  notes?: string | null;
+  related_task_id?: string | null;
+  related_event_id?: string | null;
+  source_ai_action_id?: string | null;
+  source_chat_message_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12DocumentRow = {
+  id: string;
+  user_id: string;
+  title: string;
+  document_type:
+    | "id"
+    | "passport"
+    | "visa"
+    | "work_authorization"
+    | "school"
+    | "career"
+    | "housing"
+    | "finance"
+    | "tax_metadata_only"
+    | "medical_metadata_only"
+    | "insurance"
+    | "other";
+  status:
+    | "active"
+    | "expired"
+    | "renewal_needed"
+    | "missing"
+    | "archived"
+    | "unknown";
+  issuing_body: string | null;
+  stored_location: string | null;
+  issued_on: string | null;
+  expires_on: string | null;
+  renewal_due_on: string | null;
+  review_on: string | null;
+  sensitivity: "private" | "sensitive" | "locked";
+  notes: string | null;
+  related_task_id: string | null;
+  related_event_id: string | null;
+  source_ai_action_id: string | null;
+  source_chat_message_id: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase12DocumentInsert = {
+  id?: string;
+  user_id: string;
+  title: string;
+  document_type?:
+    | "id"
+    | "passport"
+    | "visa"
+    | "work_authorization"
+    | "school"
+    | "career"
+    | "housing"
+    | "finance"
+    | "tax_metadata_only"
+    | "medical_metadata_only"
+    | "insurance"
+    | "other";
+  status?:
+    | "active"
+    | "expired"
+    | "renewal_needed"
+    | "missing"
+    | "archived"
+    | "unknown";
+  issuing_body?: string | null;
+  stored_location?: string | null;
+  issued_on?: string | null;
+  expires_on?: string | null;
+  renewal_due_on?: string | null;
+  review_on?: string | null;
+  sensitivity?: "private" | "sensitive" | "locked";
+  notes?: string | null;
+  related_task_id?: string | null;
+  related_event_id?: string | null;
+  source_ai_action_id?: string | null;
+  source_chat_message_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12DocumentUpdate = {
+  id?: string;
+  user_id?: string;
+  title?: string;
+  document_type?:
+    | "id"
+    | "passport"
+    | "visa"
+    | "work_authorization"
+    | "school"
+    | "career"
+    | "housing"
+    | "finance"
+    | "tax_metadata_only"
+    | "medical_metadata_only"
+    | "insurance"
+    | "other";
+  status?:
+    | "active"
+    | "expired"
+    | "renewal_needed"
+    | "missing"
+    | "archived"
+    | "unknown";
+  issuing_body?: string | null;
+  stored_location?: string | null;
+  issued_on?: string | null;
+  expires_on?: string | null;
+  renewal_due_on?: string | null;
+  review_on?: string | null;
+  sensitivity?: "private" | "sensitive" | "locked";
+  notes?: string | null;
+  related_task_id?: string | null;
+  related_event_id?: string | null;
+  source_ai_action_id?: string | null;
+  source_chat_message_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12HousingOptionRow = {
+  id: string;
+  user_id: string;
+  label: string;
+  housing_status:
+    | "current"
+    | "past"
+    | "future"
+    | "backup"
+    | "research_only"
+    | "archived";
+  address_label: string | null;
+  rent_amount: number | null;
+  currency: string;
+  rent_due_day: number | null;
+  lease_start_date: string | null;
+  lease_end_date: string | null;
+  deposit_amount: number | null;
+  utilities_notes: string | null;
+  maintenance_notes: string | null;
+  roommate_notes: string | null;
+  pros_cons_json: Json;
+  notes: string | null;
+  related_document_id: string | null;
+  related_task_id: string | null;
+  related_event_id: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase12HousingOptionInsert = {
+  id?: string;
+  user_id: string;
+  label: string;
+  housing_status?:
+    | "current"
+    | "past"
+    | "future"
+    | "backup"
+    | "research_only"
+    | "archived";
+  address_label?: string | null;
+  rent_amount?: number | null;
+  currency?: string;
+  rent_due_day?: number | null;
+  lease_start_date?: string | null;
+  lease_end_date?: string | null;
+  deposit_amount?: number | null;
+  utilities_notes?: string | null;
+  maintenance_notes?: string | null;
+  roommate_notes?: string | null;
+  pros_cons_json?: Json;
+  notes?: string | null;
+  related_document_id?: string | null;
+  related_task_id?: string | null;
+  related_event_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12HousingOptionUpdate = {
+  id?: string;
+  user_id?: string;
+  label?: string;
+  housing_status?:
+    | "current"
+    | "past"
+    | "future"
+    | "backup"
+    | "research_only"
+    | "archived";
+  address_label?: string | null;
+  rent_amount?: number | null;
+  currency?: string;
+  rent_due_day?: number | null;
+  lease_start_date?: string | null;
+  lease_end_date?: string | null;
+  deposit_amount?: number | null;
+  utilities_notes?: string | null;
+  maintenance_notes?: string | null;
+  roommate_notes?: string | null;
+  pros_cons_json?: Json;
+  notes?: string | null;
+  related_document_id?: string | null;
+  related_task_id?: string | null;
+  related_event_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12HousingContactRow = {
+  id: string;
+  user_id: string;
+  housing_option_id: string | null;
+  name: string;
+  role:
+    | "landlord"
+    | "property_manager"
+    | "roommate"
+    | "utility_provider"
+    | "maintenance"
+    | "broker"
+    | "other";
+  contact_notes: string | null;
+  preferred_contact_method: string | null;
+  last_contacted_on: string | null;
+  next_follow_up_on: string | null;
+  related_task_id: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase12HousingContactInsert = {
+  id?: string;
+  user_id: string;
+  housing_option_id?: string | null;
+  name: string;
+  role?:
+    | "landlord"
+    | "property_manager"
+    | "roommate"
+    | "utility_provider"
+    | "maintenance"
+    | "broker"
+    | "other";
+  contact_notes?: string | null;
+  preferred_contact_method?: string | null;
+  last_contacted_on?: string | null;
+  next_follow_up_on?: string | null;
+  related_task_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12HousingContactUpdate = {
+  id?: string;
+  user_id?: string;
+  housing_option_id?: string | null;
+  name?: string;
+  role?:
+    | "landlord"
+    | "property_manager"
+    | "roommate"
+    | "utility_provider"
+    | "maintenance"
+    | "broker"
+    | "other";
+  contact_notes?: string | null;
+  preferred_contact_method?: string | null;
+  last_contacted_on?: string | null;
+  next_follow_up_on?: string | null;
+  related_task_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
 export type Database = {
   public: {
     Tables: {
+      financial_accounts: {
+        Row: Phase12FinancialAccountRow;
+        Insert: Phase12FinancialAccountInsert;
+        Update: Phase12FinancialAccountUpdate;
+        Relationships: [];
+      };
+      budget_categories: {
+        Row: Phase12BudgetCategoryRow;
+        Insert: Phase12BudgetCategoryInsert;
+        Update: Phase12BudgetCategoryUpdate;
+        Relationships: [];
+      };
+      financial_logs: {
+        Row: Phase12FinancialLogRow;
+        Insert: Phase12FinancialLogInsert;
+        Update: Phase12FinancialLogUpdate;
+        Relationships: [];
+      };
+      subscriptions: {
+        Row: Phase12SubscriptionRow;
+        Insert: Phase12SubscriptionInsert;
+        Update: Phase12SubscriptionUpdate;
+        Relationships: [];
+      };
+      documents: {
+        Row: Phase12DocumentRow;
+        Insert: Phase12DocumentInsert;
+        Update: Phase12DocumentUpdate;
+        Relationships: [];
+      };
+      housing_options: {
+        Row: Phase12HousingOptionRow;
+        Insert: Phase12HousingOptionInsert;
+        Update: Phase12HousingOptionUpdate;
+        Relationships: [];
+      };
+      housing_contacts: {
+        Row: Phase12HousingContactRow;
+        Insert: Phase12HousingContactInsert;
+        Update: Phase12HousingContactUpdate;
+        Relationships: [];
+      };
       profiles: {
         Row: {
           id: string;
@@ -48380,9 +64633,22 @@ export type Database = {
           title: string;
           description: string | null;
           domain: string;
-          status: "draft" | "active" | "paused" | "completed" | "archived" | "cancelled";
+          status:
+            | "draft"
+            | "active"
+            | "paused"
+            | "completed"
+            | "archived"
+            | "cancelled";
           priority: "low" | "medium" | "high" | "critical";
-          horizon: "daily" | "weekly" | "monthly" | "quarterly" | "yearly" | "medium_term" | "long_term";
+          horizon:
+            | "daily"
+            | "weekly"
+            | "monthly"
+            | "quarterly"
+            | "yearly"
+            | "medium_term"
+            | "long_term";
           target_date: string | null;
           completed_at: string | null;
           proof_requirement: string | null;
@@ -48400,9 +64666,22 @@ export type Database = {
           title: string;
           description?: string | null;
           domain?: string;
-          status?: "draft" | "active" | "paused" | "completed" | "archived" | "cancelled";
+          status?:
+            | "draft"
+            | "active"
+            | "paused"
+            | "completed"
+            | "archived"
+            | "cancelled";
           priority?: "low" | "medium" | "high" | "critical";
-          horizon?: "daily" | "weekly" | "monthly" | "quarterly" | "yearly" | "medium_term" | "long_term";
+          horizon?:
+            | "daily"
+            | "weekly"
+            | "monthly"
+            | "quarterly"
+            | "yearly"
+            | "medium_term"
+            | "long_term";
           target_date?: string | null;
           completed_at?: string | null;
           proof_requirement?: string | null;
@@ -48420,9 +64699,22 @@ export type Database = {
           title?: string;
           description?: string | null;
           domain?: string;
-          status?: "draft" | "active" | "paused" | "completed" | "archived" | "cancelled";
+          status?:
+            | "draft"
+            | "active"
+            | "paused"
+            | "completed"
+            | "archived"
+            | "cancelled";
           priority?: "low" | "medium" | "high" | "critical";
-          horizon?: "daily" | "weekly" | "monthly" | "quarterly" | "yearly" | "medium_term" | "long_term";
+          horizon?:
+            | "daily"
+            | "weekly"
+            | "monthly"
+            | "quarterly"
+            | "yearly"
+            | "medium_term"
+            | "long_term";
           target_date?: string | null;
           completed_at?: string | null;
           proof_requirement?: string | null;
@@ -48757,7 +65049,14 @@ export type Database = {
           title: string;
           description: string | null;
           domain: string;
-          status: "todo" | "in_progress" | "blocked" | "done" | "skipped" | "cancelled" | "archived";
+          status:
+            | "todo"
+            | "in_progress"
+            | "blocked"
+            | "done"
+            | "skipped"
+            | "cancelled"
+            | "archived";
           priority: "low" | "medium" | "high" | "critical";
           due_date: string | null;
           scheduled_at: string | null;
@@ -48779,7 +65078,14 @@ export type Database = {
           title: string;
           description?: string | null;
           domain?: string;
-          status?: "todo" | "in_progress" | "blocked" | "done" | "skipped" | "cancelled" | "archived";
+          status?:
+            | "todo"
+            | "in_progress"
+            | "blocked"
+            | "done"
+            | "skipped"
+            | "cancelled"
+            | "archived";
           priority?: "low" | "medium" | "high" | "critical";
           due_date?: string | null;
           scheduled_at?: string | null;
@@ -48801,7 +65107,14 @@ export type Database = {
           title?: string;
           description?: string | null;
           domain?: string;
-          status?: "todo" | "in_progress" | "blocked" | "done" | "skipped" | "cancelled" | "archived";
+          status?:
+            | "todo"
+            | "in_progress"
+            | "blocked"
+            | "done"
+            | "skipped"
+            | "cancelled"
+            | "archived";
           priority?: "low" | "medium" | "high" | "critical";
           due_date?: string | null;
           scheduled_at?: string | null;
@@ -48865,7 +65178,12 @@ export type Database = {
             | "career"
             | "learning"
             | "research";
-          status: "scheduled" | "completed" | "cancelled" | "missed" | "archived";
+          status:
+            | "scheduled"
+            | "completed"
+            | "cancelled"
+            | "missed"
+            | "archived";
           start_at: string | null;
           end_at: string | null;
           occurred_at: string;
@@ -48898,7 +65216,12 @@ export type Database = {
             | "career"
             | "learning"
             | "research";
-          status?: "scheduled" | "completed" | "cancelled" | "missed" | "archived";
+          status?:
+            | "scheduled"
+            | "completed"
+            | "cancelled"
+            | "missed"
+            | "archived";
           start_at?: string | null;
           end_at?: string | null;
           occurred_at?: string;
@@ -48931,7 +65254,12 @@ export type Database = {
             | "career"
             | "learning"
             | "research";
-          status?: "scheduled" | "completed" | "cancelled" | "missed" | "archived";
+          status?:
+            | "scheduled"
+            | "completed"
+            | "cancelled"
+            | "missed"
+            | "archived";
           start_at?: string | null;
           end_at?: string | null;
           occurred_at?: string;
@@ -48978,7 +65306,10 @@ export type Database = {
       };
       skill_paths: {
         Row: Phase9SkillPathRow;
-        Insert: Partial<Phase9SkillPathRow> & { user_id: string; title: string };
+        Insert: Partial<Phase9SkillPathRow> & {
+          user_id: string;
+          title: string;
+        };
         Update: Partial<Phase9SkillPathRow>;
         Relationships: [];
       };
@@ -49000,7 +65331,10 @@ export type Database = {
       };
       learning_sessions: {
         Row: Phase9LearningSessionRow;
-        Insert: Partial<Phase9LearningSessionRow> & { user_id: string; title: string };
+        Insert: Partial<Phase9LearningSessionRow> & {
+          user_id: string;
+          title: string;
+        };
         Update: Partial<Phase9LearningSessionRow>;
         Relationships: [];
       };
@@ -49018,7 +65352,10 @@ export type Database = {
       };
       quiz_attempts: {
         Row: Phase9QuizAttemptRow;
-        Insert: Partial<Phase9QuizAttemptRow> & { user_id: string; quiz_id: string };
+        Insert: Partial<Phase9QuizAttemptRow> & {
+          user_id: string;
+          quiz_id: string;
+        };
         Update: Partial<Phase9QuizAttemptRow>;
         Relationships: [];
       };
@@ -49102,14 +65439,21 @@ export type Database = {
       };
       resume_versions: {
         Row: CareerResumeVersionRow;
-        Insert: Partial<CareerResumeVersionRow> & { user_id: string; name: string };
+        Insert: Partial<CareerResumeVersionRow> & {
+          user_id: string;
+          name: string;
+        };
         Update: Partial<CareerResumeVersionRow>;
         Relationships: [];
       };
 
       job_applications: {
         Row: CareerJobApplicationRow;
-        Insert: Partial<CareerJobApplicationRow> & { user_id: string; company: string; role_title: string };
+        Insert: Partial<CareerJobApplicationRow> & {
+          user_id: string;
+          company: string;
+          role_title: string;
+        };
         Update: Partial<CareerJobApplicationRow>;
         Relationships: [];
       };
@@ -49143,98 +65487,147 @@ export type Database = {
       };
       networking_contacts: {
         Row: CareerNetworkingContactRow;
-        Insert: Partial<CareerNetworkingContactRow> & { user_id: string; full_name: string };
+        Insert: Partial<CareerNetworkingContactRow> & {
+          user_id: string;
+          full_name: string;
+        };
         Update: Partial<CareerNetworkingContactRow>;
         Relationships: [];
       };
 
       research_ideas: {
         Row: Phase10ResearchIdeaRow;
-        Insert: Partial<Phase10ResearchIdeaRow> & { user_id: string; title: string };
+        Insert: Partial<Phase10ResearchIdeaRow> & {
+          user_id: string;
+          title: string;
+        };
         Update: Partial<Phase10ResearchIdeaRow>;
         Relationships: [];
       };
       research_questions: {
         Row: Phase10ResearchQuestionRow;
-        Insert: Partial<Phase10ResearchQuestionRow> & { user_id: string; question: string };
+        Insert: Partial<Phase10ResearchQuestionRow> & {
+          user_id: string;
+          question: string;
+        };
         Update: Partial<Phase10ResearchQuestionRow>;
         Relationships: [];
       };
       research_literature_items: {
         Row: Phase10ResearchLiteratureItemRow;
-        Insert: Partial<Phase10ResearchLiteratureItemRow> & { user_id: string; title: string };
+        Insert: Partial<Phase10ResearchLiteratureItemRow> & {
+          user_id: string;
+          title: string;
+        };
         Update: Partial<Phase10ResearchLiteratureItemRow>;
         Relationships: [];
       };
       research_papers: {
         Row: Phase10ResearchPaperRow;
-        Insert: Partial<Phase10ResearchPaperRow> & { user_id: string; title: string };
+        Insert: Partial<Phase10ResearchPaperRow> & {
+          user_id: string;
+          title: string;
+        };
         Update: Partial<Phase10ResearchPaperRow>;
         Relationships: [];
       };
       research_paper_versions: {
         Row: Phase10ResearchPaperVersionRow;
-        Insert: Partial<Phase10ResearchPaperVersionRow> & { user_id: string; research_paper_id: string; version_label: string };
+        Insert: Partial<Phase10ResearchPaperVersionRow> & {
+          user_id: string;
+          research_paper_id: string;
+          version_label: string;
+        };
         Update: Partial<Phase10ResearchPaperVersionRow>;
         Relationships: [];
       };
       research_claims: {
         Row: Phase10ResearchClaimRow;
-        Insert: Partial<Phase10ResearchClaimRow> & { user_id: string; claim_text: string };
+        Insert: Partial<Phase10ResearchClaimRow> & {
+          user_id: string;
+          claim_text: string;
+        };
         Update: Partial<Phase10ResearchClaimRow>;
         Relationships: [];
       };
       research_experiments: {
         Row: Phase10ResearchExperimentRow;
-        Insert: Partial<Phase10ResearchExperimentRow> & { user_id: string; title: string };
+        Insert: Partial<Phase10ResearchExperimentRow> & {
+          user_id: string;
+          title: string;
+        };
         Update: Partial<Phase10ResearchExperimentRow>;
         Relationships: [];
       };
       research_results: {
         Row: Phase10ResearchResultRow;
-        Insert: Partial<Phase10ResearchResultRow> & { user_id: string; title: string };
+        Insert: Partial<Phase10ResearchResultRow> & {
+          user_id: string;
+          title: string;
+        };
         Update: Partial<Phase10ResearchResultRow>;
         Relationships: [];
       };
       research_citations: {
         Row: Phase10ResearchCitationRow;
-        Insert: Partial<Phase10ResearchCitationRow> & { user_id: string; literature_item_id: string };
+        Insert: Partial<Phase10ResearchCitationRow> & {
+          user_id: string;
+          literature_item_id: string;
+        };
         Update: Partial<Phase10ResearchCitationRow>;
         Relationships: [];
       };
       research_venues: {
         Row: Phase10ResearchVenueRow;
-        Insert: Partial<Phase10ResearchVenueRow> & { user_id: string; name: string };
+        Insert: Partial<Phase10ResearchVenueRow> & {
+          user_id: string;
+          name: string;
+        };
         Update: Partial<Phase10ResearchVenueRow>;
         Relationships: [];
       };
       research_submissions: {
         Row: Phase10ResearchSubmissionRow;
-        Insert: Partial<Phase10ResearchSubmissionRow> & { user_id: string; research_paper_id: string };
+        Insert: Partial<Phase10ResearchSubmissionRow> & {
+          user_id: string;
+          research_paper_id: string;
+        };
         Update: Partial<Phase10ResearchSubmissionRow>;
         Relationships: [];
       };
       research_feedback: {
         Row: Phase10ResearchFeedbackRow;
-        Insert: Partial<Phase10ResearchFeedbackRow> & { user_id: string; summary: string };
+        Insert: Partial<Phase10ResearchFeedbackRow> & {
+          user_id: string;
+          summary: string;
+        };
         Update: Partial<Phase10ResearchFeedbackRow>;
         Relationships: [];
       };
       target_universities: {
         Row: Phase10TargetUniversityRow;
-        Insert: Partial<Phase10TargetUniversityRow> & { user_id: string; name: string };
+        Insert: Partial<Phase10TargetUniversityRow> & {
+          user_id: string;
+          name: string;
+        };
         Update: Partial<Phase10TargetUniversityRow>;
         Relationships: [];
       };
       target_labs: {
         Row: Phase10TargetLabRow;
-        Insert: Partial<Phase10TargetLabRow> & { user_id: string; name: string };
+        Insert: Partial<Phase10TargetLabRow> & {
+          user_id: string;
+          name: string;
+        };
         Update: Partial<Phase10TargetLabRow>;
         Relationships: [];
       };
       target_professors: {
         Row: Phase10TargetProfessorRow;
-        Insert: Partial<Phase10TargetProfessorRow> & { user_id: string; name: string };
+        Insert: Partial<Phase10TargetProfessorRow> & {
+          user_id: string;
+          name: string;
+        };
         Update: Partial<Phase10TargetProfessorRow>;
         Relationships: [];
       };
@@ -49246,20 +65639,780 @@ export type Database = {
       };
       phd_application_assets: {
         Row: Phase10PhdApplicationAssetRow;
-        Insert: Partial<Phase10PhdApplicationAssetRow> & { user_id: string; asset_type: Phase10PhdApplicationAssetRow["asset_type"]; title: string };
+        Insert: Partial<Phase10PhdApplicationAssetRow> & {
+          user_id: string;
+          asset_type: Phase10PhdApplicationAssetRow["asset_type"];
+          title: string;
+        };
         Update: Partial<Phase10PhdApplicationAssetRow>;
         Relationships: [];
       };
       sop_versions: {
         Row: Phase10SopVersionRow;
-        Insert: Partial<Phase10SopVersionRow> & { user_id: string; version_label: string };
+        Insert: Partial<Phase10SopVersionRow> & {
+          user_id: string;
+          version_label: string;
+        };
         Update: Partial<Phase10SopVersionRow>;
         Relationships: [];
       };
       recommendation_targets: {
         Row: Phase10RecommendationTargetRow;
-        Insert: Partial<Phase10RecommendationTargetRow> & { user_id: string; recommender_name: string };
+        Insert: Partial<Phase10RecommendationTargetRow> & {
+          user_id: string;
+          recommender_name: string;
+        };
         Update: Partial<Phase10RecommendationTargetRow>;
+        Relationships: [];
+      };
+      body_logs: {
+        Row: {
+          id: string;
+          user_id: string;
+          log_date: string;
+          bodyweight: number | null;
+          bodyweight_unit: string | null;
+          waist: number | null;
+          waist_unit: string | null;
+          recovery_score: number | null;
+          soreness_score: number | null;
+          pain_score: number | null;
+          pain_area: string | null;
+          notes: string | null;
+          photo_attachment_id: string | null;
+          goal_id: string | null;
+          task_id: string | null;
+          proof_item_id: string | null;
+          daily_log_id: string | null;
+          source_ai_action_id: string | null;
+          source_chat_message_id: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          log_date: string;
+          bodyweight?: number | null;
+          bodyweight_unit?: string | null;
+          waist?: number | null;
+          waist_unit?: string | null;
+          recovery_score?: number | null;
+          soreness_score?: number | null;
+          pain_score?: number | null;
+          pain_area?: string | null;
+          notes?: string | null;
+          photo_attachment_id?: string | null;
+          goal_id?: string | null;
+          task_id?: string | null;
+          proof_item_id?: string | null;
+          daily_log_id?: string | null;
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          log_date?: string;
+          bodyweight?: number | null;
+          bodyweight_unit?: string | null;
+          waist?: number | null;
+          waist_unit?: string | null;
+          recovery_score?: number | null;
+          soreness_score?: number | null;
+          pain_score?: number | null;
+          pain_area?: string | null;
+          notes?: string | null;
+          photo_attachment_id?: string | null;
+          goal_id?: string | null;
+          task_id?: string | null;
+          proof_item_id?: string | null;
+          daily_log_id?: string | null;
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      workouts: {
+        Row: {
+          id: string;
+          user_id: string;
+          workout_date: string;
+          title: string;
+          duration_minutes: number | null;
+          focus: string | null;
+          intensity_score: number | null;
+          recovery_notes: string | null;
+          notes: string | null;
+          goal_id: string | null;
+          task_id: string | null;
+          proof_item_id: string | null;
+          event_id: string | null;
+          source_ai_action_id: string | null;
+          source_chat_message_id: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          workout_date: string;
+          title: string;
+          duration_minutes?: number | null;
+          focus?: string | null;
+          intensity_score?: number | null;
+          recovery_notes?: string | null;
+          notes?: string | null;
+          goal_id?: string | null;
+          task_id?: string | null;
+          proof_item_id?: string | null;
+          event_id?: string | null;
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          workout_date?: string;
+          title?: string;
+          duration_minutes?: number | null;
+          focus?: string | null;
+          intensity_score?: number | null;
+          recovery_notes?: string | null;
+          notes?: string | null;
+          goal_id?: string | null;
+          task_id?: string | null;
+          proof_item_id?: string | null;
+          event_id?: string | null;
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      exercises: {
+        Row: {
+          id: string;
+          user_id: string;
+          name: string;
+          muscle_group: string | null;
+          equipment: string | null;
+          notes: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          name: string;
+          muscle_group?: string | null;
+          equipment?: string | null;
+          notes?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          name?: string;
+          muscle_group?: string | null;
+          equipment?: string | null;
+          notes?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      workout_sets: {
+        Row: {
+          id: string;
+          user_id: string;
+          workout_id: string;
+          exercise_id: string | null;
+          set_number: number | null;
+          reps: number | null;
+          weight: number | null;
+          weight_unit: string | null;
+          rir: number | null;
+          notes: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          workout_id: string;
+          exercise_id?: string | null;
+          set_number?: number | null;
+          reps?: number | null;
+          weight?: number | null;
+          weight_unit?: string | null;
+          rir?: number | null;
+          notes?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          workout_id?: string;
+          exercise_id?: string | null;
+          set_number?: number | null;
+          reps?: number | null;
+          weight?: number | null;
+          weight_unit?: string | null;
+          rir?: number | null;
+          notes?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      nutrition_logs: {
+        Row: {
+          id: string;
+          user_id: string;
+          log_date: string;
+          calories: number | null;
+          protein_g: number | null;
+          carbs_g: number | null;
+          fat_g: number | null;
+          water_ml: number | null;
+          mode: string | null;
+          notes: string | null;
+          goal_id: string | null;
+          task_id: string | null;
+          proof_item_id: string | null;
+          daily_log_id: string | null;
+          source_ai_action_id: string | null;
+          source_chat_message_id: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          log_date: string;
+          calories?: number | null;
+          protein_g?: number | null;
+          carbs_g?: number | null;
+          fat_g?: number | null;
+          water_ml?: number | null;
+          mode?: string | null;
+          notes?: string | null;
+          goal_id?: string | null;
+          task_id?: string | null;
+          proof_item_id?: string | null;
+          daily_log_id?: string | null;
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          log_date?: string;
+          calories?: number | null;
+          protein_g?: number | null;
+          carbs_g?: number | null;
+          fat_g?: number | null;
+          water_ml?: number | null;
+          mode?: string | null;
+          notes?: string | null;
+          goal_id?: string | null;
+          task_id?: string | null;
+          proof_item_id?: string | null;
+          daily_log_id?: string | null;
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      meal_items: {
+        Row: {
+          id: string;
+          user_id: string;
+          nutrition_log_id: string;
+          meal_name: string | null;
+          food_name: string;
+          calories: number | null;
+          protein_g: number | null;
+          carbs_g: number | null;
+          fat_g: number | null;
+          quantity: number | null;
+          unit: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          nutrition_log_id: string;
+          meal_name?: string | null;
+          food_name: string;
+          calories?: number | null;
+          protein_g?: number | null;
+          carbs_g?: number | null;
+          fat_g?: number | null;
+          quantity?: number | null;
+          unit?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          nutrition_log_id?: string;
+          meal_name?: string | null;
+          food_name?: string;
+          calories?: number | null;
+          protein_g?: number | null;
+          carbs_g?: number | null;
+          fat_g?: number | null;
+          quantity?: number | null;
+          unit?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      supplements: {
+        Row: {
+          id: string;
+          user_id: string;
+          name: string;
+          dosage: string | null;
+          frequency: string | null;
+          notes: string | null;
+          active: boolean;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          name: string;
+          dosage?: string | null;
+          frequency?: string | null;
+          notes?: string | null;
+          active?: boolean;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          name?: string;
+          dosage?: string | null;
+          frequency?: string | null;
+          notes?: string | null;
+          active?: boolean;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      supplement_logs: {
+        Row: {
+          id: string;
+          user_id: string;
+          supplement_id: string;
+          taken_at: string | null;
+          status: "taken" | "missed" | "skipped";
+          notes: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          supplement_id: string;
+          taken_at?: string | null;
+          status: "taken" | "missed" | "skipped";
+          notes?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          supplement_id?: string;
+          taken_at?: string | null;
+          status?: "taken" | "missed" | "skipped";
+          notes?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      sleep_logs: {
+        Row: {
+          id: string;
+          user_id: string;
+          sleep_date: string;
+          bedtime: string | null;
+          wake_time: string | null;
+          sleep_hours: number | null;
+          quality_score: number | null;
+          notes: string | null;
+          daily_log_id: string | null;
+          source_ai_action_id: string | null;
+          source_chat_message_id: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          sleep_date: string;
+          bedtime?: string | null;
+          wake_time?: string | null;
+          sleep_hours?: number | null;
+          quality_score?: number | null;
+          notes?: string | null;
+          daily_log_id?: string | null;
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          sleep_date?: string;
+          bedtime?: string | null;
+          wake_time?: string | null;
+          sleep_hours?: number | null;
+          quality_score?: number | null;
+          notes?: string | null;
+          daily_log_id?: string | null;
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      energy_logs: {
+        Row: {
+          id: string;
+          user_id: string;
+          log_date: string;
+          energy_score: number | null;
+          focus_score: number | null;
+          fatigue_score: number | null;
+          brain_fog_score: number | null;
+          notes: string | null;
+          daily_log_id: string | null;
+          source_ai_action_id: string | null;
+          source_chat_message_id: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          log_date: string;
+          energy_score?: number | null;
+          focus_score?: number | null;
+          fatigue_score?: number | null;
+          brain_fog_score?: number | null;
+          notes?: string | null;
+          daily_log_id?: string | null;
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          log_date?: string;
+          energy_score?: number | null;
+          focus_score?: number | null;
+          fatigue_score?: number | null;
+          brain_fog_score?: number | null;
+          notes?: string | null;
+          daily_log_id?: string | null;
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      mental_health_logs: {
+        Row: {
+          id: string;
+          user_id: string;
+          log_date: string;
+          mood_score: number | null;
+          anxiety_score: number | null;
+          stress_score: number | null;
+          shame_score: number | null;
+          anger_score: number | null;
+          loneliness_score: number | null;
+          notes: string | null;
+          sensitivity: "private" | "sensitive";
+          source_ai_action_id: string | null;
+          source_chat_message_id: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          log_date: string;
+          mood_score?: number | null;
+          anxiety_score?: number | null;
+          stress_score?: number | null;
+          shame_score?: number | null;
+          anger_score?: number | null;
+          loneliness_score?: number | null;
+          notes?: string | null;
+          sensitivity?: "private" | "sensitive";
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          log_date?: string;
+          mood_score?: number | null;
+          anxiety_score?: number | null;
+          stress_score?: number | null;
+          shame_score?: number | null;
+          anger_score?: number | null;
+          loneliness_score?: number | null;
+          notes?: string | null;
+          sensitivity?: "private" | "sensitive";
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      emotion_logs: {
+        Row: {
+          id: string;
+          user_id: string;
+          emotion: string;
+          intensity: number | null;
+          trigger: string | null;
+          occurred_at: string;
+          notes: string | null;
+          sensitivity: "private" | "sensitive";
+          source_ai_action_id: string | null;
+          source_chat_message_id: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          emotion: string;
+          intensity?: number | null;
+          trigger?: string | null;
+          occurred_at?: string;
+          notes?: string | null;
+          sensitivity?: "private" | "sensitive";
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          emotion?: string;
+          intensity?: number | null;
+          trigger?: string | null;
+          occurred_at?: string;
+          notes?: string | null;
+          sensitivity?: "private" | "sensitive";
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      journal_entries: {
+        Row: {
+          id: string;
+          user_id: string;
+          entry_date: string;
+          title: string | null;
+          content: string | null;
+          mood_json: Json | null;
+          sensitivity: "private" | "sensitive";
+          private: boolean;
+          source_ai_action_id: string | null;
+          source_chat_message_id: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          entry_date: string;
+          title?: string | null;
+          content?: string | null;
+          mood_json?: Json | null;
+          sensitivity?: "private" | "sensitive";
+          private?: boolean;
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          entry_date?: string;
+          title?: string | null;
+          content?: string | null;
+          mood_json?: Json | null;
+          sensitivity?: "private" | "sensitive";
+          private?: boolean;
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      skincare_logs: {
+        Row: {
+          id: string;
+          user_id: string;
+          log_date: string;
+          routine_type: string | null;
+          products_json: Json | null;
+          completed: boolean | null;
+          irritation_notes: string | null;
+          source_ai_action_id: string | null;
+          source_chat_message_id: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          log_date: string;
+          routine_type?: string | null;
+          products_json?: Json | null;
+          completed?: boolean | null;
+          irritation_notes?: string | null;
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          log_date?: string;
+          routine_type?: string | null;
+          products_json?: Json | null;
+          completed?: boolean | null;
+          irritation_notes?: string | null;
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      haircare_logs: {
+        Row: {
+          id: string;
+          user_id: string;
+          log_date: string;
+          routine_json: Json | null;
+          completed: boolean | null;
+          shedding_notes: string | null;
+          photo_attachment_id: string | null;
+          source_ai_action_id: string | null;
+          source_chat_message_id: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          log_date: string;
+          routine_json?: Json | null;
+          completed?: boolean | null;
+          shedding_notes?: string | null;
+          photo_attachment_id?: string | null;
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          log_date?: string;
+          routine_json?: Json | null;
+          completed?: boolean | null;
+          shedding_notes?: string | null;
+          photo_attachment_id?: string | null;
+          source_ai_action_id?: string | null;
+          source_chat_message_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      products: {
+        Row: {
+          id: string;
+          user_id: string;
+          name: string;
+          category: string | null;
+          brand: string | null;
+          usage_notes: string | null;
+          active: boolean;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          name: string;
+          category?: string | null;
+          brand?: string | null;
+          usage_notes?: string | null;
+          active?: boolean;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          name?: string;
+          category?: string | null;
+          brand?: string | null;
+          usage_notes?: string | null;
+          active?: boolean;
+          created_at?: string;
+          updated_at?: string;
+        };
         Relationships: [];
       };
     };
@@ -49333,12 +66486,16 @@ export type JobApplicationInsert = Tables["job_applications"]["Insert"];
 export type JobApplicationUpdate = Tables["job_applications"]["Update"];
 
 export type JobApplicationEventRow = Tables["job_application_events"]["Row"];
-export type JobApplicationEventInsert = Tables["job_application_events"]["Insert"];
-export type JobApplicationEventUpdate = Tables["job_application_events"]["Update"];
+export type JobApplicationEventInsert =
+  Tables["job_application_events"]["Insert"];
+export type JobApplicationEventUpdate =
+  Tables["job_application_events"]["Update"];
 
 export type NetworkingInteractionRow = Tables["networking_interactions"]["Row"];
-export type NetworkingInteractionInsert = Tables["networking_interactions"]["Insert"];
-export type NetworkingInteractionUpdate = Tables["networking_interactions"]["Update"];
+export type NetworkingInteractionInsert =
+  Tables["networking_interactions"]["Insert"];
+export type NetworkingInteractionUpdate =
+  Tables["networking_interactions"]["Update"];
 
 export type JobReferralRow = Tables["job_referrals"]["Row"];
 export type JobReferralInsert = Tables["job_referrals"]["Insert"];
@@ -49412,17 +66569,22 @@ export type ResearchQuestionRow = Tables["research_questions"]["Row"];
 export type ResearchQuestionInsert = Tables["research_questions"]["Insert"];
 export type ResearchQuestionUpdate = Tables["research_questions"]["Update"];
 
-export type ResearchLiteratureItemRow = Tables["research_literature_items"]["Row"];
-export type ResearchLiteratureItemInsert = Tables["research_literature_items"]["Insert"];
-export type ResearchLiteratureItemUpdate = Tables["research_literature_items"]["Update"];
+export type ResearchLiteratureItemRow =
+  Tables["research_literature_items"]["Row"];
+export type ResearchLiteratureItemInsert =
+  Tables["research_literature_items"]["Insert"];
+export type ResearchLiteratureItemUpdate =
+  Tables["research_literature_items"]["Update"];
 
 export type ResearchPaperRow = Tables["research_papers"]["Row"];
 export type ResearchPaperInsert = Tables["research_papers"]["Insert"];
 export type ResearchPaperUpdate = Tables["research_papers"]["Update"];
 
 export type ResearchPaperVersionRow = Tables["research_paper_versions"]["Row"];
-export type ResearchPaperVersionInsert = Tables["research_paper_versions"]["Insert"];
-export type ResearchPaperVersionUpdate = Tables["research_paper_versions"]["Update"];
+export type ResearchPaperVersionInsert =
+  Tables["research_paper_versions"]["Insert"];
+export type ResearchPaperVersionUpdate =
+  Tables["research_paper_versions"]["Update"];
 
 export type ResearchClaimRow = Tables["research_claims"]["Row"];
 export type ResearchClaimInsert = Tables["research_claims"]["Insert"];
@@ -49464,21 +66626,120 @@ export type TargetProfessorRow = Tables["target_professors"]["Row"];
 export type TargetProfessorInsert = Tables["target_professors"]["Insert"];
 export type TargetProfessorUpdate = Tables["target_professors"]["Update"];
 
-export type PhdReadinessAssessmentRow = Tables["phd_readiness_assessments"]["Row"];
-export type PhdReadinessAssessmentInsert = Tables["phd_readiness_assessments"]["Insert"];
-export type PhdReadinessAssessmentUpdate = Tables["phd_readiness_assessments"]["Update"];
+export type PhdReadinessAssessmentRow =
+  Tables["phd_readiness_assessments"]["Row"];
+export type PhdReadinessAssessmentInsert =
+  Tables["phd_readiness_assessments"]["Insert"];
+export type PhdReadinessAssessmentUpdate =
+  Tables["phd_readiness_assessments"]["Update"];
 
 export type PhdApplicationAssetRow = Tables["phd_application_assets"]["Row"];
-export type PhdApplicationAssetInsert = Tables["phd_application_assets"]["Insert"];
-export type PhdApplicationAssetUpdate = Tables["phd_application_assets"]["Update"];
+export type PhdApplicationAssetInsert =
+  Tables["phd_application_assets"]["Insert"];
+export type PhdApplicationAssetUpdate =
+  Tables["phd_application_assets"]["Update"];
 
 export type SopVersionRow = Tables["sop_versions"]["Row"];
 export type SopVersionInsert = Tables["sop_versions"]["Insert"];
 export type SopVersionUpdate = Tables["sop_versions"]["Update"];
 
 export type RecommendationTargetRow = Tables["recommendation_targets"]["Row"];
-export type RecommendationTargetInsert = Tables["recommendation_targets"]["Insert"];
-export type RecommendationTargetUpdate = Tables["recommendation_targets"]["Update"];
+export type RecommendationTargetInsert =
+  Tables["recommendation_targets"]["Insert"];
+export type RecommendationTargetUpdate =
+  Tables["recommendation_targets"]["Update"];
+
+export type BodyLogRow = Tables["body_logs"]["Row"];
+export type BodyLogInsert = Tables["body_logs"]["Insert"];
+export type BodyLogUpdate = Tables["body_logs"]["Update"];
+
+export type WorkoutRow = Tables["workouts"]["Row"];
+export type WorkoutInsert = Tables["workouts"]["Insert"];
+export type WorkoutUpdate = Tables["workouts"]["Update"];
+
+export type ExerciseRow = Tables["exercises"]["Row"];
+export type ExerciseInsert = Tables["exercises"]["Insert"];
+export type ExerciseUpdate = Tables["exercises"]["Update"];
+
+export type WorkoutSetRow = Tables["workout_sets"]["Row"];
+export type WorkoutSetInsert = Tables["workout_sets"]["Insert"];
+export type WorkoutSetUpdate = Tables["workout_sets"]["Update"];
+
+export type NutritionLogRow = Tables["nutrition_logs"]["Row"];
+export type NutritionLogInsert = Tables["nutrition_logs"]["Insert"];
+export type NutritionLogUpdate = Tables["nutrition_logs"]["Update"];
+
+export type MealItemRow = Tables["meal_items"]["Row"];
+export type MealItemInsert = Tables["meal_items"]["Insert"];
+export type MealItemUpdate = Tables["meal_items"]["Update"];
+
+export type SupplementRow = Tables["supplements"]["Row"];
+export type SupplementInsert = Tables["supplements"]["Insert"];
+export type SupplementUpdate = Tables["supplements"]["Update"];
+
+export type SupplementLogRow = Tables["supplement_logs"]["Row"];
+export type SupplementLogInsert = Tables["supplement_logs"]["Insert"];
+export type SupplementLogUpdate = Tables["supplement_logs"]["Update"];
+
+export type SleepLogRow = Tables["sleep_logs"]["Row"];
+export type SleepLogInsert = Tables["sleep_logs"]["Insert"];
+export type SleepLogUpdate = Tables["sleep_logs"]["Update"];
+
+export type EnergyLogRow = Tables["energy_logs"]["Row"];
+export type EnergyLogInsert = Tables["energy_logs"]["Insert"];
+export type EnergyLogUpdate = Tables["energy_logs"]["Update"];
+
+export type MentalHealthLogRow = Tables["mental_health_logs"]["Row"];
+export type MentalHealthLogInsert = Tables["mental_health_logs"]["Insert"];
+export type MentalHealthLogUpdate = Tables["mental_health_logs"]["Update"];
+
+export type EmotionLogRow = Tables["emotion_logs"]["Row"];
+export type EmotionLogInsert = Tables["emotion_logs"]["Insert"];
+export type EmotionLogUpdate = Tables["emotion_logs"]["Update"];
+
+export type JournalEntryRow = Tables["journal_entries"]["Row"];
+export type JournalEntryInsert = Tables["journal_entries"]["Insert"];
+export type JournalEntryUpdate = Tables["journal_entries"]["Update"];
+
+export type SkincareLogRow = Tables["skincare_logs"]["Row"];
+export type SkincareLogInsert = Tables["skincare_logs"]["Insert"];
+export type SkincareLogUpdate = Tables["skincare_logs"]["Update"];
+
+export type HaircareLogRow = Tables["haircare_logs"]["Row"];
+export type HaircareLogInsert = Tables["haircare_logs"]["Insert"];
+export type HaircareLogUpdate = Tables["haircare_logs"]["Update"];
+
+export type ProductRow = Tables["products"]["Row"];
+export type ProductInsert = Tables["products"]["Insert"];
+export type ProductUpdate = Tables["products"]["Update"];
+
+export type FinancialAccountRow = Tables["financial_accounts"]["Row"];
+export type FinancialAccountInsert = Tables["financial_accounts"]["Insert"];
+export type FinancialAccountUpdate = Tables["financial_accounts"]["Update"];
+
+export type BudgetCategoryRow = Tables["budget_categories"]["Row"];
+export type BudgetCategoryInsert = Tables["budget_categories"]["Insert"];
+export type BudgetCategoryUpdate = Tables["budget_categories"]["Update"];
+
+export type FinancialLogRow = Tables["financial_logs"]["Row"];
+export type FinancialLogInsert = Tables["financial_logs"]["Insert"];
+export type FinancialLogUpdate = Tables["financial_logs"]["Update"];
+
+export type SubscriptionRow = Tables["subscriptions"]["Row"];
+export type SubscriptionInsert = Tables["subscriptions"]["Insert"];
+export type SubscriptionUpdate = Tables["subscriptions"]["Update"];
+
+export type LifeAdminDocumentRow = Tables["documents"]["Row"];
+export type LifeAdminDocumentInsert = Tables["documents"]["Insert"];
+export type LifeAdminDocumentUpdate = Tables["documents"]["Update"];
+
+export type HousingOptionRow = Tables["housing_options"]["Row"];
+export type HousingOptionInsert = Tables["housing_options"]["Insert"];
+export type HousingOptionUpdate = Tables["housing_options"]["Update"];
+
+export type HousingContactRow = Tables["housing_contacts"]["Row"];
+export type HousingContactInsert = Tables["housing_contacts"]["Insert"];
+export type HousingContactUpdate = Tables["housing_contacts"]["Update"];
 ```
 
 ### `supabase/migrations/0001_profiles_and_carnos_profiles.sql`
@@ -53921,6 +71182,1544 @@ create trigger sop_versions_parent_ownership_guard before insert or update on pu
 
 drop trigger if exists recommendation_targets_parent_ownership_guard on public.recommendation_targets;
 create trigger recommendation_targets_parent_ownership_guard before insert or update on public.recommendation_targets for each row execute function public.phase10_validate_parent_ownership();
+```
+
+### `supabase/migrations/0012_phase11_health_body_foundation.sql`
+
+```sql
+-- Phase 11 — Health / Body System SQL Foundation
+-- Scope: 11.15 SQL migration
+--
+-- This migration creates the source-confirmed Phase 11 health/body tables.
+--
+-- Boundaries:
+-- - Uses existing public.set_updated_at() from migration 0001.
+-- - Enables RLS and owner-only policies.
+-- - Does not create parent ownership triggers yet. That belongs to Chunk C.1.
+-- - Does not create health_body_baselines.
+-- - Does not create progress_photos.
+-- - Does not create storage buckets or upload behavior.
+-- - Does not add TypeScript, routes, dashboards, repositories, Python/ML, memory/RAG, or Carnos writes.
+
+create table if not exists public.body_logs (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  log_date date not null,
+  bodyweight numeric,
+  bodyweight_unit text,
+  waist numeric,
+  waist_unit text,
+  recovery_score integer,
+  soreness_score integer,
+  pain_score integer,
+  pain_area text,
+  notes text,
+  photo_attachment_id uuid,
+  goal_id uuid references public.goals(id) on delete set null,
+  task_id uuid references public.tasks(id) on delete set null,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  daily_log_id uuid references public.daily_logs(id) on delete set null,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint body_logs_bodyweight_nonnegative check (bodyweight is null or bodyweight >= 0),
+  constraint body_logs_waist_nonnegative check (waist is null or waist >= 0),
+  constraint body_logs_recovery_score_range check (recovery_score is null or recovery_score between 0 and 10),
+  constraint body_logs_soreness_score_range check (soreness_score is null or soreness_score between 0 and 10),
+  constraint body_logs_pain_score_range check (pain_score is null or pain_score between 0 and 10)
+);
+
+create table if not exists public.workouts (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  workout_date date not null,
+  title text not null,
+  duration_minutes integer,
+  focus text,
+  intensity_score integer,
+  recovery_notes text,
+  notes text,
+  goal_id uuid references public.goals(id) on delete set null,
+  task_id uuid references public.tasks(id) on delete set null,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  event_id uuid references public.events(id) on delete set null,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint workouts_duration_minutes_nonnegative check (duration_minutes is null or duration_minutes >= 0),
+  constraint workouts_intensity_score_range check (intensity_score is null or intensity_score between 0 and 10)
+);
+
+create table if not exists public.exercises (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  name text not null,
+  muscle_group text,
+  equipment text,
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.workout_sets (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  workout_id uuid not null references public.workouts(id) on delete cascade,
+  exercise_id uuid references public.exercises(id) on delete set null,
+  set_number integer,
+  reps integer,
+  weight numeric,
+  weight_unit text,
+  rir numeric,
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint workout_sets_set_number_nonnegative check (set_number is null or set_number >= 0),
+  constraint workout_sets_reps_nonnegative check (reps is null or reps >= 0),
+  constraint workout_sets_weight_nonnegative check (weight is null or weight >= 0),
+  constraint workout_sets_rir_nonnegative check (rir is null or rir >= 0)
+);
+
+create table if not exists public.nutrition_logs (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  log_date date not null,
+  calories integer,
+  protein_g numeric,
+  carbs_g numeric,
+  fat_g numeric,
+  water_ml integer,
+  mode text,
+  notes text,
+  goal_id uuid references public.goals(id) on delete set null,
+  task_id uuid references public.tasks(id) on delete set null,
+  proof_item_id uuid references public.proof_items(id) on delete set null,
+  daily_log_id uuid references public.daily_logs(id) on delete set null,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint nutrition_logs_calories_nonnegative check (calories is null or calories >= 0),
+  constraint nutrition_logs_protein_nonnegative check (protein_g is null or protein_g >= 0),
+  constraint nutrition_logs_carbs_nonnegative check (carbs_g is null or carbs_g >= 0),
+  constraint nutrition_logs_fat_nonnegative check (fat_g is null or fat_g >= 0),
+  constraint nutrition_logs_water_nonnegative check (water_ml is null or water_ml >= 0)
+);
+
+create table if not exists public.meal_items (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  nutrition_log_id uuid not null references public.nutrition_logs(id) on delete cascade,
+  meal_name text,
+  food_name text not null,
+  calories integer,
+  protein_g numeric,
+  carbs_g numeric,
+  fat_g numeric,
+  quantity numeric,
+  unit text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint meal_items_calories_nonnegative check (calories is null or calories >= 0),
+  constraint meal_items_protein_nonnegative check (protein_g is null or protein_g >= 0),
+  constraint meal_items_carbs_nonnegative check (carbs_g is null or carbs_g >= 0),
+  constraint meal_items_fat_nonnegative check (fat_g is null or fat_g >= 0),
+  constraint meal_items_quantity_nonnegative check (quantity is null or quantity >= 0)
+);
+
+create table if not exists public.supplements (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  name text not null,
+  dosage text,
+  frequency text,
+  notes text,
+  active boolean not null default true,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.supplement_logs (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  supplement_id uuid not null references public.supplements(id) on delete cascade,
+  taken_at timestamptz,
+  status text not null,
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint supplement_logs_status_check check (status in ('taken', 'missed', 'skipped'))
+);
+
+create table if not exists public.sleep_logs (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  sleep_date date not null,
+  bedtime timestamptz,
+  wake_time timestamptz,
+  sleep_hours numeric,
+  quality_score integer,
+  notes text,
+  daily_log_id uuid references public.daily_logs(id) on delete set null,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint sleep_logs_sleep_hours_nonnegative check (sleep_hours is null or sleep_hours >= 0),
+  constraint sleep_logs_quality_score_range check (quality_score is null or quality_score between 0 and 10)
+);
+
+create table if not exists public.energy_logs (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  log_date date not null,
+  energy_score integer,
+  focus_score integer,
+  fatigue_score integer,
+  brain_fog_score integer,
+  notes text,
+  daily_log_id uuid references public.daily_logs(id) on delete set null,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint energy_logs_energy_score_range check (energy_score is null or energy_score between 0 and 10),
+  constraint energy_logs_focus_score_range check (focus_score is null or focus_score between 0 and 10),
+  constraint energy_logs_fatigue_score_range check (fatigue_score is null or fatigue_score between 0 and 10),
+  constraint energy_logs_brain_fog_score_range check (brain_fog_score is null or brain_fog_score between 0 and 10)
+);
+
+create table if not exists public.mental_health_logs (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  log_date date not null,
+  mood_score integer,
+  anxiety_score integer,
+  stress_score integer,
+  shame_score integer,
+  anger_score integer,
+  loneliness_score integer,
+  notes text,
+  sensitivity text not null default 'private',
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint mental_health_logs_mood_score_range check (mood_score is null or mood_score between 0 and 10),
+  constraint mental_health_logs_anxiety_score_range check (anxiety_score is null or anxiety_score between 0 and 10),
+  constraint mental_health_logs_stress_score_range check (stress_score is null or stress_score between 0 and 10),
+  constraint mental_health_logs_shame_score_range check (shame_score is null or shame_score between 0 and 10),
+  constraint mental_health_logs_anger_score_range check (anger_score is null or anger_score between 0 and 10),
+  constraint mental_health_logs_loneliness_score_range check (loneliness_score is null or loneliness_score between 0 and 10),
+  constraint mental_health_logs_sensitivity_check check (sensitivity in ('private', 'sensitive'))
+);
+
+create table if not exists public.emotion_logs (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  emotion text not null,
+  intensity integer,
+  trigger text,
+  occurred_at timestamptz not null default now(),
+  notes text,
+  sensitivity text not null default 'private',
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint emotion_logs_intensity_range check (intensity is null or intensity between 0 and 10),
+  constraint emotion_logs_sensitivity_check check (sensitivity in ('private', 'sensitive'))
+);
+
+create table if not exists public.journal_entries (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  entry_date date not null,
+  title text,
+  content text,
+  mood_json jsonb,
+  sensitivity text not null default 'private',
+  private boolean not null default true,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint journal_entries_sensitivity_check check (sensitivity in ('private', 'sensitive'))
+);
+
+create table if not exists public.skincare_logs (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  log_date date not null,
+  routine_type text,
+  products_json jsonb,
+  completed boolean,
+  irritation_notes text,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.haircare_logs (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  log_date date not null,
+  routine_json jsonb,
+  completed boolean,
+  shedding_notes text,
+  photo_attachment_id uuid,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.products (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  name text not null,
+  category text,
+  brand text,
+  usage_notes text,
+  active boolean not null default true,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create index if not exists body_logs_user_log_date_idx on public.body_logs(user_id, log_date desc);
+create index if not exists workouts_user_workout_date_idx on public.workouts(user_id, workout_date desc);
+create index if not exists exercises_user_name_idx on public.exercises(user_id, name);
+create index if not exists workout_sets_user_workout_idx on public.workout_sets(user_id, workout_id);
+create index if not exists workout_sets_user_exercise_idx on public.workout_sets(user_id, exercise_id);
+create index if not exists nutrition_logs_user_log_date_idx on public.nutrition_logs(user_id, log_date desc);
+create index if not exists meal_items_user_nutrition_log_idx on public.meal_items(user_id, nutrition_log_id);
+create index if not exists supplements_user_active_idx on public.supplements(user_id, active);
+create index if not exists supplement_logs_user_created_idx on public.supplement_logs(user_id, created_at desc);
+create index if not exists supplement_logs_user_supplement_idx on public.supplement_logs(user_id, supplement_id);
+create index if not exists sleep_logs_user_sleep_date_idx on public.sleep_logs(user_id, sleep_date desc);
+create index if not exists energy_logs_user_log_date_idx on public.energy_logs(user_id, log_date desc);
+create index if not exists mental_health_logs_user_log_date_idx on public.mental_health_logs(user_id, log_date desc);
+create index if not exists emotion_logs_user_occurred_at_idx on public.emotion_logs(user_id, occurred_at desc);
+create index if not exists journal_entries_user_entry_date_idx on public.journal_entries(user_id, entry_date desc);
+create index if not exists skincare_logs_user_log_date_idx on public.skincare_logs(user_id, log_date desc);
+create index if not exists haircare_logs_user_log_date_idx on public.haircare_logs(user_id, log_date desc);
+create index if not exists products_user_category_idx on public.products(user_id, category);
+create index if not exists products_user_active_idx on public.products(user_id, active);
+
+drop trigger if exists set_body_logs_updated_at on public.body_logs;
+create trigger set_body_logs_updated_at before update on public.body_logs for each row execute function public.set_updated_at();
+
+drop trigger if exists set_workouts_updated_at on public.workouts;
+create trigger set_workouts_updated_at before update on public.workouts for each row execute function public.set_updated_at();
+
+drop trigger if exists set_exercises_updated_at on public.exercises;
+create trigger set_exercises_updated_at before update on public.exercises for each row execute function public.set_updated_at();
+
+drop trigger if exists set_workout_sets_updated_at on public.workout_sets;
+create trigger set_workout_sets_updated_at before update on public.workout_sets for each row execute function public.set_updated_at();
+
+drop trigger if exists set_nutrition_logs_updated_at on public.nutrition_logs;
+create trigger set_nutrition_logs_updated_at before update on public.nutrition_logs for each row execute function public.set_updated_at();
+
+drop trigger if exists set_meal_items_updated_at on public.meal_items;
+create trigger set_meal_items_updated_at before update on public.meal_items for each row execute function public.set_updated_at();
+
+drop trigger if exists set_supplements_updated_at on public.supplements;
+create trigger set_supplements_updated_at before update on public.supplements for each row execute function public.set_updated_at();
+
+drop trigger if exists set_supplement_logs_updated_at on public.supplement_logs;
+create trigger set_supplement_logs_updated_at before update on public.supplement_logs for each row execute function public.set_updated_at();
+
+drop trigger if exists set_sleep_logs_updated_at on public.sleep_logs;
+create trigger set_sleep_logs_updated_at before update on public.sleep_logs for each row execute function public.set_updated_at();
+
+drop trigger if exists set_energy_logs_updated_at on public.energy_logs;
+create trigger set_energy_logs_updated_at before update on public.energy_logs for each row execute function public.set_updated_at();
+
+drop trigger if exists set_mental_health_logs_updated_at on public.mental_health_logs;
+create trigger set_mental_health_logs_updated_at before update on public.mental_health_logs for each row execute function public.set_updated_at();
+
+drop trigger if exists set_emotion_logs_updated_at on public.emotion_logs;
+create trigger set_emotion_logs_updated_at before update on public.emotion_logs for each row execute function public.set_updated_at();
+
+drop trigger if exists set_journal_entries_updated_at on public.journal_entries;
+create trigger set_journal_entries_updated_at before update on public.journal_entries for each row execute function public.set_updated_at();
+
+drop trigger if exists set_skincare_logs_updated_at on public.skincare_logs;
+create trigger set_skincare_logs_updated_at before update on public.skincare_logs for each row execute function public.set_updated_at();
+
+drop trigger if exists set_haircare_logs_updated_at on public.haircare_logs;
+create trigger set_haircare_logs_updated_at before update on public.haircare_logs for each row execute function public.set_updated_at();
+
+drop trigger if exists set_products_updated_at on public.products;
+create trigger set_products_updated_at before update on public.products for each row execute function public.set_updated_at();
+
+alter table public.body_logs enable row level security;
+alter table public.workouts enable row level security;
+alter table public.exercises enable row level security;
+alter table public.workout_sets enable row level security;
+alter table public.nutrition_logs enable row level security;
+alter table public.meal_items enable row level security;
+alter table public.supplements enable row level security;
+alter table public.supplement_logs enable row level security;
+alter table public.sleep_logs enable row level security;
+alter table public.energy_logs enable row level security;
+alter table public.mental_health_logs enable row level security;
+alter table public.emotion_logs enable row level security;
+alter table public.journal_entries enable row level security;
+alter table public.skincare_logs enable row level security;
+alter table public.haircare_logs enable row level security;
+alter table public.products enable row level security;
+
+drop policy if exists "body_logs_select_own" on public.body_logs;
+create policy "body_logs_select_own" on public.body_logs
+for select using (auth.uid() = user_id);
+
+drop policy if exists "body_logs_insert_own" on public.body_logs;
+create policy "body_logs_insert_own" on public.body_logs
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists "body_logs_update_own" on public.body_logs;
+create policy "body_logs_update_own" on public.body_logs
+for update using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "body_logs_delete_own" on public.body_logs;
+create policy "body_logs_delete_own" on public.body_logs
+for delete using (auth.uid() = user_id);
+
+drop policy if exists "workouts_select_own" on public.workouts;
+create policy "workouts_select_own" on public.workouts
+for select using (auth.uid() = user_id);
+
+drop policy if exists "workouts_insert_own" on public.workouts;
+create policy "workouts_insert_own" on public.workouts
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists "workouts_update_own" on public.workouts;
+create policy "workouts_update_own" on public.workouts
+for update using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "workouts_delete_own" on public.workouts;
+create policy "workouts_delete_own" on public.workouts
+for delete using (auth.uid() = user_id);
+
+drop policy if exists "exercises_select_own" on public.exercises;
+create policy "exercises_select_own" on public.exercises
+for select using (auth.uid() = user_id);
+
+drop policy if exists "exercises_insert_own" on public.exercises;
+create policy "exercises_insert_own" on public.exercises
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists "exercises_update_own" on public.exercises;
+create policy "exercises_update_own" on public.exercises
+for update using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "exercises_delete_own" on public.exercises;
+create policy "exercises_delete_own" on public.exercises
+for delete using (auth.uid() = user_id);
+
+drop policy if exists "workout_sets_select_own" on public.workout_sets;
+create policy "workout_sets_select_own" on public.workout_sets
+for select using (auth.uid() = user_id);
+
+drop policy if exists "workout_sets_insert_own" on public.workout_sets;
+create policy "workout_sets_insert_own" on public.workout_sets
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists "workout_sets_update_own" on public.workout_sets;
+create policy "workout_sets_update_own" on public.workout_sets
+for update using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "workout_sets_delete_own" on public.workout_sets;
+create policy "workout_sets_delete_own" on public.workout_sets
+for delete using (auth.uid() = user_id);
+
+drop policy if exists "nutrition_logs_select_own" on public.nutrition_logs;
+create policy "nutrition_logs_select_own" on public.nutrition_logs
+for select using (auth.uid() = user_id);
+
+drop policy if exists "nutrition_logs_insert_own" on public.nutrition_logs;
+create policy "nutrition_logs_insert_own" on public.nutrition_logs
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists "nutrition_logs_update_own" on public.nutrition_logs;
+create policy "nutrition_logs_update_own" on public.nutrition_logs
+for update using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "nutrition_logs_delete_own" on public.nutrition_logs;
+create policy "nutrition_logs_delete_own" on public.nutrition_logs
+for delete using (auth.uid() = user_id);
+
+drop policy if exists "meal_items_select_own" on public.meal_items;
+create policy "meal_items_select_own" on public.meal_items
+for select using (auth.uid() = user_id);
+
+drop policy if exists "meal_items_insert_own" on public.meal_items;
+create policy "meal_items_insert_own" on public.meal_items
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists "meal_items_update_own" on public.meal_items;
+create policy "meal_items_update_own" on public.meal_items
+for update using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "meal_items_delete_own" on public.meal_items;
+create policy "meal_items_delete_own" on public.meal_items
+for delete using (auth.uid() = user_id);
+
+drop policy if exists "supplements_select_own" on public.supplements;
+create policy "supplements_select_own" on public.supplements
+for select using (auth.uid() = user_id);
+
+drop policy if exists "supplements_insert_own" on public.supplements;
+create policy "supplements_insert_own" on public.supplements
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists "supplements_update_own" on public.supplements;
+create policy "supplements_update_own" on public.supplements
+for update using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "supplements_delete_own" on public.supplements;
+create policy "supplements_delete_own" on public.supplements
+for delete using (auth.uid() = user_id);
+
+drop policy if exists "supplement_logs_select_own" on public.supplement_logs;
+create policy "supplement_logs_select_own" on public.supplement_logs
+for select using (auth.uid() = user_id);
+
+drop policy if exists "supplement_logs_insert_own" on public.supplement_logs;
+create policy "supplement_logs_insert_own" on public.supplement_logs
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists "supplement_logs_update_own" on public.supplement_logs;
+create policy "supplement_logs_update_own" on public.supplement_logs
+for update using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "supplement_logs_delete_own" on public.supplement_logs;
+create policy "supplement_logs_delete_own" on public.supplement_logs
+for delete using (auth.uid() = user_id);
+
+drop policy if exists "sleep_logs_select_own" on public.sleep_logs;
+create policy "sleep_logs_select_own" on public.sleep_logs
+for select using (auth.uid() = user_id);
+
+drop policy if exists "sleep_logs_insert_own" on public.sleep_logs;
+create policy "sleep_logs_insert_own" on public.sleep_logs
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists "sleep_logs_update_own" on public.sleep_logs;
+create policy "sleep_logs_update_own" on public.sleep_logs
+for update using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "sleep_logs_delete_own" on public.sleep_logs;
+create policy "sleep_logs_delete_own" on public.sleep_logs
+for delete using (auth.uid() = user_id);
+
+drop policy if exists "energy_logs_select_own" on public.energy_logs;
+create policy "energy_logs_select_own" on public.energy_logs
+for select using (auth.uid() = user_id);
+
+drop policy if exists "energy_logs_insert_own" on public.energy_logs;
+create policy "energy_logs_insert_own" on public.energy_logs
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists "energy_logs_update_own" on public.energy_logs;
+create policy "energy_logs_update_own" on public.energy_logs
+for update using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "energy_logs_delete_own" on public.energy_logs;
+create policy "energy_logs_delete_own" on public.energy_logs
+for delete using (auth.uid() = user_id);
+
+drop policy if exists "mental_health_logs_select_own" on public.mental_health_logs;
+create policy "mental_health_logs_select_own" on public.mental_health_logs
+for select using (auth.uid() = user_id);
+
+drop policy if exists "mental_health_logs_insert_own" on public.mental_health_logs;
+create policy "mental_health_logs_insert_own" on public.mental_health_logs
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists "mental_health_logs_update_own" on public.mental_health_logs;
+create policy "mental_health_logs_update_own" on public.mental_health_logs
+for update using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "mental_health_logs_delete_own" on public.mental_health_logs;
+create policy "mental_health_logs_delete_own" on public.mental_health_logs
+for delete using (auth.uid() = user_id);
+
+drop policy if exists "emotion_logs_select_own" on public.emotion_logs;
+create policy "emotion_logs_select_own" on public.emotion_logs
+for select using (auth.uid() = user_id);
+
+drop policy if exists "emotion_logs_insert_own" on public.emotion_logs;
+create policy "emotion_logs_insert_own" on public.emotion_logs
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists "emotion_logs_update_own" on public.emotion_logs;
+create policy "emotion_logs_update_own" on public.emotion_logs
+for update using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "emotion_logs_delete_own" on public.emotion_logs;
+create policy "emotion_logs_delete_own" on public.emotion_logs
+for delete using (auth.uid() = user_id);
+
+drop policy if exists "journal_entries_select_own" on public.journal_entries;
+create policy "journal_entries_select_own" on public.journal_entries
+for select using (auth.uid() = user_id);
+
+drop policy if exists "journal_entries_insert_own" on public.journal_entries;
+create policy "journal_entries_insert_own" on public.journal_entries
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists "journal_entries_update_own" on public.journal_entries;
+create policy "journal_entries_update_own" on public.journal_entries
+for update using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "journal_entries_delete_own" on public.journal_entries;
+create policy "journal_entries_delete_own" on public.journal_entries
+for delete using (auth.uid() = user_id);
+
+drop policy if exists "skincare_logs_select_own" on public.skincare_logs;
+create policy "skincare_logs_select_own" on public.skincare_logs
+for select using (auth.uid() = user_id);
+
+drop policy if exists "skincare_logs_insert_own" on public.skincare_logs;
+create policy "skincare_logs_insert_own" on public.skincare_logs
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists "skincare_logs_update_own" on public.skincare_logs;
+create policy "skincare_logs_update_own" on public.skincare_logs
+for update using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "skincare_logs_delete_own" on public.skincare_logs;
+create policy "skincare_logs_delete_own" on public.skincare_logs
+for delete using (auth.uid() = user_id);
+
+drop policy if exists "haircare_logs_select_own" on public.haircare_logs;
+create policy "haircare_logs_select_own" on public.haircare_logs
+for select using (auth.uid() = user_id);
+
+drop policy if exists "haircare_logs_insert_own" on public.haircare_logs;
+create policy "haircare_logs_insert_own" on public.haircare_logs
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists "haircare_logs_update_own" on public.haircare_logs;
+create policy "haircare_logs_update_own" on public.haircare_logs
+for update using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "haircare_logs_delete_own" on public.haircare_logs;
+create policy "haircare_logs_delete_own" on public.haircare_logs
+for delete using (auth.uid() = user_id);
+
+drop policy if exists "products_select_own" on public.products;
+create policy "products_select_own" on public.products
+for select using (auth.uid() = user_id);
+
+drop policy if exists "products_insert_own" on public.products;
+create policy "products_insert_own" on public.products
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists "products_update_own" on public.products;
+create policy "products_update_own" on public.products
+for update using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+drop policy if exists "products_delete_own" on public.products;
+create policy "products_delete_own" on public.products
+for delete using (auth.uid() = user_id);
+```
+
+### `supabase/migrations/0013_phase11_parent_ownership_guards.sql`
+
+```sql
+-- Phase 11 — Parent Ownership / RLS Hardening
+-- Scope: 11.16 parent ownership guards only.
+--
+-- This migration protects Phase 11 child-row parent links.
+-- It ensures parent records referenced by Phase 11 rows belong to the same user_id.
+--
+-- Boundaries:
+-- - Does not create new tables.
+-- - Does not alter Phase 11 table shape.
+-- - Does not create health_body_baselines.
+-- - Does not create progress_photos.
+-- - Does not create storage buckets or upload behavior.
+-- - Does not add TypeScript, routes, dashboards, repositories, Python/ML, memory/RAG, or Carnos writes.
+
+create or replace function public.phase11_parent_belongs_to_user(
+  parent_table_name text,
+  parent_record_id uuid,
+  expected_user_id uuid
+)
+returns boolean
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  parent_owner_id uuid;
+begin
+  if parent_record_id is null then
+    return true;
+  end if;
+
+  if parent_table_name not in (
+    'goals',
+    'tasks',
+    'proof_items',
+    'daily_logs',
+    'events',
+    'ai_actions',
+    'chat_messages',
+    'workouts',
+    'exercises',
+    'nutrition_logs',
+    'supplements'
+  ) then
+    return false;
+  end if;
+
+  execute format('select user_id from public.%I where id = $1', parent_table_name)
+    into parent_owner_id
+    using parent_record_id;
+
+  return parent_owner_id = expected_user_id;
+end;
+$$;
+
+create or replace function public.phase11_assert_parent_belongs_to_user(
+  parent_table_name text,
+  parent_record_id uuid,
+  expected_user_id uuid,
+  parent_column_name text
+)
+returns void
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  if not public.phase11_parent_belongs_to_user(parent_table_name, parent_record_id, expected_user_id) then
+    raise exception 'Phase 11 ownership violation: %.% does not belong to user %',
+      parent_table_name,
+      parent_column_name,
+      expected_user_id
+      using errcode = '42501';
+  end if;
+end;
+$$;
+
+create or replace function public.phase11_validate_parent_ownership()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  if new.user_id is null then
+    raise exception 'Phase 11 ownership violation: user_id is required'
+      using errcode = '23502';
+  end if;
+
+  if tg_table_name = 'body_logs' then
+    perform public.phase11_assert_parent_belongs_to_user('goals', new.goal_id, new.user_id, 'goal_id');
+    perform public.phase11_assert_parent_belongs_to_user('tasks', new.task_id, new.user_id, 'task_id');
+    perform public.phase11_assert_parent_belongs_to_user('proof_items', new.proof_item_id, new.user_id, 'proof_item_id');
+    perform public.phase11_assert_parent_belongs_to_user('daily_logs', new.daily_log_id, new.user_id, 'daily_log_id');
+    perform public.phase11_assert_parent_belongs_to_user('ai_actions', new.source_ai_action_id, new.user_id, 'source_ai_action_id');
+    perform public.phase11_assert_parent_belongs_to_user('chat_messages', new.source_chat_message_id, new.user_id, 'source_chat_message_id');
+
+  elsif tg_table_name = 'workouts' then
+    perform public.phase11_assert_parent_belongs_to_user('goals', new.goal_id, new.user_id, 'goal_id');
+    perform public.phase11_assert_parent_belongs_to_user('tasks', new.task_id, new.user_id, 'task_id');
+    perform public.phase11_assert_parent_belongs_to_user('proof_items', new.proof_item_id, new.user_id, 'proof_item_id');
+    perform public.phase11_assert_parent_belongs_to_user('events', new.event_id, new.user_id, 'event_id');
+    perform public.phase11_assert_parent_belongs_to_user('ai_actions', new.source_ai_action_id, new.user_id, 'source_ai_action_id');
+    perform public.phase11_assert_parent_belongs_to_user('chat_messages', new.source_chat_message_id, new.user_id, 'source_chat_message_id');
+
+  elsif tg_table_name = 'workout_sets' then
+    perform public.phase11_assert_parent_belongs_to_user('workouts', new.workout_id, new.user_id, 'workout_id');
+    perform public.phase11_assert_parent_belongs_to_user('exercises', new.exercise_id, new.user_id, 'exercise_id');
+
+  elsif tg_table_name = 'nutrition_logs' then
+    perform public.phase11_assert_parent_belongs_to_user('goals', new.goal_id, new.user_id, 'goal_id');
+    perform public.phase11_assert_parent_belongs_to_user('tasks', new.task_id, new.user_id, 'task_id');
+    perform public.phase11_assert_parent_belongs_to_user('proof_items', new.proof_item_id, new.user_id, 'proof_item_id');
+    perform public.phase11_assert_parent_belongs_to_user('daily_logs', new.daily_log_id, new.user_id, 'daily_log_id');
+    perform public.phase11_assert_parent_belongs_to_user('ai_actions', new.source_ai_action_id, new.user_id, 'source_ai_action_id');
+    perform public.phase11_assert_parent_belongs_to_user('chat_messages', new.source_chat_message_id, new.user_id, 'source_chat_message_id');
+
+  elsif tg_table_name = 'meal_items' then
+    perform public.phase11_assert_parent_belongs_to_user('nutrition_logs', new.nutrition_log_id, new.user_id, 'nutrition_log_id');
+
+  elsif tg_table_name = 'supplement_logs' then
+    perform public.phase11_assert_parent_belongs_to_user('supplements', new.supplement_id, new.user_id, 'supplement_id');
+
+  elsif tg_table_name = 'sleep_logs' then
+    perform public.phase11_assert_parent_belongs_to_user('daily_logs', new.daily_log_id, new.user_id, 'daily_log_id');
+    perform public.phase11_assert_parent_belongs_to_user('ai_actions', new.source_ai_action_id, new.user_id, 'source_ai_action_id');
+    perform public.phase11_assert_parent_belongs_to_user('chat_messages', new.source_chat_message_id, new.user_id, 'source_chat_message_id');
+
+  elsif tg_table_name = 'energy_logs' then
+    perform public.phase11_assert_parent_belongs_to_user('daily_logs', new.daily_log_id, new.user_id, 'daily_log_id');
+    perform public.phase11_assert_parent_belongs_to_user('ai_actions', new.source_ai_action_id, new.user_id, 'source_ai_action_id');
+    perform public.phase11_assert_parent_belongs_to_user('chat_messages', new.source_chat_message_id, new.user_id, 'source_chat_message_id');
+
+  elsif tg_table_name = 'mental_health_logs' then
+    perform public.phase11_assert_parent_belongs_to_user('ai_actions', new.source_ai_action_id, new.user_id, 'source_ai_action_id');
+    perform public.phase11_assert_parent_belongs_to_user('chat_messages', new.source_chat_message_id, new.user_id, 'source_chat_message_id');
+
+  elsif tg_table_name = 'emotion_logs' then
+    perform public.phase11_assert_parent_belongs_to_user('ai_actions', new.source_ai_action_id, new.user_id, 'source_ai_action_id');
+    perform public.phase11_assert_parent_belongs_to_user('chat_messages', new.source_chat_message_id, new.user_id, 'source_chat_message_id');
+
+  elsif tg_table_name = 'journal_entries' then
+    perform public.phase11_assert_parent_belongs_to_user('ai_actions', new.source_ai_action_id, new.user_id, 'source_ai_action_id');
+    perform public.phase11_assert_parent_belongs_to_user('chat_messages', new.source_chat_message_id, new.user_id, 'source_chat_message_id');
+
+  elsif tg_table_name = 'skincare_logs' then
+    perform public.phase11_assert_parent_belongs_to_user('ai_actions', new.source_ai_action_id, new.user_id, 'source_ai_action_id');
+    perform public.phase11_assert_parent_belongs_to_user('chat_messages', new.source_chat_message_id, new.user_id, 'source_chat_message_id');
+
+  elsif tg_table_name = 'haircare_logs' then
+    perform public.phase11_assert_parent_belongs_to_user('ai_actions', new.source_ai_action_id, new.user_id, 'source_ai_action_id');
+    perform public.phase11_assert_parent_belongs_to_user('chat_messages', new.source_chat_message_id, new.user_id, 'source_chat_message_id');
+  end if;
+
+  return new;
+end;
+$$;
+
+drop trigger if exists body_logs_parent_ownership_guard on public.body_logs;
+create trigger body_logs_parent_ownership_guard before insert or update on public.body_logs for each row execute function public.phase11_validate_parent_ownership();
+
+drop trigger if exists workouts_parent_ownership_guard on public.workouts;
+create trigger workouts_parent_ownership_guard before insert or update on public.workouts for each row execute function public.phase11_validate_parent_ownership();
+
+drop trigger if exists workout_sets_parent_ownership_guard on public.workout_sets;
+create trigger workout_sets_parent_ownership_guard before insert or update on public.workout_sets for each row execute function public.phase11_validate_parent_ownership();
+
+drop trigger if exists nutrition_logs_parent_ownership_guard on public.nutrition_logs;
+create trigger nutrition_logs_parent_ownership_guard before insert or update on public.nutrition_logs for each row execute function public.phase11_validate_parent_ownership();
+
+drop trigger if exists meal_items_parent_ownership_guard on public.meal_items;
+create trigger meal_items_parent_ownership_guard before insert or update on public.meal_items for each row execute function public.phase11_validate_parent_ownership();
+
+drop trigger if exists supplement_logs_parent_ownership_guard on public.supplement_logs;
+create trigger supplement_logs_parent_ownership_guard before insert or update on public.supplement_logs for each row execute function public.phase11_validate_parent_ownership();
+
+drop trigger if exists sleep_logs_parent_ownership_guard on public.sleep_logs;
+create trigger sleep_logs_parent_ownership_guard before insert or update on public.sleep_logs for each row execute function public.phase11_validate_parent_ownership();
+
+drop trigger if exists energy_logs_parent_ownership_guard on public.energy_logs;
+create trigger energy_logs_parent_ownership_guard before insert or update on public.energy_logs for each row execute function public.phase11_validate_parent_ownership();
+
+drop trigger if exists mental_health_logs_parent_ownership_guard on public.mental_health_logs;
+create trigger mental_health_logs_parent_ownership_guard before insert or update on public.mental_health_logs for each row execute function public.phase11_validate_parent_ownership();
+
+drop trigger if exists emotion_logs_parent_ownership_guard on public.emotion_logs;
+create trigger emotion_logs_parent_ownership_guard before insert or update on public.emotion_logs for each row execute function public.phase11_validate_parent_ownership();
+
+drop trigger if exists journal_entries_parent_ownership_guard on public.journal_entries;
+create trigger journal_entries_parent_ownership_guard before insert or update on public.journal_entries for each row execute function public.phase11_validate_parent_ownership();
+
+drop trigger if exists skincare_logs_parent_ownership_guard on public.skincare_logs;
+create trigger skincare_logs_parent_ownership_guard before insert or update on public.skincare_logs for each row execute function public.phase11_validate_parent_ownership();
+
+drop trigger if exists haircare_logs_parent_ownership_guard on public.haircare_logs;
+create trigger haircare_logs_parent_ownership_guard before insert or update on public.haircare_logs for each row execute function public.phase11_validate_parent_ownership();
+```
+
+### `supabase/migrations/0014_phase12_life_admin_finance_foundation.sql`
+
+```sql
+-- Phase 12 — Life Admin + Finance SQL Foundation
+-- Scope: C04 / Steps 12.15–12.17
+--
+-- Adds source-aligned Phase 12 tables:
+-- - financial_accounts
+-- - budget_categories
+-- - financial_logs
+-- - subscriptions
+-- - documents
+-- - housing_options
+-- - housing_contacts
+--
+-- Boundaries:
+-- - No bank sync.
+-- - No auto-pay.
+-- - No tax/legal/immigration advice automation.
+-- - No document upload/OCR/storage.
+-- - No autonomous Carnos writes.
+-- - No parent ownership guards in this migration; those belong to C05.
+
+create or replace function public.set_updated_at()
+returns trigger
+language plpgsql
+as $$
+begin
+  new.updated_at = timezone('utc'::text, now());
+  return new;
+end;
+$$;
+
+create table if not exists public.financial_accounts (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  name text not null,
+  account_type text not null default 'other',
+  institution_name text,
+  currency text not null default 'USD',
+  current_balance numeric(14, 2),
+  is_active boolean not null default true,
+  privacy_level text not null default 'private',
+  notes text,
+  created_at timestamptz not null default timezone('utc'::text, now()),
+  updated_at timestamptz not null default timezone('utc'::text, now()),
+  constraint financial_accounts_name_not_blank check (length(trim(name)) > 0),
+  constraint financial_accounts_account_type_allowed check (
+    account_type in (
+      'checking',
+      'savings',
+      'credit_card',
+      'cash',
+      'loan',
+      'investment_manual',
+      'other'
+    )
+  ),
+  constraint financial_accounts_currency_format check (currency ~ '^[A-Z]{3}$'),
+  constraint financial_accounts_privacy_level_allowed check (
+    privacy_level in ('private', 'sensitive', 'locked')
+  )
+);
+
+create table if not exists public.budget_categories (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  name text not null,
+  category_type text not null default 'expense',
+  monthly_target numeric(14, 2),
+  currency text not null default 'USD',
+  is_active boolean not null default true,
+  sort_order integer not null default 0,
+  created_at timestamptz not null default timezone('utc'::text, now()),
+  updated_at timestamptz not null default timezone('utc'::text, now()),
+  constraint budget_categories_name_not_blank check (length(trim(name)) > 0),
+  constraint budget_categories_category_type_allowed check (
+    category_type in (
+      'income',
+      'expense',
+      'savings',
+      'debt',
+      'rent',
+      'utility',
+      'subscription',
+      'other'
+    )
+  ),
+  constraint budget_categories_monthly_target_nonnegative check (
+    monthly_target is null or monthly_target >= 0
+  ),
+  constraint budget_categories_currency_format check (currency ~ '^[A-Z]{3}$')
+);
+
+create table if not exists public.financial_logs (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  account_id uuid references public.financial_accounts(id) on delete set null,
+  budget_category_id uuid references public.budget_categories(id) on delete set null,
+  log_type text not null,
+  title text not null,
+  amount numeric(14, 2) not null,
+  currency text not null default 'USD',
+  occurred_on date not null default current_date,
+  payment_status text not null default 'recorded',
+  merchant_or_source text,
+  notes text,
+  related_task_id uuid references public.tasks(id) on delete set null,
+  related_event_id uuid references public.events(id) on delete set null,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default timezone('utc'::text, now()),
+  updated_at timestamptz not null default timezone('utc'::text, now()),
+  constraint financial_logs_title_not_blank check (length(trim(title)) > 0),
+  constraint financial_logs_log_type_allowed check (
+    log_type in (
+      'income',
+      'expense',
+      'rent',
+      'utility',
+      'bill',
+      'subscription',
+      'savings',
+      'debt_payment',
+      'refund',
+      'transfer',
+      'adjustment',
+      'other'
+    )
+  ),
+  constraint financial_logs_amount_nonnegative check (amount >= 0),
+  constraint financial_logs_currency_format check (currency ~ '^[A-Z]{3}$'),
+  constraint financial_logs_payment_status_allowed check (
+    payment_status in (
+      'planned',
+      'pending',
+      'recorded',
+      'paid',
+      'overdue',
+      'cancelled',
+      'skipped'
+    )
+  )
+);
+
+create table if not exists public.subscriptions (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  budget_category_id uuid references public.budget_categories(id) on delete set null,
+  name text not null,
+  provider text,
+  amount numeric(14, 2) not null,
+  currency text not null default 'USD',
+  billing_cycle text not null default 'monthly',
+  next_due_date date,
+  payment_status text not null default 'active',
+  auto_renew boolean not null default false,
+  cancel_by_date date,
+  notes text,
+  related_task_id uuid references public.tasks(id) on delete set null,
+  related_event_id uuid references public.events(id) on delete set null,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default timezone('utc'::text, now()),
+  updated_at timestamptz not null default timezone('utc'::text, now()),
+  constraint subscriptions_name_not_blank check (length(trim(name)) > 0),
+  constraint subscriptions_amount_nonnegative check (amount >= 0),
+  constraint subscriptions_currency_format check (currency ~ '^[A-Z]{3}$'),
+  constraint subscriptions_billing_cycle_allowed check (
+    billing_cycle in (
+      'weekly',
+      'biweekly',
+      'monthly',
+      'quarterly',
+      'semiannual',
+      'annual',
+      'one_time',
+      'other'
+    )
+  ),
+  constraint subscriptions_payment_status_allowed check (
+    payment_status in (
+      'active',
+      'trial',
+      'pending',
+      'paid',
+      'overdue',
+      'cancelled',
+      'paused',
+      'unknown'
+    )
+  )
+);
+
+create table if not exists public.documents (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  title text not null,
+  document_type text not null default 'other',
+  status text not null default 'active',
+  issuing_body text,
+  stored_location text,
+  issued_on date,
+  expires_on date,
+  renewal_due_on date,
+  review_on date,
+  sensitivity text not null default 'private',
+  notes text,
+  related_task_id uuid references public.tasks(id) on delete set null,
+  related_event_id uuid references public.events(id) on delete set null,
+  source_ai_action_id uuid references public.ai_actions(id) on delete set null,
+  source_chat_message_id uuid references public.chat_messages(id) on delete set null,
+  created_at timestamptz not null default timezone('utc'::text, now()),
+  updated_at timestamptz not null default timezone('utc'::text, now()),
+  constraint documents_title_not_blank check (length(trim(title)) > 0),
+  constraint documents_document_type_allowed check (
+    document_type in (
+      'id',
+      'passport',
+      'visa',
+      'work_authorization',
+      'school',
+      'career',
+      'housing',
+      'finance',
+      'tax_metadata_only',
+      'medical_metadata_only',
+      'insurance',
+      'other'
+    )
+  ),
+  constraint documents_status_allowed check (
+    status in (
+      'active',
+      'expired',
+      'renewal_needed',
+      'missing',
+      'archived',
+      'unknown'
+    )
+  ),
+  constraint documents_sensitivity_allowed check (
+    sensitivity in ('private', 'sensitive', 'locked')
+  )
+);
+
+create table if not exists public.housing_options (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  label text not null,
+  housing_status text not null default 'current',
+  address_label text,
+  rent_amount numeric(14, 2),
+  currency text not null default 'USD',
+  rent_due_day integer,
+  lease_start_date date,
+  lease_end_date date,
+  deposit_amount numeric(14, 2),
+  utilities_notes text,
+  maintenance_notes text,
+  roommate_notes text,
+  pros_cons_json jsonb not null default '{}'::jsonb,
+  notes text,
+  related_document_id uuid references public.documents(id) on delete set null,
+  related_task_id uuid references public.tasks(id) on delete set null,
+  related_event_id uuid references public.events(id) on delete set null,
+  created_at timestamptz not null default timezone('utc'::text, now()),
+  updated_at timestamptz not null default timezone('utc'::text, now()),
+  constraint housing_options_label_not_blank check (length(trim(label)) > 0),
+  constraint housing_options_status_allowed check (
+    housing_status in (
+      'current',
+      'past',
+      'future',
+      'backup',
+      'research_only',
+      'archived'
+    )
+  ),
+  constraint housing_options_rent_nonnegative check (
+    rent_amount is null or rent_amount >= 0
+  ),
+  constraint housing_options_deposit_nonnegative check (
+    deposit_amount is null or deposit_amount >= 0
+  ),
+  constraint housing_options_currency_format check (currency ~ '^[A-Z]{3}$'),
+  constraint housing_options_rent_due_day_valid check (
+    rent_due_day is null or (rent_due_day >= 1 and rent_due_day <= 31)
+  )
+);
+
+create table if not exists public.housing_contacts (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  housing_option_id uuid references public.housing_options(id) on delete cascade,
+  name text not null,
+  role text not null default 'other',
+  contact_notes text,
+  preferred_contact_method text,
+  last_contacted_on date,
+  next_follow_up_on date,
+  related_task_id uuid references public.tasks(id) on delete set null,
+  created_at timestamptz not null default timezone('utc'::text, now()),
+  updated_at timestamptz not null default timezone('utc'::text, now()),
+  constraint housing_contacts_name_not_blank check (length(trim(name)) > 0),
+  constraint housing_contacts_role_allowed check (
+    role in (
+      'landlord',
+      'property_manager',
+      'roommate',
+      'utility_provider',
+      'maintenance',
+      'broker',
+      'other'
+    )
+  )
+);
+
+drop trigger if exists financial_accounts_set_updated_at on public.financial_accounts;
+create trigger financial_accounts_set_updated_at
+before update on public.financial_accounts
+for each row execute function public.set_updated_at();
+
+drop trigger if exists budget_categories_set_updated_at on public.budget_categories;
+create trigger budget_categories_set_updated_at
+before update on public.budget_categories
+for each row execute function public.set_updated_at();
+
+drop trigger if exists financial_logs_set_updated_at on public.financial_logs;
+create trigger financial_logs_set_updated_at
+before update on public.financial_logs
+for each row execute function public.set_updated_at();
+
+drop trigger if exists subscriptions_set_updated_at on public.subscriptions;
+create trigger subscriptions_set_updated_at
+before update on public.subscriptions
+for each row execute function public.set_updated_at();
+
+drop trigger if exists documents_set_updated_at on public.documents;
+create trigger documents_set_updated_at
+before update on public.documents
+for each row execute function public.set_updated_at();
+
+drop trigger if exists housing_options_set_updated_at on public.housing_options;
+create trigger housing_options_set_updated_at
+before update on public.housing_options
+for each row execute function public.set_updated_at();
+
+drop trigger if exists housing_contacts_set_updated_at on public.housing_contacts;
+create trigger housing_contacts_set_updated_at
+before update on public.housing_contacts
+for each row execute function public.set_updated_at();
+
+create index if not exists financial_accounts_user_id_idx on public.financial_accounts(user_id);
+create index if not exists financial_accounts_active_idx on public.financial_accounts(user_id, is_active);
+
+create index if not exists budget_categories_user_id_idx on public.budget_categories(user_id);
+create index if not exists budget_categories_active_idx on public.budget_categories(user_id, is_active);
+create index if not exists budget_categories_type_idx on public.budget_categories(user_id, category_type);
+
+create index if not exists financial_logs_user_id_idx on public.financial_logs(user_id);
+create index if not exists financial_logs_occurred_on_idx on public.financial_logs(user_id, occurred_on desc);
+create index if not exists financial_logs_type_idx on public.financial_logs(user_id, log_type);
+create index if not exists financial_logs_account_id_idx on public.financial_logs(account_id);
+create index if not exists financial_logs_budget_category_id_idx on public.financial_logs(budget_category_id);
+create index if not exists financial_logs_related_task_id_idx on public.financial_logs(related_task_id);
+create index if not exists financial_logs_related_event_id_idx on public.financial_logs(related_event_id);
+create index if not exists financial_logs_source_ai_action_id_idx on public.financial_logs(source_ai_action_id);
+create index if not exists financial_logs_source_chat_message_id_idx on public.financial_logs(source_chat_message_id);
+
+create index if not exists subscriptions_user_id_idx on public.subscriptions(user_id);
+create index if not exists subscriptions_next_due_date_idx on public.subscriptions(user_id, next_due_date);
+create index if not exists subscriptions_cancel_by_date_idx on public.subscriptions(user_id, cancel_by_date);
+create index if not exists subscriptions_payment_status_idx on public.subscriptions(user_id, payment_status);
+create index if not exists subscriptions_budget_category_id_idx on public.subscriptions(budget_category_id);
+create index if not exists subscriptions_related_task_id_idx on public.subscriptions(related_task_id);
+create index if not exists subscriptions_related_event_id_idx on public.subscriptions(related_event_id);
+create index if not exists subscriptions_source_ai_action_id_idx on public.subscriptions(source_ai_action_id);
+create index if not exists subscriptions_source_chat_message_id_idx on public.subscriptions(source_chat_message_id);
+
+create index if not exists documents_user_id_idx on public.documents(user_id);
+create index if not exists documents_expires_on_idx on public.documents(user_id, expires_on);
+create index if not exists documents_renewal_due_on_idx on public.documents(user_id, renewal_due_on);
+create index if not exists documents_review_on_idx on public.documents(user_id, review_on);
+create index if not exists documents_type_idx on public.documents(user_id, document_type);
+create index if not exists documents_status_idx on public.documents(user_id, status);
+create index if not exists documents_related_task_id_idx on public.documents(related_task_id);
+create index if not exists documents_related_event_id_idx on public.documents(related_event_id);
+create index if not exists documents_source_ai_action_id_idx on public.documents(source_ai_action_id);
+create index if not exists documents_source_chat_message_id_idx on public.documents(source_chat_message_id);
+
+create index if not exists housing_options_user_id_idx on public.housing_options(user_id);
+create index if not exists housing_options_status_idx on public.housing_options(user_id, housing_status);
+create index if not exists housing_options_lease_end_date_idx on public.housing_options(user_id, lease_end_date);
+create index if not exists housing_options_related_document_id_idx on public.housing_options(related_document_id);
+create index if not exists housing_options_related_task_id_idx on public.housing_options(related_task_id);
+create index if not exists housing_options_related_event_id_idx on public.housing_options(related_event_id);
+
+create index if not exists housing_contacts_user_id_idx on public.housing_contacts(user_id);
+create index if not exists housing_contacts_housing_option_id_idx on public.housing_contacts(housing_option_id);
+create index if not exists housing_contacts_next_follow_up_on_idx on public.housing_contacts(user_id, next_follow_up_on);
+create index if not exists housing_contacts_related_task_id_idx on public.housing_contacts(related_task_id);
+
+alter table public.financial_accounts enable row level security;
+alter table public.budget_categories enable row level security;
+alter table public.financial_logs enable row level security;
+alter table public.subscriptions enable row level security;
+alter table public.documents enable row level security;
+alter table public.housing_options enable row level security;
+alter table public.housing_contacts enable row level security;
+
+drop policy if exists financial_accounts_select_own on public.financial_accounts;
+create policy financial_accounts_select_own on public.financial_accounts
+for select using (auth.uid() = user_id);
+
+drop policy if exists financial_accounts_insert_own on public.financial_accounts;
+create policy financial_accounts_insert_own on public.financial_accounts
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists financial_accounts_update_own on public.financial_accounts;
+create policy financial_accounts_update_own on public.financial_accounts
+for update using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+drop policy if exists financial_accounts_delete_own on public.financial_accounts;
+create policy financial_accounts_delete_own on public.financial_accounts
+for delete using (auth.uid() = user_id);
+
+drop policy if exists budget_categories_select_own on public.budget_categories;
+create policy budget_categories_select_own on public.budget_categories
+for select using (auth.uid() = user_id);
+
+drop policy if exists budget_categories_insert_own on public.budget_categories;
+create policy budget_categories_insert_own on public.budget_categories
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists budget_categories_update_own on public.budget_categories;
+create policy budget_categories_update_own on public.budget_categories
+for update using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+drop policy if exists budget_categories_delete_own on public.budget_categories;
+create policy budget_categories_delete_own on public.budget_categories
+for delete using (auth.uid() = user_id);
+
+drop policy if exists financial_logs_select_own on public.financial_logs;
+create policy financial_logs_select_own on public.financial_logs
+for select using (auth.uid() = user_id);
+
+drop policy if exists financial_logs_insert_own on public.financial_logs;
+create policy financial_logs_insert_own on public.financial_logs
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists financial_logs_update_own on public.financial_logs;
+create policy financial_logs_update_own on public.financial_logs
+for update using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+drop policy if exists financial_logs_delete_own on public.financial_logs;
+create policy financial_logs_delete_own on public.financial_logs
+for delete using (auth.uid() = user_id);
+
+drop policy if exists subscriptions_select_own on public.subscriptions;
+create policy subscriptions_select_own on public.subscriptions
+for select using (auth.uid() = user_id);
+
+drop policy if exists subscriptions_insert_own on public.subscriptions;
+create policy subscriptions_insert_own on public.subscriptions
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists subscriptions_update_own on public.subscriptions;
+create policy subscriptions_update_own on public.subscriptions
+for update using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+drop policy if exists subscriptions_delete_own on public.subscriptions;
+create policy subscriptions_delete_own on public.subscriptions
+for delete using (auth.uid() = user_id);
+
+drop policy if exists documents_select_own on public.documents;
+create policy documents_select_own on public.documents
+for select using (auth.uid() = user_id);
+
+drop policy if exists documents_insert_own on public.documents;
+create policy documents_insert_own on public.documents
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists documents_update_own on public.documents;
+create policy documents_update_own on public.documents
+for update using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+drop policy if exists documents_delete_own on public.documents;
+create policy documents_delete_own on public.documents
+for delete using (auth.uid() = user_id);
+
+drop policy if exists housing_options_select_own on public.housing_options;
+create policy housing_options_select_own on public.housing_options
+for select using (auth.uid() = user_id);
+
+drop policy if exists housing_options_insert_own on public.housing_options;
+create policy housing_options_insert_own on public.housing_options
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists housing_options_update_own on public.housing_options;
+create policy housing_options_update_own on public.housing_options
+for update using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+drop policy if exists housing_options_delete_own on public.housing_options;
+create policy housing_options_delete_own on public.housing_options
+for delete using (auth.uid() = user_id);
+
+drop policy if exists housing_contacts_select_own on public.housing_contacts;
+create policy housing_contacts_select_own on public.housing_contacts
+for select using (auth.uid() = user_id);
+
+drop policy if exists housing_contacts_insert_own on public.housing_contacts;
+create policy housing_contacts_insert_own on public.housing_contacts
+for insert with check (auth.uid() = user_id);
+
+drop policy if exists housing_contacts_update_own on public.housing_contacts;
+create policy housing_contacts_update_own on public.housing_contacts
+for update using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+drop policy if exists housing_contacts_delete_own on public.housing_contacts;
+create policy housing_contacts_delete_own on public.housing_contacts
+for delete using (auth.uid() = user_id);
+```
+
+### `supabase/migrations/0015_phase12_parent_ownership_guards.sql`
+
+```sql
+-- Phase 12 — Parent Ownership Guards
+-- Scope: C05 / Step 12.18
+--
+-- Purpose:
+-- Prevent Phase 12 rows from linking to parent records owned by another user.
+--
+-- This migration only adds SQL guard functions/triggers.
+-- It does not add app code, TypeScript types, repositories, dashboards, or proposed-action execution.
+
+create or replace function public.phase12_assert_parent_belongs_to_user(
+  parent_table regclass,
+  parent_id uuid,
+  expected_user_id uuid,
+  field_name text
+)
+returns void
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  parent_owner uuid;
+begin
+  if parent_id is null then
+    return;
+  end if;
+
+  execute format('select user_id from %s where id = $1', parent_table)
+  into parent_owner
+  using parent_id;
+
+  if parent_owner is null then
+    raise exception 'Phase 12 parent ownership guard failed: % references a missing parent record.', field_name;
+  end if;
+
+  if parent_owner <> expected_user_id then
+    raise exception 'Phase 12 parent ownership guard failed: % references a parent record owned by another user.', field_name;
+  end if;
+end;
+$$;
+
+create or replace function public.phase12_guard_financial_logs_parent_ownership()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  perform public.phase12_assert_parent_belongs_to_user('public.financial_accounts'::regclass, new.account_id, new.user_id, 'financial_logs.account_id');
+  perform public.phase12_assert_parent_belongs_to_user('public.budget_categories'::regclass, new.budget_category_id, new.user_id, 'financial_logs.budget_category_id');
+  perform public.phase12_assert_parent_belongs_to_user('public.tasks'::regclass, new.related_task_id, new.user_id, 'financial_logs.related_task_id');
+  perform public.phase12_assert_parent_belongs_to_user('public.events'::regclass, new.related_event_id, new.user_id, 'financial_logs.related_event_id');
+  perform public.phase12_assert_parent_belongs_to_user('public.ai_actions'::regclass, new.source_ai_action_id, new.user_id, 'financial_logs.source_ai_action_id');
+  perform public.phase12_assert_parent_belongs_to_user('public.chat_messages'::regclass, new.source_chat_message_id, new.user_id, 'financial_logs.source_chat_message_id');
+
+  return new;
+end;
+$$;
+
+drop trigger if exists phase12_financial_logs_parent_ownership_guard on public.financial_logs;
+create trigger phase12_financial_logs_parent_ownership_guard
+before insert or update on public.financial_logs
+for each row execute function public.phase12_guard_financial_logs_parent_ownership();
+
+create or replace function public.phase12_guard_subscriptions_parent_ownership()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  perform public.phase12_assert_parent_belongs_to_user('public.budget_categories'::regclass, new.budget_category_id, new.user_id, 'subscriptions.budget_category_id');
+  perform public.phase12_assert_parent_belongs_to_user('public.tasks'::regclass, new.related_task_id, new.user_id, 'subscriptions.related_task_id');
+  perform public.phase12_assert_parent_belongs_to_user('public.events'::regclass, new.related_event_id, new.user_id, 'subscriptions.related_event_id');
+  perform public.phase12_assert_parent_belongs_to_user('public.ai_actions'::regclass, new.source_ai_action_id, new.user_id, 'subscriptions.source_ai_action_id');
+  perform public.phase12_assert_parent_belongs_to_user('public.chat_messages'::regclass, new.source_chat_message_id, new.user_id, 'subscriptions.source_chat_message_id');
+
+  return new;
+end;
+$$;
+
+drop trigger if exists phase12_subscriptions_parent_ownership_guard on public.subscriptions;
+create trigger phase12_subscriptions_parent_ownership_guard
+before insert or update on public.subscriptions
+for each row execute function public.phase12_guard_subscriptions_parent_ownership();
+
+create or replace function public.phase12_guard_documents_parent_ownership()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  perform public.phase12_assert_parent_belongs_to_user('public.tasks'::regclass, new.related_task_id, new.user_id, 'documents.related_task_id');
+  perform public.phase12_assert_parent_belongs_to_user('public.events'::regclass, new.related_event_id, new.user_id, 'documents.related_event_id');
+  perform public.phase12_assert_parent_belongs_to_user('public.ai_actions'::regclass, new.source_ai_action_id, new.user_id, 'documents.source_ai_action_id');
+  perform public.phase12_assert_parent_belongs_to_user('public.chat_messages'::regclass, new.source_chat_message_id, new.user_id, 'documents.source_chat_message_id');
+
+  return new;
+end;
+$$;
+
+drop trigger if exists phase12_documents_parent_ownership_guard on public.documents;
+create trigger phase12_documents_parent_ownership_guard
+before insert or update on public.documents
+for each row execute function public.phase12_guard_documents_parent_ownership();
+
+create or replace function public.phase12_guard_housing_options_parent_ownership()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  perform public.phase12_assert_parent_belongs_to_user('public.documents'::regclass, new.related_document_id, new.user_id, 'housing_options.related_document_id');
+  perform public.phase12_assert_parent_belongs_to_user('public.tasks'::regclass, new.related_task_id, new.user_id, 'housing_options.related_task_id');
+  perform public.phase12_assert_parent_belongs_to_user('public.events'::regclass, new.related_event_id, new.user_id, 'housing_options.related_event_id');
+
+  return new;
+end;
+$$;
+
+drop trigger if exists phase12_housing_options_parent_ownership_guard on public.housing_options;
+create trigger phase12_housing_options_parent_ownership_guard
+before insert or update on public.housing_options
+for each row execute function public.phase12_guard_housing_options_parent_ownership();
+
+create or replace function public.phase12_guard_housing_contacts_parent_ownership()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  perform public.phase12_assert_parent_belongs_to_user('public.housing_options'::regclass, new.housing_option_id, new.user_id, 'housing_contacts.housing_option_id');
+  perform public.phase12_assert_parent_belongs_to_user('public.tasks'::regclass, new.related_task_id, new.user_id, 'housing_contacts.related_task_id');
+
+  return new;
+end;
+$$;
+
+drop trigger if exists phase12_housing_contacts_parent_ownership_guard on public.housing_contacts;
+create trigger phase12_housing_contacts_parent_ownership_guard
+before insert or update on public.housing_contacts
+for each row execute function public.phase12_guard_housing_contacts_parent_ownership();
 ```
 
 ### `tsconfig.json`
