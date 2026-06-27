@@ -1244,3 +1244,9 @@ Timestamp: 2026-06-27 06:21 UTC
 - Locked a targeted pre-Grimoire gap audit.
 - Confirmed chunks 06, 07, 08, and 09 need completion before Grimoire.
 - Confirmed chunks 18, 20, and 21 are future chunks, not completed work.
+
+## Phase 12.9B — AI Extraction Route and Zod Contract
+
+- Added deterministic AI extraction API route.
+- Added Zod proposed-action envelope schema.
+- Preserved confirmation-first, no-autonomous-write boundary.

@@ -3696,3 +3696,9 @@ Started a targeted pre-Grimoire completion pass after source-vs-repo inspection 
 - Chunk 09 AI Extraction / Pending Updates
 
 This pass is not a rebuild. It patches only verified missing items before Grimoire.
+
+## Phase 12.9B — AI Extraction Route and Zod Contract
+
+Added a deterministic `POST /api/ai/extract` route and introduced a Zod envelope schema for proposed-action validation.
+
+The route validates proposed action payloads and returns confirmation-ready output without performing writes, calling an LLM, or bypassing the safe-write flow.

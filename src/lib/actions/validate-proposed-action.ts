@@ -1,3 +1,4 @@
+import { z } from "zod";
 import {
   isProposedActionType,
   type ProposedActionType,
@@ -18,6 +19,19 @@ import {
   type ProposedProofType,
   type ProposedTaskStatus,
 } from "./proposed-action-contracts";
+
+export const ProposedActionZodEnvelope = z.object({
+  action_type: z.string(),
+  source: z.string(),
+  payload: z.record(z.string(), z.unknown()),
+  reason: z.string().optional(),
+  confidence: z.number().min(0).max(1).optional(),
+  priority: z.string().optional(),
+  domain: z.string().optional(),
+  evidence_refs: z.array(z.string()).optional(),
+  source_chat_session_id: z.string().optional(),
+  source_chat_message_id: z.string().optional(),
+});
 
 const VALID_SOURCES = ["manual", "carnos", "python_ml", "system", "import"] as const;
 

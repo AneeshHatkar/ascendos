@@ -2570,3 +2570,13 @@ Added:
 Purpose:
 - Lock the real partial chunks before Grimoire.
 - Prevent accidental counting of placeholder future chunks as complete.
+
+## Phase 12.9B — AI Extraction Route and Zod Contract
+
+Changed:
+- src/app/api/ai/extract/route.ts
+- src/lib/actions/validate-proposed-action.ts
+- docs/phase-reports/PHASE_12_9B_AI_EXTRACTION_ZOD_ROUTE.md
+
+Purpose:
+- Complete missing Chunk 09 extraction route and Zod schema marker before Grimoire.

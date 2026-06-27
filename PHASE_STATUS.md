@@ -1949,3 +1949,12 @@ Patch targets:
 - 07 Calendar / Timeline
 - 08 Carnos Chat
 - 09 AI Extraction / Pending Updates
+
+## Phase 12.9B — AI Extraction Route and Zod Contract
+
+Status: Implemented locally pending validation and commit.
+
+Completed:
+- Chunk 09 API extraction route exists.
+- Zod contract marker exists in proposed-action validation.
+- Extraction route remains no-write and confirmation-first.
