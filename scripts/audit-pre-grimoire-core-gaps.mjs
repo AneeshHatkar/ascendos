@@ -76,7 +76,28 @@ check("action lifecycle exists", exists("src/lib/actions/action-lifecycle.ts"));
 check("execution dispatcher exists", exists("src/lib/actions/execution-dispatcher.ts"));
 check("pending updates drawer exists", exists("src/components/actions/pending-updates-drawer.tsx"));
 check("proposed action review card exists", exists("src/components/actions/proposed-action-review-card.tsx"));
-check("drawer says callbacks not connected", includes("src/app/carnos/page.tsx", "Confirmation callbacks are intentionally not connected"));
+check(
+  "approve route exists",
+  exists("src/app/api/actions/[actionId]/approve/route.ts"),
+);
+check(
+  "reject route exists",
+  exists("src/app/api/actions/[actionId]/reject/route.ts"),
+);
+check(
+  "pending drawer has approve wiring",
+  includes("src/components/actions/pending-updates-drawer.tsx", "approve") &&
+    includes("src/components/actions/pending-updates-drawer.tsx", "fetch"),
+);
+check(
+  "pending drawer has reject wiring",
+  includes("src/components/actions/pending-updates-drawer.tsx", "reject") &&
+    includes("src/components/actions/pending-updates-drawer.tsx", "fetch"),
+);
+check(
+  "Carnos page no longer claims confirmation callbacks are disconnected",
+  !includes("src/app/carnos/page.tsx", "Confirmation callbacks are intentionally not connected"),
+);
 check("API extraction route exists", exists("src/app/api/extract/route.ts") || exists("src/app/api/ai/extract/route.ts") || exists("src/app/api/carnos/extract/route.ts"));
 check("Zod import exists in action validation", includes("src/lib/actions/validate-proposed-action.ts", "zod") || includes("src/lib/actions/validate-proposed-action.ts", "Zod"));
 
