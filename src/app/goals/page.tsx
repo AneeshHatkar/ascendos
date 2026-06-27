@@ -1,3 +1,5 @@
+import { GoalProofProposalComposer } from "@/components/goals/goal-proof-proposal-composer";
+
 import {
   AuthenticatedDashboardShell,
   DataList,
@@ -139,7 +141,7 @@ export default function GoalsPage() {
     <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
       <AuthenticatedDashboardShell
         title="Goals Dashboard"
-        description="Read-only view of goals stored in the Phase 4 SQL spine."
+        description="Goals and proof view with confirmation-first proposal creation."
       >
         {async ({ user }) => {
           const supabase = await createSupabaseServerClient();
@@ -171,13 +173,14 @@ export default function GoalsPage() {
                       Goals Read View
                     </h1>
                     <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-400">
-                      This page reads goal records from the SQL-backed goals table.
-                      It does not create, edit, delete, reorder, score, or execute goals yet.
+                      This page reads goal records from the SQL-backed goals table and can create
+                      confirmation-first proposed actions for new goals or proof items.
+                      It still does not directly edit, delete, reorder, score, or execute goals.
                     </p>
                   </div>
 
                   <StatusPill
-                    label={error ? "Read warning" : "Read-only mode"}
+                    label={error ? "Read warning" : "Proposal mode"}
                     tone={error ? "warning" : "success"}
                   />
                 </div>
@@ -201,6 +204,13 @@ export default function GoalsPage() {
                 />
               </section>
 
+              <GoalProofProposalComposer
+                goals={goals.map((goal) => ({
+                  id: readText(goal, "id", ""),
+                  title: readText(goal, "title", "Untitled goal"),
+                }))}
+              />
+
               <SectionCard
                 title="Goal records"
                 description="Read-only list from the goals repository helper."
@@ -217,7 +227,7 @@ export default function GoalsPage() {
                   emptyState={
                     <EmptyState
                       title="No goals found"
-                      description="The goals read path is wired, but no goal records exist for this user yet. Goal creation remains intentionally disabled until the safe write/proposed-action phase."
+                      description="The goals read path is wired, but no goal records exist for this user yet. Use the proposal composer above to create a pending-confirmation goal action."
                     />
                   }
                 />

@@ -2599,3 +2599,10 @@ Purpose:
 - `src/components/carnos/carnos-message-composer.tsx` — client composer that calls the server route without browser Supabase access.
 - `src/app/carnos/page.tsx` — surfaces the persistence composer in the Carnos dashboard.
 - `docs/phase-reports/PHASE_12_9D_CARNOS_CHAT_PERSISTENCE.md` — scope and boundary report.
+
+## Phase 12.9E — Goals / Proof Proposal Creation
+
+- `src/app/api/goals/proposals/route.ts` — server route for creating pending goal/proof proposals.
+- `src/components/goals/goal-proof-proposal-composer.tsx` — client composer that posts proposal requests without direct SQL writes.
+- `src/app/goals/page.tsx` — wired composer and corrected disabled-creation language.
+- `docs/phase-reports/PHASE_12_9E_GOALS_PROOF_PROPOSAL_CREATION.md` — phase report.

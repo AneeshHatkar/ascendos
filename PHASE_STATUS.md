@@ -1981,3 +1981,11 @@ Latest hardening:
 
 Next:
 - Phase 12.9E — Goals / Proof honest creation surface.
+
+## Phase 12.9E — Goals / Proof Proposal Creation
+
+Status: Verification pending.
+
+- `/goals` now supports confirmation-first proposal creation.
+- Goal/proof writes remain routed through `ai_actions` and the Phase 6 safe action flow.
+- Next pre-Grimoire checks: remaining Calendar/Timeline honesty gap, then final pre-Grimoire audit.

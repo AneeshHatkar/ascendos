@@ -3721,3 +3721,10 @@ No Grimoire implementation was started.
 - Added `CarnosMessageComposer` on `/carnos`.
 - Preserved no-generation/no-memory/no-autonomous-action boundary.
 - Added Phase 12.9D completion report.
+
+## Phase 12.9E — Goals / Proof Proposal Creation
+
+- Added a confirmation-first proposal composer to `/goals`.
+- Added `/api/goals/proposals` for server-owned creation of pending `ai_actions`.
+- Goal and proof item creation now enters the existing proposed-action confirmation lifecycle.
+- No direct goal/proof table writes were added from the client UI.
