@@ -1722,3 +1722,36 @@ Progress:
 Next:
 
 - C10 — inspect dashboard component patterns before building Life Admin / Finance / Housing / Documents UI surfaces.
+
+## C10 — Admin / Finance Dashboard Components
+
+Status: Complete pending verification.
+
+Completed:
+
+- 12.25 Build Life Admin dashboard component.
+- 12.26 Build Finance dashboard component.
+- 12.27 Build Housing dashboard component.
+- 12.28 Build Documents dashboard component.
+- 12.29 Export the dashboard components.
+
+Progress:
+
+- Completed before this chunk: 23 / 45.
+- Completed after this chunk: 28 / 45.
+- Remaining after this chunk: 17 / 45.
+
+Touched:
+
+- Dashboard components.
+- Dashboard component barrel.
+- Logs only.
+
+Deferred:
+
+- Route wiring.
+- Command dashboard visibility.
+- Calendar visibility.
+- Audit gate.
+- Smoke checklist.
+- Completion report.

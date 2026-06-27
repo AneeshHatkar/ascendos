@@ -1194,3 +1194,9 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - Added read-only dashboard aggregation helpers for admin and finance records.
 - Added summary counts for financial logs, subscriptions, documents, housing records, and due/overdue admin attention items.
 - Kept SQL, repositories, dashboard components, and routes unchanged.
+
+## Admin and Finance Dashboard Components
+
+- Added read-only dashboard components for Life Admin, Finance, Documents, and Housing.
+- Added shared warning, privacy, state, and proposed-action preview boundary panels.
+- Exported the new dashboard components without wiring routes yet.

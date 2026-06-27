@@ -3562,3 +3562,23 @@ Boundaries:
 - No repository changes.
 - No components or route wiring.
 - No proposed-action execution.
+
+## C10 — Admin / Finance Dashboard Components
+
+Status: Complete pending verification.
+
+Completed:
+
+- Added read-only dashboard components for Life Admin, Finance, Documents, and Housing.
+- Added shared admin privacy, warning, empty/error/loading/privacy boundary, and proposed-action preview boundary sections.
+- Exported the components from the dashboard component barrel.
+
+Boundaries:
+
+- No SQL migration.
+- No database type edits.
+- No repository edits.
+- No dashboard helper edits.
+- No route wiring.
+- No writes.
+- No bank sync, autopay, document upload/OCR/storage, legal/tax/immigration advice, or autonomous Carnos execution.
