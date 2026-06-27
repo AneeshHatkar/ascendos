@@ -90,3 +90,9 @@ Current Phase 12 dashboards do not write directly. Proposed-action surfaces are 
 Phase 12 is source-aligned for v1 read-only implementation.
 
 The next safe expansion path is not to add direct dashboard writes. Future write behavior must reuse the approved proposed-action flow and remain confirmation-gated.
+
+## Audit marker coverage
+
+This closeout explicitly records Phase 12 source alignment.
+
+This closeout explicitly records the user-specific housing correction.
