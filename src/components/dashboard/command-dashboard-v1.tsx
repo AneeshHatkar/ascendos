@@ -81,8 +81,7 @@ export function CommandDashboardV1({
 
   const dueSoonAdminCount =
     (adminSummary?.upcoming_subscription_count ?? 0) +
-    (adminSummary?.upcoming_document_count ?? 0) +
-    (adminSummary?.upcoming_housing_follow_up_count ?? 0);
+    (adminSummary?.expiring_document_count ?? 0);
 
   const adminQueueCount = overdueAdminCount + dueSoonAdminCount;
 
@@ -225,7 +224,7 @@ export function CommandDashboardV1({
                   Documents
                 </p>
                 <p className="mt-2 text-2xl font-semibold text-white">
-                  {formatCount(adminSummary?.upcoming_document_count)}
+                  {formatCount(adminSummary?.expiring_document_count)}
                 </p>
                 <p className="mt-2 text-sm leading-6 text-slate-400">
                   Upcoming document renewals and deadline pressure.
@@ -233,9 +232,9 @@ export function CommandDashboardV1({
               </div>
               <StatusPill
                 label={
-                  adminSummary?.upcoming_document_count ? "watch" : "clear"
+                  adminSummary?.expiring_document_count ? "watch" : "clear"
                 }
-                tone={warningTone(adminSummary?.upcoming_document_count)}
+                tone={warningTone(adminSummary?.expiring_document_count)}
               />
             </div>
           </div>
