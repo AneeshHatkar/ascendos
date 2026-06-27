@@ -2514,3 +2514,9 @@ Safety:
 - `src/components/dashboard/admin-finance-dashboard-v1.tsx` — added disabled proposed-action preview cards for life-admin and finance dashboard surfaces.
 - Reused `ProposedActionReviewCard` with all actions disabled and no callbacks wired.
 - No SQL, type, repository, helper, route, script, package, direct write, proposal persistence, execution, AI, or background-job code was added.
+
+## Phase 12 C15 — Audit Gate and Safety Validation
+
+- `scripts/audit-phase-12.mjs` — added Phase 12-specific audit gate covering Life Admin + Finance + Daily Admin safety, scope, SQL, read helpers, dashboards, route wiring, Command/Calendar visibility, proposed-action previews, and deferred feature absence.
+- `package.json` — added `audit:phase12` and inserted it into `npm run check`.
+- No SQL, type, repository, helper, route, dashboard, write flow, proposal execution, AI, payment, upload, scraping, outreach, Python/ML, memory, or background-job feature code was added.

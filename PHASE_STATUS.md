@@ -1858,3 +1858,37 @@ Protected boundaries:
 - No background jobs.
 
 Next step: Phase 12 C15 — audit gate for admin/finance boundaries.
+
+## Phase 12 C15 Status
+
+Status: Complete pending verification.
+
+Completed:
+
+- Added `audit:phase12` gate.
+- Wired Phase 12 audit into `npm run check`.
+- Added safety validation for Life Admin, Finance, Documents, Housing, Command, and Calendar surfaces.
+- Added deferred-scope validation for bank sync, payments, document upload/OCR, housing scraping/outreach, autonomous Carnos writes, Python/ML execution, memory, and background jobs.
+
+Progress:
+
+- Completed before this chunk: 35 / 45.
+- Completed after this chunk: 39 / 45.
+- Remaining after this chunk: 6 / 45.
+
+Protected boundaries:
+
+- No SQL changes.
+- No database type changes.
+- No repository changes.
+- No helper changes.
+- No route/dashboard feature changes.
+- No proposal persistence.
+- No proposed-action execution.
+- No payment, bank sync, document upload, OCR, document renewal, housing outreach, scraping, or automation.
+- No AI/OpenAI calls.
+- No Python/ML execution.
+- No memory/RAG implementation.
+- No background jobs.
+
+Next step: Phase 12 C16 — smoke checklist, completion report, and source-to-scope closeout.

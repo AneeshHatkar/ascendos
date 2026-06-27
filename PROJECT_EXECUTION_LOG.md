@@ -3624,3 +3624,9 @@ Boundaries:
 - Replaced the static admin proposal boundary panel with disabled proposed-action preview cards for future admin and finance suggestions.
 - Added preview-only cards for create_task, create_goal, and create_proof_item using the existing proposed-action review surface.
 - Preserved the no-write boundary: no SQL changes, no type changes, no repository changes, no helper changes, no route changes, no proposal persistence, no execution, no AI calls, and no background jobs.
+
+## Phase 12 C15 — Audit Gate and Safety Validation
+
+- Added `scripts/audit-phase-12.mjs` as the Phase 12 audit gate for Life Admin, Finance, Documents, Housing, Command, Calendar, SQL, type, repository, helper, dashboard, route, deferred-scope, and proposed-action preview boundaries.
+- Wired `audit:phase12` into `npm run check` after the Phase 11 audit and before integration sanity.
+- The audit gate checks source-to-scope traceability, privacy/safety boundaries, SQL/RLS/parent ownership guards, read-only repositories, dashboard aggregation, route wiring, Command/Calendar visibility, disabled proposed-action preview cards, deferred feature absence, and log/status markers.

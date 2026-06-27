@@ -1218,3 +1218,7 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ## Phase 12 C14 — Admin/Finance Proposed-Action Preview Visibility
 
 - Added preview-only proposed-action cards to the Life Admin dashboard boundary section for future admin and finance suggestions while keeping persistence and execution disabled.
+
+## Phase 12 C15 — Audit Gate and Safety Validation
+
+- Added a Phase 12 audit gate and wired it into `npm run check` to protect Life Admin, Finance, Documents, Housing, Command, Calendar, and deferred-scope boundaries.
