@@ -2394,3 +2394,29 @@ Summary:
 - Added database table contracts for manual finance accounts, budget categories, financial logs, subscriptions, document metadata, housing admin records, and housing contacts.
 - Added exported row/insert/update aliases for Life Admin / Finance read-helper work.
 - Preserved SQL and UI boundaries.
+
+## C08 — Admin and Finance Read Helpers
+
+Files changed:
+
+- `src/lib/repositories/admin-finance-read.ts`
+- `src/lib/repositories/index.ts`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Purpose:
+
+- Add read-only server repository helpers for the admin and finance tables created earlier.
+- Keep UI/dashboard work deferred to the next chunks.
+
+Exports added:
+
+- `listFinancialAccounts`
+- `listBudgetCategories`
+- `listFinancialLogs`
+- `listSubscriptions`
+- `listLifeAdminDocuments`
+- `listHousingOptions`
+- `listHousingContacts`

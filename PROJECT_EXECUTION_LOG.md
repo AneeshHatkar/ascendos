@@ -3514,3 +3514,24 @@ Boundaries:
 - No dashboard helpers.
 - No UI wiring.
 - No proposed-action execution.
+
+## C08 — Admin and Finance Read Helpers
+
+Completed:
+
+- Added read-only repository helpers for admin, finance, documents, subscriptions, housing, and housing contacts.
+- Exported the helpers from the repository barrel.
+- Kept this chunk read-only and server-side only.
+
+Boundaries:
+
+- No SQL migration.
+- No writes.
+- No dashboard code.
+- No route wiring.
+- No proposed-action execution.
+- No bank sync, autopay, document upload, legal/tax/immigration advice, or autonomous Carnos behavior.
+
+Next:
+
+- Build aggregation helpers and state mapping for daily admin, finance, documents, subscriptions, and housing admin.

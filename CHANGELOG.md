@@ -1182,3 +1182,9 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - Added TypeScript database contracts for the Life Admin / Finance tables.
 - Added exported row/insert/update aliases for admin and finance read helpers.
 - Kept SQL, repositories, dashboards, and routes unchanged.
+
+## Admin and Finance Read Helpers
+
+- Added read-only repository helpers for finance accounts, budget categories, financial logs, subscriptions, document metadata, housing admin records, and housing contacts.
+- Exported the new helpers through the repository barrel.
+- Kept dashboard wiring and write behavior deferred.

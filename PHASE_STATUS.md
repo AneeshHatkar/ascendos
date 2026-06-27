@@ -1658,3 +1658,34 @@ Deferred:
 Next step:
 
 - C08 — read helpers for admin and finance tables.
+
+## C08 — Admin and Finance Read Helpers
+
+Status: Complete pending verification.
+
+Completed:
+
+- 12.21 Add read-only admin and finance repository helpers.
+- 12.22 Export admin and finance repository helpers.
+
+Progress:
+
+- Completed before C08: 20 / 45.
+- Completed after C08: 22 / 45.
+- Remaining after C08: 23 / 45.
+
+Touched:
+
+- Repository read helpers.
+- Repository barrel.
+- Logs only.
+
+Deferred:
+
+- Aggregation helpers.
+- Empty/loading/error/privacy states.
+- Dashboard components.
+- Route wiring.
+- Command and Calendar visibility.
+- Proposed-action preview boundary.
+- Audit gate and completion report.
