@@ -1809,3 +1809,27 @@ Protected boundaries:
 - No background jobs.
 
 Next step: Phase 12 C13 — Calendar visibility for admin/finance deadlines.
+
+## Phase 12 C13 Status
+
+Status: Complete pending verification.
+
+Completed:
+
+- Calendar dashboard reads the Phase 12 admin/finance dashboard summary.
+- Calendar dashboard exposes read-only planned finance, overdue, upcoming subscription, expiring document, housing follow-up, warning, and source-table visibility.
+
+Protected boundaries:
+
+- No SQL changes.
+- No database type changes.
+- No repository changes.
+- No helper changes.
+- No dashboard writes.
+- No browser Supabase mutations.
+- No reminders or scheduling automation.
+- No proposed-action execution.
+- No AI/OpenAI calls.
+- No background jobs.
+
+Next step: Phase 12 C14 — proposed-action preview visibility for admin/finance.

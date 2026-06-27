@@ -3612,3 +3612,9 @@ Boundaries:
 - Added read-only Command visibility for admin queue count, overdue admin pressure, due-soon admin pressure, subscriptions, documents, housing, source tables, and read warnings.
 - Exported the admin/finance dashboard helper through the dashboard barrel for canonical app-level imports.
 - Preserved the no-write boundary: no SQL changes, no repository changes, no component-side mutations, no AI calls, no background jobs, and no proposed-action execution.
+
+## Phase 12 C13 — Calendar Admin/Finance Deadline Visibility
+
+- Wired Calendar dashboard to receive the Phase 12 admin/finance dashboard summary alongside the existing core Calendar summary.
+- Added read-only Calendar visibility for planned finance records, overdue admin pressure, upcoming subscriptions, expiring documents, housing follow-ups, warnings, and source tables.
+- Preserved the no-write boundary: no SQL changes, no repository changes, no helper changes, no component-side mutations, no AI calls, no reminders, no background jobs, and no proposed-action execution.

@@ -8,7 +8,10 @@ import {
   StatusPill,
   type DataListItem,
 } from "@/components/dashboard";
-import { getDashboardDataSummary } from "@/lib/dashboard";
+import {
+  getAdminFinanceDashboardDataSummary,
+  getDashboardDataSummary,
+} from "@/lib/dashboard";
 import { listEvents, listTasks } from "@/lib/repositories";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
@@ -184,7 +187,9 @@ function toItems(group: CalendarGroup): DataListItem[] {
         <div className="flex flex-wrap gap-2">
           <span>{formatRecordDate(row)}</span>
           <span>Source: {group.label}</span>
-          {readText(row, "domain", "") ? <span>Domain: {readText(row, "domain")}</span> : null}
+          {readText(row, "domain", "") ? (
+            <span>Domain: {readText(row, "domain")}</span>
+          ) : null}
         </div>
       ),
       trailing: <StatusPill label={status} tone={toneForStatus(status)} />,
@@ -226,7 +231,11 @@ export default function CalendarPage() {
       >
         {async ({ user }) => {
           const supabase = await createSupabaseServerClient();
-          const dashboardData = await getDashboardDataSummary(supabase, user.id, "calendar");
+
+          const [dashboardData, adminFinanceData] = await Promise.all([
+            getDashboardDataSummary(supabase, user.id, "calendar"),
+            getAdminFinanceDashboardDataSummary(user.id),
+          ]);
 
           const [tasks, events] = await Promise.all([
             readCalendarGroup(
@@ -257,7 +266,10 @@ export default function CalendarPage() {
 
           return (
             <>
-              <CalendarDashboardV1 data={dashboardData} />
+              <CalendarDashboardV1
+                data={dashboardData}
+                adminFinanceData={adminFinanceData}
+              />
 
               <section className="rounded-3xl border border-slate-800 bg-slate-950/80 p-6 shadow-sm shadow-black/20">
                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
@@ -269,14 +281,16 @@ export default function CalendarPage() {
                       Calendar Read View
                     </h1>
                     <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-400">
-                      This page reads task and event records for the authenticated user.
-                      It does not create, edit, reschedule, delete, remind, sync, or
-                      auto-execute anything in Phase 5.
+                      This page reads task and event records for the
+                      authenticated user. It does not create, edit, reschedule,
+                      delete, remind, sync, or auto-execute anything in Phase 5.
                     </p>
                   </div>
 
                   <StatusPill
-                    label={readErrors.length > 0 ? "Read warning" : "Read-only mode"}
+                    label={
+                      readErrors.length > 0 ? "Read warning" : "Read-only mode"
+                    }
                     tone={readErrors.length > 0 ? "warning" : "success"}
                   />
                 </div>
@@ -286,13 +300,21 @@ export default function CalendarPage() {
                 <MetricTile
                   label="Tasks"
                   value={tasks.rows.length}
-                  description={tasks.error ? `Read warning: ${tasks.error}` : tasks.description}
+                  description={
+                    tasks.error
+                      ? `Read warning: ${tasks.error}`
+                      : tasks.description
+                  }
                   className={tasks.error ? "border-amber-800/80" : ""}
                 />
                 <MetricTile
                   label="Events"
                   value={events.rows.length}
-                  description={events.error ? `Read warning: ${events.error}` : events.description}
+                  description={
+                    events.error
+                      ? `Read warning: ${events.error}`
+                      : events.description
+                  }
                   className={events.error ? "border-amber-800/80" : ""}
                 />
                 <MetricTile
@@ -310,7 +332,9 @@ export default function CalendarPage() {
                 {readErrors.length > 0 ? (
                   <div className="mb-4 rounded-xl border border-amber-800/80 bg-amber-950/30 p-4 text-sm text-amber-200">
                     Some calendar reads returned warnings:{" "}
-                    {readErrors.map((group) => `${group.label}: ${group.error}`).join("; ")}
+                    {readErrors
+                      .map((group) => `${group.label}: ${group.error}`)
+                      .join("; ")}
                   </div>
                 ) : null}
 
@@ -327,7 +351,9 @@ export default function CalendarPage() {
                 {allRows.length > 0 ? (
                   <div className="mt-4 rounded-xl border border-slate-800 bg-slate-950/60 p-4 text-sm text-slate-400">
                     Total readable calendar records in this batch:{" "}
-                    <span className="font-semibold text-slate-100">{allRows.length}</span>
+                    <span className="font-semibold text-slate-100">
+                      {allRows.length}
+                    </span>
                   </div>
                 ) : null}
               </SectionCard>

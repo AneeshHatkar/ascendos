@@ -2502,3 +2502,9 @@ Safety:
 - `src/components/dashboard/command-dashboard-v1.tsx` — added a read-only admin/finance visibility section with admin queue, overdue, due-soon, subscription, document, housing, warning, boundary, and source-table visibility.
 - `src/lib/dashboard/index.ts` — exported `admin-finance-dashboard-data-helpers` through the dashboard helper barrel.
 - No SQL, type, repository, script, package, direct write, proposed-action execution, AI, or background-job code was added.
+
+## Phase 12 C13 — Calendar Admin/Finance Deadline Visibility
+
+- `src/app/calendar/page.tsx` — fetched `getAdminFinanceDashboardDataSummary(user.id)` next to the existing Calendar summary and passed it into `CalendarDashboardV1`.
+- `src/components/dashboard/calendar-dashboard-v1.tsx` — added a read-only admin/finance deadline visibility section with planned finance, overdue, upcoming subscription, expiring document, housing follow-up, warning, and source-table visibility.
+- No SQL, type, repository, helper, script, package, direct write, proposed-action execution, AI, reminder, or background-job code was added.

@@ -1210,3 +1210,7 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ## Phase 12 C12 — Command Admin/Finance Visibility
 
 - Added Command dashboard visibility for Phase 12 admin/finance summaries, including due-soon and overdue pressure, subscriptions, documents, housing, warnings, and read-only boundary language.
+
+## Phase 12 C13 — Calendar Admin/Finance Deadline Visibility
+
+- Added Calendar dashboard visibility for Phase 12 admin/finance deadlines, including planned finance records, overdue pressure, upcoming subscriptions, expiring documents, housing follow-ups, warnings, and read-only boundary language.
