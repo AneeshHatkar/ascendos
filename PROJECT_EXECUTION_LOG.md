@@ -3618,3 +3618,9 @@ Boundaries:
 - Wired Calendar dashboard to receive the Phase 12 admin/finance dashboard summary alongside the existing core Calendar summary.
 - Added read-only Calendar visibility for planned finance records, overdue admin pressure, upcoming subscriptions, expiring documents, housing follow-ups, warnings, and source tables.
 - Preserved the no-write boundary: no SQL changes, no repository changes, no helper changes, no component-side mutations, no AI calls, no reminders, no background jobs, and no proposed-action execution.
+
+## Phase 12 C14 — Admin/Finance Proposed-Action Preview Visibility
+
+- Replaced the static admin proposal boundary panel with disabled proposed-action preview cards for future admin and finance suggestions.
+- Added preview-only cards for create_task, create_goal, and create_proof_item using the existing proposed-action review surface.
+- Preserved the no-write boundary: no SQL changes, no type changes, no repository changes, no helper changes, no route changes, no proposal persistence, no execution, no AI calls, and no background jobs.

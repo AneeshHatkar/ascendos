@@ -1,3 +1,4 @@
+import { ProposedActionReviewCard } from "@/components/actions";
 import {
   EmptyState,
   MetricTile,
@@ -5,6 +6,7 @@ import {
   StatusPill,
 } from "@/components/dashboard";
 import { getAdminFinanceDashboardDataSummary } from "@/lib/dashboard/admin-finance-dashboard-data-helpers";
+import type { ProposedActionContract } from "@/lib/actions/proposed-action-contracts";
 import type {
   FinancialLogRow,
   HousingContactRow,
@@ -195,36 +197,106 @@ function AdminStateBoundaryPanel({
   );
 }
 
+const ADMIN_FINANCE_PROPOSED_ACTION_PREVIEWS: ProposedActionContract[] = [
+  {
+    action_type: "create_task",
+    source: "carnos",
+    confidence: 0.71,
+    reason:
+      "Admin and finance context may suggest a follow-up task, but Phase 12 only previews the confirmation shape.",
+    payload: {
+      title: "Review an admin or finance follow-up",
+      description:
+        "Check overdue finance records, upcoming subscriptions, document renewals, and housing follow-ups before deciding whether to save a task.",
+      domain: "life_admin",
+      priority: "medium",
+      status: "todo",
+    },
+    evidence_refs: [
+      "financial_logs",
+      "subscriptions",
+      "documents",
+      "housing_contacts",
+    ],
+  },
+  {
+    action_type: "create_goal",
+    source: "carnos",
+    confidence: 0.66,
+    reason:
+      "A recurring admin or finance pressure pattern could become a goal only after user review and server-owned persistence.",
+    payload: {
+      title: "Stabilize the admin and finance operating loop",
+      description:
+        "Reduce overdue records, keep subscriptions visible, review documents before expiration, and keep housing admin follow-ups under control.",
+      domain: "life_admin",
+      priority: "high",
+      status: "active",
+    },
+    evidence_refs: [
+      "financial_logs",
+      "subscriptions",
+      "documents",
+      "housing_options",
+    ],
+  },
+  {
+    action_type: "create_proof_item",
+    source: "carnos",
+    confidence: 0.63,
+    reason:
+      "Completed admin work may deserve proof capture, but this panel does not persist anything.",
+    payload: {
+      title: "Capture proof for an admin or finance milestone",
+      proof_type: "note",
+      description:
+        "Review the completed bill, document renewal, subscription cleanup, or housing admin milestone before saving proof.",
+      goal_id: "review-required",
+      task_id: "review-required",
+    },
+    evidence_refs: [
+      "financial_logs",
+      "subscriptions",
+      "documents",
+      "housing_contacts",
+    ],
+  },
+];
+
 function ProposalPreviewBoundaryPanel() {
   return (
     <SectionCard
-      title="Admin proposed-action preview boundary"
-      eyebrow="visibility only"
-      description="Future Carnos suggestions may propose admin tasks, document reviews, rent reminders, or finance follow-ups, but this dashboard does not persist proposals."
+      title="Admin proposed-action preview visibility"
+      eyebrow="Phase 12 confirmation preview"
+      description="Preview-only Carnos proposal cards for future life-admin and finance suggestions. This dashboard does not save, cancel, execute, or persist proposals."
     >
-      <div className="grid gap-4 text-sm leading-6 text-slate-400 md:grid-cols-3">
-        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
-          <p className="font-semibold text-slate-100">Task preview only</p>
-          <p className="mt-2">
-            A future task proposal must go through the existing confirmation
-            flow before anything is saved.
-          </p>
+      <div className="grid gap-4">
+        <div className="rounded-2xl border border-white/10 bg-black/20 p-4 text-sm leading-6 text-slate-400">
+          This panel is visibility only. It uses disabled proposal cards to show
+          the review shape. Admin and finance suggestions must remain separate
+          from persistence until validation, user confirmation, server-owned
+          writes, SQL records, and audit logging exist. It must not pay bills,
+          sync banks, upload documents, renew documents, email anyone, contact
+          housing providers, or execute Carnos actions.
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
-          <p className="font-semibold text-slate-100">No payment execution</p>
-          <p className="mt-2">
-            Finance records can be summarized here, but this app does not pay
-            bills, move money, or connect banks.
-          </p>
-        </div>
-
-        <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
-          <p className="font-semibold text-slate-100">No document automation</p>
-          <p className="mt-2">
-            Document metadata can be reviewed, but file upload, OCR, legal
-            advice, and immigration advice stay deferred.
-          </p>
+        <div className="grid gap-4 xl:grid-cols-3">
+          {ADMIN_FINANCE_PROPOSED_ACTION_PREVIEWS.map((action) => (
+            <ProposedActionReviewCard
+              key={action.action_type}
+              initialAction={action}
+              disabled
+              saveLabel="Save / Confirm unavailable in Phase 12 dashboard preview"
+              cancelLabel="Cancel unavailable in Phase 12 dashboard preview"
+              editLabel="Edit payload unavailable in Phase 12 dashboard preview"
+              reviewTitle="Admin proposal preview"
+              validationIssues={[
+                "Preview only: this dashboard does not persist proposals.",
+                "User confirmation and server-owned execution must remain separate from read dashboards.",
+                "No payment, bank sync, document upload, document renewal, email, housing contact, or Carnos execution is wired here.",
+              ]}
+            />
+          ))}
         </div>
       </div>
     </SectionCard>

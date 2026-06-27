@@ -2508,3 +2508,9 @@ Safety:
 - `src/app/calendar/page.tsx` — fetched `getAdminFinanceDashboardDataSummary(user.id)` next to the existing Calendar summary and passed it into `CalendarDashboardV1`.
 - `src/components/dashboard/calendar-dashboard-v1.tsx` — added a read-only admin/finance deadline visibility section with planned finance, overdue, upcoming subscription, expiring document, housing follow-up, warning, and source-table visibility.
 - No SQL, type, repository, helper, script, package, direct write, proposed-action execution, AI, reminder, or background-job code was added.
+
+## Phase 12 C14 — Admin/Finance Proposed-Action Preview Visibility
+
+- `src/components/dashboard/admin-finance-dashboard-v1.tsx` — added disabled proposed-action preview cards for life-admin and finance dashboard surfaces.
+- Reused `ProposedActionReviewCard` with all actions disabled and no callbacks wired.
+- No SQL, type, repository, helper, route, script, package, direct write, proposal persistence, execution, AI, or background-job code was added.

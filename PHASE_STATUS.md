@@ -1833,3 +1833,28 @@ Protected boundaries:
 - No background jobs.
 
 Next step: Phase 12 C14 — proposed-action preview visibility for admin/finance.
+
+## Phase 12 C14 Status
+
+Status: Complete pending verification.
+
+Completed:
+
+- Admin/finance dashboard now shows disabled proposed-action preview cards.
+- Preview cards cover future task, goal, and proof suggestions for admin/finance context.
+- Proposal preview uses the existing proposed-action review card shape with all controls disabled and no callbacks wired.
+
+Protected boundaries:
+
+- No SQL changes.
+- No database type changes.
+- No repository changes.
+- No helper changes.
+- No route changes.
+- No proposal persistence.
+- No proposed-action execution.
+- No payment, bank sync, document upload, document renewal, email, or housing contact automation.
+- No AI/OpenAI calls.
+- No background jobs.
+
+Next step: Phase 12 C15 — audit gate for admin/finance boundaries.
