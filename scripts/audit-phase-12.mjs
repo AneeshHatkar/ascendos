@@ -503,8 +503,8 @@ pass("Phase 12 C16 closeout docs are present and content-checked");
 console.log("\n=== Phase 12 audit: logs and progress markers ===");
 
 requireIncludes("PHASE_STATUS.md", [
-  "Phase 12 C16 Status",
-  "Next step: Phase 12 C17",
+  "Phase 12 C17 Status",
+  "Next step: Phase 13",
   "Completed after C08: 22 / 45",
   "Completed after this chunk: 23 / 45",
   "Completed after this chunk: 28 / 45",
@@ -535,7 +535,9 @@ requireIncludes("CHANGELOG.md", [
   "Phase 12 C16",
 ]);
 
-pass("Phase 12 logs and status markers are present through C16 closeout");
+pass(
+  "Phase 12 logs and status markers are present through C17 final status lock",
+);
 
 console.log(checks.join("\\n"));
 if (failures.length > 0) {
