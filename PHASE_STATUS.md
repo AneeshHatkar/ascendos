@@ -1934,3 +1934,18 @@ Remaining Phase 12 source steps: 0/45.
 Phase 12 final status: Complete.
 
 Next step: Phase 13 source inspection and plan lock.
+
+## Phase 12.9 — Pre-Grimoire Core Completion
+
+Status: Started.
+
+Purpose:
+- Complete verified earlier partial chunks before Grimoire.
+- Do not rebuild completed systems.
+- Do not count future chunks 18, 20, or 21 as complete.
+
+Patch targets:
+- 06 Goals / Proof
+- 07 Calendar / Timeline
+- 08 Carnos Chat
+- 09 AI Extraction / Pending Updates

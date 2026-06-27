@@ -2560,3 +2560,13 @@ Purpose: Records final Phase 12 closeout ledger entry.
 Purpose: Records final Phase 12 completion marker.
 
 Change: Locked Phase 12 as complete after final audit/check/build verification.
+
+## Phase 12.9 — Pre-Grimoire Gap Lock
+
+Added:
+- docs/phase-plans/PHASE_12_9_PRE_GRIMOIRE_CORE_COMPLETION.md
+- docs/phase-reports/PHASE_12_9_PRE_GRIMOIRE_GAP_AUDIT.md
+
+Purpose:
+- Lock the real partial chunks before Grimoire.
+- Prevent accidental counting of placeholder future chunks as complete.

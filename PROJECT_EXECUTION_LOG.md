@@ -3685,3 +3685,14 @@ Final Phase 12 source progress:
 - Remaining Phase 12 source steps: 0/45
 
 Phase 12 is complete and ready for Phase 13 source inspection.
+
+## Phase 12.9 — Pre-Grimoire Core Completion Pass Started
+
+Started a targeted pre-Grimoire completion pass after source-vs-repo inspection found four earlier partial chunks:
+
+- Chunk 06 Goals / Proof
+- Chunk 07 Calendar / Timeline
+- Chunk 08 Carnos Chat
+- Chunk 09 AI Extraction / Pending Updates
+
+This pass is not a rebuild. It patches only verified missing items before Grimoire.
