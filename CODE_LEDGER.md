@@ -2346,3 +2346,19 @@ Summary:
 - Added RLS and indexes.
 - Preserved read/write safety boundaries.
 - Deferred parent ownership guards to C05.
+
+## Phase 12 C05 — Parent Ownership Guards
+
+Files:
+
+- `supabase/migrations/0015_phase12_parent_ownership_guards.sql`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Summary:
+
+- Added SQL parent ownership guard helper and table-specific triggers.
+- Guarded Phase 12 cross-table links against cross-user parent references.
+- Preserved SQL-only boundary.

@@ -1567,3 +1567,37 @@ Deferred:
 Next step:
 
 - Phase 12 C05 — parent ownership guards.
+
+## Phase 12 C05 — Parent Ownership Guards
+
+Status: Complete pending verification.
+
+Completed:
+
+- 12.18 Add parent ownership guards.
+
+Touched:
+
+- SQL migration and logs only.
+
+Protected:
+
+- `financial_logs`
+- `subscriptions`
+- `documents`
+- `housing_options`
+- `housing_contacts`
+
+Deferred:
+
+- 12.19 Migration validation closeout.
+- Database types.
+- Read helpers.
+- Dashboard helpers.
+- Dashboard components.
+- Route wiring.
+- Proposed-action execution.
+
+Next step:
+
+- Phase 12 C06 — migration validation closeout.

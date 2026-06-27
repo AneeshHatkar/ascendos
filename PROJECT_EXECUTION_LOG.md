@@ -3420,3 +3420,39 @@ Boundaries:
 Next:
 
 - Phase 12 C05: parent ownership guards for nullable cross-table links.
+
+## Phase 12 C05 — Parent Ownership Guards
+
+Status: Complete pending verification.
+
+Scope:
+
+- Added `supabase/migrations/0015_phase12_parent_ownership_guards.sql`.
+- Added reusable SQL helper:
+  - `phase12_assert_parent_belongs_to_user`
+- Added parent ownership guard triggers for:
+  - `financial_logs`
+  - `subscriptions`
+  - `documents`
+  - `housing_options`
+  - `housing_contacts`
+
+Purpose:
+
+- Prevent Phase 12 records from linking to another user's parent records.
+- Preserve the server-write / SQL-audit / user-owned data boundary before any TypeScript types or read helpers are added.
+
+Boundaries:
+
+- SQL only.
+- No app code.
+- No TypeScript database types.
+- No repositories.
+- No dashboards.
+- No route wiring.
+- No Carnos execution.
+- No bank sync, auto-pay, document upload, OCR, external integration, or tax/legal/immigration advice automation.
+
+Next:
+
+- Phase 12 C06: migration validation closeout for SQL foundation.

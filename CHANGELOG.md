@@ -1164,3 +1164,9 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - Added tables for manual finance accounts, budget categories, financial logs, subscriptions, housing admin, housing contacts, and document metadata.
 - Added RLS and indexes.
 - Deferred parent ownership guards, database types, repositories, and UI wiring to later chunks.
+
+## Phase 12 C05 — Parent Ownership Guards
+
+- Added Phase 12 parent ownership guard migration.
+- Added SQL guard helper and triggers for finance, subscriptions, documents, housing options, and housing contacts.
+- Preserved no-app-code, no-types, no-repositories, no-dashboard boundary.
