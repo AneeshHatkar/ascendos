@@ -1,4 +1,5 @@
 import { PendingUpdatesDrawer } from "@/components/actions";
+import { CarnosMessageComposer } from "@/components/carnos/carnos-message-composer";
 // Phase 6.16 audit compatibility marker: ProposedActionReviewCard remains present through PendingUpdatesDrawer.
 import { isProposedActionType } from "@/lib/actions/action-types";
 import {
@@ -381,6 +382,14 @@ export default function CarnosPage() {
                 pendingCount={pendingActions}
                 readWarningCount={readErrors.length}
               />
+
+              <SectionCard
+                title="Carnos message persistence"
+                description="Phase 12.9D adds a server-owned save path for user chat messages without enabling AI generation."
+                eyebrow="Phase 12.9D"
+              >
+                <CarnosMessageComposer />
+              </SectionCard>
 
               <SectionCard
                 title="Pending update review"

@@ -1969,3 +1969,15 @@ Scope:
 - No automatic execution
 - No autonomous writes
 - No Grimoire work
+
+## Phase 12.9D — Carnos Chat Persistence
+
+Status: Complete pending verification.
+
+Latest hardening:
+- Carnos can now persist user-authored messages through a server-owned route.
+- Chat persistence does not generate assistant responses.
+- Chat persistence does not create memories or execute actions.
+
+Next:
+- Phase 12.9E — Goals / Proof honest creation surface.

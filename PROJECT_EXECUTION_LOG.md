@@ -3714,3 +3714,10 @@ Added server-owned approve/reject API routes:
 The drawer no longer depends only on the static sample action. It can now approve or reject a real pending AI action through server-owned lifecycle helpers.
 
 No Grimoire implementation was started.
+
+## Phase 12.9D — Carnos Chat Persistence
+
+- Added `POST /api/carnos/messages` for server-owned Carnos user-message persistence.
+- Added `CarnosMessageComposer` on `/carnos`.
+- Preserved no-generation/no-memory/no-autonomous-action boundary.
+- Added Phase 12.9D completion report.

@@ -2592,3 +2592,10 @@ Changed:
 
 Purpose:
 - Connect persisted pending `ai_actions` rows to confirmation-first approve/reject lifecycle routes.
+
+## Phase 12.9D — Carnos Chat Persistence
+
+- `src/app/api/carnos/messages/route.ts` — authenticated server route for creating/verifying chat sessions and inserting user chat messages.
+- `src/components/carnos/carnos-message-composer.tsx` — client composer that calls the server route without browser Supabase access.
+- `src/app/carnos/page.tsx` — surfaces the persistence composer in the Carnos dashboard.
+- `docs/phase-reports/PHASE_12_9D_CARNOS_CHAT_PERSISTENCE.md` — scope and boundary report.

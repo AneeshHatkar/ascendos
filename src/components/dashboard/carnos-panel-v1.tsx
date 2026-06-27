@@ -40,7 +40,7 @@ export function CarnosPanelV1({
                 Companion state and confirmation visibility
               </h2>
               <p className="mt-2 max-w-3xl text-sm leading-6 text-white/60">
-                Read-only Carnos panel for chat visibility, proposal pressure, and safety status. This panel does not generate responses, execute actions, remember facts, or attach lifecycle callbacks.
+                Carnos panel for chat visibility, proposal pressure, and safety status. Message persistence is server-owned; this panel does not generate responses, execute actions, remember facts, or run autonomous lifecycle callbacks.
               </p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white/70">
@@ -90,7 +90,7 @@ export function CarnosPanelV1({
             {summary ? (
               <div className="space-y-3 text-sm text-slate-300">
                 <p>
-                  Carnos context is visible as dashboard state only. Confirmation review remains separate from persistence.
+                  Carnos context is visible as dashboard state plus user-saved message history. Confirmation review remains separate from message persistence.
                 </p>
                 <p className="text-xs text-slate-500">
                   No autonomous writes, memory execution, Python/ML mutation, voice, internet tools, or background jobs are active here.
