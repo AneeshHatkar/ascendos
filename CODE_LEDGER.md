@@ -2520,3 +2520,21 @@ Safety:
 - `scripts/audit-phase-12.mjs` — added Phase 12-specific audit gate covering Life Admin + Finance + Daily Admin safety, scope, SQL, read helpers, dashboards, route wiring, Command/Calendar visibility, proposed-action previews, and deferred feature absence.
 - `package.json` — added `audit:phase12` and inserted it into `npm run check`.
 - No SQL, type, repository, helper, route, dashboard, write flow, proposal execution, AI, payment, upload, scraping, outreach, Python/ML, memory, or background-job feature code was added.
+
+## Phase 12 C16 — Smoke Checklist and Completion Closeout
+
+### `docs/qa/PHASE_12_LIFE_ADMIN_FINANCE_MANUAL_SMOKE_CHECKLIST.md`
+
+Purpose: Manual browser smoke checklist for `/life-admin`, `/finance`, `/documents`, `/housing`, `/command`, and `/calendar`.
+
+### `docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_CLOSEOUT.md`
+
+Purpose: Confirms Phase 12 source alignment, user-specific housing correction, completed routes/tables, deferred scope, and safe-write-law preservation.
+
+### `docs/phase-reports/PHASE_12_LIFE_ADMIN_FINANCE_COMPLETION_REPORT.md`
+
+Purpose: Final Phase 12 completion report for the Life Admin + Finance + Daily Admin Queue system.
+
+### `scripts/audit-phase-12.mjs`
+
+Change: Requires Phase 12 C16 smoke checklist, source-to-scope closeout, completion report, and C16 log/status markers.

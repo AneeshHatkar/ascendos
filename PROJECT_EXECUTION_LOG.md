@@ -3630,3 +3630,31 @@ Boundaries:
 - Added `scripts/audit-phase-12.mjs` as the Phase 12 audit gate for Life Admin, Finance, Documents, Housing, Command, Calendar, SQL, type, repository, helper, dashboard, route, deferred-scope, and proposed-action preview boundaries.
 - Wired `audit:phase12` into `npm run check` after the Phase 11 audit and before integration sanity.
 - The audit gate checks source-to-scope traceability, privacy/safety boundaries, SQL/RLS/parent ownership guards, read-only repositories, dashboard aggregation, route wiring, Command/Calendar visibility, disabled proposed-action preview cards, deferred feature absence, and log/status markers.
+
+## Phase 12 C16 — Smoke Checklist and Completion Closeout
+
+Status: Complete.
+
+Changes:
+
+- Added Phase 12 manual smoke checklist for Life Admin, Finance, Documents, Housing, Command, and Calendar routes.
+- Added Phase 12 source-to-scope closeout confirming source alignment and user-specific housing correction.
+- Added Phase 12 completion report.
+- Updated the Phase 12 audit gate to require C16 closeout docs and log markers.
+
+Files:
+
+- `docs/qa/PHASE_12_LIFE_ADMIN_FINANCE_MANUAL_SMOKE_CHECKLIST.md`
+- `docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_CLOSEOUT.md`
+- `docs/phase-reports/PHASE_12_LIFE_ADMIN_FINANCE_COMPLETION_REPORT.md`
+- `scripts/audit-phase-12.mjs`
+
+Verification:
+
+- `npm run audit:phase12`
+- `npm run check`
+- `git diff --check`
+
+Next:
+
+- Phase 12 C17 final verification and status lock.

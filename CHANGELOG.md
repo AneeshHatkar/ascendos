@@ -1222,3 +1222,10 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 ## Phase 12 C15 — Audit Gate and Safety Validation
 
 - Added a Phase 12 audit gate and wired it into `npm run check` to protect Life Admin, Finance, Documents, Housing, Command, Calendar, and deferred-scope boundaries.
+
+## Phase 12 C16 — Smoke Checklist and Completion Closeout
+
+- Added Phase 12 manual smoke checklist.
+- Added Phase 12 source-to-scope closeout.
+- Added Phase 12 completion report.
+- Updated the Phase 12 audit gate to protect closeout docs and C16 log/status markers.
