@@ -2035,3 +2035,18 @@ Locked source-backed tables:
 - `grimoire_reversions`
 
 Next: Phase 13B — SQL schema design.
+
+## Phase 13B — Grimoire SQL Schema Design
+
+Status: Complete after verification.
+
+Added schema design for:
+
+- grimoire_modes
+- grimoire_daily_logs
+- grimoire_skills
+- grimoire_corruption_checks
+- grimoire_reversions
+
+Next: Phase 13C — SQL migration + RLS.
+

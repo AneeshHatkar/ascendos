@@ -2628,3 +2628,8 @@ Purpose:
 
 - `docs/phase-plans/PHASE_13_GRIMOIRE_ENGINE.md` locks the Phase 13 implementation chunks, required cards, data sources, safety boundaries, non-goals, and completion definition.
 - `docs/phase-reports/PHASE_13_A_GRIMOIRE_SOURCE_SCOPE_LOCK.md` records the source-backed Grimoire findings before code implementation.
+
+## Phase 13B — Grimoire SQL Schema Design
+
+- docs/database/PHASE_13_GRIMOIRE_SCHEMA_DESIGN.md defines the source-backed Grimoire schema, ownership model, RLS strategy, indexes, parent guard strategy, deferred scope, and 13C migration plan.
+

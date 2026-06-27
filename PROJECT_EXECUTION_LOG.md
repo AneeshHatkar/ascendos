@@ -3763,3 +3763,17 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Locked required Grimoire tables: `grimoire_modes`, `grimoire_daily_logs`, `grimoire_skills`, `grimoire_corruption_checks`, `grimoire_reversions`.
 - Locked Phase 13 into 12 implementation subphases and 4 major code chunks.
 - Next chunk: Phase 13B — SQL schema design.
+
+## Phase 13B — Grimoire SQL Schema Design
+
+- Ran schema/source/pattern preflight before schema design.
+- Confirmed five source-backed Grimoire tables in FINAL_SYNCED JSON:
+  - grimoire_modes
+  - grimoire_daily_logs
+  - grimoire_skills
+  - grimoire_corruption_checks
+  - grimoire_reversions
+- Confirmed source Grimoire rule: symbolism must become practical action, proof, corruption checks, and reversion.
+- Added docs/database/PHASE_13_GRIMOIRE_SCHEMA_DESIGN.md.
+- Next: Phase 13C — SQL migration + RLS.
+

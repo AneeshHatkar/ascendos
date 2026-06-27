@@ -1291,3 +1291,9 @@ Timestamp: 2026-06-27 06:21 UTC
 - Locked the source-backed Grimoire scope before implementation.
 - Confirmed the current `/grimoire` route is still a placeholder.
 - Locked the Grimoire practical loop: mode -> mission -> proof -> corruption check -> reversion.
+
+## Phase 13B — Grimoire SQL Schema Design
+
+- Added the Phase 13 Grimoire schema design.
+- Locked the five source-backed Grimoire tables and practical mode -> mission -> proof -> corruption -> reversion data model before SQL migration work.
+
