@@ -2063,3 +2063,9 @@ Added SQL foundation and parent ownership guards for:
 - `grimoire_reversions`
 
 Next: Phase 13D — database types and read helpers.
+
+## Phase 13D — Grimoire Database Types and Read Helpers
+
+Status: Complete after verification.
+
+Next: Phase 13E — Grimoire dashboard aggregation helper.

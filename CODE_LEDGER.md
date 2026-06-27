@@ -2637,3 +2637,7 @@ Purpose:
 
 - `supabase/migrations/0016_phase13_grimoire_foundation.sql` adds Grimoire tables, RLS policies, constraints, indexes, and updated-at triggers.
 - `supabase/migrations/0017_phase13_parent_ownership_guards.sql` adds Phase 13 parent ownership guard functions and triggers.
+
+## Phase 13D — Grimoire Database Types and Read Helpers
+
+- Added Grimoire database aliases and read repository exports.

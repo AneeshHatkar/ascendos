@@ -1625,9 +1625,172 @@ type Phase12HousingContactUpdate = {
   updated_at?: string;
 };
 
+type GrimoireJson = Json;
+
+type Phase13GrimoireModeRow = {
+  id: string;
+  user_id: string;
+  name: string;
+  mission_type: string;
+  description: string | null;
+  allowed_use: string | null;
+  forbidden_use: string | null;
+  proof_required: string | null;
+  risk_notes: string | null;
+  reversion_required: boolean;
+  intensity_level: string;
+  is_active: boolean;
+  sort_order: number;
+  privacy_level: string;
+  source_ai_action_id: string | null;
+  source_chat_message_id: string | null;
+  created_at: string;
+  updated_at: string;
+};
+type Phase13GrimoireModeInsert = Partial<Phase13GrimoireModeRow> & {
+  user_id: string;
+  name: string;
+  mission_type: string;
+};
+type Phase13GrimoireModeUpdate = Partial<Phase13GrimoireModeInsert>;
+
+type Phase13GrimoireDailyLogRow = {
+  id: string;
+  user_id: string;
+  log_date: string;
+  mode_id: string | null;
+  active_mode: string | null;
+  mission_type: string | null;
+  mission_statement: string | null;
+  top_actions_json: GrimoireJson;
+  corruption_risk: string | null;
+  reversion_required: boolean;
+  reversion_done: boolean;
+  night_review: string | null;
+  privacy_level: string;
+  related_task_id: string | null;
+  related_goal_id: string | null;
+  related_proof_item_id: string | null;
+  source_ai_action_id: string | null;
+  source_chat_message_id: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+type Phase13GrimoireDailyLogInsert = Partial<Phase13GrimoireDailyLogRow> & {
+  user_id: string;
+};
+type Phase13GrimoireDailyLogUpdate = Partial<Phase13GrimoireDailyLogInsert>;
+
+type Phase13GrimoireSkillRow = {
+  id: string;
+  user_id: string;
+  name: string;
+  tier: string;
+  realm: string;
+  description: string | null;
+  proof_required: string | null;
+  status: string;
+  related_goal_id: string | null;
+  related_task_id: string | null;
+  related_proof_item_id: string | null;
+  privacy_level: string;
+  source_ai_action_id: string | null;
+  source_chat_message_id: string | null;
+  created_at: string;
+  updated_at: string;
+};
+type Phase13GrimoireSkillInsert = Partial<Phase13GrimoireSkillRow> & {
+  user_id: string;
+  name: string;
+};
+type Phase13GrimoireSkillUpdate = Partial<Phase13GrimoireSkillInsert>;
+
+type Phase13GrimoireCorruptionCheckRow = {
+  id: string;
+  user_id: string;
+  log_date: string;
+  daily_log_id: string | null;
+  mode_id: string | null;
+  risk_type: string;
+  severity: string;
+  evidence: string | null;
+  correction: string | null;
+  status: string;
+  privacy_level: string;
+  related_task_id: string | null;
+  related_proof_item_id: string | null;
+  source_ai_action_id: string | null;
+  source_chat_message_id: string | null;
+  created_at: string;
+  updated_at: string;
+};
+type Phase13GrimoireCorruptionCheckInsert =
+  Partial<Phase13GrimoireCorruptionCheckRow> & {
+    user_id: string;
+    risk_type: string;
+  };
+type Phase13GrimoireCorruptionCheckUpdate =
+  Partial<Phase13GrimoireCorruptionCheckInsert>;
+
+type Phase13GrimoireReversionRow = {
+  id: string;
+  user_id: string;
+  log_date: string;
+  daily_log_id: string | null;
+  mode_id: string | null;
+  mode: string | null;
+  reversion_action: string;
+  completed: boolean;
+  completed_at: string | null;
+  privacy_level: string;
+  related_task_id: string | null;
+  source_ai_action_id: string | null;
+  source_chat_message_id: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+type Phase13GrimoireReversionInsert = Partial<Phase13GrimoireReversionRow> & {
+  user_id: string;
+  reversion_action: string;
+};
+type Phase13GrimoireReversionUpdate = Partial<Phase13GrimoireReversionInsert>;
+
 export type Database = {
   public: {
     Tables: {
+
+      grimoire_modes: {
+        Row: Phase13GrimoireModeRow;
+        Insert: Phase13GrimoireModeInsert;
+        Update: Phase13GrimoireModeUpdate;
+        Relationships: [];
+      };
+      grimoire_daily_logs: {
+        Row: Phase13GrimoireDailyLogRow;
+        Insert: Phase13GrimoireDailyLogInsert;
+        Update: Phase13GrimoireDailyLogUpdate;
+        Relationships: [];
+      };
+      grimoire_skills: {
+        Row: Phase13GrimoireSkillRow;
+        Insert: Phase13GrimoireSkillInsert;
+        Update: Phase13GrimoireSkillUpdate;
+        Relationships: [];
+      };
+      grimoire_corruption_checks: {
+        Row: Phase13GrimoireCorruptionCheckRow;
+        Insert: Phase13GrimoireCorruptionCheckInsert;
+        Update: Phase13GrimoireCorruptionCheckUpdate;
+        Relationships: [];
+      };
+      grimoire_reversions: {
+        Row: Phase13GrimoireReversionRow;
+        Insert: Phase13GrimoireReversionInsert;
+        Update: Phase13GrimoireReversionUpdate;
+        Relationships: [];
+      };
       financial_accounts: {
         Row: Phase12FinancialAccountRow;
         Insert: Phase12FinancialAccountInsert;
@@ -4128,3 +4291,26 @@ export type HousingOptionUpdate = Tables["housing_options"]["Update"];
 export type HousingContactRow = Tables["housing_contacts"]["Row"];
 export type HousingContactInsert = Tables["housing_contacts"]["Insert"];
 export type HousingContactUpdate = Tables["housing_contacts"]["Update"];
+
+export type GrimoireModeRow = Tables["grimoire_modes"]["Row"];
+export type GrimoireModeInsert = Tables["grimoire_modes"]["Insert"];
+export type GrimoireModeUpdate = Tables["grimoire_modes"]["Update"];
+
+export type GrimoireDailyLogRow = Tables["grimoire_daily_logs"]["Row"];
+export type GrimoireDailyLogInsert = Tables["grimoire_daily_logs"]["Insert"];
+export type GrimoireDailyLogUpdate = Tables["grimoire_daily_logs"]["Update"];
+
+export type GrimoireSkillRow = Tables["grimoire_skills"]["Row"];
+export type GrimoireSkillInsert = Tables["grimoire_skills"]["Insert"];
+export type GrimoireSkillUpdate = Tables["grimoire_skills"]["Update"];
+
+export type GrimoireCorruptionCheckRow =
+  Tables["grimoire_corruption_checks"]["Row"];
+export type GrimoireCorruptionCheckInsert =
+  Tables["grimoire_corruption_checks"]["Insert"];
+export type GrimoireCorruptionCheckUpdate =
+  Tables["grimoire_corruption_checks"]["Update"];
+
+export type GrimoireReversionRow = Tables["grimoire_reversions"]["Row"];
+export type GrimoireReversionInsert = Tables["grimoire_reversions"]["Insert"];
+export type GrimoireReversionUpdate = Tables["grimoire_reversions"]["Update"];

@@ -1301,3 +1301,7 @@ Timestamp: 2026-06-27 06:21 UTC
 
 - Added the Grimoire SQL foundation migration.
 - Added parent ownership guards for Grimoire links to modes, tasks, goals, proof items, AI actions, and chat messages.
+
+## Phase 13D — Grimoire Database Types and Read Helpers
+
+- Added TypeScript database types and read-only repository helpers for Grimoire.

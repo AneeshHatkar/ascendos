@@ -3790,3 +3790,9 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Added RLS, indexes, constraints, updated-at triggers, and parent ownership guards.
 - Preserved boundaries: no autonomous Carnos writes, no memory, no voice, no analytics snapshots, no custom tracker implementation.
 - Next: Phase 13D — database types and read helpers.
+
+## Phase 13D — Grimoire Database Types and Read Helpers
+
+- Added Grimoire database types and read helpers.
+- Preserved read-only boundary.
+- Next: Phase 13E — Grimoire dashboard aggregation helper.
