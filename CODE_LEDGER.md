@@ -2658,3 +2658,9 @@ Purpose:
 - `src/components/dashboard/cross-dashboard-links.tsx` exports `GrimoireCrossDashboardLinks`.
 - `src/components/dashboard/grimoire-dashboard-v1.tsx` renders Grimoire navigation links.
 - `src/lib/dashboard-registry.ts` uses updated Grimoire read-only operating description.
+
+## Phase 13H — Grimoire Symbol-to-Action Translator Preview
+- `src/components/dashboard/grimoire-dashboard-v1.tsx`
+  - Added disabled `ProposedActionReviewCard` translator previews.
+  - Added deterministic `buildGrimoireTranslatorPreviews` helper.
+  - Added translator boundary copy explaining no save, no execution, no AI, and no database write behavior.

@@ -1,3 +1,4 @@
+import { ProposedActionReviewCard } from "@/components/actions";
 import {
   DataList,
   EmptyState,
@@ -6,6 +7,7 @@ import {
   StatusPill,
 } from "@/components/dashboard";
 import { getGrimoireDashboardDataSummary } from "@/lib/dashboard";
+import type { ProposedActionContract } from "@/lib/actions/proposed-action-contracts";
 import { GrimoireCrossDashboardLinks } from "./cross-dashboard-links";
 import type {
   GrimoireCorruptionCheckRow,
@@ -318,6 +320,100 @@ function MissionMappingCard({ logs }: { logs: GrimoireDailyLogRow[] }) {
   );
 }
 
+function todayIsoDate(): string {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function firstUsefulText(...values: Array<string | null | undefined>): string {
+  return values.find((value) => typeof value === "string" && value.trim().length > 0)?.trim() ?? "";
+}
+
+function buildGrimoireTranslatorPreviews({
+  logs,
+  skills,
+}: {
+  logs: GrimoireDailyLogRow[];
+  skills: GrimoireSkillRow[];
+}): ProposedActionContract[] {
+  const primaryLog = logs[0] ?? null;
+  const primarySkill = skills[0] ?? null;
+
+  const modeName = firstUsefulText(
+    primaryLog?.active_mode,
+    primaryLog?.mission_type,
+    primarySkill?.realm,
+    "Grimoire mode",
+  );
+
+  const missionText = firstUsefulText(
+    primaryLog?.mission_statement,
+    primaryLog?.notes,
+    primarySkill?.description,
+    "Translate symbolic mode into one grounded proof action.",
+  );
+
+  const skillName = firstUsefulText(primarySkill?.name, "Grimoire proof skill");
+
+  return [
+    {
+      action_type: "create_task",
+      source: "carnos",
+      confidence: 0.72,
+      reason:
+        "Symbol-to-action translator preview: convert the selected Grimoire mode into one practical mission task. This card is disabled and does not persist anything.",
+      payload: {
+        title: `Ground ${modeName} into one proof action`,
+        description: `${missionText} Choose one visible action that can be completed and later reviewed as proof.`,
+        domain: "creativity",
+        priority: primaryLog?.reversion_required ? "high" : "medium",
+        status: "todo",
+      },
+      evidence_refs: [
+        "grimoire_modes",
+        "grimoire_daily_logs",
+        "grimoire_skills",
+      ],
+    },
+    {
+      action_type: "create_daily_log",
+      source: "carnos",
+      confidence: 0.68,
+      reason:
+        "Symbol-to-action translator preview: record the practical mission, proof expectation, corruption risk, and reversion requirement before treating a mode as active.",
+      payload: {
+        log_date: firstUsefulText(primaryLog?.log_date, todayIsoDate()),
+        summary: `Grimoire mission mapping for ${modeName}`,
+        notes:
+          "Facts first, story second: name the active mode, define the practical mission, record the proof action, check corruption risk, and mark whether reversion is required.",
+      },
+      evidence_refs: [
+        "grimoire_daily_logs",
+        "grimoire_corruption_checks",
+        "grimoire_reversions",
+      ],
+    },
+    {
+      action_type: "create_proof_item",
+      source: "carnos",
+      confidence: 0.7,
+      reason:
+        "Symbol-to-action translator preview: capture proof only after the symbolic mission produces concrete evidence. This is visibility-only until confirmation wiring exists.",
+      payload: {
+        title: `Proof for ${skillName}`,
+        proof_type: "note",
+        description:
+          "Capture the observable evidence created by the Grimoire mission. Do not replace proof with identity claims, fantasy language, or permanent overdrive.",
+        occurred_at: firstUsefulText(primaryLog?.log_date, todayIsoDate()),
+      },
+      evidence_refs: [
+        "grimoire_skills",
+        "grimoire_daily_logs",
+        "proof_items",
+      ],
+    },
+  ];
+}
+
 function SymbolToActionTranslatorCard({
   logs,
   skills,
@@ -325,11 +421,16 @@ function SymbolToActionTranslatorCard({
   logs: GrimoireDailyLogRow[];
   skills: GrimoireSkillRow[];
 }) {
+  const translatedActionPreviews = buildGrimoireTranslatorPreviews({
+    logs,
+    skills,
+  });
+
   return (
     <SectionCard
       title="Symbol-to-action translator"
-      eyebrow="13F required card"
-      description="Read-only translation surface showing proof-mapped logs and skill records. Actual translation proposals come later."
+      eyebrow="13H translator preview"
+      description="Deterministic read-only translation preview: mode and mission context become disabled proposed-action cards for task, daily log, and proof capture. Nothing is saved or executed here."
     >
       <div className="grid gap-4 lg:grid-cols-2">
         <DataList
@@ -366,6 +467,34 @@ function SymbolToActionTranslatorCard({
             />
           }
         />
+      </div>
+
+      <div className="mt-5 rounded-2xl border border-cyan-400/20 bg-cyan-400/10 p-4 text-sm leading-6 text-cyan-100">
+        <p className="font-semibold">Translator boundary</p>
+        <p className="mt-2 text-cyan-100/80">
+          These cards show how Carnos may translate symbolic mode language into a practical task,
+          daily log, or proof item. They are disabled previews only. This card does not call AI,
+          create proposed actions, execute actions, or write Grimoire records.
+        </p>
+      </div>
+
+      <div className="mt-5 grid gap-4 xl:grid-cols-3">
+        {translatedActionPreviews.map((action) => (
+          <ProposedActionReviewCard
+            key={action.action_type}
+            initialAction={action}
+            disabled
+            saveLabel="Save / Confirm unavailable in Phase 13H translator preview"
+            cancelLabel="Cancel unavailable in Phase 13H translator preview"
+            editLabel="Edit payload unavailable in Phase 13H translator preview"
+            reviewTitle="Grimoire translator preview"
+            validationIssues={[
+              "Preview only: this dashboard does not persist proposed actions.",
+              "Symbolic language must remain separate from writes until explicit user confirmation exists.",
+              "No AI generation, Supabase write, background job, or action execution is wired here.",
+            ]}
+          />
+        ))}
       </div>
     </SectionCard>
   );

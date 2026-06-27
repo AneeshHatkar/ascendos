@@ -2091,3 +2091,8 @@ Status: Complete after verification.
 Added Grimoire dashboard contract/card registry wiring and cross-dashboard navigation.
 
 Next: Phase 13H — Symbol-to-action translator.
+
+## Phase 13H — Grimoire Symbol-to-Action Translator Preview
+Status: Implemented locally.
+Boundary: read-only preview only; no AI generation, no proposed-action persistence, no action execution, and no Supabase writes.
+Next: Phase 13I — corruption detector expansion.

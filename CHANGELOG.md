@@ -1317,3 +1317,7 @@ Timestamp: 2026-06-27 06:21 UTC
 
 - Added Grimoire dashboard surface/card registry wiring for Mode Selector and Mission Mapping.
 - Added Grimoire cross-dashboard navigation to keep symbolic modes grounded in Command, Goals, Timeline, Calendar, and Carnos.
+
+## Phase 13H — Grimoire Symbol-to-Action Translator Preview
+- Added preview-only Grimoire symbol-to-action translation cards.
+- The translator now displays safe proposed-action shapes for task, daily log, and proof item creation without persisting or executing anything.

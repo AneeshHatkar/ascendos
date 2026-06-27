@@ -3821,3 +3821,11 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Updated dashboard registry description to reflect the read-only Grimoire operating surface.
 - Preserved boundary: no writes, no proposal execution, no Carnos execution, no memory/RAG, no voice, no timers, and no direct Supabase calls from UI.
 - Next: Phase 13H — Symbol-to-action translator.
+
+## Phase 13H — Grimoire Symbol-to-Action Translator Preview
+- Added deterministic Symbol-to-Action Translator preview cards to `/grimoire`.
+- Translator maps existing Grimoire mode/log/skill context into disabled proposed-action preview shapes: `create_task`, `create_daily_log`, and `create_proof_item`.
+- Boundary: preview-only, read-only, no AI generation, no Supabase writes, no `createProposedAction`, no `executeApprovedAction`, no timers, and no persistence.
+- Purpose: show how symbolic mode language becomes practical mission action, daily logging, and proof capture before later confirmation wiring.
+- Verification required: lint, route/registry/migration audits, source/integration audits, build, forbidden-marker scan, and git diff check.
+- Next: Phase 13I — corruption detector expansion.
