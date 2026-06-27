@@ -3836,3 +3836,11 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Added disabled correction-preview cards for `create_task` and `create_daily_log`.
 - Preserved boundary: preview-only, read-only, no generation call, no database writes, no proposed-action persistence, no action execution, no timers, and no mode activation.
 - Next: Phase 13J — reversion and weekly throne audit expansion.
+
+## Phase 13J — Grimoire Reversion and Weekly Throne Audit Expansion
+
+- Expanded the Grimoire reversion surface with pending-reversion recovery previews.
+- Added disabled proposed-action preview cards for recovery tasks and reversion daily-log notes.
+- Expanded the weekly throne audit surface with disabled task/proof preview cards.
+- Preserved Phase 13 boundaries: no write execution, no Carnos generation, no timers, no browser Supabase, and no automatic mode activation.
+- Next: Phase 13K — Carnos guide/throne boundary panels.

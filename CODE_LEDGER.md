@@ -2671,3 +2671,12 @@ Purpose:
   - Added deterministic `buildCorruptionCorrectionPreviews`.
   - Added disabled correction previews using `ProposedActionReviewCard`.
   - Fixed the Reversion card copy typo from `latersafe` to `later safe`.
+
+## Phase 13J — Grimoire Reversion and Weekly Throne Audit Expansion
+
+- Updated `src/components/dashboard/grimoire-dashboard-v1.tsx`.
+- Added `buildReversionRecoveryPreviews`.
+- Added `buildWeeklyThroneAuditPreviews`.
+- Rewired `ReversionCard` to receive pending reversion rows and pending reversion log rows.
+- Rewired `WeeklyThroneAuditCard` to receive throne attention summary values.
+- Kept all preview actions disabled and non-persistent.

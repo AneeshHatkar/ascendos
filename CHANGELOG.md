@@ -1325,3 +1325,8 @@ Timestamp: 2026-06-27 06:21 UTC
 ## Phase 13I — Grimoire Corruption Detector Expansion
 - Expanded Grimoire corruption detection with open-risk and high-severity panels.
 - Added preview-only correction cards for safe task/log review without writes or execution.
+
+## Phase 13J — Grimoire Reversion and Weekly Throne Audit Expansion
+
+- Expanded reversion and weekly throne audit panels with disabled proposed-action previews.
+- Added explicit reversion and throne boundaries.

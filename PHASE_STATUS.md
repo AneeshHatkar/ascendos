@@ -2101,3 +2101,9 @@ Next: Phase 13I — corruption detector expansion.
 Status: Implemented locally.
 Boundary: read-only preview only; no generation call, no proposed-action persistence, no action execution, no timers, no mode activation, and no database writes.
 Next: Phase 13J — reversion and weekly throne audit expansion.
+
+## Phase 13J — Grimoire Reversion and Weekly Throne Audit Expansion
+
+Status: Complete after verification.
+Current boundary: read-only UI plus disabled preview cards only.
+Next: Phase 13K — Carnos guide/throne boundary panels.

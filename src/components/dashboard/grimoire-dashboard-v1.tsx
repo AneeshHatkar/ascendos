@@ -695,59 +695,285 @@ function CorruptionDetectorCard({
   );
 }
 
-function ReversionCard({ reversions }: { reversions: GrimoireReversionRow[] }) {
+
+function buildReversionRecoveryPreviews({
+  pendingReversions,
+  pendingLogs,
+}: {
+  pendingReversions: GrimoireReversionRow[];
+  pendingLogs: GrimoireDailyLogRow[];
+}): ProposedActionContract[] {
+  const primaryReversion = pendingReversions[0];
+  const primaryLog = pendingLogs[0];
+
+  const modeName = firstUsefulText(
+    primaryReversion?.mode,
+    primaryLog?.active_mode,
+    primaryLog?.mission_type,
+    "High-intensity mode",
+  );
+
+  const reversionAction = firstUsefulText(
+    primaryReversion?.reversion_action,
+    primaryReversion?.notes,
+    "Complete a grounding reversion ritual before continuing symbolic work.",
+  );
+
+  return [
+    {
+      action_type: "create_task",
+      source: "system",
+      reason:
+        "Preview only: a pending Grimoire reversion should become a concrete recovery task before the mode continues.",
+      confidence: 0.74,
+      evidence_refs: [
+        "grimoire_reversions.pending",
+        "grimoire_daily_logs.reversion_required",
+      ],
+      payload: {
+        title: `Complete reversion for ${modeName}`,
+        description: reversionAction,
+        status: "todo",
+        priority: "high",
+        domain: "creativity",
+      },
+    },
+    {
+      action_type: "create_daily_log",
+      source: "system",
+      reason:
+        "Preview only: reversion completion should be reflected as a daily log note after explicit confirmation in a later safe-write flow.",
+      confidence: 0.7,
+      evidence_refs: [
+        "grimoire_reversions.completed=false",
+        "grimoire_daily_logs.reversion_done=false",
+      ],
+      payload: {
+        log_date: firstUsefulText(
+          primaryReversion?.log_date,
+          primaryLog?.log_date,
+          todayIsoDate(),
+        ),
+        summary: `Reversion check for ${modeName}`,
+        notes: `Pending recovery action: ${reversionAction}`,
+      },
+    },
+  ];
+}
+
+function buildWeeklyThroneAuditPreviews({
+  questions,
+  summary,
+}: {
+  questions: string[];
+  summary: {
+    throne_attention_count: number;
+    pending_reversion_count: number;
+    open_corruption_check_count: number;
+    high_severity_corruption_count: number;
+  };
+}): ProposedActionContract[] {
+  const auditPrompt = questions.join(" ");
+
+  return [
+    {
+      action_type: "create_task",
+      source: "system",
+      reason:
+        "Preview only: the weekly throne audit should become one scheduled review task, not an automatic write.",
+      confidence: 0.72,
+      evidence_refs: [
+        "weekly_throne_audit_questions",
+        "grimoire_throne_attention_count",
+      ],
+      payload: {
+        title: "Run weekly Grimoire throne audit",
+        description: `Review ${summary.throne_attention_count} attention signal(s): ${summary.pending_reversion_count} pending reversion(s), ${summary.open_corruption_check_count} open corruption check(s), and ${summary.high_severity_corruption_count} high-severity warning(s). Questions: ${auditPrompt}`,
+        status: "todo",
+        priority:
+          summary.throne_attention_count > 0 || summary.high_severity_corruption_count > 0
+            ? "high"
+            : "medium",
+        domain: "creativity",
+      },
+    },
+    {
+      action_type: "create_proof_item",
+      source: "system",
+      reason:
+        "Preview only: a completed throne audit should leave proof of what was corrected, removed, or grounded.",
+      confidence: 0.68,
+      evidence_refs: ["weekly_throne_audit_questions"],
+      payload: {
+        title: "Weekly Grimoire audit proof",
+        proof_type: "note",
+        description:
+          "Record which mode produced proof, which mode became fantasy, what was avoided, what must be removed, what mode is needed next, and the simplest proof action.",
+        occurred_at: todayIsoDate(),
+      },
+    },
+  ];
+}
+
+
+function ReversionCard({
+  reversions,
+  pendingReversions,
+  pendingLogs,
+}: {
+  reversions: GrimoireReversionRow[];
+  pendingReversions: GrimoireReversionRow[];
+  pendingLogs: GrimoireDailyLogRow[];
+}) {
+  const recoveryPreviews = buildReversionRecoveryPreviews({
+    pendingReversions,
+    pendingLogs,
+  });
+
   return (
     <SectionCard
       title="Reversion"
-      eyebrow="13F required card"
-      description="Read-only view of reversion actions. Logging completion is deferred to later safe write flows."
+      eyebrow="13J expanded reversion"
+      description="Read-only recovery surface for pending reversion records. Completion remains unavailable until a later explicit confirmation flow."
     >
-      <DataList
-        items={reversions.slice(0, 6).map((reversion) => ({
-          id: reversion.id,
-          title: reversion.mode ?? "Reversion action",
-          description: reversionDescription(reversion),
-          meta: (
-            <div className="flex flex-wrap gap-2">
-              <StatusPill label={formatDate(reversion.log_date)} />
-              <StatusPill
-                label={reversion.completed ? "completed" : "pending"}
-                tone={reversion.completed ? "success" : "warning"}
-              />
-            </div>
-          ),
-        }))}
-        emptyState={
-          <EmptyState
-            title="No reversion actions yet"
-            description="High-intensity modes must include a recovery or grounding action before they become sustainable."
-          />
-        }
-      />
+      <div className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
+        <DataList
+          items={reversions.slice(0, 6).map((reversion) => ({
+            id: reversion.id,
+            title: reversion.mode ?? "Reversion action",
+            description: reversionDescription(reversion),
+            meta: (
+              <div className="flex flex-wrap gap-2">
+                <StatusPill label={formatDate(reversion.log_date)} />
+                <StatusPill
+                  label={reversion.completed ? "completed" : "pending"}
+                  tone={reversion.completed ? "success" : "warning"}
+                />
+              </div>
+            ),
+          }))}
+          emptyState={
+            <EmptyState
+              title="No reversion actions yet"
+              description="High-intensity modes must include a recovery or grounding action before they become sustainable."
+            />
+          }
+        />
+
+        <div className="space-y-4 rounded-3xl border border-amber-300/20 bg-amber-300/[0.04] p-4">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-amber-200">
+              recovery preview
+            </p>
+            <h3 className="mt-2 text-base font-semibold text-white">
+              Pending reversion queue
+            </h3>
+            <p className="mt-2 text-sm leading-6 text-slate-300">
+              Pending reversions are translated into preview-only recovery tasks
+              and daily-log notes. Nothing is saved, completed, or executed here.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/20 p-4 text-sm leading-6 text-slate-300">
+            <p className="font-semibold text-amber-100">Reversion boundary</p>
+            <p className="mt-2">
+              This panel does not mark reversions complete. It only shows what a
+              safe future confirmation flow could propose.
+            </p>
+          </div>
+
+          {recoveryPreviews.map((action) => (
+            <ProposedActionReviewCard
+              key={action.action_type}
+              initialAction={action}
+              saveLabel="Save / Confirm unavailable in Phase 13J reversion preview"
+              cancelLabel="Cancel unavailable in Phase 13J reversion preview"
+              editLabel="Edit payload unavailable in Phase 13J reversion preview"
+              reviewTitle="Grimoire reversion recovery preview"
+              disabled
+            />
+          ))}
+        </div>
+      </div>
     </SectionCard>
   );
 }
 
-function WeeklyThroneAuditCard({ questions }: { questions: string[] }) {
+
+function WeeklyThroneAuditCard({
+  questions,
+  summary,
+}: {
+  questions: string[];
+  summary: {
+    throne_attention_count: number;
+    pending_reversion_count: number;
+    open_corruption_check_count: number;
+    high_severity_corruption_count: number;
+  };
+}) {
+  const throneAuditPreviews = buildWeeklyThroneAuditPreviews({
+    questions,
+    summary,
+  });
+
   return (
     <SectionCard
       title="Weekly throne audit"
-      eyebrow="13F required card"
-      description="Read-only audit prompts for truth, safety, direction, and identity stability."
+      eyebrow="13J expanded throne audit"
+      description="Read-only audit prompts for truth, safety, direction, and identity stability, with disabled preview actions for later confirmation."
     >
-      <ol className="grid list-decimal gap-3 pl-5 text-sm leading-6 text-slate-300 md:grid-cols-2">
-        {questions.map((question) => (
-          <li
-            key={question}
-            className="rounded-2xl border border-white/10 bg-black/20 p-4"
-          >
-            {question}
-          </li>
-        ))}
-      </ol>
+      <div className="grid gap-5 lg:grid-cols-[1fr_0.95fr]">
+        <ol className="grid list-decimal gap-3 pl-5 text-sm leading-6 text-slate-300">
+          {questions.map((question) => (
+            <li
+              key={question}
+              className="rounded-2xl border border-white/10 bg-black/20 p-4"
+            >
+              {question}
+            </li>
+          ))}
+        </ol>
+
+        <div className="space-y-4 rounded-3xl border border-cyan-300/20 bg-cyan-300/[0.04] p-4">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200">
+              throne preview
+            </p>
+            <h3 className="mt-2 text-base font-semibold text-white">
+              Audit-to-proof conversion
+            </h3>
+            <p className="mt-2 text-sm leading-6 text-slate-300">
+              The throne audit becomes a review task and proof note only through
+              later explicit confirmation. This Phase 13J panel is display-only.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/20 p-4 text-sm leading-6 text-slate-300">
+            <p className="font-semibold text-cyan-100">Throne boundary</p>
+            <p className="mt-2">
+              The throne layer separates facts from story, prevents permanent
+              overdrive, and keeps identity claims below evidence.
+            </p>
+          </div>
+
+          {throneAuditPreviews.map((action) => (
+            <ProposedActionReviewCard
+              key={action.action_type}
+              initialAction={action}
+              saveLabel="Save / Confirm unavailable in Phase 13J throne preview"
+              cancelLabel="Cancel unavailable in Phase 13J throne preview"
+              editLabel="Edit payload unavailable in Phase 13J throne preview"
+              reviewTitle="Grimoire throne audit preview"
+              disabled
+            />
+          ))}
+        </div>
+      </div>
     </SectionCard>
   );
 }
+
 
 export async function GrimoireDashboardV1({ userId }: GrimoireDashboardV1Props) {
   const data = await getGrimoireDashboardDataSummary(userId);
@@ -852,9 +1078,19 @@ export async function GrimoireDashboardV1({ userId }: GrimoireDashboardV1Props) 
         openChecks={data.detail_rows.open_corruption_checks}
         highSeverityChecks={data.detail_rows.high_severity_corruption_checks}
       />
-      <ReversionCard reversions={data.detail_rows.reversions} />
+      <ReversionCard
+        reversions={data.detail_rows.reversions}
+        pendingReversions={data.detail_rows.pending_reversions}
+        pendingLogs={data.detail_rows.pending_reversion_logs}
+      />
       <WeeklyThroneAuditCard
         questions={data.weekly_throne_audit_questions}
+        summary={{
+          throne_attention_count: summary.throne_attention_count,
+          pending_reversion_count: summary.pending_reversion_count,
+          open_corruption_check_count: summary.open_corruption_check_count,
+          high_severity_corruption_count: summary.high_severity_corruption_count,
+        }}
       />
 
       <GrimoireRulePanel
