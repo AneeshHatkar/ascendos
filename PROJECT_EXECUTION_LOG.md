@@ -3737,3 +3737,19 @@ No Grimoire implementation was started.
 - Added `CalendarTimelineProposalComposer` for `/calendar` and `/timeline`.
 - Removed stale UI language that claimed creation remained disabled on Calendar and Timeline.
 - Preserved confirmation-first writes: no direct task, event, reminder, sync, or timeline mutation was added.
+
+
+## Phase 12.9G — Final Pre-Grimoire Lock
+
+Locked the pre-Grimoire hardening pass after closing the earlier core operating gaps.
+
+Confirmed completed hardening:
+- 12.9A core gap audit lock.
+- 12.9B AI extraction route and proposed-action contract boundary.
+- 12.9C pending update confirmation wiring.
+- 12.9D Carnos chat persistence without generation.
+- 12.9E Goals/Proof proposal creation.
+- 12.9F Calendar/Timeline proposal creation.
+- 12.9G final pre-Grimoire lock.
+
+Next: Phase 13 / Source Chunk 15 — Grimoire.

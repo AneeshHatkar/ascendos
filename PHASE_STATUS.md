@@ -1996,3 +1996,17 @@ Status: Verification pending.
 Status: Complete.
 
 Calendar and Timeline now support proposal-first task capture through pending `ai_actions`. Direct event writes, reminders, calendar sync, and timeline table writes remain deferred. Next step: rerun full checks, commit, then begin Phase 13 Grimoire only if pre-Grimoire audit is clean.
+
+
+## Phase 12.9G — Final Pre-Grimoire Lock
+
+Status: Complete.
+
+Pre-Grimoire hardening is locked through:
+- Carnos chat persistence.
+- Goals/Proof proposal creation.
+- Calendar/Timeline proposal creation.
+- Pending update confirmation wiring.
+- AI extraction contract boundary.
+
+Next step: Phase 13 / Source Chunk 15 — Grimoire.

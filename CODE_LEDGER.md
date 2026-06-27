@@ -2616,3 +2616,10 @@ Purpose:
 - `src/app/timeline/page.tsx` — Timeline page now exposes proposal-first task capture.
 - `scripts/audit-pre-grimoire-core-gaps.mjs` — Chunk 07 audit now verifies proposal wiring.
 - `docs/phase-reports/PHASE_12_9F_CALENDAR_TIMELINE_PROPOSAL_CREATION.md` — completion report.
+
+
+## Phase 12.9G — Final Pre-Grimoire Lock
+
+- Added `docs/phase-reports/PHASE_12_9G_FINAL_PRE_GRIMOIRE_LOCK.md`.
+- Recorded the final pre-Grimoire status before starting Source Chunk 15 / Phase 13.
+- No runtime feature code was added in this lock step.

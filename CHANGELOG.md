@@ -1277,3 +1277,10 @@ Timestamp: 2026-06-27 06:21 UTC
 - Added proposal composer UI to `/calendar` and `/timeline`.
 - Updated pre-Grimoire audit checks for Chunk 07.
 - Preserved no-direct-write safety boundaries.
+
+
+## Phase 12.9G — Final Pre-Grimoire Lock
+
+- Locked the pre-Grimoire hardening pass.
+- Confirmed Goals/Proof, Calendar/Timeline, Carnos Chat, and Pending Updates gaps are closed enough to proceed to Grimoire.
+- Next implementation phase is Phase 13 / Source Chunk 15 — Grimoire.
