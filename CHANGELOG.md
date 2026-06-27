@@ -1188,3 +1188,9 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - Added read-only repository helpers for finance accounts, budget categories, financial logs, subscriptions, document metadata, housing admin records, and housing contacts.
 - Exported the new helpers through the repository barrel.
 - Kept dashboard wiring and write behavior deferred.
+
+## Admin and Finance Dashboard Summary
+
+- Added read-only dashboard aggregation helpers for admin and finance records.
+- Added summary counts for financial logs, subscriptions, documents, housing records, and due/overdue admin attention items.
+- Kept SQL, repositories, dashboard components, and routes unchanged.

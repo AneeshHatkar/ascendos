@@ -1689,3 +1689,36 @@ Deferred:
 - Command and Calendar visibility.
 - Proposed-action preview boundary.
 - Audit gate and completion report.
+
+## Phase 12 C09 — Admin / Finance Dashboard Aggregation Helpers
+
+Status: Complete pending verification.
+
+Completed:
+
+- Dashboard aggregation helper for admin/finance records.
+- Due-soon and overdue summary logic.
+- Read-only summary and detail-row contracts.
+
+Touched:
+
+- Dashboard helper and logs only.
+
+Not touched:
+
+- SQL migrations.
+- Database types.
+- Repositories.
+- UI components.
+- App routes.
+- Proposed-action execution.
+
+Progress:
+
+- Completed before this chunk: 22 / 45.
+- Completed after this chunk: 23 / 45.
+- Remaining after this chunk: 22 / 45.
+
+Next:
+
+- C10 — inspect dashboard component patterns before building Life Admin / Finance / Housing / Documents UI surfaces.

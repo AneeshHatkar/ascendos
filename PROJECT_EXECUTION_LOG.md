@@ -3535,3 +3535,30 @@ Boundaries:
 Next:
 
 - Build aggregation helpers and state mapping for daily admin, finance, documents, subscriptions, and housing admin.
+
+## Phase 12 C09 — Admin / Finance Dashboard Aggregation Helpers
+
+Status: Completed pending verification.
+
+Scope:
+
+- Added read-only aggregation helper for Life Admin / Finance dashboard data.
+- Aggregates financial accounts, budget categories, financial logs, subscriptions, document metadata, housing admin records, and housing contacts.
+- Added due-soon / overdue helper logic for subscriptions, documents, finance records, and housing follow-ups.
+- Preserved read-only boundaries.
+
+Files changed:
+
+- `src/lib/dashboard/admin-finance-dashboard-data-helpers.ts`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundaries:
+
+- No SQL migration changes.
+- No database type changes.
+- No repository changes.
+- No components or route wiring.
+- No proposed-action execution.

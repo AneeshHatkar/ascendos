@@ -2420,3 +2420,31 @@ Exports added:
 - `listLifeAdminDocuments`
 - `listHousingOptions`
 - `listHousingContacts`
+
+## Phase 12 C09 — Admin / Finance Dashboard Aggregation Helpers
+
+Files added:
+
+- `src/lib/dashboard/admin-finance-dashboard-data-helpers.ts`
+
+Files modified:
+
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Technical summary:
+
+- Added `getAdminFinanceDashboardDataSummary(userId)`.
+- Added summary and detail-row contracts for admin/finance dashboards.
+- Added read-only counts for finance, subscription, document, and housing admin records.
+- Added due-soon/overdue calculations.
+- Added warning collection pattern matching Health/Body helper style.
+
+Safety:
+
+- Read-only helper only.
+- No writes.
+- No Supabase browser client.
+- No route or dashboard rendering changes.
