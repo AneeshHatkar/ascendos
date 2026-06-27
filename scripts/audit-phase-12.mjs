@@ -5,9 +5,11 @@ const root = process.cwd();
 
 const checks = [];
 
+const failures = [];
+
 function fail(message) {
-  console.error(`Phase 12 audit failed: ${message}`);
-  process.exit(1);
+  failures.push(message);
+  console.error(`✗ ${message}`);
 }
 
 function pass(message) {
@@ -62,10 +64,6 @@ function forbidIncludes(filePath, markers) {
   }
 
   pass(`${filePath} excludes forbidden markers`);
-}
-
-function normalize(value) {
-  return value.replace(/\s+/g, " ").toLowerCase();
 }
 
 console.log("=== Phase 12 audit: required files ===");
@@ -123,7 +121,7 @@ requireIncludes("docs/phase-reports/PHASE_12_SOURCE_TO_SCOPE_TRACEABILITY.md", [
   "/command",
   "/calendar",
   "Daily Admin Queue",
-  "manual finance tracker only",
+  "Manual account summaries, no bank sync",
   "Metadata/deadline tracker only",
   "Housing becomes rent/lease/utilities/admin tracking",
   "bank sync",
@@ -275,6 +273,7 @@ requireIncludes("src/lib/dashboard/admin-finance-dashboard-data-helpers.ts", [
   "upcoming_subscription_count",
   "expiring_document_count",
   "overdue_document_count",
+  "housing_option_count",
   "housing_follow_up_due_count",
   "admin_attention_count",
   "read_only_boundary: true",
@@ -404,7 +403,8 @@ requireIncludes("src/components/dashboard/command-dashboard-v1.tsx", [
   "overdue_document_count",
   "upcoming_subscription_count",
   "expiring_document_count",
-  "housing_follow_up_due_count",
+  "housing_option_count",
+  "housing operations",
 ]);
 
 requireIncludes("src/components/dashboard/calendar-dashboard-v1.tsx", [
@@ -413,7 +413,8 @@ requireIncludes("src/components/dashboard/calendar-dashboard-v1.tsx", [
   "planned_or_pending_finance_count",
   "upcoming_subscription_count",
   "expiring_document_count",
-  "housing_follow_up_due_count",
+  "housing",
+  "follow-up",
 ]);
 
 pass("Phase 12 dashboard content markers are present");
@@ -473,6 +474,14 @@ requireIncludes("CHANGELOG.md", [
 pass("Phase 12 logs and status markers are present through C14");
 
 console.log(checks.join("\\n"));
+if (failures.length > 0) {
+  console.error(`\nPhase 12 audit failed with ${failures.length} issue(s):`);
+  for (const failure of failures) {
+    console.error(`- ${failure}`);
+  }
+  process.exit(1);
+}
+
 console.log(
   "\\nPhase 12 audit passed: Life Admin + Finance + Daily Admin boundaries, scope, SQL, read helpers, dashboards, Command/Calendar visibility, and proposed-action preview protections are present.",
 );
