@@ -55,7 +55,14 @@ type Phase9SkillRow = Phase9UpdatedSourceFields & {
   slug: string | null;
   description: string | null;
   category: string | null;
-  status: "not_started" | "learning" | "practicing" | "proving" | "mastered" | "stale" | "archived";
+  status:
+    | "not_started"
+    | "learning"
+    | "practicing"
+    | "proving"
+    | "mastered"
+    | "stale"
+    | "archived";
   priority: "low" | "medium" | "high" | "critical";
   difficulty: "low" | "medium" | "high" | "expert";
   target_level: string | null;
@@ -89,7 +96,14 @@ type Phase9LearningSessionRow = Phase9UpdatedSourceFields & {
   skill_path_id: string | null;
   skill_id: string | null;
   title: string;
-  session_type: "study" | "practice" | "build" | "review" | "quiz" | "interview_prep" | "research";
+  session_type:
+    | "study"
+    | "practice"
+    | "build"
+    | "review"
+    | "quiz"
+    | "interview_prep"
+    | "research";
   status: "planned" | "active" | "completed" | "cancelled" | "archived";
   started_at: string | null;
   ended_at: string | null;
@@ -114,7 +128,13 @@ type Phase9QuizRow = {
   skill_id: string | null;
   title: string;
   description: string | null;
-  quiz_type: "concept_check" | "coding" | "interview" | "project_review" | "research_review" | "mixed";
+  quiz_type:
+    | "concept_check"
+    | "coding"
+    | "interview"
+    | "project_review"
+    | "research_review"
+    | "mixed";
   status: "draft" | "active" | "paused" | "archived";
   difficulty: "low" | "medium" | "high" | "expert";
   question_count: number | null;
@@ -130,8 +150,22 @@ type Phase9ProjectRow = Phase9UpdatedSourceFields & {
   title: string;
   slug: string | null;
   description: string | null;
-  project_type: "portfolio" | "learning" | "research" | "career" | "personal_system" | "coursework" | "experiment";
-  status: "planned" | "active" | "blocked" | "shipping" | "shipped" | "paused" | "archived";
+  project_type:
+    | "portfolio"
+    | "learning"
+    | "research"
+    | "career"
+    | "personal_system"
+    | "coursework"
+    | "experiment";
+  status:
+    | "planned"
+    | "active"
+    | "blocked"
+    | "shipping"
+    | "shipped"
+    | "paused"
+    | "archived";
   priority: "low" | "medium" | "high" | "critical";
   stage: string | null;
   problem_statement: string | null;
@@ -178,7 +212,13 @@ type Phase9ProjectMilestoneRow = {
   project_id: string;
   title: string;
   description: string | null;
-  status: "planned" | "active" | "blocked" | "completed" | "cancelled" | "archived";
+  status:
+    | "planned"
+    | "active"
+    | "blocked"
+    | "completed"
+    | "cancelled"
+    | "archived";
   priority: "low" | "medium" | "high" | "critical";
   due_date: string | null;
   completed_at: string | null;
@@ -195,7 +235,13 @@ type Phase9ProjectBugRow = {
   project_id: string;
   title: string;
   description: string | null;
-  status: "open" | "investigating" | "fixed" | "wont_fix" | "closed" | "archived";
+  status:
+    | "open"
+    | "investigating"
+    | "fixed"
+    | "wont_fix"
+    | "closed"
+    | "archived";
   severity: "low" | "medium" | "high" | "critical";
   source: string | null;
   reproduction_steps: string | null;
@@ -215,7 +261,16 @@ type Phase9ProjectTestRow = {
   user_id: string;
   project_id: string;
   title: string;
-  test_type: "manual" | "unit" | "integration" | "e2e" | "lint" | "typecheck" | "build" | "audit" | "smoke";
+  test_type:
+    | "manual"
+    | "unit"
+    | "integration"
+    | "e2e"
+    | "lint"
+    | "typecheck"
+    | "build"
+    | "audit"
+    | "smoke";
   status: "pending" | "passed" | "failed" | "skipped" | "archived";
   command: string | null;
   expected_result: string | null;
@@ -253,7 +308,16 @@ type Phase9ProjectLinkRow = {
   project_id: string;
   label: string;
   url: string;
-  link_type: "github" | "demo" | "readme" | "portfolio" | "paper" | "video" | "documentation" | "reference" | "proof";
+  link_type:
+    | "github"
+    | "demo"
+    | "readme"
+    | "portfolio"
+    | "paper"
+    | "video"
+    | "documentation"
+    | "reference"
+    | "proof";
   description: string | null;
   proof_item_id: string | null;
   metadata: Json;
@@ -265,8 +329,23 @@ type Phase9SkillProgressRow = Phase9SourceFields & {
   id: string;
   user_id: string;
   skill_id: string;
-  status: "not_started" | "learning" | "practicing" | "proving" | "mastered" | "stale" | "archived";
-  previous_status: "not_started" | "learning" | "practicing" | "proving" | "mastered" | "stale" | "archived" | null;
+  status:
+    | "not_started"
+    | "learning"
+    | "practicing"
+    | "proving"
+    | "mastered"
+    | "stale"
+    | "archived";
+  previous_status:
+    | "not_started"
+    | "learning"
+    | "practicing"
+    | "proving"
+    | "mastered"
+    | "stale"
+    | "archived"
+    | null;
   mastery_score: number | null;
   confidence_score: number | null;
   delta_summary: string | null;
@@ -404,7 +483,14 @@ type Phase10ResearchIdeaRow = {
   title: string;
   summary: string | null;
   research_area: string | null;
-  status: "captured" | "exploring" | "active" | "blocked" | "converted_to_paper" | "paused" | "archived";
+  status:
+    | "captured"
+    | "exploring"
+    | "active"
+    | "blocked"
+    | "converted_to_paper"
+    | "paused"
+    | "archived";
   priority: "low" | "medium" | "high" | "urgent";
   novelty_score: number | null;
   feasibility_score: number | null;
@@ -429,7 +515,13 @@ type Phase10ResearchQuestionRow = {
   hypothesis: string | null;
   variable_focus: string | null;
   expected_outcome: string | null;
-  status: "open" | "investigating" | "supported" | "rejected" | "revised" | "archived";
+  status:
+    | "open"
+    | "investigating"
+    | "supported"
+    | "rejected"
+    | "revised"
+    | "archived";
   notes: string | null;
   created_at: string;
   updated_at: string;
@@ -445,8 +537,24 @@ type Phase10ResearchLiteratureItemRow = {
   source_url: string | null;
   doi: string | null;
   arxiv_id: string | null;
-  item_type: "paper" | "article" | "book" | "thesis" | "technical_report" | "documentation" | "dataset" | "benchmark" | "other";
-  reading_status: "saved" | "skimmed" | "reading" | "read" | "summarized" | "cited" | "archived";
+  item_type:
+    | "paper"
+    | "article"
+    | "book"
+    | "thesis"
+    | "technical_report"
+    | "documentation"
+    | "dataset"
+    | "benchmark"
+    | "other";
+  reading_status:
+    | "saved"
+    | "skimmed"
+    | "reading"
+    | "read"
+    | "summarized"
+    | "cited"
+    | "archived";
   relevance_score: number | null;
   credibility_score: number | null;
   summary: string | null;
@@ -467,7 +575,18 @@ type Phase10ResearchPaperRow = {
   title: string;
   abstract: string | null;
   research_area: string | null;
-  status: "idea" | "outline" | "drafting" | "internal_review" | "professor_review" | "revision" | "submission_ready" | "submitted" | "accepted" | "rejected" | "archived";
+  status:
+    | "idea"
+    | "outline"
+    | "drafting"
+    | "internal_review"
+    | "professor_review"
+    | "revision"
+    | "submission_ready"
+    | "submitted"
+    | "accepted"
+    | "rejected"
+    | "archived";
   primary_research_idea_id: string | null;
   project_id: string | null;
   proof_item_id: string | null;
@@ -486,7 +605,12 @@ type Phase10ResearchPaperVersionRow = {
   file_url: string | null;
   doc_url: string | null;
   abstract_snapshot: string | null;
-  status: "draft" | "reviewed" | "revised" | "submission_candidate" | "archived";
+  status:
+    | "draft"
+    | "reviewed"
+    | "revised"
+    | "submission_candidate"
+    | "archived";
   page_count: number | null;
   readiness_score: number | null;
   main_gap: string | null;
@@ -502,8 +626,21 @@ type Phase10ResearchClaimRow = {
   research_paper_id: string | null;
   paper_version_id: string | null;
   claim_text: string;
-  claim_type: "novelty" | "method" | "result" | "comparison" | "limitation" | "contribution" | "application" | "future_work";
-  support_status: "unsupported" | "partially_supported" | "supported" | "contradicted" | "needs_review";
+  claim_type:
+    | "novelty"
+    | "method"
+    | "result"
+    | "comparison"
+    | "limitation"
+    | "contribution"
+    | "application"
+    | "future_work";
+  support_status:
+    | "unsupported"
+    | "partially_supported"
+    | "supported"
+    | "contradicted"
+    | "needs_review";
   evidence_strength: number | null;
   literature_item_id: string | null;
   proof_item_id: string | null;
@@ -527,8 +664,19 @@ type Phase10ResearchExperimentRow = {
   baseline: string | null;
   variables: Json;
   metrics: Json;
-  reproducibility_status: "not_started" | "partial" | "reproducible" | "not_reproducible" | "needs_cleanup";
-  status: "planned" | "running" | "blocked" | "completed" | "failed" | "archived";
+  reproducibility_status:
+    | "not_started"
+    | "partial"
+    | "reproducible"
+    | "not_reproducible"
+    | "needs_cleanup";
+  status:
+    | "planned"
+    | "running"
+    | "blocked"
+    | "completed"
+    | "failed"
+    | "archived";
   started_at: string | null;
   completed_at: string | null;
   notes: string | null;
@@ -566,7 +714,17 @@ type Phase10ResearchCitationRow = {
   research_claim_id: string | null;
   research_paper_id: string | null;
   paper_version_id: string | null;
-  citation_purpose: "background" | "related_work" | "method_support" | "result_comparison" | "limitation" | "future_work" | "contradiction" | "definition" | "benchmark" | "other";
+  citation_purpose:
+    | "background"
+    | "related_work"
+    | "method_support"
+    | "result_comparison"
+    | "limitation"
+    | "future_work"
+    | "contradiction"
+    | "definition"
+    | "benchmark"
+    | "other";
   citation_note: string | null;
   quote_or_excerpt: string | null;
   page_or_section: string | null;
@@ -578,7 +736,14 @@ type Phase10ResearchVenueRow = {
   id: string;
   user_id: string;
   name: string;
-  venue_type: "conference" | "journal" | "workshop" | "symposium" | "preprint" | "internal_review" | "other";
+  venue_type:
+    | "conference"
+    | "journal"
+    | "workshop"
+    | "symposium"
+    | "preprint"
+    | "internal_review"
+    | "other";
   field: string | null;
   ranking_note: string | null;
   deadline: string | null;
@@ -597,7 +762,15 @@ type Phase10ResearchSubmissionRow = {
   research_paper_id: string;
   research_venue_id: string | null;
   submitted_at: string | null;
-  status: "planned" | "preparing" | "submitted" | "under_review" | "accepted" | "rejected" | "withdrawn" | "archived";
+  status:
+    | "planned"
+    | "preparing"
+    | "submitted"
+    | "under_review"
+    | "accepted"
+    | "rejected"
+    | "withdrawn"
+    | "archived";
   decision: string | null;
   decision_at: string | null;
   reviewer_summary: string | null;
@@ -613,13 +786,26 @@ type Phase10ResearchFeedbackRow = {
   research_paper_id: string | null;
   paper_version_id: string | null;
   research_idea_id: string | null;
-  feedback_source_type: "professor" | "advisor" | "collaborator" | "reviewer" | "self_review" | "peer" | "other";
+  feedback_source_type:
+    | "professor"
+    | "advisor"
+    | "collaborator"
+    | "reviewer"
+    | "self_review"
+    | "peer"
+    | "other";
   feedback_source_name: string | null;
   feedback_date: string | null;
   summary: string;
   required_changes: string | null;
   severity: "low" | "medium" | "high" | "critical";
-  status: "received" | "triaged" | "in_progress" | "addressed" | "rejected" | "archived";
+  status:
+    | "received"
+    | "triaged"
+    | "in_progress"
+    | "addressed"
+    | "rejected"
+    | "archived";
   task_id: string | null;
   proof_item_id: string | null;
   notes: string | null;
@@ -674,7 +860,16 @@ type Phase10TargetProfessorRow = {
   research_area: string | null;
   fit_score: number | null;
   fit_reason: string | null;
-  outreach_status: "not_started" | "researching" | "draft_needed" | "ready_to_contact" | "contacted" | "replied" | "follow_up_needed" | "not_fit" | "archived";
+  outreach_status:
+    | "not_started"
+    | "researching"
+    | "draft_needed"
+    | "ready_to_contact"
+    | "contacted"
+    | "replied"
+    | "follow_up_needed"
+    | "not_fit"
+    | "archived";
   last_contacted_at: string | null;
   related_literature_item_id: string | null;
   related_research_idea_id: string | null;
@@ -709,9 +904,27 @@ type Phase10PhdApplicationAssetRow = {
   id: string;
   user_id: string;
   target_university_id: string | null;
-  asset_type: "sop" | "cv" | "resume" | "transcript" | "recommendation" | "writing_sample" | "research_statement" | "portfolio" | "paper" | "test_score" | "other";
+  asset_type:
+    | "sop"
+    | "cv"
+    | "resume"
+    | "transcript"
+    | "recommendation"
+    | "writing_sample"
+    | "research_statement"
+    | "portfolio"
+    | "paper"
+    | "test_score"
+    | "other";
   title: string;
-  status: "missing" | "planned" | "drafting" | "needs_review" | "ready" | "submitted" | "archived";
+  status:
+    | "missing"
+    | "planned"
+    | "drafting"
+    | "needs_review"
+    | "ready"
+    | "submitted"
+    | "archived";
   file_url: string | null;
   doc_url: string | null;
   quality_score: number | null;
@@ -734,7 +947,14 @@ type Phase10SopVersionRow = {
   professor_fit_summary: string | null;
   weakness_notes: string | null;
   readiness_score: number | null;
-  status: "outline" | "draft" | "reviewed" | "revised" | "ready" | "submitted" | "archived";
+  status:
+    | "outline"
+    | "draft"
+    | "reviewed"
+    | "revised"
+    | "ready"
+    | "submitted"
+    | "archived";
   created_at: string;
   updated_at: string;
 };
@@ -747,7 +967,14 @@ type Phase10RecommendationTargetRow = {
   institution_or_company: string | null;
   relationship_context: string | null;
   strength_score: number | null;
-  request_status: "potential" | "preparing" | "requested" | "agreed" | "submitted" | "unavailable" | "archived";
+  request_status:
+    | "potential"
+    | "preparing"
+    | "requested"
+    | "agreed"
+    | "submitted"
+    | "unavailable"
+    | "archived";
   requested_at: string | null;
   due_date: string | null;
   target_university_id: string | null;
@@ -759,9 +986,690 @@ type Phase10RecommendationTargetRow = {
   updated_at: string;
 };
 
+type Phase12FinancialAccountRow = {
+  id: string;
+  user_id: string;
+  name: string;
+  account_type:
+    | "checking"
+    | "savings"
+    | "credit_card"
+    | "cash"
+    | "loan"
+    | "investment_manual"
+    | "other";
+  institution_name: string | null;
+  currency: string;
+  current_balance: number | null;
+  is_active: boolean;
+  privacy_level: "private" | "sensitive" | "locked";
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase12FinancialAccountInsert = {
+  id?: string;
+  user_id: string;
+  name: string;
+  account_type?:
+    | "checking"
+    | "savings"
+    | "credit_card"
+    | "cash"
+    | "loan"
+    | "investment_manual"
+    | "other";
+  institution_name?: string | null;
+  currency?: string;
+  current_balance?: number | null;
+  is_active?: boolean;
+  privacy_level?: "private" | "sensitive" | "locked";
+  notes?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12FinancialAccountUpdate = {
+  id?: string;
+  user_id?: string;
+  name?: string;
+  account_type?:
+    | "checking"
+    | "savings"
+    | "credit_card"
+    | "cash"
+    | "loan"
+    | "investment_manual"
+    | "other";
+  institution_name?: string | null;
+  currency?: string;
+  current_balance?: number | null;
+  is_active?: boolean;
+  privacy_level?: "private" | "sensitive" | "locked";
+  notes?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12BudgetCategoryRow = {
+  id: string;
+  user_id: string;
+  name: string;
+  category_type:
+    | "income"
+    | "expense"
+    | "savings"
+    | "debt"
+    | "rent"
+    | "utility"
+    | "subscription"
+    | "other";
+  monthly_target: number | null;
+  currency: string;
+  is_active: boolean;
+  sort_order: number;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase12BudgetCategoryInsert = {
+  id?: string;
+  user_id: string;
+  name: string;
+  category_type?:
+    | "income"
+    | "expense"
+    | "savings"
+    | "debt"
+    | "rent"
+    | "utility"
+    | "subscription"
+    | "other";
+  monthly_target?: number | null;
+  currency?: string;
+  is_active?: boolean;
+  sort_order?: number;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12BudgetCategoryUpdate = {
+  id?: string;
+  user_id?: string;
+  name?: string;
+  category_type?:
+    | "income"
+    | "expense"
+    | "savings"
+    | "debt"
+    | "rent"
+    | "utility"
+    | "subscription"
+    | "other";
+  monthly_target?: number | null;
+  currency?: string;
+  is_active?: boolean;
+  sort_order?: number;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12FinancialLogRow = {
+  id: string;
+  user_id: string;
+  account_id: string | null;
+  budget_category_id: string | null;
+  log_type:
+    | "income"
+    | "expense"
+    | "rent"
+    | "utility"
+    | "bill"
+    | "subscription"
+    | "savings"
+    | "debt_payment"
+    | "refund"
+    | "transfer"
+    | "adjustment"
+    | "other";
+  title: string;
+  amount: number;
+  currency: string;
+  occurred_on: string;
+  payment_status:
+    | "planned"
+    | "pending"
+    | "recorded"
+    | "paid"
+    | "overdue"
+    | "cancelled"
+    | "skipped";
+  merchant_or_source: string | null;
+  notes: string | null;
+  related_task_id: string | null;
+  related_event_id: string | null;
+  source_ai_action_id: string | null;
+  source_chat_message_id: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase12FinancialLogInsert = {
+  id?: string;
+  user_id: string;
+  account_id?: string | null;
+  budget_category_id?: string | null;
+  log_type:
+    | "income"
+    | "expense"
+    | "rent"
+    | "utility"
+    | "bill"
+    | "subscription"
+    | "savings"
+    | "debt_payment"
+    | "refund"
+    | "transfer"
+    | "adjustment"
+    | "other";
+  title: string;
+  amount: number;
+  currency?: string;
+  occurred_on?: string;
+  payment_status?:
+    | "planned"
+    | "pending"
+    | "recorded"
+    | "paid"
+    | "overdue"
+    | "cancelled"
+    | "skipped";
+  merchant_or_source?: string | null;
+  notes?: string | null;
+  related_task_id?: string | null;
+  related_event_id?: string | null;
+  source_ai_action_id?: string | null;
+  source_chat_message_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12FinancialLogUpdate = {
+  id?: string;
+  user_id?: string;
+  account_id?: string | null;
+  budget_category_id?: string | null;
+  log_type?:
+    | "income"
+    | "expense"
+    | "rent"
+    | "utility"
+    | "bill"
+    | "subscription"
+    | "savings"
+    | "debt_payment"
+    | "refund"
+    | "transfer"
+    | "adjustment"
+    | "other";
+  title?: string;
+  amount?: number;
+  currency?: string;
+  occurred_on?: string;
+  payment_status?:
+    | "planned"
+    | "pending"
+    | "recorded"
+    | "paid"
+    | "overdue"
+    | "cancelled"
+    | "skipped";
+  merchant_or_source?: string | null;
+  notes?: string | null;
+  related_task_id?: string | null;
+  related_event_id?: string | null;
+  source_ai_action_id?: string | null;
+  source_chat_message_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12SubscriptionRow = {
+  id: string;
+  user_id: string;
+  budget_category_id: string | null;
+  name: string;
+  provider: string | null;
+  amount: number;
+  currency: string;
+  billing_cycle:
+    | "weekly"
+    | "biweekly"
+    | "monthly"
+    | "quarterly"
+    | "semiannual"
+    | "annual"
+    | "one_time"
+    | "other";
+  next_due_date: string | null;
+  payment_status:
+    | "active"
+    | "trial"
+    | "pending"
+    | "paid"
+    | "overdue"
+    | "cancelled"
+    | "paused"
+    | "unknown";
+  auto_renew: boolean;
+  cancel_by_date: string | null;
+  notes: string | null;
+  related_task_id: string | null;
+  related_event_id: string | null;
+  source_ai_action_id: string | null;
+  source_chat_message_id: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase12SubscriptionInsert = {
+  id?: string;
+  user_id: string;
+  budget_category_id?: string | null;
+  name: string;
+  provider?: string | null;
+  amount: number;
+  currency?: string;
+  billing_cycle?:
+    | "weekly"
+    | "biweekly"
+    | "monthly"
+    | "quarterly"
+    | "semiannual"
+    | "annual"
+    | "one_time"
+    | "other";
+  next_due_date?: string | null;
+  payment_status?:
+    | "active"
+    | "trial"
+    | "pending"
+    | "paid"
+    | "overdue"
+    | "cancelled"
+    | "paused"
+    | "unknown";
+  auto_renew?: boolean;
+  cancel_by_date?: string | null;
+  notes?: string | null;
+  related_task_id?: string | null;
+  related_event_id?: string | null;
+  source_ai_action_id?: string | null;
+  source_chat_message_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12SubscriptionUpdate = {
+  id?: string;
+  user_id?: string;
+  budget_category_id?: string | null;
+  name?: string;
+  provider?: string | null;
+  amount?: number;
+  currency?: string;
+  billing_cycle?:
+    | "weekly"
+    | "biweekly"
+    | "monthly"
+    | "quarterly"
+    | "semiannual"
+    | "annual"
+    | "one_time"
+    | "other";
+  next_due_date?: string | null;
+  payment_status?:
+    | "active"
+    | "trial"
+    | "pending"
+    | "paid"
+    | "overdue"
+    | "cancelled"
+    | "paused"
+    | "unknown";
+  auto_renew?: boolean;
+  cancel_by_date?: string | null;
+  notes?: string | null;
+  related_task_id?: string | null;
+  related_event_id?: string | null;
+  source_ai_action_id?: string | null;
+  source_chat_message_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12DocumentRow = {
+  id: string;
+  user_id: string;
+  title: string;
+  document_type:
+    | "id"
+    | "passport"
+    | "visa"
+    | "work_authorization"
+    | "school"
+    | "career"
+    | "housing"
+    | "finance"
+    | "tax_metadata_only"
+    | "medical_metadata_only"
+    | "insurance"
+    | "other";
+  status:
+    | "active"
+    | "expired"
+    | "renewal_needed"
+    | "missing"
+    | "archived"
+    | "unknown";
+  issuing_body: string | null;
+  stored_location: string | null;
+  issued_on: string | null;
+  expires_on: string | null;
+  renewal_due_on: string | null;
+  review_on: string | null;
+  sensitivity: "private" | "sensitive" | "locked";
+  notes: string | null;
+  related_task_id: string | null;
+  related_event_id: string | null;
+  source_ai_action_id: string | null;
+  source_chat_message_id: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase12DocumentInsert = {
+  id?: string;
+  user_id: string;
+  title: string;
+  document_type?:
+    | "id"
+    | "passport"
+    | "visa"
+    | "work_authorization"
+    | "school"
+    | "career"
+    | "housing"
+    | "finance"
+    | "tax_metadata_only"
+    | "medical_metadata_only"
+    | "insurance"
+    | "other";
+  status?:
+    | "active"
+    | "expired"
+    | "renewal_needed"
+    | "missing"
+    | "archived"
+    | "unknown";
+  issuing_body?: string | null;
+  stored_location?: string | null;
+  issued_on?: string | null;
+  expires_on?: string | null;
+  renewal_due_on?: string | null;
+  review_on?: string | null;
+  sensitivity?: "private" | "sensitive" | "locked";
+  notes?: string | null;
+  related_task_id?: string | null;
+  related_event_id?: string | null;
+  source_ai_action_id?: string | null;
+  source_chat_message_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12DocumentUpdate = {
+  id?: string;
+  user_id?: string;
+  title?: string;
+  document_type?:
+    | "id"
+    | "passport"
+    | "visa"
+    | "work_authorization"
+    | "school"
+    | "career"
+    | "housing"
+    | "finance"
+    | "tax_metadata_only"
+    | "medical_metadata_only"
+    | "insurance"
+    | "other";
+  status?:
+    | "active"
+    | "expired"
+    | "renewal_needed"
+    | "missing"
+    | "archived"
+    | "unknown";
+  issuing_body?: string | null;
+  stored_location?: string | null;
+  issued_on?: string | null;
+  expires_on?: string | null;
+  renewal_due_on?: string | null;
+  review_on?: string | null;
+  sensitivity?: "private" | "sensitive" | "locked";
+  notes?: string | null;
+  related_task_id?: string | null;
+  related_event_id?: string | null;
+  source_ai_action_id?: string | null;
+  source_chat_message_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12HousingOptionRow = {
+  id: string;
+  user_id: string;
+  label: string;
+  housing_status:
+    | "current"
+    | "past"
+    | "future"
+    | "backup"
+    | "research_only"
+    | "archived";
+  address_label: string | null;
+  rent_amount: number | null;
+  currency: string;
+  rent_due_day: number | null;
+  lease_start_date: string | null;
+  lease_end_date: string | null;
+  deposit_amount: number | null;
+  utilities_notes: string | null;
+  maintenance_notes: string | null;
+  roommate_notes: string | null;
+  pros_cons_json: Json;
+  notes: string | null;
+  related_document_id: string | null;
+  related_task_id: string | null;
+  related_event_id: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase12HousingOptionInsert = {
+  id?: string;
+  user_id: string;
+  label: string;
+  housing_status?:
+    | "current"
+    | "past"
+    | "future"
+    | "backup"
+    | "research_only"
+    | "archived";
+  address_label?: string | null;
+  rent_amount?: number | null;
+  currency?: string;
+  rent_due_day?: number | null;
+  lease_start_date?: string | null;
+  lease_end_date?: string | null;
+  deposit_amount?: number | null;
+  utilities_notes?: string | null;
+  maintenance_notes?: string | null;
+  roommate_notes?: string | null;
+  pros_cons_json?: Json;
+  notes?: string | null;
+  related_document_id?: string | null;
+  related_task_id?: string | null;
+  related_event_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12HousingOptionUpdate = {
+  id?: string;
+  user_id?: string;
+  label?: string;
+  housing_status?:
+    | "current"
+    | "past"
+    | "future"
+    | "backup"
+    | "research_only"
+    | "archived";
+  address_label?: string | null;
+  rent_amount?: number | null;
+  currency?: string;
+  rent_due_day?: number | null;
+  lease_start_date?: string | null;
+  lease_end_date?: string | null;
+  deposit_amount?: number | null;
+  utilities_notes?: string | null;
+  maintenance_notes?: string | null;
+  roommate_notes?: string | null;
+  pros_cons_json?: Json;
+  notes?: string | null;
+  related_document_id?: string | null;
+  related_task_id?: string | null;
+  related_event_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12HousingContactRow = {
+  id: string;
+  user_id: string;
+  housing_option_id: string | null;
+  name: string;
+  role:
+    | "landlord"
+    | "property_manager"
+    | "roommate"
+    | "utility_provider"
+    | "maintenance"
+    | "broker"
+    | "other";
+  contact_notes: string | null;
+  preferred_contact_method: string | null;
+  last_contacted_on: string | null;
+  next_follow_up_on: string | null;
+  related_task_id: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type Phase12HousingContactInsert = {
+  id?: string;
+  user_id: string;
+  housing_option_id?: string | null;
+  name: string;
+  role?:
+    | "landlord"
+    | "property_manager"
+    | "roommate"
+    | "utility_provider"
+    | "maintenance"
+    | "broker"
+    | "other";
+  contact_notes?: string | null;
+  preferred_contact_method?: string | null;
+  last_contacted_on?: string | null;
+  next_follow_up_on?: string | null;
+  related_task_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
+type Phase12HousingContactUpdate = {
+  id?: string;
+  user_id?: string;
+  housing_option_id?: string | null;
+  name?: string;
+  role?:
+    | "landlord"
+    | "property_manager"
+    | "roommate"
+    | "utility_provider"
+    | "maintenance"
+    | "broker"
+    | "other";
+  contact_notes?: string | null;
+  preferred_contact_method?: string | null;
+  last_contacted_on?: string | null;
+  next_follow_up_on?: string | null;
+  related_task_id?: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
 export type Database = {
   public: {
     Tables: {
+      financial_accounts: {
+        Row: Phase12FinancialAccountRow;
+        Insert: Phase12FinancialAccountInsert;
+        Update: Phase12FinancialAccountUpdate;
+        Relationships: [];
+      };
+      budget_categories: {
+        Row: Phase12BudgetCategoryRow;
+        Insert: Phase12BudgetCategoryInsert;
+        Update: Phase12BudgetCategoryUpdate;
+        Relationships: [];
+      };
+      financial_logs: {
+        Row: Phase12FinancialLogRow;
+        Insert: Phase12FinancialLogInsert;
+        Update: Phase12FinancialLogUpdate;
+        Relationships: [];
+      };
+      subscriptions: {
+        Row: Phase12SubscriptionRow;
+        Insert: Phase12SubscriptionInsert;
+        Update: Phase12SubscriptionUpdate;
+        Relationships: [];
+      };
+      documents: {
+        Row: Phase12DocumentRow;
+        Insert: Phase12DocumentInsert;
+        Update: Phase12DocumentUpdate;
+        Relationships: [];
+      };
+      housing_options: {
+        Row: Phase12HousingOptionRow;
+        Insert: Phase12HousingOptionInsert;
+        Update: Phase12HousingOptionUpdate;
+        Relationships: [];
+      };
+      housing_contacts: {
+        Row: Phase12HousingContactRow;
+        Insert: Phase12HousingContactInsert;
+        Update: Phase12HousingContactUpdate;
+        Relationships: [];
+      };
       profiles: {
         Row: {
           id: string;
@@ -1113,9 +2021,22 @@ export type Database = {
           title: string;
           description: string | null;
           domain: string;
-          status: "draft" | "active" | "paused" | "completed" | "archived" | "cancelled";
+          status:
+            | "draft"
+            | "active"
+            | "paused"
+            | "completed"
+            | "archived"
+            | "cancelled";
           priority: "low" | "medium" | "high" | "critical";
-          horizon: "daily" | "weekly" | "monthly" | "quarterly" | "yearly" | "medium_term" | "long_term";
+          horizon:
+            | "daily"
+            | "weekly"
+            | "monthly"
+            | "quarterly"
+            | "yearly"
+            | "medium_term"
+            | "long_term";
           target_date: string | null;
           completed_at: string | null;
           proof_requirement: string | null;
@@ -1133,9 +2054,22 @@ export type Database = {
           title: string;
           description?: string | null;
           domain?: string;
-          status?: "draft" | "active" | "paused" | "completed" | "archived" | "cancelled";
+          status?:
+            | "draft"
+            | "active"
+            | "paused"
+            | "completed"
+            | "archived"
+            | "cancelled";
           priority?: "low" | "medium" | "high" | "critical";
-          horizon?: "daily" | "weekly" | "monthly" | "quarterly" | "yearly" | "medium_term" | "long_term";
+          horizon?:
+            | "daily"
+            | "weekly"
+            | "monthly"
+            | "quarterly"
+            | "yearly"
+            | "medium_term"
+            | "long_term";
           target_date?: string | null;
           completed_at?: string | null;
           proof_requirement?: string | null;
@@ -1153,9 +2087,22 @@ export type Database = {
           title?: string;
           description?: string | null;
           domain?: string;
-          status?: "draft" | "active" | "paused" | "completed" | "archived" | "cancelled";
+          status?:
+            | "draft"
+            | "active"
+            | "paused"
+            | "completed"
+            | "archived"
+            | "cancelled";
           priority?: "low" | "medium" | "high" | "critical";
-          horizon?: "daily" | "weekly" | "monthly" | "quarterly" | "yearly" | "medium_term" | "long_term";
+          horizon?:
+            | "daily"
+            | "weekly"
+            | "monthly"
+            | "quarterly"
+            | "yearly"
+            | "medium_term"
+            | "long_term";
           target_date?: string | null;
           completed_at?: string | null;
           proof_requirement?: string | null;
@@ -1490,7 +2437,14 @@ export type Database = {
           title: string;
           description: string | null;
           domain: string;
-          status: "todo" | "in_progress" | "blocked" | "done" | "skipped" | "cancelled" | "archived";
+          status:
+            | "todo"
+            | "in_progress"
+            | "blocked"
+            | "done"
+            | "skipped"
+            | "cancelled"
+            | "archived";
           priority: "low" | "medium" | "high" | "critical";
           due_date: string | null;
           scheduled_at: string | null;
@@ -1512,7 +2466,14 @@ export type Database = {
           title: string;
           description?: string | null;
           domain?: string;
-          status?: "todo" | "in_progress" | "blocked" | "done" | "skipped" | "cancelled" | "archived";
+          status?:
+            | "todo"
+            | "in_progress"
+            | "blocked"
+            | "done"
+            | "skipped"
+            | "cancelled"
+            | "archived";
           priority?: "low" | "medium" | "high" | "critical";
           due_date?: string | null;
           scheduled_at?: string | null;
@@ -1534,7 +2495,14 @@ export type Database = {
           title?: string;
           description?: string | null;
           domain?: string;
-          status?: "todo" | "in_progress" | "blocked" | "done" | "skipped" | "cancelled" | "archived";
+          status?:
+            | "todo"
+            | "in_progress"
+            | "blocked"
+            | "done"
+            | "skipped"
+            | "cancelled"
+            | "archived";
           priority?: "low" | "medium" | "high" | "critical";
           due_date?: string | null;
           scheduled_at?: string | null;
@@ -1598,7 +2566,12 @@ export type Database = {
             | "career"
             | "learning"
             | "research";
-          status: "scheduled" | "completed" | "cancelled" | "missed" | "archived";
+          status:
+            | "scheduled"
+            | "completed"
+            | "cancelled"
+            | "missed"
+            | "archived";
           start_at: string | null;
           end_at: string | null;
           occurred_at: string;
@@ -1631,7 +2604,12 @@ export type Database = {
             | "career"
             | "learning"
             | "research";
-          status?: "scheduled" | "completed" | "cancelled" | "missed" | "archived";
+          status?:
+            | "scheduled"
+            | "completed"
+            | "cancelled"
+            | "missed"
+            | "archived";
           start_at?: string | null;
           end_at?: string | null;
           occurred_at?: string;
@@ -1664,7 +2642,12 @@ export type Database = {
             | "career"
             | "learning"
             | "research";
-          status?: "scheduled" | "completed" | "cancelled" | "missed" | "archived";
+          status?:
+            | "scheduled"
+            | "completed"
+            | "cancelled"
+            | "missed"
+            | "archived";
           start_at?: string | null;
           end_at?: string | null;
           occurred_at?: string;
@@ -1711,7 +2694,10 @@ export type Database = {
       };
       skill_paths: {
         Row: Phase9SkillPathRow;
-        Insert: Partial<Phase9SkillPathRow> & { user_id: string; title: string };
+        Insert: Partial<Phase9SkillPathRow> & {
+          user_id: string;
+          title: string;
+        };
         Update: Partial<Phase9SkillPathRow>;
         Relationships: [];
       };
@@ -1733,7 +2719,10 @@ export type Database = {
       };
       learning_sessions: {
         Row: Phase9LearningSessionRow;
-        Insert: Partial<Phase9LearningSessionRow> & { user_id: string; title: string };
+        Insert: Partial<Phase9LearningSessionRow> & {
+          user_id: string;
+          title: string;
+        };
         Update: Partial<Phase9LearningSessionRow>;
         Relationships: [];
       };
@@ -1751,7 +2740,10 @@ export type Database = {
       };
       quiz_attempts: {
         Row: Phase9QuizAttemptRow;
-        Insert: Partial<Phase9QuizAttemptRow> & { user_id: string; quiz_id: string };
+        Insert: Partial<Phase9QuizAttemptRow> & {
+          user_id: string;
+          quiz_id: string;
+        };
         Update: Partial<Phase9QuizAttemptRow>;
         Relationships: [];
       };
@@ -1835,14 +2827,21 @@ export type Database = {
       };
       resume_versions: {
         Row: CareerResumeVersionRow;
-        Insert: Partial<CareerResumeVersionRow> & { user_id: string; name: string };
+        Insert: Partial<CareerResumeVersionRow> & {
+          user_id: string;
+          name: string;
+        };
         Update: Partial<CareerResumeVersionRow>;
         Relationships: [];
       };
 
       job_applications: {
         Row: CareerJobApplicationRow;
-        Insert: Partial<CareerJobApplicationRow> & { user_id: string; company: string; role_title: string };
+        Insert: Partial<CareerJobApplicationRow> & {
+          user_id: string;
+          company: string;
+          role_title: string;
+        };
         Update: Partial<CareerJobApplicationRow>;
         Relationships: [];
       };
@@ -1876,98 +2875,147 @@ export type Database = {
       };
       networking_contacts: {
         Row: CareerNetworkingContactRow;
-        Insert: Partial<CareerNetworkingContactRow> & { user_id: string; full_name: string };
+        Insert: Partial<CareerNetworkingContactRow> & {
+          user_id: string;
+          full_name: string;
+        };
         Update: Partial<CareerNetworkingContactRow>;
         Relationships: [];
       };
 
       research_ideas: {
         Row: Phase10ResearchIdeaRow;
-        Insert: Partial<Phase10ResearchIdeaRow> & { user_id: string; title: string };
+        Insert: Partial<Phase10ResearchIdeaRow> & {
+          user_id: string;
+          title: string;
+        };
         Update: Partial<Phase10ResearchIdeaRow>;
         Relationships: [];
       };
       research_questions: {
         Row: Phase10ResearchQuestionRow;
-        Insert: Partial<Phase10ResearchQuestionRow> & { user_id: string; question: string };
+        Insert: Partial<Phase10ResearchQuestionRow> & {
+          user_id: string;
+          question: string;
+        };
         Update: Partial<Phase10ResearchQuestionRow>;
         Relationships: [];
       };
       research_literature_items: {
         Row: Phase10ResearchLiteratureItemRow;
-        Insert: Partial<Phase10ResearchLiteratureItemRow> & { user_id: string; title: string };
+        Insert: Partial<Phase10ResearchLiteratureItemRow> & {
+          user_id: string;
+          title: string;
+        };
         Update: Partial<Phase10ResearchLiteratureItemRow>;
         Relationships: [];
       };
       research_papers: {
         Row: Phase10ResearchPaperRow;
-        Insert: Partial<Phase10ResearchPaperRow> & { user_id: string; title: string };
+        Insert: Partial<Phase10ResearchPaperRow> & {
+          user_id: string;
+          title: string;
+        };
         Update: Partial<Phase10ResearchPaperRow>;
         Relationships: [];
       };
       research_paper_versions: {
         Row: Phase10ResearchPaperVersionRow;
-        Insert: Partial<Phase10ResearchPaperVersionRow> & { user_id: string; research_paper_id: string; version_label: string };
+        Insert: Partial<Phase10ResearchPaperVersionRow> & {
+          user_id: string;
+          research_paper_id: string;
+          version_label: string;
+        };
         Update: Partial<Phase10ResearchPaperVersionRow>;
         Relationships: [];
       };
       research_claims: {
         Row: Phase10ResearchClaimRow;
-        Insert: Partial<Phase10ResearchClaimRow> & { user_id: string; claim_text: string };
+        Insert: Partial<Phase10ResearchClaimRow> & {
+          user_id: string;
+          claim_text: string;
+        };
         Update: Partial<Phase10ResearchClaimRow>;
         Relationships: [];
       };
       research_experiments: {
         Row: Phase10ResearchExperimentRow;
-        Insert: Partial<Phase10ResearchExperimentRow> & { user_id: string; title: string };
+        Insert: Partial<Phase10ResearchExperimentRow> & {
+          user_id: string;
+          title: string;
+        };
         Update: Partial<Phase10ResearchExperimentRow>;
         Relationships: [];
       };
       research_results: {
         Row: Phase10ResearchResultRow;
-        Insert: Partial<Phase10ResearchResultRow> & { user_id: string; title: string };
+        Insert: Partial<Phase10ResearchResultRow> & {
+          user_id: string;
+          title: string;
+        };
         Update: Partial<Phase10ResearchResultRow>;
         Relationships: [];
       };
       research_citations: {
         Row: Phase10ResearchCitationRow;
-        Insert: Partial<Phase10ResearchCitationRow> & { user_id: string; literature_item_id: string };
+        Insert: Partial<Phase10ResearchCitationRow> & {
+          user_id: string;
+          literature_item_id: string;
+        };
         Update: Partial<Phase10ResearchCitationRow>;
         Relationships: [];
       };
       research_venues: {
         Row: Phase10ResearchVenueRow;
-        Insert: Partial<Phase10ResearchVenueRow> & { user_id: string; name: string };
+        Insert: Partial<Phase10ResearchVenueRow> & {
+          user_id: string;
+          name: string;
+        };
         Update: Partial<Phase10ResearchVenueRow>;
         Relationships: [];
       };
       research_submissions: {
         Row: Phase10ResearchSubmissionRow;
-        Insert: Partial<Phase10ResearchSubmissionRow> & { user_id: string; research_paper_id: string };
+        Insert: Partial<Phase10ResearchSubmissionRow> & {
+          user_id: string;
+          research_paper_id: string;
+        };
         Update: Partial<Phase10ResearchSubmissionRow>;
         Relationships: [];
       };
       research_feedback: {
         Row: Phase10ResearchFeedbackRow;
-        Insert: Partial<Phase10ResearchFeedbackRow> & { user_id: string; summary: string };
+        Insert: Partial<Phase10ResearchFeedbackRow> & {
+          user_id: string;
+          summary: string;
+        };
         Update: Partial<Phase10ResearchFeedbackRow>;
         Relationships: [];
       };
       target_universities: {
         Row: Phase10TargetUniversityRow;
-        Insert: Partial<Phase10TargetUniversityRow> & { user_id: string; name: string };
+        Insert: Partial<Phase10TargetUniversityRow> & {
+          user_id: string;
+          name: string;
+        };
         Update: Partial<Phase10TargetUniversityRow>;
         Relationships: [];
       };
       target_labs: {
         Row: Phase10TargetLabRow;
-        Insert: Partial<Phase10TargetLabRow> & { user_id: string; name: string };
+        Insert: Partial<Phase10TargetLabRow> & {
+          user_id: string;
+          name: string;
+        };
         Update: Partial<Phase10TargetLabRow>;
         Relationships: [];
       };
       target_professors: {
         Row: Phase10TargetProfessorRow;
-        Insert: Partial<Phase10TargetProfessorRow> & { user_id: string; name: string };
+        Insert: Partial<Phase10TargetProfessorRow> & {
+          user_id: string;
+          name: string;
+        };
         Update: Partial<Phase10TargetProfessorRow>;
         Relationships: [];
       };
@@ -1979,19 +3027,29 @@ export type Database = {
       };
       phd_application_assets: {
         Row: Phase10PhdApplicationAssetRow;
-        Insert: Partial<Phase10PhdApplicationAssetRow> & { user_id: string; asset_type: Phase10PhdApplicationAssetRow["asset_type"]; title: string };
+        Insert: Partial<Phase10PhdApplicationAssetRow> & {
+          user_id: string;
+          asset_type: Phase10PhdApplicationAssetRow["asset_type"];
+          title: string;
+        };
         Update: Partial<Phase10PhdApplicationAssetRow>;
         Relationships: [];
       };
       sop_versions: {
         Row: Phase10SopVersionRow;
-        Insert: Partial<Phase10SopVersionRow> & { user_id: string; version_label: string };
+        Insert: Partial<Phase10SopVersionRow> & {
+          user_id: string;
+          version_label: string;
+        };
         Update: Partial<Phase10SopVersionRow>;
         Relationships: [];
       };
       recommendation_targets: {
         Row: Phase10RecommendationTargetRow;
-        Insert: Partial<Phase10RecommendationTargetRow> & { user_id: string; recommender_name: string };
+        Insert: Partial<Phase10RecommendationTargetRow> & {
+          user_id: string;
+          recommender_name: string;
+        };
         Update: Partial<Phase10RecommendationTargetRow>;
         Relationships: [];
       };
@@ -2816,12 +3874,16 @@ export type JobApplicationInsert = Tables["job_applications"]["Insert"];
 export type JobApplicationUpdate = Tables["job_applications"]["Update"];
 
 export type JobApplicationEventRow = Tables["job_application_events"]["Row"];
-export type JobApplicationEventInsert = Tables["job_application_events"]["Insert"];
-export type JobApplicationEventUpdate = Tables["job_application_events"]["Update"];
+export type JobApplicationEventInsert =
+  Tables["job_application_events"]["Insert"];
+export type JobApplicationEventUpdate =
+  Tables["job_application_events"]["Update"];
 
 export type NetworkingInteractionRow = Tables["networking_interactions"]["Row"];
-export type NetworkingInteractionInsert = Tables["networking_interactions"]["Insert"];
-export type NetworkingInteractionUpdate = Tables["networking_interactions"]["Update"];
+export type NetworkingInteractionInsert =
+  Tables["networking_interactions"]["Insert"];
+export type NetworkingInteractionUpdate =
+  Tables["networking_interactions"]["Update"];
 
 export type JobReferralRow = Tables["job_referrals"]["Row"];
 export type JobReferralInsert = Tables["job_referrals"]["Insert"];
@@ -2895,17 +3957,22 @@ export type ResearchQuestionRow = Tables["research_questions"]["Row"];
 export type ResearchQuestionInsert = Tables["research_questions"]["Insert"];
 export type ResearchQuestionUpdate = Tables["research_questions"]["Update"];
 
-export type ResearchLiteratureItemRow = Tables["research_literature_items"]["Row"];
-export type ResearchLiteratureItemInsert = Tables["research_literature_items"]["Insert"];
-export type ResearchLiteratureItemUpdate = Tables["research_literature_items"]["Update"];
+export type ResearchLiteratureItemRow =
+  Tables["research_literature_items"]["Row"];
+export type ResearchLiteratureItemInsert =
+  Tables["research_literature_items"]["Insert"];
+export type ResearchLiteratureItemUpdate =
+  Tables["research_literature_items"]["Update"];
 
 export type ResearchPaperRow = Tables["research_papers"]["Row"];
 export type ResearchPaperInsert = Tables["research_papers"]["Insert"];
 export type ResearchPaperUpdate = Tables["research_papers"]["Update"];
 
 export type ResearchPaperVersionRow = Tables["research_paper_versions"]["Row"];
-export type ResearchPaperVersionInsert = Tables["research_paper_versions"]["Insert"];
-export type ResearchPaperVersionUpdate = Tables["research_paper_versions"]["Update"];
+export type ResearchPaperVersionInsert =
+  Tables["research_paper_versions"]["Insert"];
+export type ResearchPaperVersionUpdate =
+  Tables["research_paper_versions"]["Update"];
 
 export type ResearchClaimRow = Tables["research_claims"]["Row"];
 export type ResearchClaimInsert = Tables["research_claims"]["Insert"];
@@ -2947,21 +4014,28 @@ export type TargetProfessorRow = Tables["target_professors"]["Row"];
 export type TargetProfessorInsert = Tables["target_professors"]["Insert"];
 export type TargetProfessorUpdate = Tables["target_professors"]["Update"];
 
-export type PhdReadinessAssessmentRow = Tables["phd_readiness_assessments"]["Row"];
-export type PhdReadinessAssessmentInsert = Tables["phd_readiness_assessments"]["Insert"];
-export type PhdReadinessAssessmentUpdate = Tables["phd_readiness_assessments"]["Update"];
+export type PhdReadinessAssessmentRow =
+  Tables["phd_readiness_assessments"]["Row"];
+export type PhdReadinessAssessmentInsert =
+  Tables["phd_readiness_assessments"]["Insert"];
+export type PhdReadinessAssessmentUpdate =
+  Tables["phd_readiness_assessments"]["Update"];
 
 export type PhdApplicationAssetRow = Tables["phd_application_assets"]["Row"];
-export type PhdApplicationAssetInsert = Tables["phd_application_assets"]["Insert"];
-export type PhdApplicationAssetUpdate = Tables["phd_application_assets"]["Update"];
+export type PhdApplicationAssetInsert =
+  Tables["phd_application_assets"]["Insert"];
+export type PhdApplicationAssetUpdate =
+  Tables["phd_application_assets"]["Update"];
 
 export type SopVersionRow = Tables["sop_versions"]["Row"];
 export type SopVersionInsert = Tables["sop_versions"]["Insert"];
 export type SopVersionUpdate = Tables["sop_versions"]["Update"];
 
 export type RecommendationTargetRow = Tables["recommendation_targets"]["Row"];
-export type RecommendationTargetInsert = Tables["recommendation_targets"]["Insert"];
-export type RecommendationTargetUpdate = Tables["recommendation_targets"]["Update"];
+export type RecommendationTargetInsert =
+  Tables["recommendation_targets"]["Insert"];
+export type RecommendationTargetUpdate =
+  Tables["recommendation_targets"]["Update"];
 
 export type BodyLogRow = Tables["body_logs"]["Row"];
 export type BodyLogInsert = Tables["body_logs"]["Insert"];
@@ -3026,3 +4100,31 @@ export type HaircareLogUpdate = Tables["haircare_logs"]["Update"];
 export type ProductRow = Tables["products"]["Row"];
 export type ProductInsert = Tables["products"]["Insert"];
 export type ProductUpdate = Tables["products"]["Update"];
+
+export type FinancialAccountRow = Tables["financial_accounts"]["Row"];
+export type FinancialAccountInsert = Tables["financial_accounts"]["Insert"];
+export type FinancialAccountUpdate = Tables["financial_accounts"]["Update"];
+
+export type BudgetCategoryRow = Tables["budget_categories"]["Row"];
+export type BudgetCategoryInsert = Tables["budget_categories"]["Insert"];
+export type BudgetCategoryUpdate = Tables["budget_categories"]["Update"];
+
+export type FinancialLogRow = Tables["financial_logs"]["Row"];
+export type FinancialLogInsert = Tables["financial_logs"]["Insert"];
+export type FinancialLogUpdate = Tables["financial_logs"]["Update"];
+
+export type SubscriptionRow = Tables["subscriptions"]["Row"];
+export type SubscriptionInsert = Tables["subscriptions"]["Insert"];
+export type SubscriptionUpdate = Tables["subscriptions"]["Update"];
+
+export type LifeAdminDocumentRow = Tables["documents"]["Row"];
+export type LifeAdminDocumentInsert = Tables["documents"]["Insert"];
+export type LifeAdminDocumentUpdate = Tables["documents"]["Update"];
+
+export type HousingOptionRow = Tables["housing_options"]["Row"];
+export type HousingOptionInsert = Tables["housing_options"]["Insert"];
+export type HousingOptionUpdate = Tables["housing_options"]["Update"];
+
+export type HousingContactRow = Tables["housing_contacts"]["Row"];
+export type HousingContactInsert = Tables["housing_contacts"]["Insert"];
+export type HousingContactUpdate = Tables["housing_contacts"]["Update"];

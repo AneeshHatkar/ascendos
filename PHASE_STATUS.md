@@ -1632,3 +1632,29 @@ Deferred:
 Next step:
 
 - Phase 12 C07 — database type contracts.
+
+## Phase 12 C07 — Database Type Contracts
+
+Status: Complete pending verification.
+
+Completed:
+
+- Added database contracts for Phase 12 SQL tables.
+- Added exported row/insert/update aliases.
+
+Touched:
+
+- `src/types/database.ts`
+- Logs/status files.
+
+Deferred:
+
+- Read repositories.
+- Dashboard data helpers.
+- Dashboard components.
+- Route wiring.
+- Proposed-action execution.
+
+Next step:
+
+- C08 — read helpers for admin and finance tables.

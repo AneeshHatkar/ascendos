@@ -1176,3 +1176,9 @@ Phase 8.24 closeout marker: Phase 8 Career System Complete.
 - Added Phase 12 SQL foundation validation report.
 - Closed SQL foundation scope before TypeScript database contract work.
 - Preserved no-SQL-change, no-app-code, no-types, no-repositories, no-dashboard boundary for this chunk.
+
+## Phase 12 C07 — Database Type Contracts
+
+- Added TypeScript database contracts for the Life Admin / Finance tables.
+- Added exported row/insert/update aliases for admin and finance read helpers.
+- Kept SQL, repositories, dashboards, and routes unchanged.

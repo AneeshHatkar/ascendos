@@ -3488,3 +3488,29 @@ Boundary:
 Next:
 
 - Phase 12 C07 — database type contracts.
+
+## Phase 12 C07 — Database Type Contracts
+
+Status: Complete pending verification.
+
+Scope:
+
+- Added TypeScript database contracts for Life Admin / Finance tables.
+- Matched C04 SQL schema and C05 ownership-guarded relationships.
+- Added exported row/insert/update aliases for downstream read helpers.
+
+Files touched:
+
+- `src/types/database.ts`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundaries:
+
+- No SQL edits.
+- No repository helpers.
+- No dashboard helpers.
+- No UI wiring.
+- No proposed-action execution.

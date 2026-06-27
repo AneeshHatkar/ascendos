@@ -2378,3 +2378,19 @@ Summary:
 - Added SQL foundation validation report.
 - Confirmed C04/C05 SQL foundation scope and boundaries.
 - Prepared handoff into database type contracts.
+
+## Phase 12 C07 — Database Type Contracts
+
+Files:
+
+- `src/types/database.ts`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Summary:
+
+- Added database table contracts for manual finance accounts, budget categories, financial logs, subscriptions, document metadata, housing admin records, and housing contacts.
+- Added exported row/insert/update aliases for Life Admin / Finance read-helper work.
+- Preserved SQL and UI boundaries.
