@@ -3921,3 +3921,9 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Fixed explicit `any` usage in `src/lib/repositories/calendar-routine-read.ts`.
 - The first Phase 13.5C commit was pushed after `npm run check` failed at lint.
 - This patch restores the rule: Phase 13.5C is not complete until full `npm run check` passes.
+
+## Phase 13.5C TypeScript Build Fix
+
+- Replaced the invalid Supabase generic alias in `src/lib/repositories/calendar-routine-read.ts`.
+- Added a local read-only query interface so the Phase 13.5C repository can query newly added tables without explicit `any` and without depending on generated Supabase table inference.
+- This fixes the TypeScript build failure from the previous pushed lint fix.

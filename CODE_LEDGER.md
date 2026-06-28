@@ -2743,3 +2743,7 @@ Purpose:
 ## Phase 13.5C Lint Fix
 
 - `src/lib/repositories/calendar-routine-read.ts`: replaced explicit `any` Supabase type alias with a lint-safe generic alias.
+
+## Phase 13.5C TypeScript Build Fix
+
+- `src/lib/repositories/calendar-routine-read.ts`: removed invalid `SupabaseClient<Record<string, never>, "public", Record<string, never>>` alias and replaced it with a local read-only query interface.

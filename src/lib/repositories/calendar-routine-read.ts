@@ -1,8 +1,20 @@
-import type { SupabaseClient } from "@supabase/supabase-js";
-
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
-type UntypedSupabaseClient = SupabaseClient<Record<string, never>, "public", Record<string, never>>;
+type QueryResponse = {
+  data: unknown[] | null;
+  error: unknown;
+};
+
+type CalendarRoutineQuery = PromiseLike<QueryResponse> & {
+  select: (columns: string) => CalendarRoutineQuery;
+  eq: (column: string, value: string) => CalendarRoutineQuery;
+  order: (column: string, options: { ascending: boolean }) => CalendarRoutineQuery;
+  limit: (count: number) => CalendarRoutineQuery;
+};
+
+type UntypedSupabaseClient = {
+  from: (table: string) => CalendarRoutineQuery;
+};
 
 export type CalendarBlockRow = {
   id: string;
@@ -117,7 +129,7 @@ function normalizeError(error: unknown) {
 }
 
 async function getClient(supabase?: UntypedSupabaseClient) {
-  return (supabase ?? (await createSupabaseServerClient())) as UntypedSupabaseClient;
+  return (supabase ?? (await createSupabaseServerClient())) as unknown as UntypedSupabaseClient;
 }
 
 export async function listCalendarBlocks(
