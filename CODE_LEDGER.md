@@ -2711,3 +2711,14 @@ Purpose:
 - Added exact machine-check markers required by `scripts/audit-phase-13-5.mjs`.
 - Added generated source scope snapshot artifacts to `.gitignore`.
 - Preserved `scripts/source_scope_snapshot.py` as a reusable repo audit utility.
+
+## Phase 13.5B — Carnos Persona + Chat Completion Repair
+
+- Added `docs/carnos/CARNOS_PERSONA_CONTRACT.md`.
+- Added `docs/database/PHASE_13_5B_CARNOS_PERSONA_SCHEMA_DESIGN.md`.
+- Added `supabase/migrations/0018_phase13_5b_carnos_persona_foundation.sql`.
+- Added `src/lib/carnos/persona-contract.ts`.
+- Added `src/lib/repositories/carnos-persona-read.ts`.
+- Added `src/components/carnos/carnos-persona-boundary-panel.tsx`.
+- Added `scripts/audit-phase-13-5b.mjs`.
+- Added `audit:phase13_5b` to package scripts and `npm run check`.

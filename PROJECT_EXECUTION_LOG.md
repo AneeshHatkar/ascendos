@@ -3883,3 +3883,14 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Fixed Phase 13.5A audit failure caused by marker text mismatch.
 - The failure was not from product code; it was from exact audit marker strings.
 - Added generated snapshot artifacts to `.gitignore`.
+
+## Phase 13.5B — Carnos Persona + Chat Completion Repair
+
+- Added locked Carnos persona contract.
+- Added `persona_prompt_versions` SQL foundation with RLS and parent ownership guard.
+- Added code-level Carnos v1 persona contract.
+- Added Carnos persona read helper.
+- Added Carnos persona boundary panel to `/carnos`.
+- Added manual smoke checklist and completion report.
+- Added `audit:phase13_5b` and wired it into `npm run check`.
+- Confirmed no assistant generation, voice, memory/RAG, web search, analytics, or autonomous writes are enabled in this patch.

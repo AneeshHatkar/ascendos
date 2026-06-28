@@ -16,6 +16,7 @@ import type { ProposedActionContract } from "@/lib/actions/proposed-action-contr
 import { getDashboardDataSummary } from "@/lib/dashboard";
 import { listAiActions, listChatMessages, listChatSessions } from "@/lib/repositories";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { CarnosPersonaBoundaryPanel } from "@/components/carnos";
 
 type CarnosRecord = Record<string, unknown>;
 
@@ -388,7 +389,9 @@ export default function CarnosPage() {
                 description="Phase 12.9D adds a server-owned save path for user chat messages without enabling AI generation."
                 eyebrow="Phase 12.9D"
               >
-                <CarnosMessageComposer />
+                <CarnosPersonaBoundaryPanel />
+
+      <CarnosMessageComposer />
               </SectionCard>
 
               <SectionCard

@@ -2143,3 +2143,28 @@ Remaining Phase 13.5 substeps:
 - 13.5G Final Source Coverage Audit
 
 Phase 14 Voice Foundation must not start until Phase 13.5G passes.
+
+## Phase 13.5B — Carnos Persona + Chat Completion Repair
+
+Status: Pending verification.
+
+Goal:
+
+- Repair Carnos persona/prompt foundation before Phase 14 Voice.
+
+Completed in this patch:
+
+- `persona_prompt_versions`
+- Carnos v1 persona contract
+- Carnos persona boundary panel
+- Carnos persona read helper
+- Phase 13.5B audit gate
+
+Still deferred:
+
+- Voice to Phase 14
+- Memory/RAG to Phase 15
+- Web Search to Phase 16
+- Analytics to Phase 17
+- Custom Trackers to Phase 18
+- Privacy/Export to Phase 19

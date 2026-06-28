@@ -1346,3 +1346,10 @@ Timestamp: 2026-06-27 06:21 UTC
 - Paused Phase 14 until completed-scope gaps through Phase 13 are repaired or explicitly classified.
 - Added full source scope gap audit for completed phases.
 - Added Phase 13.5 repair plan and audit script.
+
+## Phase 13.5B — Carnos Persona + Chat Completion Repair
+
+- Added Carnos v1 persona contract.
+- Added persona prompt version SQL foundation.
+- Added Carnos persona runtime boundary panel.
+- Added Phase 13.5B audit gate.
