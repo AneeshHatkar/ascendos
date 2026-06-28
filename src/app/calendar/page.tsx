@@ -11,6 +11,7 @@ import {
 } from "@/components/dashboard";
 import {
   getAdminFinanceDashboardDataSummary,
+  getCalendarRoutineDashboardDataSummary,
   getDashboardDataSummary,
 } from "@/lib/dashboard";
 import { listEvents, listTasks } from "@/lib/repositories";
@@ -233,9 +234,10 @@ export default function CalendarPage() {
         {async ({ user }) => {
           const supabase = await createSupabaseServerClient();
 
-          const [dashboardData, adminFinanceData] = await Promise.all([
+          const [dashboardData, adminFinanceData, calendarRoutineData] = await Promise.all([
             getDashboardDataSummary(supabase, user.id, "calendar"),
             getAdminFinanceDashboardDataSummary(user.id),
+            getCalendarRoutineDashboardDataSummary(user.id),
           ]);
 
           const [tasks, events] = await Promise.all([
@@ -270,6 +272,7 @@ export default function CalendarPage() {
               <CalendarDashboardV1
                 data={dashboardData}
                 adminFinanceData={adminFinanceData}
+                calendarRoutineData={calendarRoutineData}
               />
 
               <section className="rounded-3xl border border-slate-800 bg-slate-950/80 p-6 shadow-sm shadow-black/20">

@@ -9,12 +9,14 @@ import { CrossDashboardLinks } from "@/components/dashboard/cross-dashboard-link
 import {
   getDashboardCardsForSurface,
   type AdminFinanceDashboardDataResult,
+  type CalendarRoutineDashboardDataResult,
   type DashboardDataResult,
 } from "@/lib/dashboard";
 
 interface CalendarDashboardV1Props {
   data?: DashboardDataResult;
   adminFinanceData?: AdminFinanceDashboardDataResult;
+  calendarRoutineData?: CalendarRoutineDashboardDataResult;
 }
 
 const calendarCards = getDashboardCardsForSurface("calendar");
@@ -50,6 +52,7 @@ function overdueTone(
 export function CalendarDashboardV1({
   data,
   adminFinanceData,
+  calendarRoutineData,
 }: CalendarDashboardV1Props) {
   const summary = data?.summary;
   const adminSummary = adminFinanceData?.summary;
@@ -59,6 +62,14 @@ export function CalendarDashboardV1({
     "subscriptions",
     "documents",
     "housing_contacts",
+  ];
+  const calendarRoutineSummary = calendarRoutineData?.summary;
+  const calendarRoutineWarnings = calendarRoutineData?.warnings ?? [];
+  const calendarRoutineSourceTables = calendarRoutineData?.source_tables ?? [
+    "calendar_blocks",
+    "routines",
+    "routine_steps",
+    "reminders",
   ];
 
   const overdueAdminCount =
@@ -282,6 +293,65 @@ export function CalendarDashboardV1({
 
         <p className="mt-4 text-xs leading-5 text-slate-500">
           Source tables: {adminSourceTables.join(", ")}
+        </p>
+      </SectionCard>
+
+      <SectionCard
+        title="Calendar, routine, and reminder foundation"
+        eyebrow="Phase 13.5C read-only repair"
+        description="SQL-backed visibility for calendar blocks, active routines, routine steps, and pending reminders. This closes the completed-scope foundation gap without enabling autonomous scheduling or background notifications."
+      >
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <MetricTile
+            label="Calendar blocks"
+            value={formatCount(calendarRoutineSummary?.calendar_block_count)}
+            description="Planned time blocks connected to tasks, goals, events, or manual schedule intent."
+          />
+          <MetricTile
+            label="Active routines"
+            value={formatCount(calendarRoutineSummary?.active_routine_count)}
+            description="Active routines visible to the calendar layer."
+          />
+          <MetricTile
+            label="Routine steps"
+            value={formatCount(calendarRoutineSummary?.routine_step_count)}
+            description="Ordered steps inside routines, read without mutation."
+          />
+          <MetricTile
+            label="Pending reminders"
+            value={formatCount(calendarRoutineSummary?.pending_reminder_count)}
+            description="Pending reminder records only; no background notification engine is active."
+          />
+        </div>
+
+        <div className="mt-5 rounded-2xl border border-cyan-400/20 bg-cyan-400/10 p-4 text-sm leading-6 text-cyan-100">
+          Phase 13.5C boundary: calendar_blocks, routines, routine_steps, and
+          reminders are SQL-backed read foundations. This panel does not create
+          calendar blocks, run reminders, send notifications, execute Carnos
+          actions, or perform autonomous scheduling.
+        </div>
+
+        <div className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4 text-sm leading-6 text-slate-300">
+          Timeline decision: timeline_events remains deferred. The existing
+          public.events table stays the v1 timeline/event spine until a later
+          source-approved migration changes that boundary.
+        </div>
+
+        {calendarRoutineWarnings.length > 0 ? (
+          <div className="mt-5 rounded-2xl border border-amber-400/20 bg-amber-400/10 p-4 text-sm leading-6 text-amber-100">
+            <p className="font-semibold">
+              Some calendar/routine reads returned warnings.
+            </p>
+            <ul className="mt-3 list-disc space-y-1 pl-5">
+              {calendarRoutineWarnings.slice(0, 6).map((warning) => (
+                <li key={warning}>{warning}</li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+
+        <p className="mt-4 text-xs leading-5 text-slate-500">
+          Source tables: {calendarRoutineSourceTables.join(", ")}
         </p>
       </SectionCard>
 

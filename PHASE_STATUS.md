@@ -2168,3 +2168,14 @@ Still deferred:
 - Analytics to Phase 17
 - Custom Trackers to Phase 18
 - Privacy/Export to Phase 19
+
+## Phase 13.5C Calendar / Timeline / Routine Repair
+
+Status: Complete after `npm run audit:phase13_5c` and `npm run check` pass.
+
+- Added `calendar_blocks`, `routines`, `routine_steps`, and `reminders`.
+- Added read-only helper and dashboard visibility foundation.
+- `timeline_events` remains deferred.
+- Internal Carnos namespace remains unchanged; persona rename/display alias stays deferred to final polish.
+
+Next after completion: Phase 13.5D Career Repair.

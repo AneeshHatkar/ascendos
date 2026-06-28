@@ -3905,3 +3905,13 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Fixed Supabase generic inference cast in `src/lib/repositories/carnos-persona-read.ts`.
 - The Phase 13.5B audit passed, but `next build` failed during TypeScript checking because Supabase inferred a generic string error array for `persona_prompt_versions`.
 - The repository now casts through `unknown` before returning `PersonaPromptVersionRow[]`, matching the compiler-safe pattern.
+
+## Phase 13.5C Calendar / Timeline / Routine Repair
+
+- Added SQL foundation for `calendar_blocks`, `routines`, `routine_steps`, and `reminders`.
+- Added read-only repository helpers for the new calendar/routine/reminder tables.
+- Added calendar/routine dashboard aggregation helper.
+- Wired Calendar dashboard visibility for Phase 13.5C foundation counts and source tables.
+- Preserved the existing Phase 6 timeline helper boundary: `timeline_events` remains deferred and `public.events` remains the v1 timeline/event spine.
+- Added Phase 13.5C docs, QA checklist, and audit gate.
+- Persona rename/display alias remains deferred to final polish; internal Carnos namespace was not renamed.

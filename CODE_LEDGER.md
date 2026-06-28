@@ -2730,3 +2730,12 @@ Purpose:
 ## Phase 13.5B TypeScript Build Fix
 
 - `src/lib/repositories/carnos-persona-read.ts`: fixed `PersonaPromptVersionRow[]` cast through `unknown` to satisfy TypeScript build.
+
+## Phase 13.5C Calendar / Timeline / Routine Repair
+
+- `supabase/migrations/0019_phase13_5c_calendar_timeline_routine_foundation.sql`: added calendar/routine/reminder schema with RLS.
+- `src/lib/repositories/calendar-routine-read.ts`: added read-only list helpers.
+- `src/lib/dashboard/calendar-routine-dashboard-data-helpers.ts`: added read-only calendar/routine dashboard aggregation.
+- `src/app/calendar/page.tsx`: wired calendar/routine dashboard data.
+- `src/components/dashboard/calendar-dashboard-v1.tsx`: added Phase 13.5C visibility panel.
+- `scripts/audit-phase-13-5c.mjs`: added audit gate.

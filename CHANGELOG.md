@@ -1361,3 +1361,9 @@ Timestamp: 2026-06-27 06:21 UTC
 ## Phase 13.5B Build Fix
 
 - Fixed TypeScript build failure in the Carnos persona read repository.
+
+## Phase 13.5C Calendar / Timeline / Routine Repair
+
+- Added calendar blocks, routines, routine steps, and reminders foundation.
+- Added read-only dashboard visibility for calendar/routine/reminder foundations.
+- Preserved `timeline_events` as deferred and kept `public.events` as the v1 event/timeline spine.
