@@ -1381,3 +1381,10 @@ Timestamp: 2026-06-27 06:21 UTC
 - Added behavioral stories, question bank, mock interviews, and resume usage foundations.
 - Added read-only Career dashboard visibility for career-prep records.
 - Preserved boundaries against AI answer generation, resume rewriting, job applications, outreach, scraping, and autonomous actions.
+
+## Phase 13.5E Settings / Privacy Foundation Repair
+
+- Added `app_settings` and `privacy_settings` SQL foundations.
+- Added read-only settings/privacy helpers and UI visibility.
+- Replaced `/privacy` placeholder with authenticated read-only privacy foundation.
+- Added `audit:phase13_5e` to the full check gate.

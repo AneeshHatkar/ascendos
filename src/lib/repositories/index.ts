@@ -6,3 +6,4 @@ export * from "./grimoire-read";
 export * from "./carnos-persona-read";
 export * from "./calendar-routine-read";
 export * from "./career-prep-read";
+export * from "./settings-privacy-read";

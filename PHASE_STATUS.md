@@ -2189,3 +2189,13 @@ Status: Complete after `npm run audit:phase13_5d` and `npm run check` pass.
 - No Carnos rename, voice, memory/RAG, web search, analytics, settings/privacy, placeholder decision, or final source audit work was performed.
 
 Next after completion: Phase 13.5E Settings / Privacy Foundation Repair.
+
+## Phase 13.5E Settings / Privacy Foundation Repair
+
+Status: Complete after `npm run audit:phase13_5e` and `npm run check` pass.
+
+- Added `app_settings` and `privacy_settings`.
+- Added read-only settings/privacy helpers and dashboard visibility.
+- No Carnos rename, voice, memory/RAG, web search, analytics, export/delete, private mode, placeholder decision, or final source audit work was performed.
+
+Next after completion: Phase 13.5F Placeholder Route Decision.

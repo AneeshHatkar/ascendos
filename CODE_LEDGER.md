@@ -2757,3 +2757,16 @@ Purpose:
 - `src/app/career/page.tsx`: wired career-prep data.
 - `src/components/dashboard/career-dashboard-v1.tsx`: rendered career-prep panel.
 - `scripts/audit-phase-13-5d.mjs`: added audit gate.
+
+## Phase 13.5E Settings / Privacy Foundation Repair
+
+- `supabase/migrations/0021_phase13_5e_settings_privacy_foundation.sql`
+- `src/lib/repositories/settings-privacy-read.ts`
+- `src/lib/dashboard/settings-privacy-dashboard-data-helpers.ts`
+- `src/components/dashboard/settings-privacy-foundation-panel.tsx`
+- `src/app/settings/page.tsx`
+- `src/app/privacy/page.tsx`
+- `scripts/audit-phase-13-5e.mjs`
+- `docs/database/PHASE_13_5E_SETTINGS_PRIVACY_SCHEMA_DESIGN.md`
+- `docs/phase-reports/PHASE_13_5E_SETTINGS_PRIVACY_COMPLETION_REPORT.md`
+- `docs/qa/PHASE_13_5E_SETTINGS_PRIVACY_MANUAL_SMOKE_CHECKLIST.md`

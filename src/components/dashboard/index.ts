@@ -45,3 +45,4 @@ export * from "./health-body-action-boundary-panels";
 export * from "./admin-finance-dashboard-v1";
 export * from "./grimoire-dashboard-v1";
 export * from "./career-prep-foundation-panel";
+export * from "./settings-privacy-foundation-panel";

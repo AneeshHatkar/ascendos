@@ -3937,3 +3937,13 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Added Phase 13.5D docs, QA checklist, and audit gate.
 - Preserved Phase 8 career tables and did not replace job applications, networking, referrals, resumes, or interviews.
 - Preserved final-polish decision: persona rename/display alias remains deferred; internal Carnos namespace was not renamed.
+
+## Phase 13.5E Settings / Privacy Foundation Repair
+
+Status: Complete after verification gates pass.
+
+- Added SQL-backed `app_settings` and `privacy_settings` foundations.
+- Added read-only settings/privacy repository helpers.
+- Added settings/privacy dashboard summary helper and foundation panel.
+- Upgraded `/settings` and `/privacy` to authenticated read-only visibility.
+- Preserved deferred boundaries for export/delete, private mode, memory/RAG, voice, web search, analytics, and Carnos display-name rename.

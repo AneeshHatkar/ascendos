@@ -9,3 +9,4 @@ export * from "./admin-finance-dashboard-data-helpers";
 export * from "./grimoire-dashboard-data-helpers";
 export * from "./calendar-routine-dashboard-data-helpers";
 export * from "./career-prep-dashboard-data-helpers";
+export * from "./settings-privacy-dashboard-data-helpers";
