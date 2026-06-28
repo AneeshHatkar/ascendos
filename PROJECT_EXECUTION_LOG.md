@@ -3960,3 +3960,25 @@ Status: Complete after verification gates pass.
 - Replaced ambiguous placeholder copy with explicit Phase 13.5F decision boundaries.
 - Added audit gate `npm run audit:phase13_5f`.
 - No SQL, write flows, AI generation, Carnos rename, memory/RAG, web search, analytics engine, or custom tracker builder work was performed.
+
+## Phase 13.5G — Final Source Coverage Audit
+
+- Locked final Phase 13.5 source coverage audit before Phase 14 Voice Foundation.
+- Confirmed completed-scope gaps through Phase 13 are repaired, built, renamed/equivalent, deferred, future phase, post-v1, or explicitly classified.
+- Confirmed no Phase 13.5G SQL migrations, voice implementation, memory/RAG, web search, analytics jobs, autonomous writes, or privacy execution flows were added.
+- Added `audit:phase13_5g` and wired it into `npm run check`.
+- Next: Phase 14 Voice Foundation may begin only after Phase 13.5G audit and full check pass.
+
+## Phase 13.5G — Final Full Source Scope Audit
+
+- Replaced shallow Phase 13.5G check with a true full source-scope audit.
+- Scope: Phase 1 through Phase 13.5.
+- Inputs checked: FINAL_SYNCED DOCX, FINAL_SYNCED JSON, canonical routes, dashboard registry, migrations, audit scripts, phase reports, QA docs, and Phase 13.5 repairs.
+- Output report: `docs/audits/PHASE_1_13_5_FULL_SOURCE_SCOPE_AUDIT.md`.
+- No application feature code, writes, LLM behavior, voice behavior, memory/RAG, web search, export/delete controls, or post-v1 placeholders were implemented in this audit phase.
+
+## Phase 13.5G — Final Full Source Scope Audit Repair
+
+- Repaired the Phase 13.5G audit gate so it compares semantic source requirements from FINAL_SYNCED DOCX/JSON against repo implementation evidence instead of requiring repo-specific repair table names to appear verbatim in source files.
+- Phase 13.5G remains audit/report only.
+- No new product features, writes, voice, memory/RAG, web search, analytics engine, export/delete controls, or placeholder expansions were added.

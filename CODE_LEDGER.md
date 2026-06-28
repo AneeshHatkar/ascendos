@@ -2781,3 +2781,33 @@ Purpose:
 - `src/app/experiments/page.tsx` — wired to locked placeholder decision.
 - `src/app/custom-trackers/page.tsx` — wired to locked placeholder decision.
 - `scripts/audit-phase-13-5f.mjs` — added placeholder decision audit gate.
+
+## Phase 13.5G — Final Source Coverage Audit
+
+- `docs/phase-reports/PHASE_13_5G_FINAL_SOURCE_COVERAGE_AUDIT.md`
+  - Final repair-lane closeout report.
+  - Classifies remaining completed-scope gaps before Phase 14.
+- `docs/qa/PHASE_13_5G_FINAL_SOURCE_COVERAGE_MANUAL_SMOKE_CHECKLIST.md`
+  - Manual verification checklist for Phase 13.5G.
+- `scripts/audit-phase-13-5g.mjs`
+  - Machine gate for final Phase 13.5 coverage.
+- `package.json`
+  - Adds `audit:phase13_5g`.
+  - Adds Phase 13.5G audit to `npm run check`.
+
+## Phase 13.5G — Final Full Source Scope Audit
+
+- Added `scripts/audit-phase-13-5g-full-source-scope.py`.
+- Added `scripts/audit-phase-13-5g.mjs`.
+- Added `docs/audits/PHASE_1_13_5_FULL_SOURCE_SCOPE_AUDIT.md`.
+- Added `docs/phase-reports/PHASE_13_5G_FINAL_SOURCE_COVERAGE_AUDIT.md`.
+- Added `docs/qa/PHASE_13_5G_FINAL_SOURCE_COVERAGE_MANUAL_SMOKE_CHECKLIST.md`.
+- Updated `package.json` so `npm run check` includes `npm run audit:phase13_5g`.
+
+## Phase 13.5G — Final Full Source Scope Audit Repair
+
+- Repaired `scripts/audit-phase-13-5g-full-source-scope.py`.
+- Preserved `scripts/audit-phase-13-5g.mjs`.
+- Regenerates `docs/audits/PHASE_1_13_5_FULL_SOURCE_SCOPE_AUDIT.md`.
+- Regenerates `docs/phase-reports/PHASE_13_5G_FINAL_SOURCE_COVERAGE_AUDIT.md`.
+- Regenerates `docs/qa/PHASE_13_5G_FINAL_SOURCE_COVERAGE_MANUAL_SMOKE_CHECKLIST.md`.

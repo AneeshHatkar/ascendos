@@ -1394,3 +1394,20 @@ Timestamp: 2026-06-27 06:21 UTC
 - Marked the remaining placeholder routes as intentional deferred routes instead of ambiguous missing scope.
 - Added route-level decision metadata and protected boundary UI.
 - Added `audit:phase13_5f` and wired it into `npm run check`.
+
+## Phase 13.5G — Final Source Coverage Audit
+
+- Added final Phase 13.5 source coverage closeout report.
+- Added Phase 13.5G manual smoke checklist.
+- Added `audit:phase13_5g` and wired it into the full check gate.
+- Confirmed Phase 14 Voice Foundation remains the next phase after successful verification.
+
+## Phase 13.5G — Final Full Source Scope Audit
+
+- Added final Phase 1–13.5 source coverage audit against FINAL_SYNCED DOCX/JSON and repo implementation evidence.
+- Locked Phase 14 Voice Foundation as next only after the final audit and full check pass.
+
+## Phase 13.5G — Final Full Source Scope Audit Repair
+
+- Fixed the final source coverage audit to separate semantic DOCX/JSON source requirements from repo-specific implementation evidence.
+- Keeps Phase 14 blocked until `audit:phase13_5g` and full `npm run check` pass.

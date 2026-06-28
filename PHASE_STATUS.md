@@ -2208,3 +2208,70 @@ Status: Complete after `npm run audit:phase13_5f` and `npm run check` pass.
 - No SQL, write paths, AI generation, Carnos rename, memory/RAG, web search, analytics engine, or custom tracker builder behavior was added.
 
 Next after completion: Phase 13.5G Final Full Source Scope Check.
+
+## Phase 13.5G — Final Full Source Scope Check
+
+Status: Complete pending commit.
+
+Completed:
+- Final source coverage audit report added.
+- Final manual smoke checklist added.
+- Machine audit gate added as `audit:phase13_5g`.
+- Full check gate updated to include Phase 13.5G.
+- Remaining placeholders are intentionally deferred:
+  - `/creativity`
+  - `/decisions`
+  - `/future-simulator`
+  - `/experiments`
+  - `/custom-trackers`
+
+Protected boundaries:
+- No SQL migration added.
+- No voice implementation added.
+- No Memory/RAG implementation added.
+- No web search/current-resource implementation added.
+- No analytics/background job implementation added.
+- No export/delete/private-mode execution added.
+- No Carnos display-name rename added.
+
+Next:
+- Phase 14 Voice Foundation.
+
+Phase 13.5G marker: Final Source Coverage.
+
+## Phase 13.5G — Final Source Coverage Audit
+
+Status: in verification.
+
+Purpose:
+- Perform the true full scope check from Phase 1 through Phase 13.5.
+- Compare completed implementation against FINAL_SYNCED DOCX, FINAL_SYNCED JSON, canonical routes, migrations, audit gates, phase reports, and all new repairs added during Phase 13.5.
+- Explicitly classify every remaining non-built area as Future phase, Deferred, Post-v1, Renamed/equivalent, or Out of scope.
+
+Protected boundary:
+- No new feature implementation.
+- No new writes.
+- No voice implementation.
+- No memory/RAG implementation.
+- No web search implementation.
+- No analytics engine implementation.
+- No export/delete/private-mode implementation.
+- No Carnos rename.
+- No placeholder expansion.
+
+Next:
+- Phase 14 Voice Foundation may begin only after Phase 13.5G audit, full check, commit, and push pass.
+
+## Phase 13.5G — Final Source Coverage Audit Repair
+
+Status: verification.
+
+Repair reason:
+- The first Phase 13.5G audit was too strict because it expected implementation-specific table names to exist verbatim in the original DOCX/JSON.
+- The repaired audit checks source semantics, repo evidence, repaired schema markers, routes, registry, audit gates, docs, and future/deferred locks separately.
+
+Next:
+- Run `npm run audit:phase13_5g`.
+- Run `npm run check`.
+- Commit and push only if both pass.
+- Then Phase 14 Voice Foundation may begin.
