@@ -4314,3 +4314,92 @@ export type GrimoireCorruptionCheckUpdate =
 export type GrimoireReversionRow = Tables["grimoire_reversions"]["Row"];
 export type GrimoireReversionInsert = Tables["grimoire_reversions"]["Insert"];
 export type GrimoireReversionUpdate = Tables["grimoire_reversions"]["Update"];
+
+// Phase 14B voice foundation database aliases.
+export type VoiceSessionRow = {
+  id: string;
+  user_id: string;
+  chat_session_id: string | null;
+  source_message_id: string | null;
+  source_ai_action_id: string | null;
+  session_type:
+    | "quick_log"
+    | "daily_command"
+    | "night_reflection"
+    | "interview_practice"
+    | "learning_tutor"
+    | "gym_checkin"
+    | "research_mentor"
+    | "general_chat"
+    | "crisis_soft";
+  voice_mode:
+    | "friend_voice"
+    | "strict_coach_voice"
+    | "calm_mentor_voice"
+    | "morning_command_voice"
+    | "night_reflection_voice"
+    | "teacher_voice"
+    | "research_mentor_voice"
+    | "gym_coach_voice"
+    | "crisis_soft_voice";
+  status:
+    | "draft"
+    | "active"
+    | "ended"
+    | "discarded"
+    | "pending_confirmation"
+    | "saved"
+    | "error";
+  started_at: string;
+  ended_at: string | null;
+  transcript_summary: string | null;
+  detected_emotion_label: string | null;
+  sensitive_default: boolean;
+  audio_saved: boolean;
+  audio_retained: boolean;
+  audio_retention_consent: boolean;
+  metadata: Record<string, unknown>;
+  created_at: string;
+  updated_at: string;
+};
+
+export type VoiceSessionInsert = Omit<VoiceSessionRow, "id" | "created_at" | "updated_at"> & {
+  id?: string;
+  created_at?: string;
+  updated_at?: string;
+};
+
+export type VoiceSessionUpdate = Partial<VoiceSessionInsert>;
+
+export type VoiceTranscriptRow = {
+  id: string;
+  user_id: string;
+  voice_session_id: string;
+  source_message_id: string | null;
+  source_ai_action_id: string | null;
+  speaker: "user" | "carnos" | "system";
+  transcript_text: string;
+  transcript_source: "voice" | "manual" | "simulated" | "text";
+  segment_index: number;
+  started_at: string | null;
+  ended_at: string | null;
+  occurred_at: string | null;
+  logged_at: string;
+  confidence_score: number | null;
+  needs_review: boolean;
+  correction_text: string | null;
+  detected_emotion_label: string | null;
+  is_sensitive: boolean;
+  metadata: Record<string, unknown>;
+  created_at: string;
+  updated_at: string;
+};
+
+export type VoiceTranscriptInsert = Omit<VoiceTranscriptRow, "id" | "created_at" | "updated_at"> & {
+  id?: string;
+  created_at?: string;
+  updated_at?: string;
+};
+
+export type VoiceTranscriptUpdate = Partial<VoiceTranscriptInsert>;
+

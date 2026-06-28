@@ -4008,3 +4008,31 @@ Locked key rule:
 Carnos may understand and propose updates across ascendOS through text, voice, manual transcript, or simulated transcript input. Carnos may not silently write important changes. Confirmed updates must pass through the existing safe write/confirmation system.
 
 Next step: Phase 14B SQL Foundation.
+
+## Phase 14B — Voice SQL Foundation
+
+Added SQL foundation for Phase 14 Voice Foundation.
+
+Completed:
+- Added `voice_sessions`.
+- Added `voice_transcripts`.
+- Added RLS policies for both tables.
+- Added indexes for session/transcript access.
+- Added parent ownership guards.
+- Added safe audio retention defaults.
+- Added sensitive/review defaults.
+- Added TypeScript database aliases.
+- Added read-only voice repository helpers.
+- Added schema design doc, report, QA checklist, and audit gate.
+
+Protected:
+- No voice UI.
+- No browser microphone code.
+- No STT/TTS provider code.
+- No `/api/voice/transcribe`.
+- No `/api/voice/speak`.
+- No `/voice-companion`.
+- No Carnos proposal bridge.
+- No Memory/RAG, web search, analytics, custom tracker, or export/delete/private mode implementation.
+
+Next step: Phase 14C — Types / Schemas / State Machine / Read Helpers.

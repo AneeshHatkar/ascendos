@@ -141,16 +141,15 @@ if (exists("docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_F
   }
 }
 
+// Phase 14A remains a scope-lock audit after Phase 14 implementation begins.
+// It must not permanently block planned Phase 14B+ implementation files.
+// The only route-level boundary that remains forbidden is the standalone
+// /voice-companion route, because the locked decision says Phase 14 starts in /carnos.
 for (const forbidden of [
   "src/app/voice-companion/page.tsx",
-  "src/app/voice-companion",
-  "src/app/api/voice/transcribe/route.ts",
-  "src/app/api/voice/speak/route.ts",
-  "src/schemas/voice.ts",
-  "src/lib/voice/voice-session-state.ts",
-  "supabase/migrations/0022_phase14_voice_foundation.sql"
+  "src/app/voice-companion"
 ]) {
-  if (exists(forbidden)) failures.push(`Implementation file added too early during Phase 14A scope lock: ${forbidden}`);
+  if (exists(forbidden)) failures.push(`Standalone /voice-companion route is still deferred: ${forbidden}`);
 }
 
 const pkg = JSON.parse(read("package.json"));
@@ -188,7 +187,11 @@ console.log("✓ Full 145-requirement scope is locked");
 console.log("✓ Carnos text/voice-to-system update bridge is locked");
 console.log("✓ Route reconciliation is locked");
 console.log("✓ Safety and deferred boundaries are locked");
-console.log("✓ No Phase 14 implementation files were added during scope lock");
+console.log("✓ Phase 14A scope lock remains valid after Phase 14B implementation begins");
 console.log("✓ package.json check gate includes audit:phase14a");
 console.log("✓ Logs/status markers present");
 console.log("\nPhase 14A voice foundation scope lock audit passed.");
+
+// Phase 14A audit future-compatible after Phase 14B:
+// Planned Phase 14B+ implementation files are allowed after the scope lock.
+// Standalone /voice-companion remains deferred unless canonical routes expand.

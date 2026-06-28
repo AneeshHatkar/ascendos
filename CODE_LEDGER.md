@@ -2834,3 +2834,31 @@ Locked:
 - Carnos text/voice-to-system update bridge.
 - No standalone `/voice-companion` in Phase 14A.
 - No Phase 14 implementation files in Phase 14A.
+
+## Phase 14B — Voice SQL Foundation
+
+Added:
+- `supabase/migrations/0022_phase14_voice_foundation.sql`
+- `supabase/migrations/0023_phase14_parent_ownership_guards.sql`
+- `src/lib/repositories/voice-read.ts`
+- `docs/database/PHASE_14_VOICE_SCHEMA_DESIGN.md`
+- `docs/phase-reports/PHASE_14B_VOICE_SQL_FOUNDATION_REPORT.md`
+- `docs/qa/PHASE_14B_VOICE_SQL_FOUNDATION_MANUAL_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-14b.mjs`
+
+Updated:
+- `src/types/database.ts`
+- `src/lib/repositories/index.ts`
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Locked:
+- Voice SQL foundation exists.
+- Audio retention defaults are safe.
+- Voice reads are read-only.
+- Deferred implementation boundaries remain protected.
+
+Next locked implementation step: Phase 14C — Types / Schemas / State Machine / Read Helpers.

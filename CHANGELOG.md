@@ -1422,3 +1422,15 @@ Timestamp: 2026-06-27 06:21 UTC
 - Locked Carnos text/voice/manual/simulated transcript-to-system update bridge.
 - Locked confirmation-before-write as the non-negotiable safety rule.
 - Added `audit:phase14a` to the project check gate.
+
+## Phase 14B — Voice SQL Foundation
+
+- Added `voice_sessions` and `voice_transcripts` SQL foundation.
+- Added RLS policies, indexes, and parent ownership guards.
+- Added safe audio retention defaults.
+- Added sensitive/review defaults for sessions and transcripts.
+- Added voice database aliases and read-only repository helpers.
+- Added Phase 14B schema docs, QA checklist, report, and audit gate.
+- Kept voice UI, API routes, STT/TTS providers, `/voice-companion`, Memory/RAG, and web search deferred.
+
+Next locked implementation step: Phase 14C — Types / Schemas / State Machine / Read Helpers.

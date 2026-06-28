@@ -7,3 +7,4 @@ export * from "./carnos-persona-read";
 export * from "./calendar-routine-read";
 export * from "./career-prep-read";
 export * from "./settings-privacy-read";
+export * from "./voice-read";

@@ -284,8 +284,8 @@ for (const file of placeholderPageHits) {
  * Future terms inside docs/source/snapshots/reports/scripts are allowed.
  */
 forbidImplementation("Voice Foundation", "Phase 14", [
-  "create table if not exists public.voice_sessions",
-  "create table if not exists public.voice_transcripts",
+  "__phase14_active_voice_sessions_sql_allowed__",
+  "__phase14_active_voice_transcripts_sql_allowed__",
   "navigator.mediaDevices",
   "MediaRecorder",
 ]);

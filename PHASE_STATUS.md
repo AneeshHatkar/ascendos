@@ -2288,3 +2288,29 @@ Locked:
 - Carnos may not silently write important updates.
 - Standalone `/voice-companion` is deferred.
 - Next phase: Phase 14B SQL Foundation.
+
+## Phase 14B — Voice SQL Foundation
+
+Status: Complete when audit/check pass.
+
+Completed:
+- `voice_sessions`
+- `voice_transcripts`
+- RLS policies
+- ownership guards
+- voice database aliases
+- read-only voice repository helpers
+- docs/audit/check gate
+
+Deferred:
+- Voice UI
+- STT/TTS APIs
+- Carnos integration
+- Text/voice proposal bridge
+- `/voice-companion`
+- Memory/RAG
+- web search
+- analytics/custom trackers
+- export/delete/private mode implementation
+
+Next step: Phase 14C — Types / Schemas / State Machine / Read Helpers.
