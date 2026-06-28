@@ -2726,3 +2726,7 @@ Purpose:
 ## Phase 13.5B Marker Patch
 
 - Added exact Phase 13.5B machine-check markers to `docs/carnos/CARNOS_PERSONA_CONTRACT.md`.
+
+## Phase 13.5B TypeScript Build Fix
+
+- `src/lib/repositories/carnos-persona-read.ts`: fixed `PersonaPromptVersionRow[]` cast through `unknown` to satisfy TypeScript build.

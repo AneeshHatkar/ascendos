@@ -3899,3 +3899,9 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 
 - Fixed Phase 13.5B audit marker mismatch in `docs/carnos/CARNOS_PERSONA_CONTRACT.md`.
 - The previous commit added the Carnos persona foundation but failed the audit because exact machine-check strings were missing from the persona contract document.
+
+## Phase 13.5B TypeScript Build Fix
+
+- Fixed Supabase generic inference cast in `src/lib/repositories/carnos-persona-read.ts`.
+- The Phase 13.5B audit passed, but `next build` failed during TypeScript checking because Supabase inferred a generic string error array for `persona_prompt_versions`.
+- The repository now casts through `unknown` before returning `PersonaPromptVersionRow[]`, matching the compiler-safe pattern.

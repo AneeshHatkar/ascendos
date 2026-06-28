@@ -60,7 +60,7 @@ export async function listPersonaPromptVersions(
     return [];
   }
 
-  return (data ?? []) as PersonaPromptVersionRow[];
+  return (data ?? []) as unknown as PersonaPromptVersionRow[];
 }
 
 export async function getActiveCarnosPersonaPromptVersion(
