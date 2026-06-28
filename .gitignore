@@ -57,3 +57,7 @@ pnpm-debug.log*
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# Generated source scope snapshot artifacts
+docs/audits/source_scope_snapshot_*/
+docs/audits/source_scope_snapshot_*.zip

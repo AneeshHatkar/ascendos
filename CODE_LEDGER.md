@@ -2696,3 +2696,18 @@ Purpose:
 - Added `scripts/audit-phase-13.mjs`.
 - Updated `package.json` with `audit:phase13` and added it to `npm run check`.
 - Patched `supabase/migrations/0016_phase13_grimoire_foundation.sql`.
+
+## Phase 13.5A — Formal Gap Lock
+
+- Added `docs/phase-plans/PHASE_13_5_COMPLETED_SCOPE_REPAIR.md`.
+- Added `docs/audits/PHASE_1_13_FULL_SOURCE_SCOPE_GAP_AUDIT.md`.
+- Added `docs/phase-reports/PHASE_13_5A_FORMAL_GAP_LOCK_REPORT.md`.
+- Added `scripts/audit-phase-13-5.mjs`.
+- Added `audit:phase13_5` package script and wired it before build in `npm run check`.
+- No product runtime feature code changed in this step.
+
+## Phase 13.5A Marker Patch
+
+- Added exact machine-check markers required by `scripts/audit-phase-13-5.mjs`.
+- Added generated source scope snapshot artifacts to `.gitignore`.
+- Preserved `scripts/source_scope_snapshot.py` as a reusable repo audit utility.

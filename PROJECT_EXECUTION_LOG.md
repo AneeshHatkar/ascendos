@@ -3863,3 +3863,23 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Fixed the Phase 13 Grimoire SQL RLS typo for `grimoire_skills`.
 - Final boundary remains read-only: no Carnos generation, no mode activation, no proposed-action persistence, no action execution, no timers, no browser Supabase, and no direct database writes.
 - Phase 13 is complete after final audit/check/build verification.
+
+## Phase 13.5A — Formal Gap Lock
+
+- Paused Phase 14 Voice Foundation.
+- Locked Phase 13.5 as Completed Scope Repair + Final Source Coverage Audit.
+- Added master source gap audit for Phases 1–13.
+- Added repair sequence:
+  - 13.5B Carnos Persona + Chat Completion Repair
+  - 13.5C Calendar / Timeline / Routine Repair
+  - 13.5D Career Story / Question Bank / Mock Interview Repair
+  - 13.5E Settings / Privacy Foundation Repair
+  - 13.5F Placeholder Route Scope Decision
+  - 13.5G Final Source Coverage Audit
+- Protected future phases from accidental implementation: Voice, Memory/RAG, Web Search, Analytics, Custom Trackers, Privacy/Export, Final Polish.
+
+## Phase 13.5A Marker Patch
+
+- Fixed Phase 13.5A audit failure caused by marker text mismatch.
+- The failure was not from product code; it was from exact audit marker strings.
+- Added generated snapshot artifacts to `.gitignore`.

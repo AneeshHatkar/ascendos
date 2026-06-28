@@ -2122,3 +2122,24 @@ Completed route: `/grimoire`.
 Completed system: Grimoire-to-Action read-only dashboard.
 Final boundary: no generation, no mode activation, no proposed-action persistence, no action execution, no timers, no browser Supabase, and no direct database writes.
 Next: Phase 14 planning can begin only after Phase 13 is pushed.
+
+## Phase 13.5 — Completed Scope Repair
+
+Status: Started.
+
+Phase 13 is complete, but Phase 14 is paused until Phase 13.5 repairs or classifies completed-scope gaps discovered by the source scope snapshot.
+
+Current substep:
+
+- Phase 13.5A Formal Gap Lock: in progress / pending verification.
+
+Remaining Phase 13.5 substeps:
+
+- 13.5B Carnos Persona + Chat Completion Repair
+- 13.5C Calendar / Timeline / Routine Repair
+- 13.5D Career Story / Question Bank / Mock Interview Repair
+- 13.5E Settings / Privacy Foundation Repair
+- 13.5F Placeholder Route Scope Decision
+- 13.5G Final Source Coverage Audit
+
+Phase 14 Voice Foundation must not start until Phase 13.5G passes.

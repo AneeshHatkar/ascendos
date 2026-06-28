@@ -1340,3 +1340,9 @@ Timestamp: 2026-06-27 06:21 UTC
 
 - Completed Phase 13 Grimoire closeout with smoke checklist, completion report, audit script, and final check wiring.
 - Fixed Grimoire skills RLS migration typo before final lock.
+
+## Phase 13.5A — Completed Scope Repair Lock
+
+- Paused Phase 14 until completed-scope gaps through Phase 13 are repaired or explicitly classified.
+- Added full source scope gap audit for completed phases.
+- Added Phase 13.5 repair plan and audit script.
