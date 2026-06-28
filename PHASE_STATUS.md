@@ -2179,3 +2179,13 @@ Status: Complete after `npm run audit:phase13_5c` and `npm run check` pass.
 - Internal Carnos namespace remains unchanged; persona rename/display alias stays deferred to final polish.
 
 Next after completion: Phase 13.5D Career Repair.
+
+## Phase 13.5D Career Prep Repair
+
+Status: Complete after `npm run audit:phase13_5d` and `npm run check` pass.
+
+- Added `behavioral_stories`, `question_bank`, `mock_interviews`, and `resume_usage`.
+- Added read-only helpers and Career dashboard visibility.
+- No Carnos rename, voice, memory/RAG, web search, analytics, settings/privacy, placeholder decision, or final source audit work was performed.
+
+Next after completion: Phase 13.5E Settings / Privacy Foundation Repair.

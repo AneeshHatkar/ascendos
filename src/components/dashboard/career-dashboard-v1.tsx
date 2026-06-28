@@ -1,4 +1,5 @@
 import {
+  CareerPrepFoundationPanel,
   CrossDashboardLinks,
   EmptyState,
   MetricTile,
@@ -7,7 +8,10 @@ import {
   SectionCard,
   StatusPill,
 } from "@/components/dashboard";
-import type { CareerDashboardDataResult } from "@/lib/dashboard";
+import type {
+  CareerDashboardDataResult,
+  CareerPrepDashboardDataResult,
+} from "@/lib/dashboard";
 import { getDashboardCardsForSurface } from "@/lib/dashboard";
 import type {
   InterviewRow,
@@ -29,6 +33,7 @@ import { CareerStateBoundaryPanel } from "@/components/dashboard/career-state-bo
 
 interface CareerDashboardV1Props {
   data: CareerDashboardDataResult;
+  careerPrepData?: CareerPrepDashboardDataResult;
   applications: JobApplicationRow[];
   applicationEvents: JobApplicationEventRow[];
   interviews: InterviewRow[];
@@ -286,6 +291,7 @@ function ReferralAndResumePanel({
 
 export function CareerDashboardV1({
   data,
+  careerPrepData,
   applications,
   applicationEvents,
   interviews,
@@ -357,6 +363,8 @@ export function CareerDashboardV1({
       </OperatingDashboardGrid>
 
       <ReferralAndResumePanel referrals={referrals} contacts={contacts} resumes={resumes} />
+
+      <CareerPrepFoundationPanel data={careerPrepData} />
 
       <CareerEvidenceLinkagePanel
         applications={applications}

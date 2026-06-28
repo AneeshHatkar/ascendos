@@ -3927,3 +3927,13 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Replaced the invalid Supabase generic alias in `src/lib/repositories/calendar-routine-read.ts`.
 - Added a local read-only query interface so the Phase 13.5C repository can query newly added tables without explicit `any` and without depending on generated Supabase table inference.
 - This fixes the TypeScript build failure from the previous pushed lint fix.
+
+## Phase 13.5D Career Prep Repair
+
+- Added `behavioral_stories`, `question_bank`, `mock_interviews`, and `resume_usage`.
+- Added read-only career-prep repository helpers.
+- Added read-only career-prep dashboard aggregation.
+- Added Career dashboard visibility panel for the repaired story/question/mock-interview/resume-usage layer.
+- Added Phase 13.5D docs, QA checklist, and audit gate.
+- Preserved Phase 8 career tables and did not replace job applications, networking, referrals, resumes, or interviews.
+- Preserved final-polish decision: persona rename/display alias remains deferred; internal Carnos namespace was not renamed.

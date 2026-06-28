@@ -5,3 +5,4 @@ export * from "./admin-finance-read";
 export * from "./grimoire-read";
 export * from "./carnos-persona-read";
 export * from "./calendar-routine-read";
+export * from "./career-prep-read";

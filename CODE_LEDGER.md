@@ -2747,3 +2747,13 @@ Purpose:
 ## Phase 13.5C TypeScript Build Fix
 
 - `src/lib/repositories/calendar-routine-read.ts`: removed invalid `SupabaseClient<Record<string, never>, "public", Record<string, never>>` alias and replaced it with a local read-only query interface.
+
+## Phase 13.5D Career Prep Repair
+
+- `supabase/migrations/0020_phase13_5d_career_prep_foundation.sql`: added career-prep schema and RLS.
+- `src/lib/repositories/career-prep-read.ts`: added read-only career-prep helpers.
+- `src/lib/dashboard/career-prep-dashboard-data-helpers.ts`: added career-prep aggregation.
+- `src/components/dashboard/career-prep-foundation-panel.tsx`: added Career dashboard visibility panel.
+- `src/app/career/page.tsx`: wired career-prep data.
+- `src/components/dashboard/career-dashboard-v1.tsx`: rendered career-prep panel.
+- `scripts/audit-phase-13-5d.mjs`: added audit gate.

@@ -44,3 +44,4 @@ export * from "./health-body-linkage-panels";
 export * from "./health-body-action-boundary-panels";
 export * from "./admin-finance-dashboard-v1";
 export * from "./grimoire-dashboard-v1";
+export * from "./career-prep-foundation-panel";

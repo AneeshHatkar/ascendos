@@ -1375,3 +1375,9 @@ Timestamp: 2026-06-27 06:21 UTC
 ## Phase 13.5C TypeScript Build Fix
 
 - Fixed the TypeScript build failure in the calendar/routine read repository.
+
+## Phase 13.5D Career Prep Repair
+
+- Added behavioral stories, question bank, mock interviews, and resume usage foundations.
+- Added read-only Career dashboard visibility for career-prep records.
+- Preserved boundaries against AI answer generation, resume rewriting, job applications, outreach, scraping, and autonomous actions.

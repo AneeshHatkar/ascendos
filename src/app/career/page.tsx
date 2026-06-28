@@ -2,7 +2,10 @@
 // Phase 5 audit compatibility marker: The career read path is wired, but no domain-matched records exist yet.
 // Phase 5 audit compatibility marker: DomainReadPage was replaced by CareerDashboardV1 in Phase 8.11.
 import { AuthenticatedDashboardShell, CareerDashboardV1 } from "@/components/dashboard";
-import { getCareerDashboardDataSummary } from "@/lib/dashboard";
+import {
+  getCareerDashboardDataSummary,
+  getCareerPrepDashboardDataSummary,
+} from "@/lib/dashboard";
 import {
   listDailyLogs,
   listGoals,
@@ -26,6 +29,7 @@ export default function CareerPage() {
       {async ({ user }) => {
         const [
           data,
+          careerPrepData,
           applications,
           applicationEvents,
           interviews,
@@ -39,6 +43,7 @@ export default function CareerPage() {
           dailyLogs,
         ] = await Promise.all([
           getCareerDashboardDataSummary(user.id),
+          getCareerPrepDashboardDataSummary(user.id),
           listJobApplications(user.id, { limit: 50 }),
           listJobApplicationEvents(user.id, { limit: 50 }),
           listInterviews(user.id, { limit: 50 }),
@@ -69,6 +74,7 @@ export default function CareerPage() {
         return (
           <CareerDashboardV1
             data={data}
+            careerPrepData={careerPrepData}
             applications={applications.data ?? []}
             applicationEvents={applicationEvents.data ?? []}
             interviews={interviews.data ?? []}
