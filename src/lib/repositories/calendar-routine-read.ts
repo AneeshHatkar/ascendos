@@ -2,7 +2,7 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
-type UntypedSupabaseClient = SupabaseClient<any, any, any>;
+type UntypedSupabaseClient = SupabaseClient<Record<string, never>, "public", Record<string, never>>;
 
 export type CalendarBlockRow = {
   id: string;

@@ -3915,3 +3915,9 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Preserved the existing Phase 6 timeline helper boundary: `timeline_events` remains deferred and `public.events` remains the v1 timeline/event spine.
 - Added Phase 13.5C docs, QA checklist, and audit gate.
 - Persona rename/display alias remains deferred to final polish; internal Carnos namespace was not renamed.
+
+## Phase 13.5C Lint Fix
+
+- Fixed explicit `any` usage in `src/lib/repositories/calendar-routine-read.ts`.
+- The first Phase 13.5C commit was pushed after `npm run check` failed at lint.
+- This patch restores the rule: Phase 13.5C is not complete until full `npm run check` passes.

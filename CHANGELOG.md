@@ -1367,3 +1367,7 @@ Timestamp: 2026-06-27 06:21 UTC
 - Added calendar blocks, routines, routine steps, and reminders foundation.
 - Added read-only dashboard visibility for calendar/routine/reminder foundations.
 - Preserved `timeline_events` as deferred and kept `public.events` as the v1 event/timeline spine.
+
+## Phase 13.5C Lint Fix
+
+- Fixed lint failure in the calendar/routine read repository.

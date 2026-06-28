@@ -2739,3 +2739,7 @@ Purpose:
 - `src/app/calendar/page.tsx`: wired calendar/routine dashboard data.
 - `src/components/dashboard/calendar-dashboard-v1.tsx`: added Phase 13.5C visibility panel.
 - `scripts/audit-phase-13-5c.mjs`: added audit gate.
+
+## Phase 13.5C Lint Fix
+
+- `src/lib/repositories/calendar-routine-read.ts`: replaced explicit `any` Supabase type alias with a lint-safe generic alias.
