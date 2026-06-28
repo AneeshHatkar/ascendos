@@ -160,3 +160,12 @@ Phase 15 Memory/RAG must use this same persona and safety contract.
 Phase 16 Web Search must use this same persona and safety contract.
 
 Phase 17 Analytics must use this same persona and safety contract.
+
+## Machine-check runtime markers
+
+These exact markers are intentionally present for the Phase 13.5B audit gate:
+
+- No silent database writes
+- Memory/RAG is deferred to Phase 15
+- Voice is deferred to Phase 14
+- Web search is deferred to Phase 16

@@ -3894,3 +3894,8 @@ Next: Phase 13 / Source Chunk 15 — Grimoire.
 - Added manual smoke checklist and completion report.
 - Added `audit:phase13_5b` and wired it into `npm run check`.
 - Confirmed no assistant generation, voice, memory/RAG, web search, analytics, or autonomous writes are enabled in this patch.
+
+## Phase 13.5B Marker Patch
+
+- Fixed Phase 13.5B audit marker mismatch in `docs/carnos/CARNOS_PERSONA_CONTRACT.md`.
+- The previous commit added the Carnos persona foundation but failed the audit because exact machine-check strings were missing from the persona contract document.

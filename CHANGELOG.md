@@ -1353,3 +1353,7 @@ Timestamp: 2026-06-27 06:21 UTC
 - Added persona prompt version SQL foundation.
 - Added Carnos persona runtime boundary panel.
 - Added Phase 13.5B audit gate.
+
+## Phase 13.5B Audit Marker Fix
+
+- Added exact Carnos runtime boundary markers required by `audit:phase13_5b`.

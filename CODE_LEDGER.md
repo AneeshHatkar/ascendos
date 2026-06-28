@@ -2722,3 +2722,7 @@ Purpose:
 - Added `src/components/carnos/carnos-persona-boundary-panel.tsx`.
 - Added `scripts/audit-phase-13-5b.mjs`.
 - Added `audit:phase13_5b` to package scripts and `npm run check`.
+
+## Phase 13.5B Marker Patch
+
+- Added exact Phase 13.5B machine-check markers to `docs/carnos/CARNOS_PERSONA_CONTRACT.md`.
