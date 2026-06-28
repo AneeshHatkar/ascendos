@@ -1411,3 +1411,14 @@ Timestamp: 2026-06-27 06:21 UTC
 
 - Fixed the final source coverage audit to separate semantic DOCX/JSON source requirements from repo-specific implementation evidence.
 - Keeps Phase 14 blocked until `audit:phase13_5g` and full `npm run check` pass.
+
+## Phase 14A — Voice Foundation Scope Lock
+
+- Locked Phase 14 as a 10-chunk Voice Foundation build from 14A–14J.
+- Documented requirement checklist categories A–K.
+- Locked the full 145-requirement Phase 14 checklist.
+- Locked `/carnos` as the initial voice surface.
+- Deferred standalone `/voice-companion` route until canonical route expansion is intentional.
+- Locked Carnos text/voice/manual/simulated transcript-to-system update bridge.
+- Locked confirmation-before-write as the non-negotiable safety rule.
+- Added `audit:phase14a` to the project check gate.

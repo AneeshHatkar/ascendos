@@ -2275,3 +2275,16 @@ Next:
 - Run `npm run check`.
 - Commit and push only if both pass.
 - Then Phase 14 Voice Foundation may begin.
+
+## Phase 14A — Voice Foundation Scope Lock
+
+Status: Complete when audit/check pass.
+
+Locked:
+- Phase 14 build chunks are 14A–14J.
+- Requirement checklist categories are A–K.
+- Full Phase 14 checklist contains 145 requirements.
+- Carnos voice/text/manual/simulated input may propose updates across ascendOS.
+- Carnos may not silently write important updates.
+- Standalone `/voice-companion` is deferred.
+- Next phase: Phase 14B SQL Foundation.

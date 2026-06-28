@@ -3982,3 +3982,29 @@ Status: Complete after verification gates pass.
 - Repaired the Phase 13.5G audit gate so it compares semantic source requirements from FINAL_SYNCED DOCX/JSON against repo implementation evidence instead of requiring repo-specific repair table names to appear verbatim in source files.
 - Phase 13.5G remains audit/report only.
 - No new product features, writes, voice, memory/RAG, web search, analytics engine, export/delete controls, or placeholder expansions were added.
+
+## Phase 14A — Voice Foundation Scope Lock
+
+Locked complete Phase 14 scope from FINAL_SYNCED DOCX/JSON plus additional UX, safety, testing, and integration requirements identified before implementation.
+
+Clarification:
+- Phase 14 build chunks are 14A–14J.
+- Requirement checklist categories are A–K.
+- Full checklist contains 145 requirements.
+
+Phase 14 is now locked as:
+- 14A — Scope Lock + Safety Contract
+- 14B — SQL Foundation
+- 14C — Types / Schemas / State Machine / Read Helpers
+- 14D — STT/TTS Provider Boundary APIs
+- 14E — Voice UI Components
+- 14F — Transcript Draft + Manual Simulator
+- 14G — Carnos Voice Panel Integration
+- 14H — Text/Voice-to-Proposed-Action System Bridge
+- 14I — Phase 14 Audit + Smoke Checklist + Completion Report
+- 14J — Final Voice/Text Integration Hardening
+
+Locked key rule:
+Carnos may understand and propose updates across ascendOS through text, voice, manual transcript, or simulated transcript input. Carnos may not silently write important changes. Confirmed updates must pass through the existing safe write/confirmation system.
+
+Next step: Phase 14B SQL Foundation.

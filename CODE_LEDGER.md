@@ -2811,3 +2811,26 @@ Purpose:
 - Regenerates `docs/audits/PHASE_1_13_5_FULL_SOURCE_SCOPE_AUDIT.md`.
 - Regenerates `docs/phase-reports/PHASE_13_5G_FINAL_SOURCE_COVERAGE_AUDIT.md`.
 - Regenerates `docs/qa/PHASE_13_5G_FINAL_SOURCE_COVERAGE_MANUAL_SMOKE_CHECKLIST.md`.
+
+## Phase 14A — Voice Foundation Scope Lock
+
+Added:
+- `docs/phase-plans/PHASE_14A_VOICE_FOUNDATION_SCOPE_LOCK.md`
+- `docs/phase-reports/PHASE_14A_VOICE_FOUNDATION_SCOPE_LOCK_REPORT.md`
+- `docs/qa/PHASE_14A_VOICE_FOUNDATION_SCOPE_LOCK_MANUAL_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-14a.mjs`
+
+Updated:
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Locked:
+- Phase 14 build chunks as 14A–14J.
+- Requirement categories as A–K.
+- Full Phase 14 checklist as 145 requirements.
+- Carnos text/voice-to-system update bridge.
+- No standalone `/voice-companion` in Phase 14A.
+- No Phase 14 implementation files in Phase 14A.
