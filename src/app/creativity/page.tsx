@@ -1,10 +1,10 @@
 import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import { PLACEHOLDER_ROUTE_DECISIONS } from "@/lib/placeholder-route-decisions";
 
 export default function CreativityPage() {
   return (
     <PlaceholderDashboardPage
-      title="Creativity"
-      subtitle="Music, art, writing, cooking, builds, ideas, and creative proof."
+      decision={PLACEHOLDER_ROUTE_DECISIONS.creativity}
     />
   );
 }

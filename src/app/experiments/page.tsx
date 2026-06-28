@@ -1,10 +1,10 @@
 import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import { PLACEHOLDER_ROUTE_DECISIONS } from "@/lib/placeholder-route-decisions";
 
 export default function ExperimentsPage() {
   return (
     <PlaceholderDashboardPage
-      title="Experiments"
-      subtitle="Personal experiments, hypotheses, variables, observations, and conclusions."
+      decision={PLACEHOLDER_ROUTE_DECISIONS.experiments}
     />
   );
 }

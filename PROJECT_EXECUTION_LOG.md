@@ -3947,3 +3947,16 @@ Status: Complete after verification gates pass.
 - Added settings/privacy dashboard summary helper and foundation panel.
 - Upgraded `/settings` and `/privacy` to authenticated read-only visibility.
 - Preserved deferred boundaries for export/delete, private mode, memory/RAG, voice, web search, analytics, and Carnos display-name rename.
+
+## Phase 13.5F Placeholder Route Decision Lock
+
+- Locked the remaining placeholder route set as intentional deferred scope:
+  - `/creativity`
+  - `/decisions`
+  - `/future-simulator`
+  - `/experiments`
+  - `/custom-trackers`
+- Added shared placeholder route decision metadata.
+- Replaced ambiguous placeholder copy with explicit Phase 13.5F decision boundaries.
+- Added audit gate `npm run audit:phase13_5f`.
+- No SQL, write flows, AI generation, Carnos rename, memory/RAG, web search, analytics engine, or custom tracker builder work was performed.

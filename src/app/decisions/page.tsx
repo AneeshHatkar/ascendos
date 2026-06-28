@@ -1,10 +1,10 @@
 import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import { PLACEHOLDER_ROUTE_DECISIONS } from "@/lib/placeholder-route-decisions";
 
 export default function DecisionsPage() {
   return (
     <PlaceholderDashboardPage
-      title="Decisions"
-      subtitle="Decision logs, tradeoffs, predictions, reversibility, and outcome review."
+      decision={PLACEHOLDER_ROUTE_DECISIONS.decisions}
     />
   );
 }

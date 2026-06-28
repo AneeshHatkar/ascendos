@@ -1388,3 +1388,9 @@ Timestamp: 2026-06-27 06:21 UTC
 - Added read-only settings/privacy helpers and UI visibility.
 - Replaced `/privacy` placeholder with authenticated read-only privacy foundation.
 - Added `audit:phase13_5e` to the full check gate.
+
+## Phase 13.5F Placeholder Route Decision Lock
+
+- Marked the remaining placeholder routes as intentional deferred routes instead of ambiguous missing scope.
+- Added route-level decision metadata and protected boundary UI.
+- Added `audit:phase13_5f` and wired it into `npm run check`.

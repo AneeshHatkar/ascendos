@@ -1,10 +1,10 @@
 import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import { PLACEHOLDER_ROUTE_DECISIONS } from "@/lib/placeholder-route-decisions";
 
 export default function FutureSimulatorPage() {
   return (
     <PlaceholderDashboardPage
-      title="Future Simulator"
-      subtitle="Scenario planning, future paths, risk branches, and preparation loops."
+      decision={PLACEHOLDER_ROUTE_DECISIONS.future_simulator}
     />
   );
 }

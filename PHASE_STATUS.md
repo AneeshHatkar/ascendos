@@ -2199,3 +2199,12 @@ Status: Complete after `npm run audit:phase13_5e` and `npm run check` pass.
 - No Carnos rename, voice, memory/RAG, web search, analytics, export/delete, private mode, placeholder decision, or final source audit work was performed.
 
 Next after completion: Phase 13.5F Placeholder Route Decision.
+
+## Phase 13.5F Placeholder Route Decision Lock
+
+Status: Complete after `npm run audit:phase13_5f` and `npm run check` pass.
+
+- Locked `/creativity`, `/decisions`, `/future-simulator`, `/experiments`, and `/custom-trackers` as intentional deferred canonical routes.
+- No SQL, write paths, AI generation, Carnos rename, memory/RAG, web search, analytics engine, or custom tracker builder behavior was added.
+
+Next after completion: Phase 13.5G Final Full Source Scope Check.

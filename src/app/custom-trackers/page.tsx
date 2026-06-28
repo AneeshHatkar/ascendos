@@ -1,10 +1,10 @@
 import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
+import { PLACEHOLDER_ROUTE_DECISIONS } from "@/lib/placeholder-route-decisions";
 
 export default function CustomTrackersPage() {
   return (
     <PlaceholderDashboardPage
-      title="Custom Trackers"
-      subtitle="User-defined trackers, metrics, templates, and custom proof loops."
+      decision={PLACEHOLDER_ROUTE_DECISIONS.custom_trackers}
     />
   );
 }

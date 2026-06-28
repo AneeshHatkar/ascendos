@@ -2770,3 +2770,14 @@ Purpose:
 - `docs/database/PHASE_13_5E_SETTINGS_PRIVACY_SCHEMA_DESIGN.md`
 - `docs/phase-reports/PHASE_13_5E_SETTINGS_PRIVACY_COMPLETION_REPORT.md`
 - `docs/qa/PHASE_13_5E_SETTINGS_PRIVACY_MANUAL_SMOKE_CHECKLIST.md`
+
+## Phase 13.5F Placeholder Route Decision Lock
+
+- `src/lib/placeholder-route-decisions.ts` — added locked deferred-route decision metadata.
+- `src/components/dashboard/placeholder-dashboard-page.tsx` — replaced generic placeholder language with explicit decision lock UI.
+- `src/app/creativity/page.tsx` — wired to locked placeholder decision.
+- `src/app/decisions/page.tsx` — wired to locked placeholder decision.
+- `src/app/future-simulator/page.tsx` — wired to locked placeholder decision.
+- `src/app/experiments/page.tsx` — wired to locked placeholder decision.
+- `src/app/custom-trackers/page.tsx` — wired to locked placeholder decision.
+- `scripts/audit-phase-13-5f.mjs` — added placeholder decision audit gate.
