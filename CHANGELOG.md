@@ -1434,3 +1434,12 @@ Timestamp: 2026-06-27 06:21 UTC
 - Kept voice UI, API routes, STT/TTS providers, `/voice-companion`, Memory/RAG, and web search deferred.
 
 Next locked implementation step: Phase 14C — Types / Schemas / State Machine / Read Helpers.
+
+## Phase 14D — STT/TTS Provider Boundary APIs
+
+- Added noop speech-to-text provider boundary.
+- Added noop text-to-speech provider boundary.
+- Added `/api/voice/transcribe`.
+- Added `/api/voice/speak`.
+- Added audit coverage for Phase 14D.
+- Preserved no-audio-storage, no-SQL-write, no-real-provider, and no-proposed-action-execution boundaries.

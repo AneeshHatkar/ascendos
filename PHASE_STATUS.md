@@ -2322,3 +2322,31 @@ Status: Next.
 Phase 14D is the next implementation chunk after Phase 14C. It is reserved for STT/TTS provider boundary APIs only.
 
 Phase 14D must not add a standalone `/voice-companion` route, browser microphone UI, Carnos panel integration, transcript simulator UI, proposed-action execution bridge, audio storage, Memory/RAG, web search, autonomous reminders, or silent writes.
+
+## Phase 14D — STT/TTS Provider Boundary APIs
+
+Status: Implemented.
+
+Phase 14D adds provider-boundary APIs for speech-to-text and text-to-speech.
+
+Completed:
+- STT provider boundary contract.
+- TTS provider boundary contract.
+- Noop STT provider.
+- Noop TTS provider.
+- `/api/voice/transcribe`.
+- `/api/voice/speak`.
+- Phase 14D audit gate.
+- Phase 14D report and manual smoke checklist.
+
+Protected:
+- No SQL writes.
+- No audio storage.
+- No real provider calls.
+- No browser microphone UI.
+- No proposed-action bridge.
+- No standalone `/voice-companion` route.
+
+## Phase 14E Next Step Marker
+
+Phase 14E is the next implementation chunk after Phase 14D. It is reserved for voice UI components only.

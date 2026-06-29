@@ -2862,3 +2862,30 @@ Locked:
 - Deferred implementation boundaries remain protected.
 
 Next locked implementation step: Phase 14C — Types / Schemas / State Machine / Read Helpers.
+
+## Phase 14D — STT/TTS Provider Boundary APIs
+
+Files added:
+- `src/lib/voice/providers/voice-provider-types.ts`
+- `src/lib/voice/providers/noop-stt-provider.ts`
+- `src/lib/voice/providers/noop-tts-provider.ts`
+- `src/lib/voice/providers/index.ts`
+- `src/app/api/voice/transcribe/route.ts`
+- `src/app/api/voice/speak/route.ts`
+- `scripts/audit-phase-14d.mjs`
+- `docs/phase-reports/PHASE_14D_STT_TTS_PROVIDER_BOUNDARY_REPORT.md`
+- `docs/qa/PHASE_14D_STT_TTS_PROVIDER_BOUNDARY_MANUAL_SMOKE_CHECKLIST.md`
+
+Files updated:
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- Provider/API boundary only.
+- No persistence.
+- No audio retention.
+- No UI.
+- No proposed-action bridge.

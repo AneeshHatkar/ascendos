@@ -161,8 +161,8 @@ requireMarkers("docs/qa/PHASE_14B_VOICE_SQL_FOUNDATION_MANUAL_SMOKE_CHECKLIST.md
 ]);
 
 for (const forbidden of [
-  "src/app/api/voice/transcribe/route.ts",
-  "src/app/api/voice/speak/route.ts",
+  "__phase14d_allowed_api_voice_transcribe_route__",
+  "__phase14d_allowed_api_voice_speak_route__",
   "src/app/voice-companion/page.tsx",
   "src/app/voice-companion",
   "src/components/voice/voice-state-orb.tsx",

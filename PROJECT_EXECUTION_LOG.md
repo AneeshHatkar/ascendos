@@ -4036,3 +4036,26 @@ Protected:
 - No Memory/RAG, web search, analytics, custom tracker, or export/delete/private mode implementation.
 
 Next step: Phase 14C — Types / Schemas / State Machine / Read Helpers.
+
+## Phase 14D — STT/TTS Provider Boundary APIs
+
+Implemented Phase 14D as the voice provider boundary layer.
+
+Completed:
+- Added STT/TTS provider contracts.
+- Added noop STT provider.
+- Added noop TTS provider.
+- Added `/api/voice/transcribe`.
+- Added `/api/voice/speak`.
+- Added Phase 14D audit gate.
+- Added Phase 14D report and smoke checklist.
+
+Protected boundaries:
+- No SQL writes.
+- No browser microphone UI.
+- No audio storage.
+- No real provider calls.
+- No proposed-action execution bridge.
+- No standalone `/voice-companion` route.
+
+Next step: Phase 14E voice UI components.

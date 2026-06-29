@@ -158,11 +158,11 @@ for (const rel of [
 for (const forbidden of [
   "src/app/voice-companion/page.tsx",
   "src/app/voice-companion",
-  "src/app/api/voice/transcribe/route.ts",
-  "src/app/api/voice/speak/route.ts",
+  "__phase14d_allowed_api_voice_transcribe_route__",
+  "__phase14d_allowed_api_voice_speak_route__",
   "src/lib/voice/stt-provider.ts",
   "src/lib/voice/tts-provider.ts",
-  "src/lib/voice/providers"
+  "__phase14d_allowed_voice_providers__"
 ]) {
   if (exists(forbidden)) failures.push(`Deferred Phase 14 file added too early in 14C: ${forbidden}`);
 }
