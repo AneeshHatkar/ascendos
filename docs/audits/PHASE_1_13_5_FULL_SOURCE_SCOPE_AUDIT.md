@@ -1,6 +1,6 @@
 # Phase 1–13.5 Full Source Scope Audit
 
-Generated: 2026-06-28T18:27:39.010Z
+Generated: 2026-06-29T06:37:01.187Z
 
 Status: PASS
 
@@ -16,8 +16,8 @@ It compares the FINAL_SYNCED DOCX/JSON source hierarchy, repaired Phase 13.5 sco
 - JSON: `docs/source-of-truth/ascendOS_Carnos_v1_1_COMPLETE_Source_of_Truth_FINAL_SYNCED.json`
 - DOCX byte length: 101205
 - JSON character length: 402469
-- Repository evidence files scanned: 310
-- Product implementation files scanned for future leaks: 184
+- Repository evidence files scanned: 319
+- Product implementation files scanned for future leaks: 189
 - SQL migration count: 23
 
 ## Completed / repaired / classified scope

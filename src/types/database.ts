@@ -4402,4 +4402,3 @@ export type VoiceTranscriptInsert = Omit<VoiceTranscriptRow, "id" | "created_at"
 };
 
 export type VoiceTranscriptUpdate = Partial<VoiceTranscriptInsert>;
-

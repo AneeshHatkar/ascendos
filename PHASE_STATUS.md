@@ -2314,3 +2314,11 @@ Deferred:
 - export/delete/private mode implementation
 
 Next step: Phase 14C — Types / Schemas / State Machine / Read Helpers.
+
+## Phase 14D Next Step Marker
+
+Status: Next.
+
+Phase 14D is the next implementation chunk after Phase 14C. It is reserved for STT/TTS provider boundary APIs only.
+
+Phase 14D must not add a standalone `/voice-companion` route, browser microphone UI, Carnos panel integration, transcript simulator UI, proposed-action execution bridge, audio storage, Memory/RAG, web search, autonomous reminders, or silent writes.

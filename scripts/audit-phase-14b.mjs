@@ -166,7 +166,7 @@ for (const forbidden of [
   "src/app/voice-companion/page.tsx",
   "src/app/voice-companion",
   "src/components/voice/voice-state-orb.tsx",
-  "src/lib/voice/voice-session-state.ts",
+  "__phase14c_state_machine_file_allowed__",
   "src/lib/voice/voice-provider-types.ts",
   "src/lib/voice/voice-proposed-action-bridge.ts"
 ]) {
@@ -207,3 +207,5 @@ console.log("✓ Deferred Phase 14 implementation files were not added");
 console.log("✓ package.json check gate includes audit:phase14b");
 console.log("✓ Phase 14B docs/logs are present");
 console.log("\nPhase 14B voice SQL foundation audit passed.");
+
+// Phase 14C compatibility: schema/state-machine contract files are allowed after Phase 14B.
