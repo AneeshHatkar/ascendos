@@ -2420,3 +2420,89 @@ Completed:
 - No-silent-write and no-execution voice boundary confirmation.
 
 Next step: Phase 14J final voice/text integration hardening.
+
+## Phase 15A — Carnos Persistent Memory + Continuity Scope Lock
+
+Status: Implemented locally pending verification, commit, and push.
+
+Last pushed phase: Phase 14J — Final Voice/Text Integration Hardening.
+Last pushed commit: 56c1c7f Add Phase 14J final voice text hardening.
+
+Source-of-truth alignment:
+- Repo Phase 15 aligns to JSON chunk 17: Memory/RAG.
+- Phase 15 implementation name: Carnos Persistent Memory + Continuity Foundation.
+- Phase 15A is documentation/audit-only.
+- No Memory/RAG runtime implementation is allowed in Phase 15A.
+
+Locked Phase 15 sequence:
+1. 15A — Persistent Memory + Continuity Scope Lock.
+2. 15B — Memory SQL Foundation.
+3. 15C — Memory Types, Schemas, Statuses, Sensitivity, Conflict Rules.
+4. 15D — Memory Candidate Engine.
+5. 15E — Memory Inbox UI.
+6. 15F — Privacy, Private Mode, Do-Not-Remember Rules.
+7. 15G — Approved Memory Read Layer + Ranking/Staleness Rules.
+8. 15H — Carnos Entity State.
+9. 15I — Project/System State Memory + Source-of-Truth Hierarchy.
+10. 15J — Current Context Pack Builder + Context Budget Rules.
+11. 15K — Carnos Memory Visibility Panel.
+12. 15L — Knowledge Vault Foundation.
+13. 15M — Retrieval Contract + Provenance + Conflict Handling.
+14. 15N — Embedding Boundary / Noop Provider.
+15. 15O — Forget/Delete Derived Records.
+16. 15P — Memory Audit Events + Memory Usage Transparency.
+17. 15Q — Cross-Domain Integration Preview.
+18. 15R — Final Audit, Smoke Checklist, Completion Report.
+
+Phase 15 locked feature families:
+- Carnos Jarvis-like continuity.
+- Carnos persistent entity/persona state.
+- User-controlled long-term memory.
+- Memory candidates.
+- Memory Inbox.
+- Approved Memories.
+- Rejected Memories.
+- Forgotten Memories.
+- Conversation continuity records.
+- Project continuity records.
+- System state memory.
+- Current context pack builder.
+- Knowledge vault separation.
+- Retrieval contract.
+- Embedding boundary.
+- Privacy controls.
+- Private mode memory blocking.
+- Do-not-remember rules.
+- Sensitive memory locks.
+- Memory provenance.
+- Memory confidence.
+- Memory staleness.
+- Memory review dates.
+- Memory priority/ranking.
+- Memory conflict resolution.
+- Source-of-truth hierarchy.
+- Memory usage transparency.
+- Memory audit logs.
+- Forget/delete derived records.
+- Whole-project connectivity.
+
+Protected Phase 15A boundaries:
+- No SQL migrations.
+- No memory tables.
+- No vector tables.
+- No pgvector.
+- No embeddings.
+- No provider calls.
+- No OpenAI calls.
+- No RAG runtime.
+- No automatic memory capture.
+- No voice transcript auto-memory.
+- No hidden Carnos prompt injection.
+- No background memory jobs.
+- No new memory routes.
+- No standalone /memory route.
+- /privacy remains the memory control surface.
+- /carnos remains the Carnos memory visibility surface.
+- /knowledge remains the future knowledge vault surface.
+
+Next step: Phase 15B — Memory SQL Foundation.

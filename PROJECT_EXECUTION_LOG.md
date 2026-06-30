@@ -4114,3 +4114,14 @@ Scope:
 - Confirmed no standalone `/voice-companion` route.
 - Confirmed no silent voice writes, no action execution, no browser microphone capture implementation, no audio retention, and no Memory/RAG implementation are introduced.
 - Next step: Phase 14J final voice/text integration hardening.
+
+## Phase 15A — Carnos Persistent Memory + Continuity Scope Lock
+
+- Locked repo Phase 15 as Carnos Persistent Memory + Continuity Foundation, aligned to JSON chunk 17 Memory/RAG.
+- Confirmed Phase 14 / JSON chunk 16 Voice Foundation is complete and pushed at commit 56c1c7f.
+- Locked 15A–15R implementation sequence before coding runtime memory behavior.
+- Locked Carnos Jarvis-like continuity goal.
+- Locked Carnos entity/persona state, user memory, project memory, system state memory, conversation continuity records, current context pack builder, knowledge vault separation, retrieval contract, embedding boundary, private mode memory block, do-not-remember rules, sensitive memory locks, memory provenance, confidence, staleness, ranking, conflict handling, audit logs, and forget/delete derived records.
+- Locked whole-project connectivity through /command, /carnos, /calendar, /timeline, /goals, /career, /learning, /research-stanford, /body, /nutrition, /grimoire, /analytics, /privacy, /custom-trackers, and /knowledge.
+- Confirmed 15A adds no SQL migrations, memory tables, vector tables, pgvector, embeddings, provider calls, OpenAI calls, RAG runtime, automatic memory capture, voice transcript auto-memory, hidden Carnos prompt injection, background memory jobs, or new memory routes.
+- Next step: Phase 15B Memory SQL Foundation.

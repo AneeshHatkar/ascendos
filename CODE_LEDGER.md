@@ -2985,3 +2985,17 @@ Boundary:
   - Final Phase 14 voice/text integration hardening audit.
 - `package.json`
   - Added `audit:phase14j` and included it in `npm run check`.
+
+## Phase 15A — Carnos Persistent Memory + Continuity Scope Lock
+
+- `docs/phase-plans/PHASE_15A_CARNOS_PERSISTENT_MEMORY_CONTINUITY_SCOPE_LOCK.md`
+  - Locks the full Phase 15 implementation map from 15A through 15R.
+  - Defines Carnos Jarvis-like continuity, persistent entity state, memory candidates, Memory Inbox, approved/rejected/forgotten memory, project/system state, context pack builder, knowledge vault, retrieval, embedding boundary, privacy controls, audit logs, forget/delete, and whole-project connectivity.
+- `docs/phase-reports/PHASE_15A_CARNOS_PERSISTENT_MEMORY_CONTINUITY_SCOPE_LOCK_REPORT.md`
+  - Records the Phase 15A closeout scope and protected boundaries.
+- `docs/qa/PHASE_15A_CARNOS_PERSISTENT_MEMORY_CONTINUITY_SCOPE_LOCK_SMOKE_CHECKLIST.md`
+  - Adds manual verification for Carnos continuity, memory safety, privacy, knowledge vault separation, route boundaries, whole-project connectivity, and 15A forbidden runtime behavior.
+- `scripts/audit-phase-15a.mjs`
+  - Verifies Phase 15A lock artifacts, required markers, package wiring, route absence, migration absence, and absence of premature Memory/RAG runtime markers.
+- `package.json`
+  - Adds `audit:phase15a` and wires it into `npm run check`.

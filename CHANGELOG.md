@@ -1483,3 +1483,10 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Confirmed Carnos remains the canonical voice/text surface.
 - Confirmed voice bridge preview remains local, non-mutating, and confirmation-first.
 - Marked next implementation area as Memory/RAG foundation.
+
+## Phase 15A — Carnos Persistent Memory + Continuity Scope Lock
+
+- Locked Phase 15 as Carnos Persistent Memory + Continuity Foundation, aligned to JSON chunk 17 Memory/RAG.
+- Added full 15A–15R implementation contract covering memory candidates, Memory Inbox, approved memories, private mode, do-not-remember rules, Carnos entity state, project/system state, current context pack builder, knowledge vault, retrieval contract, embedding boundary, forget/delete derived records, audit events, usage transparency, and cross-domain connectivity.
+- Added Phase 15A audit gate and smoke checklist.
+- Confirmed Phase 15A does not add runtime memory tables, embeddings, RAG, provider calls, hidden retrieval, automatic memory capture, or new memory routes.
