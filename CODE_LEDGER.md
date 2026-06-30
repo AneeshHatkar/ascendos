@@ -2951,3 +2951,26 @@ Modified:
 Boundary:
 - `/carnos` is the canonical integrated surface.
 - No standalone voice route, audio API, SQL write, provider call, or proposed-action execution was added.
+
+## Phase 14I — Voice Foundation Audit + Completion Report
+
+Files added:
+- `docs/phase-reports/PHASE_14I_VOICE_FOUNDATION_AUDIT_COMPLETION_REPORT.md`
+- `docs/qa/PHASE_14I_VOICE_FOUNDATION_AUDIT_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-14i.mjs`
+
+Files updated:
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- Documentation and audit gate only.
+- No new runtime voice feature.
+- No SQL writes.
+- No proposed-action execution.
+- No standalone voice route.
+- No provider calls.
+- No microphone capture implementation.

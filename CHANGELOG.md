@@ -1468,3 +1468,10 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Embedded the Phase 14F manual transcript simulator into the canonical Carnos page.
 - Added `audit:phase14g` and wired it into `npm run check`.
 - Preserved no-audio, no-provider-call, no-SQL-write, no-action-execution, and no-standalone-voice-route boundaries.
+
+## Phase 14I — Voice Foundation Audit + Completion Report
+
+- Added Phase 14I completion report for Phase 14A–14H Voice Foundation evidence.
+- Added Phase 14I manual smoke checklist.
+- Added `audit:phase14i` and wired it into `npm run check`.
+- Preserved voice safety boundaries: no silent writes, no standalone voice route, no browser microphone capture implementation, no audio retention, no Memory/RAG, and no proposed-action execution from voice preview.
