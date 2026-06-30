@@ -1455,3 +1455,10 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added manual simulator preview component.
 - Added audit coverage and QA checklist for Phase 14F.
 - Preserved no-audio, no-provider, no-SQL, and no-proposed-action-execution boundaries.
+
+## Phase 14G — Carnos Voice Panel Integration
+
+- Added the Carnos voice panel integration surface to `/carnos`.
+- Embedded the Phase 14F manual transcript simulator into the canonical Carnos page.
+- Added `audit:phase14g` and wired it into `npm run check`.
+- Preserved no-audio, no-provider-call, no-SQL-write, no-action-execution, and no-standalone-voice-route boundaries.

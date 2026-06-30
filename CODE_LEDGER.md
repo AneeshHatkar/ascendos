@@ -2915,3 +2915,20 @@ Boundary:
 - No SQL writes.
 - No proposed-action creation or execution.
 - No `/voice-companion`.
+
+## Phase 14G — Carnos Voice Panel Integration
+
+Added:
+- `src/components/voice/carnos-voice-panel-integration.tsx`
+- `docs/phase-reports/PHASE_14G_CARNOS_VOICE_PANEL_INTEGRATION_REPORT.md`
+- `docs/qa/PHASE_14G_CARNOS_VOICE_PANEL_INTEGRATION_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-14g.mjs`
+
+Modified:
+- `src/app/carnos/page.tsx`
+- `src/components/voice/index.ts`
+- `package.json`
+
+Boundary:
+- `/carnos` is the canonical integrated surface.
+- No standalone voice route, audio API, SQL write, provider call, or proposed-action execution was added.

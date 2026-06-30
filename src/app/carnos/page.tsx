@@ -17,6 +17,7 @@ import { getDashboardDataSummary } from "@/lib/dashboard";
 import { listAiActions, listChatMessages, listChatSessions } from "@/lib/repositories";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { CarnosPersonaBoundaryPanel } from "@/components/carnos";
+import { CarnosVoicePanelIntegration } from "@/components/voice";
 
 type CarnosRecord = Record<string, unknown>;
 
@@ -390,6 +391,8 @@ export default function CarnosPage() {
                 eyebrow="Phase 12.9D"
               >
                 <CarnosPersonaBoundaryPanel />
+
+        <CarnosVoicePanelIntegration />
 
       <CarnosMessageComposer />
               </SectionCard>

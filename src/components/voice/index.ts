@@ -5,3 +5,4 @@ export * from "./voice-session-controls-preview";
 export * from "./voice-transcript-preview";
 export * from "./voice-ui-shell-preview";
 export * from "./voice-manual-simulator-preview";
+export * from "./carnos-voice-panel-integration";

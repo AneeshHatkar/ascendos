@@ -4079,3 +4079,16 @@ Completed:
 - Added Phase 14F audit, report, QA checklist, and package check gate.
 
 Next step: Phase 14G Carnos Voice Panel Integration.
+
+## Phase 14G — Carnos Voice Panel Integration
+
+Integrated the Phase 14F manual transcript draft simulator into the canonical `/carnos` surface through `CarnosVoicePanelIntegration`.
+
+Verification boundary:
+- No standalone `/voice-companion` route.
+- No microphone APIs.
+- No provider calls from UI.
+- No SQL writes from UI.
+- No proposed-action creation from UI.
+- No proposed-action execution from UI.
+- Phase 14H remains the intentional text/voice-to-proposed-action bridge.

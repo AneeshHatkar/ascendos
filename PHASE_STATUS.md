@@ -2375,3 +2375,21 @@ Completed:
 - No-audio/no-SQL/no-provider/no-action-execution audit coverage.
 
 Next step: Phase 14G Carnos Voice Panel Integration.
+
+## Phase 14G — Carnos Voice Panel Integration
+
+Status: Complete locally pending audit/commit.
+
+Completed:
+- Carnos voice panel integration component.
+- `/carnos` canonical surface wiring.
+- Phase 14G report, smoke checklist, and audit gate.
+
+Protected:
+- No standalone `/voice-companion`.
+- No microphone APIs.
+- No provider calls from UI.
+- No SQL writes from UI.
+- No proposed-action creation or execution from UI.
+
+Next step: Phase 14H — Text/Voice-to-Proposed-Action System Bridge.
