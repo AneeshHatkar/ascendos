@@ -2363,3 +2363,15 @@ Protected:
 ## Phase 14E Next Step Marker
 
 Phase 14E is the next implementation chunk after Phase 14D. It is reserved for voice UI components only.
+
+## Phase 14F — Transcript Draft + Manual Simulator
+
+Status: Complete pending commit and push.
+
+Completed:
+- Transcript draft helper.
+- Manual simulator preview.
+- Review/sensitive-default local draft metadata.
+- No-audio/no-SQL/no-provider/no-action-execution audit coverage.
+
+Next step: Phase 14G Carnos Voice Panel Integration.

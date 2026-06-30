@@ -2895,3 +2895,23 @@ Boundary:
 - No audio retention.
 - No UI.
 - No proposed-action bridge.
+
+## Phase 14F — Transcript Draft + Manual Simulator
+
+Files added/updated:
+- `src/lib/voice/transcript-draft.ts`
+- `src/lib/voice/index.ts`
+- `src/components/voice/voice-manual-simulator-preview.tsx`
+- `src/components/voice/index.ts`
+- `scripts/audit-phase-14f.mjs`
+- `docs/phase-reports/PHASE_14F_TRANSCRIPT_DRAFT_MANUAL_SIMULATOR_REPORT.md`
+- `docs/qa/PHASE_14F_TRANSCRIPT_DRAFT_MANUAL_SIMULATOR_SMOKE_CHECKLIST.md`
+- `package.json`
+
+Boundary:
+- Manual transcript input only.
+- No microphone capture.
+- No provider calls.
+- No SQL writes.
+- No proposed-action creation or execution.
+- No `/voice-companion`.

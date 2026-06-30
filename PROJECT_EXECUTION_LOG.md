@@ -4066,3 +4066,16 @@ Protected boundaries:
 - No standalone `/voice-companion` route.
 
 Next step: Phase 14E voice UI components.
+
+## Phase 14F — Transcript Draft + Manual Simulator
+
+Implemented Phase 14F transcript draft helper and manual simulator preview.
+
+Completed:
+- Added local transcript draft construction helper.
+- Added manual simulator preview component.
+- Added review/sensitive-default transcript draft flags.
+- Preserved no-audio, no-SQL, no-provider, no-action-execution boundary.
+- Added Phase 14F audit, report, QA checklist, and package check gate.
+
+Next step: Phase 14G Carnos Voice Panel Integration.

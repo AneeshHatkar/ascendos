@@ -1448,3 +1448,10 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added `/api/voice/speak`.
 - Added audit coverage for Phase 14D.
 - Preserved no-audio-storage, no-SQL-write, no-real-provider, and no-proposed-action-execution boundaries.
+
+## Phase 14F — Transcript Draft + Manual Simulator
+
+- Added safe transcript draft helper for manual/typed voice simulations.
+- Added manual simulator preview component.
+- Added audit coverage and QA checklist for Phase 14F.
+- Preserved no-audio, no-provider, no-SQL, and no-proposed-action-execution boundaries.
