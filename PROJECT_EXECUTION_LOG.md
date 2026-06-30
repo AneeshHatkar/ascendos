@@ -1,3 +1,11 @@
+## Phase 14H Text/Voice-to-Proposed-Action Bridge
+
+- Added local transcript-draft-to-proposed-action bridge helper.
+- Added Carnos voice bridge preview inside canonical `/carnos` voice surface.
+- Locked allowed proposed-action types to create_task, create_goal, create_daily_log, and create_proof_item.
+- Preserved no-SQL-write, no-AI-call, no-provider-call, no-action-execution, and no-standalone-voice-route boundaries.
+- Added Phase 14H report, smoke checklist, audit script, and package check gate.
+
 ## Phase 14E — Voice UI Components
 - Added safe display-only voice UI components under `src/components/voice`.
 - Added disabled voice control preview, transcript preview, voice mode preview, boundary panel, and confirmation preview.

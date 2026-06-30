@@ -1,3 +1,16 @@
+## Phase 14H Text/Voice-to-Proposed-Action Bridge
+
+Status: Complete after audit/check.
+
+Completed:
+- Local bridge helper.
+- Bridge preview inside `/carnos`.
+- Allowed action type lock.
+- Boundary audit.
+- Report and smoke checklist.
+
+Next step: Phase 14I Audit + Smoke Checklist + Completion Report.
+
 ## Phase 14E — Voice UI Components
 Status: Implemented locally pending verification.
 

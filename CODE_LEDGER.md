@@ -1,3 +1,22 @@
+## Phase 14H Text/Voice-to-Proposed-Action Bridge
+
+Files added:
+- `src/lib/voice/voice-action-bridge.ts`
+- `src/components/voice/voice-action-bridge-preview.tsx`
+- `docs/phase-reports/PHASE_14H_TEXT_VOICE_TO_PROPOSED_ACTION_BRIDGE_REPORT.md`
+- `docs/qa/PHASE_14H_TEXT_VOICE_TO_PROPOSED_ACTION_BRIDGE_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-14h.mjs`
+
+Files updated:
+- `src/components/voice/carnos-voice-panel-integration.tsx`
+- `src/components/voice/index.ts`
+- `src/lib/voice/index.ts`
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
 ## Phase 14E — Voice UI Components
 - Added `src/components/voice/*` display-only component shell.
 - Added `scripts/audit-phase-14e.mjs`.

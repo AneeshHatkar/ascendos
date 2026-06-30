@@ -1,3 +1,9 @@
+## Phase 14H Text/Voice-to-Proposed-Action Bridge
+
+- Added local safe bridge from reviewed text/voice transcript drafts to preview-only proposed-action candidates.
+- Added bridge preview to the canonical Carnos voice panel.
+- Added audit protection for no SQL writes, no AI calls, no provider calls, no action execution, and no `/voice-companion`.
+
 ## Phase 14E — Voice UI Components
 - Added safe voice UI component previews.
 - Added Phase 14E audit and QA docs.

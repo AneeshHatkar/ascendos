@@ -1,3 +1,4 @@
+import { VoiceActionBridgePreview } from "./voice-action-bridge-preview";
 import { VoiceManualSimulatorPreview } from "@/components/voice/voice-manual-simulator-preview";
 
 const CARNOS_VOICE_PANEL_BOUNDARY_MARKERS = [
@@ -42,6 +43,7 @@ export function CarnosVoicePanelIntegration() {
       </div>
 
       <VoiceManualSimulatorPreview />
+      <VoiceActionBridgePreview />
 
       <div className="rounded-2xl border border-amber-300/20 bg-amber-300/5 p-4">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-200">
