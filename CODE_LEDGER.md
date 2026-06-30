@@ -2974,3 +2974,14 @@ Boundary:
 - No standalone voice route.
 - No provider calls.
 - No microphone capture implementation.
+
+## Phase 14J — Final Voice/Text Integration Hardening
+
+- `docs/phase-reports/PHASE_14J_FINAL_VOICE_TEXT_INTEGRATION_HARDENING_REPORT.md`
+  - Final Voice Foundation hardening and closeout report.
+- `docs/qa/PHASE_14J_FINAL_VOICE_TEXT_INTEGRATION_HARDENING_SMOKE_CHECKLIST.md`
+  - Manual smoke checklist for final Carnos voice/text integration boundaries.
+- `scripts/audit-phase-14j.mjs`
+  - Final Phase 14 voice/text integration hardening audit.
+- `package.json`
+  - Added `audit:phase14j` and included it in `npm run check`.
