@@ -1,3 +1,16 @@
+## Phase 14E — Voice UI Components
+Status: Implemented locally pending verification.
+
+Completed:
+- Voice UI component shell.
+- Display-only mode selector preview.
+- Disabled voice session controls preview.
+- Transcript preview.
+- Confirmation boundary preview.
+- Phase 14E audit/docs.
+
+Next step: Phase 14F — Transcript Draft + Manual Simulator.
+
 # ascendOS Phase Status
 
 ## Phase 3 — Supabase/Auth Foundation — COMPLETE

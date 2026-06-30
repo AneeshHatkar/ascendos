@@ -1,3 +1,8 @@
+## Phase 14E — Voice UI Components
+- Added safe voice UI component previews.
+- Added Phase 14E audit and QA docs.
+- Confirmed no microphone capture, audio playback, provider calls, SQL writes, or proposed-action execution is introduced.
+
 # CHANGELOG
 
 All notable changes to ascendOS will be documented here.

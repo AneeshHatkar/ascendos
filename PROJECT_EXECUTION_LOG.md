@@ -1,3 +1,10 @@
+## Phase 14E — Voice UI Components
+- Added safe display-only voice UI components under `src/components/voice`.
+- Added disabled voice control preview, transcript preview, voice mode preview, boundary panel, and confirmation preview.
+- Preserved no-mic/no-audio/no-API/no-SQL/no-action-execution boundaries.
+- Added Phase 14E audit, report, and manual smoke checklist.
+- Next step: Phase 14F — Transcript Draft + Manual Simulator.
+
 # PROJECT_EXECUTION_LOG
 
 This file records every implementation step for ascendOS + Carnos.

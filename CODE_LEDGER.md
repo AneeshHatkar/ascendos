@@ -1,3 +1,9 @@
+## Phase 14E — Voice UI Components
+- Added `src/components/voice/*` display-only component shell.
+- Added `scripts/audit-phase-14e.mjs`.
+- Updated `package.json` check gate with `audit:phase14e`.
+- Patched earlier Phase 14 audits for legal Phase 14E UI compatibility.
+
 # CODE_LEDGER
 
 This file records meaningful file changes for ascendOS + Carnos.
