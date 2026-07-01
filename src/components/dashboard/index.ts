@@ -57,3 +57,4 @@ export * from "./carnos-memory-visibility-panel";
 export * from "./knowledge-vault-foundation-panel";
 export * from "./retrieval-contract-panel";
 export * from "./embedding-boundary-panel";
+export * from "./forget-delete-derived-records-panel";

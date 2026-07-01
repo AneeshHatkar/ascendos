@@ -1594,3 +1594,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added disabled-by-design embedding boundary panel to `/knowledge`.
 - Added Phase 15N audit, contract, report, and QA checklist.
 - Preserved boundaries: no embeddings generated, no provider calls, no vector search, no pgvector, no SQL reads/writes, no Supabase calls, no hidden Carnos prompt injection, and no standalone `/memory` route.
+
+## Phase 15O — Forget/Delete Derived Records
+
+- Added Phase 15O forget/delete derived records helper.
+- Added preview-only `/privacy` panel for forget requests, derived records, blocked delete decisions, and audit event previews.
+- Added `memory_forgotten`, `derived_records_deleted`, and `embedding_removed` audit previews.
+- Added Phase 15O audit, contract, report, and QA checklist.
+- Protected boundaries: no destructive delete, no SQL reads or writes, no Supabase calls, no embeddings, no vector search, no provider calls, no hidden Carnos prompt injection, and no standalone `/memory` route.

@@ -19,3 +19,4 @@ export * from "./carnos-memory-visibility";
 export * from "./knowledge-vault-foundation";
 export * from "./retrieval-contract";
 export * from "./embedding-boundary";
+export * from "./forget-delete-derived-records";

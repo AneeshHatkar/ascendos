@@ -4,6 +4,7 @@ import {
 } from "@/components/dashboard";
 import { getSettingsPrivacyDashboardDataSummary } from "@/lib/dashboard";
 import { listAppSettings, listPrivacySettings } from "@/lib/repositories";
+import { ForgetDeleteDerivedRecordsPanel } from "@/components/dashboard/forget-delete-derived-records-panel";
 
 export default function PrivacyPage() {
   return (
@@ -46,6 +47,7 @@ export default function PrivacyPage() {
               privacySettings={privacySettings.data ?? []}
               readErrors={readErrors}
             />
+            <ForgetDeleteDerivedRecordsPanel />
           </div>
         );
       }}

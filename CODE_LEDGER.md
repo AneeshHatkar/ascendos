@@ -3303,3 +3303,27 @@ Boundary:
 - no SQL reads or writes
 - no Supabase calls
 - no hidden Carnos prompt injection
+
+## Phase 15O — Forget/Delete Derived Records
+
+Added:
+- `src/lib/carnos-continuity/forget-delete-derived-records.ts`
+- `src/components/dashboard/forget-delete-derived-records-panel.tsx`
+- `docs/contracts/PHASE_15O_FORGET_DELETE_DERIVED_RECORDS.md`
+- `docs/phase-reports/PHASE_15O_FORGET_DELETE_DERIVED_RECORDS_REPORT.md`
+- `docs/qa/PHASE_15O_FORGET_DELETE_DERIVED_RECORDS_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-15o.mjs`
+
+Modified:
+- `src/lib/carnos-continuity/index.ts`
+- `src/components/dashboard/index.ts`
+- `src/app/privacy/page.tsx`
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- Preview-only forget/delete-derived-records contract.
+- No destructive delete, SQL runtime, Supabase calls, embeddings, vector search, provider calls, hidden prompt injection, or standalone `/memory` route.

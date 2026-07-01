@@ -4459,3 +4459,30 @@ Protected boundaries:
 - no standalone `/memory` route
 
 Next: Phase 15O — Forget/Delete Derived Records.
+
+## Phase 15O — Forget/Delete Derived Records
+
+Implemented Phase 15O as a preview-only forget/delete-derived-records layer.
+
+Added:
+- Forget/delete request contract.
+- Derived records inventory.
+- Delete derived records preview.
+- `memory_forgotten audit event preview`.
+- `derived_records_deleted audit event preview`.
+- `embedding_removed audit event preview`.
+- `/privacy` visibility panel.
+- Phase 15O audit gate.
+- Phase 15O contract, report, and smoke checklist.
+
+Boundaries:
+- no destructive delete.
+- no SQL reads or writes.
+- no Supabase calls.
+- no embeddings.
+- no vector search.
+- no provider calls.
+- no hidden Carnos prompt injection.
+- no standalone /memory route.
+
+Next: Phase 15P — Memory Audit Events + Memory Usage Transparency.
