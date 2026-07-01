@@ -2574,3 +2574,35 @@ Protected:
 - No standalone `/memory` route
 
 Next step: Phase 15D — Memory Candidate Engine.
+
+## Phase 15D — Memory Candidate Engine
+
+Status: Complete locally pending commit.
+
+Completed:
+- Candidate preview engine
+- Memory type derivation
+- Domain scope derivation
+- Sensitivity derivation
+- Provenance builder
+- Review metadata builder
+- Private mode blocking
+- Do-not-remember rule blocking
+- Empty content blocking
+- Duplicate hints
+- Conflict hints
+- Candidate warnings
+- Barrel export
+
+Protected:
+- No approved memory creation
+- No persistence
+- No retrieval
+- No embeddings
+- No provider calls
+- No Supabase calls
+- No automatic transcript-to-memory
+- No hidden Carnos context injection
+- No standalone `/memory` route
+
+Next step: Phase 15E — Memory Inbox UI.

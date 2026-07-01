@@ -4169,3 +4169,35 @@ Boundary preserved:
 - no standalone /memory route
 
 Next step: Phase 15D — Memory Candidate Engine.
+
+## Phase 15D — Memory Candidate Engine
+
+Status: Complete locally pending commit.
+
+Implemented the local preview-only Memory Candidate Engine:
+- raw text normalization
+- memory type classification
+- domain scope classification
+- sensitivity classification
+- provenance creation
+- confidence and priority metadata
+- private mode blocking
+- do-not-remember rule blocking
+- empty content blocking
+- duplicate hint detection
+- conflict hint detection
+- warning generation
+- candidate contract creation
+
+Boundary preserved:
+- no approval
+- no persistence
+- no retrieval
+- no embeddings
+- no provider calls
+- no Supabase calls
+- no automatic transcript-to-memory
+- no hidden Carnos prompt injection
+- no standalone /memory route
+
+Next step: Phase 15E — Memory Inbox UI.

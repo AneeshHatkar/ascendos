@@ -1,0 +1,24 @@
+# Phase 15D — Memory Candidate Engine Smoke Checklist
+
+- [ ] Candidate engine file exists.
+- [ ] Candidate engine is exported from `src/lib/carnos-continuity/index.ts`.
+- [ ] Engine creates candidate previews only.
+- [ ] Engine can classify memory type.
+- [ ] Engine can classify domain scope.
+- [ ] Engine can classify sensitivity.
+- [ ] Engine can build provenance.
+- [ ] Engine can assign confidence and priority.
+- [ ] Engine can block private-mode candidates.
+- [ ] Engine can block do-not-remember candidates.
+- [ ] Engine can detect empty content.
+- [ ] Engine can detect duplicate hints.
+- [ ] Engine can detect conflict hints.
+- [ ] Engine does not approve memory.
+- [ ] Engine does not persist memory.
+- [ ] Engine does not retrieve memory.
+- [ ] Engine does not embed memory.
+- [ ] Engine does not call OpenAI/providers.
+- [ ] Engine does not call Supabase.
+- [ ] Engine does not create a standalone `/memory` route.
+- [ ] `npm run audit:phase15d` passes.
+- [ ] `npm run check` passes.

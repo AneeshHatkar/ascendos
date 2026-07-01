@@ -8,3 +8,4 @@ export * from "./memory-enums";
 export * from "./memory-contracts";
 export * from "./memory-validators";
 export * from "./memory-conflict-rules";
+export * from "./memory-candidate-engine";

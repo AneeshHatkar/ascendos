@@ -1505,3 +1505,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added Carnos entity state, project memory state, system state memory, knowledge vault, context pack, and audit event contracts.
 - Added Phase 15C docs, QA checklist, and audit gate.
 - Preserved no-retrieval, no-embedding, no-provider, no-runtime-write boundaries.
+
+## Phase 15D — Memory Candidate Engine
+
+- Added local preview-only Memory Candidate Engine.
+- Added memory type, domain, sensitivity, provenance, priority, confidence, duplicate, conflict, and blocking helpers.
+- Added private mode and do-not-remember rule blocking previews.
+- Added Phase 15D docs, QA checklist, and audit gate.
+- Preserved no-approval, no-persistence, no-retrieval, no-embedding, no-provider, and no-runtime-injection boundaries.

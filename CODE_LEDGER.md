@@ -3043,3 +3043,30 @@ Boundary:
 - no embeddings
 - no RAG
 - no Carnos runtime injection
+
+## Phase 15D — Memory Candidate Engine
+
+Added:
+- `src/lib/carnos-continuity/memory-candidate-engine.ts`
+- `docs/contracts/PHASE_15D_MEMORY_CANDIDATE_ENGINE.md`
+- `docs/phase-reports/PHASE_15D_MEMORY_CANDIDATE_ENGINE_REPORT.md`
+- `docs/qa/PHASE_15D_MEMORY_CANDIDATE_ENGINE_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-15d.mjs`
+
+Updated:
+- `src/lib/carnos-continuity/index.ts`
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- candidate preview only
+- no SQL migration
+- no Supabase reads or writes
+- no memory approval
+- no retrieval
+- no embeddings
+- no provider calls
+- no Carnos runtime context injection
