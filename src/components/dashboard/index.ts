@@ -54,3 +54,4 @@ export * from "./carnos-entity-state-panel";
 export * from "./project-system-state-memory-panel";
 export * from "./current-context-pack-builder-panel";
 export * from "./carnos-memory-visibility-panel";
+export * from "./knowledge-vault-foundation-panel";

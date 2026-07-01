@@ -3211,3 +3211,34 @@ Added:
 Boundary:
 - Preview-only memory visibility.
 - No approval, persistence, SQL reads/writes, retrieval, embeddings, provider calls, hidden Carnos prompt injection, or standalone `/memory` route.
+
+## Phase 15L — Knowledge Vault Foundation
+
+Files added:
+- `src/lib/carnos-continuity/knowledge-vault-foundation.ts`
+- `src/components/dashboard/knowledge-vault-foundation-panel.tsx`
+- `docs/contracts/PHASE_15L_KNOWLEDGE_VAULT_FOUNDATION.md`
+- `docs/phase-reports/PHASE_15L_KNOWLEDGE_VAULT_FOUNDATION_REPORT.md`
+- `docs/qa/PHASE_15L_KNOWLEDGE_VAULT_FOUNDATION_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-15l.mjs`
+
+Files modified:
+- `src/app/knowledge/page.tsx`
+- `src/lib/carnos-continuity/index.ts`
+- `src/components/dashboard/index.ts`
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- No approval.
+- No persistence.
+- No Supabase calls.
+- No SQL reads or writes.
+- No retrieval.
+- No embeddings.
+- No provider calls.
+- No hidden Carnos prompt injection.
+- No standalone `/memory` route.

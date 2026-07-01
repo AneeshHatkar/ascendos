@@ -1,6 +1,7 @@
 import {
   AuthenticatedDashboardShell,
   KnowledgeVaultAlignmentV1,
+  KnowledgeVaultFoundationPanel,
 } from "@/components/dashboard";
 import { getLearningProjectDashboardDataSummary } from "@/lib/dashboard";
 import {
@@ -31,14 +32,17 @@ export default function KnowledgePage() {
           ]);
 
           return (
-            <KnowledgeVaultAlignmentV1
-              data={data}
-              skillPaths={skillPaths.data ?? []}
-              skills={skills.data ?? []}
-              projects={projects.data ?? []}
-              projectLinks={projectLinks.data ?? []}
-              readErrors={collectErrors([skillPaths, skills, projects, projectLinks])}
-            />
+            <div className="flex flex-col gap-6">
+              <KnowledgeVaultFoundationPanel />
+              <KnowledgeVaultAlignmentV1
+                data={data}
+                skillPaths={skillPaths.data ?? []}
+                skills={skills.data ?? []}
+                projects={projects.data ?? []}
+                projectLinks={projectLinks.data ?? []}
+                readErrors={collectErrors([skillPaths, skills, projects, projectLinks])}
+              />
+            </div>
           );
         }}
       </AuthenticatedDashboardShell>

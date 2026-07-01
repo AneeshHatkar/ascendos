@@ -2806,3 +2806,27 @@ Protected boundaries:
 - No standalone `/memory` route.
 
 Next step: Phase 15K validation, then Phase 15L — Knowledge Vault Foundation.
+
+## Phase 15L — Knowledge Vault Foundation
+
+Status: Implemented pending validation.
+
+Completed:
+- Knowledge Vault Foundation helper.
+- Knowledge Vault Foundation panel.
+- `/knowledge` route wiring.
+- Contract, report, smoke checklist, and audit gate.
+- Package check gate update.
+
+Boundary:
+- no approval
+- no persistence
+- no Supabase calls
+- no SQL reads or writes
+- no retrieval
+- no embeddings
+- no provider calls
+- no hidden Carnos prompt injection
+- no standalone `/memory` route
+
+Next step: Phase 15L validation, then Phase 15M — Retrieval Contract + Provenance + Conflict Handling.

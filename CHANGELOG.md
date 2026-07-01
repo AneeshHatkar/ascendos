@@ -1570,3 +1570,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added visibility for visible memory refs, excluded memory refs, hidden memory blocking, current context pack visibility, approved-memory read layer visibility, Carnos entity state visibility, project/system state memory visibility, source-of-truth hierarchy visibility, stale warnings, conflict warnings, privacy mode, do-not-remember rules, and memory usage transparency.
 - Added Phase 15K audit, contract, report, and QA checklist.
 - Preserved no approval, no persistence, no Supabase, no SQL reads/writes, no retrieval, no embeddings, no provider calls, no hidden Carnos prompt injection, and no standalone `/memory` route.
+
+## Phase 15L — Knowledge Vault Foundation
+
+- Added Phase 15L Knowledge Vault Foundation helper.
+- Added `/knowledge` Knowledge Vault Foundation panel.
+- Added knowledge vault separation preview for knowledge_items, knowledge_tags, and knowledge_links.
+- Locked not-personal-memory and embedded:false boundaries.
+- Added Phase 15L audit, contract, report, and QA checklist.

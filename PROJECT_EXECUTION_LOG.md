@@ -4386,3 +4386,26 @@ Protected boundaries:
 - No standalone `/memory` route.
 
 Next: Phase 15L — Knowledge Vault Foundation.
+
+## Phase 15L — Knowledge Vault Foundation
+
+Implemented the Phase 15L Knowledge Vault Foundation.
+
+Coded:
+- `src/lib/carnos-continuity/knowledge-vault-foundation.ts`
+- `src/components/dashboard/knowledge-vault-foundation-panel.tsx`
+- `/knowledge` route wiring for `KnowledgeVaultFoundationPanel`
+- `docs/contracts/PHASE_15L_KNOWLEDGE_VAULT_FOUNDATION.md`
+- `docs/phase-reports/PHASE_15L_KNOWLEDGE_VAULT_FOUNDATION_REPORT.md`
+- `docs/qa/PHASE_15L_KNOWLEDGE_VAULT_FOUNDATION_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-15l.mjs`
+
+What this does:
+- Adds preview-only Knowledge Vault Foundation metadata.
+- Shows knowledge_items, knowledge_tags, and knowledge_links boundaries.
+- Keeps knowledge vault records non-personal.
+- Keeps `embedded: false`.
+- Requires future review before conversion to personal memory.
+- Keeps retrieval, embeddings, provider calls, upload parsing, SQL runtime, and hidden Carnos injection deferred.
+
+Next: Phase 15M — Retrieval Contract + Provenance + Conflict Handling.
