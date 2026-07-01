@@ -4539,3 +4539,21 @@ Next: Phase 15Q — Cross-Domain Integration Preview.
 - Confirmed private mode and do-not-remember rules can block cross-domain memory usage.
 - Preserved no SQL reads/writes, no Supabase calls, no persistence, no embeddings, no vector search, no provider calls, no hidden Carnos prompt injection, no action execution, and no standalone `/memory` route.
 - Next step: Phase 15Q validation, then Phase 15R — Final Audit, Smoke Checklist, Completion Report.
+
+## Phase 15R — Final Audit, Smoke Checklist, Completion Report
+
+Completed Phase 15R closeout implementation.
+
+Added:
+- Phase 15R final audit gate.
+- Phase 15R completion report.
+- Phase 15R final smoke checklist.
+- `npm run audit:phase15r` package script.
+- `npm run check` gate after `audit:phase15q`.
+
+Confirmed scope:
+- Phase 15 Carnos Persistent Memory + Continuity Foundation is structurally complete from 15A through 15R.
+- Canonical Phase 15 surfaces remain `/carnos`, `/privacy`, and `/knowledge`.
+- No standalone `/memory` route is introduced.
+- Memory, retrieval, embeddings, usage transparency, forget/delete, and cross-domain connectivity remain preview-only and boundary-protected.
+- Phase 16 is the next source-of-truth implementation area.

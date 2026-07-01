@@ -2974,3 +2974,25 @@ Protected boundaries:
 - no standalone `/memory` route
 
 Next step: Phase 15Q validation, then Phase 15R — Final Audit, Smoke Checklist, Completion Report.
+
+## Phase 15R — Final Audit, Smoke Checklist, Completion Report
+
+Status: Complete pending validation, commit, and push.
+
+Completed:
+- Final Phase 15R audit gate.
+- Final Phase 15R completion report.
+- Final Phase 15R smoke checklist.
+- `npm run audit:phase15r` script.
+- `npm run check` wiring after `audit:phase15q`.
+
+Phase 15 final status:
+- Carnos Persistent Memory + Continuity Foundation complete.
+- Phase 15A through Phase 15R are structurally present and audit-gated.
+- Canonical surfaces remain `/carnos`, `/privacy`, and `/knowledge`.
+- No standalone `/memory` route exists.
+- No RAG/vector-search runtime path exists.
+- No embeddings, pgvector, `memory_embeddings` table, provider calls, hidden Carnos prompt injection, autonomous memory writes, or destructive forget/delete behavior are introduced.
+- Memory behavior remains preview-only until a future source-of-truth phase explicitly unlocks real write/retrieval behavior with confirmation and audit controls.
+
+Next step: Phase 16.

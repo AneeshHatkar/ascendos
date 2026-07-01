@@ -3371,3 +3371,23 @@ Next: Phase 15Q — Cross-Domain Integration Preview.
 - Updated `src/app/carnos/page.tsx`.
 - Added `scripts/audit-phase-15q.mjs`.
 - Added Phase 15Q contract, report, and smoke checklist.
+
+## Phase 15R — Final Audit, Smoke Checklist, Completion Report
+
+Files added:
+- `scripts/audit-phase-15r.mjs`
+- `docs/phase-reports/PHASE_15R_CARNOS_PERSISTENT_MEMORY_CONTINUITY_COMPLETION_REPORT.md`
+- `docs/qa/PHASE_15R_CARNOS_PERSISTENT_MEMORY_CONTINUITY_FINAL_SMOKE_CHECKLIST.md`
+
+Files updated:
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- No runtime memory mutation.
+- No SQL reads/writes in Phase 15 preview runtime files.
+- No Supabase calls in Phase 15 preview runtime files.
+- No embeddings, vector search, provider calls, hidden prompt injection, or standalone `/memory` route.

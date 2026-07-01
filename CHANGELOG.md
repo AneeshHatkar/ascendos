@@ -1618,3 +1618,10 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added preview-only cross-domain memory integration map for ascendOS + Carnos.
 - Added Carnos-surface panel for whole-project memory visibility, usage transparency, privacy blocking, and knowledge-vault separation.
 - Added audit gate `npm run audit:phase15q`.
+
+## Phase 15R — Final Audit, Smoke Checklist, Completion Report
+
+- Added Phase 15R final audit gate for the full Carnos Persistent Memory + Continuity Foundation.
+- Added Phase 15R completion report and final smoke checklist.
+- Wired `audit:phase15r` into `npm run check`.
+- Locked Phase 15 as complete pending validation, commit, and push.
