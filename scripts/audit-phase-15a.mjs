@@ -391,6 +391,7 @@ const allowedPhase15RuntimeMarkerFiles = new Set([
   "src/lib/carnos-continuity/memory-conflict-rules.ts",
   "src/lib/carnos-continuity/memory-candidate-engine.ts",
   "src/lib/carnos-continuity/memory-privacy-rules.ts",
+  "src/lib/carnos-continuity/approved-memory-read-layer.ts",
 ]);
 
 const forbiddenRuntimeMarkers = [

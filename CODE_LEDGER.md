@@ -3127,3 +3127,12 @@ Protected boundary:
 - no provider calls
 - no Supabase calls
 - no standalone `/memory` route
+
+## Phase 15G — Approved Memory Read Layer + Ranking/Staleness Rules
+
+- Added `src/lib/carnos-continuity/approved-memory-read-layer.ts`.
+- Added `src/components/dashboard/approved-memory-read-layer-panel.tsx`.
+- Added Phase 15G contract, report, QA checklist, and audit gate.
+- Exported the helper and panel through existing barrels.
+- Wired `audit:phase15g` into `package.json` and `npm run check`.
+- Updated Phase 15A audit allowlist for the planned Phase 15G continuity helper.

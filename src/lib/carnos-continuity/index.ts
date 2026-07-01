@@ -10,3 +10,4 @@ export * from "./memory-validators";
 export * from "./memory-conflict-rules";
 export * from "./memory-candidate-engine";
 export * from "./memory-privacy-rules";
+export * from "./approved-memory-read-layer";

@@ -1530,3 +1530,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added read-only MemoryPrivacyRulesPanel.
 - Added Phase 15F audit gate to `npm run check`.
 - Preserved no approval, no persistence, no retrieval, no embeddings, no provider calls, no Supabase, and no standalone `/memory` route boundaries.
+
+## Phase 15G — Approved Memory Read Layer + Ranking/Staleness Rules
+
+- Added approved memory read-layer preview helper.
+- Added deterministic ranking/staleness rules for approved memory contracts.
+- Added read-only dashboard preview panel.
+- Added Phase 15G audit, contract, report, and QA checklist.
+- Preserved no approval, no persistence, no Supabase, no embeddings, no provider calls, no hidden Carnos prompt injection, no context pack builder, and no standalone `/memory` route boundaries.

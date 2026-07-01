@@ -2661,3 +2661,27 @@ Boundaries:
 - no automatic transcript-to-memory
 
 Next step: Phase 15G — Approved Memory Read Layer + Ranking/Staleness Rules.
+
+## Phase 15G — Approved Memory Read Layer + Ranking/Staleness Rules
+
+Status: In progress.
+
+Implemented:
+- Approved memory read layer preview helper.
+- Ranking/staleness scoring rules.
+- Included/excluded memory reference transparency.
+- Read-only approved memory preview panel.
+- Phase 15G audit/docs/QA.
+
+Protected boundaries:
+- no approval
+- no persistence
+- no Supabase
+- no SQL reads or writes
+- no embeddings
+- no provider calls
+- no hidden Carnos prompt injection
+- no context pack builder
+- no standalone `/memory` route
+
+Next step: Phase 15G validation, then Phase 15H — Carnos Entity State.

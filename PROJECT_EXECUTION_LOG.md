@@ -4257,3 +4257,11 @@ Boundary:
 - no automatic transcript-to-memory
 
 Next: Phase 15G — Approved Memory Read Layer + Ranking/Staleness Rules.
+
+## Phase 15G — Approved Memory Read Layer + Ranking/Staleness Rules
+
+Added a local deterministic approved memory read layer preview for already-approved memory contracts. The helper filters approved/edited memory, excludes blocked/private/do-not-remember states, ranks eligible memory refs, and surfaces staleness/conflict warnings.
+
+Boundaries: no approval, no persistence, no Supabase, no SQL reads or writes, no embeddings, no provider calls, no hidden Carnos prompt injection, no context pack builder, no standalone `/memory` route.
+
+Next: Phase 15H — Carnos Entity State.
