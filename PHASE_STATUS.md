@@ -2830,3 +2830,28 @@ Boundary:
 - no standalone `/memory` route
 
 Next step: Phase 15L validation, then Phase 15M — Retrieval Contract + Provenance + Conflict Handling.
+
+## Phase 15M — Retrieval Contract + Provenance + Conflict Handling
+
+Status: Implemented.
+
+Completed:
+- Retrieval contract preview helper.
+- Provenance requirement summary.
+- Conflict handling preview.
+- Source authority visibility.
+- Blocked retrieval reasons.
+- `/knowledge` Retrieval Contract panel.
+- Phase 15M audit gate.
+- Phase 15M docs and smoke checklist.
+
+Boundary:
+- no SQL reads or writes
+- no Supabase calls
+- no embeddings
+- no vector search
+- no provider calls
+- no hidden Carnos prompt injection
+- no standalone `/memory` route
+
+Next step: Phase 15M validation, then Phase 15N — Embedding Boundary / Noop Provider.

@@ -3242,3 +3242,33 @@ Boundary:
 - No provider calls.
 - No hidden Carnos prompt injection.
 - No standalone `/memory` route.
+
+## Phase 15M — Retrieval Contract + Provenance + Conflict Handling
+
+Files added:
+- `src/lib/carnos-continuity/retrieval-contract.ts`
+- `src/components/dashboard/retrieval-contract-panel.tsx`
+- `docs/contracts/PHASE_15M_RETRIEVAL_CONTRACT_PROVENANCE_CONFLICT_HANDLING.md`
+- `docs/phase-reports/PHASE_15M_RETRIEVAL_CONTRACT_PROVENANCE_CONFLICT_HANDLING_REPORT.md`
+- `docs/qa/PHASE_15M_RETRIEVAL_CONTRACT_PROVENANCE_CONFLICT_HANDLING_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-15m.mjs`
+
+Files modified:
+- `src/lib/carnos-continuity/index.ts`
+- `src/components/dashboard/index.ts`
+- `src/app/knowledge/page.tsx`
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary maintained:
+- preview-only retrieval contract
+- no runtime retrieval
+- no SQL reads or writes
+- no Supabase calls
+- no embeddings
+- no vector search
+- no provider calls
+- no hidden Carnos prompt injection

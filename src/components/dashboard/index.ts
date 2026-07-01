@@ -55,3 +55,4 @@ export * from "./project-system-state-memory-panel";
 export * from "./current-context-pack-builder-panel";
 export * from "./carnos-memory-visibility-panel";
 export * from "./knowledge-vault-foundation-panel";
+export * from "./retrieval-contract-panel";

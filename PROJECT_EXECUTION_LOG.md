@@ -4409,3 +4409,30 @@ What this does:
 - Keeps retrieval, embeddings, provider calls, upload parsing, SQL runtime, and hidden Carnos injection deferred.
 
 Next: Phase 15M — Retrieval Contract + Provenance + Conflict Handling.
+
+## Phase 15M — Retrieval Contract + Provenance + Conflict Handling
+
+Implemented Phase 15M as a preview-only retrieval contract layer.
+
+Added:
+- `src/lib/carnos-continuity/retrieval-contract.ts`
+- `src/components/dashboard/retrieval-contract-panel.tsx`
+- `docs/contracts/PHASE_15M_RETRIEVAL_CONTRACT_PROVENANCE_CONFLICT_HANDLING.md`
+- `docs/phase-reports/PHASE_15M_RETRIEVAL_CONTRACT_PROVENANCE_CONFLICT_HANDLING_REPORT.md`
+- `docs/qa/PHASE_15M_RETRIEVAL_CONTRACT_PROVENANCE_CONFLICT_HANDLING_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-15m.mjs`
+
+Wired:
+- `/knowledge` now shows RetrievalContractPanel after KnowledgeVaultFoundationPanel.
+- `package.json` now includes `audit:phase15m` in `npm run check`.
+
+Boundary:
+- no SQL reads or writes
+- no Supabase calls
+- no embeddings
+- no vector search
+- no provider calls
+- no hidden Carnos prompt injection
+- no standalone `/memory` route
+
+Next: Phase 15N — Embedding Boundary / Noop Provider.

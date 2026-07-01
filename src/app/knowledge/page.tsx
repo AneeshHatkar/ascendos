@@ -2,6 +2,7 @@ import {
   AuthenticatedDashboardShell,
   KnowledgeVaultAlignmentV1,
   KnowledgeVaultFoundationPanel,
+  RetrievalContractPanel,
 } from "@/components/dashboard";
 import { getLearningProjectDashboardDataSummary } from "@/lib/dashboard";
 import {
@@ -34,6 +35,7 @@ export default function KnowledgePage() {
           return (
             <div className="flex flex-col gap-6">
               <KnowledgeVaultFoundationPanel />
+        <RetrievalContractPanel />
               <KnowledgeVaultAlignmentV1
                 data={data}
                 skillPaths={skillPaths.data ?? []}

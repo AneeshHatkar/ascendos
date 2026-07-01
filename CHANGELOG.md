@@ -1578,3 +1578,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added knowledge vault separation preview for knowledge_items, knowledge_tags, and knowledge_links.
 - Locked not-personal-memory and embedded:false boundaries.
 - Added Phase 15L audit, contract, report, and QA checklist.
+
+## Phase 15M — Retrieval Contract + Provenance + Conflict Handling
+
+- Added Phase 15M retrieval contract helper.
+- Added provenance requirement summaries and conflict handling preview.
+- Added Retrieval Contract panel to `/knowledge`.
+- Added Phase 15M audit, contract, report, and QA checklist.
+- Preserved preview-only boundary: no SQL reads/writes, no Supabase calls, no embeddings, no vector search, no provider calls, and no hidden Carnos prompt injection.
