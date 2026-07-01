@@ -2685,3 +2685,35 @@ Protected boundaries:
 - no standalone `/memory` route
 
 Next step: Phase 15G validation, then Phase 15H — Carnos Entity State.
+
+## Phase 15H — Carnos Entity State
+
+Status: Implemented, pending validation/commit.
+
+Completed:
+- Preview-only Carnos Entity State helper.
+- Carnos persistent AI persona/entity inside ascendOS.
+- Carnos name, role, mission, tone, current mode, current phase.
+- Latest milestone and next objective.
+- Forbidden behaviors.
+- Response preferences.
+- Memory policy.
+- Voice policy.
+- Action policy.
+- Source-of-truth policy.
+- Carnos entity-state dashboard panel.
+- Audit gate.
+
+Protected boundaries:
+- no approval
+- no persistence
+- no Supabase calls
+- no SQL reads or writes
+- no retrieval
+- no embeddings
+- no provider calls
+- no hidden Carnos prompt injection
+- no context pack builder
+- no standalone `/memory` route
+
+Next step: Phase 15H validation, then Phase 15I — Project/System State Memory + Source-of-Truth Hierarchy.

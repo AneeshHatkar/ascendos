@@ -4265,3 +4265,34 @@ Added a local deterministic approved memory read layer preview for already-appro
 Boundaries: no approval, no persistence, no Supabase, no SQL reads or writes, no embeddings, no provider calls, no hidden Carnos prompt injection, no context pack builder, no standalone `/memory` route.
 
 Next: Phase 15H — Carnos Entity State.
+
+## Phase 15H — Carnos Entity State
+
+Implemented preview-only Carnos Entity State.
+
+Scope completed:
+- Carnos persistent AI persona/entity inside ascendOS.
+- Carnos name, role, mission, tone, current mode, current phase.
+- Latest milestone and next objective.
+- Forbidden behaviors.
+- Response preferences.
+- Memory policy.
+- Voice policy.
+- Action policy.
+- Source-of-truth policy.
+- Dashboard preview panel.
+- Audit gate.
+
+Boundaries:
+- no approval
+- no persistence
+- no Supabase calls
+- no SQL reads or writes
+- no retrieval
+- no embeddings
+- no provider calls
+- no hidden Carnos prompt injection
+- no context pack builder
+- no standalone /memory route
+
+Next: Phase 15I — Project/System State Memory + Source-of-Truth Hierarchy.

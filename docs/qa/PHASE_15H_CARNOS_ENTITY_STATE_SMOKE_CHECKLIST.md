@@ -1,0 +1,31 @@
+# Phase 15H — Carnos Entity State Smoke Checklist
+
+- Phase 15H
+- Carnos Entity State
+- Carnos persistent AI persona/entity inside ascendOS
+- Carnos name
+- Carnos role
+- Carnos mission
+- Carnos tone
+- Carnos current mode
+- Carnos current phase
+- latest milestone
+- next objective
+- forbidden behaviors
+- response preferences
+- memory policy
+- voice policy
+- action policy
+- source-of-truth policy
+- preview only
+- no approval
+- no persistence
+- no Supabase calls
+- no SQL reads or writes
+- no retrieval
+- no embeddings
+- no provider calls
+- no hidden Carnos prompt injection
+- no context pack builder
+- standalone `/memory` route
+- Phase 15I

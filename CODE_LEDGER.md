@@ -3136,3 +3136,23 @@ Protected boundary:
 - Exported the helper and panel through existing barrels.
 - Wired `audit:phase15g` into `package.json` and `npm run check`.
 - Updated Phase 15A audit allowlist for the planned Phase 15G continuity helper.
+
+## Phase 15H — Carnos Entity State
+
+Added:
+- `src/lib/carnos-continuity/carnos-entity-state.ts`
+- `src/components/dashboard/carnos-entity-state-panel.tsx`
+- `docs/contracts/PHASE_15H_CARNOS_ENTITY_STATE.md`
+- `docs/phase-reports/PHASE_15H_CARNOS_ENTITY_STATE_REPORT.md`
+- `docs/qa/PHASE_15H_CARNOS_ENTITY_STATE_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-15h.mjs`
+
+Updated:
+- `src/lib/carnos-continuity/index.ts`
+- `src/components/dashboard/index.ts`
+- `package.json`
+- `scripts/audit-phase-15a.mjs`
+
+Boundary:
+- Preview-only Carnos Entity State.
+- No approval, persistence, Supabase, SQL reads/writes, retrieval, embeddings, provider calls, hidden Carnos prompt injection, context pack builder, or standalone `/memory` route.

@@ -1538,3 +1538,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added read-only dashboard preview panel.
 - Added Phase 15G audit, contract, report, and QA checklist.
 - Preserved no approval, no persistence, no Supabase, no embeddings, no provider calls, no hidden Carnos prompt injection, no context pack builder, and no standalone `/memory` route boundaries.
+
+## Phase 15H — Carnos Entity State
+
+- Added preview-only Carnos Entity State helper.
+- Added Carnos role, mission, tone, current mode, phase, latest milestone, next objective, policies, and forbidden behaviors.
+- Added dashboard panel for Carnos entity-state visibility.
+- Added Phase 15H audit, contract, report, and QA checklist.
+- Preserved boundaries: no approval, no persistence, no Supabase, no SQL reads/writes, no retrieval, no embeddings, no provider calls, no hidden Carnos prompt injection, no context pack builder, no standalone `/memory` route.
