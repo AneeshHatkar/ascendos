@@ -1,3 +1,4 @@
+import { CrossDomainMemoryIntegrationPanel } from "@/components/dashboard/cross-domain-memory-integration-panel";
 import { PendingUpdatesDrawer } from "@/components/actions";
 import { CarnosMessageComposer } from "@/components/carnos/carnos-message-composer";
 // Phase 6.16 audit compatibility marker: ProposedActionReviewCard remains present through PendingUpdatesDrawer.
@@ -387,6 +388,7 @@ export default function CarnosPage() {
               />
 
               <CarnosMemoryVisibilityPanel />
+              <CrossDomainMemoryIntegrationPanel />
 
               <SectionCard
                 title="Carnos message persistence"

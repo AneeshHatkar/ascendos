@@ -1613,3 +1613,8 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Wired `MemoryAuditUsageTransparencyPanel` into `/privacy`.
 - Added `audit:phase15p` and included it in `npm run check`.
 - Preserved no SQL reads or writes, no Supabase calls, no persistence, no embeddings, no vector search, no provider calls, no hidden Carnos prompt injection, and no standalone `/memory` route.
+
+## Phase 15Q — Cross-Domain Integration Preview
+- Added preview-only cross-domain memory integration map for ascendOS + Carnos.
+- Added Carnos-surface panel for whole-project memory visibility, usage transparency, privacy blocking, and knowledge-vault separation.
+- Added audit gate `npm run audit:phase15q`.

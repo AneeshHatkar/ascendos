@@ -22,3 +22,4 @@ export * from "./embedding-boundary";
 export * from "./forget-delete-derived-records";
 
 export * from "./memory-audit-usage-transparency";
+export * from "./cross-domain-integration-preview";

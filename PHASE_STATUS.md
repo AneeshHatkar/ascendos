@@ -2946,3 +2946,31 @@ Protected boundaries:
 - no standalone /memory route.
 
 Next step: Phase 15P validation, then Phase 15Q — Cross-Domain Integration Preview.
+
+## Phase 15Q — Cross-Domain Integration Preview
+
+Status: Implemented, pending validation.
+
+Completed:
+- Cross-domain memory visibility helper.
+- Whole-project connectivity preview.
+- Visible memory usage ledger preview.
+- Hidden memory usage blocked boundary.
+- Source-of-truth hierarchy visible boundary.
+- Private mode and do-not-remember blocking preview.
+- `/carnos` integration panel.
+- Phase 15Q contract/report/smoke checklist.
+- Phase 15Q audit gate.
+
+Protected boundaries:
+- no SQL reads or writes
+- no Supabase calls
+- no persistence
+- no embeddings
+- no vector search
+- no provider calls
+- no hidden Carnos prompt injection
+- no action execution
+- no standalone `/memory` route
+
+Next step: Phase 15Q validation, then Phase 15R — Final Audit, Smoke Checklist, Completion Report.

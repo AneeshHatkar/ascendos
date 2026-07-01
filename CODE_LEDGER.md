@@ -3362,3 +3362,12 @@ Boundary:
 - no standalone /memory route.
 
 Next: Phase 15Q — Cross-Domain Integration Preview.
+
+## Phase 15Q — Cross-Domain Integration Preview
+- Added `src/lib/carnos-continuity/cross-domain-integration-preview.ts`.
+- Added `src/components/dashboard/cross-domain-memory-integration-panel.tsx`.
+- Updated `src/lib/carnos-continuity/index.ts`.
+- Updated `src/components/dashboard/index.ts`.
+- Updated `src/app/carnos/page.tsx`.
+- Added `scripts/audit-phase-15q.mjs`.
+- Added Phase 15Q contract, report, and smoke checklist.

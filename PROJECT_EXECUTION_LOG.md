@@ -4528,3 +4528,14 @@ Protected boundaries:
 - no standalone /memory route.
 
 Next: Phase 15Q — Cross-Domain Integration Preview.
+
+## Phase 15Q — Cross-Domain Integration Preview
+- Added preview-only cross-domain memory integration helper.
+- Added `/carnos` Cross-Domain Integration Preview panel.
+- Locked whole-project connectivity visibility across Command, Carnos, Goals, Career, Body, Privacy, Knowledge, and Grimoire.
+- Added visible memory usage ledger requirements for `memory_used_in_context_pack` and `memory_used_in_carnos_response`.
+- Locked hidden memory usage blocked language.
+- Locked source-of-truth hierarchy visible language.
+- Confirmed private mode and do-not-remember rules can block cross-domain memory usage.
+- Preserved no SQL reads/writes, no Supabase calls, no persistence, no embeddings, no vector search, no provider calls, no hidden Carnos prompt injection, no action execution, and no standalone `/memory` route.
+- Next step: Phase 15Q validation, then Phase 15R — Final Audit, Smoke Checklist, Completion Report.
