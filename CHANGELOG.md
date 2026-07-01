@@ -1561,3 +1561,12 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added dashboard preview panel.
 - Added Phase 15J audit, contract, report, and QA checklist.
 - Updated `npm run check` with `audit:phase15j`.
+
+## Phase 15K — Carnos Memory Visibility Panel
+
+- Added preview-only Carnos memory visibility helper.
+- Added Carnos Memory Visibility Panel.
+- Wired the panel into canonical `/carnos`.
+- Added visibility for visible memory refs, excluded memory refs, hidden memory blocking, current context pack visibility, approved-memory read layer visibility, Carnos entity state visibility, project/system state memory visibility, source-of-truth hierarchy visibility, stale warnings, conflict warnings, privacy mode, do-not-remember rules, and memory usage transparency.
+- Added Phase 15K audit, contract, report, and QA checklist.
+- Preserved no approval, no persistence, no Supabase, no SQL reads/writes, no retrieval, no embeddings, no provider calls, no hidden Carnos prompt injection, and no standalone `/memory` route.

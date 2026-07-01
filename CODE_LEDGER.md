@@ -3188,3 +3188,26 @@ Files updated:
 
 Boundary:
 - Preview-only current context pack builder and context budget rules. No persistence, SQL, Supabase, embeddings, provider calls, hidden prompt injection, or standalone `/memory` route.
+
+## Phase 15K — Carnos Memory Visibility Panel
+
+Added:
+- `src/lib/carnos-continuity/carnos-memory-visibility.ts`
+  - `CarnosMemoryVisibilitySignal`
+  - `CarnosMemoryVisibleReference`
+  - `CarnosMemoryVisibilityInput`
+  - `CarnosMemoryVisibilitySummary`
+  - `PHASE_15K_CARNOS_MEMORY_VISIBILITY_BOUNDARY`
+  - `createCarnosMemoryVisibilitySummary`
+  - `summarizeCarnosMemoryVisibility`
+  - `createDefaultCarnosMemoryVisibilitySummary`
+- `src/components/dashboard/carnos-memory-visibility-panel.tsx`
+  - `CarnosMemoryVisibilityPanel`
+- Exported Phase 15K helper and dashboard panel.
+- Wired `CarnosMemoryVisibilityPanel` into `/carnos`.
+- Added Phase 15K audit, contract, report, and QA checklist.
+- Updated Phase 15A audit allowlist for the planned Phase 15K continuity helper.
+
+Boundary:
+- Preview-only memory visibility.
+- No approval, persistence, SQL reads/writes, retrieval, embeddings, provider calls, hidden Carnos prompt injection, or standalone `/memory` route.

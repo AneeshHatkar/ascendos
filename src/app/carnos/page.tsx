@@ -4,6 +4,7 @@ import { CarnosMessageComposer } from "@/components/carnos/carnos-message-compos
 import { isProposedActionType } from "@/lib/actions/action-types";
 import {
   AuthenticatedDashboardShell,
+  CarnosMemoryVisibilityPanel,
   CarnosPanelV1,
   DataList,
   EmptyState,
@@ -384,6 +385,8 @@ export default function CarnosPage() {
                 pendingCount={pendingActions}
                 readWarningCount={readErrors.length}
               />
+
+              <CarnosMemoryVisibilityPanel />
 
               <SectionCard
                 title="Carnos message persistence"

@@ -2782,3 +2782,27 @@ Protected boundaries:
 - No standalone `/memory` route.
 
 Next step: Phase 15J validation, then Phase 15K — Carnos Memory Visibility Panel.
+
+## Phase 15K — Carnos Memory Visibility Panel
+
+Status: Complete pending validation.
+
+Implemented:
+- Preview-only Carnos memory visibility helper.
+- Carnos Memory Visibility Panel.
+- `/carnos` panel wiring.
+- Visibility for visible memory refs, excluded memory refs, hidden memory blocked, current context pack visibility, approved-memory read layer visibility, Carnos entity state visibility, project/system state memory visibility, source-of-truth hierarchy visibility, privacy mode active, do-not-remember rules active, stale memory warnings, conflict warnings, `memory_used_in_context_pack`, and `memory_used_in_carnos_response`.
+- Phase 15K audit/docs/QA.
+
+Protected boundaries:
+- No approval.
+- No persistence.
+- No Supabase calls.
+- No SQL reads or writes.
+- No retrieval.
+- No embeddings.
+- No provider calls.
+- No hidden Carnos prompt injection.
+- No standalone `/memory` route.
+
+Next step: Phase 15K validation, then Phase 15L — Knowledge Vault Foundation.

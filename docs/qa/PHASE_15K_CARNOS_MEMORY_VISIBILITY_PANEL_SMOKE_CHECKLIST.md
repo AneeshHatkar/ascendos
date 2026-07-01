@@ -1,0 +1,59 @@
+# Phase 15K — Carnos Memory Visibility Panel Smoke Checklist
+
+- [ ] Carnos Memory Visibility Panel exists.
+- [ ] `/carnos` renders the Carnos Memory Visibility Panel.
+- [ ] Panel shows Carnos memory visibility.
+- [ ] Panel shows visible memory refs.
+- [ ] Panel shows excluded memory refs.
+- [ ] Panel shows hidden memory blocked.
+- [ ] Panel shows current context pack visibility.
+- [ ] Panel shows approved-memory read layer visibility.
+- [ ] Panel shows Carnos entity state visibility.
+- [ ] Panel shows project/system state memory visibility.
+- [ ] Panel shows source-of-truth hierarchy visibility.
+- [ ] Panel shows privacy mode active state.
+- [ ] Panel shows do-not-remember rules active state.
+- [ ] Panel shows stale memory warnings.
+- [ ] Panel shows conflict warnings.
+- [ ] Panel shows `memory_used_in_context_pack`.
+- [ ] Panel shows `memory_used_in_carnos_response`.
+- [ ] No approval is added.
+- [ ] No persistence is added.
+- [ ] No Supabase calls are added.
+- [ ] No SQL reads or writes are added.
+- [ ] No retrieval is added.
+- [ ] No embeddings are added.
+- [ ] No provider calls are added.
+- [ ] No hidden Carnos prompt injection is added.
+- [ ] No standalone `/memory` route is added.
+- [ ] `npm run audit:phase15k` passes.
+- [ ] `npm run build` passes.
+
+## Phase 15K Required Audit Markers
+
+- Phase 15K
+- Carnos Memory Visibility Panel
+- Carnos memory visibility
+- visible memory refs
+- hidden memory blocked
+- current context pack visibility
+- approved-memory read layer visibility
+- Carnos entity state visibility
+- project/system state memory visibility
+- source-of-truth hierarchy visibility
+- privacy mode active
+- do-not-remember rules active
+- stale memory warnings
+- conflict warnings
+- memory_used_in_context_pack
+- memory_used_in_carnos_response
+- no approval
+- no persistence
+- no Supabase
+- no SQL reads or writes
+- no retrieval
+- no embeddings
+- no provider calls
+- no hidden Carnos prompt injection
+- standalone `/memory` route
+- Phase 15L

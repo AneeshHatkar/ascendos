@@ -4349,3 +4349,40 @@ Boundaries:
 - No standalone `/memory` route.
 
 Next: Phase 15K — Carnos Memory Visibility Panel.
+
+## Phase 15K — Carnos Memory Visibility Panel
+
+Implemented preview-only Carnos memory visibility composition.
+
+Added:
+- `src/lib/carnos-continuity/carnos-memory-visibility.ts`
+- `src/components/dashboard/carnos-memory-visibility-panel.tsx`
+- `/carnos` wiring for `CarnosMemoryVisibilityPanel`
+- `scripts/audit-phase-15k.mjs`
+- Phase 15K contract, report, and QA checklist.
+
+Scope:
+- Shows visible memory refs.
+- Shows excluded memory refs.
+- Shows hidden memory blocked.
+- Shows current context pack visibility.
+- Shows approved-memory read layer visibility.
+- Shows Carnos entity state visibility.
+- Shows project/system state memory visibility.
+- Shows source-of-truth hierarchy visibility.
+- Shows privacy mode active and do-not-remember rules active.
+- Shows stale memory warnings and conflict warnings.
+- Shows `memory_used_in_context_pack` and `memory_used_in_carnos_response` as preview-only usage transparency.
+
+Protected boundaries:
+- No approval.
+- No persistence.
+- No Supabase calls.
+- No SQL reads or writes.
+- No retrieval.
+- No embeddings.
+- No provider calls.
+- No hidden Carnos prompt injection.
+- No standalone `/memory` route.
+
+Next: Phase 15L — Knowledge Vault Foundation.
