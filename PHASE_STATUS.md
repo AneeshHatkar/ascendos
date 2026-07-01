@@ -2606,3 +2606,31 @@ Protected:
 - No standalone `/memory` route
 
 Next step: Phase 15E — Memory Inbox UI.
+
+## Phase 15E — Memory Inbox UI Preview
+
+Status: Complete.
+
+Current commit target:
+- Add Phase 15E memory inbox UI preview
+
+Completed:
+- Memory Inbox UI preview component added.
+- Reviewable candidate previews are visible through a reusable dashboard component.
+- Candidate metadata, sensitivity, status, provenance/source, confidence, priority, blocked reasons, duplicate hints, and conflict hints are displayable.
+- Review controls are intentionally disabled.
+- Component is exported from the dashboard barrel.
+- Phase 15E audit gate added to `npm run check`.
+
+Protected:
+- No approval.
+- No persistence.
+- No retrieval.
+- No embeddings.
+- No provider calls.
+- No Supabase calls.
+- No standalone `/memory` route.
+- No hidden Carnos prompt injection.
+- No automatic transcript-to-memory.
+
+Next step: Phase 15F — Privacy, Private Mode, Do-Not-Remember Rules.

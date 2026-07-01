@@ -1513,3 +1513,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added private mode and do-not-remember rule blocking previews.
 - Added Phase 15D docs, QA checklist, and audit gate.
 - Preserved no-approval, no-persistence, no-retrieval, no-embedding, no-provider, and no-runtime-injection boundaries.
+
+## Phase 15E — Memory Inbox UI Preview
+
+- Added a non-mutating Memory Inbox UI preview component.
+- Added candidate preview cards with sensitivity, status, source/provenance, confidence, priority, duplicate hints, conflict hints, and blocking warnings.
+- Added disabled review controls for approve, edit, reject, archive, forget, mark sensitive, merge, and resolve conflict.
+- Added Phase 15E audit, report, contract, and smoke checklist.
+- Preserved no-approval, no-persistence, no-retrieval, no-embedding, no-provider, no-Supabase, and no-standalone-`/memory` boundaries.

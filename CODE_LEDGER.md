@@ -3070,3 +3070,31 @@ Boundary:
 - no embeddings
 - no provider calls
 - no Carnos runtime context injection
+
+## Phase 15E — Memory Inbox UI Preview
+
+Files added:
+- `src/components/dashboard/memory-inbox-preview-panel.tsx`
+- `docs/contracts/PHASE_15E_MEMORY_INBOX_UI.md`
+- `docs/phase-reports/PHASE_15E_MEMORY_INBOX_UI_REPORT.md`
+- `docs/qa/PHASE_15E_MEMORY_INBOX_UI_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-15e.mjs`
+
+Files changed:
+- `src/components/dashboard/index.ts`
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- UI preview only.
+- No SQL migration.
+- No approval.
+- No persistence.
+- No retrieval.
+- No embeddings.
+- No provider calls.
+- No Supabase calls.
+- No standalone `/memory` route.

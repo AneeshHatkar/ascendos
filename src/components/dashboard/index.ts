@@ -46,3 +46,4 @@ export * from "./admin-finance-dashboard-v1";
 export * from "./grimoire-dashboard-v1";
 export * from "./career-prep-foundation-panel";
 export * from "./settings-privacy-foundation-panel";
+export * from "./memory-inbox-preview-panel";

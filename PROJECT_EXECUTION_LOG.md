@@ -4201,3 +4201,32 @@ Boundary preserved:
 - no standalone /memory route
 
 Next step: Phase 15E — Memory Inbox UI.
+
+## Phase 15E — Memory Inbox UI Preview
+
+Status: Complete.
+
+Added a non-mutating Memory Inbox UI preview component for Carnos Persistent Memory + Continuity.
+
+Completed:
+- Added `src/components/dashboard/memory-inbox-preview-panel.tsx`.
+- Added candidate preview cards for reviewable memory candidate previews.
+- Added status, type, sensitivity, domain, source/provenance, confidence, and priority display.
+- Added private mode blocks and do-not-remember blocks visibility.
+- Added duplicate hints and conflict hints visibility.
+- Added disabled approve/edit/reject/archive/forget/mark-sensitive/merge/resolve-conflict controls.
+- Exported the component through the dashboard barrel.
+- Added Phase 15E audit, contract doc, report, and smoke checklist.
+
+Protected boundaries:
+- No approval.
+- No persistence.
+- No retrieval.
+- No embeddings.
+- No provider calls.
+- No Supabase calls.
+- No standalone `/memory` route.
+- No hidden Carnos prompt injection.
+- No automatic transcript-to-memory.
+
+Next step: Phase 15F — Privacy, Private Mode, Do-Not-Remember Rules.
