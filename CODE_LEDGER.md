@@ -3272,3 +3272,34 @@ Boundary maintained:
 - no vector search
 - no provider calls
 - no hidden Carnos prompt injection
+
+## Phase 15N — Embedding Boundary / Noop Provider
+
+Files added:
+- `src/lib/carnos-continuity/embedding-boundary.ts`
+- `src/components/dashboard/embedding-boundary-panel.tsx`
+- `docs/contracts/PHASE_15N_EMBEDDING_BOUNDARY_NOOP_PROVIDER.md`
+- `docs/phase-reports/PHASE_15N_EMBEDDING_BOUNDARY_NOOP_PROVIDER_REPORT.md`
+- `docs/qa/PHASE_15N_EMBEDDING_BOUNDARY_NOOP_PROVIDER_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-15n.mjs`
+
+Files modified:
+- `src/lib/carnos-continuity/index.ts`
+- `src/components/dashboard/index.ts`
+- `src/app/knowledge/page.tsx`
+- `scripts/audit-phase-15a.mjs`
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- disabled-by-design noop provider only
+- no embeddings generated
+- no provider calls
+- no vector search
+- no pgvector
+- no SQL reads or writes
+- no Supabase calls
+- no hidden Carnos prompt injection

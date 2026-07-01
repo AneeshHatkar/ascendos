@@ -4436,3 +4436,26 @@ Boundary:
 - no standalone `/memory` route
 
 Next: Phase 15N — Embedding Boundary / Noop Provider.
+
+## Phase 15N — Embedding Boundary / Noop Provider
+
+Implemented Phase 15N as a disabled-by-design embedding boundary layer.
+
+Added:
+- Embedding Boundary / Noop Provider helper.
+- NoopEmbeddingProvider local contract.
+- `/knowledge` Embedding Boundary panel.
+- Phase 15N audit gate.
+- Phase 15N contract, report, and smoke checklist.
+
+Protected boundaries:
+- no embeddings generated
+- no provider calls
+- no vector search
+- no pgvector
+- no SQL reads or writes
+- no Supabase calls
+- no hidden Carnos prompt injection
+- no standalone `/memory` route
+
+Next: Phase 15O — Forget/Delete Derived Records.

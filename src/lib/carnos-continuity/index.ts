@@ -18,3 +18,4 @@ export * from "./current-context-pack-builder";
 export * from "./carnos-memory-visibility";
 export * from "./knowledge-vault-foundation";
 export * from "./retrieval-contract";
+export * from "./embedding-boundary";

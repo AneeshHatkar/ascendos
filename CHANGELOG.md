@@ -1586,3 +1586,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added Retrieval Contract panel to `/knowledge`.
 - Added Phase 15M audit, contract, report, and QA checklist.
 - Preserved preview-only boundary: no SQL reads/writes, no Supabase calls, no embeddings, no vector search, no provider calls, and no hidden Carnos prompt injection.
+
+## Phase 15N — Embedding Boundary / Noop Provider
+
+- Added Phase 15N embedding boundary helper.
+- Added NoopEmbeddingProvider local contract.
+- Added disabled-by-design embedding boundary panel to `/knowledge`.
+- Added Phase 15N audit, contract, report, and QA checklist.
+- Preserved boundaries: no embeddings generated, no provider calls, no vector search, no pgvector, no SQL reads/writes, no Supabase calls, no hidden Carnos prompt injection, and no standalone `/memory` route.

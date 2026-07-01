@@ -1,5 +1,6 @@
 import {
   AuthenticatedDashboardShell,
+  EmbeddingBoundaryPanel,
   KnowledgeVaultAlignmentV1,
   KnowledgeVaultFoundationPanel,
   RetrievalContractPanel,
@@ -35,7 +36,8 @@ export default function KnowledgePage() {
           return (
             <div className="flex flex-col gap-6">
               <KnowledgeVaultFoundationPanel />
-        <RetrievalContractPanel />
+              <RetrievalContractPanel />
+              <EmbeddingBoundaryPanel />
               <KnowledgeVaultAlignmentV1
                 data={data}
                 skillPaths={skillPaths.data ?? []}

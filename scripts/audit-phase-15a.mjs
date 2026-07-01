@@ -385,6 +385,8 @@ if (prematureMemoryMigrations.length === 0) {
 const sourceFiles = listFilesRecursive("src").filter((filePath) => filePath.endsWith(".ts") || filePath.endsWith(".tsx"));
 
 const allowedPhase15RuntimeMarkerFiles = new Set([
+  "src/components/dashboard/embedding-boundary-panel.tsx",
+  "src/lib/carnos-continuity/embedding-boundary.ts",
   "src/lib/carnos-continuity/memory-enums.ts",
   "src/lib/carnos-continuity/memory-contracts.ts",
   "src/lib/carnos-continuity/memory-validators.ts",
