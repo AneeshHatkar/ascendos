@@ -1553,3 +1553,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added source-of-truth hierarchy evaluation for FINAL_SYNCED DOCX/JSON, JSON chunks 0-21, and outdated 15-phase roadmap blocking.
 - Added dashboard panel for project continuity, system continuity, active boundaries, deferred scope, known errors, and verification gates.
 - Added Phase 15I audit, contract, report, and QA checklist.
+
+## Phase 15J — Current Context Pack Builder + Context Budget Rules
+
+- Added preview-only current context pack builder.
+- Added context budget rules, context budget notes, token budget, section budget, included memory refs, excluded memory refs, stale memory warnings, conflict warnings, privacy mode active, do-not-remember rules active, and memory_used_in_context_pack event preview.
+- Added dashboard preview panel.
+- Added Phase 15J audit, contract, report, and QA checklist.
+- Updated `npm run check` with `audit:phase15j`.

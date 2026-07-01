@@ -2746,3 +2746,39 @@ Boundary:
 - No standalone `/memory` route.
 
 Next step: Phase 15I validation, then Phase 15J — Current Context Pack Builder + Context Budget Rules.
+
+## Phase 15J — Current Context Pack Builder + Context Budget Rules
+
+Status: Implemented, pending validation and commit.
+
+Completed scope:
+- Current context pack preview helper.
+- Context budget rules.
+- Context budget notes.
+- Token budget.
+- Section budget.
+- Included memory refs.
+- Excluded memory refs.
+- Approved-memory read layer integration surface.
+- Carnos entity state summary surface.
+- Project/system state memory summary surface.
+- Source-of-truth hierarchy notes.
+- Stale memory warnings.
+- Conflict warnings.
+- Privacy mode active flag.
+- Do-not-remember rules active flag.
+- memory_used_in_context_pack event preview.
+- Dashboard preview panel.
+- Audit/docs/QA.
+
+Protected boundaries:
+- No approval.
+- No persistence.
+- No Supabase calls.
+- No SQL reads or writes.
+- No embeddings.
+- No provider calls.
+- No hidden Carnos prompt injection.
+- No standalone `/memory` route.
+
+Next step: Phase 15J validation, then Phase 15K — Carnos Memory Visibility Panel.

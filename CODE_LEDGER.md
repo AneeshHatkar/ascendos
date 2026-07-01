@@ -3165,3 +3165,26 @@ Boundary:
 - Added Phase 15I contract, report, QA checklist, and audit gate.
 - Updated `package.json` with `audit:phase15i` and check gate wiring.
 - Updated Phase 15A audit allowlist for the planned Phase 15I continuity helper.
+
+## Phase 15J — Current Context Pack Builder + Context Budget Rules
+
+Files added:
+- `src/lib/carnos-continuity/current-context-pack-builder.ts`
+- `src/components/dashboard/current-context-pack-builder-panel.tsx`
+- `docs/contracts/PHASE_15J_CURRENT_CONTEXT_PACK_BUILDER_CONTEXT_BUDGET_RULES.md`
+- `docs/phase-reports/PHASE_15J_CURRENT_CONTEXT_PACK_BUILDER_CONTEXT_BUDGET_RULES_REPORT.md`
+- `docs/qa/PHASE_15J_CURRENT_CONTEXT_PACK_BUILDER_CONTEXT_BUDGET_RULES_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-15j.mjs`
+
+Files updated:
+- `src/lib/carnos-continuity/index.ts`
+- `src/components/dashboard/index.ts`
+- `package.json`
+- `scripts/audit-phase-15a.mjs`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- Preview-only current context pack builder and context budget rules. No persistence, SQL, Supabase, embeddings, provider calls, hidden prompt injection, or standalone `/memory` route.

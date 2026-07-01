@@ -4324,3 +4324,28 @@ Boundaries:
 - No standalone `/memory` route.
 
 Next: Phase 15J — Current Context Pack Builder + Context Budget Rules.
+
+## Phase 15J — Current Context Pack Builder + Context Budget Rules
+
+Implemented preview-only Current Context Pack Builder + Context Budget Rules.
+
+Completed:
+- Added `src/lib/carnos-continuity/current-context-pack-builder.ts`.
+- Added `CurrentContextPackPreview`, budget rules, token budget, section budget, included memory refs, excluded memory refs, context budget notes, stale memory warnings, conflict warnings, privacy mode active, do-not-remember rules active, and memory_used_in_context_pack event preview.
+- Added `src/components/dashboard/current-context-pack-builder-panel.tsx`.
+- Added Phase 15J contract, report, smoke checklist, and audit gate.
+- Updated package check gate with `audit:phase15j`.
+- Updated Phase 15A audit allowlist for the planned Phase 15J continuity helper.
+
+Boundaries:
+- Preview only.
+- No approval.
+- No persistence.
+- No Supabase calls.
+- No SQL reads or writes.
+- No embeddings.
+- No provider calls.
+- No hidden Carnos prompt injection.
+- No standalone `/memory` route.
+
+Next: Phase 15K — Carnos Memory Visibility Panel.
