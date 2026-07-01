@@ -1546,3 +1546,10 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added dashboard panel for Carnos entity-state visibility.
 - Added Phase 15H audit, contract, report, and QA checklist.
 - Preserved boundaries: no approval, no persistence, no Supabase, no SQL reads/writes, no retrieval, no embeddings, no provider calls, no hidden Carnos prompt injection, no context pack builder, no standalone `/memory` route.
+
+## Phase 15I — Project/System State Memory + Source-of-Truth Hierarchy
+
+- Added preview-only project/system state memory helper.
+- Added source-of-truth hierarchy evaluation for FINAL_SYNCED DOCX/JSON, JSON chunks 0-21, and outdated 15-phase roadmap blocking.
+- Added dashboard panel for project continuity, system continuity, active boundaries, deferred scope, known errors, and verification gates.
+- Added Phase 15I audit, contract, report, and QA checklist.

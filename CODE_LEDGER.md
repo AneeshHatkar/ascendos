@@ -3156,3 +3156,12 @@ Updated:
 Boundary:
 - Preview-only Carnos Entity State.
 - No approval, persistence, Supabase, SQL reads/writes, retrieval, embeddings, provider calls, hidden Carnos prompt injection, context pack builder, or standalone `/memory` route.
+
+## Phase 15I — Project/System State Memory + Source-of-Truth Hierarchy
+
+- Added `src/lib/carnos-continuity/project-system-state-memory.ts`.
+- Added `src/components/dashboard/project-system-state-memory-panel.tsx`.
+- Exported Phase 15I helper and dashboard panel.
+- Added Phase 15I contract, report, QA checklist, and audit gate.
+- Updated `package.json` with `audit:phase15i` and check gate wiring.
+- Updated Phase 15A audit allowlist for the planned Phase 15I continuity helper.

@@ -2717,3 +2717,32 @@ Protected boundaries:
 - no standalone `/memory` route
 
 Next step: Phase 15H validation, then Phase 15I — Project/System State Memory + Source-of-Truth Hierarchy.
+
+## Phase 15I — Project/System State Memory + Source-of-Truth Hierarchy
+
+Status: Implemented, pending validation/commit.
+
+Completed:
+- Project memory state preview.
+- System state memory preview.
+- Source-of-truth hierarchy preview.
+- FINAL_SYNCED DOCX/JSON hierarchy markers.
+- JSON chunks 0-21 active model marker.
+- Old 15-phase roadmap outdated marker.
+- Active boundaries, deferred scope, known errors, and verification gates preview.
+- Phase 15I audit/docs/QA.
+
+Boundary:
+- Preview only.
+- No approval.
+- No persistence.
+- No Supabase calls.
+- No SQL reads or writes.
+- No retrieval.
+- No embeddings.
+- No provider calls.
+- No hidden Carnos prompt injection.
+- No context pack builder.
+- No standalone `/memory` route.
+
+Next step: Phase 15I validation, then Phase 15J — Current Context Pack Builder + Context Budget Rules.

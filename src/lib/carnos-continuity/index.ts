@@ -13,3 +13,4 @@ export * from "./memory-privacy-rules";
 export * from "./approved-memory-read-layer";
 
 export * from "./carnos-entity-state";
+export * from "./project-system-state-memory";

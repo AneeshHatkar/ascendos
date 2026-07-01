@@ -4296,3 +4296,31 @@ Boundaries:
 - no standalone /memory route
 
 Next: Phase 15I — Project/System State Memory + Source-of-Truth Hierarchy.
+
+## Phase 15I — Project/System State Memory + Source-of-Truth Hierarchy
+
+Implemented preview-only project/system state memory and source-of-truth hierarchy.
+
+Added:
+- Project memory state preview helper.
+- System state memory preview helper.
+- Source-of-truth hierarchy evaluation.
+- FINAL_SYNCED DOCX/JSON hierarchy preview.
+- JSON chunks 0-21 active model marker.
+- Old 15-phase roadmap outdated marker.
+- Dashboard panel for project continuity, system continuity, active boundaries, deferred scope, known errors, and verification gates.
+- Phase 15I audit gate, contract, report, and smoke checklist.
+
+Boundaries:
+- No approval.
+- No persistence.
+- No Supabase calls.
+- No SQL reads or writes.
+- No retrieval.
+- No embeddings.
+- No provider calls.
+- No hidden Carnos prompt injection.
+- No context pack builder.
+- No standalone `/memory` route.
+
+Next: Phase 15J — Current Context Pack Builder + Context Budget Rules.
