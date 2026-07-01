@@ -1625,3 +1625,10 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added Phase 15R completion report and final smoke checklist.
 - Wired `audit:phase15r` into `npm run check`.
 - Locked Phase 15 as complete pending validation, commit, and push.
+
+## Phase 16A — Web Search / Current Information Scope Lock
+
+- Locked Phase 16 as the Web Search / Current Information implementation phase.
+- Expanded the scope to include source capture, citation, reliability, freshness, destination routing, review-to-save candidates, privacy retention, sensitive search rules, and source auditability.
+- Added Phase 16A audit coverage.
+- Confirmed Phase 16A does not implement runtime search, SQL, providers, fetch calls, or write execution.

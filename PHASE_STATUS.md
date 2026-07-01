@@ -2996,3 +2996,53 @@ Phase 15 final status:
 - Memory behavior remains preview-only until a future source-of-truth phase explicitly unlocks real write/retrieval behavior with confirmation and audit controls.
 
 Next step: Phase 16.
+
+## Phase 16A — Web Search / Current Information Scope Lock
+
+Status: Complete pending verification.
+
+Phase 16 official scope:
+- Web Search / Current Information.
+
+Phase 16 practical scope:
+- Web Search, Current Information, Source Capture, Citation, Reliability, and Review-to-Save Foundation.
+
+Locked chunks:
+- 16A — Scope Lock + Source Traceability
+- 16B — Web Source SQL Foundation
+- 16C — Current-Info Types, Enums, and Validators
+- 16D — Search Provider Boundary + Noop Provider
+- 16E — Query Classifier + Current-Info Safety Gate
+- 16F — Citation, Reliability, and Freshness Engine
+- 16G — Source Capture + Extraction Candidates
+- 16H — Destination Router + Duplicate Detection
+- 16I — Web Current-Info Read Repository + Dashboard Helpers
+- 16J — Current-Info UI Components
+- 16K — Carnos Current-Info Integration
+- 16L — Career Web Source Integration
+- 16M — Research / Stanford / Paper / Lab Integration
+- 16N — Knowledge Vault Source Bridge
+- 16O — Review-to-Save Candidate Flow
+- 16P — Privacy, Sensitive Search, and Retention Rules
+- 16Q — Web Source Audit Trail
+- 16R — Final Phase 16 Audit + Smoke Checklist + Completion Report
+
+Protected boundary:
+- No silent browsing.
+- No background browsing.
+- No uncontrolled fetch calls.
+- No browser-side secrets.
+- No search on page load.
+- No direct writes from internet results.
+- No automatic job applications.
+- No automatic emails or outreach.
+- No automatic paper/lab/professor saves.
+- No automatic knowledge saves.
+- No automatic memory conversion.
+- No full raw page storage by default.
+- No hidden Carnos current-info retrieval.
+- No provider activation outside boundary.
+- No pgvector.
+- No memory_embeddings.
+
+Next step: Phase 16B — Web Source SQL Foundation.

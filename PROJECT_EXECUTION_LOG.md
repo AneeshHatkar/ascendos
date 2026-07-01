@@ -4557,3 +4557,29 @@ Confirmed scope:
 - No standalone `/memory` route is introduced.
 - Memory, retrieval, embeddings, usage transparency, forget/delete, and cross-domain connectivity remain preview-only and boundary-protected.
 - Phase 16 is the next source-of-truth implementation area.
+
+## Phase 16A — Web Search / Current Information Scope Lock
+
+Locked Phase 16A scope before runtime implementation.
+
+Completed:
+- Added Phase 16A Web Search / Current Information scope lock plan.
+- Added Phase 16A scope-lock report.
+- Added Phase 16A smoke checklist.
+- Added Phase 16A audit gate.
+- Registered `audit:phase16a` in package scripts.
+- Added `audit:phase16a` to `npm run check`.
+
+Locked Phase 16 as:
+- Web Search / Current Information.
+- Source capture, citation, reliability, freshness, and review-to-save foundation.
+- Web search for jobs, companies, labs, papers, docs, and current resources.
+- No silent browsing.
+- No background browsing.
+- No uncontrolled fetch calls.
+- No browser-side secrets.
+- No direct writes from internet results.
+- No automatic memory conversion.
+- No hidden Carnos current-info retrieval.
+
+Next step: Phase 16B — Web Source SQL Foundation.

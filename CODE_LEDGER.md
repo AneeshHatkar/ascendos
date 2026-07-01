@@ -3391,3 +3391,27 @@ Boundary:
 - No SQL reads/writes in Phase 15 preview runtime files.
 - No Supabase calls in Phase 15 preview runtime files.
 - No embeddings, vector search, provider calls, hidden prompt injection, or standalone `/memory` route.
+
+## Phase 16A — Web Search / Current Information Scope Lock
+
+Added:
+- `docs/phase-plans/PHASE_16A_WEB_SEARCH_CURRENT_INFORMATION_SCOPE_LOCK.md`
+- `docs/phase-reports/PHASE_16A_WEB_SEARCH_SCOPE_LOCK_REPORT.md`
+- `docs/qa/PHASE_16A_WEB_SEARCH_SCOPE_LOCK_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-16a.mjs`
+
+Updated:
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- Phase 16A is documentation, scope lock, and audit only.
+- No SQL migrations.
+- No current-info runtime.
+- No provider calls.
+- No fetch calls.
+- No database writes.
+- No memory conversion.
