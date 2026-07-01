@@ -4136,3 +4136,36 @@ Scope:
 - Added RLS policies, indexes, constraints, and parent ownership guards.
 - Did not add pgvector, embeddings, retrieval runtime, TypeScript memory helpers, UI, API routes, automatic memory writes, or Carnos context injection.
 - Next step: Phase 15C — Memory Types, Schemas, Statuses, Sensitivity, Conflict Rules.
+
+## Phase 15C — Memory Types, Schemas, Statuses, Sensitivity, Conflict Rules
+
+Status: Complete locally pending commit.
+
+Implemented the contract-only TypeScript layer for Carnos Persistent Memory + Continuity Foundation:
+- memory enums
+- status enums
+- sensitivity levels
+- source/provenance contracts
+- memory candidate contract
+- approved memory contract
+- do-not-remember rule contract
+- Carnos entity state contract
+- project memory state contract
+- system state memory contract
+- knowledge vault item contract
+- current context pack contract
+- memory audit event contract
+- validators
+- authority/conflict/staleness/sensitivity rules
+
+Boundary preserved:
+- no SQL migration added in Phase 15C
+- no memory runtime persistence
+- no retrieval
+- no embeddings
+- no provider calls
+- no automatic transcript-to-memory
+- no hidden Carnos context injection
+- no standalone /memory route
+
+Next step: Phase 15D — Memory Candidate Engine.

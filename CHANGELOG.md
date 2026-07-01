@@ -1497,3 +1497,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added memory candidates, approved memories, Carnos entity state, project/system state, knowledge vault tables, retrieval logs, memory usage logs, and review queue tables.
 - Added RLS, constraints, indexes, and parent ownership guards.
 - Preserved boundaries: no pgvector, no embeddings, no retrieval runtime, no automatic memory creation, no UI/API route, and no Carnos context injection.
+
+## Phase 15C — Memory Types, Schemas, Statuses, Sensitivity, Conflict Rules
+
+- Added contract-only Carnos continuity/memory TypeScript layer.
+- Added memory enums, statuses, sensitivity levels, provenance, validation helpers, and conflict rules.
+- Added Carnos entity state, project memory state, system state memory, knowledge vault, context pack, and audit event contracts.
+- Added Phase 15C docs, QA checklist, and audit gate.
+- Preserved no-retrieval, no-embedding, no-provider, no-runtime-write boundaries.

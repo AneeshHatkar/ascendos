@@ -292,9 +292,9 @@ forbidImplementation("Voice Foundation", "Phase 14", [
 ]);
 
 forbidImplementation("Memory / RAG", "Phase 15", [
-  
+
   "create table if not exists public.embeddings",
-  
+
   "match_documents",
 ]);
 

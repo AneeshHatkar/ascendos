@@ -2543,3 +2543,34 @@ Protected boundaries:
 - No Carnos context injection.
 
 Next step: Phase 15C — Memory Types, Schemas, Statuses, Sensitivity, Conflict Rules.
+
+## Phase 15C — Memory Types, Schemas, Statuses, Sensitivity, Conflict Rules
+
+Status: Complete locally pending commit.
+
+Completed:
+- Memory type contract
+- Memory status contract
+- Sensitivity contract
+- Provenance contract
+- Candidate contract
+- Approved memory contract
+- Do-not-remember rule contract
+- Carnos entity state contract
+- Project/system continuity contracts
+- Knowledge vault contract
+- Current context pack contract
+- Audit event contract
+- Validator helpers
+- Conflict/staleness/sensitivity rules
+
+Protected:
+- No SQL migration in Phase 15C
+- No retrieval
+- No embeddings
+- No provider calls
+- No hidden memory injection
+- No automatic transcript-to-memory
+- No standalone `/memory` route
+
+Next step: Phase 15D — Memory Candidate Engine.

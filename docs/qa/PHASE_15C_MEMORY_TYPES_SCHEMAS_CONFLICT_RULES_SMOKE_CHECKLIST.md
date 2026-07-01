@@ -1,0 +1,25 @@
+# Phase 15C — Memory Types, Schemas, Statuses, Sensitivity, Conflict Rules Smoke Checklist
+
+- [ ] Memory enums exist.
+- [ ] Memory contracts exist.
+- [ ] Memory validators exist.
+- [ ] Memory conflict rules exist.
+- [ ] Carnos entity state contract exists.
+- [ ] Project memory state contract exists.
+- [ ] System state memory contract exists.
+- [ ] Knowledge vault item contract exists.
+- [ ] Current context pack contract exists.
+- [ ] Sensitivity levels include `low`, `medium`, `high`, `restricted`.
+- [ ] Statuses include `candidate`, `pending_review`, `approved`, `edited`, `rejected`, `archived`, `forgotten`, `stale`, `needs_review`, `blocked_by_private_mode`, `blocked_by_do_not_remember`.
+- [ ] Conflict rules include higher source-of-truth beats lower source.
+- [ ] Conflict rules include forgotten/rejected/blocked memories are never retrieved.
+- [ ] No SQL migration added in Phase 15C.
+- [ ] No `memory_embeddings` table added.
+- [ ] No pgvector added.
+- [ ] No vector column added.
+- [ ] No OpenAI/provider calls added.
+- [ ] No `fetch(` added.
+- [ ] No timers added.
+- [ ] No standalone `/memory` route added.
+- [ ] `npm run audit:phase15c` passes.
+- [ ] `npm run check` passes.

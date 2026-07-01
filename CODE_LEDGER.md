@@ -3014,3 +3014,32 @@ Boundary:
   - Manual smoke checklist for SQL foundation verification.
 - `scripts/audit-phase-15b.mjs`
   - Verifies SQL tables, RLS, policies, guards, docs, package wiring, and deferred runtime boundaries.
+
+## Phase 15C — Memory Types, Schemas, Statuses, Sensitivity, Conflict Rules
+
+Added:
+- `src/lib/carnos-continuity/memory-enums.ts`
+- `src/lib/carnos-continuity/memory-contracts.ts`
+- `src/lib/carnos-continuity/memory-validators.ts`
+- `src/lib/carnos-continuity/memory-conflict-rules.ts`
+- `src/lib/carnos-continuity/index.ts`
+- `docs/contracts/PHASE_15C_MEMORY_TYPES_SCHEMAS_CONFLICT_RULES.md`
+- `docs/phase-reports/PHASE_15C_MEMORY_TYPES_SCHEMAS_CONFLICT_RULES_REPORT.md`
+- `docs/qa/PHASE_15C_MEMORY_TYPES_SCHEMAS_CONFLICT_RULES_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-15c.mjs`
+
+Updated:
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- contract-only implementation
+- no Supabase runtime
+- no SQL migration
+- no pgvector
+- no embeddings
+- no RAG
+- no Carnos runtime injection
