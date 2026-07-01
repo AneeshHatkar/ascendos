@@ -20,3 +20,5 @@ export * from "./knowledge-vault-foundation";
 export * from "./retrieval-contract";
 export * from "./embedding-boundary";
 export * from "./forget-delete-derived-records";
+
+export * from "./memory-audit-usage-transparency";

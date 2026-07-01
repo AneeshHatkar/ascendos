@@ -1,0 +1,29 @@
+# Phase 15P — Memory Audit Events + Memory Usage Transparency Smoke Checklist
+
+- [x] Phase 15P helper exists.
+- [x] Phase 15P panel exists.
+- [x] `/privacy` renders `MemoryAuditUsageTransparencyPanel`.
+- [x] Memory Audit Events + Memory Usage Transparency is visible.
+- [x] memory audit event contract exists.
+- [x] memory usage transparency exists.
+- [x] memory_events preview exists.
+- [x] memory_usage_logs preview exists.
+- [x] candidate_created preview exists.
+- [x] memory_forgotten preview exists.
+- [x] memory_used_in_context_pack preview exists.
+- [x] memory_used_in_carnos_response preview exists.
+- [x] private_mode_enabled preview exists.
+- [x] conflict_detected preview exists.
+- [x] stale_memory_detected preview exists.
+- [x] visible memory usage ledger exists.
+- [x] hidden memory usage blocked exists.
+- [x] no SQL reads or writes.
+- [x] no Supabase calls.
+- [x] no persistence.
+- [x] no embeddings.
+- [x] no vector search.
+- [x] no provider calls.
+- [x] no hidden Carnos prompt injection.
+- [x] no standalone `/memory` route.
+- [x] Phase 15Q — Cross-Domain Integration Preview is identified as next.
+- standalone /memory route remains forbidden in Phase 15P.

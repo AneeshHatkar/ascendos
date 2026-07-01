@@ -4486,3 +4486,45 @@ Boundaries:
 - no standalone /memory route.
 
 Next: Phase 15P — Memory Audit Events + Memory Usage Transparency.
+
+## Phase 15P — Memory Audit Events + Memory Usage Transparency
+
+Status: Complete.
+
+Implemented preview-only memory audit and usage transparency foundation.
+
+Added:
+- `src/lib/carnos-continuity/memory-audit-usage-transparency.ts`
+- `src/components/dashboard/memory-audit-usage-transparency-panel.tsx`
+- `docs/contracts/PHASE_15P_MEMORY_AUDIT_EVENTS_USAGE_TRANSPARENCY.md`
+- `docs/phase-reports/PHASE_15P_MEMORY_AUDIT_EVENTS_USAGE_TRANSPARENCY_REPORT.md`
+- `docs/qa/PHASE_15P_MEMORY_AUDIT_EVENTS_USAGE_TRANSPARENCY_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-15p.mjs`
+
+Scope completed:
+- Memory Audit Events + Memory Usage Transparency.
+- memory audit event contract.
+- memory usage transparency.
+- memory_events preview.
+- memory_usage_logs preview.
+- candidate_created.
+- memory_forgotten.
+- memory_used_in_context_pack.
+- memory_used_in_carnos_response.
+- private_mode_enabled.
+- conflict_detected.
+- stale_memory_detected.
+- visible memory usage ledger.
+- hidden memory usage blocked.
+
+Protected boundaries:
+- no SQL reads or writes.
+- no Supabase calls.
+- no persistence.
+- no embeddings.
+- no vector search.
+- no provider calls.
+- no hidden Carnos prompt injection.
+- no standalone /memory route.
+
+Next: Phase 15Q — Cross-Domain Integration Preview.

@@ -1,5 +1,6 @@
 import {
   AuthenticatedDashboardShell,
+  MemoryAuditUsageTransparencyPanel,
   SettingsPrivacyFoundationPanel,
 } from "@/components/dashboard";
 import { getSettingsPrivacyDashboardDataSummary } from "@/lib/dashboard";
@@ -48,6 +49,7 @@ export default function PrivacyPage() {
               readErrors={readErrors}
             />
             <ForgetDeleteDerivedRecordsPanel />
+            <MemoryAuditUsageTransparencyPanel />
           </div>
         );
       }}

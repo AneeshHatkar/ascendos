@@ -58,3 +58,5 @@ export * from "./knowledge-vault-foundation-panel";
 export * from "./retrieval-contract-panel";
 export * from "./embedding-boundary-panel";
 export * from "./forget-delete-derived-records-panel";
+
+export * from "./memory-audit-usage-transparency-panel";

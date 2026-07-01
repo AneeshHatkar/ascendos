@@ -3327,3 +3327,38 @@ Modified:
 Boundary:
 - Preview-only forget/delete-derived-records contract.
 - No destructive delete, SQL runtime, Supabase calls, embeddings, vector search, provider calls, hidden prompt injection, or standalone `/memory` route.
+
+## Phase 15P — Memory Audit Events + Memory Usage Transparency
+
+Added:
+- `src/lib/carnos-continuity/memory-audit-usage-transparency.ts`
+  - Defines Phase 15P memory audit event previews.
+  - Defines memory usage transparency references.
+  - Defines visible memory usage ledger and hidden memory usage blocked rules.
+  - Keeps memory_events and memory_usage_logs as preview-only.
+- `src/components/dashboard/memory-audit-usage-transparency-panel.tsx`
+  - Renders Phase 15P audit/usage transparency on `/privacy`.
+- `scripts/audit-phase-15p.mjs`
+  - Enforces Phase 15P files, markers, exports, route wiring, package wiring, and protected boundaries.
+
+Modified:
+- `src/lib/carnos-continuity/index.ts`
+- `src/components/dashboard/index.ts`
+- `src/app/privacy/page.tsx`
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- no SQL reads or writes.
+- no Supabase calls.
+- no persistence.
+- no embeddings.
+- no vector search.
+- no provider calls.
+- no hidden Carnos prompt injection.
+- no standalone /memory route.
+
+Next: Phase 15Q — Cross-Domain Integration Preview.

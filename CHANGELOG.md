@@ -1602,3 +1602,14 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added `memory_forgotten`, `derived_records_deleted`, and `embedding_removed` audit previews.
 - Added Phase 15O audit, contract, report, and QA checklist.
 - Protected boundaries: no destructive delete, no SQL reads or writes, no Supabase calls, no embeddings, no vector search, no provider calls, no hidden Carnos prompt injection, and no standalone `/memory` route.
+
+## Phase 15P — Memory Audit Events + Memory Usage Transparency
+
+- Added Phase 15P preview-only memory audit and usage transparency foundation.
+- Added `memory_events preview` and `memory_usage_logs preview`.
+- Added visible previews for `candidate_created`, `memory_forgotten`, `memory_used_in_context_pack`, `memory_used_in_carnos_response`, `private_mode_enabled`, `conflict_detected`, and `stale_memory_detected`.
+- Added visible memory usage ledger.
+- Added hidden memory usage blocked rule.
+- Wired `MemoryAuditUsageTransparencyPanel` into `/privacy`.
+- Added `audit:phase15p` and included it in `npm run check`.
+- Preserved no SQL reads or writes, no Supabase calls, no persistence, no embeddings, no vector search, no provider calls, no hidden Carnos prompt injection, and no standalone `/memory` route.
