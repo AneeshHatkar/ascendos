@@ -2634,3 +2634,30 @@ Protected:
 - No automatic transcript-to-memory.
 
 Next step: Phase 15F — Privacy, Private Mode, Do-Not-Remember Rules.
+
+## Phase 15F — Privacy, Private Mode, Do-Not-Remember Rules
+
+Status: Complete after audit.
+
+Completed:
+- Memory privacy settings preview
+- Private mode blocking preview
+- Do-not-remember rule blocking preview
+- Blocked/restricted category evaluation
+- Sensitive/restricted review rules
+- Redaction preview behavior
+- Read-only privacy panel
+- Phase 15F audit gate
+
+Boundaries:
+- no approval
+- no persistence
+- no retrieval
+- no embeddings
+- no provider calls
+- no Supabase calls
+- no standalone `/memory` route
+- no hidden Carnos prompt injection
+- no automatic transcript-to-memory
+
+Next step: Phase 15G — Approved Memory Read Layer + Ranking/Staleness Rules.

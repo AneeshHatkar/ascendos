@@ -1521,3 +1521,12 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added disabled review controls for approve, edit, reject, archive, forget, mark sensitive, merge, and resolve conflict.
 - Added Phase 15E audit, report, contract, and smoke checklist.
 - Preserved no-approval, no-persistence, no-retrieval, no-embedding, no-provider, no-Supabase, and no-standalone-`/memory` boundaries.
+
+## Phase 15F — Privacy, Private Mode, Do-Not-Remember Rules
+
+- Added Carnos memory privacy settings preview contracts.
+- Added private mode and do-not-remember rule preview evaluation.
+- Added blocked/restricted category and redaction preview behavior.
+- Added read-only MemoryPrivacyRulesPanel.
+- Added Phase 15F audit gate to `npm run check`.
+- Preserved no approval, no persistence, no retrieval, no embeddings, no provider calls, no Supabase, and no standalone `/memory` route boundaries.

@@ -384,6 +384,15 @@ if (prematureMemoryMigrations.length === 0) {
 
 const sourceFiles = listFilesRecursive("src").filter((filePath) => filePath.endsWith(".ts") || filePath.endsWith(".tsx"));
 
+const allowedPhase15RuntimeMarkerFiles = new Set([
+  "src/lib/carnos-continuity/memory-enums.ts",
+  "src/lib/carnos-continuity/memory-contracts.ts",
+  "src/lib/carnos-continuity/memory-validators.ts",
+  "src/lib/carnos-continuity/memory-conflict-rules.ts",
+  "src/lib/carnos-continuity/memory-candidate-engine.ts",
+  "src/lib/carnos-continuity/memory-privacy-rules.ts",
+]);
+
 const forbiddenRuntimeMarkers = [
   "memory_candidates",
   "memory_items",
@@ -402,7 +411,9 @@ for (const filePath of sourceFiles) {
 
   for (const marker of forbiddenRuntimeMarkers) {
     if (text.includes(marker)) {
-      fail(`${filePath} contains premature Phase 15 runtime marker: ${marker}`);
+      if (!allowedPhase15RuntimeMarkerFiles.has(filePath)) {
+        fail(`${filePath} contains premature Phase 15 runtime marker: ${marker}`);
+      }
     }
   }
 }

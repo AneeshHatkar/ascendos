@@ -4230,3 +4230,30 @@ Protected boundaries:
 - No automatic transcript-to-memory.
 
 Next step: Phase 15F — Privacy, Private Mode, Do-Not-Remember Rules.
+
+## Phase 15F — Privacy, Private Mode, Do-Not-Remember Rules
+
+Implemented Phase 15F as a safe privacy-control preview layer for Carnos Persistent Memory + Continuity.
+
+Added:
+- memory privacy settings preview contracts
+- private mode blocking preview
+- do-not-remember rule preview
+- blocked/restricted category evaluation
+- sensitive/restricted review requirements
+- redaction preview behavior
+- read-only MemoryPrivacyRulesPanel
+- Phase 15F audit gate
+
+Boundary:
+- no approval
+- no persistence
+- no retrieval
+- no embeddings
+- no provider calls
+- no Supabase calls
+- no standalone /memory route
+- no hidden Carnos prompt injection
+- no automatic transcript-to-memory
+
+Next: Phase 15G — Approved Memory Read Layer + Ranking/Staleness Rules.

@@ -3098,3 +3098,32 @@ Boundary:
 - No provider calls.
 - No Supabase calls.
 - No standalone `/memory` route.
+
+## Phase 15F — Privacy, Private Mode, Do-Not-Remember Rules
+
+Files added:
+- `src/lib/carnos-continuity/memory-privacy-rules.ts`
+- `src/components/dashboard/memory-privacy-rules-panel.tsx`
+- `docs/contracts/PHASE_15F_PRIVACY_PRIVATE_MODE_DO_NOT_REMEMBER_RULES.md`
+- `docs/phase-reports/PHASE_15F_PRIVACY_PRIVATE_MODE_DO_NOT_REMEMBER_RULES_REPORT.md`
+- `docs/qa/PHASE_15F_PRIVACY_PRIVATE_MODE_DO_NOT_REMEMBER_RULES_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-15f.mjs`
+
+Files updated:
+- `src/lib/carnos-continuity/index.ts`
+- `src/components/dashboard/index.ts`
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Protected boundary:
+- privacy preview only
+- no approval
+- no persistence
+- no retrieval
+- no embeddings
+- no provider calls
+- no Supabase calls
+- no standalone `/memory` route
