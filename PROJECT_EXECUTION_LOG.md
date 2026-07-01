@@ -4125,3 +4125,14 @@ Scope:
 - Locked whole-project connectivity through /command, /carnos, /calendar, /timeline, /goals, /career, /learning, /research-stanford, /body, /nutrition, /grimoire, /analytics, /privacy, /custom-trackers, and /knowledge.
 - Confirmed 15A adds no SQL migrations, memory tables, vector tables, pgvector, embeddings, provider calls, OpenAI calls, RAG runtime, automatic memory capture, voice transcript auto-memory, hidden Carnos prompt injection, background memory jobs, or new memory routes.
 - Next step: Phase 15B Memory SQL Foundation.
+
+## Phase 15B — Memory SQL Foundation
+
+- Added SQL foundation for Carnos Persistent Memory + Continuity.
+- Added `memory_candidates`, `memory_items`, `memory_links`, `memory_events`, `memory_preferences`, and `memory_do_not_remember_rules`.
+- Added `carnos_entity_state`, `carnos_context_snapshots`, `project_memory_state`, and `system_memory_state`.
+- Added knowledge vault foundation tables: `knowledge_items`, `knowledge_tags`, and `knowledge_links`.
+- Added retrieval/usage/review foundations: `retrieval_logs`, `memory_usage_logs`, and `memory_review_queue`.
+- Added RLS policies, indexes, constraints, and parent ownership guards.
+- Did not add pgvector, embeddings, retrieval runtime, TypeScript memory helpers, UI, API routes, automatic memory writes, or Carnos context injection.
+- Next step: Phase 15C — Memory Types, Schemas, Statuses, Sensitivity, Conflict Rules.

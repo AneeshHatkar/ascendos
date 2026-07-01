@@ -3,6 +3,7 @@ import path from "node:path";
 
 const root = process.cwd();
 
+
 const reportPath = "docs/audits/PHASE_1_13_5_FULL_SOURCE_SCOPE_AUDIT.md";
 
 const sourceDocx =
@@ -291,9 +292,9 @@ forbidImplementation("Voice Foundation", "Phase 14", [
 ]);
 
 forbidImplementation("Memory / RAG", "Phase 15", [
-  "create table if not exists public.memory_items",
+  
   "create table if not exists public.embeddings",
-  "pgvector",
+  
   "match_documents",
 ]);
 
@@ -446,3 +447,10 @@ console.log("✓ package.json check gate includes audit:phase13_5g");
 console.log("✓ Phase 13.5G logs/status markers present");
 console.log(`\nReport written: ${reportPath}`);
 console.log("\nPhase 13.5G full source scope audit passed.");
+
+
+// Phase 15B allowance:
+// Core Memory SQL Foundation is now active. This audit no longer blocks memory_items
+// or documentation mentions of pgvector once 0024_phase15_memory_sql_foundation.sql exists.
+// It must still block memory_embeddings, vector columns, provider calls, runtime RAG,
+// standalone /memory routes, and premature embedding implementation.

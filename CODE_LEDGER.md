@@ -2999,3 +2999,18 @@ Boundary:
   - Verifies Phase 15A lock artifacts, required markers, package wiring, route absence, migration absence, and absence of premature Memory/RAG runtime markers.
 - `package.json`
   - Adds `audit:phase15a` and wires it into `npm run check`.
+
+## Phase 15B — Memory SQL Foundation
+
+- `supabase/migrations/0024_phase15_memory_sql_foundation.sql`
+  - Adds Memory/RAG SQL foundation tables, RLS policies, constraints, indexes, and safe defaults.
+- `supabase/migrations/0025_phase15_memory_parent_ownership_guards.sql`
+  - Adds parent ownership guards for memory, source, knowledge, usage, and review records.
+- `docs/database/PHASE_15B_MEMORY_SQL_SCHEMA_DESIGN.md`
+  - Documents the Phase 15B schema and deferred boundaries.
+- `docs/phase-reports/PHASE_15B_MEMORY_SQL_FOUNDATION_REPORT.md`
+  - Records completed Phase 15B scope and protected boundaries.
+- `docs/qa/PHASE_15B_MEMORY_SQL_FOUNDATION_SMOKE_CHECKLIST.md`
+  - Manual smoke checklist for SQL foundation verification.
+- `scripts/audit-phase-15b.mjs`
+  - Verifies SQL tables, RLS, policies, guards, docs, package wiring, and deferred runtime boundaries.

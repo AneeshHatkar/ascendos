@@ -2506,3 +2506,40 @@ Protected Phase 15A boundaries:
 - /knowledge remains the future knowledge vault surface.
 
 Next step: Phase 15B — Memory SQL Foundation.
+
+## Phase 15B — Memory SQL Foundation
+
+Status: Implemented locally pending verification, commit, and push.
+
+Added:
+- `memory_candidates`
+- `memory_items`
+- `memory_links`
+- `memory_events`
+- `memory_preferences`
+- `memory_do_not_remember_rules`
+- `carnos_entity_state`
+- `carnos_context_snapshots`
+- `project_memory_state`
+- `system_memory_state`
+- `knowledge_items`
+- `knowledge_tags`
+- `knowledge_links`
+- `retrieval_logs`
+- `memory_usage_logs`
+- `memory_review_queue`
+
+Protected boundaries:
+- No pgvector.
+- No vector column.
+- No memory_embeddings table.
+- No embedding provider.
+- No retrieval runtime.
+- No TypeScript memory runtime.
+- No Memory/RAG UI.
+- No API routes.
+- No automatic transcript-to-memory.
+- No autonomous memory writes.
+- No Carnos context injection.
+
+Next step: Phase 15C — Memory Types, Schemas, Statuses, Sensitivity, Conflict Rules.

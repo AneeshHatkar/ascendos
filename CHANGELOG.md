@@ -1490,3 +1490,10 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added full 15A–15R implementation contract covering memory candidates, Memory Inbox, approved memories, private mode, do-not-remember rules, Carnos entity state, project/system state, current context pack builder, knowledge vault, retrieval contract, embedding boundary, forget/delete derived records, audit events, usage transparency, and cross-domain connectivity.
 - Added Phase 15A audit gate and smoke checklist.
 - Confirmed Phase 15A does not add runtime memory tables, embeddings, RAG, provider calls, hidden retrieval, automatic memory capture, or new memory routes.
+
+## Phase 15B — Memory SQL Foundation
+
+- Added Carnos Persistent Memory + Continuity SQL foundation.
+- Added memory candidates, approved memories, Carnos entity state, project/system state, knowledge vault tables, retrieval logs, memory usage logs, and review queue tables.
+- Added RLS, constraints, indexes, and parent ownership guards.
+- Preserved boundaries: no pgvector, no embeddings, no retrieval runtime, no automatic memory creation, no UI/API route, and no Carnos context injection.

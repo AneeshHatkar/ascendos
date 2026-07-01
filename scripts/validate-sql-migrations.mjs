@@ -72,6 +72,11 @@ const migrationFiles = fs
   .filter((file) => file.endsWith(".sql"))
   .sort();
 
+const phase15MemorySqlFoundationExists = migrationFiles.some((file) =>
+  file.endsWith("0024_phase15_memory_sql_foundation.sql")
+);
+
+
 if (migrationFiles.length === 0) {
   fail("No SQL migration files found.");
 }
@@ -190,7 +195,14 @@ requireIncludes(
 );
 
 if (normalize(combinedSql).includes("create table if not exists public.memory_items")) {
+  if (!phase15MemorySqlFoundationExists) {
   fail("memory_items is not allowed before the dedicated memory phase.");
+}
 }
 
 console.log(`SQL migration validation passed: ${migrationFiles.length} migration file(s).`);
+
+
+// Phase 15B dedicated memory SQL phase allowance
+// Core Phase 15B memory tables are allowed once 0024_phase15_memory_sql_foundation.sql exists.
+// Embeddings, pgvector, vector columns, provider calls, and runtime Memory/RAG code remain blocked elsewhere.

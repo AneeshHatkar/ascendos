@@ -1,6 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
 
+
+const phase15bMemorySqlFoundationExists =
+  fs.existsSync(path.join(process.cwd(), "supabase/migrations/0024_phase15_memory_sql_foundation.sql")) &&
+  fs.existsSync(path.join(process.cwd(), "supabase/migrations/0025_phase15_memory_parent_ownership_guards.sql")) &&
+  fs.existsSync(path.join(process.cwd(), "scripts/audit-phase-15b.mjs"));
 const root = process.cwd();
 let failed = false;
 
@@ -372,7 +377,9 @@ const prematureMemoryMigrations = migrationFiles.filter((name) => {
 if (prematureMemoryMigrations.length === 0) {
   pass("No Memory/RAG SQL migration added in Phase 15A");
 } else {
+  if (!phase15bMemorySqlFoundationExists) {
   fail(`Memory/RAG SQL migration added too early: ${prematureMemoryMigrations.join(", ")}`);
+}
 }
 
 const sourceFiles = listFilesRecursive("src").filter((filePath) => filePath.endsWith(".ts") || filePath.endsWith(".tsx"));
@@ -410,3 +417,10 @@ if (failed) {
 }
 
 console.log("\nPhase 15A Carnos Persistent Memory + Continuity scope lock audit passed.");
+
+
+// Phase 15B allowance:
+// Phase 15A originally locked scope with no SQL migrations. Once Phase 15B exists,
+// the dedicated Memory SQL Foundation migrations 0024/0025 are allowed while
+// runtime Memory/RAG, embeddings, pgvector, vector columns, and provider calls
+// remain forbidden by Phase 15B and global validators.
