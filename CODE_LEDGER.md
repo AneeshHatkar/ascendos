@@ -3564,3 +3564,44 @@ Boundary:
 - No Supabase writes.
 - No proposed-action execution.
 - No automatic memory conversion.
+
+## Phase 16I — Current-Info Read Repository + Dashboard Helpers
+
+Added:
+- `src/lib/repositories/current-info-read.ts`
+  - local Phase 16 web-source row types
+  - `listWebSearchQueries`
+  - `listWebSources`
+  - `listWebSourceCandidates`
+  - `listWebSourceLinks`
+  - `listWebSourceAuditEvents`
+  - read-only repository boundary
+
+- `src/lib/dashboard/current-info-dashboard-data-helpers.ts`
+  - `getCurrentInfoDashboardDataSummary`
+  - `EMPTY_CURRENT_INFO_DASHBOARD_SUMMARY`
+  - source kind breakdown
+  - reliability breakdown
+  - freshness breakdown
+  - query/source/candidate/link/audit summary counts
+
+Updated:
+- `src/lib/repositories/index.ts`
+- `src/lib/dashboard/index.ts`
+- `package.json`
+
+Added verification:
+- `scripts/audit-phase-16i.mjs`
+
+Added docs:
+- `docs/contracts/PHASE_16I_CURRENT_INFO_READ_REPOSITORY_CONTRACT.md`
+- `docs/phase-reports/PHASE_16I_CURRENT_INFO_READ_REPOSITORY_REPORT.md`
+- `docs/qa/PHASE_16I_CURRENT_INFO_READ_REPOSITORY_SMOKE_CHECKLIST.md`
+
+Boundary:
+- no writes
+- no provider calls
+- no web/network calls
+- no UI routes
+- no SQL migrations
+- no automatic memory conversion

@@ -4664,3 +4664,46 @@ Verification:
 
 Next:
 - Phase 16I — Web Current-Info Read Repository + Dashboard Helpers.
+
+## 2026-07-02 — Phase 16I Current-Info Read Repository + Dashboard Helpers
+
+Completed Phase 16I current-info read repository and dashboard helper foundation.
+
+Added read-only helpers for:
+- web search queries
+- web sources
+- web source candidates
+- web source links
+- web source audit events
+
+Added dashboard summary support for:
+- recent query count
+- executed query count
+- blocked query count
+- recent source count
+- private source count
+- pending review candidate count
+- approved/rejected/blocked candidate counts
+- source link count
+- audit event count
+- source kind breakdown
+- reliability breakdown
+- freshness breakdown
+
+Safety boundary:
+- read-only
+- user-scoped
+- no provider calls
+- no network calls
+- no browser Supabase client
+- no inserts/updates/deletes/upserts/RPC calls
+- no candidate approval/rejection execution
+- no automatic memory conversion
+- no UI route creation
+- no SQL migration
+
+Verification target:
+- npm run audit:phase16i
+- npx tsc --noEmit
+- npm run lint
+- npm run check

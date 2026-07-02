@@ -1703,3 +1703,13 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added candidate-only/non-persisting safety flags.
 - Added audit gate and documentation.
 - Wired audit:phase16g_b into the verification chain.
+
+## Phase 16I — Current-Info Read Repository + Dashboard Helpers
+
+- Added read-only current-info repository helpers for Phase 16 web-source tables.
+- Added current-info dashboard summary helpers.
+- Added dashboard breakdowns for source kind, reliability, and freshness.
+- Added empty current-info dashboard summary state.
+- Exported current-info repository and dashboard helpers.
+- Added Phase 16I contract, report, smoke checklist, and audit gate.
+- Wired `audit:phase16i` into verification scripts.

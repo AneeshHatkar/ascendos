@@ -3251,3 +3251,25 @@ Purpose:
 
 Next:
 - Phase 16I — Web Current-Info Read Repository + Dashboard Helpers.
+
+## Phase 16I — Current-Info Read Repository + Dashboard Helpers
+
+Status: Complete pending final full verification and commit.
+
+Scope completed:
+- Read-only current-info repository.
+- Dashboard helper summary.
+- Web-source query/source/candidate/link/audit reads.
+- Source kind/reliability/freshness breakdowns.
+- Contract, report, smoke checklist, and audit gate.
+
+Safety:
+- No provider activation.
+- No network calls.
+- No writes.
+- No UI routes.
+- No SQL migrations.
+- No automatic memory conversion.
+
+Next:
+- Phase 16J — Current-Info UI Components.
