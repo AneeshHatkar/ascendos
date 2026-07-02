@@ -1713,3 +1713,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Exported current-info repository and dashboard helpers.
 - Added Phase 16I contract, report, smoke checklist, and audit gate.
 - Wired `audit:phase16i` into verification scripts.
+
+## Phase 16J — Current-Info UI Components
+
+- Added read-only current-info dashboard UI components.
+- Added metric, badge, breakdown, source preview, candidate preview, and audit/query preview components.
+- Exported the current-info UI components from dashboard components.
+- Added Phase 16J docs, smoke checklist, and audit gate.
+- Wired `audit:phase16j` into verification.

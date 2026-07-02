@@ -4707,3 +4707,25 @@ Verification target:
 - npx tsc --noEmit
 - npm run lint
 - npm run check
+
+## 2026-07-02 — Phase 16J Current-Info UI Components
+
+Completed Phase 16J read-only current-info UI components.
+
+Added:
+- current-info dashboard panel
+- metric grid
+- status badge
+- source breakdown lists
+- reliability/freshness breakdown lists
+- source preview list
+- candidate review preview list
+- query/audit preview panel
+
+Boundary:
+- no routes
+- no API routes
+- no fetch/provider calls
+- no writes
+- no approval/rejection execution
+- no automatic memory conversion

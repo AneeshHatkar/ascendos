@@ -3605,3 +3605,22 @@ Boundary:
 - no UI routes
 - no SQL migrations
 - no automatic memory conversion
+
+## Phase 16J — Current-Info UI Components
+
+Added:
+- `src/components/dashboard/current-info-ui-components.tsx`
+- `scripts/audit-phase-16j.mjs`
+- Phase 16J contract/report/smoke checklist
+
+Updated:
+- `src/components/dashboard/index.ts`
+- `package.json`
+
+Boundary:
+- read-only presentation
+- no data fetching
+- no route creation
+- no provider calls
+- no writes
+- no memory conversion
