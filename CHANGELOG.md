@@ -1745,3 +1745,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added research candidate review visibility.
 - Added Phase 16M docs, smoke checklist, and audit gate.
 - Wired `audit:phase16m` into verification.
+
+## Phase 16N — Knowledge Vault Source Bridge
+
+- Added read-only Knowledge Vault source bridge helper.
+- Added bridge status classification and warning aggregation.
+- Added Knowledge Vault source bridge dashboard panel.
+- Added Phase 16N docs, smoke checklist, and audit gate.
+- Wired `audit:phase16n` into verification.

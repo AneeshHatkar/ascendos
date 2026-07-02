@@ -65,3 +65,4 @@ export * from "./current-info-ui-components";
 export * from "./carnos-current-info-integration-panel";
 export * from "./career-current-info-source-panel";
 export * from "./research-current-info-source-panel";
+export * from "./knowledge-vault-source-bridge-panel";

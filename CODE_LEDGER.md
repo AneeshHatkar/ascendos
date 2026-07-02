@@ -3684,3 +3684,23 @@ Boundary:
 - no writes
 - no approval/rejection flow
 - no memory conversion
+
+## Phase 16N — Knowledge Vault Source Bridge
+
+Added:
+- `src/lib/current-info-capture/knowledge-vault-source-bridge.ts`
+- `src/components/dashboard/knowledge-vault-source-bridge-panel.tsx`
+- `scripts/audit-phase-16n.mjs`
+- Phase 16N contract/report/smoke checklist
+
+Updated:
+- `src/lib/current-info-capture/index.ts`
+- `src/components/dashboard/index.ts`
+- `package.json`
+
+Boundary:
+- read-only source-to-vault bridge
+- no provider activation
+- no writes
+- no approval/rejection flow
+- no embeddings
