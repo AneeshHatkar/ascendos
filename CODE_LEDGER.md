@@ -3415,3 +3415,27 @@ Boundary:
 - No fetch calls.
 - No database writes.
 - No memory conversion.
+
+## Web Source SQL Foundation
+
+Files added:
+- `supabase/migrations/0026_phase16_web_source_sql_foundation.sql`
+- `supabase/migrations/0027_phase16_web_source_parent_ownership_guards.sql`
+- `docs/database/PHASE_16B_WEB_SOURCE_SQL_SCHEMA_DESIGN.md`
+- `docs/phase-reports/PHASE_16B_WEB_SOURCE_SQL_FOUNDATION_REPORT.md`
+- `docs/qa/PHASE_16B_WEB_SOURCE_SQL_FOUNDATION_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-16b.mjs`
+
+Files modified:
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- SQL foundation only.
+- No runtime search implementation.
+- No provider calls.
+- No direct write flow from web results.
+- No automatic memory conversion.

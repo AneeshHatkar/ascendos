@@ -1632,3 +1632,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Expanded the scope to include source capture, citation, reliability, freshness, destination routing, review-to-save candidates, privacy retention, sensitive search rules, and source auditability.
 - Added Phase 16A audit coverage.
 - Confirmed Phase 16A does not implement runtime search, SQL, providers, fetch calls, or write execution.
+
+## Web Source SQL Foundation
+
+- Added current-information source capture SQL tables.
+- Added RLS and ownership guards for web source records.
+- Added citation, reliability, freshness, retention, candidate, link, and audit-event foundations.
+- Added audit gate for the web source database foundation.
+- Preserved no-provider, no-autosave, no-memory-conversion, no-vector boundaries.

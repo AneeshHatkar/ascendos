@@ -3046,3 +3046,28 @@ Protected boundary:
 - No memory_embeddings.
 
 Next step: Phase 16B — Web Source SQL Foundation.
+
+## Web Source SQL Foundation
+
+Status: Complete.
+
+Completed:
+- Web source SQL tables.
+- Web source RLS policies.
+- Web source parent ownership guards.
+- Web source schema design doc.
+- Web source SQL foundation report.
+- Web source SQL smoke checklist.
+- Web source SQL audit gate.
+
+Current boundaries:
+- No provider calls.
+- No UI search.
+- No Carnos browsing execution.
+- No direct save from internet results.
+- No automatic memory conversion.
+- No pgvector.
+- No `memory_embeddings`.
+
+Next:
+- Current-info type contracts, enums, validators.

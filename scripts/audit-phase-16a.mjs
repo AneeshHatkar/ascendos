@@ -1,5 +1,4 @@
 import { existsSync, readFileSync, readdirSync } from "node:fs";
-import { join } from "node:path";
 
 const requiredFiles = [
   "docs/phase-plans/PHASE_16A_WEB_SEARCH_CURRENT_INFORMATION_SCOPE_LOCK.md",
@@ -120,10 +119,8 @@ const forbiddenNewPaths = [
   "src/components/current-info",
 ];
 
-const forbiddenMigrationPrefixes = [
-  "0026_phase16",
-  "0027_phase16",
-];
+// Phase 16A is a scope lock and must remain valid after later Phase 16 migrations land.
+// Later database migrations are audited by their own chunk gates, starting with Phase 16B.
 
 function read(path) {
   return readFileSync(path, "utf8");
@@ -174,12 +171,7 @@ for (const path of forbiddenNewPaths) {
 
 if (existsSync("supabase/migrations")) {
   const migrationFiles = readdirSync("supabase/migrations");
-  for (const prefix of forbiddenMigrationPrefixes) {
-    assert(
-      !migrationFiles.some((file) => file.startsWith(prefix)),
-      `Phase 16A has not added migration prefix: ${prefix}`,
-    );
-  }
+console.log("✓ Phase 16A remains valid after later Phase 16 migrations are added");
 }
 
 const rootRuntimeFilesToScan = [

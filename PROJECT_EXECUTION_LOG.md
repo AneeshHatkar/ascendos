@@ -4583,3 +4583,32 @@ Locked Phase 16 as:
 - No hidden Carnos current-info retrieval.
 
 Next step: Phase 16B — Web Source SQL Foundation.
+
+## Web Source SQL Foundation
+
+Completed the database foundation for current-information and internet source capture.
+
+Added:
+- `web_search_queries`
+- `web_sources`
+- `web_source_candidates`
+- `web_source_links`
+- `web_source_audit_events`
+- RLS policies
+- parent ownership guards
+- citation/reliability/freshness fields
+- private-mode retention fields
+- candidate review states
+- audit event types
+
+Protected boundaries:
+- no provider calls
+- no browser-side secrets
+- no uncontrolled fetch calls
+- no search on page load
+- no direct save from internet results
+- no automatic memory conversion
+- no pgvector
+- no `memory_embeddings`
+
+Next: Current-info type contracts, enums, validators.

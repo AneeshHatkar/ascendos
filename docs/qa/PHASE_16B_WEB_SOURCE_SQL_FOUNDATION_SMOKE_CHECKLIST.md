@@ -1,0 +1,24 @@
+# Web Source SQL Foundation Smoke Checklist
+
+- [x] `web_search_queries` exists.
+- [x] `web_sources` exists.
+- [x] `web_source_candidates` exists.
+- [x] `web_source_links` exists.
+- [x] `web_source_audit_events` exists.
+- [x] RLS is enabled on all five tables.
+- [x] Own-user policies exist.
+- [x] Parent ownership guards exist.
+- [x] Private-mode retention fields exist.
+- [x] Citation fields exist.
+- [x] Reliability labels exist.
+- [x] Freshness labels exist.
+- [x] Candidate review states exist.
+- [x] Audit event types exist.
+- [x] No provider call was added.
+- [x] No browser-side secret path was added.
+- [x] No uncontrolled fetch call was added.
+- [x] No automatic save path was added.
+- [x] No automatic memory conversion was added.
+- [x] No pgvector was added.
+- [x] No `memory_embeddings` table was added.
+- [x] `npm run audit:phase16b` passes.
