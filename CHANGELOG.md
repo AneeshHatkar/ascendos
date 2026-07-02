@@ -1640,3 +1640,10 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added citation, reliability, freshness, retention, candidate, link, and audit-event foundations.
 - Added audit gate for the web source database foundation.
 - Preserved no-provider, no-autosave, no-memory-conversion, no-vector boundaries.
+## Phase 16C — Current-Info Types, Enums, and Validators
+
+- Added current-info TypeScript enum constants.
+- Added citation, query, source, candidate, review, audit, validation, and safety gate contracts.
+- Added validator helpers for citations, queries, sources, candidates, and high-stakes current-info safety gates.
+- Added Phase 16C contract docs, report, smoke checklist, and audit gate.
+- Preserved no-provider, no-network, no-Supabase, no-autosave, no-memory-conversion, no-embedding boundaries.

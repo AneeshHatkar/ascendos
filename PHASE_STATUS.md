@@ -3071,3 +3071,36 @@ Current boundaries:
 
 Next:
 - Current-info type contracts, enums, validators.
+
+## Phase 16C — Current-Info Types, Enums, and Validators
+
+Status: Complete.
+
+Completed:
+
+- Current-info query kind contracts.
+- Source kind contracts.
+- Reliability label contracts.
+- Freshness label contracts.
+- Citation contracts.
+- Source contracts.
+- Candidate contracts.
+- Destination suggestion contracts.
+- Blocked reason contracts.
+- High-stakes current-info safety gate.
+- Validator helpers.
+- Audit gate and documentation.
+
+Protected boundary:
+
+- No SQL migration.
+- No runtime search provider.
+- No network calls.
+- No Supabase calls.
+- No browser-side secrets.
+- No automatic saves.
+- No automatic memory conversion.
+- No embeddings.
+- No hidden Carnos current-info retrieval.
+
+Next step: Phase 16D — Search Provider Boundary + Noop Provider.

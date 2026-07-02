@@ -4612,3 +4612,10 @@ Protected boundaries:
 - no `memory_embeddings`
 
 Next: Current-info type contracts, enums, validators.
+## Phase 16C — Current-Info Types, Enums, and Validators
+
+Completed Phase 16C contract layer for Web Search / Current Information.
+
+Added pure TypeScript current-info contracts, enums, and validators covering query kinds, source kinds, reliability labels, freshness labels, citation contracts, source contracts, candidate contracts, destination suggestions, blocked reasons, and high-stakes current-info safety gate behavior.
+
+Boundary remains protected: no runtime provider, no network calls, no Supabase calls, no SQL migrations, no automatic saves, no automatic memory conversion, no embeddings, no hidden Carnos current-info retrieval.

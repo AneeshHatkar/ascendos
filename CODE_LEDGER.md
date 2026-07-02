@@ -3439,3 +3439,25 @@ Boundary:
 - No provider calls.
 - No direct write flow from web results.
 - No automatic memory conversion.
+## Phase 16C — Current-Info Types, Enums, and Validators
+
+Files added:
+
+- `src/lib/current-info-contracts/current-info-enums.ts`
+- `src/lib/current-info-contracts/current-info-contracts.ts`
+- `src/lib/current-info-contracts/current-info-validators.ts`
+- `src/lib/current-info-contracts/index.ts`
+- `docs/contracts/PHASE_16C_CURRENT_INFO_TYPES_ENUMS_VALIDATORS.md`
+- `docs/phase-reports/PHASE_16C_CURRENT_INFO_TYPES_ENUMS_VALIDATORS_REPORT.md`
+- `docs/qa/PHASE_16C_CURRENT_INFO_TYPES_ENUMS_VALIDATORS_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-16c.mjs`
+
+Files updated:
+
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Purpose: lock current-info enums, contracts, validators, safety gate rules, and review-required candidate boundaries before provider implementation.
