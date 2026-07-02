@@ -3239,3 +3239,15 @@ Protected:
 - No automatic memory conversion.
 
 Next step: Phase 16I — Web Current-Info Read Repository + Dashboard Helpers.
+
+## Phase 16G-B — Source Extraction Candidate Contract
+
+Status: Complete pending final verification.
+
+Purpose:
+- Correctively closes the missing extraction-candidate half of Phase 16G.
+- Keeps extracted web/current-info interpretations as review-required candidates.
+- Preserves no-autosave, no-source-persistence, no-action-execution, and no-automatic-memory-conversion boundaries.
+
+Next:
+- Phase 16I — Web Current-Info Read Repository + Dashboard Helpers.

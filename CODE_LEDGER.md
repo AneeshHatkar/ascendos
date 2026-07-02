@@ -3538,3 +3538,29 @@ Boundary: provider interface only; noop provider remains blocked. No search prov
 - Added docs/qa/PHASE_16H_B_CURRENT_INFO_DUPLICATE_DETECTION_SMOKE_CHECKLIST.md.
 - Added scripts/audit-phase-16h-b.mjs.
 - Updated package verification gates.
+
+## Phase 16G-B — Source Extraction Candidate Contract
+
+Files added:
+- src/lib/current-info-capture/current-info-extraction-candidate.ts
+- docs/contracts/PHASE_16G_B_CURRENT_INFO_EXTRACTION_CANDIDATE_CONTRACT.md
+- docs/phase-reports/PHASE_16G_B_CURRENT_INFO_EXTRACTION_CANDIDATE_REPORT.md
+- docs/qa/PHASE_16G_B_CURRENT_INFO_EXTRACTION_CANDIDATE_SMOKE_CHECKLIST.md
+- scripts/audit-phase-16g-b.mjs
+
+Files updated:
+- src/lib/current-info-capture/index.ts
+- package.json
+- PROJECT_EXECUTION_LOG.md
+- CODE_LEDGER.md
+- CHANGELOG.md
+- PHASE_STATUS.md
+
+Boundary:
+- Contract-only.
+- No provider activation.
+- No network calls.
+- No SQL migration.
+- No Supabase writes.
+- No proposed-action execution.
+- No automatic memory conversion.

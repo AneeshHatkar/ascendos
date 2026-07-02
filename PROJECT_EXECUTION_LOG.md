@@ -4649,3 +4649,18 @@ Added current-info review queue item and review decision contracts. Review queue
 ## Phase 16H-B — Current-Info Duplicate Detection
 
 Added the missing duplicate detection contract for Phase 16H alignment. Destination routing already exists, and this patch adds duplicate detection before Phase 16I. Duplicate detection is review-only and does not merge, save, persist sources, write SQL, execute proposed actions, or convert anything into memory.
+
+## Phase 16G-B — Source Extraction Candidate Contract
+
+Status: Complete pending final verification.
+
+Added the missing current-info extraction candidate contract required by the locked Phase 16G scope. This corrective patch keeps extracted source interpretations candidate-only, review-required, non-persisting, non-executing, and blocked from automatic memory conversion.
+
+Verification:
+- npm run audit:phase16g_b
+- npx tsc --noEmit
+- npm run lint
+- npm run check
+
+Next:
+- Phase 16I — Web Current-Info Read Repository + Dashboard Helpers.

@@ -1694,3 +1694,12 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added current-info duplicate detection contract.
 - Closed the Phase 16H duplicate-detection gap before Phase 16I.
 - Kept duplicate handling review-only with automatic merge, SQL writes, source persistence, autosave, proposed-action execution, and automatic memory conversion disabled.
+
+## Phase 16G-B — Source Extraction Candidate Contract
+
+- Added current-info extraction candidate contract.
+- Added extraction confidence statuses and review reasons.
+- Added candidate creation and review rejection helpers.
+- Added candidate-only/non-persisting safety flags.
+- Added audit gate and documentation.
+- Wired audit:phase16g_b into the verification chain.
