@@ -3663,3 +3663,24 @@ Boundary:
 - no writes
 - no approval/rejection flow
 - no memory conversion\n
+
+## Phase 16M — Research / Stanford / Paper / Lab Integration
+
+Added:
+- `src/components/dashboard/research-current-info-source-panel.tsx`
+- `scripts/audit-phase-16m.mjs`
+- Phase 16M contract/report/smoke checklist
+
+Updated:
+- `src/app/research-stanford/page.tsx`
+- `src/app/research-lab/page.tsx`
+- `src/components/dashboard/index.ts`
+- `package.json`
+
+Boundary:
+- read-only research web-source visibility
+- no provider activation
+- no citation save
+- no writes
+- no approval/rejection flow
+- no memory conversion

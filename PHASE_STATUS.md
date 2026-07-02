@@ -3285,3 +3285,15 @@ Scope completed:
 
 Next:
 - Phase 16L — Career Web Source Integration.
+
+## Phase 16M — Research / Stanford / Paper / Lab Integration
+
+Status: Complete pending verification and commit.
+
+Scope completed:
+- Read-only research current-info integration panel.
+- Paper/lab/professor source visibility.
+- Research candidate review visibility.
+
+Next:
+- Phase 16N — Knowledge Vault Source Bridge.

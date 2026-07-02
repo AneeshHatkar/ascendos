@@ -11,6 +11,7 @@ import {
   ResearchStateBoundaryPanel,
   ResearchSummaryPanel,
   SectionCard,
+  ResearchCurrentInfoSourceServerPanel,
 } from "@/components/dashboard";
 import { getDashboardCardsForSurface, getResearchStanfordDashboardDataSummary } from "@/lib/dashboard";
 import {
@@ -84,6 +85,8 @@ export default function ResearchLabPage() {
 
           return (
             <>
+              <ResearchCurrentInfoSourceServerPanel userId={user.id} surfaceLabel="Research lab" />
+
               <ResearchCrossDashboardLinks activeRoute="/research-lab" />
 
               <ResearchSummaryPanel

@@ -4770,3 +4770,25 @@ Boundary:
 - no SQL migration
 - no API route
 - no automatic memory conversion\n
+
+## 2026-07-02 — Phase 16M Research / Stanford / Paper / Lab Integration
+
+Completed read-only Research current-info integration.
+
+Added:
+- Research current-info source panel
+- paper source visibility
+- lab page source visibility
+- professor page source visibility
+- research candidate review visibility
+- Stanford/research surface current-info wiring
+
+Boundary:
+- no provider calls
+- no external fetch
+- no citation save
+- no writes
+- no approve/reject execution
+- no SQL migration
+- no API route
+- no automatic memory conversion

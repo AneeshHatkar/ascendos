@@ -1737,3 +1737,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added career candidate review visibility.
 - Added Phase 16L docs, smoke checklist, and audit gate.
 - Wired `audit:phase16l` into verification.\n
+
+## Phase 16M — Research / Stanford / Paper / Lab Integration
+
+- Added read-only research current-info source panel.
+- Wired paper, lab, and professor source visibility into research surfaces.
+- Added research candidate review visibility.
+- Added Phase 16M docs, smoke checklist, and audit gate.
+- Wired `audit:phase16m` into verification.
