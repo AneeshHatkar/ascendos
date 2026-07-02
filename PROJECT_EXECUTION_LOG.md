@@ -4619,3 +4619,13 @@ Completed Phase 16C contract layer for Web Search / Current Information.
 Added pure TypeScript current-info contracts, enums, and validators covering query kinds, source kinds, reliability labels, freshness labels, citation contracts, source contracts, candidate contracts, destination suggestions, blocked reasons, and high-stakes current-info safety gate behavior.
 
 Boundary remains protected: no runtime provider, no network calls, no Supabase calls, no SQL migrations, no automatic saves, no automatic memory conversion, no embeddings, no hidden Carnos current-info retrieval.
+
+## Phase 16D — Search Provider Boundary + Noop Provider
+
+Implemented the current-info provider boundary and noop provider. This adds provider request/result/source-preview contracts, boundary blocking logic, and a disabled noop provider for future provider activation.
+
+Protected boundaries: no real provider activation, no network calls, no browser-side secrets, no background browsing, no search-on-page-load behavior, no source persistence, no automatic record writes, and no automatic memory conversion.
+
+## Quiet Verification System
+
+Added a quiet verification wrapper so npm run check still runs the full project verification chain while suppressing successful marker spam in the terminal. Full raw logs are saved locally to .verify-logs/last-check-output.log, and failures print only the tail needed for debugging.

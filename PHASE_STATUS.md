@@ -3104,3 +3104,29 @@ Protected boundary:
 - No hidden Carnos current-info retrieval.
 
 Next step: Phase 16D — Search Provider Boundary + Noop Provider.
+
+## Phase 16D — Search Provider Boundary + Noop Provider
+
+Status: Complete pending verification.
+
+Completed:
+- Current-info provider request/result contracts.
+- Provider boundary blocking logic.
+- Noop provider.
+- Audit gate and QA checklist.
+
+Protected:
+- No real provider activation.
+- No network calls.
+- No browser-side secrets.
+- No background browsing.
+- No search-on-page-load behavior.
+- No source persistence.
+- No automatic record writes.
+- No automatic memory conversion.
+
+Next step: Phase 16E — Query Classifier + Current-Info Safety Gate.
+
+## Verification Output Policy
+
+Default project verification now uses quiet output through npm run check. The full strict gate remains intact, and verbose output remains available through npm run check:verbose.

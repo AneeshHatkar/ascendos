@@ -1647,3 +1647,17 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added validator helpers for citations, queries, sources, candidates, and high-stakes current-info safety gates.
 - Added Phase 16C contract docs, report, smoke checklist, and audit gate.
 - Preserved no-provider, no-network, no-Supabase, no-autosave, no-memory-conversion, no-embedding boundaries.
+
+## Phase 16D — Search Provider Boundary + Noop Provider
+
+- Added current-info provider boundary contracts.
+- Added noop current-info provider.
+- Added audit/check gate coverage.
+- Preserved no-provider, no-network, no-browser-secret, no-background-browsing, no-autosave, and no-memory-conversion boundaries.
+
+## Quiet Verification System
+
+- Changed default verification output to compact mode.
+- Preserved full strict project verification.
+- Added local full-log capture at .verify-logs/last-check-output.log.
+- Added npm run check:verbose for full audit output when needed.

@@ -3461,3 +3461,25 @@ Files updated:
 - `PHASE_STATUS.md`
 
 Purpose: lock current-info enums, contracts, validators, safety gate rules, and review-required candidate boundaries before provider implementation.
+
+## Phase 16D — Search Provider Boundary + Noop Provider
+
+- Added `src/lib/current-info-provider/current-info-provider-types.ts`.
+- Added `src/lib/current-info-provider/provider-boundary.ts`.
+- Added `src/lib/current-info-provider/noop-current-info-provider.ts`.
+- Added `src/lib/current-info-provider/index.ts`.
+- Added `docs/contracts/PHASE_16D_SEARCH_PROVIDER_BOUNDARY_NOOP_PROVIDER.md`.
+- Added `docs/phase-reports/PHASE_16D_SEARCH_PROVIDER_BOUNDARY_NOOP_PROVIDER_REPORT.md`.
+- Added `docs/qa/PHASE_16D_SEARCH_PROVIDER_BOUNDARY_NOOP_PROVIDER_SMOKE_CHECKLIST.md`.
+- Added `scripts/audit-phase-16d.mjs`.
+- Updated `package.json` check gate.
+
+Boundary: provider interface only; noop provider remains blocked. No search provider, network call, source persistence, automatic save, or automatic memory conversion was added.
+
+## Quiet Verification System
+
+- Added scripts/run-check-quiet.mjs.
+- Added docs/qa/QUIET_VERIFICATION_SYSTEM.md.
+- Updated package.json so npm run check is compact by default.
+- Preserved the original full verification command as npm run check:verbose.
+- Added .verify-logs/ to .gitignore.
