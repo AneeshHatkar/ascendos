@@ -3483,3 +3483,14 @@ Boundary: provider interface only; noop provider remains blocked. No search prov
 - Updated package.json so npm run check is compact by default.
 - Preserved the original full verification command as npm run check:verbose.
 - Added .verify-logs/ to .gitignore.
+
+## Phase 16E — Query Classifier + Current-Info Safety Gate
+
+- Added src/lib/current-info-safety/current-info-query-classifier.ts.
+- Added src/lib/current-info-safety/current-info-safety-gate.ts.
+- Added src/lib/current-info-safety/index.ts.
+- Added docs/contracts/PHASE_16E_QUERY_CLASSIFIER_CURRENT_INFO_SAFETY_GATE.md.
+- Added docs/phase-reports/PHASE_16E_QUERY_CLASSIFIER_CURRENT_INFO_SAFETY_GATE_REPORT.md.
+- Added docs/qa/PHASE_16E_QUERY_CLASSIFIER_CURRENT_INFO_SAFETY_GATE_SMOKE_CHECKLIST.md.
+- Added scripts/audit-phase-16e.mjs.
+- Updated package verification gates.

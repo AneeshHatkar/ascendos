@@ -4629,3 +4629,7 @@ Protected boundaries: no real provider activation, no network calls, no browser-
 ## Quiet Verification System
 
 Added a quiet verification wrapper so npm run check still runs the full project verification chain while suppressing successful marker spam in the terminal. Full raw logs are saved locally to .verify-logs/last-check-output.log, and failures print only the tail needed for debugging.
+
+## Phase 16E — Query Classifier + Current-Info Safety Gate
+
+Added the current-info query classifier and safety gate. The classifier maps query kinds into safe current-info classes, and the safety gate blocks unsupported queries, private-mode retention, high-stakes review cases, real provider calls, autosave, and automatic memory conversion.

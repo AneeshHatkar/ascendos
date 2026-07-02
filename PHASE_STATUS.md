@@ -3130,3 +3130,24 @@ Next step: Phase 16E — Query Classifier + Current-Info Safety Gate.
 ## Verification Output Policy
 
 Default project verification now uses quiet output through npm run check. The full strict gate remains intact, and verbose output remains available through npm run check:verbose.
+
+## Phase 16E — Query Classifier + Current-Info Safety Gate
+
+Status: Complete pending verification.
+
+Completed:
+- Current-info query classifier.
+- Current-info safety gate.
+- Safety exports.
+- Audit and documentation.
+
+Protected:
+- No real provider activation.
+- No network calls.
+- No SQL reads or writes.
+- No UI route.
+- No source persistence.
+- No automatic save.
+- No automatic memory conversion.
+
+Next step: Phase 16F — Citation, Reliability, and Freshness Engine.

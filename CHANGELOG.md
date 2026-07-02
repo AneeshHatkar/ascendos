@@ -1661,3 +1661,9 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Preserved full strict project verification.
 - Added local full-log capture at .verify-logs/last-check-output.log.
 - Added npm run check:verbose for full audit output when needed.
+
+## Phase 16E — Query Classifier + Current-Info Safety Gate
+
+- Added current-info query classifier.
+- Added current-info safety gate.
+- Kept real provider calls, SQL writes, source persistence, autosave, and automatic memory conversion disabled.
