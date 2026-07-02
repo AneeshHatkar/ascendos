@@ -4637,3 +4637,7 @@ Added the current-info query classifier and safety gate. The classifier maps que
 ## Phase 16F — Citation, Reliability, and Freshness Engine
 
 Added current-info evidence helpers for citation coverage, source reliability, and source freshness. The helpers remain contract-only and do not perform provider calls, network calls, SQL reads/writes, source persistence, autosave, or automatic memory conversion.
+
+## Phase 16G — Source Candidate Capture + Destination Router
+
+Added current-info source candidate capture and destination routing contracts. Source candidates remain unsaved review candidates, and destination routes are suggestion-only. The helpers do not perform provider calls, external retrieval, SQL reads/writes, source persistence, autosave, proposed-action execution, or automatic memory conversion.

@@ -3506,3 +3506,14 @@ Boundary: provider interface only; noop provider remains blocked. No search prov
 - Added docs/qa/PHASE_16F_CITATION_RELIABILITY_FRESHNESS_ENGINE_SMOKE_CHECKLIST.md.
 - Added scripts/audit-phase-16f.mjs.
 - Updated package verification gates.
+
+## Phase 16G — Source Candidate Capture + Destination Router
+
+- Added src/lib/current-info-capture/current-info-source-candidate.ts.
+- Added src/lib/current-info-capture/current-info-destination-router.ts.
+- Added src/lib/current-info-capture/index.ts.
+- Added docs/contracts/PHASE_16G_SOURCE_CANDIDATE_CAPTURE_DESTINATION_ROUTER.md.
+- Added docs/phase-reports/PHASE_16G_SOURCE_CANDIDATE_CAPTURE_DESTINATION_ROUTER_REPORT.md.
+- Added docs/qa/PHASE_16G_SOURCE_CANDIDATE_CAPTURE_DESTINATION_ROUTER_SMOKE_CHECKLIST.md.
+- Added scripts/audit-phase-16g.mjs.
+- Updated package verification gates.

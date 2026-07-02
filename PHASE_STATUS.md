@@ -3173,3 +3173,25 @@ Protected:
 - No automatic memory conversion.
 
 Next step: Phase 16G — Source Candidate Capture Contract.
+
+## Phase 16G — Source Candidate Capture + Destination Router
+
+Status: Complete pending verification.
+
+Completed:
+- Source candidate capture contract.
+- Destination router contract.
+- Capture exports.
+- Audit and documentation.
+
+Protected:
+- No real provider activation.
+- No external retrieval.
+- No SQL reads or writes.
+- No UI route.
+- No source persistence.
+- No automatic save.
+- No proposed-action execution.
+- No automatic memory conversion.
+
+Next step: Phase 16H — Current-Info Review Queue Contract.

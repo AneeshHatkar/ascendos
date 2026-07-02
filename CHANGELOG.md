@@ -1674,3 +1674,10 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added current-info reliability helper.
 - Added current-info freshness helper.
 - Kept provider calls, network calls, SQL writes, source persistence, autosave, and automatic memory conversion disabled.
+
+## Phase 16G — Source Candidate Capture + Destination Router
+
+- Added current-info source candidate capture contract.
+- Added current-info destination router contract.
+- Kept routes suggestion-only and source candidates unsaved.
+- Kept provider calls, external retrieval, SQL writes, source persistence, autosave, proposed-action execution, and automatic memory conversion disabled.
