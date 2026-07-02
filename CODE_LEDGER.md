@@ -3517,3 +3517,14 @@ Boundary: provider interface only; noop provider remains blocked. No search prov
 - Added docs/qa/PHASE_16G_SOURCE_CANDIDATE_CAPTURE_DESTINATION_ROUTER_SMOKE_CHECKLIST.md.
 - Added scripts/audit-phase-16g.mjs.
 - Updated package verification gates.
+
+## Phase 16H — Current-Info Review Queue Contract
+
+- Added src/lib/current-info-review/current-info-review-queue-item.ts.
+- Added src/lib/current-info-review/current-info-review-decision.ts.
+- Added src/lib/current-info-review/index.ts.
+- Added docs/contracts/PHASE_16H_CURRENT_INFO_REVIEW_QUEUE_CONTRACT.md.
+- Added docs/phase-reports/PHASE_16H_CURRENT_INFO_REVIEW_QUEUE_CONTRACT_REPORT.md.
+- Added docs/qa/PHASE_16H_CURRENT_INFO_REVIEW_QUEUE_CONTRACT_SMOKE_CHECKLIST.md.
+- Added scripts/audit-phase-16h.mjs.
+- Updated package verification gates.

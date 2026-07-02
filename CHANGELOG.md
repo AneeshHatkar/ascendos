@@ -1681,3 +1681,10 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added current-info destination router contract.
 - Kept routes suggestion-only and source candidates unsaved.
 - Kept provider calls, external retrieval, SQL writes, source persistence, autosave, proposed-action execution, and automatic memory conversion disabled.
+
+## Phase 16H — Current-Info Review Queue Contract
+
+- Added current-info review queue item contract.
+- Added current-info review decision contract.
+- Kept review items unsaved and decisions non-executing.
+- Kept provider calls, external retrieval, SQL writes, source persistence, autosave, proposed-action execution, and automatic memory conversion disabled.

@@ -4641,3 +4641,7 @@ Added current-info evidence helpers for citation coverage, source reliability, a
 ## Phase 16G — Source Candidate Capture + Destination Router
 
 Added current-info source candidate capture and destination routing contracts. Source candidates remain unsaved review candidates, and destination routes are suggestion-only. The helpers do not perform provider calls, external retrieval, SQL reads/writes, source persistence, autosave, proposed-action execution, or automatic memory conversion.
+
+## Phase 16H — Current-Info Review Queue Contract
+
+Added current-info review queue item and review decision contracts. Review queue items remain unsaved, decisions are non-executing, and all source persistence, autosave, proposed-action execution, and automatic memory conversion remain disabled.
