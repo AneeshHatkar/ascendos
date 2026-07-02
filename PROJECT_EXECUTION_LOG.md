@@ -4729,3 +4729,23 @@ Boundary:
 - no writes
 - no approval/rejection execution
 - no automatic memory conversion
+
+## 2026-07-02 — Phase 16K Carnos Current-Info Integration
+
+Completed read-only Carnos current-info integration.
+
+Added:
+- Carnos current-info awareness panel
+- Carnos dashboard current-info summary wiring
+- source context preview
+- review-only candidate context preview
+- audit/source/candidate count visibility
+
+Boundary:
+- no provider calls
+- no external fetch
+- no writes
+- no approve/reject execution
+- no SQL migration
+- no API route
+- no automatic memory conversion

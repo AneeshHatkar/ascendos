@@ -5,6 +5,7 @@ import { CarnosMessageComposer } from "@/components/carnos/carnos-message-compos
 import { isProposedActionType } from "@/lib/actions/action-types";
 import {
   AuthenticatedDashboardShell,
+  CarnosCurrentInfoIntegrationPanel,
   CarnosMemoryVisibilityPanel,
   CarnosPanelV1,
   DataList,
@@ -15,8 +16,17 @@ import {
   type DataListItem,
 } from "@/components/dashboard";
 import type { ProposedActionContract } from "@/lib/actions/proposed-action-contracts";
-import { getDashboardDataSummary } from "@/lib/dashboard";
-import { listAiActions, listChatMessages, listChatSessions } from "@/lib/repositories";
+import {
+  getCurrentInfoDashboardDataSummary,
+  getDashboardDataSummary,
+} from "@/lib/dashboard";
+import {
+  listAiActions,
+  listChatMessages,
+  listChatSessions,
+  listWebSourceCandidates,
+  listWebSources,
+} from "@/lib/repositories";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { CarnosPersonaBoundaryPanel } from "@/components/carnos";
 import { CarnosVoicePanelIntegration } from "@/components/voice";
@@ -325,7 +335,17 @@ export default function CarnosPage() {
       >
         {async ({ user }) => {
           const supabase = await createSupabaseServerClient();
-          const dashboardData = await getDashboardDataSummary(supabase, user.id, "carnos");
+          const [
+            dashboardData,
+            currentInfoData,
+            currentInfoSources,
+            currentInfoCandidates,
+          ] = await Promise.all([
+            getDashboardDataSummary(supabase, user.id, "carnos"),
+            getCurrentInfoDashboardDataSummary(user.id),
+            listWebSources(user.id, { limit: 8 }),
+            listWebSourceCandidates(user.id, { limit: 8 }),
+          ]);
 
           const [sessions, actions, messages] = await Promise.all([
             readGroup(
@@ -378,6 +398,12 @@ export default function CarnosPage() {
 
           return (
             <>
+              <CarnosCurrentInfoIntegrationPanel
+                data={currentInfoData}
+                sources={currentInfoSources.data}
+                candidates={currentInfoCandidates.data}
+              />
+
               <CarnosPanelV1
                 data={dashboardData}
                 sessionCount={sessions.rows.length}

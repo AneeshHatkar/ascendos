@@ -1721,3 +1721,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Exported the current-info UI components from dashboard components.
 - Added Phase 16J docs, smoke checklist, and audit gate.
 - Wired `audit:phase16j` into verification.
+
+## Phase 16K — Carnos Current-Info Integration
+
+- Added read-only Carnos current-info integration panel.
+- Wired current-info summaries, sources, and review candidates into the Carnos dashboard.
+- Added Carnos guidance for source strength and review-only candidate handling.
+- Added Phase 16K docs, smoke checklist, and audit gate.
+- Wired `audit:phase16k` into verification.

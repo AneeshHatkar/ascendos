@@ -3273,3 +3273,15 @@ Safety:
 
 Next:
 - Phase 16J — Current-Info UI Components.
+
+## Phase 16K — Carnos Current-Info Integration
+
+Status: Complete pending verification and commit.
+
+Scope completed:
+- Read-only Carnos current-info awareness panel.
+- Carnos dashboard current-info summary wiring.
+- Source and candidate preview context for Carnos.
+
+Next:
+- Phase 16L — Career Web Source Integration.

@@ -3624,3 +3624,22 @@ Boundary:
 - no provider calls
 - no writes
 - no memory conversion
+
+## Phase 16K — Carnos Current-Info Integration
+
+Added:
+- `src/components/dashboard/carnos-current-info-integration-panel.tsx`
+- `scripts/audit-phase-16k.mjs`
+- Phase 16K contract/report/smoke checklist
+
+Updated:
+- `src/app/carnos/page.tsx`
+- `src/components/dashboard/index.ts`
+- `package.json`
+
+Boundary:
+- read-only Carnos awareness
+- no provider activation
+- no writes
+- no approval/rejection flow
+- no memory conversion
