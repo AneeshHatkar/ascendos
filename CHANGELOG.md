@@ -1729,3 +1729,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added Carnos guidance for source strength and review-only candidate handling.
 - Added Phase 16K docs, smoke checklist, and audit gate.
 - Wired `audit:phase16k` into verification.
+
+## Phase 16L — Career Web Source Integration
+
+- Added read-only Career web-source integration panel.
+- Wired job posting current-info sources into the Career dashboard.
+- Added career candidate review visibility.
+- Added Phase 16L docs, smoke checklist, and audit gate.
+- Wired `audit:phase16l` into verification.\n

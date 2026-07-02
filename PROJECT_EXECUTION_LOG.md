@@ -4749,3 +4749,24 @@ Boundary:
 - no SQL migration
 - no API route
 - no automatic memory conversion
+
+## 2026-07-02 — Phase 16L Career Web Source Integration
+
+Completed read-only Career web-source integration.
+
+Added:
+- Career current-info source panel
+- Career dashboard current-info summary wiring
+- job posting source visibility
+- career candidate review visibility
+- blocked/current-info safety visibility
+
+Boundary:
+- no provider calls
+- no external fetch
+- no job application execution
+- no writes
+- no approve/reject execution
+- no SQL migration
+- no API route
+- no automatic memory conversion\n

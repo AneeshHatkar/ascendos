@@ -3643,3 +3643,23 @@ Boundary:
 - no writes
 - no approval/rejection flow
 - no memory conversion
+
+## Phase 16L — Career Web Source Integration
+
+Added:
+- `src/components/dashboard/career-current-info-source-panel.tsx`
+- `scripts/audit-phase-16l.mjs`
+- Phase 16L contract/report/smoke checklist
+
+Updated:
+- `src/app/career/page.tsx`
+- `src/components/dashboard/index.ts`
+- `package.json`
+
+Boundary:
+- read-only career web-source visibility
+- no provider activation
+- no job application execution
+- no writes
+- no approval/rejection flow
+- no memory conversion\n

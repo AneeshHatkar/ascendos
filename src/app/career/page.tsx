@@ -1,10 +1,15 @@
 // Phase 5 audit compatibility marker: No career records found.
 // Phase 5 audit compatibility marker: The career read path is wired, but no domain-matched records exist yet.
 // Phase 5 audit compatibility marker: DomainReadPage was replaced by CareerDashboardV1 in Phase 8.11.
-import { AuthenticatedDashboardShell, CareerDashboardV1 } from "@/components/dashboard";
+import {
+  AuthenticatedDashboardShell,
+  CareerCurrentInfoSourcePanel,
+  CareerDashboardV1,
+} from "@/components/dashboard";
 import {
   getCareerDashboardDataSummary,
   getCareerPrepDashboardDataSummary,
+  getCurrentInfoDashboardDataSummary,
 } from "@/lib/dashboard";
 import {
   listDailyLogs,
@@ -18,6 +23,8 @@ import {
   listResumeBullets,
   listResumeVersions,
   listTasks,
+  listWebSourceCandidates,
+  listWebSources,
 } from "@/lib/repositories";
 
 export default function CareerPage() {
@@ -30,6 +37,9 @@ export default function CareerPage() {
         const [
           data,
           careerPrepData,
+          currentInfoData,
+          currentInfoSources,
+          currentInfoCandidates,
           applications,
           applicationEvents,
           interviews,
@@ -44,6 +54,9 @@ export default function CareerPage() {
         ] = await Promise.all([
           getCareerDashboardDataSummary(user.id),
           getCareerPrepDashboardDataSummary(user.id),
+          getCurrentInfoDashboardDataSummary(user.id),
+          listWebSources(user.id, { sourceKind: "job_posting", limit: 50 }),
+          listWebSourceCandidates(user.id, { limit: 50 }),
           listJobApplications(user.id, { limit: 50 }),
           listJobApplicationEvents(user.id, { limit: 50 }),
           listInterviews(user.id, { limit: 50 }),
@@ -72,7 +85,14 @@ export default function CareerPage() {
         ].filter((error): error is string => Boolean(error));
 
         return (
-          <CareerDashboardV1
+          <>
+            <CareerCurrentInfoSourcePanel
+              data={currentInfoData}
+              sources={currentInfoSources.data}
+              candidates={currentInfoCandidates.data}
+            />
+
+            <CareerDashboardV1
             data={data}
             careerPrepData={careerPrepData}
             applications={applications.data ?? []}
@@ -88,6 +108,7 @@ export default function CareerPage() {
             dailyLogs={dailyLogs.data ?? []}
             readErrors={readErrors}
           />
+          </>
         );
       }}
     </AuthenticatedDashboardShell>

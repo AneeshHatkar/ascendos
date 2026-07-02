@@ -63,3 +63,4 @@ export * from "./memory-audit-usage-transparency-panel";
 export * from "./cross-domain-memory-integration-panel";
 export * from "./current-info-ui-components";
 export * from "./carnos-current-info-integration-panel";
+export * from "./career-current-info-source-panel";
