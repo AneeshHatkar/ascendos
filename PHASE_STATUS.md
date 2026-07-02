@@ -3217,3 +3217,25 @@ Protected:
 - No automatic memory conversion.
 
 Next step: Phase 16I — Review-to-Save Source Confirmation Contract.
+
+## Phase 16H-B — Current-Info Duplicate Detection
+
+Status: Complete pending verification.
+
+Completed:
+- Duplicate detection contract.
+- Capture barrel export update.
+- Audit and documentation.
+
+Protected:
+- No real provider activation.
+- No external retrieval.
+- No SQL reads or writes.
+- No UI route.
+- No source persistence.
+- No automatic merge.
+- No automatic save.
+- No proposed-action execution.
+- No automatic memory conversion.
+
+Next step: Phase 16I — Web Current-Info Read Repository + Dashboard Helpers.

@@ -4645,3 +4645,7 @@ Added current-info source candidate capture and destination routing contracts. S
 ## Phase 16H — Current-Info Review Queue Contract
 
 Added current-info review queue item and review decision contracts. Review queue items remain unsaved, decisions are non-executing, and all source persistence, autosave, proposed-action execution, and automatic memory conversion remain disabled.
+
+## Phase 16H-B — Current-Info Duplicate Detection
+
+Added the missing duplicate detection contract for Phase 16H alignment. Destination routing already exists, and this patch adds duplicate detection before Phase 16I. Duplicate detection is review-only and does not merge, save, persist sources, write SQL, execute proposed actions, or convert anything into memory.

@@ -1688,3 +1688,9 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added current-info review decision contract.
 - Kept review items unsaved and decisions non-executing.
 - Kept provider calls, external retrieval, SQL writes, source persistence, autosave, proposed-action execution, and automatic memory conversion disabled.
+
+## Phase 16H-B — Current-Info Duplicate Detection
+
+- Added current-info duplicate detection contract.
+- Closed the Phase 16H duplicate-detection gap before Phase 16I.
+- Kept duplicate handling review-only with automatic merge, SQL writes, source persistence, autosave, proposed-action execution, and automatic memory conversion disabled.

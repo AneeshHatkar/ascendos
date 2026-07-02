@@ -3528,3 +3528,13 @@ Boundary: provider interface only; noop provider remains blocked. No search prov
 - Added docs/qa/PHASE_16H_CURRENT_INFO_REVIEW_QUEUE_CONTRACT_SMOKE_CHECKLIST.md.
 - Added scripts/audit-phase-16h.mjs.
 - Updated package verification gates.
+
+## Phase 16H-B — Current-Info Duplicate Detection
+
+- Added src/lib/current-info-capture/current-info-duplicate-detector.ts.
+- Updated src/lib/current-info-capture/index.ts.
+- Added docs/contracts/PHASE_16H_B_CURRENT_INFO_DUPLICATE_DETECTION_CONTRACT.md.
+- Added docs/phase-reports/PHASE_16H_B_CURRENT_INFO_DUPLICATE_DETECTION_REPORT.md.
+- Added docs/qa/PHASE_16H_B_CURRENT_INFO_DUPLICATE_DETECTION_SMOKE_CHECKLIST.md.
+- Added scripts/audit-phase-16h-b.mjs.
+- Updated package verification gates.
