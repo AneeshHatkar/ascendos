@@ -1667,3 +1667,10 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added current-info query classifier.
 - Added current-info safety gate.
 - Kept real provider calls, SQL writes, source persistence, autosave, and automatic memory conversion disabled.
+
+## Phase 16F — Citation, Reliability, and Freshness Engine
+
+- Added current-info citation coverage helper.
+- Added current-info reliability helper.
+- Added current-info freshness helper.
+- Kept provider calls, network calls, SQL writes, source persistence, autosave, and automatic memory conversion disabled.

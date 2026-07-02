@@ -3151,3 +3151,25 @@ Protected:
 - No automatic memory conversion.
 
 Next step: Phase 16F — Citation, Reliability, and Freshness Engine.
+
+## Phase 16F — Citation, Reliability, and Freshness Engine
+
+Status: Complete pending verification.
+
+Completed:
+- Citation coverage helper.
+- Reliability scoring helper.
+- Freshness labeling helper.
+- Evidence exports.
+- Audit and documentation.
+
+Protected:
+- No real provider activation.
+- No network calls.
+- No SQL reads or writes.
+- No UI route.
+- No source persistence.
+- No automatic save.
+- No automatic memory conversion.
+
+Next step: Phase 16G — Source Candidate Capture Contract.

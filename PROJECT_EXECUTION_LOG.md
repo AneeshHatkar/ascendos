@@ -4633,3 +4633,7 @@ Added a quiet verification wrapper so npm run check still runs the full project 
 ## Phase 16E — Query Classifier + Current-Info Safety Gate
 
 Added the current-info query classifier and safety gate. The classifier maps query kinds into safe current-info classes, and the safety gate blocks unsupported queries, private-mode retention, high-stakes review cases, real provider calls, autosave, and automatic memory conversion.
+
+## Phase 16F — Citation, Reliability, and Freshness Engine
+
+Added current-info evidence helpers for citation coverage, source reliability, and source freshness. The helpers remain contract-only and do not perform provider calls, network calls, SQL reads/writes, source persistence, autosave, or automatic memory conversion.

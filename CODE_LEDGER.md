@@ -3494,3 +3494,15 @@ Boundary: provider interface only; noop provider remains blocked. No search prov
 - Added docs/qa/PHASE_16E_QUERY_CLASSIFIER_CURRENT_INFO_SAFETY_GATE_SMOKE_CHECKLIST.md.
 - Added scripts/audit-phase-16e.mjs.
 - Updated package verification gates.
+
+## Phase 16F — Citation, Reliability, and Freshness Engine
+
+- Added src/lib/current-info-evidence/current-info-citation-engine.ts.
+- Added src/lib/current-info-evidence/current-info-reliability-engine.ts.
+- Added src/lib/current-info-evidence/current-info-freshness-engine.ts.
+- Added src/lib/current-info-evidence/index.ts.
+- Added docs/contracts/PHASE_16F_CITATION_RELIABILITY_FRESHNESS_ENGINE.md.
+- Added docs/phase-reports/PHASE_16F_CITATION_RELIABILITY_FRESHNESS_ENGINE_REPORT.md.
+- Added docs/qa/PHASE_16F_CITATION_RELIABILITY_FRESHNESS_ENGINE_SMOKE_CHECKLIST.md.
+- Added scripts/audit-phase-16f.mjs.
+- Updated package verification gates.
