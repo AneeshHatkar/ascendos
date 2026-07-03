@@ -1970,3 +1970,8 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 
 - Added final Phase 17 Memory/RAG fixture, final audit, completion report, and smoke checklist.
 - Completed Phase 17 Memory/RAG.
+
+## Phase 18A — Analytics/Experiments Scope Lock + Expanded Feature Contract
+
+- Locked expanded Phase 18 Analytics/Experiments scope and subchunk plan 18A through 18O.
+- Added feature map covering metric registry, data quality, analytics snapshots, experiments, insight quality, Carnos boundaries, privacy/sensitivity, anti-demo-data safeguards, and final completion requirements.

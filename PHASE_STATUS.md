@@ -3619,3 +3619,11 @@ Status: Complete pending verification and commit.
 Phase 17 Memory/RAG complete.
 
 Boundary: No memory_retrieval_events writes, no runtime retrieval, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase calls in preview layers, no SQL reads/writes in preview layers, No Carnos prompt/context injection, no background scanning, no write-enabled forget/delete execution.
+
+## Phase 18A — Analytics/Experiments Scope Lock + Expanded Feature Contract
+
+Status: Complete pending verification and commit.
+
+Locked build chunks: 18A Scope Lock, 18B Schema Discovery, 18C Metric Registry/Data Quality, 18D Analytics Snapshots, 18E Self-Experiment Contracts, 18F Insight Quality/Provenance, 18G Analytics Repositories, 18H Experiment Repositories, 18I Trend/Correlation/Comparison Engine, 18J Experiment Evaluation Engine, 18K Analytics Dashboard UI, 18L Self-Experiment Lab UI, 18M Carnos Analytics Explanation Boundary, 18N Anti-Demo-Data + Privacy/Sensitivity Audit, 18O Final Fixtures + Completion Report.
+
+Boundary: no fake analytics, no hardcoded demo data as final state, no false causation, no silent AI writes, no hidden memory use, no Phase 19/20/21 leakage.

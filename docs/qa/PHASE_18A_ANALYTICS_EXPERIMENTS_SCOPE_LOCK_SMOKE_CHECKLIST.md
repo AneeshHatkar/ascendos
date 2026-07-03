@@ -1,0 +1,46 @@
+# Phase 18A Scope Lock Smoke Checklist
+
+- [ ] Phase 18 canonical scope is documented.
+- [ ] Expanded analytics/experiments feature map is documented.
+- [ ] Build chunks 18A through 18O are documented.
+- [ ] Metric Registry is included.
+- [ ] Data Completeness Score is included.
+- [ ] Analytics Snapshot System is included.
+- [ ] Weekly/monthly comparison is included.
+- [ ] Self-Experiment Lab is included.
+- [ ] Experiment templates are included.
+- [ ] Before/During/After experiment lifecycle is included.
+- [ ] Baseline tracking is included.
+- [ ] Confounder tracking is included.
+- [ ] Invalid experiment states are included.
+- [ ] Lessons learned system is included.
+- [ ] Insight Quality Levels are included.
+- [ ] Analytics Provenance is included.
+- [ ] Correlation-not-causation guardrails are included.
+- [ ] Analytics repository boundaries are included.
+- [ ] Experiment repository boundaries are included.
+- [ ] Trend/correlation/comparison engines are included.
+- [ ] Minimum data rules are included.
+- [ ] Chart type boundaries are included.
+- [ ] Analytics Dashboard is included.
+- [ ] Domain-specific analytics cards are included.
+- [ ] Insight Inbox is included.
+- [ ] Action-from-insight preview is included.
+- [ ] Self-Experiment Lab UI is included.
+- [ ] Carnos analytics explanation mode is included.
+- [ ] Analytics-to-memory boundary is included.
+- [ ] Privacy/sensitivity labels are included.
+- [ ] Anti-demo-data audit is included.
+- [ ] Manual correction readiness is included.
+- [ ] Time range consistency is included.
+- [ ] Analytics preferences / pinned metrics readiness is included.
+- [ ] Export-ready report boundary is included.
+- [ ] Final fixtures/audit/report are included.
+- [ ] No-demo-data rule is included.
+- [ ] No-fake-insight rule is included.
+- [ ] No-false-causation rule is included.
+- [ ] No-silent-AI-write rule is included.
+- [ ] No-hidden-memory-use rule is included.
+- [ ] No Phase 19/20/21 leakage rule is included.
+- [ ] `npm run audit:phase18a` passes.
+- [ ] `npm run check` passes.

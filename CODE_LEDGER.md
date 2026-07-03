@@ -4235,3 +4235,13 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added final Phase 17 contract, completion report, smoke checklist, and audit script.
 - Added `audit:phase17q` to the package verification chain.
 - Marked Phase 17 Memory/RAG complete.
+
+## Phase 18A — Analytics/Experiments Scope Lock + Expanded Feature Contract
+
+- Added `docs/contracts/PHASE_18A_ANALYTICS_EXPERIMENTS_SCOPE_LOCK.md`.
+- Added `docs/roadmap/PHASE_18_ANALYTICS_EXPERIMENTS_FEATURE_MAP.md`.
+- Added `docs/roadmap/PHASE_18_ANALYTICS_EXPERIMENTS_BUILD_CHUNKS.md`.
+- Added `docs/qa/PHASE_18A_ANALYTICS_EXPERIMENTS_SCOPE_LOCK_SMOKE_CHECKLIST.md`.
+- Added `docs/phase-reports/PHASE_18A_ANALYTICS_EXPERIMENTS_SCOPE_LOCK_REPORT.md`.
+- Added `scripts/audit-phase-18a.mjs`.
+- Added `audit:phase18a` to package verification chain.
