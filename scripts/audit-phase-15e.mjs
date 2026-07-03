@@ -176,6 +176,7 @@ const migrations = fs
 const allowedMigrations = new Set([
   "0024_phase15_memory_sql_foundation.sql",
   "0025_phase15_memory_parent_ownership_guards.sql",
+  "0028_memory_rag_schema_alignment.sql",
 ]);
 
 for (const file of migrations) {

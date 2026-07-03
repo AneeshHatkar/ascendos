@@ -1886,3 +1886,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added schema ownership map for Phase 17C planning.
 - Added Phase 17B completion report, smoke checklist, and audit.
 - Preserved schema/discovery-first rule before Phase 17C.
+
+## Memory/RAG Database Schema Foundation
+
+- Added additive Memory/RAG schema alignment migration.
+- Added embedding metadata, retrieval event, and conflict schema foundations.
+- Extended existing memory and retrieval tables with alignment fields.
+- Added RLS, indexes, and parent ownership guards for new Memory/RAG tables.
+- Added schema contract, report, smoke checklist, and audit.

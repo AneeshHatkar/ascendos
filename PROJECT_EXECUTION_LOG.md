@@ -5124,3 +5124,17 @@ Summary:
 - Locked no silent approved memory writes, no fake embeddings, no background memory extraction, and runtime-deferred voice memory flow.
 - Added schema discovery requirement before Phase 17C.
 - Phase 17B intentionally adds no schema, API route, UI component, repository, provider runtime, or Memory/RAG runtime implementation.
+
+## Memory/RAG Database Schema Foundation
+
+Status: Complete pending verification
+Commit: pending
+
+Summary:
+- Reviewed schema discovery output before writing migration.
+- Confirmed existing Memory SQL foundation already includes memory_candidates, memory_items, knowledge_items, retrieval_logs, memory_usage_logs, memory_events, and review queue tables.
+- Added additive schema alignment migration instead of duplicating the existing foundation.
+- Added memory embedding metadata records, retrieval event records, conflict groups, and conflict members.
+- Extended memory_candidates, memory_items, and retrieval_logs with alignment fields for evidence, source reliability, locking, forgetting, supersession, provider status, and retrieval explanation.
+- Added RLS, indexes, and parent ownership guards for new Memory/RAG tables.
+- Preserved no fake embeddings, no runtime retrieval, no provider activation, no repository, no UI, and no standalone memory route.

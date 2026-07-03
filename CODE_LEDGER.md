@@ -4060,3 +4060,29 @@ Boundary:
 - No repository added.
 - No provider runtime added.
 - No Memory/RAG runtime implementation added.
+
+## Memory/RAG Database Schema Foundation
+
+Files added:
+- supabase/migrations/0028_memory_rag_schema_alignment.sql
+- docs/contracts/PHASE_17C_MEMORY_RAG_SCHEMA_ALIGNMENT_CONTRACT.md
+- docs/phase-reports/PHASE_17C_MEMORY_RAG_SCHEMA_FOUNDATION_REPORT.md
+- docs/qa/PHASE_17C_MEMORY_RAG_SCHEMA_SMOKE_CHECKLIST.md
+- scripts/audit-phase-17c.mjs
+
+Files updated:
+- package.json
+- PROJECT_EXECUTION_LOG.md
+- CODE_LEDGER.md
+- CHANGELOG.md
+- PHASE_STATUS.md
+
+Boundary:
+- Schema only.
+- No runtime retrieval.
+- No provider activation.
+- No generated embeddings.
+- No vector search.
+- No API route.
+- No UI.
+- No repository implementation.

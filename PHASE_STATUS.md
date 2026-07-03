@@ -3480,3 +3480,18 @@ Scope:
 Next:
 - Phase 17C — Memory/RAG Database Schema.
 - Before 17C, schema discovery output must be requested and reviewed.
+
+## Memory/RAG Database Schema Foundation
+
+Status: Complete pending verification
+
+Scope:
+- Added additive database schema alignment on top of the existing Memory SQL foundation.
+- Preserved `memory_candidates` as the memory inbox table.
+- Preserved `memory_items` as the approved-memory table.
+- Preserved `knowledge_items` as the knowledge vault table.
+- Added embedding metadata, retrieval event, and conflict schema foundations.
+- No runtime retrieval, provider activation, generated embeddings, API, UI, or repository implementation is added.
+
+Next:
+- TypeScript contracts and validators aligned to the schema.
