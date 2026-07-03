@@ -70,7 +70,6 @@ const requiredMarkers = {
 };
 
 const forbiddenPaths = [
-  "src/components/carnos/carnos-orb.tsx",
   "src/components/carnos/carnos-companion-widget.tsx",
   "src/components/carnos/carnos-companion-dock.tsx",
   "src/components/carnos/carnos-capability-matrix-panel.tsx",

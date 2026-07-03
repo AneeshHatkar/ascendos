@@ -1811,3 +1811,13 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added reduced-motion and static fallback requirements.
 - Added screen-reader labels and truthful state accessibility descriptions.
 - Added `audit:phase16_5c` and wired it into verification.
+
+## Phase 16.5D — Carnos Orb / Avatar Component
+
+- Added visual-only `CarnosOrb` component.
+- Added state-based orb visuals using Carnos identity tokens.
+- Added mask/core/ring/aura visual structure.
+- Added state-specific source, memory, privacy, action, and warning markers.
+- Added reduced-motion and static fallback support.
+- Added accessible aria labels and figcaption fallback.
+- Added `audit:phase16_5d` and wired it into verification.\n

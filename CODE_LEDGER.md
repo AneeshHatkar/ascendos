@@ -3852,3 +3852,25 @@ Boundary:
 - token/accessibility-only
 - no UI/runtime activation
 - no voice/web/Python/document/memory/action execution
+
+## Phase 16.5D — Carnos Orb / Avatar Component
+
+Added:
+- `src/components/carnos/carnos-orb.tsx`
+- `src/components/carnos/index.ts`
+- `docs/contracts/PHASE_16_5D_CARNOS_ORB_COMPONENT_CONTRACT.md`
+- `docs/phase-reports/PHASE_16_5D_CARNOS_ORB_COMPONENT_REPORT.md`
+- `docs/qa/PHASE_16_5D_CARNOS_ORB_COMPONENT_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-16-5d.mjs`
+
+Updated:
+- `scripts/audit-phase-16-5c.mjs`
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- visual-only orb/avatar component
+- no runtime activation
+- no voice/web/Python/document/memory/action execution\n
