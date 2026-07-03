@@ -3495,3 +3495,15 @@ Scope:
 
 Next:
 - TypeScript contracts and validators aligned to the schema.
+
+## Memory/RAG TypeScript Contracts + Validators
+
+Status: Complete pending verification
+
+Scope:
+- Added contracts and validators for the Memory/RAG schema foundation.
+- Covered candidate alignment, approved-memory alignment, embedding records, retrieval events, conflict groups, and conflict members.
+- No repository, Supabase calls, runtime retrieval, generated embeddings, vector search, provider calls, UI, or Carnos prompt injection added.
+
+Next:
+- Memory inbox repository.

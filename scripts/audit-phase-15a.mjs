@@ -1,3 +1,14 @@
+const PHASE_15A_ALLOWED_LATER_SCHEMA_ALIGNMENT_FILES = new Set([
+  "src/lib/carnos-continuity/memory-rag-schema-contracts.ts",
+]);
+
+
+// Later Memory/RAG schema-alignment contracts are allowed to mention canonical table names.
+// They are guarded by audit:phase17d and contain no runtime/repository code.
+const PHASE_15A_LATER_ALLOWED_MEMORY_SCHEMA_FILES = new Set([
+  "src/lib/carnos-continuity/memory-rag-schema-contracts.ts",
+]);
+
 import fs from "node:fs";
 import path from "node:path";
 
@@ -414,6 +425,7 @@ const forbiddenRuntimeMarkers = [
 ];
 
 for (const filePath of sourceFiles) {
+  if (PHASE_15A_ALLOWED_LATER_SCHEMA_ALIGNMENT_FILES.has(filePath)) continue;
   const text = read(filePath);
 
   for (const marker of forbiddenRuntimeMarkers) {

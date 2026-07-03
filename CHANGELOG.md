@@ -1894,3 +1894,10 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Extended existing memory and retrieval tables with alignment fields.
 - Added RLS, indexes, and parent ownership guards for new Memory/RAG tables.
 - Added schema contract, report, smoke checklist, and audit.
+
+## Memory/RAG TypeScript Contracts + Validators
+
+- Added schema-aligned Memory/RAG TypeScript contracts.
+- Added schema-aligned Memory/RAG validators.
+- Exported new Memory/RAG schema contracts and validators from the Carnos continuity index.
+- Added audit, contract, report, and smoke checklist.

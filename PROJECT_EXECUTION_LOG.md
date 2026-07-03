@@ -5138,3 +5138,14 @@ Summary:
 - Extended memory_candidates, memory_items, and retrieval_logs with alignment fields for evidence, source reliability, locking, forgetting, supersession, provider status, and retrieval explanation.
 - Added RLS, indexes, and parent ownership guards for new Memory/RAG tables.
 - Preserved no fake embeddings, no runtime retrieval, no provider activation, no repository, no UI, and no standalone memory route.
+
+## Memory/RAG TypeScript Contracts + Validators
+
+Status: Complete pending verification
+Commit: pending
+
+Summary:
+- Added schema-aligned TypeScript contracts for Memory/RAG schema records.
+- Added validators for candidate alignment, approved-memory alignment, embedding records, retrieval events, conflict groups, and conflict members.
+- Exported the new contracts and validators through the existing Carnos continuity index.
+- Preserved boundaries: no repository, no Supabase calls, no runtime retrieval, no generated embeddings, no vector search, no provider calls, and no Carnos prompt injection.

@@ -4086,3 +4086,30 @@ Boundary:
 - No API route.
 - No UI.
 - No repository implementation.
+
+## Memory/RAG TypeScript Contracts + Validators
+
+Files added:
+- src/lib/carnos-continuity/memory-rag-schema-contracts.ts
+- src/lib/carnos-continuity/memory-rag-schema-validators.ts
+- docs/contracts/PHASE_17D_MEMORY_RAG_SCHEMA_CONTRACTS.md
+- docs/phase-reports/PHASE_17D_MEMORY_RAG_SCHEMA_CONTRACTS_REPORT.md
+- docs/qa/PHASE_17D_MEMORY_RAG_SCHEMA_CONTRACTS_SMOKE_CHECKLIST.md
+- scripts/audit-phase-17d.mjs
+
+Files updated:
+- src/lib/carnos-continuity/index.ts
+- package.json
+- PROJECT_EXECUTION_LOG.md
+- CODE_LEDGER.md
+- CHANGELOG.md
+- PHASE_STATUS.md
+
+Boundary:
+- Types and validators only.
+- No repository.
+- No Supabase calls.
+- No runtime retrieval.
+- No generated embeddings.
+- No vector search.
+- No provider calls.

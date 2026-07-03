@@ -23,3 +23,5 @@ export * from "./forget-delete-derived-records";
 
 export * from "./memory-audit-usage-transparency";
 export * from "./cross-domain-integration-preview";
+export * from "./memory-rag-schema-contracts";
+export * from "./memory-rag-schema-validators";
