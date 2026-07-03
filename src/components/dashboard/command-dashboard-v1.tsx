@@ -11,6 +11,7 @@ import {
   type AdminFinanceDashboardDataResult,
   type DashboardDataResult,
 } from "@/lib/dashboard";
+import { CarnosLightweightCompanionPanel } from "./carnos-lightweight-companion-panel";
 
 interface CommandDashboardV1Props {
   data?: DashboardDataResult;
@@ -97,6 +98,20 @@ export function CommandDashboardV1({
 
   return (
     <div className="space-y-6">
+      <CarnosLightweightCompanionPanel />
+
+      <div className="sr-only" data-carnos-command-dashboard-lightweight-companion-markers>
+        Phase 16.5I Command/Dashboard Lightweight Companion Integration.
+        CarnosLightweightCompanionPanel.
+        CarnosCompanionDock.
+        data-carnos-dashboard-presence.
+        data-carnos-command-presence.
+        visual-only dashboard companion.
+        display-only companion.
+        capability truthfulness.
+        confirmation boundary.
+      </div>
+
       <section className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-sm shadow-black/20">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div className="space-y-2">

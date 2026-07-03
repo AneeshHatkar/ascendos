@@ -1855,3 +1855,10 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added page hero, page-level boundary cards, and display-only runtime boundary copy.
 - Added metadata for the Carnos page.
 - Added `audit:phase16_5h` and wired it into verification.
+
+## Phase 16.5I — Command/Dashboard Lightweight Companion Integration
+
+- Added lightweight visual Carnos companion presence to Command/dashboard.
+- Added `CarnosLightweightCompanionPanel`.
+- Reused compact `CarnosCompanionDock`.
+- Preserved visual-only/runtime-deferred boundaries.

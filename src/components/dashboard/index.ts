@@ -69,3 +69,4 @@ export * from "./knowledge-vault-source-bridge-panel";
 export * from "./current-info-review-to-save-panel";
 export * from "./current-info-privacy-retention-panel";
 export * from "./current-info-web-source-audit-trail-panel";
+export * from "./carnos-lightweight-companion-panel";

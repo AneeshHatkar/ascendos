@@ -3969,3 +3969,25 @@ Updated:
 Boundary:
 - page integration only
 - no runtime activation
+
+## Phase 16.5I — Command/Dashboard Lightweight Companion Integration
+
+Files added:
+- `src/components/dashboard/carnos-lightweight-companion-panel.tsx`
+- `docs/contracts/PHASE_16_5I_COMMAND_DASHBOARD_LIGHTWEIGHT_COMPANION_CONTRACT.md`
+- `docs/phase-reports/PHASE_16_5I_COMMAND_DASHBOARD_LIGHTWEIGHT_COMPANION_REPORT.md`
+- `docs/qa/PHASE_16_5I_COMMAND_DASHBOARD_LIGHTWEIGHT_COMPANION_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-16-5i.mjs`
+
+Files updated:
+- `src/components/dashboard/command-dashboard-v1.tsx`
+- `src/components/dashboard/index.ts`
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- Visual-only dashboard integration.
+- No runtime activation.
