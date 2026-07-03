@@ -1,0 +1,25 @@
+# Phase 17O Carnos Memory Integration Panel Smoke Checklist
+
+- [ ] `CarnosMemoryIntegrationPanel` renders a preview-only integration panel.
+- [ ] Carnos allowed memory preview is visible.
+- [ ] Carnos blocked memory actions are visible.
+- [ ] Carnos memory boundary visibility is shown.
+- [ ] Carnos memory audit visibility is shown.
+- [ ] Carnos truthfulness guard is visible.
+- [ ] Memory context pack is visible to the user.
+- [ ] Prompt injection count stays zero.
+- [ ] No hidden memory use is claimed.
+- [ ] No autonomous memory use is allowed.
+- [ ] No memory_retrieval_events writes occur.
+- [ ] No runtime retrieval occurs.
+- [ ] No embeddings are generated.
+- [ ] No semantic retrieval is activated.
+- [ ] No provider calls occur.
+- [ ] No vector search occurs.
+- [ ] No Supabase calls occur.
+- [ ] No SQL reads or writes occur.
+- [ ] No Carnos prompt/context injection occurs.
+- [ ] No background scanning occurs.
+- [ ] No approve/reject/delete/forget mutations occur.
+- [ ] `npm run audit:phase17o` passes.
+- [ ] `npm run check` passes.

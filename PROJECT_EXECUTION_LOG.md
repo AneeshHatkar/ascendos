@@ -5221,3 +5221,7 @@ Added deterministic preview-only retrieval audit trail and retrieval explanation
 ## Phase 17N — Memory/RAG UI
 
 Added preview-only Memory/RAG UI component for context-pack previews, retrieval audit trail previews, visible boundaries, disabled write actions, loading states, empty states, and error states. Boundary preserved: no memory_retrieval_events writes, no runtime retrieval, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, no Carnos prompt/context injection, no background scanning, and no approve/reject/delete/forget mutations.
+
+## Phase 17O — Carnos Memory Integration Panel
+
+Added preview-only Carnos Memory Integration Panel showing allowed memory preview, blocked/deferred memory actions, Carnos memory boundaries, audit visibility, and truthfulness guard. Boundary preserved: no memory_retrieval_events writes, no runtime retrieval, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, no Carnos prompt/context injection, no background scanning, no approve/reject/delete/forget mutations, and no autonomous memory use.

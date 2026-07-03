@@ -1955,3 +1955,8 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 
 - Added preview-only Memory/RAG UI component.
 - Added visible no-runtime boundaries and disabled write-action surfaces.
+
+## Phase 17O — Carnos Memory Integration Panel
+
+- Added preview-only Carnos Memory Integration Panel.
+- Added allowed-preview, blocked-action, audit-visibility, and truthfulness-guard surfaces.

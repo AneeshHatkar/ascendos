@@ -4216,3 +4216,9 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `src/components/memory-rag/MemoryRagPreviewPanel.tsx`.
 - Added `src/components/memory-rag/index.ts`.
 - Added Phase 17N contract, report, smoke checklist, audit script, and package check chain entry.
+
+## Phase 17O — Carnos Memory Integration Panel
+
+- Added `src/components/memory-rag/CarnosMemoryIntegrationPanel.tsx`.
+- Exported Carnos Memory Integration Panel from `src/components/memory-rag/index.ts`.
+- Added Phase 17O contract, report, smoke checklist, audit script, and package check chain entry.
