@@ -10,3 +10,4 @@ export * from "./timeline-analytics-compatibility";
 export * from "./evidence-attachment-boundaries";
 export * from "./repository-rls-audit-ownership";
 export * from "./custom-trackers-dashboard-view-model";
+export * from "./phase19-completion-proof";
