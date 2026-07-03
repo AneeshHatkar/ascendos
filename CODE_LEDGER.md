@@ -4343,3 +4343,14 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `docs/phase-reports/PHASE_18H_EXPERIMENT_REPOSITORY_BOUNDARIES_REPORT.md`.
 - Added `scripts/audit-phase-18h.mjs`.
 - Added `audit:phase18h` to package verification chain.
+
+## Trend Correlation Comparison Engine
+
+- Added `src/lib/analytics-experiments/trend-correlation-comparison-engine.ts`.
+- Updated `src/lib/analytics-experiments/index.ts`.
+- Added `docs/fixtures/phase18-analytics-experiments/phase18i_trend_correlation_comparison_engine_fixture.json`.
+- Added `docs/contracts/PHASE_18I_TREND_CORRELATION_COMPARISON_ENGINE.md`.
+- Added `docs/qa/PHASE_18I_TREND_CORRELATION_COMPARISON_ENGINE_SMOKE_CHECKLIST.md`.
+- Added `docs/phase-reports/PHASE_18I_TREND_CORRELATION_COMPARISON_ENGINE_REPORT.md`.
+- Added `scripts/audit-phase-18i.mjs`.
+- Added `audit:phase18i` to package verification chain.

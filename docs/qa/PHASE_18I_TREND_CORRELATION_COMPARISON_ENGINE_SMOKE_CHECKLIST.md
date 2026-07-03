@@ -1,0 +1,45 @@
+# Phase 18I Trend Correlation Comparison Engine Smoke Checklist
+
+- [ ] Trend/correlation/comparison engine implementation exists.
+- [ ] Analytics experiments index exports trend/correlation/comparison engine.
+- [ ] Engine fixture exists.
+- [ ] Engine mode includes trend.
+- [ ] Engine mode includes comparison.
+- [ ] Engine mode includes correlation.
+- [ ] Trend direction includes increasing.
+- [ ] Trend direction includes decreasing.
+- [ ] Trend direction includes stable.
+- [ ] Trend direction includes volatile.
+- [ ] Trend direction includes insufficient_data.
+- [ ] Trend direction includes invalid.
+- [ ] Comparison direction includes up.
+- [ ] Comparison direction includes down.
+- [ ] Comparison direction includes unchanged.
+- [ ] Correlation direction includes positive.
+- [ ] Correlation direction includes negative.
+- [ ] Correlation direction includes none.
+- [ ] Correlation strength includes strong.
+- [ ] Correlation strength includes moderate.
+- [ ] Correlation strength includes weak.
+- [ ] Correlation strength includes none.
+- [ ] Confidence includes high.
+- [ ] Confidence includes medium.
+- [ ] Confidence includes low.
+- [ ] Trend slope scoring exists.
+- [ ] Volatility detection exists.
+- [ ] Comparison percent change calculation exists.
+- [ ] Pearson correlation coefficient calculation exists.
+- [ ] Minimum trend data gate exists.
+- [ ] Minimum comparison window data gate exists.
+- [ ] Minimum correlation matched data gate exists.
+- [ ] Disclosure requirement generation exists.
+- [ ] Carnos explanation limits exist.
+- [ ] Correlation-not-causation guardrails exist.
+- [ ] No runtime SQL reads are added.
+- [ ] No Supabase client calls are added.
+- [ ] No schema writes are added.
+- [ ] No fake analytics data is added.
+- [ ] No memory writes are added.
+- [ ] No action execution is added.
+- [ ] npm run audit:phase18i passes.
+- [ ] npm run check passes.

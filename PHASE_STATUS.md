@@ -3683,3 +3683,9 @@ Added deterministic analytics repository boundary contracts for read intents, re
 Status: Complete pending verification and commit.
 
 Added deterministic experiment repository boundary contracts for read intents, repository sources, capture modes, freshness labels, template plans, source-map requirements, offline capture readiness, sync queue-before-write requirements, Carnos disclosure, and future runtime implementation safety. Boundary: no schema writes, no Supabase calls, no fake experiment data, no memory writes, no action execution.
+
+## Trend Correlation Comparison Engine
+
+Status: Complete pending verification and commit.
+
+Added deterministic trend/correlation/comparison engine code with minimum data gates, slope scoring, volatility detection, comparison percent-change logic, Pearson correlation scoring, confidence labels, disclosure generation, and no-causality guardrails. Boundary: no schema writes, no Supabase calls, no fake analytics data, no memory writes, no action execution.

@@ -2012,3 +2012,7 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 ## Experiment Repository Boundaries
 
 - Added experiment repository boundary validation layer with read intents, source routing, capture modes, freshness labels, template plan validation, sync queue readiness, Carnos explanation limits, and no fake experiment/read/write guardrails.
+
+## Trend Correlation Comparison Engine
+
+- Added deterministic analytics engine logic for trends, comparisons, correlations, confidence levels, disclosure requirements, and no-causality Carnos explanation limits.

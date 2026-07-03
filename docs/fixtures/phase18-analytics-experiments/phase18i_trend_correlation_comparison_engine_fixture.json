@@ -1,0 +1,97 @@
+{
+  "phase": "18I",
+  "title": "Trend Correlation Comparison Engine",
+  "engine_modes": [
+    "trend",
+    "comparison",
+    "correlation"
+  ],
+  "trend_directions": [
+    "increasing",
+    "decreasing",
+    "stable",
+    "volatile",
+    "insufficient_data",
+    "invalid"
+  ],
+  "comparison_directions": [
+    "up",
+    "down",
+    "unchanged",
+    "insufficient_data",
+    "invalid"
+  ],
+  "correlation_directions": [
+    "positive",
+    "negative",
+    "none",
+    "insufficient_data",
+    "invalid"
+  ],
+  "correlation_strengths": [
+    "strong",
+    "moderate",
+    "weak",
+    "none",
+    "insufficient_data",
+    "invalid"
+  ],
+  "confidence_levels": [
+    "high",
+    "medium",
+    "low",
+    "insufficient_data",
+    "invalid"
+  ],
+  "coded_capabilities": [
+    "trend direction classification",
+    "trend slope scoring",
+    "volatility detection",
+    "comparison window evaluation",
+    "percent change calculation",
+    "correlation coefficient calculation",
+    "correlation strength classification",
+    "minimum data gates",
+    "confidence classification",
+    "disclosure requirement generation",
+    "correlation-not-causation guardrails",
+    "Carnos explanation limits"
+  ],
+  "validator_rules": [
+    "Trend metric id is required",
+    "Trend analysis must be user scoped",
+    "Trend analysis must not allow causal claims",
+    "Trend minimum data points must be at least 2",
+    "Trend analysis has insufficient data",
+    "Comparison metric id is required",
+    "Comparison analysis must be user scoped",
+    "Comparison analysis must not allow causal claims",
+    "Comparison minimum data points per window must be at least 2",
+    "Correlation primary metric id is required",
+    "Correlation secondary metric id is required",
+    "Correlation metrics must be different",
+    "Correlation analysis must be user scoped",
+    "Correlation analysis must not allow causal claims",
+    "Correlation minimum matched data points must be at least 7",
+    "Correlation analysis has insufficient matched data"
+  ],
+  "boundaries": {
+    "runtime_data_reads_enabled": false,
+    "schema_writes_enabled": false,
+    "supabase_calls_enabled": false,
+    "fake_analytics_data_enabled": false,
+    "local_storage_core_data_enabled": false,
+    "memory_write_enabled": false,
+    "action_execution_enabled": false,
+    "causal_claims_allowed": false,
+    "local_carnos_runtime_required": false,
+    "deterministic_engine_implemented": true
+  },
+  "source_modes": [
+    "online_source_of_truth",
+    "eligible_offline_cache",
+    "mixed_online_offline",
+    "unsynced_local",
+    "deterministic_preview"
+  ]
+}
