@@ -5,3 +5,4 @@ export * from "./schema-versioning-archive-boundaries";
 export * from "./template-frequency-semantics";
 export * from "./privacy-carnos-permissions";
 export * from "./carnos-proposals-review-queue";
+export * from "./dashboard-placement-rules";
