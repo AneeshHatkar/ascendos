@@ -1,6 +1,7 @@
 const PHASE_15A_ALLOWED_LATER_SCHEMA_ALIGNMENT_FILES = new Set([
   "src/lib/carnos-continuity/memory-rag-schema-contracts.ts",
   "src/lib/repositories/memory-inbox-write.ts",
+  "src/lib/repositories/approved-memory-write.ts",
 ]);
 
 

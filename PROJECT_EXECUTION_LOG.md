@@ -5157,3 +5157,11 @@ Summary:
 - Added create/list/get/update/reject/archive/mark-sensitivity candidate operations.
 - Preserved no-approval, no-embedding, no-retrieval, no-provider, no-background-scan boundaries.
 - Added audit:phase17e and wired it into full check.
+
+## Phase 17F — Approved Memory Repository + Approval Flow
+
+- Added explicit approved-memory repository boundary.
+- Added candidate approval bridge from `memory_candidates` to `memory_items`.
+- Added candidate linkage through `approved_memory_item_id`.
+- Added lifecycle audit event writes to `memory_events`.
+- Preserved boundaries: no embeddings, no retrieval, no Carnos context injection, no provider calls, no background approval.

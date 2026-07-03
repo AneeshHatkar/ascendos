@@ -1907,3 +1907,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 
 - Added safe memory candidate repository operations for the memory inbox.
 - Added audit coverage for candidate-only persistence boundaries.
+
+## Phase 17F — Approved Memory Repository + Approval Flow
+
+- Added approved-memory repository.
+- Added explicit candidate approval flow.
+- Added approved memory archive/forget/lock/update helpers.
+- Added memory lifecycle event persistence.
+- Added 17F audit and documentation.

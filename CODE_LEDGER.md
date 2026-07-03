@@ -4124,3 +4124,19 @@ Boundary:
 - `docs/phase-reports/PHASE_17E_MEMORY_INBOX_REPOSITORY_REPORT.md` — completion report.
 - `docs/qa/PHASE_17E_MEMORY_INBOX_REPOSITORY_SMOKE_CHECKLIST.md` — smoke checklist.
 - `scripts/audit-phase-15a.mjs` — allowlists the official later repository file for older scope-lock compatibility.
+
+## Phase 17F — Approved Memory Repository + Approval Flow
+
+- `src/lib/repositories/approved-memory-write.ts`
+  - Approved memory write repository.
+  - Candidate approval bridge.
+  - Approved memory lifecycle helpers.
+  - Memory lifecycle event writer.
+- `scripts/audit-phase-17f.mjs`
+  - Verifies repository, docs, boundaries, package script, and Phase 15A allowlist.
+- `docs/contracts/PHASE_17F_APPROVED_MEMORY_REPOSITORY.md`
+  - Approved memory repository contract.
+- `docs/phase-reports/PHASE_17F_APPROVED_MEMORY_REPOSITORY_REPORT.md`
+  - Completion report.
+- `docs/qa/PHASE_17F_APPROVED_MEMORY_REPOSITORY_SMOKE_CHECKLIST.md`
+  - Smoke checklist.

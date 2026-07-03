@@ -3514,3 +3514,19 @@ Next:
 - Status: Complete pending commit.
 - Current completed step: Memory Inbox Repository.
 - Next step: Approved Memory Repository + Approval Flow.
+
+## Phase 17F — Approved Memory Repository + Approval Flow
+
+Status: Complete pending verification.
+
+Adds:
+- `memory_items` approved-memory write boundary.
+- `memory_candidates.approved_memory_item_id` approval link.
+- `memory_events` lifecycle event persistence.
+
+Does not add:
+- embeddings
+- retrieval runtime
+- vector search
+- Carnos prompt injection
+- background approval
