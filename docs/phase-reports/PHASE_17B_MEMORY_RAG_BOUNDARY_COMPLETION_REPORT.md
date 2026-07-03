@@ -1,7 +1,7 @@
 # Phase 17B — Boundary + Capability + Schema Ownership Completion Report
 
-Status: Complete pending verification  
-Phase: 17B  
+Status: Complete pending verification
+Phase: 17B
 Depends on: Phase 17A commit `da45e0d`
 
 ---

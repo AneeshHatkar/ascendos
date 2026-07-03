@@ -1,9 +1,9 @@
 # Phase 17B — Memory/RAG Schema Ownership Map
 
-Status: LOCKED  
-Phase: 17B  
-Scope: schema ownership planning only  
-Schema changes: none  
+Status: LOCKED
+Phase: 17B
+Scope: schema ownership planning only
+Schema changes: none
 Migration changes: none
 
 ---
@@ -12,8 +12,8 @@ Migration changes: none
 
 This document defines which future Phase 17 schema areas own which concepts before 17C writes any migration.
 
-This is not a migration.  
-This is not schema implementation.  
+This is not a migration.
+This is not schema implementation.
 This is a schema ownership map for Phase 17C and later.
 
 ---

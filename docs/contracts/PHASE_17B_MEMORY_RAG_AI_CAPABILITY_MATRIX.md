@@ -1,9 +1,9 @@
 # Phase 17B — Memory/RAG AI Capability Matrix
 
-Status: LOCKED  
-Phase: 17B  
-Scope: capability truthfulness and AI boundary mapping only  
-Schema changes: none  
+Status: LOCKED
+Phase: 17B
+Scope: capability truthfulness and AI boundary mapping only
+Schema changes: none
 Runtime changes: none
 
 ---

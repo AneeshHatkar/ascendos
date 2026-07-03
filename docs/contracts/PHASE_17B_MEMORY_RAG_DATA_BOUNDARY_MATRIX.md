@@ -1,12 +1,12 @@
 # Phase 17B — Memory/RAG Data Boundary Matrix
 
-Status: LOCKED  
-Phase: 17B  
-Depends on: Phase 17A commit `da45e0d`  
-Scope: boundary/design ownership only  
-Schema changes: none  
-Runtime changes: none  
-UI changes: none  
+Status: LOCKED
+Phase: 17B
+Depends on: Phase 17A commit `da45e0d`
+Scope: boundary/design ownership only
+Schema changes: none
+Runtime changes: none
+UI changes: none
 Repository changes: none
 
 ---
