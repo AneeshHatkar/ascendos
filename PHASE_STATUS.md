@@ -3641,3 +3641,9 @@ Boundary: Phase 18A-B locks readiness and proof only; it does not falsely claim 
 Status: Complete pending verification and commit.
 
 Added static schema discovery and metric source mapping. Boundary: no schema creation, no runtime SQL reads, no Supabase calls, no fake data, and Phase 18A-B persistence/offline lock remains active.
+
+## Local Carnos Runtime Chunk Lock
+
+Status: Complete pending verification and commit.
+
+Locked: 18M-B — Local Carnos Runtime Boundary + Option C Offline AI Adapter. This preserves local AI as a real future build step while keeping the app safe when no local runtime/model is installed.

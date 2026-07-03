@@ -4266,3 +4266,14 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `docs/qa/PHASE_18B_SCHEMA_DISCOVERY_METRIC_SOURCE_MAP_SMOKE_CHECKLIST.md`.
 - Added `docs/phase-reports/PHASE_18B_SCHEMA_DISCOVERY_METRIC_SOURCE_MAP_REPORT.md`.
 - Added `build:phase18b-map` and `audit:phase18b` package scripts.
+
+## Local Carnos Runtime Chunk Lock
+
+- Added `docs/contracts/LOCAL_CARNOS_RUNTIME_CHUNK_LOCK.md`.
+- Added `docs/roadmap/LOCAL_CARNOS_RUNTIME_BUILD_CHUNK_PLAN.md`.
+- Updated `docs/roadmap/PHASE_18_ANALYTICS_EXPERIMENTS_FEATURE_MAP.md` with local runtime markers.
+- Updated `docs/roadmap/PHASE_18_ANALYTICS_EXPERIMENTS_BUILD_CHUNKS.md` with 18M-B.
+- Added `docs/qa/LOCAL_CARNOS_RUNTIME_CHUNK_LOCK_SMOKE_CHECKLIST.md`.
+- Added `docs/phase-reports/LOCAL_CARNOS_RUNTIME_CHUNK_LOCK_REPORT.md`.
+- Added `scripts/audit-local-carnos-runtime-lock.mjs`.
+- Added `audit:phase18b_b` to package verification chain.

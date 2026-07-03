@@ -33,6 +33,10 @@ This document maps every Phase 18 feature to the build chunk that owns it.
 | Action-from-insight preview | 18K + 18M |
 | Self-Experiment Lab UI | 18L |
 | Carnos analytics explanation mode | 18M |
+| Local Carnos Runtime Boundary | 18M-B |
+| Option C Offline AI Adapter | 18M-B |
+| Local model capability detection | 18M-B |
+| Deterministic offline fallback | 18M-B |
 | Analytics-to-memory boundary | 18M |
 | Privacy/sensitivity labels | 18N |
 | Anti-demo-data audit | 18N |

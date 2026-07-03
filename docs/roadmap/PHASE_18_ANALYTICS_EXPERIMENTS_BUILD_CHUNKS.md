@@ -307,6 +307,35 @@ Adds:
 - no hidden memory use
 - uncertainty visibility rule
 
+## 18M-B — Local Carnos Runtime Boundary + Option C Offline AI Adapter
+
+Goal: add the future implementation boundary for Level 4 Offline AI Companion.
+
+Adds:
+- local Carnos runtime contract
+- Option C local server/runtime adapter boundary
+- Ollama-compatible localhost boundary
+- local runtime capability detector
+- local model availability state
+- local inference request/response types
+- offline AI mode router
+- deterministic fallback mode
+- cached approved-memory/context input boundary
+- cached analytics snapshot input boundary
+- cached experiment context input boundary
+- offline Carnos capability labels
+- local runtime unavailable state
+- no-crash fallback behavior
+- no false claim that full offline AI is implemented unless local runtime/model exists
+
+Boundary:
+- does not require local model download during checks
+- does not require local runtime during CI
+- does not silently write memory/actions
+- does not store core data in localStorage
+- does not replace online provider boundary
+- does not bypass Phase 20 privacy/export/delete requirements
+
 ## 18N — Anti-Demo-Data + Privacy/Sensitivity Audit
 
 Adds audits blocking:

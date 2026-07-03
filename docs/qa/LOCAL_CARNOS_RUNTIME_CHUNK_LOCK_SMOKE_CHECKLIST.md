@@ -1,0 +1,22 @@
+# Local Carnos Runtime Chunk Lock Smoke Checklist
+
+- [ ] 18M-B is inserted into the Phase 18 build plan.
+- [ ] Local Carnos runtime is locked as a future build chunk.
+- [ ] Option C local server/runtime is the primary target.
+- [ ] MacBook Pro M3 Pro target is preserved.
+- [ ] Ollama-compatible localhost boundary is preserved.
+- [ ] MLX-compatible future path is preserved.
+- [ ] llama.cpp-compatible future path is preserved.
+- [ ] Tauri-managed sidecar future path is preserved.
+- [ ] Browser-only local AI is fallback only.
+- [ ] Local runtime is optional.
+- [ ] Missing local runtime must not break the app.
+- [ ] Missing model must not break the app.
+- [ ] Deterministic offline fallback remains required.
+- [ ] No local model download is required during checks.
+- [ ] No false claim that full offline AI is implemented.
+- [ ] No silent writes are allowed.
+- [ ] No localStorage core data is allowed.
+- [ ] Package audit chain includes `audit:phase18b_b`.
+- [ ] `npm run audit:phase18b_b` passes.
+- [ ] `npm run check` passes.

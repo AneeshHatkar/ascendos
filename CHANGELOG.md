@@ -1984,3 +1984,7 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 ## Phase 18B — Schema Discovery + Metric Source Map
 
 - Added Phase 18 schema discovery and metric source map with offline cache candidates, sensitive/restricted candidates, sync candidates, and schema gap reporting before analytics/experiment contracts are implemented.
+
+## Local Carnos Runtime Chunk Lock
+
+- Locked a dedicated local Carnos runtime build chunk using Option C local server/runtime for offline AI, with optional runtime detection, deterministic fallback, and no false offline AI claims before runtime/model availability.

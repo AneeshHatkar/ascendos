@@ -5245,3 +5245,7 @@ Locked Carnos persistence and offline AI readiness before Phase 18B. Added the r
 ## Phase 18B — Schema Discovery + Metric Source Map
 
 Added static schema discovery and metric source mapping before Phase 18 analytics/experiment contracts. The step scans local SQL migrations, classifies discovered tables, maps canonical analytics and experiment metrics to candidate sources, lists offline cache candidates, sensitive/restricted candidates, sync candidate tables, and schema gaps. Boundary preserved: discovery only, no new tables, no migrations, no runtime SQL reads, no Supabase client calls, no fake analytics data, and Phase 18A-B persistence/offline rules remain active.
+
+## Local Carnos Runtime Chunk Lock
+
+Inserted a dedicated future build chunk for local Carnos runtime work: 18M-B — Local Carnos Runtime Boundary + Option C Offline AI Adapter. This locks local offline AI as a real implementation path after Carnos analytics explanation boundaries and before final privacy/offline audits. The runtime remains optional and capability-detected, with deterministic offline fallback required when local runtime or model is unavailable.
