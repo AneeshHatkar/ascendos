@@ -3719,3 +3719,9 @@ Added deterministic Carnos analytics explanation boundary covering trend, compar
 Status: Complete pending verification and commit.
 
 Added optional local Carnos runtime boundary and offline AI adapter contract covering runtime modes, adapter kinds, readiness states, offline disclosures, deterministic fallback, Option C future runtime paths, browser fallback limits, cached/unsynced/current-info disclosures, review-before-memory-write preservation, and disabled action execution. Boundary: no schema writes, no Supabase calls, no network calls, no model calls, no embeddings, no vector search, no fake analytics data, no fake experiment conclusions, no memory writes, no action execution.
+
+## Anti-Demo-Data + Privacy/Sensitivity Audit
+
+Status: Complete pending verification and commit.
+
+Added Phase 18 anti-demo-data and privacy/sensitivity audit covering fake analytics/experiments, analytics and self-experiment privacy, Carnos and local runtime privacy, disclosure rules, no-causality/no-proof boundaries, review-before-memory-write, disabled action execution, disabled model/network/Supabase/schema/embedding/vector paths, and local-runtime-not-required checks.

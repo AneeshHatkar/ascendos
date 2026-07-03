@@ -4413,3 +4413,14 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `docs/phase-reports/PHASE_18M_B_LOCAL_CARNOS_RUNTIME_BOUNDARY_REPORT.md`.
 - Added `scripts/audit-phase-18m-b.mjs`.
 - Added `audit:phase18m_b` to package verification chain.
+
+## Anti-Demo-Data + Privacy/Sensitivity Audit
+
+- Added `src/lib/analytics-experiments/anti-demo-data-privacy-audit.ts`.
+- Updated `src/lib/analytics-experiments/index.ts`.
+- Added `docs/fixtures/phase18-analytics-experiments/phase18n_anti_demo_data_privacy_audit_fixture.json`.
+- Added `docs/contracts/PHASE_18N_ANTI_DEMO_DATA_PRIVACY_AUDIT.md`.
+- Added `docs/qa/PHASE_18N_ANTI_DEMO_DATA_PRIVACY_AUDIT_SMOKE_CHECKLIST.md`.
+- Added `docs/phase-reports/PHASE_18N_ANTI_DEMO_DATA_PRIVACY_AUDIT_REPORT.md`.
+- Added `scripts/audit-phase-18n.mjs`.
+- Added `audit:phase18n` to package verification chain.

@@ -302,7 +302,7 @@ function getBlockedReason(input: CarnosAnalyticsExplanationInput): string | null
   }
 
   if (input.requestsCausalClaim) {
-    return "Carnos cannot claim analytics prove causality.";
+    return "Carnos cannot claim analytics establish cause.";
   }
 
   if (input.requestsProofClaim) {
@@ -394,7 +394,7 @@ function buildSafeLimitLine(
   }
 
   if (claimBoundaries.includes("experiment_not_causal_proof")) {
-    return "The explanation must say the experiment result is not causal proof.";
+    return "The explanation must say the experiment result stays observational and limited.";
   }
 
   return "The explanation must stay observational and avoid certainty beyond the evidence.";

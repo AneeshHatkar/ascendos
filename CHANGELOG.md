@@ -2036,3 +2036,7 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 ## Local Carnos Runtime Boundary + Offline AI Adapter
 
 - Added optional local Carnos runtime boundary and offline AI adapter contract with deterministic fallback, Option C future runtime paths, source disclosures, no-model-call guardrails, and no-runtime-required checks.
+
+## Anti-Demo-Data + Privacy/Sensitivity Audit
+
+- Added Phase 18 anti-demo-data and privacy/sensitivity audit covering fake analytics/experiments, disclosure rules, no-causality/no-proof boundaries, and disabled runtime/model/action/write paths.

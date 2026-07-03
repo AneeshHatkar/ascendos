@@ -1,0 +1,28 @@
+# Phase 18N Anti-Demo-Data + Privacy/Sensitivity Audit Smoke Checklist
+
+- [ ] Anti-demo-data audit exists.
+- [ ] Anti-fake-analytics audit exists.
+- [ ] Anti-fake-experiment audit exists.
+- [ ] Analytics privacy/sensitivity audit exists.
+- [ ] Self-experiment privacy/sensitivity audit exists.
+- [ ] Carnos explanation privacy/sensitivity audit exists.
+- [ ] Local runtime privacy/sensitivity audit exists.
+- [ ] Source-state disclosure audit exists.
+- [ ] Cached context disclosure audit exists.
+- [ ] Stale context disclosure audit exists.
+- [ ] Partial context disclosure audit exists.
+- [ ] Missing context disclosure audit exists.
+- [ ] Unsynced context disclosure audit exists.
+- [ ] Deterministic preview disclosure audit exists.
+- [ ] No-causality claim audit exists.
+- [ ] No-proof claim audit exists.
+- [ ] Review-before-memory-write audit exists.
+- [ ] No action execution audit exists.
+- [ ] No model-call audit exists.
+- [ ] No network-call audit exists.
+- [ ] No Supabase-runtime-call audit exists.
+- [ ] No schema-write audit exists.
+- [ ] No embeddings/vector-search audit exists.
+- [ ] No local-runtime-required audit exists.
+- [ ] npm run audit:phase18n passes.
+- [ ] npm run check passes.
