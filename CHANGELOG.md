@@ -1802,3 +1802,12 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added Carnos boundary badges and companion surfaces.
 - Added truthfulness helpers for enabled/deferred/forbidden capabilities.
 - Added `audit:phase16_5b` and wired it into verification.
+
+## Phase 16.5C — Visual Tokens + Accessibility + Reduced Motion
+
+- Added Carnos visual token contract.
+- Added state tone tokens and state visual tokens.
+- Added responsive desktop/tablet/mobile companion token rules.
+- Added reduced-motion and static fallback requirements.
+- Added screen-reader labels and truthful state accessibility descriptions.
+- Added `audit:phase16_5c` and wired it into verification.

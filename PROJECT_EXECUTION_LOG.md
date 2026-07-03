@@ -4941,3 +4941,35 @@ Boundaries:
 
 Next:
 - Phase 16.5B — Carnos Identity, State, and Capability Contract.
+
+## 2026-07-02 — Phase 16.5C Visual Tokens + Accessibility + Reduced Motion
+
+Added the Carnos visual-token and accessibility contract layer.
+
+Implemented:
+- `CARNOS_BASE_VISUAL_TOKENS`
+- `CARNOS_TONE_TOKENS`
+- `CARNOS_STATE_VISUAL_TOKENS`
+- `CARNOS_RESPONSIVE_TOKENS`
+- `CARNOS_MOTION_BOUNDARIES`
+- `CARNOS_ACCESSIBILITY_RULES`
+- `CARNOS_ACCESSIBLE_STATE_LABELS`
+- `CARNOS_REDUCED_MOTION_REQUIREMENTS`
+- visual token helpers
+- accessibility label helpers
+
+Boundaries:
+- no UI component
+- no orb component
+- no companion widget
+- no API route
+- no SQL migration
+- no voice runtime
+- no internet provider calls
+- no Python/tool execution
+- no document ingestion
+- no automatic memory writes
+- no autonomous actions
+
+Next:
+- Phase 16.5D — Carnos Orb / Avatar Component.

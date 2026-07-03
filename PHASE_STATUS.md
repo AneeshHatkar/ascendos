@@ -3348,3 +3348,26 @@ Scope locked:
 
 Next:
 - Phase 16.5B — Carnos Identity, State, and Capability Contract.
+
+## Phase 16.5C — Visual Tokens + Accessibility + Reduced Motion
+
+Status: Complete pending verification and commit.
+
+Completed:
+- Carnos base visual tokens.
+- Carnos tone tokens.
+- Carnos state visual tokens.
+- Carnos responsive tokens.
+- Carnos motion boundaries.
+- Carnos accessibility rules.
+- Carnos accessible state labels.
+- Carnos reduced-motion requirements.
+
+Boundary:
+- Token/accessibility-only.
+- No UI component.
+- No orb component.
+- No runtime activation.
+
+Next:
+- Phase 16.5D — Carnos Orb / Avatar Component.

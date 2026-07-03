@@ -3830,3 +3830,25 @@ Boundary:
 - contract-only
 - no UI/runtime activation
 - no voice/web/Python/document/memory/action execution
+
+## Phase 16.5C — Visual Tokens + Accessibility + Reduced Motion
+
+Added:
+- `src/lib/carnos-identity/carnos-visual-tokens.ts`
+- `src/lib/carnos-identity/carnos-accessibility.ts`
+- `docs/contracts/PHASE_16_5C_CARNOS_VISUAL_TOKENS_ACCESSIBILITY_CONTRACT.md`
+- `docs/phase-reports/PHASE_16_5C_CARNOS_VISUAL_TOKENS_ACCESSIBILITY_REPORT.md`
+- `docs/qa/PHASE_16_5C_CARNOS_VISUAL_TOKENS_ACCESSIBILITY_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-16-5c.mjs`
+
+Updated:
+- `src/lib/carnos-identity/index.ts`
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- token/accessibility-only
+- no UI/runtime activation
+- no voice/web/Python/document/memory/action execution
