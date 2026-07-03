@@ -1,0 +1,33 @@
+{
+  "phase": "19K",
+  "status": "complete",
+  "name": "Document web source evidence attachment boundaries",
+  "coded_features": [
+    "document_source_attachment_boundary",
+    "saved_document_reference_boundary",
+    "knowledge_vault_compatibility_boundary",
+    "memory_rag_compatibility_boundary",
+    "current_info_web_source_compatibility_boundary",
+    "web_source_reference_attachment_boundary",
+    "evidence_source_links_on_tracker_entries",
+    "tracker_entries_link_to_documents_notes_web_sources_timeline_records_memory_candidates",
+    "carnos_source_freshness_disclosure_boundary",
+    "carnos_mapping_to_tracker_proposals_requires_review",
+    "source_freshness_status",
+    "attachment_trust_review_status",
+    "no_fake_evidence_boundary"
+  ],
+  "disabled_boundaries": {
+    "schema_migration": false,
+    "runtime_database_reads": false,
+    "runtime_database_writes": false,
+    "runtime_file_ingestion": false,
+    "runtime_network_calls": false,
+    "fake_evidence": false,
+    "fake_source_attachments": false,
+    "silent_carnos_mapping": false,
+    "model_calls": false,
+    "memory_writes": false,
+    "action_execution": false
+  }
+}

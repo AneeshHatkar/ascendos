@@ -1,0 +1,21 @@
+# Phase 19K Evidence Attachment Boundaries Checklist
+
+- [x] Document/source attachment boundary exists.
+- [x] Saved document reference boundary exists.
+- [x] Knowledge Vault compatibility boundary exists.
+- [x] Memory/RAG compatibility boundary exists.
+- [x] Current-info/web-source compatibility boundary exists.
+- [x] Web source reference attachment boundary exists.
+- [x] Evidence/source links on tracker entries exist.
+- [x] Tracker entry links to documents, notes, web sources, timeline records, or memory candidates exist.
+- [x] Carnos source/freshness disclosure boundary exists.
+- [x] Carnos mapping to tracker proposals requires review.
+- [x] Source freshness status exists.
+- [x] Attachment trust/review status exists.
+- [x] No fake evidence boundary exists.
+- [x] No SQL migration is added.
+- [x] No runtime database read/write is added.
+- [x] No runtime file ingestion is added.
+- [x] No runtime web/network call is added.
+- [x] npm run audit:phase19k is expected to pass.
+- [x] npm run check is expected to pass.
