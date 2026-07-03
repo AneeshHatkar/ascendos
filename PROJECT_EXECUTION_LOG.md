@@ -5189,3 +5189,11 @@ Boundary:
 - no Carnos prompt/context injection
 - no background scanning
 - no silent conflict resolution
+
+## Phase 17H — Embedding Provider Boundary
+- Added official Memory/RAG embedding provider boundary.
+- Added `NoopMemoryEmbeddingProvider`.
+- Added deterministic request evaluation for approved memory, knowledge, retrieval-contract, and external-source previews.
+- Added deferred embedding record previews validated against Memory/RAG schema validators.
+- Preserved no runtime retrieval, no embedding generation, no fake vectors, no provider calls, no vector search, no SQL reads/writes, no Supabase calls, no Carnos prompt/context injection, and no background queue execution.
+- Next: Phase 17I — Retrieval Ranking + Budget + Dedupe Rules.

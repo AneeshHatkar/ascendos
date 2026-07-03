@@ -3543,3 +3543,25 @@ Adds:
 - boundary docs and audit
 
 Next after commit: Phase 17H — Embedding Provider Boundary.
+
+## Phase 17H — Embedding Provider Boundary
+Status: Complete pending verification/commit.
+
+Completed:
+- Embedding provider boundary.
+- Noop provider result.
+- Deferred embedding record previews.
+- Runtime side-effect locks.
+- Phase 17H audit/docs/checklist.
+
+Not added:
+- Real embeddings.
+- Fake vectors.
+- Provider calls.
+- Vector search.
+- Runtime retrieval.
+- SQL/Supabase access.
+- Carnos prompt/context injection.
+
+Next:
+- Phase 17I — Retrieval Ranking + Budget + Dedupe Rules.

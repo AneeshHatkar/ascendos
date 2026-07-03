@@ -4163,3 +4163,22 @@ Implementation:
 - deterministic conflict assessment
 - side-effect-free conflict group preview
 - audit-enforced no-runtime boundary
+
+## Phase 17H — Embedding Provider Boundary
+- `src/lib/carnos-continuity/memory-embedding-provider-boundary.ts`
+  - Adds typed embedding provider boundary.
+  - Adds `NoopMemoryEmbeddingProvider`.
+  - Adds deterministic request evaluation.
+  - Adds deferred embedding record previews.
+  - Uses Memory/RAG schema validation.
+  - Keeps all runtime side effects disabled.
+- `src/lib/carnos-continuity/index.ts`
+  - Exports Phase 17H boundary.
+- `scripts/audit-phase-17h.mjs`
+  - Verifies boundary markers, docs, package wiring, and forbidden runtime markers.
+- `docs/contracts/PHASE_17H_EMBEDDING_PROVIDER_BOUNDARY.md`
+  - Locks Phase 17H contract.
+- `docs/phase-reports/PHASE_17H_EMBEDDING_PROVIDER_BOUNDARY_REPORT.md`
+  - Records implementation summary.
+- `docs/qa/PHASE_17H_EMBEDDING_PROVIDER_BOUNDARY_SMOKE_CHECKLIST.md`
+  - Records smoke checklist.

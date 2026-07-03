@@ -1921,3 +1921,8 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 Added deterministic Memory/RAG provenance, confidence, and conflict scoring.
 
 This phase is side-effect-free and does not retrieve, embed, call providers, write SQL, inject Carnos context, or resolve conflicts silently.
+
+## Phase 17H — Embedding Provider Boundary
+- Added official Memory/RAG embedding provider boundary with noop/deferred provider behavior.
+- Added deterministic evaluation and deferred embedding record previews.
+- Preserved no runtime retrieval, no embedding generation, no fake vectors, no provider calls, no vector search, no SQL/Supabase access, and no Carnos prompt/context injection.
