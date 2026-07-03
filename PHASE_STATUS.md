@@ -3569,3 +3569,9 @@ Next:
 ## Phase 17I — Retrieval Ranking + Budget + Dedupe Rules
 
 Status: Complete pending verification and commit.
+
+## Phase 17J — Knowledge Vault Retrieval Bridge
+
+Status: Complete pending verification and commit.
+
+Boundary: no runtime retrieval, no memory_retrieval_events writes, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, no Carnos prompt/context injection, no background scanning.

@@ -1930,3 +1930,8 @@ This phase is side-effect-free and does not retrieve, embed, call providers, wri
 ## Phase 17I — Retrieval Ranking + Budget + Dedupe Rules
 
 Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
+
+## Phase 17J — Knowledge Vault Retrieval Bridge
+
+- Added deterministic Knowledge Vault bridge for retrieval-planning candidates.
+- Reused Phase 17I retrieval planning while preserving preview-only/no-runtime boundaries.

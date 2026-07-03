@@ -1,0 +1,23 @@
+# Phase 17J Knowledge Vault Retrieval Bridge Smoke Checklist
+
+- [ ] `bridgeKnowledgeVaultItemToRetrievalCandidate` converts eligible knowledge items.
+- [ ] `bridgeKnowledgeVaultItemsToRetrievalCandidates` handles batches deterministically.
+- [ ] `buildKnowledgeVaultRetrievalBridge` reuses Phase 17I retrieval planning.
+- [ ] Inactive knowledge items are excluded by default.
+- [ ] Private knowledge items are excluded by default.
+- [ ] Missing-text knowledge items are excluded by default.
+- [ ] Low-confidence knowledge items are excluded when below the configured threshold.
+- [ ] Bridged knowledge candidates remain preview-only.
+- [ ] Visible bridge reasons are emitted.
+- [ ] No runtime retrieval occurs.
+- [ ] No memory_retrieval_events writes occur.
+- [ ] No embeddings are generated.
+- [ ] No semantic retrieval is activated.
+- [ ] No provider calls occur.
+- [ ] No vector search occurs.
+- [ ] No Supabase calls occur.
+- [ ] No SQL reads or writes occur.
+- [ ] No Carnos prompt/context injection occurs.
+- [ ] No background scanning occurs.
+- [ ] `npm run audit:phase17j` passes.
+- [ ] `npm run check` passes.

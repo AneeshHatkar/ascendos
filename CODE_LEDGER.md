@@ -4186,3 +4186,9 @@ Implementation:
 ## Phase 17I — Retrieval Ranking + Budget + Dedupe Rules
 
 Added runtime file, docs, QA checklist, audit script, package script, and check chain entry.
+
+## Phase 17J — Knowledge Vault Retrieval Bridge
+
+- Added `src/lib/carnos-continuity/knowledge-vault-retrieval-bridge.ts`.
+- Exported Phase 17J from `src/lib/carnos-continuity/index.ts`.
+- Added Phase 17J contract, report, smoke checklist, audit script, and package check chain entry.

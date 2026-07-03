@@ -5201,3 +5201,7 @@ Boundary:
 ## Phase 17I — Retrieval Ranking + Budget + Dedupe Rules
 
 Added deterministic Memory/RAG retrieval planning rules. No runtime retrieval, memory_retrieval_events writes, embeddings, semantic retrieval activation, providers, vector search, Supabase, SQL, Carnos prompt/context injection, or background scanning were added.
+
+## Phase 17J — Knowledge Vault Retrieval Bridge
+
+Added deterministic Knowledge Vault Retrieval Bridge from knowledge items into Phase 17I retrieval-planning candidates. Boundary preserved: no runtime retrieval, no memory_retrieval_events writes, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, no Carnos prompt/context injection, and no background scanning.
