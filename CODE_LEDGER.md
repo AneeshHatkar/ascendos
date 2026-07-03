@@ -3950,3 +3950,22 @@ Updated:
 Boundary:
 - display-only dashboard panel
 - no runtime activation
+
+## Phase 16.5H — Carnos Page Integration
+
+Added/updated:
+- `src/app/carnos/page.tsx`
+- `docs/contracts/PHASE_16_5H_CARNOS_PAGE_INTEGRATION_CONTRACT.md`
+- `docs/phase-reports/PHASE_16_5H_CARNOS_PAGE_INTEGRATION_REPORT.md`
+- `docs/qa/PHASE_16_5H_CARNOS_PAGE_INTEGRATION_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-16-5h.mjs`
+
+Updated:
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- page integration only
+- no runtime activation

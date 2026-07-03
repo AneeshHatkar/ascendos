@@ -1848,3 +1848,10 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Composed the orb, companion widget, capability matrix, and boundary badges into one dashboard-ready surface.
 - Added state summary cards and runtime boundary copy.
 - Added `audit:phase16_5g` and wired it into verification.
+
+## Phase 16.5H — Carnos Page Integration
+
+- Integrated visual-only Carnos identity into `/carnos`.
+- Added page hero, page-level boundary cards, and display-only runtime boundary copy.
+- Added metadata for the Carnos page.
+- Added `audit:phase16_5h` and wired it into verification.

@@ -3414,3 +3414,24 @@ Boundary:
 
 Next:
 - Phase 16.5H — `/carnos` Page Integration.
+
+## Phase 16.5H — Carnos Page Integration
+
+Status: Complete pending verification and commit.
+
+Completed:
+- `/carnos` page integration.
+- Carnos visual identity panel rendering.
+- Page hero.
+- Boundary cards.
+- Display-only runtime boundary copy.
+- Metadata.
+
+Boundary:
+- No API route.
+- No SQL migration.
+- No runtime activation.
+- No command/dashboard integration.
+
+Next:
+- Phase 16.5I — Command/Dashboard Lightweight Companion Integration.

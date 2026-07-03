@@ -5039,3 +5039,30 @@ Boundaries:
 
 Next:
 - Phase 16.5H — `/carnos` Page Integration.
+
+## 2026-07-02 — Phase 16.5H Carnos Page Integration
+
+Integrated the visual-only Carnos identity surface into the `/carnos` page.
+
+Implemented:
+- `/carnos` page hero
+- `CarnosVisualIdentityPanel` integration
+- page-level boundary cards
+- display-only runtime boundary copy
+- page metadata
+
+Boundaries:
+- page integration only
+- no API route
+- no SQL migration
+- no voice runtime
+- no internet provider calls
+- no Python/tool execution
+- no document ingestion
+- no automatic memory writes
+- no source saves
+- no autonomous actions
+- no command/dashboard integration
+
+Next:
+- Phase 16.5I — Command/Dashboard Lightweight Companion Integration.
