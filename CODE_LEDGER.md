@@ -4113,3 +4113,14 @@ Boundary:
 - No generated embeddings.
 - No vector search.
 - No provider calls.
+
+
+## 2026-07-03 — Memory Inbox Repository
+
+- `src/lib/repositories/memory-inbox-write.ts` — user-scoped memory candidate repository.
+- `src/lib/repositories/index.ts` — exports memory inbox repository.
+- `scripts/audit-phase-17e.mjs` — repository boundary audit.
+- `docs/contracts/PHASE_17E_MEMORY_INBOX_REPOSITORY.md` — repository contract.
+- `docs/phase-reports/PHASE_17E_MEMORY_INBOX_REPOSITORY_REPORT.md` — completion report.
+- `docs/qa/PHASE_17E_MEMORY_INBOX_REPOSITORY_SMOKE_CHECKLIST.md` — smoke checklist.
+- `scripts/audit-phase-15a.mjs` — allowlists the official later repository file for older scope-lock compatibility.

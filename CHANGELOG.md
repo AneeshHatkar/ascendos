@@ -1901,3 +1901,9 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added schema-aligned Memory/RAG validators.
 - Exported new Memory/RAG schema contracts and validators from the Carnos continuity index.
 - Added audit, contract, report, and smoke checklist.
+
+
+## 2026-07-03 — Memory Inbox Repository
+
+- Added safe memory candidate repository operations for the memory inbox.
+- Added audit coverage for candidate-only persistence boundaries.

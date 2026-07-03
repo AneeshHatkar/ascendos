@@ -9,3 +9,4 @@ export * from "./career-prep-read";
 export * from "./settings-privacy-read";
 export * from "./voice-read";
 export * from "./current-info-read";
+export * from "./memory-inbox-write";

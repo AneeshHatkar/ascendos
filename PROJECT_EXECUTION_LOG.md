@@ -5149,3 +5149,11 @@ Summary:
 - Added validators for candidate alignment, approved-memory alignment, embedding records, retrieval events, conflict groups, and conflict members.
 - Exported the new contracts and validators through the existing Carnos continuity index.
 - Preserved boundaries: no repository, no Supabase calls, no runtime retrieval, no generated embeddings, no vector search, no provider calls, and no Carnos prompt injection.
+
+
+## 2026-07-03 — Memory Inbox Repository
+
+- Added memory inbox repository for candidate persistence.
+- Added create/list/get/update/reject/archive/mark-sensitivity candidate operations.
+- Preserved no-approval, no-embedding, no-retrieval, no-provider, no-background-scan boundaries.
+- Added audit:phase17e and wired it into full check.
