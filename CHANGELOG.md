@@ -2032,3 +2032,7 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 ## Carnos Analytics Explanation Boundary
 
 - Added deterministic Carnos analytics explanation boundary with source-aware disclosures, no-proof/no-causality limits, review-before-memory-write rules, privacy blocking, and no-model-call guardrails.
+
+## Local Carnos Runtime Boundary + Offline AI Adapter
+
+- Added optional local Carnos runtime boundary and offline AI adapter contract with deterministic fallback, Option C future runtime paths, source disclosures, no-model-call guardrails, and no-runtime-required checks.

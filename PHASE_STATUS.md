@@ -3713,3 +3713,9 @@ Added self-experiment lab UI surface and safe view model with template library, 
 Status: Complete pending verification and commit.
 
 Added deterministic Carnos analytics explanation boundary covering trend, comparison, correlation, self-experiment, lesson, metric quality, snapshot freshness, uncertainty, evidence gaps, source disclosures, no-proof/no-causality, review-before-memory-write, privacy blocking, and local-runtime-optional compatibility. Boundary: no schema writes, no Supabase calls, no model calls, no fake analytics data, no fake experiment conclusions, no memory writes, no action execution.
+
+## Local Carnos Runtime Boundary + Offline AI Adapter
+
+Status: Complete pending verification and commit.
+
+Added optional local Carnos runtime boundary and offline AI adapter contract covering runtime modes, adapter kinds, readiness states, offline disclosures, deterministic fallback, Option C future runtime paths, browser fallback limits, cached/unsynced/current-info disclosures, review-before-memory-write preservation, and disabled action execution. Boundary: no schema writes, no Supabase calls, no network calls, no model calls, no embeddings, no vector search, no fake analytics data, no fake experiment conclusions, no memory writes, no action execution.

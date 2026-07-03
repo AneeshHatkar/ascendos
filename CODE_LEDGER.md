@@ -4402,3 +4402,14 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `docs/phase-reports/PHASE_18M_CARNOS_ANALYTICS_EXPLANATION_BOUNDARY_REPORT.md`.
 - Added `scripts/audit-phase-18m.mjs`.
 - Added `audit:phase18m` to package verification chain.
+
+## Local Carnos Runtime Boundary + Offline AI Adapter
+
+- Added `src/lib/analytics-experiments/local-carnos-runtime-boundary.ts`.
+- Updated `src/lib/analytics-experiments/index.ts`.
+- Added `docs/fixtures/phase18-analytics-experiments/phase18m_b_local_carnos_runtime_boundary_fixture.json`.
+- Added `docs/contracts/PHASE_18M_B_LOCAL_CARNOS_RUNTIME_BOUNDARY.md`.
+- Added `docs/qa/PHASE_18M_B_LOCAL_CARNOS_RUNTIME_BOUNDARY_SMOKE_CHECKLIST.md`.
+- Added `docs/phase-reports/PHASE_18M_B_LOCAL_CARNOS_RUNTIME_BOUNDARY_REPORT.md`.
+- Added `scripts/audit-phase-18m-b.mjs`.
+- Added `audit:phase18m_b` to package verification chain.

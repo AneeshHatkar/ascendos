@@ -1,0 +1,45 @@
+# Phase 18M-B Local Carnos Runtime Boundary Smoke Checklist
+
+- [ ] Local Carnos runtime boundary implementation exists.
+- [ ] Offline AI adapter contract exists.
+- [ ] Fixture exists.
+- [ ] Contract exists.
+- [ ] Report exists.
+- [ ] Optional local runtime mode exists.
+- [ ] Runtime unavailable mode exists.
+- [ ] Runtime disabled mode exists.
+- [ ] Deterministic fallback mode exists.
+- [ ] Request contract exists.
+- [ ] Response contract exists.
+- [ ] Capability flags exist.
+- [ ] Model-not-required CI boundary exists.
+- [ ] No model install requirement exists.
+- [ ] No runtime health call exists.
+- [ ] No network call boundary exists.
+- [ ] No model generation call boundary exists.
+- [ ] No streaming call boundary exists.
+- [ ] No embedding call boundary exists.
+- [ ] No vector search boundary exists.
+- [ ] Option C local AI server/runtime boundary exists.
+- [ ] Future localhost-compatible runtime path exists.
+- [ ] Future MLX-compatible runtime path exists.
+- [ ] Future llama.cpp-compatible runtime path exists.
+- [ ] Future Tauri sidecar-compatible runtime path exists.
+- [ ] Browser-only fallback limitation exists.
+- [ ] Cached context disclosure exists.
+- [ ] Unsynced context disclosure exists.
+- [ ] Deterministic preview disclosure exists.
+- [ ] Local/offline context is not online source of truth.
+- [ ] Current info unavailable offline boundary exists.
+- [ ] Review-before-memory-write remains preserved.
+- [ ] Action execution remains disabled.
+- [ ] No runtime SQL reads are added.
+- [ ] No Supabase client calls are added.
+- [ ] No schema writes are added.
+- [ ] No model calls are added.
+- [ ] No fake analytics data is added.
+- [ ] No fake experiment conclusions are added.
+- [ ] No memory writes are added.
+- [ ] No action execution is added.
+- [ ] npm run audit:phase18m_b passes.
+- [ ] npm run check passes.
