@@ -4192,3 +4192,9 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `src/lib/carnos-continuity/knowledge-vault-retrieval-bridge.ts`.
 - Exported Phase 17J from `src/lib/carnos-continuity/index.ts`.
 - Added Phase 17J contract, report, smoke checklist, audit script, and package check chain entry.
+
+## Phase 17K — Current-Info / Document / Career / Research Source Bridges
+
+- Added `src/lib/carnos-continuity/source-bridge-retrieval-preview.ts`.
+- Exported Phase 17K from `src/lib/carnos-continuity/index.ts`.
+- Added Phase 17K contract, report, smoke checklist, audit script, and package check chain entry.

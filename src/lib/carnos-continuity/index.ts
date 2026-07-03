@@ -29,3 +29,4 @@ export * from "./memory-provenance-confidence-conflict-engine";
 export * from "./memory-embedding-provider-boundary";
 export * from "./memory-retrieval-ranking-budget-dedupe";
 export * from "./knowledge-vault-retrieval-bridge";
+export * from "./source-bridge-retrieval-preview";

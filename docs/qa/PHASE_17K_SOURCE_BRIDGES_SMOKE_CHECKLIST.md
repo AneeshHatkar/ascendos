@@ -1,0 +1,27 @@
+# Phase 17K Source Bridges Smoke Checklist
+
+- [ ] `bridgeSourceRecordToRetrievalCandidate` converts eligible source records.
+- [ ] `bridgeSourceRecordsToRetrievalCandidates` handles batches deterministically.
+- [ ] `buildSourceBridgeRetrievalPreview` reuses Phase 17I retrieval planning.
+- [ ] `buildCurrentInfoSourceBridgePreview` filters Current Info records.
+- [ ] `buildDocumentSourceBridgePreview` filters Document records.
+- [ ] `buildCareerSourceBridgePreview` filters Career records.
+- [ ] `buildResearchSourceBridgePreview` filters Research records.
+- [ ] Inactive source records are excluded by default.
+- [ ] Private source records are excluded by default.
+- [ ] Missing-text source records are excluded by default.
+- [ ] Low-confidence source records are excluded when below the configured threshold.
+- [ ] Bridged source candidates remain preview-only.
+- [ ] Visible bridge reasons are emitted.
+- [ ] No runtime retrieval occurs.
+- [ ] No memory_retrieval_events writes occur.
+- [ ] No embeddings are generated.
+- [ ] No semantic retrieval is activated.
+- [ ] No provider calls occur.
+- [ ] No vector search occurs.
+- [ ] No Supabase calls occur.
+- [ ] No SQL reads or writes occur.
+- [ ] No Carnos prompt/context injection occurs.
+- [ ] No background scanning occurs.
+- [ ] `npm run audit:phase17k` passes.
+- [ ] `npm run check` passes.

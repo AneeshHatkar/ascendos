@@ -1935,3 +1935,8 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 
 - Added deterministic Knowledge Vault bridge for retrieval-planning candidates.
 - Reused Phase 17I retrieval planning while preserving preview-only/no-runtime boundaries.
+
+## Phase 17K — Current-Info / Document / Career / Research Source Bridges
+
+- Added deterministic source bridges for Current Info, Document, Career, and Research retrieval-planning candidates.
+- Reused Phase 17I retrieval planning while preserving preview-only/no-runtime boundaries.
