@@ -1821,3 +1821,12 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added reduced-motion and static fallback support.
 - Added accessible aria labels and figcaption fallback.
 - Added `audit:phase16_5d` and wired it into verification.\n
+
+## Phase 16.5E — Carnos Companion Widget / Dock
+
+- Added visual-only `CarnosCompanionWidget`.
+- Added visual-only `CarnosCompanionDock`.
+- Added compact, expanded, and mobile pill widget modes.
+- Added bottom-right, bottom-left, inline, and mobile-inline dock placements.
+- Added boundary badge strip and runtime boundary copy.
+- Added `audit:phase16_5e` and wired it into verification.

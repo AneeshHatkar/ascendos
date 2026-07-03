@@ -4973,3 +4973,37 @@ Boundaries:
 
 Next:
 - Phase 16.5D — Carnos Orb / Avatar Component.
+
+## 2026-07-02 — Phase 16.5E Carnos Companion Widget / Dock
+
+Added visual-only companion surfaces for Carnos.
+
+Implemented:
+- `CarnosCompanionWidget`
+- `CarnosCompanionDock`
+- compact widget mode
+- expanded widget mode
+- mobile pill widget mode
+- bottom-right dock placement
+- bottom-left dock placement
+- inline dock placement
+- mobile-inline dock placement
+- boundary badge strip
+- runtime boundary copy
+
+Boundaries:
+- visual-only companion surfaces
+- no capability matrix panel
+- no dashboard panel
+- no page integration
+- no API route
+- no SQL migration
+- no voice runtime
+- no internet provider calls
+- no Python/tool execution
+- no document ingestion
+- no automatic memory writes
+- no autonomous actions
+
+Next:
+- Phase 16.5F — Carnos Capability Matrix + Truthfulness Panel.

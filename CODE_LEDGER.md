@@ -3874,3 +3874,28 @@ Boundary:
 - visual-only orb/avatar component
 - no runtime activation
 - no voice/web/Python/document/memory/action execution\n
+
+## Phase 16.5E — Carnos Companion Widget / Dock
+
+Added:
+- `src/components/carnos/carnos-companion-widget.tsx`
+- `src/components/carnos/carnos-companion-dock.tsx`
+- `docs/contracts/PHASE_16_5E_CARNOS_COMPANION_WIDGET_DOCK_CONTRACT.md`
+- `docs/phase-reports/PHASE_16_5E_CARNOS_COMPANION_WIDGET_DOCK_REPORT.md`
+- `docs/qa/PHASE_16_5E_CARNOS_COMPANION_WIDGET_DOCK_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-16-5e.mjs`
+
+Updated:
+- `src/components/carnos/index.ts`
+- `scripts/audit-phase-16-5a.mjs`
+- `scripts/audit-phase-16-5b.mjs`
+- `scripts/audit-phase-16-5c.mjs`
+- `scripts/audit-phase-16-5d.mjs`
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- visual-only widget/dock
+- no runtime activation

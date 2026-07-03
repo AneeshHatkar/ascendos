@@ -3371,3 +3371,26 @@ Boundary:
 
 Next:
 - Phase 16.5D — Carnos Orb / Avatar Component.
+
+## Phase 16.5E — Carnos Companion Widget / Dock
+
+Status: Complete pending verification and commit.
+
+Completed:
+- Carnos companion widget.
+- Carnos companion dock.
+- Compact widget mode.
+- Expanded widget mode.
+- Mobile pill widget mode.
+- Dock placement rules.
+- Runtime boundary copy.
+- Boundary badge strip.
+
+Boundary:
+- No capability matrix panel.
+- No dashboard panel.
+- No page integration.
+- No runtime activation.
+
+Next:
+- Phase 16.5F — Carnos Capability Matrix + Truthfulness Panel.
