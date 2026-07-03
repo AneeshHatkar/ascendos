@@ -3454,3 +3454,15 @@ Phase 16.5 closeout:
 
 Next major phase:
 - Phase 17 — next major implementation phase from the source-of-truth roadmap.
+
+## Phase 17A — Memory/RAG Scope Lock + Roadmap Reconciliation + Discovery
+
+Status: Complete pending verification
+
+Scope:
+- Official Chunk 17 Memory/RAG is now locked as the next implementation area.
+- Phase 17A documents the full 17A–17Q build map and all discussed features/gates.
+- No schema, API, UI, repository, provider, or Memory/RAG runtime implementation is added in 17A.
+
+Next:
+- Phase 17B — Data Boundary Matrix + AI Capability Matrix + Schema Ownership Map.

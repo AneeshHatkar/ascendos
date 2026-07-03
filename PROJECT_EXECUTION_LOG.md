@@ -5094,3 +5094,18 @@ Phase 16.5 closeout:
 - Carnos Visual Identity + Companion UI is ready for completion after verification.
 
 Next: Phase 17 — next major implementation phase from the source-of-truth roadmap.
+
+## Phase 17A — Memory/RAG Scope Lock + Roadmap Reconciliation + Discovery
+
+Status: Complete pending verification
+Commit: pending
+
+Summary:
+- Started official source-of-truth Chunk 17 — Memory/RAG.
+- Locked Phase 17A as a scope/reconciliation/discovery-only step.
+- Documented roadmap mismatch: official JSON Chunk 16 is Voice Foundation, while repo Phase 16 implemented Current Information/Web foundation and repo Phase 16.5 implemented Carnos Visual Identity.
+- Locked the full Phase 17 build map from 17A through 17Q.
+- Documented every discussed Memory/RAG feature, loophole-prevention gate, deferred item, and truthfulness/privacy boundary.
+- Added schema/discovery-first rule for future schema/repository/retrieval steps.
+- Added Phase 17A audit wiring.
+- Phase 17A intentionally adds no schema, no API route, no UI component, no repository, no provider runtime, and no Memory/RAG implementation.

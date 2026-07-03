@@ -4011,3 +4011,27 @@ Boundary:
 - Final audit/checklist/report only.
 - No runtime behavior added.
 - Phase 17 identified as next major implementation phase.
+
+## Phase 17A — Memory/RAG Scope Lock + Roadmap Reconciliation + Discovery
+
+Files added:
+- docs/phase-plans/PHASE_17A_MEMORY_RAG_SCOPE_LOCK.md
+- docs/contracts/PHASE_17A_MEMORY_RAG_BOUNDARY_CONTRACT.md
+- docs/phase-reports/PHASE_17A_MEMORY_RAG_DISCOVERY_REPORT.md
+- docs/qa/PHASE_17A_MEMORY_RAG_SMOKE_CHECKLIST.md
+- scripts/audit-phase-17a.mjs
+
+Files updated:
+- package.json
+- PROJECT_EXECUTION_LOG.md
+- CODE_LEDGER.md
+- CHANGELOG.md
+- PHASE_STATUS.md
+
+Boundary:
+- No schema added.
+- No API route added.
+- No UI component added.
+- No repository added.
+- No embedding provider runtime added.
+- No Memory/RAG implementation added.

@@ -1870,3 +1870,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added final Phase 16.5 audit contract and audit script.
 - Wired `audit:phase16_5j` into the verification chain.
 - Confirmed Phase 17 as the next major implementation phase after Phase 16.5 closeout.
+
+## Phase 17A — Memory/RAG Scope Lock
+
+- Added Memory/RAG scope lock for official Chunk 17.
+- Added roadmap reconciliation for repo Phase 16 / official Chunk 16 mismatch.
+- Added full 17A–17Q feature map.
+- Added Memory/RAG boundary contract, discovery report, smoke checklist, and audit.
+- Added schema/discovery-first rule for future Memory/RAG implementation.
