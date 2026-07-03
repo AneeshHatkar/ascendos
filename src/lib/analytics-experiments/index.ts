@@ -7,3 +7,4 @@ export * from "./experiment-repository-boundary";
 export * from "./trend-correlation-comparison-engine";
 export * from "./experiment-evaluation-engine";
 export * from "./analytics-dashboard-view-model";
+export * from "./self-experiment-lab-view-model";

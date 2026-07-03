@@ -1,3 +1,5 @@
+import { SelfExperimentLabUi } from "../../components/analytics-experiments/self-experiment-lab-ui";
+import { buildEmptySelfExperimentLabViewModel } from "../../lib/analytics-experiments/self-experiment-lab-view-model";
 import { AnalyticsDashboardUi } from "../../components/analytics-experiments/analytics-dashboard-ui";
 import { buildEmptyAnalyticsDashboardViewModel } from "../../lib/analytics-experiments/analytics-dashboard-view-model";
 import {
@@ -252,6 +254,10 @@ export default function AnalyticsPage() {
                   }
                 />
               </SectionCard>
+
+              <AnalyticsDashboardUi viewModel={buildEmptyAnalyticsDashboardViewModel()} />
+
+              <SelfExperimentLabUi viewModel={buildEmptySelfExperimentLabViewModel()} />
             </>
           );
         }}

@@ -3701,3 +3701,9 @@ Added deterministic experiment evaluation engine code with baseline vs active co
 Status: Complete pending verification and commit.
 
 Added analytics dashboard UI surface and chart-ready view model with metric quality, snapshot, trend/comparison/correlation, experiment readiness, Carnos disclosure, privacy boundary, and empty/loading/error/privacy states. Boundary: no schema writes, no Supabase calls, no fake analytics data, no memory writes, no action execution.
+
+## Self-Experiment Lab UI
+
+Status: Complete pending verification and commit.
+
+Added self-experiment lab UI surface and safe view model with template library, draft review, baseline/active windows, measurement planning, confounder review, readiness review, lesson candidates, memory review boundary, privacy boundary, and empty/loading/error/privacy/review states. Boundary: no schema writes, no Supabase calls, no experiment writes, no fake experiment data, no memory writes, no action execution.

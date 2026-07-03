@@ -5285,3 +5285,7 @@ Added deterministic self-experiment evaluation engine code. This includes baseli
 ## Analytics Dashboard UI
 
 Added analytics dashboard UI surface and chart-ready view model. This includes /analytics route, analytics dashboard component, metric quality section, snapshot section, trend/comparison/correlation section, experiment readiness section, Carnos disclosure section, privacy boundary section, empty/loading/error/privacy states, and no-hardcoded-analytics-data boundary. Boundary preserved: no schema writes, no runtime SQL reads, no Supabase client calls, no fake analytics data, no memory writes, no action execution, and no local runtime requirement during checks.
+
+## Self-Experiment Lab UI
+
+Added self-experiment lab UI surface and safe view model. This includes template library, experiment draft review, baseline window, active window, measurement plan, confounder review, readiness review, lesson candidates, memory review boundary, privacy boundary, empty/loading/error/privacy/review states, review-before-memory-write boundary, and analytics route integration. Boundary preserved: no schema writes, no runtime SQL reads, no Supabase client calls, no experiment writes, no fake experiment data, no memory writes, no action execution, and no local runtime requirement during checks.

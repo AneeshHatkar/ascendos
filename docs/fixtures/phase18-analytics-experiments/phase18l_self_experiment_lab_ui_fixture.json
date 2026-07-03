@@ -1,0 +1,84 @@
+{
+  "phase": "18L",
+  "title": "Self-Experiment Lab UI",
+  "route_integration": "/analytics",
+  "sections": [
+    "template_library",
+    "experiment_draft",
+    "baseline_window",
+    "active_window",
+    "measurement_plan",
+    "confounder_review",
+    "readiness_review",
+    "lesson_candidates",
+    "memory_review_boundary",
+    "privacy_boundary"
+  ],
+  "ui_states": [
+    "ready",
+    "empty",
+    "loading",
+    "error",
+    "privacy_restricted",
+    "review_required"
+  ],
+  "source_states": [
+    "fresh",
+    "cached",
+    "stale",
+    "partial",
+    "missing",
+    "unsynced",
+    "deterministic_preview"
+  ],
+  "readiness_states": [
+    "ready",
+    "ready_with_warnings",
+    "not_ready",
+    "invalid",
+    "review_required"
+  ],
+  "action_boundaries": [
+    "preview_only",
+    "review_required_before_write",
+    "write_disabled",
+    "execution_disabled"
+  ],
+  "coded_capabilities": [
+    "self-experiment lab view model",
+    "self-experiment lab UI component",
+    "analytics route integration",
+    "experiment template library section",
+    "experiment draft review section",
+    "baseline window section",
+    "active window section",
+    "measurement plan section",
+    "confounder review section",
+    "readiness review section",
+    "lesson candidate section",
+    "memory review boundary section",
+    "privacy boundary section",
+    "empty state",
+    "loading state",
+    "error state",
+    "privacy restricted state",
+    "review required state",
+    "review-before-memory-write boundary",
+    "no hardcoded experiment data",
+    "no experiment writes",
+    "no memory writes",
+    "no action execution",
+    "no Supabase client calls",
+    "no schema writes"
+  ],
+  "boundaries": {
+    "experiment_writes_enabled": false,
+    "runtime_data_reads_enabled": false,
+    "schema_writes_enabled": false,
+    "supabase_calls_enabled": false,
+    "fake_experiment_data_enabled": false,
+    "memory_write_enabled": false,
+    "action_execution_enabled": false,
+    "local_carnos_runtime_required": false
+  }
+}

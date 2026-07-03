@@ -4378,3 +4378,16 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `docs/phase-reports/PHASE_18K_ANALYTICS_DASHBOARD_UI_REPORT.md`.
 - Added `scripts/audit-phase-18k.mjs`.
 - Added `audit:phase18k` to package verification chain.
+
+## Self-Experiment Lab UI
+
+- Added `src/lib/analytics-experiments/self-experiment-lab-view-model.ts`.
+- Added `src/components/analytics-experiments/self-experiment-lab-ui.tsx`.
+- Updated `src/app/analytics/page.tsx`.
+- Updated `src/lib/analytics-experiments/index.ts`.
+- Added `docs/fixtures/phase18-analytics-experiments/phase18l_self_experiment_lab_ui_fixture.json`.
+- Added `docs/contracts/PHASE_18L_SELF_EXPERIMENT_LAB_UI.md`.
+- Added `docs/qa/PHASE_18L_SELF_EXPERIMENT_LAB_UI_SMOKE_CHECKLIST.md`.
+- Added `docs/phase-reports/PHASE_18L_SELF_EXPERIMENT_LAB_UI_REPORT.md`.
+- Added `scripts/audit-phase-18l.mjs`.
+- Added `audit:phase18l` to package verification chain.

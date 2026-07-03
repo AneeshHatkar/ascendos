@@ -2024,3 +2024,7 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 ## Analytics Dashboard UI
 
 - Added analytics dashboard route, UI component, chart-ready view model, source-aware empty/loading/error/privacy states, Carnos disclosure boundary, and no-hardcoded-analytics-data guardrail.
+
+## Self-Experiment Lab UI
+
+- Added self-experiment lab UI, safe view model, analytics route integration, source-aware states, review-before-memory-write boundary, and no-fake-experiment-data guardrail.

@@ -1,0 +1,46 @@
+# Phase 18L Self-Experiment Lab UI Smoke Checklist
+
+- [ ] Self-experiment lab view model exists.
+- [ ] Self-experiment lab UI component exists.
+- [ ] Analytics route includes self-experiment lab UI.
+- [ ] Analytics experiments index exports lab view model.
+- [ ] Route integration is /analytics.
+- [ ] Template library section exists.
+- [ ] Experiment draft section exists.
+- [ ] Baseline window section exists.
+- [ ] Active window section exists.
+- [ ] Measurement plan section exists.
+- [ ] Confounder review section exists.
+- [ ] Readiness review section exists.
+- [ ] Lesson candidate section exists.
+- [ ] Memory review boundary section exists.
+- [ ] Privacy boundary section exists.
+- [ ] Empty state exists.
+- [ ] Loading state exists.
+- [ ] Error state exists.
+- [ ] Privacy restricted state exists.
+- [ ] Review required state exists.
+- [ ] Source states include fresh.
+- [ ] Source states include cached.
+- [ ] Source states include stale.
+- [ ] Source states include partial.
+- [ ] Source states include missing.
+- [ ] Source states include unsynced.
+- [ ] Source states include deterministic_preview.
+- [ ] Readiness states include ready.
+- [ ] Readiness states include ready_with_warnings.
+- [ ] Readiness states include not_ready.
+- [ ] Readiness states include invalid.
+- [ ] Readiness states include review_required.
+- [ ] Action boundary includes preview_only.
+- [ ] Action boundary includes review_required_before_write.
+- [ ] Action boundary includes write_disabled.
+- [ ] Action boundary includes execution_disabled.
+- [ ] No runtime SQL reads are added.
+- [ ] No Supabase client calls are added.
+- [ ] No schema writes are added.
+- [ ] No fake experiment data is added.
+- [ ] No memory writes are added.
+- [ ] No action execution is added.
+- [ ] npm run audit:phase18l passes.
+- [ ] npm run check passes.
