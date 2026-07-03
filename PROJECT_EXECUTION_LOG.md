@@ -5261,3 +5261,7 @@ Added analytics snapshot contracts and validators. This includes snapshot ranges
 ## Self-Experiment Contracts + Validators
 
 Added self-experiment contracts and validators. This includes experiment templates, lifecycle states, baseline rules, active-period rules, measurement requirements, confounder tracking, invalid state handling, lesson summary rules, memory candidate lesson boundary, Carnos explanation limits, and offline/cached/unsynced context disclosure. Boundary preserved: no schema writes, no runtime SQL reads, no Supabase client calls, no fake experiment data, no UI, no repository, and no local runtime requirement during checks.
+
+## Insight Quality + Provenance Contracts
+
+Added insight quality and provenance contracts. This includes insight quality levels, claim types, evidence contracts, provenance sources, freshness labels, disclosure requirements, action readiness boundaries, memory candidate boundaries, correlation-not-causation guardrails, Carnos explanation limits, and cached/stale/unsynced context disclosure. Boundary preserved: no schema writes, no runtime SQL reads, no Supabase client calls, no fake insight data, no memory writes, no action execution, and no local runtime requirement during checks.

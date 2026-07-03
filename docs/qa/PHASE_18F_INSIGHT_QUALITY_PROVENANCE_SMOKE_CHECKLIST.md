@@ -1,0 +1,55 @@
+# Phase 18F Insight Quality + Provenance Smoke Checklist
+
+- [ ] Insight quality implementation exists.
+- [ ] Analytics experiments index exports insight quality contracts.
+- [ ] Insight quality fixture exists.
+- [ ] Quality includes high_confidence.
+- [ ] Quality includes medium_confidence.
+- [ ] Quality includes low_confidence.
+- [ ] Quality includes insufficient_data.
+- [ ] Quality includes invalid.
+- [ ] Claim type includes observation.
+- [ ] Claim type includes trend.
+- [ ] Claim type includes comparison.
+- [ ] Claim type includes correlation.
+- [ ] Claim type includes experiment_readiness.
+- [ ] Claim type includes lesson_candidate.
+- [ ] Claim type includes recommendation_candidate.
+- [ ] Provenance includes metric_registry.
+- [ ] Provenance includes analytics_snapshot.
+- [ ] Provenance includes self_experiment.
+- [ ] Provenance includes manual_note.
+- [ ] Provenance includes memory_context.
+- [ ] Provenance includes deterministic_fallback.
+- [ ] Freshness includes fresh.
+- [ ] Freshness includes cached.
+- [ ] Freshness includes stale.
+- [ ] Freshness includes partial.
+- [ ] Freshness includes missing.
+- [ ] Freshness includes unsynced.
+- [ ] Disclosure includes none.
+- [ ] Disclosure includes disclose_cached_context.
+- [ ] Disclosure includes disclose_stale_context.
+- [ ] Disclosure includes disclose_unsynced_context.
+- [ ] Disclosure includes disclose_partial_context.
+- [ ] Disclosure includes disclose_deterministic_preview.
+- [ ] Disclosure includes disclose_insufficient_data.
+- [ ] Disclosure includes disclose_confounders.
+- [ ] Disclosure includes avoid_causal_claims.
+- [ ] Action readiness includes not_actionable.
+- [ ] Action readiness includes preview_only.
+- [ ] Action readiness includes candidate_requires_review.
+- [ ] Action readiness includes safe_to_suggest_without_write.
+- [ ] Correlation requires at least 7 matched data points.
+- [ ] Trend requires at least 4 logged data points.
+- [ ] Causality claims are forbidden.
+- [ ] Cached/stale/unsynced disclosure exists.
+- [ ] Carnos insight explanation limits exist.
+- [ ] Future local Carnos runtime compatibility is represented.
+- [ ] No runtime SQL reads are added.
+- [ ] No Supabase client calls are added.
+- [ ] No schema writes are added.
+- [ ] No memory writes are added.
+- [ ] No action execution is added.
+- [ ] npm run audit:phase18f passes.
+- [ ] npm run check passes.

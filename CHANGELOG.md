@@ -2000,3 +2000,7 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 ## Self-Experiment Contracts + Validators
 
 - Added self-experiment contract and validation layer with templates, lifecycle rules, baseline/active measurement gates, confounder handling, lesson boundaries, memory candidate readiness, and Carnos explanation limits for cached/unsynced/deterministic contexts.
+
+## Insight Quality + Provenance Contracts
+
+- Added insight quality and provenance validation layer with quality levels, evidence contracts, claim types, disclosure requirements, action readiness boundaries, memory candidate boundaries, and Carnos explanation limits for cached/stale/unsynced/insufficient-data contexts.

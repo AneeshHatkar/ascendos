@@ -3665,3 +3665,9 @@ Added deterministic snapshot contracts and validators for analytics freshness, p
 Status: Complete pending verification and commit.
 
 Added deterministic self-experiment contracts and validators for templates, lifecycle, baseline and active period requirements, measurements, confounders, invalid states, lesson summaries, memory candidate boundaries, and future local Carnos explanation safety. Boundary: no schema writes, no Supabase calls, no fake experiment data.
+
+## Insight Quality + Provenance Contracts
+
+Status: Complete pending verification and commit.
+
+Added deterministic insight quality and provenance contracts for evidence, quality levels, claim types, disclosure requirements, action readiness, memory candidate boundaries, correlation-not-causation guardrails, and future local Carnos explanation safety. Boundary: no schema writes, no Supabase calls, no fake insight data, no memory writes, no action execution.

@@ -1,0 +1,86 @@
+{
+  "phase": "18F",
+  "title": "Insight Quality + Provenance Contracts",
+  "quality_levels": [
+    "high_confidence",
+    "medium_confidence",
+    "low_confidence",
+    "insufficient_data",
+    "invalid"
+  ],
+  "claim_types": [
+    "observation",
+    "trend",
+    "comparison",
+    "correlation",
+    "experiment_readiness",
+    "lesson_candidate",
+    "recommendation_candidate"
+  ],
+  "provenance_sources": [
+    "metric_registry",
+    "analytics_snapshot",
+    "self_experiment",
+    "manual_note",
+    "memory_context",
+    "deterministic_fallback"
+  ],
+  "freshness_states": [
+    "fresh",
+    "cached",
+    "stale",
+    "partial",
+    "missing",
+    "unsynced"
+  ],
+  "disclosure_requirements": [
+    "none",
+    "disclose_cached_context",
+    "disclose_stale_context",
+    "disclose_unsynced_context",
+    "disclose_partial_context",
+    "disclose_deterministic_preview",
+    "disclose_insufficient_data",
+    "disclose_confounders",
+    "avoid_causal_claims"
+  ],
+  "action_readiness_states": [
+    "not_actionable",
+    "preview_only",
+    "candidate_requires_review",
+    "safe_to_suggest_without_write"
+  ],
+  "validator_rules": [
+    "insight id required",
+    "user scoped insight required",
+    "claim text required",
+    "at least one evidence item required",
+    "invalid evidence blocks insight",
+    "insufficient data blocks confident insight",
+    "correlation insight requires at least 7 matched data points",
+    "trend insight requires at least 4 logged data points",
+    "causality claims forbidden",
+    "cached context disclosure",
+    "stale context disclosure",
+    "unsynced context disclosure",
+    "partial context disclosure",
+    "deterministic preview disclosure",
+    "confounder disclosure",
+    "Carnos must avoid causal claims",
+    "no runtime data reads",
+    "no schema writes",
+    "no Supabase client calls",
+    "no localStorage core data",
+    "no local Carnos runtime required"
+  ],
+  "boundaries": {
+    "runtime_data_reads_enabled": false,
+    "schema_writes_enabled": false,
+    "supabase_calls_enabled": false,
+    "fake_insight_data_enabled": false,
+    "local_storage_core_data_enabled": false,
+    "local_carnos_runtime_required": false,
+    "action_execution_enabled": false,
+    "memory_write_enabled": false
+  }
+}

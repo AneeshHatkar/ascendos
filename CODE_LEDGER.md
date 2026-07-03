@@ -4310,3 +4310,14 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `docs/phase-reports/PHASE_18E_SELF_EXPERIMENT_CONTRACTS_REPORT.md`.
 - Added `scripts/audit-phase-18e.mjs`.
 - Added `audit:phase18e` to package verification chain.
+
+## Insight Quality + Provenance Contracts
+
+- Added `src/lib/analytics-experiments/insight-quality-provenance.ts`.
+- Updated `src/lib/analytics-experiments/index.ts`.
+- Added `docs/fixtures/phase18-analytics-experiments/phase18f_insight_quality_fixture.json`.
+- Added `docs/contracts/PHASE_18F_INSIGHT_QUALITY_PROVENANCE.md`.
+- Added `docs/qa/PHASE_18F_INSIGHT_QUALITY_PROVENANCE_SMOKE_CHECKLIST.md`.
+- Added `docs/phase-reports/PHASE_18F_INSIGHT_QUALITY_PROVENANCE_REPORT.md`.
+- Added `scripts/audit-phase-18f.mjs`.
+- Added `audit:phase18f` to package verification chain.
