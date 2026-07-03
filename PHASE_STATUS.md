@@ -3466,3 +3466,17 @@ Scope:
 
 Next:
 - Phase 17B — Data Boundary Matrix + AI Capability Matrix + Schema Ownership Map.
+
+## Phase 17B — Memory/RAG Data Boundary Matrix + AI Capability Matrix + Schema Ownership Map
+
+Status: Complete pending verification
+
+Scope:
+- Locked data boundaries for memory candidates, approved memories, knowledge, current-info, documents, research, career, goals/projects, Carnos conversation context, manual entries, embeddings, and retrieval events.
+- Locked AI capability truthfulness for Carnos Memory/RAG behavior.
+- Locked schema ownership planning for Phase 17C.
+- No schema, API, UI, repository, provider, or runtime implementation is added in 17B.
+
+Next:
+- Phase 17C — Memory/RAG Database Schema.
+- Before 17C, schema discovery output must be requested and reviewed.

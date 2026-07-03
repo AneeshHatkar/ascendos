@@ -4035,3 +4035,28 @@ Boundary:
 - No repository added.
 - No embedding provider runtime added.
 - No Memory/RAG implementation added.
+
+## Phase 17B — Memory/RAG Boundary/Capability/Schema Ownership
+
+Files added:
+- docs/contracts/PHASE_17B_MEMORY_RAG_DATA_BOUNDARY_MATRIX.md
+- docs/contracts/PHASE_17B_MEMORY_RAG_AI_CAPABILITY_MATRIX.md
+- docs/contracts/PHASE_17B_MEMORY_RAG_SCHEMA_OWNERSHIP_MAP.md
+- docs/phase-reports/PHASE_17B_MEMORY_RAG_BOUNDARY_COMPLETION_REPORT.md
+- docs/qa/PHASE_17B_MEMORY_RAG_BOUNDARY_SMOKE_CHECKLIST.md
+- scripts/audit-phase-17b.mjs
+
+Files updated:
+- package.json
+- PROJECT_EXECUTION_LOG.md
+- CODE_LEDGER.md
+- CHANGELOG.md
+- PHASE_STATUS.md
+
+Boundary:
+- No schema added.
+- No API route added.
+- No UI component added.
+- No repository added.
+- No provider runtime added.
+- No Memory/RAG runtime implementation added.

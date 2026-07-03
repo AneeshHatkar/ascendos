@@ -5109,3 +5109,18 @@ Summary:
 - Added schema/discovery-first rule for future schema/repository/retrieval steps.
 - Added Phase 17A audit wiring.
 - Phase 17A intentionally adds no schema, no API route, no UI component, no repository, no provider runtime, and no Memory/RAG implementation.
+
+## Phase 17B — Memory/RAG Data Boundary Matrix + AI Capability Matrix + Schema Ownership Map
+
+Status: Complete pending verification
+Commit: pending
+
+Summary:
+- Added Memory/RAG data boundary matrix.
+- Added Memory/RAG AI capability truthfulness matrix.
+- Added Memory/RAG schema ownership map for Phase 17C.
+- Preserved roadmap reconciliation: official JSON Chunk 16 is Voice Foundation; repo Phase 16 is Current Information/Web foundation; repo Phase 16.5 is Carnos Visual Identity.
+- Locked memory candidate vs approved memory vs knowledge vs current-info vs document vs Carnos conversation boundaries.
+- Locked no silent approved memory writes, no fake embeddings, no background memory extraction, and runtime-deferred voice memory flow.
+- Added schema discovery requirement before Phase 17C.
+- Phase 17B intentionally adds no schema, API route, UI component, repository, provider runtime, or Memory/RAG runtime implementation.

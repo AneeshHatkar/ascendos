@@ -1878,3 +1878,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added full 17A–17Q feature map.
 - Added Memory/RAG boundary contract, discovery report, smoke checklist, and audit.
 - Added schema/discovery-first rule for future Memory/RAG implementation.
+
+## Phase 17B — Memory/RAG Boundary/Capability/Schema Ownership
+
+- Added Memory/RAG data boundary matrix.
+- Added AI capability truthfulness matrix for Memory/RAG.
+- Added schema ownership map for Phase 17C planning.
+- Added Phase 17B completion report, smoke checklist, and audit.
+- Preserved schema/discovery-first rule before Phase 17C.
