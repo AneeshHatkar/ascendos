@@ -1,0 +1,33 @@
+{
+  "phase": "19J",
+  "status": "complete",
+  "name": "Timeline and analytics compatibility boundaries",
+  "coded_features": [
+    "timeline_compatibility_metadata",
+    "timeline_visibility_setting",
+    "timeline_label_template_boundary",
+    "timeline_spam_prevention_boundary",
+    "analytics_compatibility_metadata",
+    "aggregation_type_metadata",
+    "trendable_chartable_field_metadata",
+    "analytics_preview_boundary",
+    "insufficient_data_analytics_state",
+    "no_fake_analytics_streaks_boundary",
+    "tracker_analytics_readiness_result",
+    "timeline_readiness_result"
+  ],
+  "disabled_boundaries": {
+    "schema_migration": false,
+    "runtime_database_reads": false,
+    "runtime_database_writes": false,
+    "timeline_writes": false,
+    "runtime_analytics_reads": false,
+    "fake_analytics": false,
+    "fake_streaks": false,
+    "ui_route_change": false,
+    "model_calls": false,
+    "network_calls": false,
+    "memory_writes": false,
+    "action_execution": false
+  }
+}
