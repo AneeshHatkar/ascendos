@@ -1786,3 +1786,10 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added `audit:phase16r`.
 - Wired `audit:phase16r` into verification.
 - Closed Phase 16 and set next phase to Phase 16.5.
+
+## Phase 16.5A — Carnos Visual Identity Scope Lock
+
+- Locked Carnos visual identity direction as a mythic futuristic orb / mask companion.
+- Locked Phase 16.5 chunk sequence from 16.5A through 16.5J.
+- Added truthfulness, accessibility, reduced-motion, mobile behavior, and safety boundaries.
+- Added `audit:phase16_5a` and wired it into verification.

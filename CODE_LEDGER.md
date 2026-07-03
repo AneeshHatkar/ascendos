@@ -3785,3 +3785,27 @@ Boundary:
 - no current-info write route
 - no SQL migration
 - no automatic save or memory conversion
+
+## Phase 16.5A — Carnos Visual Identity Scope Lock
+
+Added:
+- `docs/phase-plans/PHASE_16_5A_CARNOS_VISUAL_IDENTITY_SCOPE_LOCK.md`
+- `docs/phase-reports/PHASE_16_5A_CARNOS_VISUAL_IDENTITY_SCOPE_LOCK_REPORT.md`
+- `docs/qa/PHASE_16_5A_CARNOS_VISUAL_IDENTITY_SCOPE_LOCK_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-16-5a.mjs`
+
+Updated:
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- docs/audit scope lock only
+- no runtime component
+- no voice runtime
+- no internet provider calls
+- no Python/tool execution
+- no document ingestion
+- no memory writes
+- no autonomous actions

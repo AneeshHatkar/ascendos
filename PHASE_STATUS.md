@@ -3334,3 +3334,17 @@ Phase 16 status:
 
 Next:
 - Phase 16.5 — Carnos Visual Identity + Companion UI.
+
+## Phase 16.5A — Carnos Visual Identity Scope Lock
+
+Status: Complete pending verification and commit.
+
+Scope locked:
+- Carnos visual identity and companion UI direction.
+- State system and state priority rules.
+- Capability matrix and truthfulness rules.
+- Accessibility, reduced-motion, and mobile behavior requirements.
+- Safety badges and forbidden runtime activations.
+
+Next:
+- Phase 16.5B — Carnos Identity, State, and Capability Contract.

@@ -4911,3 +4911,33 @@ Phase 16 closed:
 
 Next:
 - Phase 16.5 — Carnos Visual Identity + Companion UI.
+
+## 2026-07-02 — Phase 16.5A Carnos Visual Identity Scope Lock
+
+Locked Phase 16.5 Carnos Visual Identity + Companion UI scope before runtime implementation.
+
+Scope locked:
+- mythic futuristic Carnos orb / mask companion
+- state system and state priority rule
+- capability matrix
+- truthfulness rules
+- accessibility and reduced-motion support
+- mobile/responsive companion behavior
+- safety badges
+- `/carnos` integration target
+- Command/dashboard lightweight integration target
+- final visual smoke checklist
+
+Boundaries:
+- no voice runtime
+- no internet provider calls
+- no Python/tool execution
+- no document ingestion
+- no automatic memory writes
+- no autonomous actions
+- no SQL migration
+- no API route
+- no fake active functionality
+
+Next:
+- Phase 16.5B — Carnos Identity, State, and Capability Contract.
