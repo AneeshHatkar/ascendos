@@ -1,0 +1,32 @@
+{
+  "phase": "19D",
+  "status": "complete",
+  "name": "Entry validation and values_json safety",
+  "coded_features": [
+    "custom_tracker_entry_validation",
+    "values_json_object_safety_validation",
+    "required_field_validation_against_tracker_fields",
+    "optional_field_handling",
+    "unknown_field_rejection",
+    "unknown_field_quarantine",
+    "invalid_field_value_rejection",
+    "invalid_field_value_quarantine",
+    "entry_date_validation",
+    "entry_notes_validation",
+    "duplicate_entry_detection",
+    "same_day_duplicate_warning",
+    "entry_validation_result_summaries",
+    "no_uncontrolled_json_chaos_boundary",
+    "no_fake_tracker_entries_boundary"
+  ],
+  "disabled_boundaries": {
+    "schema_migration": false,
+    "runtime_database_reads": false,
+    "runtime_database_writes": false,
+    "carnos_runtime_behavior": false,
+    "model_calls": false,
+    "network_calls": false,
+    "memory_writes": false,
+    "action_execution": false
+  }
+}
