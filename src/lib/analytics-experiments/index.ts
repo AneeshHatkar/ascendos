@@ -5,3 +5,4 @@ export * from "./insight-quality-provenance";
 export * from "./analytics-repository-boundary";
 export * from "./experiment-repository-boundary";
 export * from "./trend-correlation-comparison-engine";
+export * from "./experiment-evaluation-engine";

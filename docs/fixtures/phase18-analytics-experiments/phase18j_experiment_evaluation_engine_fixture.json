@@ -1,0 +1,93 @@
+{
+  "phase": "18J",
+  "title": "Experiment Evaluation Engine",
+  "evaluation_statuses": [
+    "ready",
+    "ready_with_warnings",
+    "not_ready",
+    "invalid"
+  ],
+  "validity_states": [
+    "valid_result",
+    "inconclusive",
+    "insufficient_baseline",
+    "insufficient_active_window",
+    "too_many_confounders",
+    "missing_measurements",
+    "invalid"
+  ],
+  "outcome_directions": [
+    "improved",
+    "worsened",
+    "unchanged",
+    "inconclusive",
+    "invalid"
+  ],
+  "lesson_candidate_types": [
+    "continue",
+    "adjust",
+    "stop",
+    "repeat_with_better_measurement",
+    "insufficient_data",
+    "invalid"
+  ],
+  "confidence_levels": [
+    "high",
+    "medium",
+    "low",
+    "insufficient_data",
+    "invalid"
+  ],
+  "source_modes": [
+    "online_source_of_truth",
+    "eligible_offline_cache",
+    "mixed_online_offline",
+    "unsynced_local",
+    "deterministic_preview"
+  ],
+  "coded_capabilities": [
+    "baseline vs active comparison",
+    "measurement completeness scoring",
+    "baseline completeness gate",
+    "active-window completeness gate",
+    "confounder penalty",
+    "experiment validity states",
+    "evaluation readiness states",
+    "lesson candidate generation",
+    "memory candidate boundary",
+    "Carnos explanation limits",
+    "no fake experiment data",
+    "no memory writes",
+    "no action execution"
+  ],
+  "validator_rules": [
+    "Experiment id is required",
+    "Experiment template id is required",
+    "Experiment metric id is required",
+    "Experiment evaluation must be user scoped",
+    "Experiment evaluation must not allow causal claims",
+    "Experiment minimum baseline points must be at least 2",
+    "Experiment minimum active points must be at least 2",
+    "Expected baseline measurements must cover minimum baseline points",
+    "Expected active measurements must cover minimum active points",
+    "Experiment baseline window has insufficient data",
+    "Experiment active window has insufficient data",
+    "Experiment has missing expected measurements",
+    "Experiment evaluation contains invalid or non-user-scoped measurement",
+    "Experiment has confounder warnings",
+    "Experiment has too many confounders for a clean result"
+  ],
+  "boundaries": {
+    "runtime_data_reads_enabled": false,
+    "runtime_data_writes_enabled": false,
+    "schema_writes_enabled": false,
+    "supabase_calls_enabled": false,
+    "fake_experiment_data_enabled": false,
+    "local_storage_core_data_enabled": false,
+    "memory_write_enabled": false,
+    "action_execution_enabled": false,
+    "causal_claims_allowed": false,
+    "local_carnos_runtime_required": false,
+    "deterministic_evaluation_implemented": true
+  }
+}

@@ -3689,3 +3689,9 @@ Added deterministic experiment repository boundary contracts for read intents, r
 Status: Complete pending verification and commit.
 
 Added deterministic trend/correlation/comparison engine code with minimum data gates, slope scoring, volatility detection, comparison percent-change logic, Pearson correlation scoring, confidence labels, disclosure generation, and no-causality guardrails. Boundary: no schema writes, no Supabase calls, no fake analytics data, no memory writes, no action execution.
+
+## Experiment Evaluation Engine
+
+Status: Complete pending verification and commit.
+
+Added deterministic experiment evaluation engine code with baseline vs active comparison, measurement completeness, confounder penalties, validity states, readiness states, lesson candidate generation, memory candidate review boundary, and no-causality guardrails. Boundary: no schema writes, no Supabase calls, no fake experiment data, no memory writes, no action execution.

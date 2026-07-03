@@ -1,0 +1,40 @@
+# Phase 18J Experiment Evaluation Engine Smoke Checklist
+
+- [ ] Experiment evaluation engine implementation exists.
+- [ ] Analytics experiments index exports experiment evaluation engine.
+- [ ] Experiment evaluation fixture exists.
+- [ ] Evaluation status includes ready.
+- [ ] Evaluation status includes ready_with_warnings.
+- [ ] Evaluation status includes not_ready.
+- [ ] Evaluation status includes invalid.
+- [ ] Validity state includes valid_result.
+- [ ] Validity state includes inconclusive.
+- [ ] Validity state includes insufficient_baseline.
+- [ ] Validity state includes insufficient_active_window.
+- [ ] Validity state includes too_many_confounders.
+- [ ] Validity state includes missing_measurements.
+- [ ] Outcome direction includes improved.
+- [ ] Outcome direction includes worsened.
+- [ ] Outcome direction includes unchanged.
+- [ ] Outcome direction includes inconclusive.
+- [ ] Lesson candidate type includes continue.
+- [ ] Lesson candidate type includes adjust.
+- [ ] Lesson candidate type includes stop.
+- [ ] Lesson candidate type includes repeat_with_better_measurement.
+- [ ] Lesson candidate type includes insufficient_data.
+- [ ] Baseline vs active comparison exists.
+- [ ] Measurement completeness scoring exists.
+- [ ] Confounder penalty exists.
+- [ ] Lesson candidate generation exists.
+- [ ] Memory candidate boundary exists.
+- [ ] Carnos explanation limits exist.
+- [ ] Causal claims are forbidden.
+- [ ] No runtime SQL reads are added.
+- [ ] No runtime data writes are added.
+- [ ] No Supabase client calls are added.
+- [ ] No schema writes are added.
+- [ ] No fake experiment data is added.
+- [ ] No memory writes are added.
+- [ ] No action execution is added.
+- [ ] npm run audit:phase18j passes.
+- [ ] npm run check passes.

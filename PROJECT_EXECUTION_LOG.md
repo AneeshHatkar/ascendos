@@ -5277,3 +5277,7 @@ Added experiment repository boundary contracts. This includes template lookup bo
 ## Trend Correlation Comparison Engine
 
 Added deterministic trend/correlation/comparison engine code. This includes trend direction classification, slope scoring, volatility detection, comparison window evaluation, percent change calculation, Pearson correlation coefficient calculation, correlation strength classification, minimum data gates, confidence classification, disclosure generation, Carnos explanation limits, and correlation-not-causation guardrails. Boundary preserved: no schema writes, no runtime SQL reads, no Supabase client calls, no fake analytics data, no memory writes, no action execution, and no local runtime requirement during checks.
+
+## Experiment Evaluation Engine
+
+Added deterministic self-experiment evaluation engine code. This includes baseline vs active comparison, measurement completeness scoring, baseline completeness gate, active-window completeness gate, confounder penalty, experiment validity states, evaluation readiness states, lesson candidate generation, memory candidate boundary, Carnos explanation limits, no fake experiment data, no memory writes, and no action execution. Boundary preserved: no schema writes, no runtime SQL reads, no runtime data writes, no Supabase client calls, no sync queue implementation, and no local runtime requirement during checks.

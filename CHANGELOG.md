@@ -2016,3 +2016,7 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 ## Trend Correlation Comparison Engine
 
 - Added deterministic analytics engine logic for trends, comparisons, correlations, confidence levels, disclosure requirements, and no-causality Carnos explanation limits.
+
+## Experiment Evaluation Engine
+
+- Added deterministic self-experiment evaluation logic for baseline/active comparison, completeness, confounders, readiness, lesson candidates, memory candidate review boundary, and no-causality Carnos explanation limits.
