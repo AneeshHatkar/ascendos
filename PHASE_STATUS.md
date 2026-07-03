@@ -3394,3 +3394,23 @@ Boundary:
 
 Next:
 - Phase 16.5F — Carnos Capability Matrix + Truthfulness Panel.
+
+## Phase 16.5G — Carnos Visual Identity Dashboard Panel
+
+Status: Complete pending verification and commit.
+
+Completed:
+- Carnos visual identity dashboard panel.
+- Overview mode.
+- Compact mode.
+- Truthfulness mode.
+- State summary cards.
+- Display-only runtime boundary copy.
+
+Boundary:
+- No `/carnos` page integration.
+- No command/dashboard route integration.
+- No runtime activation.
+
+Next:
+- Phase 16.5H — `/carnos` Page Integration.

@@ -117,7 +117,6 @@ const docMarkers = {
 };
 
 const forbiddenPaths = [
-  "src/components/dashboard/carnos-visual-identity-panel.tsx",
   "src/app/api/carnos/voice",
   "src/app/api/carnos/tools",
   "src/app/api/carnos/internet",

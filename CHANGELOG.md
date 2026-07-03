@@ -1840,3 +1840,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added no fake active runtime controls marker.
 - Added descriptive-only truthfulness copy.
 - Added `audit:phase16_5f` and wired it into verification.
+
+## Phase 16.5G — Carnos Visual Identity Dashboard Panel
+
+- Added display-only `CarnosVisualIdentityPanel`.
+- Added overview, compact, and truthfulness dashboard panel modes.
+- Composed the orb, companion widget, capability matrix, and boundary badges into one dashboard-ready surface.
+- Added state summary cards and runtime boundary copy.
+- Added `audit:phase16_5g` and wired it into verification.

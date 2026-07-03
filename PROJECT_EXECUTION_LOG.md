@@ -5007,3 +5007,35 @@ Boundaries:
 
 Next:
 - Phase 16.5F — Carnos Capability Matrix + Truthfulness Panel.
+
+## 2026-07-02 — Phase 16.5G Carnos Visual Identity Dashboard Panel
+
+Added dashboard-ready visual identity panel for Carnos.
+
+Implemented:
+- `CarnosVisualIdentityPanel`
+- `CarnosVisualIdentityPanelProps`
+- `CarnosVisualIdentityPanelMode`
+- overview mode
+- compact mode
+- truthfulness mode
+- state summary cards
+- display-only runtime boundary copy
+- composition of orb, companion widget, capability matrix, and boundary badges
+
+Boundaries:
+- display-only dashboard panel
+- no `/carnos` page integration
+- no command/dashboard route integration
+- no API route
+- no SQL migration
+- no voice runtime
+- no internet provider calls
+- no Python/tool execution
+- no document ingestion
+- no automatic memory writes
+- no source saves
+- no autonomous actions
+
+Next:
+- Phase 16.5H — `/carnos` Page Integration.

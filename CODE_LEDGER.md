@@ -3925,3 +3925,28 @@ Updated:
 Boundary:
 - visual-only truthfulness UI
 - no runtime activation
+
+## Phase 16.5G — Carnos Visual Identity Dashboard Panel
+
+Added:
+- `src/components/dashboard/carnos-visual-identity-panel.tsx`
+- `docs/contracts/PHASE_16_5G_CARNOS_VISUAL_IDENTITY_DASHBOARD_PANEL_CONTRACT.md`
+- `docs/phase-reports/PHASE_16_5G_CARNOS_VISUAL_IDENTITY_DASHBOARD_PANEL_REPORT.md`
+- `docs/qa/PHASE_16_5G_CARNOS_VISUAL_IDENTITY_DASHBOARD_PANEL_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-16-5g.mjs`
+
+Updated:
+- `scripts/audit-phase-16-5a.mjs`
+- `scripts/audit-phase-16-5b.mjs`
+- `scripts/audit-phase-16-5c.mjs`
+- `scripts/audit-phase-16-5d.mjs`
+- `scripts/audit-phase-16-5e.mjs`
+- `scripts/audit-phase-16-5f.mjs`
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- display-only dashboard panel
+- no runtime activation
