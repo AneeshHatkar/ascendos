@@ -1,0 +1,33 @@
+# Phase 17Q Final Memory/RAG Smoke Checklist
+
+- [ ] Phase 17A audit exists and is in the check chain.
+- [ ] Phase 17B audit exists and is in the check chain.
+- [ ] Phase 17C audit exists and is in the check chain.
+- [ ] Phase 17D audit exists and is in the check chain.
+- [ ] Phase 17E audit exists and is in the check chain.
+- [ ] Phase 17F audit exists and is in the check chain.
+- [ ] Phase 17G audit exists and is in the check chain.
+- [ ] Phase 17H audit exists and is in the check chain.
+- [ ] Phase 17I audit exists and is in the check chain.
+- [ ] Phase 17J audit exists and is in the check chain.
+- [ ] Phase 17K audit exists and is in the check chain.
+- [ ] Phase 17L audit exists and is in the check chain.
+- [ ] Phase 17M audit exists and is in the check chain.
+- [ ] Phase 17N audit exists and is in the check chain.
+- [ ] Phase 17O audit exists and is in the check chain.
+- [ ] Phase 17P audit exists and is in the check chain.
+- [ ] Phase 17Q final audit exists and is in the check chain.
+- [ ] Final fixture exists.
+- [ ] Final contract exists.
+- [ ] Final completion report exists.
+- [ ] No memory_retrieval_events writes occur in preview layers.
+- [ ] No runtime retrieval occurs.
+- [ ] No embeddings are generated.
+- [ ] No semantic retrieval is activated.
+- [ ] No provider calls occur.
+- [ ] No vector search occurs.
+- [ ] No Carnos prompt/context injection occurs.
+- [ ] No background scanning occurs.
+- [ ] No actual write-enabled forget/delete execution is added.
+- [ ] `npm run audit:phase17q` passes.
+- [ ] `npm run check` passes.

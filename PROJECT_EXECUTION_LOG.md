@@ -5186,7 +5186,7 @@ Boundary:
 - no embeddings
 - no provider calls
 - no vector search
-- no Carnos prompt/context injection
+- No Carnos prompt/context injection
 - no background scanning
 - no silent conflict resolution
 
@@ -5195,7 +5195,7 @@ Boundary:
 - Added `NoopMemoryEmbeddingProvider`.
 - Added deterministic request evaluation for approved memory, knowledge, retrieval-contract, and external-source previews.
 - Added deferred embedding record previews validated against Memory/RAG schema validators.
-- Preserved no runtime retrieval, no embedding generation, no fake vectors, no provider calls, no vector search, no SQL reads/writes, no Supabase calls, no Carnos prompt/context injection, and no background queue execution.
+- Preserved no runtime retrieval, no embedding generation, no fake vectors, no provider calls, no vector search, no SQL reads/writes, no Supabase calls, No Carnos prompt/context injection, and no background queue execution.
 - Next: Phase 17I — Retrieval Ranking + Budget + Dedupe Rules.
 
 ## Phase 17I — Retrieval Ranking + Budget + Dedupe Rules
@@ -5204,28 +5204,32 @@ Added deterministic Memory/RAG retrieval planning rules. No runtime retrieval, m
 
 ## Phase 17J — Knowledge Vault Retrieval Bridge
 
-Added deterministic Knowledge Vault Retrieval Bridge from knowledge items into Phase 17I retrieval-planning candidates. Boundary preserved: no runtime retrieval, no memory_retrieval_events writes, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, no Carnos prompt/context injection, and no background scanning.
+Added deterministic Knowledge Vault Retrieval Bridge from knowledge items into Phase 17I retrieval-planning candidates. Boundary preserved: no runtime retrieval, no memory_retrieval_events writes, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, No Carnos prompt/context injection, and no background scanning.
 
 ## Phase 17K — Current-Info / Document / Career / Research Source Bridges
 
-Added deterministic source bridges from Current Info, Document, Career, and Research records into Phase 17I retrieval-planning candidates. Boundary preserved: no runtime retrieval, no memory_retrieval_events writes, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, no Carnos prompt/context injection, and no background scanning.
+Added deterministic source bridges from Current Info, Document, Career, and Research records into Phase 17I retrieval-planning candidates. Boundary preserved: no runtime retrieval, no memory_retrieval_events writes, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, No Carnos prompt/context injection, and no background scanning.
 
 ## Phase 17L — Carnos Memory Context Pack Builder
 
-Added deterministic preview-only Carnos Memory Context Pack Builder consuming Phase 17I retrieval plans, Phase 17J Knowledge Vault bridge outputs, and Phase 17K source bridge outputs. Boundary preserved: no runtime retrieval, no memory_retrieval_events writes, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, no Carnos prompt/context injection, and no background scanning.
+Added deterministic preview-only Carnos Memory Context Pack Builder consuming Phase 17I retrieval plans, Phase 17J Knowledge Vault bridge outputs, and Phase 17K source bridge outputs. Boundary preserved: no runtime retrieval, no memory_retrieval_events writes, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, No Carnos prompt/context injection, and no background scanning.
 
 ## Phase 17M — Retrieval Audit Trail + Retrieval Explanation
 
-Added deterministic preview-only retrieval audit trail and retrieval explanation builder. Boundary preserved: no memory_retrieval_events writes, no runtime retrieval, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, no Carnos prompt/context injection, and no background scanning.
+Added deterministic preview-only retrieval audit trail and retrieval explanation builder. Boundary preserved: no memory_retrieval_events writes, no runtime retrieval, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, No Carnos prompt/context injection, and no background scanning.
 
 ## Phase 17N — Memory/RAG UI
 
-Added preview-only Memory/RAG UI component for context-pack previews, retrieval audit trail previews, visible boundaries, disabled write actions, loading states, empty states, and error states. Boundary preserved: no memory_retrieval_events writes, no runtime retrieval, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, no Carnos prompt/context injection, no background scanning, and no approve/reject/delete/forget mutations.
+Added preview-only Memory/RAG UI component for context-pack previews, retrieval audit trail previews, visible boundaries, disabled write actions, loading states, empty states, and error states. Boundary preserved: no memory_retrieval_events writes, no runtime retrieval, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, No Carnos prompt/context injection, no background scanning, and no approve/reject/delete/forget mutations.
 
 ## Phase 17O — Carnos Memory Integration Panel
 
-Added preview-only Carnos Memory Integration Panel showing allowed memory preview, blocked/deferred memory actions, Carnos memory boundaries, audit visibility, and truthfulness guard. Boundary preserved: no memory_retrieval_events writes, no runtime retrieval, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, no Carnos prompt/context injection, no background scanning, no approve/reject/delete/forget mutations, and no autonomous memory use.
+Added preview-only Carnos Memory Integration Panel showing allowed memory preview, blocked/deferred memory actions, Carnos memory boundaries, audit visibility, and truthfulness guard. Boundary preserved: no memory_retrieval_events writes, no runtime retrieval, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, No Carnos prompt/context injection, no background scanning, no approve/reject/delete/forget mutations, and no autonomous memory use.
 
 ## Phase 17P — Privacy, Sensitive Lock, Forget/Delete Readiness
 
-Added deterministic preview-only privacy, sensitive lock, and forget/delete readiness evaluator. Boundary preserved: no memory_retrieval_events writes, no runtime retrieval, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, no Carnos prompt/context injection, no background scanning, and no actual approve/reject/archive/forget/delete mutations.
+Added deterministic preview-only privacy, sensitive lock, and forget/delete readiness evaluator. Boundary preserved: no memory_retrieval_events writes, no runtime retrieval, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, No Carnos prompt/context injection, no background scanning, and no actual approve/reject/archive/forget/delete mutations.
+
+## Phase 17Q — Final Phase 17 Audit + Fixtures + Completion Report
+
+Added final Phase 17 Memory/RAG fixtures, final audit script, final completion report, final contract, and final smoke checklist. Phase 17 Memory/RAG complete. Boundary preserved: No memory_retrieval_events writes, no runtime retrieval, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls in preview layers, no SQL reads/writes in preview layers, No Carnos prompt/context injection, no background scanning, and no write-enabled forget/delete execution.

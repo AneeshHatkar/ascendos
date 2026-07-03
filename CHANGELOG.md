@@ -1965,3 +1965,8 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 
 - Added deterministic preview-only privacy, sensitive lock, and forget/delete readiness evaluator.
 - Preserved write/mutation deferral and schema-check-before-write boundary.
+
+## Phase 17Q — Final Phase 17 Audit + Fixtures + Completion Report
+
+- Added final Phase 17 Memory/RAG fixture, final audit, completion report, and smoke checklist.
+- Completed Phase 17 Memory/RAG.

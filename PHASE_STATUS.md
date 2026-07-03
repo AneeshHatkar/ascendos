@@ -3574,40 +3574,48 @@ Status: Complete pending verification and commit.
 
 Status: Complete pending verification and commit.
 
-Boundary: no runtime retrieval, no memory_retrieval_events writes, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, no Carnos prompt/context injection, no background scanning.
+Boundary: no runtime retrieval, no memory_retrieval_events writes, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, No Carnos prompt/context injection, no background scanning.
 
 ## Phase 17K — Current-Info / Document / Career / Research Source Bridges
 
 Status: Complete pending verification and commit.
 
-Boundary: no runtime retrieval, no memory_retrieval_events writes, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, no Carnos prompt/context injection, no background scanning.
+Boundary: no runtime retrieval, no memory_retrieval_events writes, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, No Carnos prompt/context injection, no background scanning.
 
 ## Phase 17L — Carnos Memory Context Pack Builder
 
 Status: Complete pending verification and commit.
 
-Boundary: no runtime retrieval, no memory_retrieval_events writes, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, no Carnos prompt/context injection, no background scanning.
+Boundary: no runtime retrieval, no memory_retrieval_events writes, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, No Carnos prompt/context injection, no background scanning.
 
 ## Phase 17M — Retrieval Audit Trail + Retrieval Explanation
 
 Status: Complete pending verification and commit.
 
-Boundary: no memory_retrieval_events writes, no runtime retrieval, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, no Carnos prompt/context injection, no background scanning.
+Boundary: no memory_retrieval_events writes, no runtime retrieval, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, No Carnos prompt/context injection, no background scanning.
 
 ## Phase 17N — Memory/RAG UI
 
 Status: Complete pending verification and commit.
 
-Boundary: no memory_retrieval_events writes, no runtime retrieval, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, no Carnos prompt/context injection, no background scanning, no approve/reject/delete/forget mutations.
+Boundary: no memory_retrieval_events writes, no runtime retrieval, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, No Carnos prompt/context injection, no background scanning, no approve/reject/delete/forget mutations.
 
 ## Phase 17O — Carnos Memory Integration Panel
 
 Status: Complete pending verification and commit.
 
-Boundary: no memory_retrieval_events writes, no runtime retrieval, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, no Carnos prompt/context injection, no background scanning, no approve/reject/delete/forget mutations, no autonomous memory use.
+Boundary: no memory_retrieval_events writes, no runtime retrieval, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, No Carnos prompt/context injection, no background scanning, no approve/reject/delete/forget mutations, no autonomous memory use.
 
 ## Phase 17P — Privacy, Sensitive Lock, Forget/Delete Readiness
 
 Status: Complete pending verification and commit.
 
-Boundary: no memory_retrieval_events writes, no runtime retrieval, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, no Carnos prompt/context injection, no background scanning, no actual approve/reject/archive/forget/delete mutations.
+Boundary: no memory_retrieval_events writes, no runtime retrieval, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, No Carnos prompt/context injection, no background scanning, no actual approve/reject/archive/forget/delete mutations.
+
+## Phase 17Q — Final Phase 17 Audit + Fixtures + Completion Report
+
+Status: Complete pending verification and commit.
+
+Phase 17 Memory/RAG complete.
+
+Boundary: No memory_retrieval_events writes, no runtime retrieval, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase calls in preview layers, no SQL reads/writes in preview layers, No Carnos prompt/context injection, no background scanning, no write-enabled forget/delete execution.

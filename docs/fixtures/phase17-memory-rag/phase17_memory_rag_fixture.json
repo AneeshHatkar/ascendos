@@ -1,0 +1,73 @@
+{
+  "phase": "17Q",
+  "fixture_name": "phase17_memory_rag_final_fixture",
+  "preview_only": true,
+  "runtime_side_effects_enabled": false,
+  "runtime_retrieval_enabled": false,
+  "semantic_retrieval_active": false,
+  "provider_calls_enabled": false,
+  "vector_search_enabled": false,
+  "sql_runtime_enabled": false,
+  "memory_retrieval_events_write_count": 0,
+  "carnos_prompt_injection_enabled": false,
+  "mutation_execution_enabled": false,
+  "records": [
+    {
+      "id": "mem_fixture_approved_001",
+      "title": "Approved career preference",
+      "lifecycle_state": "approved",
+      "sensitivity": "low",
+      "sensitive_locked": false,
+      "source_label": "manual approved memory",
+      "expected_privacy_decision": "allowed_preview"
+    },
+    {
+      "id": "mem_fixture_sensitive_001",
+      "title": "Sensitive locked personal detail",
+      "lifecycle_state": "approved",
+      "sensitivity": "restricted",
+      "sensitive_locked": true,
+      "source_label": "manual approved memory",
+      "expected_privacy_decision": "blocked_sensitive"
+    },
+    {
+      "id": "mem_fixture_forgotten_001",
+      "title": "Forgotten memory placeholder",
+      "lifecycle_state": "forgotten",
+      "sensitivity": "medium",
+      "sensitive_locked": false,
+      "source_label": "forget readiness fixture",
+      "expected_privacy_decision": "blocked_forgotten"
+    }
+  ],
+  "retrieval_plan_expectations": {
+    "approved_only": true,
+    "sensitive_locked_blocked_by_default": true,
+    "rejected_blocked": true,
+    "forgotten_blocked": true,
+    "dedupe_visible": true,
+    "budget_visible": true,
+    "conflict_visible": true,
+    "audit_explanation_visible": true
+  },
+  "ui_expectations": {
+    "memory_rag_preview_panel": true,
+    "carnos_memory_integration_panel": true,
+    "visible_no_runtime_boundary": true,
+    "disabled_write_actions_visible": true,
+    "truthfulness_guard_visible": true
+  },
+  "final_boundary": {
+    "no_memory_retrieval_events_writes": true,
+    "no_runtime_retrieval": true,
+    "no_embedding_generation": true,
+    "no_semantic_retrieval_activation": true,
+    "no_provider_calls": true,
+    "no_vector_search": true,
+    "no_supabase_calls": true,
+    "no_sql_reads_or_writes": true,
+    "no_carnos_prompt_context_injection": true,
+    "no_background_scanning": true,
+    "no_actual_approve_reject_archive_forget_delete_mutations": true
+  }
+}

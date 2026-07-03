@@ -4228,3 +4228,10 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `src/lib/carnos-continuity/privacy-sensitive-forget-readiness.ts`.
 - Exported Phase 17P from `src/lib/carnos-continuity/index.ts`.
 - Added Phase 17P contract, report, smoke checklist, audit script, and package check chain entry.
+
+## Phase 17Q — Final Phase 17 Audit + Fixtures + Completion Report
+
+- Added `docs/fixtures/phase17-memory-rag/phase17_memory_rag_fixture.json`.
+- Added final Phase 17 contract, completion report, smoke checklist, and audit script.
+- Added `audit:phase17q` to the package verification chain.
+- Marked Phase 17 Memory/RAG complete.
