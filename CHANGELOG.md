@@ -1830,3 +1830,13 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added bottom-right, bottom-left, inline, and mobile-inline dock placements.
 - Added boundary badge strip and runtime boundary copy.
 - Added `audit:phase16_5e` and wired it into verification.
+
+## Phase 16.5F — Carnos Capability Matrix + Truthfulness Panel
+
+- Added visual-only `CarnosCapabilityMatrixPanel`.
+- Added visual-only `CarnosBoundaryBadges`.
+- Added capability status grouping for enabled, foundation_present, runtime_deferred, requires_confirmation, forbidden, and planned.
+- Added runtime active vs not active indicators.
+- Added no fake active runtime controls marker.
+- Added descriptive-only truthfulness copy.
+- Added `audit:phase16_5f` and wired it into verification.

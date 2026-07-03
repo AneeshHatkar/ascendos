@@ -3899,3 +3899,29 @@ Updated:
 Boundary:
 - visual-only widget/dock
 - no runtime activation
+
+## Phase 16.5F — Carnos Capability Matrix + Truthfulness Panel
+
+Added:
+- `src/components/carnos/carnos-capability-matrix-panel.tsx`
+- `src/components/carnos/carnos-boundary-badges.tsx`
+- `docs/contracts/PHASE_16_5F_CARNOS_CAPABILITY_MATRIX_TRUTHFULNESS_CONTRACT.md`
+- `docs/phase-reports/PHASE_16_5F_CARNOS_CAPABILITY_MATRIX_TRUTHFULNESS_REPORT.md`
+- `docs/qa/PHASE_16_5F_CARNOS_CAPABILITY_MATRIX_TRUTHFULNESS_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-16-5f.mjs`
+
+Updated:
+- `src/components/carnos/index.ts`
+- `scripts/audit-phase-16-5a.mjs`
+- `scripts/audit-phase-16-5b.mjs`
+- `scripts/audit-phase-16-5c.mjs`
+- `scripts/audit-phase-16-5d.mjs`
+- `scripts/audit-phase-16-5e.mjs`
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- visual-only truthfulness UI
+- no runtime activation

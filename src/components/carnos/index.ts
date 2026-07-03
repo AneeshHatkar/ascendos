@@ -6,3 +6,8 @@ export type { CarnosCompanionWidgetMode, CarnosCompanionWidgetProps } from "./ca
 
 export { CarnosCompanionDock } from "./carnos-companion-dock";
 export type { CarnosCompanionDockPlacement, CarnosCompanionDockProps } from "./carnos-companion-dock";
+export { CarnosBoundaryBadges } from "./carnos-boundary-badges";
+export type { CarnosBoundaryBadgesProps } from "./carnos-boundary-badges";
+
+export { CarnosCapabilityMatrixPanel } from "./carnos-capability-matrix-panel";
+export type { CarnosCapabilityMatrixPanelProps } from "./carnos-capability-matrix-panel";
