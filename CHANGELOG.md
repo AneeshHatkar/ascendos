@@ -1862,3 +1862,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added `CarnosLightweightCompanionPanel`.
 - Reused compact `CarnosCompanionDock`.
 - Preserved visual-only/runtime-deferred boundaries.
+
+## Phase 16.5J — Carnos Visual Identity Final Audit + Visual Smoke Checklist + Completion Report
+
+- Added final Phase 16.5 completion report.
+- Added final visual smoke checklist.
+- Added final Phase 16.5 audit contract and audit script.
+- Wired `audit:phase16_5j` into the verification chain.
+- Confirmed Phase 17 as the next major implementation phase after Phase 16.5 closeout.

@@ -3435,3 +3435,22 @@ Boundary:
 
 Next:
 - Phase 16.5I — Command/Dashboard Lightweight Companion Integration.
+
+## Phase 16.5J — Carnos Visual Identity Final Audit + Visual Smoke Checklist + Completion Report
+
+Status: Implemented pending verification.
+
+Phase 16.5 closeout:
+- 16.5A complete
+- 16.5B complete
+- 16.5C complete
+- 16.5D complete
+- 16.5E complete
+- 16.5F complete
+- 16.5G complete
+- 16.5H complete
+- 16.5I complete
+- 16.5J implemented pending verification
+
+Next major phase:
+- Phase 17 — next major implementation phase from the source-of-truth roadmap.

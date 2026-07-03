@@ -5066,3 +5066,31 @@ Boundaries:
 
 Next:
 - Phase 16.5I — Command/Dashboard Lightweight Companion Integration.
+
+## Phase 16.5J — Carnos Visual Identity Final Audit + Visual Smoke Checklist + Completion Report
+
+Status: Implemented pending verification.
+
+Summary:
+- Added final Phase 16.5 completion report.
+- Added final Phase 16.5 visual smoke checklist.
+- Added final Phase 16.5 audit contract.
+- Added `audit:phase16_5j`.
+- Wired final audit into the verification chain.
+
+Boundary:
+- No UI expansion beyond already completed Phase 16.5 surfaces.
+- No API route.
+- No SQL migration.
+- No provider call.
+- No voice runtime.
+- No tool/Python execution.
+- No document ingestion.
+- No automatic memory write.
+- No source save.
+- No autonomous action.
+
+Phase 16.5 closeout:
+- Carnos Visual Identity + Companion UI is ready for completion after verification.
+
+Next: Phase 17 — next major implementation phase from the source-of-truth roadmap.
