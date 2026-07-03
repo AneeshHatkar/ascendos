@@ -1950,3 +1950,8 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 
 - Added deterministic preview-only retrieval audit trail and explanation builder.
 - Preserved memory_retrieval_events write deferral and no-runtime boundaries.
+
+## Phase 17N — Memory/RAG UI
+
+- Added preview-only Memory/RAG UI component.
+- Added visible no-runtime boundaries and disabled write-action surfaces.

@@ -1,0 +1,27 @@
+# Phase 17N Memory/RAG UI Smoke Checklist
+
+- [ ] `MemoryRagPreviewPanel` renders a preview-only Memory/RAG panel.
+- [ ] Context pack preview UI renders sections and items.
+- [ ] Retrieval audit trail preview UI renders audit events.
+- [ ] Retrieval explanation preview UI is represented through audit summary surfaces.
+- [ ] Visible memory boundaries are shown.
+- [ ] Visible retrieval reasons are represented.
+- [ ] Visible audit reasons are represented.
+- [ ] Visible no-runtime state is shown.
+- [ ] Disabled approve/reject/delete/forget actions are shown.
+- [ ] Loading state renders.
+- [ ] Empty state renders.
+- [ ] Error state renders.
+- [ ] No memory_retrieval_events writes occur.
+- [ ] No runtime retrieval occurs.
+- [ ] No embeddings are generated.
+- [ ] No semantic retrieval is activated.
+- [ ] No provider calls occur.
+- [ ] No vector search occurs.
+- [ ] No Supabase calls occur.
+- [ ] No SQL reads or writes occur.
+- [ ] No Carnos prompt/context injection occurs.
+- [ ] No background scanning occurs.
+- [ ] No approve/reject/delete/forget mutations occur.
+- [ ] `npm run audit:phase17n` passes.
+- [ ] `npm run check` passes.

@@ -5217,3 +5217,7 @@ Added deterministic preview-only Carnos Memory Context Pack Builder consuming Ph
 ## Phase 17M — Retrieval Audit Trail + Retrieval Explanation
 
 Added deterministic preview-only retrieval audit trail and retrieval explanation builder. Boundary preserved: no memory_retrieval_events writes, no runtime retrieval, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, no Carnos prompt/context injection, and no background scanning.
+
+## Phase 17N — Memory/RAG UI
+
+Added preview-only Memory/RAG UI component for context-pack previews, retrieval audit trail previews, visible boundaries, disabled write actions, loading states, empty states, and error states. Boundary preserved: no memory_retrieval_events writes, no runtime retrieval, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, no Carnos prompt/context injection, no background scanning, and no approve/reject/delete/forget mutations.

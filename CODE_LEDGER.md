@@ -4210,3 +4210,9 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `src/lib/carnos-continuity/retrieval-audit-trail-explanation.ts`.
 - Exported Phase 17M from `src/lib/carnos-continuity/index.ts`.
 - Added Phase 17M contract, report, smoke checklist, audit script, and package check chain entry.
+
+## Phase 17N — Memory/RAG UI
+
+- Added `src/components/memory-rag/MemoryRagPreviewPanel.tsx`.
+- Added `src/components/memory-rag/index.ts`.
+- Added Phase 17N contract, report, smoke checklist, audit script, and package check chain entry.
