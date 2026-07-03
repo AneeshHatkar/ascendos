@@ -4814,3 +4814,28 @@ Boundary:
 - no embeddings
 - no SQL migration
 - no API route
+
+## 2026-07-02 — Phase 16O Review-to-Save Candidate Flow
+
+Completed schema-aware, confirmation-first review-to-save preview flow.
+
+Added:
+- review-to-save candidate flow helper
+- candidate decision preview mapping
+- Knowledge Vault save preview payloads
+- citation/link preview payloads
+- audit event preview payloads
+- supported proposed-action previews for task, goal, and proof item contracts
+- review-to-save dashboard panel
+- Phase 16O audit gate and docs
+
+Boundary:
+- no candidate status update
+- no Knowledge Vault insert
+- no web source link insert
+- no web source audit event insert
+- no ai_actions insert
+- no provider calls
+- no embeddings
+- no SQL migration
+- no API route

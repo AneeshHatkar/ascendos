@@ -3704,3 +3704,22 @@ Boundary:
 - no writes
 - no approval/rejection flow
 - no embeddings
+
+## Phase 16O — Review-to-Save Candidate Flow
+
+Added:
+- `src/lib/current-info-capture/current-info-review-to-save-flow.ts`
+- `src/components/dashboard/current-info-review-to-save-panel.tsx`
+- `scripts/audit-phase-16o.mjs`
+- Phase 16O contract/report/smoke checklist
+
+Updated:
+- `src/lib/current-info-capture/index.ts`
+- `src/components/dashboard/index.ts`
+- `package.json`
+
+Boundary:
+- schema-aware preview only
+- no direct save/approve/reject/update flow
+- no SQL migration
+- no API route

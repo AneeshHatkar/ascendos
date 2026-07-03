@@ -1753,3 +1753,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added Knowledge Vault source bridge dashboard panel.
 - Added Phase 16N docs, smoke checklist, and audit gate.
 - Wired `audit:phase16n` into verification.
+
+## Phase 16O — Review-to-Save Candidate Flow
+
+- Added schema-aware review-to-save candidate preview helper.
+- Added Knowledge Vault save, citation/link, audit event, and proposed-action preview shapes.
+- Added dashboard panel for review-to-save flow visibility.
+- Added Phase 16O docs, smoke checklist, and audit gate.
+- Wired `audit:phase16o` into verification.

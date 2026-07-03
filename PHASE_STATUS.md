@@ -3297,3 +3297,15 @@ Scope completed:
 
 Next:
 - Phase 16N — Knowledge Vault Source Bridge.
+
+## Phase 16O — Review-to-Save Candidate Flow
+
+Status: Complete pending verification and commit.
+
+Scope completed:
+- Confirmation-first review-to-save candidate preview.
+- Knowledge Vault/citation/audit/proposed-action preview shape.
+- No persistence or execution.
+
+Next:
+- Phase 16P — Privacy, Sensitive Search, Retention Rules.
