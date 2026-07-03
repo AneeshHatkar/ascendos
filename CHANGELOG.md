@@ -2028,3 +2028,7 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 ## Self-Experiment Lab UI
 
 - Added self-experiment lab UI, safe view model, analytics route integration, source-aware states, review-before-memory-write boundary, and no-fake-experiment-data guardrail.
+
+## Carnos Analytics Explanation Boundary
+
+- Added deterministic Carnos analytics explanation boundary with source-aware disclosures, no-proof/no-causality limits, review-before-memory-write rules, privacy blocking, and no-model-call guardrails.

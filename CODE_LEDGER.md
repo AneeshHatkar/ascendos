@@ -4391,3 +4391,14 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `docs/phase-reports/PHASE_18L_SELF_EXPERIMENT_LAB_UI_REPORT.md`.
 - Added `scripts/audit-phase-18l.mjs`.
 - Added `audit:phase18l` to package verification chain.
+
+## Carnos Analytics Explanation Boundary
+
+- Added `src/lib/analytics-experiments/carnos-analytics-explanation-boundary.ts`.
+- Updated `src/lib/analytics-experiments/index.ts`.
+- Added `docs/fixtures/phase18-analytics-experiments/phase18m_carnos_analytics_explanation_boundary_fixture.json`.
+- Added `docs/contracts/PHASE_18M_CARNOS_ANALYTICS_EXPLANATION_BOUNDARY.md`.
+- Added `docs/qa/PHASE_18M_CARNOS_ANALYTICS_EXPLANATION_BOUNDARY_SMOKE_CHECKLIST.md`.
+- Added `docs/phase-reports/PHASE_18M_CARNOS_ANALYTICS_EXPLANATION_BOUNDARY_REPORT.md`.
+- Added `scripts/audit-phase-18m.mjs`.
+- Added `audit:phase18m` to package verification chain.

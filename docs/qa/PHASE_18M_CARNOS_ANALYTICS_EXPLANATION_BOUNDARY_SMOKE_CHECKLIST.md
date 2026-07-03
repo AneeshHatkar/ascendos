@@ -1,0 +1,40 @@
+# Phase 18M Carnos Analytics Explanation Boundary Smoke Checklist
+
+- [ ] Carnos analytics explanation boundary implementation exists.
+- [ ] Fixture exists.
+- [ ] Contract exists.
+- [ ] Report exists.
+- [ ] Allowed explanation modes exist.
+- [ ] Blocked explanation mode exists.
+- [ ] Trend explanation limits exist.
+- [ ] Comparison explanation limits exist.
+- [ ] Correlation explanation limits exist.
+- [ ] Self-experiment explanation limits exist.
+- [ ] Experiment lesson explanation limits exist.
+- [ ] Metric quality explanation limits exist.
+- [ ] Snapshot freshness explanation limits exist.
+- [ ] Confidence and uncertainty wording rules exist.
+- [ ] Evidence gap wording rules exist.
+- [ ] Missing data wording rules exist.
+- [ ] No-proof boundary exists.
+- [ ] No-causality boundary exists.
+- [ ] Review-before-memory-write boundary exists.
+- [ ] Source-aware disclosure rules exist.
+- [ ] Cached context disclosure exists.
+- [ ] Stale context disclosure exists.
+- [ ] Partial context disclosure exists.
+- [ ] Missing context disclosure exists.
+- [ ] Unsynced local context disclosure exists.
+- [ ] Deterministic preview disclosure exists.
+- [ ] Privacy restricted blocking exists.
+- [ ] Local runtime remains optional.
+- [ ] No runtime SQL reads are added.
+- [ ] No Supabase client calls are added.
+- [ ] No schema writes are added.
+- [ ] No model calls are added.
+- [ ] No fake analytics data is added.
+- [ ] No fake experiment conclusions are added.
+- [ ] No memory writes are added.
+- [ ] No action execution is added.
+- [ ] npm run audit:phase18m passes.
+- [ ] npm run check passes.

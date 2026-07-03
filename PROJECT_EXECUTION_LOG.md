@@ -5289,3 +5289,7 @@ Added analytics dashboard UI surface and chart-ready view model. This includes /
 ## Self-Experiment Lab UI
 
 Added self-experiment lab UI surface and safe view model. This includes template library, experiment draft review, baseline window, active window, measurement plan, confounder review, readiness review, lesson candidates, memory review boundary, privacy boundary, empty/loading/error/privacy/review states, review-before-memory-write boundary, and analytics route integration. Boundary preserved: no schema writes, no runtime SQL reads, no Supabase client calls, no experiment writes, no fake experiment data, no memory writes, no action execution, and no local runtime requirement during checks.
+
+## Carnos Analytics Explanation Boundary
+
+Added deterministic Carnos analytics explanation boundary. This includes allowed/blocked explanation modes, trend/comparison/correlation/self-experiment/lesson explanation limits, confidence and uncertainty wording rules, evidence gap and missing data wording rules, source-aware disclosures, cached/stale/partial/missing/unsynced/deterministic context rules, no-proof and no-causality boundaries, review-before-memory-write boundary, privacy restriction blocking, and local-runtime-optional compatibility. Boundary preserved: no schema writes, no runtime SQL reads, no Supabase client calls, no model calls, no fake analytics data, no fake experiment conclusions, no memory writes, no action execution, no causality claims, no proof claims, and no local runtime requirement during checks.

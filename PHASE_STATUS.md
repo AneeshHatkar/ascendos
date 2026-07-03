@@ -3707,3 +3707,9 @@ Added analytics dashboard UI surface and chart-ready view model with metric qual
 Status: Complete pending verification and commit.
 
 Added self-experiment lab UI surface and safe view model with template library, draft review, baseline/active windows, measurement planning, confounder review, readiness review, lesson candidates, memory review boundary, privacy boundary, and empty/loading/error/privacy/review states. Boundary: no schema writes, no Supabase calls, no experiment writes, no fake experiment data, no memory writes, no action execution.
+
+## Carnos Analytics Explanation Boundary
+
+Status: Complete pending verification and commit.
+
+Added deterministic Carnos analytics explanation boundary covering trend, comparison, correlation, self-experiment, lesson, metric quality, snapshot freshness, uncertainty, evidence gaps, source disclosures, no-proof/no-causality, review-before-memory-write, privacy blocking, and local-runtime-optional compatibility. Boundary: no schema writes, no Supabase calls, no model calls, no fake analytics data, no fake experiment conclusions, no memory writes, no action execution.
