@@ -36,7 +36,6 @@ function excludes(file, markers) {
 
 const placeholderPages = {
   "src/app/creativity/page.tsx": "creativity",
-  "src/app/custom-trackers/page.tsx": "custom_trackers",
   "src/app/decisions/page.tsx": "decisions",
   "src/app/experiments/page.tsx": "experiments",
   "src/app/future-simulator/page.tsx": "future_simulator",
@@ -62,7 +61,6 @@ includes("src/lib/placeholder-route-decisions.ts", [
   "/decisions",
   "/future-simulator",
   "/experiments",
-  "/custom-trackers",
   "Phase 18 custom tracker builder",
   "Phase 17 analytics/experiments",
   "Post-v1",
@@ -163,7 +161,6 @@ includes("docs/phase-reports/PHASE_13_5F_PLACEHOLDER_ROUTE_DECISION_REPORT.md", 
   "/decisions",
   "/future-simulator",
   "/experiments",
-  "/custom-trackers",
   "not missing accidents",
   "Phase 18",
   "Phase 17",
@@ -176,7 +173,6 @@ includes("docs/qa/PHASE_13_5F_PLACEHOLDER_ROUTE_DECISION_MANUAL_SMOKE_CHECKLIST.
   "/decisions",
   "/future-simulator",
   "/experiments",
-  "/custom-trackers",
   "No writes",
 ]);
 

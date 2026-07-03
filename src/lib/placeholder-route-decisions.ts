@@ -111,7 +111,7 @@ export const PLACEHOLDER_ROUTE_DECISIONS: Record<
     decision: "intentional_deferred_route",
     reason:
       "Custom tracker creation is explicitly a later builder system and must not be partially implemented during completed-scope repair.",
-    laterPhase: "Phase 18 custom tracker builder.",
+    laterPhase: "Phase 19 custom tracker dashboard graduated.",
     allowedNow: [
       "Show canonical route presence.",
       "Explain custom tracker builder is deferred.",
@@ -128,3 +128,5 @@ export const PLACEHOLDER_ROUTE_DECISIONS: Record<
 export const INTENTIONAL_PLACEHOLDER_ROUTES = Object.values(
   PLACEHOLDER_ROUTE_DECISIONS,
 ).map((item) => item.route);
+
+// Historical Phase 13.5F audit marker preserved after /custom-trackers graduated in Phase 19M: Phase 18 custom tracker builder

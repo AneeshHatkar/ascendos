@@ -1,0 +1,27 @@
+# Phase 19M QA Checklist
+
+- [x] /custom-trackers route exists
+- [x] Custom tracker dashboard view model exists
+- [x] Custom tracker dashboard UI component exists
+- [x] Tracker Schema card exists
+- [x] Fields card exists
+- [x] Entries card exists
+- [x] Dashboard Target card exists
+- [x] Frequency card exists
+- [x] AI Mapping card exists
+- [x] Primary actions are represented
+- [x] Quick-log readiness boundary exists
+- [x] Empty state exists
+- [x] Empty state with template suggestions exists
+- [x] Loading state exists
+- [x] Error state exists
+- [x] Privacy-restricted state exists
+- [x] Review-required state exists
+- [x] No hardcoded demo data boundary exists
+- [x] No fake tracker entries boundary exists
+- [x] No fake dashboard cards boundary exists
+- [x] No fake AI mappings boundary exists
+- [x] No SQL migration is added
+- [x] No runtime database read/write is added
+- [x] npm run audit:phase19m
+- [x] npm run check

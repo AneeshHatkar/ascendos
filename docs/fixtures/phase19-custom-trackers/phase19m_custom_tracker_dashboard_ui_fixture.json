@@ -1,0 +1,39 @@
+{
+  "phase": "19M",
+  "status": "complete",
+  "route": "/custom-trackers",
+  "features": [
+    "custom_tracker_dashboard_route",
+    "custom_tracker_dashboard_view_model",
+    "custom_tracker_dashboard_ui_component",
+    "tracker_schema_card",
+    "fields_card",
+    "entries_card",
+    "dashboard_target_card",
+    "frequency_card",
+    "ai_mapping_card",
+    "primary_actions_represented",
+    "quick_log_readiness_boundary",
+    "empty_state",
+    "empty_state_with_template_suggestions",
+    "loading_state",
+    "error_state",
+    "privacy_restricted_state",
+    "review_required_state",
+    "no_hardcoded_demo_data_boundary",
+    "no_fake_tracker_entries_boundary",
+    "no_fake_dashboard_cards_boundary",
+    "no_fake_ai_mappings_boundary"
+  ],
+  "disabled_boundaries": {
+    "schema_migration": false,
+    "runtime_database_reads": false,
+    "runtime_database_writes": false,
+    "tracker_creation": false,
+    "entry_logging": false,
+    "dashboard_card_persistence": false,
+    "model_calls": false,
+    "network_calls": false,
+    "silent_ai_writes": false
+  }
+}

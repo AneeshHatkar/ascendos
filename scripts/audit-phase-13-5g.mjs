@@ -240,7 +240,6 @@ const placeholderDecisionText = read("src/lib/placeholder-route-decisions.ts");
 
 const expectedPlaceholders = [
   "/creativity",
-  "/custom-trackers",
   "/decisions",
   "/experiments",
   "/future-simulator",
@@ -257,7 +256,6 @@ const placeholderPageHits = walk("src/app", isTextFile).filter((file) =>
 
 const expectedPlaceholderFiles = [
   "src/app/creativity/page.tsx",
-  "src/app/custom-trackers/page.tsx",
   "src/app/decisions/page.tsx",
   "src/app/experiments/page.tsx",
   "src/app/future-simulator/page.tsx",
@@ -454,3 +452,5 @@ console.log("\nPhase 13.5G full source scope audit passed.");
 // or documentation mentions of pgvector once 0024_phase15_memory_sql_foundation.sql exists.
 // It must still block memory_embeddings, vector columns, provider calls, runtime RAG,
 // standalone /memory routes, and premature embedding implementation.
+
+// Phase 19M graduates /custom-trackers from placeholder coverage. Phase 13.5G must not require it as an intentional placeholder page.

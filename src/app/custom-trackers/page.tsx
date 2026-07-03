@@ -1,10 +1,14 @@
-import { PlaceholderDashboardPage } from "@/components/dashboard/placeholder-dashboard-page";
-import { PLACEHOLDER_ROUTE_DECISIONS } from "@/lib/placeholder-route-decisions";
+// Phase 19M route marker: No runtime database reads or writes.
+import { CustomTrackersDashboardUi } from "@/components/custom-trackers/custom-trackers-dashboard-ui";
+import { buildCustomTrackersDashboardViewModel } from "@/lib/custom-trackers/custom-trackers-dashboard-view-model";
+
+export const metadata = {
+  title: "Custom Trackers | ascendOS",
+  description: "Safe custom tracker dashboard shell with no runtime database reads or writes.",
+};
 
 export default function CustomTrackersPage() {
-  return (
-    <PlaceholderDashboardPage
-      decision={PLACEHOLDER_ROUTE_DECISIONS.custom_trackers}
-    />
-  );
+  const viewModel = buildCustomTrackersDashboardViewModel();
+
+  return <CustomTrackersDashboardUi viewModel={viewModel} />;
 }
