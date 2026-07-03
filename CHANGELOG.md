@@ -1777,3 +1777,12 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added web source audit trail dashboard panel.
 - Added Phase 16Q docs, smoke checklist, and audit gate.
 - Wired `audit:phase16q` into verification.
+
+## Phase 16R — Final Phase 16 Audit + Completion Report
+
+- Added final Phase 16 audit report.
+- Added final Phase 16 completion report.
+- Added final Phase 16 smoke checklist.
+- Added `audit:phase16r`.
+- Wired `audit:phase16r` into verification.
+- Closed Phase 16 and set next phase to Phase 16.5.

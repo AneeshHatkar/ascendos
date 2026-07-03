@@ -4892,3 +4892,22 @@ Boundary:
 - no embeddings
 - no SQL migration
 - no API route
+
+## 2026-07-02 — Phase 16R Final Phase 16 Audit + Completion Report
+
+Completed Phase 16 final closeout.
+
+Added:
+- final Phase 16 audit report
+- final Phase 16 completion report
+- final Phase 16 smoke checklist
+- Phase 16R audit gate
+- verification-chain wiring for `audit:phase16r`
+
+Phase 16 closed:
+- Web Search / Current Information foundation is complete.
+- Current-info remains bounded by review, citation, provenance, privacy, retention, and no-autosave rules.
+- No real external provider, uncontrolled browsing, automatic save, automatic memory conversion, embedding/vector search, or current-info write API route was enabled.
+
+Next:
+- Phase 16.5 — Carnos Visual Identity + Companion UI.

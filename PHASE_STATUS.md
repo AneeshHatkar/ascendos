@@ -3321,3 +3321,16 @@ Scope completed:
 
 Next:
 - Phase 16R — Final Phase 16 Audit + Smoke Checklist + Completion Report.
+
+## Phase 16R — Final Phase 16 Audit + Smoke Checklist + Completion Report
+
+Status: Complete pending final verification and commit.
+
+Phase 16 status:
+- Phase 16 — Web Search / Current Information is complete.
+- All Phase 16 audit gates from 16A through 16R are present.
+- Current-info remains review-first, citation-aware, provenance-aware, privacy-aware, retention-aware, and no-autosave.
+- No real external search provider, uncontrolled browsing, automatic save, automatic memory conversion, embedding/vector search, or current-info write API route is enabled.
+
+Next:
+- Phase 16.5 — Carnos Visual Identity + Companion UI.
