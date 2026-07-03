@@ -4198,3 +4198,9 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `src/lib/carnos-continuity/source-bridge-retrieval-preview.ts`.
 - Exported Phase 17K from `src/lib/carnos-continuity/index.ts`.
 - Added Phase 17K contract, report, smoke checklist, audit script, and package check chain entry.
+
+## Phase 17L — Carnos Memory Context Pack Builder
+
+- Added `src/lib/carnos-continuity/carnos-memory-context-pack-builder.ts`.
+- Exported Phase 17L from `src/lib/carnos-continuity/index.ts`.
+- Added Phase 17L contract, report, smoke checklist, audit script, and package check chain entry.

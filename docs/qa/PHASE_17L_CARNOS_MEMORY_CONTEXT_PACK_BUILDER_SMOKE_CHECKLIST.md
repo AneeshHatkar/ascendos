@@ -1,0 +1,25 @@
+# Phase 17L Carnos Memory Context Pack Builder Smoke Checklist
+
+- [ ] `buildCarnosMemoryContextPack` creates a preview-only context pack.
+- [ ] Context pack consumes Phase 17I retrieval planning outputs.
+- [ ] Context pack consumes Phase 17J Knowledge Vault bridge outputs.
+- [ ] Context pack consumes Phase 17K source bridge outputs.
+- [ ] Context pack groups items into sections.
+- [ ] Context pack applies section budget.
+- [ ] Context pack applies item budget.
+- [ ] Context pack applies estimated token budget.
+- [ ] Context pack trims long item previews.
+- [ ] Context pack preserves visible retrieval reasons.
+- [ ] Context pack preserves visible bridge reasons.
+- [ ] No runtime retrieval occurs.
+- [ ] No memory_retrieval_events writes occur.
+- [ ] No embeddings are generated.
+- [ ] No semantic retrieval is activated.
+- [ ] No provider calls occur.
+- [ ] No vector search occurs.
+- [ ] No Supabase calls occur.
+- [ ] No SQL reads or writes occur.
+- [ ] No Carnos prompt/context injection occurs.
+- [ ] No background scanning occurs.
+- [ ] `npm run audit:phase17l` passes.
+- [ ] `npm run check` passes.

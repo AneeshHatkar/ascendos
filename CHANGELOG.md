@@ -1940,3 +1940,8 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 
 - Added deterministic source bridges for Current Info, Document, Career, and Research retrieval-planning candidates.
 - Reused Phase 17I retrieval planning while preserving preview-only/no-runtime boundaries.
+
+## Phase 17L — Carnos Memory Context Pack Builder
+
+- Added deterministic preview-only Carnos memory context pack builder.
+- Reused Phase 17I/17J/17K outputs while preserving no-runtime and no-prompt-injection boundaries.

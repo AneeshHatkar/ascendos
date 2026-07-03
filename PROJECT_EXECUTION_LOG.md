@@ -5209,3 +5209,7 @@ Added deterministic Knowledge Vault Retrieval Bridge from knowledge items into P
 ## Phase 17K — Current-Info / Document / Career / Research Source Bridges
 
 Added deterministic source bridges from Current Info, Document, Career, and Research records into Phase 17I retrieval-planning candidates. Boundary preserved: no runtime retrieval, no memory_retrieval_events writes, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, no Carnos prompt/context injection, and no background scanning.
+
+## Phase 17L — Carnos Memory Context Pack Builder
+
+Added deterministic preview-only Carnos Memory Context Pack Builder consuming Phase 17I retrieval plans, Phase 17J Knowledge Vault bridge outputs, and Phase 17K source bridge outputs. Boundary preserved: no runtime retrieval, no memory_retrieval_events writes, no embedding generation, no semantic retrieval activation, no provider calls, no vector search, no Supabase calls, no SQL reads/writes, no Carnos prompt/context injection, and no background scanning.

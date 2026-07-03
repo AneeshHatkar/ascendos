@@ -3581,3 +3581,9 @@ Boundary: no runtime retrieval, no memory_retrieval_events writes, no embeddings
 Status: Complete pending verification and commit.
 
 Boundary: no runtime retrieval, no memory_retrieval_events writes, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, no Carnos prompt/context injection, no background scanning.
+
+## Phase 17L — Carnos Memory Context Pack Builder
+
+Status: Complete pending verification and commit.
+
+Boundary: no runtime retrieval, no memory_retrieval_events writes, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, no Carnos prompt/context injection, no background scanning.
