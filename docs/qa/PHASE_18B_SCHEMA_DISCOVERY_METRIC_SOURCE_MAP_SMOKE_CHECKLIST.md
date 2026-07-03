@@ -1,0 +1,27 @@
+# Phase 18B Schema Discovery + Metric Source Map Smoke Checklist
+
+- [ ] Source map builder exists.
+- [ ] Source map JSON exists.
+- [ ] Source map markdown exists.
+- [ ] Discovery is local/static only.
+- [ ] No new tables are created.
+- [ ] No migrations are created.
+- [ ] No Supabase client calls are added.
+- [ ] Metric source map includes daily_checkin_count.
+- [ ] Metric source map includes goal_progress_signal.
+- [ ] Metric source map includes job_application_velocity.
+- [ ] Metric source map includes networking_touchpoints.
+- [ ] Metric source map includes learning_consistency.
+- [ ] Metric source map includes research_output_count.
+- [ ] Metric source map includes sleep_consistency.
+- [ ] Metric source map includes workout_consistency.
+- [ ] Metric source map includes calorie_logging_consistency.
+- [ ] Metric source map includes experiment_measurement_completeness.
+- [ ] Metric source map includes analytics_snapshot_freshness.
+- [ ] Metric source map includes carnos_memory_context_availability.
+- [ ] Offline cache candidates are listed.
+- [ ] Sensitive/restricted candidates are listed.
+- [ ] Schema gaps are listed.
+- [ ] Phase 18A-B persistence/offline lock is referenced.
+- [ ] `npm run audit:phase18b` passes.
+- [ ] `npm run check` passes.

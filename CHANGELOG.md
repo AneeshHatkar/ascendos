@@ -1980,3 +1980,7 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 
 - Locked Carnos persistence, online/offline storage architecture, offline sync queue requirements, and Level 4 Offline AI readiness using Option C local server/runtime for MacBook Pro M3 Pro.
 - Added persistence proof report and audit coverage so Phase 18 analytics/experiments must preserve close/reopen continuity, login-to-login continuity, cached/offline state honesty, and sync-safe behavior.
+
+## Phase 18B — Schema Discovery + Metric Source Map
+
+- Added Phase 18 schema discovery and metric source map with offline cache candidates, sensitive/restricted candidates, sync candidates, and schema gap reporting before analytics/experiment contracts are implemented.

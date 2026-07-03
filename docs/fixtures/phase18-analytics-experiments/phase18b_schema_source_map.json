@@ -1,0 +1,1522 @@
+{
+  "phase": "18B",
+  "title": "Schema Discovery + Metric Source Map",
+  "generated_by": "scripts/build-phase-18b-schema-source-map.mjs",
+  "boundaries": [
+    "discovery_only",
+    "no_new_tables_created",
+    "no_fake_schema_claims",
+    "no_runtime_data_reads",
+    "no_supabase_client_calls",
+    "phase_18a_b_persistence_offline_lock_applies"
+  ],
+  "migration_file_count": 28,
+  "source_file_count": 279,
+  "docs_file_count": 329,
+  "discovered_table_count": 118,
+  "discovered_tables": [
+    {
+      "table": "ai_actions",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0002_audit_and_ai_actions.sql",
+        "supabase/migrations/0003_chat_foundation.sql"
+      ]
+    },
+    {
+      "table": "app_settings",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0021_phase13_5e_settings_privacy_foundation.sql"
+      ]
+    },
+    {
+      "table": "audit_logs",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0002_audit_and_ai_actions.sql"
+      ]
+    },
+    {
+      "table": "behavioral_stories",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0020_phase13_5d_career_prep_foundation.sql"
+      ]
+    },
+    {
+      "table": "body_logs",
+      "tags": [
+        "health_body"
+      ],
+      "sources": [
+        "supabase/migrations/0012_phase11_health_body_foundation.sql"
+      ]
+    },
+    {
+      "table": "budget_categories",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0014_phase12_life_admin_finance_foundation.sql"
+      ]
+    },
+    {
+      "table": "calendar_blocks",
+      "tags": [
+        "calendar_timeline"
+      ],
+      "sources": [
+        "supabase/migrations/0019_phase13_5c_calendar_timeline_routine_foundation.sql"
+      ]
+    },
+    {
+      "table": "carnos_context_snapshots",
+      "tags": [
+        "analytics"
+      ],
+      "sources": [
+        "supabase/migrations/0024_phase15_memory_sql_foundation.sql"
+      ]
+    },
+    {
+      "table": "carnos_entity_state",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0024_phase15_memory_sql_foundation.sql"
+      ]
+    },
+    {
+      "table": "carnos_profiles",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0001_profiles_and_carnos_profiles.sql"
+      ]
+    },
+    {
+      "table": "chat_messages",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0003_chat_foundation.sql"
+      ]
+    },
+    {
+      "table": "chat_sessions",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0003_chat_foundation.sql"
+      ]
+    },
+    {
+      "table": "daily_logs",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0005_daily_logs_and_proof_items.sql"
+      ]
+    },
+    {
+      "table": "documents",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0014_phase12_life_admin_finance_foundation.sql"
+      ]
+    },
+    {
+      "table": "emotion_logs",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0012_phase11_health_body_foundation.sql"
+      ]
+    },
+    {
+      "table": "energy_logs",
+      "tags": [
+        "health_body"
+      ],
+      "sources": [
+        "supabase/migrations/0012_phase11_health_body_foundation.sql"
+      ]
+    },
+    {
+      "table": "events",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0006_tasks_and_events.sql"
+      ]
+    },
+    {
+      "table": "exercises",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0012_phase11_health_body_foundation.sql"
+      ]
+    },
+    {
+      "table": "financial_accounts",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0014_phase12_life_admin_finance_foundation.sql"
+      ]
+    },
+    {
+      "table": "financial_logs",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0014_phase12_life_admin_finance_foundation.sql"
+      ]
+    },
+    {
+      "table": "goal_milestones",
+      "tags": [
+        "goals"
+      ],
+      "sources": [
+        "supabase/migrations/0004_goals_foundation.sql"
+      ]
+    },
+    {
+      "table": "goals",
+      "tags": [
+        "goals"
+      ],
+      "sources": [
+        "supabase/migrations/0004_goals_foundation.sql"
+      ]
+    },
+    {
+      "table": "grimoire_corruption_checks",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0016_phase13_grimoire_foundation.sql"
+      ]
+    },
+    {
+      "table": "grimoire_daily_logs",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0016_phase13_grimoire_foundation.sql"
+      ]
+    },
+    {
+      "table": "grimoire_modes",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0016_phase13_grimoire_foundation.sql"
+      ]
+    },
+    {
+      "table": "grimoire_reversions",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0016_phase13_grimoire_foundation.sql"
+      ]
+    },
+    {
+      "table": "grimoire_skills",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0016_phase13_grimoire_foundation.sql"
+      ]
+    },
+    {
+      "table": "haircare_logs",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0012_phase11_health_body_foundation.sql"
+      ]
+    },
+    {
+      "table": "housing_contacts",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0014_phase12_life_admin_finance_foundation.sql"
+      ]
+    },
+    {
+      "table": "housing_options",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0014_phase12_life_admin_finance_foundation.sql"
+      ]
+    },
+    {
+      "table": "interviews",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0007_career_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "job_application_events",
+      "tags": [
+        "career"
+      ],
+      "sources": [
+        "supabase/migrations/0007_career_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "job_applications",
+      "tags": [
+        "career"
+      ],
+      "sources": [
+        "supabase/migrations/0007_career_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "job_referrals",
+      "tags": [
+        "career"
+      ],
+      "sources": [
+        "supabase/migrations/0007_career_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "journal_entries",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0012_phase11_health_body_foundation.sql"
+      ]
+    },
+    {
+      "table": "knowledge_items",
+      "tags": [
+        "knowledge"
+      ],
+      "sources": [
+        "supabase/migrations/0024_phase15_memory_sql_foundation.sql"
+      ]
+    },
+    {
+      "table": "knowledge_links",
+      "tags": [
+        "knowledge"
+      ],
+      "sources": [
+        "supabase/migrations/0024_phase15_memory_sql_foundation.sql"
+      ]
+    },
+    {
+      "table": "knowledge_tags",
+      "tags": [
+        "knowledge"
+      ],
+      "sources": [
+        "supabase/migrations/0024_phase15_memory_sql_foundation.sql"
+      ]
+    },
+    {
+      "table": "learning_sessions",
+      "tags": [
+        "learning"
+      ],
+      "sources": [
+        "supabase/migrations/0008_learning_project_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "meal_items",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0012_phase11_health_body_foundation.sql"
+      ]
+    },
+    {
+      "table": "memory_candidates",
+      "tags": [
+        "carnos_memory"
+      ],
+      "sources": [
+        "supabase/migrations/0024_phase15_memory_sql_foundation.sql",
+        "supabase/migrations/0028_memory_rag_schema_alignment.sql"
+      ]
+    },
+    {
+      "table": "memory_conflict_groups",
+      "tags": [
+        "carnos_memory"
+      ],
+      "sources": [
+        "supabase/migrations/0028_memory_rag_schema_alignment.sql"
+      ]
+    },
+    {
+      "table": "memory_conflict_members",
+      "tags": [
+        "carnos_memory"
+      ],
+      "sources": [
+        "supabase/migrations/0028_memory_rag_schema_alignment.sql"
+      ]
+    },
+    {
+      "table": "memory_do_not_remember_rules",
+      "tags": [
+        "carnos_memory"
+      ],
+      "sources": [
+        "supabase/migrations/0024_phase15_memory_sql_foundation.sql"
+      ]
+    },
+    {
+      "table": "memory_embedding_records",
+      "tags": [
+        "carnos_memory"
+      ],
+      "sources": [
+        "supabase/migrations/0028_memory_rag_schema_alignment.sql"
+      ]
+    },
+    {
+      "table": "memory_events",
+      "tags": [
+        "carnos_memory"
+      ],
+      "sources": [
+        "supabase/migrations/0024_phase15_memory_sql_foundation.sql"
+      ]
+    },
+    {
+      "table": "memory_items",
+      "tags": [
+        "carnos_memory"
+      ],
+      "sources": [
+        "supabase/migrations/0024_phase15_memory_sql_foundation.sql",
+        "supabase/migrations/0028_memory_rag_schema_alignment.sql"
+      ]
+    },
+    {
+      "table": "memory_links",
+      "tags": [
+        "carnos_memory"
+      ],
+      "sources": [
+        "supabase/migrations/0024_phase15_memory_sql_foundation.sql"
+      ]
+    },
+    {
+      "table": "memory_preferences",
+      "tags": [
+        "carnos_memory"
+      ],
+      "sources": [
+        "supabase/migrations/0024_phase15_memory_sql_foundation.sql"
+      ]
+    },
+    {
+      "table": "memory_retrieval_events",
+      "tags": [
+        "carnos_memory"
+      ],
+      "sources": [
+        "supabase/migrations/0028_memory_rag_schema_alignment.sql"
+      ]
+    },
+    {
+      "table": "memory_review_queue",
+      "tags": [
+        "carnos_memory",
+        "offline_sync"
+      ],
+      "sources": [
+        "supabase/migrations/0024_phase15_memory_sql_foundation.sql"
+      ]
+    },
+    {
+      "table": "memory_usage_logs",
+      "tags": [
+        "carnos_memory"
+      ],
+      "sources": [
+        "supabase/migrations/0024_phase15_memory_sql_foundation.sql"
+      ]
+    },
+    {
+      "table": "mental_health_logs",
+      "tags": [
+        "health_body"
+      ],
+      "sources": [
+        "supabase/migrations/0012_phase11_health_body_foundation.sql"
+      ]
+    },
+    {
+      "table": "mock_interviews",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0020_phase13_5d_career_prep_foundation.sql"
+      ]
+    },
+    {
+      "table": "networking_contacts",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0007_career_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "networking_interactions",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0007_career_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "nutrition_logs",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0012_phase11_health_body_foundation.sql"
+      ]
+    },
+    {
+      "table": "persona_prompt_versions",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0018_phase13_5b_carnos_persona_foundation.sql"
+      ]
+    },
+    {
+      "table": "phd_application_assets",
+      "tags": [
+        "career"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "phd_readiness_assessments",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "privacy_settings",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0021_phase13_5e_settings_privacy_foundation.sql"
+      ]
+    },
+    {
+      "table": "products",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0012_phase11_health_body_foundation.sql"
+      ]
+    },
+    {
+      "table": "profiles",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0001_profiles_and_carnos_profiles.sql"
+      ]
+    },
+    {
+      "table": "project_bugs",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0008_learning_project_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "project_links",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0008_learning_project_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "project_memory_state",
+      "tags": [
+        "carnos_memory"
+      ],
+      "sources": [
+        "supabase/migrations/0024_phase15_memory_sql_foundation.sql"
+      ]
+    },
+    {
+      "table": "project_milestones",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0008_learning_project_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "project_releases",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0008_learning_project_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "project_tests",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0008_learning_project_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "projects",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0008_learning_project_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "proof_items",
+      "tags": [
+        "proof"
+      ],
+      "sources": [
+        "supabase/migrations/0005_daily_logs_and_proof_items.sql",
+        "supabase/migrations/0006_tasks_and_events.sql"
+      ]
+    },
+    {
+      "table": "question_bank",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0020_phase13_5d_career_prep_foundation.sql"
+      ]
+    },
+    {
+      "table": "quiz_attempts",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0008_learning_project_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "quizzes",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0008_learning_project_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "recommendation_targets",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "reminders",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0019_phase13_5c_calendar_timeline_routine_foundation.sql"
+      ]
+    },
+    {
+      "table": "research_citations",
+      "tags": [
+        "research"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "research_claims",
+      "tags": [
+        "research"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "research_experiments",
+      "tags": [
+        "research",
+        "experiments"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "research_feedback",
+      "tags": [
+        "research"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "research_ideas",
+      "tags": [
+        "research"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "research_literature_items",
+      "tags": [
+        "research"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "research_paper_versions",
+      "tags": [
+        "research"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "research_papers",
+      "tags": [
+        "research"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "research_questions",
+      "tags": [
+        "research"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "research_results",
+      "tags": [
+        "research"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "research_submissions",
+      "tags": [
+        "research"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "research_venues",
+      "tags": [
+        "research"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "resume_bullets",
+      "tags": [
+        "career"
+      ],
+      "sources": [
+        "supabase/migrations/0007_career_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "resume_usage",
+      "tags": [
+        "career"
+      ],
+      "sources": [
+        "supabase/migrations/0020_phase13_5d_career_prep_foundation.sql"
+      ]
+    },
+    {
+      "table": "resume_versions",
+      "tags": [
+        "career"
+      ],
+      "sources": [
+        "supabase/migrations/0007_career_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "retrieval_logs",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0024_phase15_memory_sql_foundation.sql",
+        "supabase/migrations/0028_memory_rag_schema_alignment.sql"
+      ]
+    },
+    {
+      "table": "routine_steps",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0019_phase13_5c_calendar_timeline_routine_foundation.sql"
+      ]
+    },
+    {
+      "table": "routines",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0019_phase13_5c_calendar_timeline_routine_foundation.sql"
+      ]
+    },
+    {
+      "table": "skill_paths",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0008_learning_project_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "skill_prerequisites",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0008_learning_project_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "skill_progress",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0008_learning_project_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "skills",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0008_learning_project_system_foundation.sql"
+      ]
+    },
+    {
+      "table": "skincare_logs",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0012_phase11_health_body_foundation.sql"
+      ]
+    },
+    {
+      "table": "sleep_logs",
+      "tags": [
+        "health_body"
+      ],
+      "sources": [
+        "supabase/migrations/0012_phase11_health_body_foundation.sql"
+      ]
+    },
+    {
+      "table": "sop_versions",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "subscriptions",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0014_phase12_life_admin_finance_foundation.sql"
+      ]
+    },
+    {
+      "table": "supplement_logs",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0012_phase11_health_body_foundation.sql"
+      ]
+    },
+    {
+      "table": "supplements",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0012_phase11_health_body_foundation.sql"
+      ]
+    },
+    {
+      "table": "system_memory_state",
+      "tags": [
+        "carnos_memory"
+      ],
+      "sources": [
+        "supabase/migrations/0024_phase15_memory_sql_foundation.sql"
+      ]
+    },
+    {
+      "table": "target_labs",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "target_professors",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "target_universities",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0010_phase10_research_stanford_foundation.sql"
+      ]
+    },
+    {
+      "table": "tasks",
+      "tags": [
+        "tasks"
+      ],
+      "sources": [
+        "supabase/migrations/0006_tasks_and_events.sql"
+      ]
+    },
+    {
+      "table": "voice_sessions",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0022_phase14_voice_foundation.sql"
+      ]
+    },
+    {
+      "table": "voice_transcripts",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0022_phase14_voice_foundation.sql"
+      ]
+    },
+    {
+      "table": "web_search_queries",
+      "tags": [
+        "current_info"
+      ],
+      "sources": [
+        "supabase/migrations/0026_phase16_web_source_sql_foundation.sql"
+      ]
+    },
+    {
+      "table": "web_source_audit_events",
+      "tags": [
+        "current_info"
+      ],
+      "sources": [
+        "supabase/migrations/0026_phase16_web_source_sql_foundation.sql"
+      ]
+    },
+    {
+      "table": "web_source_candidates",
+      "tags": [
+        "current_info"
+      ],
+      "sources": [
+        "supabase/migrations/0026_phase16_web_source_sql_foundation.sql"
+      ]
+    },
+    {
+      "table": "web_source_links",
+      "tags": [
+        "current_info"
+      ],
+      "sources": [
+        "supabase/migrations/0026_phase16_web_source_sql_foundation.sql"
+      ]
+    },
+    {
+      "table": "web_sources",
+      "tags": [
+        "current_info"
+      ],
+      "sources": [
+        "supabase/migrations/0026_phase16_web_source_sql_foundation.sql"
+      ]
+    },
+    {
+      "table": "workout_sets",
+      "tags": [
+        "health_body"
+      ],
+      "sources": [
+        "supabase/migrations/0012_phase11_health_body_foundation.sql"
+      ]
+    },
+    {
+      "table": "workouts",
+      "tags": [
+        "health_body"
+      ],
+      "sources": [
+        "supabase/migrations/0012_phase11_health_body_foundation.sql"
+      ]
+    }
+  ],
+  "metric_source_map": [
+    {
+      "metric": "daily_checkin_count",
+      "domain": "life",
+      "desired_sources": [
+        "daily",
+        "log",
+        "journal",
+        "proof"
+      ],
+      "offline_cache": "allowed",
+      "sensitivity": "private",
+      "phase": "18C",
+      "candidate_tables": [
+        "audit_logs",
+        "body_logs",
+        "daily_logs",
+        "emotion_logs",
+        "energy_logs",
+        "financial_logs",
+        "grimoire_daily_logs",
+        "haircare_logs",
+        "journal_entries",
+        "memory_usage_logs",
+        "mental_health_logs",
+        "nutrition_logs",
+        "proof_items",
+        "retrieval_logs",
+        "skincare_logs",
+        "sleep_logs",
+        "supplement_logs"
+      ],
+      "status": "source_candidates_found"
+    },
+    {
+      "metric": "goal_progress_signal",
+      "domain": "goals",
+      "desired_sources": [
+        "goal",
+        "proof",
+        "task"
+      ],
+      "offline_cache": "allowed",
+      "sensitivity": "private",
+      "phase": "18C",
+      "candidate_tables": [
+        "goal_milestones",
+        "goals",
+        "proof_items",
+        "tasks"
+      ],
+      "status": "source_candidates_found"
+    },
+    {
+      "metric": "job_application_velocity",
+      "domain": "career",
+      "desired_sources": [
+        "job",
+        "application",
+        "career"
+      ],
+      "offline_cache": "allowed",
+      "sensitivity": "private",
+      "phase": "18C",
+      "candidate_tables": [
+        "job_application_events",
+        "job_applications",
+        "job_referrals",
+        "phd_application_assets"
+      ],
+      "status": "source_candidates_found"
+    },
+    {
+      "metric": "networking_touchpoints",
+      "domain": "career",
+      "desired_sources": [
+        "referral",
+        "network",
+        "contact"
+      ],
+      "offline_cache": "allowed",
+      "sensitivity": "private",
+      "phase": "18C",
+      "candidate_tables": [
+        "housing_contacts",
+        "job_referrals",
+        "networking_contacts",
+        "networking_interactions"
+      ],
+      "status": "source_candidates_found"
+    },
+    {
+      "metric": "learning_consistency",
+      "domain": "learning",
+      "desired_sources": [
+        "learn",
+        "study",
+        "session"
+      ],
+      "offline_cache": "allowed",
+      "sensitivity": "private",
+      "phase": "18C",
+      "candidate_tables": [
+        "chat_sessions",
+        "learning_sessions",
+        "voice_sessions"
+      ],
+      "status": "source_candidates_found"
+    },
+    {
+      "metric": "research_output_count",
+      "domain": "research",
+      "desired_sources": [
+        "research",
+        "paper",
+        "note"
+      ],
+      "offline_cache": "allowed",
+      "sensitivity": "private",
+      "phase": "18C",
+      "candidate_tables": [
+        "research_citations",
+        "research_claims",
+        "research_experiments",
+        "research_feedback",
+        "research_ideas",
+        "research_literature_items",
+        "research_paper_versions",
+        "research_papers",
+        "research_questions",
+        "research_results",
+        "research_submissions",
+        "research_venues"
+      ],
+      "status": "source_candidates_found"
+    },
+    {
+      "metric": "sleep_consistency",
+      "domain": "health_body",
+      "desired_sources": [
+        "sleep"
+      ],
+      "offline_cache": "allowed_with_sensitive_rules",
+      "sensitivity": "sensitive",
+      "phase": "18C",
+      "candidate_tables": [
+        "sleep_logs"
+      ],
+      "status": "source_candidates_found"
+    },
+    {
+      "metric": "workout_consistency",
+      "domain": "health_body",
+      "desired_sources": [
+        "gym",
+        "workout",
+        "body"
+      ],
+      "offline_cache": "allowed_with_sensitive_rules",
+      "sensitivity": "sensitive",
+      "phase": "18C",
+      "candidate_tables": [
+        "body_logs",
+        "workout_sets",
+        "workouts"
+      ],
+      "status": "source_candidates_found"
+    },
+    {
+      "metric": "calorie_logging_consistency",
+      "domain": "health_body",
+      "desired_sources": [
+        "food",
+        "calorie",
+        "nutrition"
+      ],
+      "offline_cache": "allowed_with_sensitive_rules",
+      "sensitivity": "sensitive",
+      "phase": "18C",
+      "candidate_tables": [
+        "nutrition_logs"
+      ],
+      "status": "source_candidates_found"
+    },
+    {
+      "metric": "experiment_measurement_completeness",
+      "domain": "experiments",
+      "desired_sources": [
+        "experiment"
+      ],
+      "offline_cache": "allowed",
+      "sensitivity": "private",
+      "phase": "18E",
+      "candidate_tables": [
+        "research_experiments"
+      ],
+      "status": "source_candidates_found"
+    },
+    {
+      "metric": "analytics_snapshot_freshness",
+      "domain": "analytics",
+      "desired_sources": [
+        "analytics",
+        "snapshot",
+        "metric"
+      ],
+      "offline_cache": "allowed",
+      "sensitivity": "private",
+      "phase": "18D",
+      "candidate_tables": [
+        "carnos_context_snapshots"
+      ],
+      "status": "source_candidates_found"
+    },
+    {
+      "metric": "carnos_memory_context_availability",
+      "domain": "carnos_memory",
+      "desired_sources": [
+        "memory",
+        "knowledge",
+        "context"
+      ],
+      "offline_cache": "allowed_with_privacy_rules",
+      "sensitivity": "mixed",
+      "phase": "18M",
+      "candidate_tables": [
+        "carnos_context_snapshots",
+        "knowledge_items",
+        "knowledge_links",
+        "knowledge_tags",
+        "memory_candidates",
+        "memory_conflict_groups",
+        "memory_conflict_members",
+        "memory_do_not_remember_rules",
+        "memory_embedding_records",
+        "memory_events",
+        "memory_items",
+        "memory_links",
+        "memory_preferences",
+        "memory_retrieval_events",
+        "memory_review_queue",
+        "memory_usage_logs",
+        "project_memory_state",
+        "system_memory_state"
+      ],
+      "status": "source_candidates_found"
+    }
+  ],
+  "offline_cache_candidates": [
+    "body_logs",
+    "carnos_context_snapshots",
+    "energy_logs",
+    "goal_milestones",
+    "goals",
+    "job_application_events",
+    "job_applications",
+    "job_referrals",
+    "knowledge_items",
+    "knowledge_links",
+    "knowledge_tags",
+    "learning_sessions",
+    "memory_candidates",
+    "memory_conflict_groups",
+    "memory_conflict_members",
+    "memory_do_not_remember_rules",
+    "memory_embedding_records",
+    "memory_events",
+    "memory_items",
+    "memory_links",
+    "memory_preferences",
+    "memory_retrieval_events",
+    "memory_review_queue",
+    "memory_usage_logs",
+    "mental_health_logs",
+    "phd_application_assets",
+    "project_memory_state",
+    "proof_items",
+    "research_citations",
+    "research_claims",
+    "research_experiments",
+    "research_feedback",
+    "research_ideas",
+    "research_literature_items",
+    "research_paper_versions",
+    "research_papers",
+    "research_questions",
+    "research_results",
+    "research_submissions",
+    "research_venues",
+    "resume_bullets",
+    "resume_usage",
+    "resume_versions",
+    "sleep_logs",
+    "system_memory_state",
+    "tasks",
+    "workout_sets",
+    "workouts"
+  ],
+  "sensitive_or_restricted_candidates": [
+    "body_logs",
+    "energy_logs",
+    "memory_candidates",
+    "memory_conflict_groups",
+    "memory_conflict_members",
+    "memory_do_not_remember_rules",
+    "memory_embedding_records",
+    "memory_events",
+    "memory_items",
+    "memory_links",
+    "memory_preferences",
+    "memory_retrieval_events",
+    "memory_review_queue",
+    "memory_usage_logs",
+    "mental_health_logs",
+    "project_memory_state",
+    "sleep_logs",
+    "system_memory_state"
+  ],
+  "sync_candidate_tables": [
+    "ai_actions",
+    "app_settings",
+    "audit_logs",
+    "behavioral_stories",
+    "body_logs",
+    "budget_categories",
+    "calendar_blocks",
+    "carnos_context_snapshots",
+    "carnos_entity_state",
+    "carnos_profiles",
+    "chat_messages",
+    "chat_sessions",
+    "daily_logs",
+    "documents",
+    "emotion_logs",
+    "energy_logs",
+    "events",
+    "exercises",
+    "financial_accounts",
+    "financial_logs",
+    "goal_milestones",
+    "goals",
+    "grimoire_corruption_checks",
+    "grimoire_daily_logs",
+    "grimoire_modes",
+    "grimoire_reversions",
+    "grimoire_skills",
+    "haircare_logs",
+    "housing_contacts",
+    "housing_options",
+    "interviews",
+    "job_application_events",
+    "job_applications",
+    "job_referrals",
+    "journal_entries",
+    "knowledge_items",
+    "knowledge_links",
+    "knowledge_tags",
+    "learning_sessions",
+    "meal_items",
+    "memory_candidates",
+    "memory_conflict_groups",
+    "memory_conflict_members",
+    "memory_do_not_remember_rules",
+    "memory_embedding_records",
+    "memory_events",
+    "memory_items",
+    "memory_links",
+    "memory_preferences",
+    "memory_retrieval_events",
+    "memory_review_queue",
+    "memory_usage_logs",
+    "mental_health_logs",
+    "mock_interviews",
+    "networking_contacts",
+    "networking_interactions",
+    "nutrition_logs",
+    "persona_prompt_versions",
+    "phd_application_assets",
+    "phd_readiness_assessments",
+    "privacy_settings",
+    "products",
+    "profiles",
+    "project_bugs",
+    "project_links",
+    "project_memory_state",
+    "project_milestones",
+    "project_releases",
+    "project_tests",
+    "projects",
+    "proof_items",
+    "question_bank",
+    "quiz_attempts",
+    "quizzes",
+    "recommendation_targets",
+    "reminders",
+    "research_citations",
+    "research_claims",
+    "research_experiments",
+    "research_feedback",
+    "research_ideas",
+    "research_literature_items",
+    "research_paper_versions",
+    "research_papers",
+    "research_questions",
+    "research_results",
+    "research_submissions",
+    "research_venues",
+    "resume_bullets",
+    "resume_usage",
+    "resume_versions",
+    "retrieval_logs",
+    "routine_steps",
+    "routines",
+    "skill_paths",
+    "skill_prerequisites",
+    "skill_progress",
+    "skills",
+    "skincare_logs",
+    "sleep_logs",
+    "sop_versions",
+    "subscriptions",
+    "supplement_logs",
+    "supplements",
+    "system_memory_state",
+    "target_labs",
+    "target_professors",
+    "target_universities",
+    "tasks",
+    "voice_sessions",
+    "voice_transcripts",
+    "workout_sets",
+    "workouts"
+  ],
+  "schema_gaps": []
+}

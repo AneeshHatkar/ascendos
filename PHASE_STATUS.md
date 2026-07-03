@@ -3635,3 +3635,9 @@ Status: Complete pending verification and commit.
 Locked: Carnos is not one-chat-only, Supabase/Postgres is online source of truth, IndexedDB or equivalent encrypted local cache is offline continuity layer, localStorage is banned for core life data, offline writes use sync queue, conflicts/duplicates must be detected, approved memories and analytics snapshots can be cached where allowed, experiments/logs can be captured offline, and Level 4 Full Offline AI targets Option C local AI server/runtime on MacBook Pro M3 Pro.
 
 Boundary: Phase 18A-B locks readiness and proof only; it does not falsely claim full local LLM runtime, local embeddings, local vector index, or full offline Carnos runtime are implemented yet.
+
+## Phase 18B — Schema Discovery + Metric Source Map
+
+Status: Complete pending verification and commit.
+
+Added static schema discovery and metric source mapping. Boundary: no schema creation, no runtime SQL reads, no Supabase calls, no fake data, and Phase 18A-B persistence/offline lock remains active.

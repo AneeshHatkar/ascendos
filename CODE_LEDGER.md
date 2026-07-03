@@ -4255,3 +4255,14 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `docs/phase-reports/PHASE_18A_B_COMPANION_PERSISTENCE_OFFLINE_AI_REPORT.md`.
 - Added `scripts/audit-phase-18a-b.mjs`.
 - Added `audit:phase18a_b` to package verification chain.
+
+## Phase 18B — Schema Discovery + Metric Source Map
+
+- Added `scripts/build-phase-18b-schema-source-map.mjs`.
+- Added `scripts/audit-phase-18b.mjs`.
+- Added `docs/contracts/PHASE_18B_SCHEMA_DISCOVERY_METRIC_SOURCE_MAP.md`.
+- Added `docs/roadmap/PHASE_18B_SCHEMA_DISCOVERY_METRIC_SOURCE_MAP.md`.
+- Added `docs/fixtures/phase18-analytics-experiments/phase18b_schema_source_map.json`.
+- Added `docs/qa/PHASE_18B_SCHEMA_DISCOVERY_METRIC_SOURCE_MAP_SMOKE_CHECKLIST.md`.
+- Added `docs/phase-reports/PHASE_18B_SCHEMA_DISCOVERY_METRIC_SOURCE_MAP_REPORT.md`.
+- Added `build:phase18b-map` and `audit:phase18b` package scripts.
