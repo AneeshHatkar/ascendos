@@ -108,7 +108,8 @@
     "audit:phase17n": "node scripts/audit-phase-17n.mjs",
     "audit:phase17o": "node scripts/audit-phase-17o.mjs",
     "audit:phase17p": "node scripts/audit-phase-17p.mjs",
-    "audit:phase17q": "node scripts/audit-phase-17q.mjs"
+    "audit:phase17q": "node scripts/audit-phase-17q.mjs",
+    "audit:project-proof": "node scripts/audit-project-integrity-proof.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",
