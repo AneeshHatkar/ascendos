@@ -5265,3 +5265,7 @@ Added self-experiment contracts and validators. This includes experiment templat
 ## Insight Quality + Provenance Contracts
 
 Added insight quality and provenance contracts. This includes insight quality levels, claim types, evidence contracts, provenance sources, freshness labels, disclosure requirements, action readiness boundaries, memory candidate boundaries, correlation-not-causation guardrails, Carnos explanation limits, and cached/stale/unsynced context disclosure. Boundary preserved: no schema writes, no runtime SQL reads, no Supabase client calls, no fake insight data, no memory writes, no action execution, and no local runtime requirement during checks.
+
+## Analytics Repository Boundaries
+
+Added analytics repository boundary contracts. This includes metric definition lookup boundaries, metric value read boundaries, snapshot read boundaries, insight read boundaries, dashboard summary read boundaries, export preview read boundaries, source routing, cached fallback, stale/unsynced labels, deterministic empty-state boundary, Phase 18B schema source-map requirement before runtime implementation, Carnos repository explanation limits, and no-fake-analytics guardrails. Boundary preserved: no schema writes, no runtime SQL reads, no Supabase client calls, no fake analytics data, no memory writes, no action execution, and no local runtime requirement during checks.

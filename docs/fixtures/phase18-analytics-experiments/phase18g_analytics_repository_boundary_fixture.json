@@ -1,0 +1,79 @@
+{
+  "phase": "18G",
+  "title": "Analytics Repository Boundaries",
+  "read_intents": [
+    "metric_definition_lookup",
+    "metric_value_read",
+    "snapshot_read",
+    "insight_read",
+    "dashboard_summary_read",
+    "export_preview_read"
+  ],
+  "repository_sources": [
+    "supabase_postgres_source_of_truth",
+    "encrypted_offline_cache",
+    "mixed_source_router",
+    "deterministic_empty_state"
+  ],
+  "cache_states": [
+    "live_only",
+    "cache_allowed",
+    "cache_allowed_with_sensitive_rules",
+    "cache_allowed_with_privacy_rules",
+    "not_cacheable"
+  ],
+  "freshness_labels": [
+    "fresh",
+    "cached",
+    "stale",
+    "partial",
+    "missing",
+    "unsynced"
+  ],
+  "capabilities": [
+    "read_metric_definitions",
+    "read_metric_values",
+    "read_snapshots",
+    "read_insight_previews",
+    "read_dashboard_summaries",
+    "read_export_previews",
+    "route_cached_fallback",
+    "label_source_mode",
+    "validate_user_scope"
+  ],
+  "validator_rules": [
+    "repository id required",
+    "user scoped repository required",
+    "read intents required",
+    "capabilities required",
+    "metric plans required",
+    "Supabase/Postgres online source of truth required",
+    "encrypted IndexedDB offline continuity layer required",
+    "Phase 18B source map required before runtime implementation",
+    "registered metric plans only",
+    "user scope required per metric plan",
+    "runtime reads not implemented in this boundary chunk",
+    "not-cacheable metrics cannot allow cached fallback",
+    "sensitive/restricted metrics cannot use unrestricted cache",
+    "fresh data requires source-of-truth provenance",
+    "no runtime data reads",
+    "no schema writes",
+    "no Supabase client calls",
+    "no localStorage core data",
+    "no fake analytics data",
+    "no memory writes",
+    "no action execution",
+    "no local Carnos runtime required"
+  ],
+  "boundaries": {
+    "runtime_data_reads_enabled": false,
+    "schema_writes_enabled": false,
+    "supabase_calls_enabled": false,
+    "fake_analytics_data_enabled": false,
+    "local_storage_core_data_enabled": false,
+    "local_carnos_runtime_required": false,
+    "memory_write_enabled": false,
+    "action_execution_enabled": false,
+    "schema_source_map_required_before_runtime_implementation": true
+  }
+}

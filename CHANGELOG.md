@@ -2004,3 +2004,7 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 ## Insight Quality + Provenance Contracts
 
 - Added insight quality and provenance validation layer with quality levels, evidence contracts, claim types, disclosure requirements, action readiness boundaries, memory candidate boundaries, and Carnos explanation limits for cached/stale/unsynced/insufficient-data contexts.
+
+## Analytics Repository Boundaries
+
+- Added analytics repository boundary validation layer with read intents, source routing, cache states, freshness labels, user-scope requirements, schema source-map requirement, Carnos explanation limits, and no fake analytics/read/write guardrails.

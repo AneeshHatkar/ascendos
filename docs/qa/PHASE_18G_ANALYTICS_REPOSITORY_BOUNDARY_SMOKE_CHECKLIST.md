@@ -1,0 +1,49 @@
+# Phase 18G Analytics Repository Boundary Smoke Checklist
+
+- [ ] Analytics repository boundary implementation exists.
+- [ ] Analytics experiments index exports analytics repository boundary.
+- [ ] Analytics repository boundary fixture exists.
+- [ ] Read intent includes metric_definition_lookup.
+- [ ] Read intent includes metric_value_read.
+- [ ] Read intent includes snapshot_read.
+- [ ] Read intent includes insight_read.
+- [ ] Read intent includes dashboard_summary_read.
+- [ ] Read intent includes export_preview_read.
+- [ ] Repository source includes supabase_postgres_source_of_truth.
+- [ ] Repository source includes encrypted_offline_cache.
+- [ ] Repository source includes mixed_source_router.
+- [ ] Repository source includes deterministic_empty_state.
+- [ ] Cache state includes live_only.
+- [ ] Cache state includes cache_allowed.
+- [ ] Cache state includes cache_allowed_with_sensitive_rules.
+- [ ] Cache state includes cache_allowed_with_privacy_rules.
+- [ ] Cache state includes not_cacheable.
+- [ ] Freshness includes fresh.
+- [ ] Freshness includes cached.
+- [ ] Freshness includes stale.
+- [ ] Freshness includes partial.
+- [ ] Freshness includes missing.
+- [ ] Freshness includes unsynced.
+- [ ] Capability includes read_metric_definitions.
+- [ ] Capability includes read_metric_values.
+- [ ] Capability includes read_snapshots.
+- [ ] Capability includes read_insight_previews.
+- [ ] Capability includes read_dashboard_summaries.
+- [ ] Capability includes read_export_previews.
+- [ ] Capability includes route_cached_fallback.
+- [ ] Capability includes label_source_mode.
+- [ ] Capability includes validate_user_scope.
+- [ ] Phase 18B schema source map requirement exists.
+- [ ] Registered metric plan validation exists.
+- [ ] User scope validation exists.
+- [ ] Cached/stale/unsynced repository disclosure exists.
+- [ ] Carnos repository explanation limits exist.
+- [ ] Future local Carnos runtime compatibility is represented.
+- [ ] No runtime SQL reads are added.
+- [ ] No Supabase client calls are added.
+- [ ] No schema writes are added.
+- [ ] No fake analytics data is added.
+- [ ] No memory writes are added.
+- [ ] No action execution is added.
+- [ ] npm run audit:phase18g passes.
+- [ ] npm run check passes.
