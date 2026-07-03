@@ -4332,3 +4332,14 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `docs/phase-reports/PHASE_18G_ANALYTICS_REPOSITORY_BOUNDARIES_REPORT.md`.
 - Added `scripts/audit-phase-18g.mjs`.
 - Added `audit:phase18g` to package verification chain.
+
+## Experiment Repository Boundaries
+
+- Added `src/lib/analytics-experiments/experiment-repository-boundary.ts`.
+- Updated `src/lib/analytics-experiments/index.ts`.
+- Added `docs/fixtures/phase18-analytics-experiments/phase18h_experiment_repository_boundary_fixture.json`.
+- Added `docs/contracts/PHASE_18H_EXPERIMENT_REPOSITORY_BOUNDARIES.md`.
+- Added `docs/qa/PHASE_18H_EXPERIMENT_REPOSITORY_BOUNDARY_SMOKE_CHECKLIST.md`.
+- Added `docs/phase-reports/PHASE_18H_EXPERIMENT_REPOSITORY_BOUNDARIES_REPORT.md`.
+- Added `scripts/audit-phase-18h.mjs`.
+- Added `audit:phase18h` to package verification chain.

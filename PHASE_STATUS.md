@@ -3677,3 +3677,9 @@ Added deterministic insight quality and provenance contracts for evidence, quali
 Status: Complete pending verification and commit.
 
 Added deterministic analytics repository boundary contracts for read intents, repository sources, cache states, freshness labels, metric plans, source-map requirements, Carnos disclosure, and future runtime implementation safety. Boundary: no schema writes, no Supabase calls, no fake analytics data, no memory writes, no action execution.
+
+## Experiment Repository Boundaries
+
+Status: Complete pending verification and commit.
+
+Added deterministic experiment repository boundary contracts for read intents, repository sources, capture modes, freshness labels, template plans, source-map requirements, offline capture readiness, sync queue-before-write requirements, Carnos disclosure, and future runtime implementation safety. Boundary: no schema writes, no Supabase calls, no fake experiment data, no memory writes, no action execution.

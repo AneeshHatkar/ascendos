@@ -2008,3 +2008,7 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 ## Analytics Repository Boundaries
 
 - Added analytics repository boundary validation layer with read intents, source routing, cache states, freshness labels, user-scope requirements, schema source-map requirement, Carnos explanation limits, and no fake analytics/read/write guardrails.
+
+## Experiment Repository Boundaries
+
+- Added experiment repository boundary validation layer with read intents, source routing, capture modes, freshness labels, template plan validation, sync queue readiness, Carnos explanation limits, and no fake experiment/read/write guardrails.

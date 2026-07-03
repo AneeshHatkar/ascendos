@@ -1,0 +1,90 @@
+{
+  "phase": "18H",
+  "title": "Experiment Repository Boundaries",
+  "read_intents": [
+    "template_lookup",
+    "experiment_read",
+    "draft_capture_preview",
+    "measurement_read",
+    "confounder_read",
+    "lesson_summary_read",
+    "memory_candidate_lesson_read",
+    "evaluation_preview_read"
+  ],
+  "repository_sources": [
+    "supabase_postgres_source_of_truth",
+    "encrypted_offline_cache",
+    "mixed_source_router",
+    "unsynced_local_queue",
+    "deterministic_empty_state"
+  ],
+  "capture_modes": [
+    "read_only",
+    "offline_capture_preview",
+    "sync_queue_required",
+    "online_runtime_required"
+  ],
+  "freshness_labels": [
+    "fresh",
+    "cached",
+    "stale",
+    "partial",
+    "missing",
+    "unsynced",
+    "deterministic_preview"
+  ],
+  "capabilities": [
+    "read_experiment_templates",
+    "read_experiment_records",
+    "read_experiment_measurements",
+    "read_experiment_confounders",
+    "read_lesson_summaries",
+    "read_memory_candidate_lessons",
+    "read_evaluation_previews",
+    "capture_offline_experiment_preview",
+    "route_sync_queue_candidate",
+    "label_source_mode",
+    "validate_user_scope"
+  ],
+  "validator_rules": [
+    "repository id required",
+    "user scoped repository required",
+    "read intents required",
+    "capabilities required",
+    "template plans required",
+    "Supabase/Postgres online source of truth required",
+    "encrypted IndexedDB offline continuity layer required",
+    "Phase 18B source map required before runtime implementation",
+    "registered template plans only",
+    "user scope required per template plan",
+    "runtime reads not implemented in this boundary chunk",
+    "runtime writes not implemented in this boundary chunk",
+    "offline capture preview requires sync queue before write",
+    "offline capture preview uses mixed source router",
+    "fresh experiment data requires source-of-truth provenance",
+    "unsynced local experiment context disclosure",
+    "deterministic experiment preview disclosure",
+    "no runtime data reads",
+    "no runtime data writes",
+    "no schema writes",
+    "no Supabase client calls",
+    "no localStorage core data",
+    "no fake experiment data",
+    "no memory writes",
+    "no action execution",
+    "no local Carnos runtime required"
+  ],
+  "boundaries": {
+    "runtime_data_reads_enabled": false,
+    "runtime_data_writes_enabled": false,
+    "schema_writes_enabled": false,
+    "supabase_calls_enabled": false,
+    "fake_experiment_data_enabled": false,
+    "local_storage_core_data_enabled": false,
+    "local_carnos_runtime_required": false,
+    "sync_queue_implementation_enabled": false,
+    "memory_write_enabled": false,
+    "action_execution_enabled": false,
+    "schema_source_map_required_before_runtime_implementation": true
+  }
+}

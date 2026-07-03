@@ -1,0 +1,56 @@
+# Phase 18H Experiment Repository Boundary Smoke Checklist
+
+- [ ] Experiment repository boundary implementation exists.
+- [ ] Analytics experiments index exports experiment repository boundary.
+- [ ] Experiment repository boundary fixture exists.
+- [ ] Read intent includes template_lookup.
+- [ ] Read intent includes experiment_read.
+- [ ] Read intent includes draft_capture_preview.
+- [ ] Read intent includes measurement_read.
+- [ ] Read intent includes confounder_read.
+- [ ] Read intent includes lesson_summary_read.
+- [ ] Read intent includes memory_candidate_lesson_read.
+- [ ] Read intent includes evaluation_preview_read.
+- [ ] Repository source includes supabase_postgres_source_of_truth.
+- [ ] Repository source includes encrypted_offline_cache.
+- [ ] Repository source includes mixed_source_router.
+- [ ] Repository source includes unsynced_local_queue.
+- [ ] Repository source includes deterministic_empty_state.
+- [ ] Capture mode includes read_only.
+- [ ] Capture mode includes offline_capture_preview.
+- [ ] Capture mode includes sync_queue_required.
+- [ ] Capture mode includes online_runtime_required.
+- [ ] Freshness includes fresh.
+- [ ] Freshness includes cached.
+- [ ] Freshness includes stale.
+- [ ] Freshness includes partial.
+- [ ] Freshness includes missing.
+- [ ] Freshness includes unsynced.
+- [ ] Freshness includes deterministic_preview.
+- [ ] Capability includes read_experiment_templates.
+- [ ] Capability includes read_experiment_records.
+- [ ] Capability includes read_experiment_measurements.
+- [ ] Capability includes read_experiment_confounders.
+- [ ] Capability includes read_lesson_summaries.
+- [ ] Capability includes read_memory_candidate_lessons.
+- [ ] Capability includes read_evaluation_previews.
+- [ ] Capability includes capture_offline_experiment_preview.
+- [ ] Capability includes route_sync_queue_candidate.
+- [ ] Capability includes label_source_mode.
+- [ ] Capability includes validate_user_scope.
+- [ ] Phase 18B schema source map requirement exists.
+- [ ] Registered template plan validation exists.
+- [ ] User scope validation exists.
+- [ ] Offline capture preview requires sync queue before write.
+- [ ] Cached/unsynced/deterministic repository disclosure exists.
+- [ ] Carnos experiment repository explanation limits exist.
+- [ ] Future local Carnos runtime compatibility is represented.
+- [ ] No runtime SQL reads are added.
+- [ ] No runtime data writes are added.
+- [ ] No Supabase client calls are added.
+- [ ] No schema writes are added.
+- [ ] No fake experiment data is added.
+- [ ] No memory writes are added.
+- [ ] No action execution is added.
+- [ ] npm run audit:phase18h passes.
+- [ ] npm run check passes.
