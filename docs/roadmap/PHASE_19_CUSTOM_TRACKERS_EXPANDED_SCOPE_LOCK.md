@@ -13,6 +13,8 @@ Phase 19 turns ascendOS into a safe user-extensible tracking system. It adds cus
 
 ## Final Phase 19 feature list
 
+This scope lock explicitly records 138 features for Phase 19.
+
 1. Custom Tracker Dashboard at /custom-trackers
 2. Manual tracker creation
 3. Tracker template library
