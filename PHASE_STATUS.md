@@ -3530,3 +3530,16 @@ Does not add:
 - vector search
 - Carnos prompt injection
 - background approval
+
+## Phase 17G — Provenance + Confidence + Conflict Engine
+
+Status: Implemented pending verification/commit.
+
+Adds:
+- trust scoring
+- conflict assessment
+- conflict group preview
+- blocked/needs-review/superseded summaries
+- boundary docs and audit
+
+Next after commit: Phase 17H — Embedding Provider Boundary.

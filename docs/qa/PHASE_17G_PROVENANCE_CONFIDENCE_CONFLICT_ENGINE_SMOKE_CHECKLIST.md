@@ -1,0 +1,23 @@
+# Phase 17G — Provenance + Confidence + Conflict Engine Smoke Checklist
+
+- [x] Engine scores memory trust deterministically.
+- [x] Engine uses source authority.
+- [x] Engine uses confidence.
+- [x] Engine uses evidence strength.
+- [x] Engine uses source reliability.
+- [x] Engine uses freshness/staleness.
+- [x] Engine applies sensitivity penalty.
+- [x] Engine applies conflict/review penalty.
+- [x] Engine blocks blocked statuses.
+- [x] Engine marks superseded memories.
+- [x] Engine detects conflict signals.
+- [x] Engine creates conflict group previews.
+- [x] Ambiguous conflicts require user review.
+- [x] Engine does not write repositories.
+- [x] Engine does not call Supabase.
+- [x] Engine does not retrieve memory.
+- [x] Engine does not create embeddings.
+- [x] Engine does not call providers.
+- [x] Engine does not inject Carnos context.
+- [ ] `npm run audit:phase17g` passes.
+- [ ] `npm run check` passes.

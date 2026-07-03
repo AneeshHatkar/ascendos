@@ -1915,3 +1915,9 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added approved memory archive/forget/lock/update helpers.
 - Added memory lifecycle event persistence.
 - Added 17F audit and documentation.
+
+## Phase 17G — Provenance + Confidence + Conflict Engine
+
+Added deterministic Memory/RAG provenance, confidence, and conflict scoring.
+
+This phase is side-effect-free and does not retrieve, embed, call providers, write SQL, inject Carnos context, or resolve conflicts silently.

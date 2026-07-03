@@ -4140,3 +4140,26 @@ Boundary:
   - Completion report.
 - `docs/qa/PHASE_17F_APPROVED_MEMORY_REPOSITORY_SMOKE_CHECKLIST.md`
   - Smoke checklist.
+
+## Phase 17G — Provenance + Confidence + Conflict Engine
+
+Files added:
+- `src/lib/carnos-continuity/memory-provenance-confidence-conflict-engine.ts`
+- `docs/contracts/PHASE_17G_PROVENANCE_CONFIDENCE_CONFLICT_ENGINE.md`
+- `docs/phase-reports/PHASE_17G_PROVENANCE_CONFIDENCE_CONFLICT_ENGINE_REPORT.md`
+- `docs/qa/PHASE_17G_PROVENANCE_CONFIDENCE_CONFLICT_ENGINE_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-17g.mjs`
+
+Files updated:
+- `src/lib/carnos-continuity/index.ts`
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CODE_LEDGER.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Implementation:
+- deterministic trust scoring
+- deterministic conflict assessment
+- side-effect-free conflict group preview
+- audit-enforced no-runtime boundary

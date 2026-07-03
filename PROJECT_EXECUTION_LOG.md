@@ -5165,3 +5165,27 @@ Summary:
 - Added candidate linkage through `approved_memory_item_id`.
 - Added lifecycle audit event writes to `memory_events`.
 - Preserved boundaries: no embeddings, no retrieval, no Carnos context injection, no provider calls, no background approval.
+
+## Phase 17G — Provenance + Confidence + Conflict Engine
+
+Implemented deterministic Memory/RAG trust and conflict engine.
+
+Added:
+- local trust scoring from source authority, confidence, evidence strength, source reliability, freshness, sensitivity, conflict state, and review state
+- conflict signal detection
+- pairwise conflict assessment
+- conflict group preview summaries
+- blocked / needs-review / superseded summaries
+- Phase 17G audit, contract, report, and smoke checklist
+
+Boundary:
+- no Supabase calls
+- no repository implementation
+- no SQL reads/writes
+- no runtime retrieval
+- no embeddings
+- no provider calls
+- no vector search
+- no Carnos prompt/context injection
+- no background scanning
+- no silent conflict resolution
