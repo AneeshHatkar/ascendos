@@ -4277,3 +4277,14 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `docs/phase-reports/LOCAL_CARNOS_RUNTIME_CHUNK_LOCK_REPORT.md`.
 - Added `scripts/audit-local-carnos-runtime-lock.mjs`.
 - Added `audit:phase18b_b` to package verification chain.
+
+## Metric Registry + Data Quality Contracts
+
+- Added `src/lib/analytics-experiments/metric-registry.ts`.
+- Added `src/lib/analytics-experiments/index.ts`.
+- Added `docs/fixtures/phase18-analytics-experiments/phase18c_metric_registry_fixture.json`.
+- Added `docs/contracts/PHASE_18C_METRIC_REGISTRY_DATA_QUALITY.md`.
+- Added `docs/qa/PHASE_18C_METRIC_REGISTRY_DATA_QUALITY_SMOKE_CHECKLIST.md`.
+- Added `docs/phase-reports/PHASE_18C_METRIC_REGISTRY_DATA_QUALITY_REPORT.md`.
+- Added `scripts/audit-phase-18c.mjs`.
+- Added `audit:phase18c` to package verification chain.

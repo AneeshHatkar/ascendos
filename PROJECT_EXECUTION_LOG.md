@@ -5249,3 +5249,7 @@ Added static schema discovery and metric source mapping before Phase 18 analytic
 ## Local Carnos Runtime Chunk Lock
 
 Inserted a dedicated future build chunk for local Carnos runtime work: 18M-B — Local Carnos Runtime Boundary + Option C Offline AI Adapter. This locks local offline AI as a real implementation path after Carnos analytics explanation boundaries and before final privacy/offline audits. The runtime remains optional and capability-detected, with deterministic offline fallback required when local runtime or model is unavailable.
+
+## Metric Registry + Data Quality Contracts
+
+Added the canonical analytics/experiment metric registry and data quality rules. The registry defines metric ids, domains, sensitivity labels, offline cache eligibility, source requirements, minimum data rules, data completeness scoring, quality levels, Carnos explanation limits, experiment evaluation eligibility, and future local Carnos runtime compatibility. Boundary preserved: no schema writes, no runtime SQL reads, no Supabase client calls, no fake metrics, no fake analytics data, and no local runtime requirement during checks.

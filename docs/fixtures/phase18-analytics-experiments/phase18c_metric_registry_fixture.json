@@ -1,0 +1,47 @@
+{
+  "phase": "18C",
+  "title": "Metric Registry + Data Quality Contracts",
+  "metric_ids": [
+    "daily_checkin_count",
+    "goal_progress_signal",
+    "job_application_velocity",
+    "networking_touchpoints",
+    "learning_consistency",
+    "research_output_count",
+    "sleep_consistency",
+    "workout_consistency",
+    "calorie_logging_consistency",
+    "experiment_measurement_completeness",
+    "analytics_snapshot_freshness",
+    "carnos_memory_context_availability"
+  ],
+  "data_quality_levels": [
+    "high_confidence",
+    "medium_confidence",
+    "low_confidence",
+    "insufficient_data",
+    "invalid"
+  ],
+  "source_modes": [
+    "online_live",
+    "cached_offline",
+    "mixed_online_cached",
+    "unsynced_local",
+    "missing"
+  ],
+  "offline_requirements": [
+    "offline cache eligibility labels",
+    "sensitive/restricted cache rules",
+    "cached/stale/unsynced explanation limits",
+    "no localStorage core data",
+    "deterministic offline fallback",
+    "future local Carnos runtime compatibility"
+  ],
+  "boundaries": {
+    "runtime_side_effects_enabled": false,
+    "schema_writes_enabled": false,
+    "supabase_calls_enabled": false,
+    "fake_metric_data_enabled": false,
+    "local_carnos_runtime_required": false
+  }
+}

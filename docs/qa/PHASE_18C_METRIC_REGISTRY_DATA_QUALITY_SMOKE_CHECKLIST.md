@@ -1,0 +1,37 @@
+# Phase 18C Metric Registry + Data Quality Smoke Checklist
+
+- [ ] Metric registry implementation exists.
+- [ ] Analytics experiments index exports metric registry.
+- [ ] Phase 18C fixture exists.
+- [ ] Metric registry includes daily_checkin_count.
+- [ ] Metric registry includes goal_progress_signal.
+- [ ] Metric registry includes job_application_velocity.
+- [ ] Metric registry includes networking_touchpoints.
+- [ ] Metric registry includes learning_consistency.
+- [ ] Metric registry includes research_output_count.
+- [ ] Metric registry includes sleep_consistency.
+- [ ] Metric registry includes workout_consistency.
+- [ ] Metric registry includes calorie_logging_consistency.
+- [ ] Metric registry includes experiment_measurement_completeness.
+- [ ] Metric registry includes analytics_snapshot_freshness.
+- [ ] Metric registry includes carnos_memory_context_availability.
+- [ ] Data quality levels include high_confidence.
+- [ ] Data quality levels include medium_confidence.
+- [ ] Data quality levels include low_confidence.
+- [ ] Data quality levels include insufficient_data.
+- [ ] Data quality levels include invalid.
+- [ ] Source modes include online_live.
+- [ ] Source modes include cached_offline.
+- [ ] Source modes include mixed_online_cached.
+- [ ] Source modes include unsynced_local.
+- [ ] Source modes include missing.
+- [ ] Offline cache eligibility is represented.
+- [ ] Sensitive/restricted labels are represented.
+- [ ] Carnos explanation limits are represented.
+- [ ] Experiment evaluation eligibility is represented.
+- [ ] Future local Carnos runtime compatibility is represented.
+- [ ] No runtime SQL reads are added.
+- [ ] No Supabase client calls are added.
+- [ ] No schema writes are added.
+- [ ] `npm run audit:phase18c` passes.
+- [ ] `npm run check` passes.

@@ -3647,3 +3647,9 @@ Added static schema discovery and metric source mapping. Boundary: no schema cre
 Status: Complete pending verification and commit.
 
 Locked: 18M-B — Local Carnos Runtime Boundary + Option C Offline AI Adapter. This preserves local AI as a real future build step while keeping the app safe when no local runtime/model is installed.
+
+## Metric Registry + Data Quality Contracts
+
+Status: Complete pending verification and commit.
+
+Added deterministic metric registry and data quality contracts for analytics, experiments, offline cache behavior, Carnos explanations, and future local runtime compatibility. Boundary: no schema writes, no Supabase calls, no fake metrics, no local runtime requirement during checks.

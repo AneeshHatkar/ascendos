@@ -1988,3 +1988,7 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 ## Local Carnos Runtime Chunk Lock
 
 - Locked a dedicated local Carnos runtime build chunk using Option C local server/runtime for offline AI, with optional runtime detection, deterministic fallback, and no false offline AI claims before runtime/model availability.
+
+## Metric Registry + Data Quality Contracts
+
+- Added the canonical analytics/experiment metric registry with data quality scoring, cache eligibility, sensitivity labels, Carnos explanation limits, experiment eligibility, and offline/local-runtime compatibility markers.
