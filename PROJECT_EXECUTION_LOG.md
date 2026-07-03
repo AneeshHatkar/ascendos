@@ -5257,3 +5257,7 @@ Added the canonical analytics/experiment metric registry and data quality rules.
 ## Analytics Snapshot Contracts + Validators
 
 Added analytics snapshot contracts and validators. This includes snapshot ranges, freshness states, provenance modes, export readiness, metric-value contracts, completeness summaries, quality summaries, comparison eligibility, Carnos explanation limits, cached/stale/unsynced disclosure, and safety boundaries. Boundary preserved: no schema writes, no runtime SQL reads, no Supabase client calls, no fake snapshot data, no dashboard UI, and no local runtime requirement during checks.
+
+## Self-Experiment Contracts + Validators
+
+Added self-experiment contracts and validators. This includes experiment templates, lifecycle states, baseline rules, active-period rules, measurement requirements, confounder tracking, invalid state handling, lesson summary rules, memory candidate lesson boundary, Carnos explanation limits, and offline/cached/unsynced context disclosure. Boundary preserved: no schema writes, no runtime SQL reads, no Supabase client calls, no fake experiment data, no UI, no repository, and no local runtime requirement during checks.

@@ -1,0 +1,45 @@
+# Phase 18E Self-Experiment Contracts Smoke Checklist
+
+- [ ] Self-experiment contract implementation exists.
+- [ ] Analytics experiments index exports self-experiment contracts.
+- [ ] Self-experiment fixture exists.
+- [ ] Lifecycle includes draft.
+- [ ] Lifecycle includes planned.
+- [ ] Lifecycle includes baseline.
+- [ ] Lifecycle includes active.
+- [ ] Lifecycle includes paused.
+- [ ] Lifecycle includes completed.
+- [ ] Lifecycle includes reviewed.
+- [ ] Lifecycle includes archived.
+- [ ] Lifecycle includes invalid.
+- [ ] Readiness includes ready.
+- [ ] Readiness includes ready_with_warnings.
+- [ ] Readiness includes not_ready.
+- [ ] Readiness includes invalid.
+- [ ] Template includes sleep_reset_experiment.
+- [ ] Template includes career_sprint_experiment.
+- [ ] Template includes learning_consistency_experiment.
+- [ ] Template includes fitness_consistency_experiment.
+- [ ] Registered primary metric validation exists.
+- [ ] Registered supporting metric validation exists.
+- [ ] Baseline range validation exists.
+- [ ] Active range validation exists.
+- [ ] Minimum baseline days validation exists.
+- [ ] Minimum active days validation exists.
+- [ ] Minimum measurements validation exists.
+- [ ] Confounder tracking exists.
+- [ ] Lesson summary validation exists.
+- [ ] Memory candidate lesson boundary exists.
+- [ ] Cached/unsynced/deterministic explanation limits exist.
+- [ ] Source mode includes online_source_of_truth.
+- [ ] Source mode includes eligible_offline_cache.
+- [ ] Source mode includes mixed_online_offline.
+- [ ] Source mode includes unsynced_local.
+- [ ] Source mode includes deterministic_preview.
+- [ ] Carnos avoids proof/causal claims.
+- [ ] Future local Carnos runtime compatibility is represented.
+- [ ] No runtime SQL reads are added.
+- [ ] No Supabase client calls are added.
+- [ ] No schema writes are added.
+- [ ] npm run audit:phase18e passes.
+- [ ] npm run check passes.

@@ -3659,3 +3659,9 @@ Added deterministic metric registry and data quality contracts for analytics, ex
 Status: Complete pending verification and commit.
 
 Added deterministic snapshot contracts and validators for analytics freshness, provenance, completeness, quality, export readiness, comparison eligibility, cached/stale/unsynced disclosure, and future local Carnos runtime explanation safety. Boundary: no schema writes, no Supabase calls, no fake snapshot data.
+
+## Self-Experiment Contracts + Validators
+
+Status: Complete pending verification and commit.
+
+Added deterministic self-experiment contracts and validators for templates, lifecycle, baseline and active period requirements, measurements, confounders, invalid states, lesson summaries, memory candidate boundaries, and future local Carnos explanation safety. Boundary: no schema writes, no Supabase calls, no fake experiment data.
