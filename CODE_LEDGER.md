@@ -4222,3 +4222,9 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `src/components/memory-rag/CarnosMemoryIntegrationPanel.tsx`.
 - Exported Carnos Memory Integration Panel from `src/components/memory-rag/index.ts`.
 - Added Phase 17O contract, report, smoke checklist, audit script, and package check chain entry.
+
+## Phase 17P — Privacy, Sensitive Lock, Forget/Delete Readiness
+
+- Added `src/lib/carnos-continuity/privacy-sensitive-forget-readiness.ts`.
+- Exported Phase 17P from `src/lib/carnos-continuity/index.ts`.
+- Added Phase 17P contract, report, smoke checklist, audit script, and package check chain entry.

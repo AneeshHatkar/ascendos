@@ -1,0 +1,29 @@
+# Phase 17P Privacy, Sensitive Lock, Forget/Delete Readiness Smoke Checklist
+
+- [ ] `evaluateMemoryPrivacyReadiness` returns preview-only readiness decisions.
+- [ ] Sensitive lock enforcement preview blocks high/restricted memory by default.
+- [ ] Locked memory is blocked by default.
+- [ ] Rejected memory is blocked.
+- [ ] Forgotten memory is blocked.
+- [ ] Deleted-preview memory is blocked.
+- [ ] Open conflicts block retrieval-like actions.
+- [ ] Forget/delete readiness remains deferred.
+- [ ] Schema check is required before write-enabled implementation.
+- [ ] Repository implementation is required before write-enabled implementation.
+- [ ] User confirmation is required for write-like privacy actions.
+- [ ] Visible privacy reasons are returned.
+- [ ] Visible sensitive lock reasons are returned.
+- [ ] Visible forget/delete reasons are returned.
+- [ ] No memory_retrieval_events writes occur.
+- [ ] No runtime retrieval occurs.
+- [ ] No embeddings are generated.
+- [ ] No semantic retrieval is activated.
+- [ ] No provider calls occur.
+- [ ] No vector search occurs.
+- [ ] No Supabase calls occur.
+- [ ] No SQL reads or writes occur.
+- [ ] No Carnos prompt/context injection occurs.
+- [ ] No background scanning occurs.
+- [ ] No actual approve/reject/archive/forget/delete mutations occur.
+- [ ] `npm run audit:phase17p` passes.
+- [ ] `npm run check` passes.

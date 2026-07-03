@@ -1960,3 +1960,8 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 
 - Added preview-only Carnos Memory Integration Panel.
 - Added allowed-preview, blocked-action, audit-visibility, and truthfulness-guard surfaces.
+
+## Phase 17P — Privacy, Sensitive Lock, Forget/Delete Readiness
+
+- Added deterministic preview-only privacy, sensitive lock, and forget/delete readiness evaluator.
+- Preserved write/mutation deferral and schema-check-before-write boundary.

@@ -3605,3 +3605,9 @@ Boundary: no memory_retrieval_events writes, no runtime retrieval, no embeddings
 Status: Complete pending verification and commit.
 
 Boundary: no memory_retrieval_events writes, no runtime retrieval, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, no Carnos prompt/context injection, no background scanning, no approve/reject/delete/forget mutations, no autonomous memory use.
+
+## Phase 17P — Privacy, Sensitive Lock, Forget/Delete Readiness
+
+Status: Complete pending verification and commit.
+
+Boundary: no memory_retrieval_events writes, no runtime retrieval, no embeddings, no semantic retrieval activation, no providers, no vector search, no Supabase, no SQL, no Carnos prompt/context injection, no background scanning, no actual approve/reject/archive/forget/delete mutations.
