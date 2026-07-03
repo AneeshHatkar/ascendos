@@ -2020,3 +2020,7 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 ## Experiment Evaluation Engine
 
 - Added deterministic self-experiment evaluation logic for baseline/active comparison, completeness, confounders, readiness, lesson candidates, memory candidate review boundary, and no-causality Carnos explanation limits.
+
+## Analytics Dashboard UI
+
+- Added analytics dashboard route, UI component, chart-ready view model, source-aware empty/loading/error/privacy states, Carnos disclosure boundary, and no-hardcoded-analytics-data guardrail.

@@ -5281,3 +5281,7 @@ Added deterministic trend/correlation/comparison engine code. This includes tren
 ## Experiment Evaluation Engine
 
 Added deterministic self-experiment evaluation engine code. This includes baseline vs active comparison, measurement completeness scoring, baseline completeness gate, active-window completeness gate, confounder penalty, experiment validity states, evaluation readiness states, lesson candidate generation, memory candidate boundary, Carnos explanation limits, no fake experiment data, no memory writes, and no action execution. Boundary preserved: no schema writes, no runtime SQL reads, no runtime data writes, no Supabase client calls, no sync queue implementation, and no local runtime requirement during checks.
+
+## Analytics Dashboard UI
+
+Added analytics dashboard UI surface and chart-ready view model. This includes /analytics route, analytics dashboard component, metric quality section, snapshot section, trend/comparison/correlation section, experiment readiness section, Carnos disclosure section, privacy boundary section, empty/loading/error/privacy states, and no-hardcoded-analytics-data boundary. Boundary preserved: no schema writes, no runtime SQL reads, no Supabase client calls, no fake analytics data, no memory writes, no action execution, and no local runtime requirement during checks.

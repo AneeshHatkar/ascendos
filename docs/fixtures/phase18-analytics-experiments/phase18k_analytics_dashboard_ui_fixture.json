@@ -1,0 +1,67 @@
+{
+  "phase": "18K",
+  "title": "Analytics Dashboard UI",
+  "route": "/analytics",
+  "sections": [
+    "snapshot",
+    "metric_quality",
+    "trend_comparison_correlation",
+    "experiment_readiness",
+    "carnos_disclosure",
+    "privacy_boundary"
+  ],
+  "ui_states": [
+    "ready",
+    "empty",
+    "loading",
+    "error",
+    "privacy_restricted"
+  ],
+  "source_states": [
+    "fresh",
+    "cached",
+    "stale",
+    "partial",
+    "missing",
+    "unsynced",
+    "deterministic_preview"
+  ],
+  "chart_kinds": [
+    "line",
+    "bar",
+    "scorecard",
+    "comparison",
+    "correlation",
+    "experiment_status"
+  ],
+  "coded_capabilities": [
+    "analytics dashboard route",
+    "analytics dashboard UI component",
+    "chart-ready view model",
+    "metric quality section",
+    "snapshot section",
+    "trend/comparison/correlation section",
+    "experiment readiness section",
+    "Carnos disclosure section",
+    "privacy boundary section",
+    "empty state",
+    "loading state",
+    "error state",
+    "privacy restricted state",
+    "no hardcoded analytics data",
+    "no runtime SQL reads",
+    "no Supabase client calls",
+    "no schema writes",
+    "no memory writes",
+    "no action execution"
+  ],
+  "boundaries": {
+    "runtime_data_reads_enabled": false,
+    "schema_writes_enabled": false,
+    "supabase_calls_enabled": false,
+    "fake_analytics_data_enabled": false,
+    "memory_write_enabled": false,
+    "action_execution_enabled": false,
+    "local_carnos_runtime_required": false
+  }
+}

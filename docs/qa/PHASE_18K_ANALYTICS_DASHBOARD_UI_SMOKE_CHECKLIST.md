@@ -1,0 +1,38 @@
+# Phase 18K Analytics Dashboard UI Smoke Checklist
+
+- [ ] Analytics dashboard view model exists.
+- [ ] Analytics dashboard UI component exists.
+- [ ] Analytics dashboard route exists.
+- [ ] Analytics experiments index exports dashboard view model.
+- [ ] Route is /analytics.
+- [ ] Snapshot section exists.
+- [ ] Metric quality section exists.
+- [ ] Trend/comparison/correlation section exists.
+- [ ] Experiment readiness section exists.
+- [ ] Carnos disclosure section exists.
+- [ ] Privacy boundary section exists.
+- [ ] Empty state exists.
+- [ ] Loading state exists.
+- [ ] Error state exists.
+- [ ] Privacy restricted state exists.
+- [ ] Source states include fresh.
+- [ ] Source states include cached.
+- [ ] Source states include stale.
+- [ ] Source states include partial.
+- [ ] Source states include missing.
+- [ ] Source states include unsynced.
+- [ ] Source states include deterministic_preview.
+- [ ] Chart kinds include line.
+- [ ] Chart kinds include bar.
+- [ ] Chart kinds include scorecard.
+- [ ] Chart kinds include comparison.
+- [ ] Chart kinds include correlation.
+- [ ] Chart kinds include experiment_status.
+- [ ] No runtime SQL reads are added.
+- [ ] No Supabase client calls are added.
+- [ ] No schema writes are added.
+- [ ] No fake analytics data is added.
+- [ ] No memory writes are added.
+- [ ] No action execution is added.
+- [ ] npm run audit:phase18k passes.
+- [ ] npm run check passes.

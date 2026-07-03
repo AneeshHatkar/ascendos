@@ -3695,3 +3695,9 @@ Added deterministic trend/correlation/comparison engine code with minimum data g
 Status: Complete pending verification and commit.
 
 Added deterministic experiment evaluation engine code with baseline vs active comparison, measurement completeness, confounder penalties, validity states, readiness states, lesson candidate generation, memory candidate review boundary, and no-causality guardrails. Boundary: no schema writes, no Supabase calls, no fake experiment data, no memory writes, no action execution.
+
+## Analytics Dashboard UI
+
+Status: Complete pending verification and commit.
+
+Added analytics dashboard UI surface and chart-ready view model with metric quality, snapshot, trend/comparison/correlation, experiment readiness, Carnos disclosure, privacy boundary, and empty/loading/error/privacy states. Boundary: no schema writes, no Supabase calls, no fake analytics data, no memory writes, no action execution.
