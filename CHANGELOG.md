@@ -1945,3 +1945,8 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 
 - Added deterministic preview-only Carnos memory context pack builder.
 - Reused Phase 17I/17J/17K outputs while preserving no-runtime and no-prompt-injection boundaries.
+
+## Phase 17M — Retrieval Audit Trail + Retrieval Explanation
+
+- Added deterministic preview-only retrieval audit trail and explanation builder.
+- Preserved memory_retrieval_events write deferral and no-runtime boundaries.

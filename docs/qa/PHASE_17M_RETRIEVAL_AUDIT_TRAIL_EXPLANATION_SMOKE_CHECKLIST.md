@@ -1,0 +1,25 @@
+# Phase 17M Retrieval Audit Trail + Retrieval Explanation Smoke Checklist
+
+- [ ] `buildRetrievalAuditTrailExplanation` creates a preview-only audit trail.
+- [ ] Retrieval audit trail explains Phase 17I retrieval planning outputs.
+- [ ] Retrieval audit trail explains Phase 17L context pack outputs.
+- [ ] Included retrieval candidates receive visible explanation events.
+- [ ] Excluded retrieval candidates receive visible explanation events.
+- [ ] Budget reasons remain visible.
+- [ ] Dedupe reasons remain visible.
+- [ ] Sensitive/conflict safety reasons remain visible.
+- [ ] Context pack sections are explained.
+- [ ] Context pack items are explained.
+- [ ] memory_retrieval_events persistence remains deferred.
+- [ ] No memory_retrieval_events writes occur.
+- [ ] No runtime retrieval occurs.
+- [ ] No embeddings are generated.
+- [ ] No semantic retrieval is activated.
+- [ ] No provider calls occur.
+- [ ] No vector search occurs.
+- [ ] No Supabase calls occur.
+- [ ] No SQL reads or writes occur.
+- [ ] No Carnos prompt/context injection occurs.
+- [ ] No background scanning occurs.
+- [ ] `npm run audit:phase17m` passes.
+- [ ] `npm run check` passes.

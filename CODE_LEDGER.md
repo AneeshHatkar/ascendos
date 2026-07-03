@@ -4204,3 +4204,9 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `src/lib/carnos-continuity/carnos-memory-context-pack-builder.ts`.
 - Exported Phase 17L from `src/lib/carnos-continuity/index.ts`.
 - Added Phase 17L contract, report, smoke checklist, audit script, and package check chain entry.
+
+## Phase 17M — Retrieval Audit Trail + Retrieval Explanation
+
+- Added `src/lib/carnos-continuity/retrieval-audit-trail-explanation.ts`.
+- Exported Phase 17M from `src/lib/carnos-continuity/index.ts`.
+- Added Phase 17M contract, report, smoke checklist, audit script, and package check chain entry.

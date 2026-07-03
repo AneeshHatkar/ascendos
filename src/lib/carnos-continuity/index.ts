@@ -31,3 +31,4 @@ export * from "./memory-retrieval-ranking-budget-dedupe";
 export * from "./knowledge-vault-retrieval-bridge";
 export * from "./source-bridge-retrieval-preview";
 export * from "./carnos-memory-context-pack-builder";
+export * from "./retrieval-audit-trail-explanation";
