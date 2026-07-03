@@ -1,0 +1,32 @@
+{
+  "phase": "19H",
+  "status": "complete",
+  "name": "Carnos proposals and review-before-write queue",
+  "coded_features": [
+    "carnos_assisted_tracker_creation_proposal_contract",
+    "carnos_assisted_tracker_improvement_proposal_contract",
+    "carnos_ai_field_mapping_proposal_contract",
+    "carnos_message_to_entry_proposal_contract",
+    "review_before_write_queue_contract",
+    "ai_proposal_states",
+    "tracker_proposal_validation",
+    "entry_proposal_validation_using_phase19d",
+    "privacy_permission_validation_using_phase19g",
+    "proposal_expiration_boundary",
+    "no_silent_carnos_tracker_creation",
+    "no_silent_carnos_tracker_entry_logging",
+    "no_silent_carnos_tracker_edits",
+    "no_silent_memory_writes"
+  ],
+  "disabled_boundaries": {
+    "schema_migration": false,
+    "runtime_database_reads": false,
+    "runtime_database_writes": false,
+    "carnos_runtime_writes": false,
+    "model_calls": false,
+    "network_calls": false,
+    "memory_writes": false,
+    "action_execution": false,
+    "silent_writes": false
+  }
+}
