@@ -1,0 +1,22 @@
+# Phase 19F Templates and Frequency Semantics Checklist
+
+- [x] Tracker template library exists.
+- [x] Template-based tracker creation contract exists.
+- [x] Template categories/domains exist.
+- [x] Frequency rule validation exists.
+- [x] Daily/weekly/monthly/custom/on-demand semantics exist.
+- [x] Target count per period exists.
+- [x] Streak enabled/disabled boundary exists.
+- [x] Missed-entry policy exists.
+- [x] Favorite tracker boundary exists.
+- [x] Pinned tracker boundary exists.
+- [x] Repeat-last-entry support boundary exists.
+- [x] Setup completeness checks exist.
+- [x] Tracker quality/readiness score exists.
+- [x] Analytics-ready status exists.
+- [x] Privacy-ready status exists.
+- [x] Dashboard-placement-ready status exists.
+- [x] No SQL migration is added.
+- [x] No runtime database read/write is added.
+- [x] npm run audit:phase19f is expected to pass.
+- [x] npm run check is expected to pass.
