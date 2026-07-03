@@ -1,0 +1,36 @@
+# Phase 18A-B Companion Persistence + Offline AI Readiness Smoke Checklist
+
+- [ ] Carnos one-chat-only behavior is rejected.
+- [ ] Close/reopen continuity is required.
+- [ ] Login-to-login continuity is required.
+- [ ] Supabase/Postgres source-of-truth is documented.
+- [ ] IndexedDB or equivalent encrypted local cache is documented.
+- [ ] Browser localStorage core-data ban is documented.
+- [ ] Offline sync queue is required.
+- [ ] Sync queue operation types are documented.
+- [ ] Conflict detection is required.
+- [ ] Duplicate prevention is required.
+- [ ] Failed retry visibility is required.
+- [ ] Approved memories can be cached where allowed.
+- [ ] Sensitive/restricted memory offline rules are documented.
+- [ ] Cached analytics snapshots are required.
+- [ ] Offline experiment/log capture is required.
+- [ ] Online/offline mode router is required.
+- [ ] Carnos cached-context honesty is required.
+- [ ] Current-info/web offline limitation is documented.
+- [ ] Level 1 offline read-only companion is documented.
+- [ ] Level 2 offline capture companion is documented.
+- [ ] Level 3 offline deterministic guidance is documented.
+- [ ] Level 4 full offline AI companion is documented.
+- [ ] Option C local AI server/runtime is selected for MacBook Pro M3 Pro.
+- [ ] Ollama-compatible localhost boundary is documented.
+- [ ] MLX/llama.cpp-compatible future runtime paths are documented.
+- [ ] Local embeddings readiness is documented.
+- [ ] Local retrieval/index readiness is documented.
+- [ ] Future Tauri packaging path is documented.
+- [ ] Phase 18B through 18O integration map is documented.
+- [ ] Phase 20 offline privacy/export/delete tie-in is documented.
+- [ ] Phase 21 offline QA tie-in is documented.
+- [ ] Full Level 4 runtime is not falsely claimed as implemented.
+- [ ] `npm run audit:phase18a_b` passes.
+- [ ] `npm run check` passes.

@@ -3627,3 +3627,11 @@ Status: Complete pending verification and commit.
 Locked build chunks: 18A Scope Lock, 18B Schema Discovery, 18C Metric Registry/Data Quality, 18D Analytics Snapshots, 18E Self-Experiment Contracts, 18F Insight Quality/Provenance, 18G Analytics Repositories, 18H Experiment Repositories, 18I Trend/Correlation/Comparison Engine, 18J Experiment Evaluation Engine, 18K Analytics Dashboard UI, 18L Self-Experiment Lab UI, 18M Carnos Analytics Explanation Boundary, 18N Anti-Demo-Data + Privacy/Sensitivity Audit, 18O Final Fixtures + Completion Report.
 
 Boundary: no fake analytics, no hardcoded demo data as final state, no false causation, no silent AI writes, no hidden memory use, no Phase 19/20/21 leakage.
+
+## Phase 18A-B — Companion Persistence Proof Audit + Level 4 Offline AI Readiness Lock
+
+Status: Complete pending verification and commit.
+
+Locked: Carnos is not one-chat-only, Supabase/Postgres is online source of truth, IndexedDB or equivalent encrypted local cache is offline continuity layer, localStorage is banned for core life data, offline writes use sync queue, conflicts/duplicates must be detected, approved memories and analytics snapshots can be cached where allowed, experiments/logs can be captured offline, and Level 4 Full Offline AI targets Option C local AI server/runtime on MacBook Pro M3 Pro.
+
+Boundary: Phase 18A-B locks readiness and proof only; it does not falsely claim full local LLM runtime, local embeddings, local vector index, or full offline Carnos runtime are implemented yet.

@@ -1975,3 +1975,8 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 
 - Locked expanded Phase 18 Analytics/Experiments scope and subchunk plan 18A through 18O.
 - Added feature map covering metric registry, data quality, analytics snapshots, experiments, insight quality, Carnos boundaries, privacy/sensitivity, anti-demo-data safeguards, and final completion requirements.
+
+## Phase 18A-B — Companion Persistence Proof Audit + Level 4 Offline AI Readiness Lock
+
+- Locked Carnos persistence, online/offline storage architecture, offline sync queue requirements, and Level 4 Offline AI readiness using Option C local server/runtime for MacBook Pro M3 Pro.
+- Added persistence proof report and audit coverage so Phase 18 analytics/experiments must preserve close/reopen continuity, login-to-login continuity, cached/offline state honesty, and sync-safe behavior.

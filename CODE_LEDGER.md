@@ -4245,3 +4245,13 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `docs/phase-reports/PHASE_18A_ANALYTICS_EXPERIMENTS_SCOPE_LOCK_REPORT.md`.
 - Added `scripts/audit-phase-18a.mjs`.
 - Added `audit:phase18a` to package verification chain.
+
+## Phase 18A-B — Companion Persistence Proof Audit + Level 4 Offline AI Readiness Lock
+
+- Added `docs/contracts/PHASE_18A_B_COMPANION_PERSISTENCE_OFFLINE_AI_READINESS.md`.
+- Added `docs/roadmap/COMPANION_PERSISTENCE_OFFLINE_LEVEL4_ARCHITECTURE.md`.
+- Added `docs/audits/CARNOS_PERSISTENCE_PROOF_REPORT.md`.
+- Added `docs/qa/PHASE_18A_B_COMPANION_PERSISTENCE_OFFLINE_AI_SMOKE_CHECKLIST.md`.
+- Added `docs/phase-reports/PHASE_18A_B_COMPANION_PERSISTENCE_OFFLINE_AI_REPORT.md`.
+- Added `scripts/audit-phase-18a-b.mjs`.
+- Added `audit:phase18a_b` to package verification chain.
