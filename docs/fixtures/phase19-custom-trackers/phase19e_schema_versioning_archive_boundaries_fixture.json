@@ -1,0 +1,32 @@
+{
+  "phase": "19E",
+  "status": "complete",
+  "name": "Schema versioning and archive boundaries",
+  "coded_features": [
+    "tracker_schema_versioning",
+    "entry_schema_version_tracking",
+    "schema_version_parsing",
+    "schema_version_comparison",
+    "version_compatibility_checks",
+    "deprecated_field_read_compatibility",
+    "field_deprecation_instead_of_unsafe_hard_deletion",
+    "safe_field_lifecycle_transitions",
+    "safe_tracker_lifecycle_transitions",
+    "tracker_archive_boundary",
+    "entry_archive_boundary",
+    "safe_removal_decision_helpers",
+    "archive_removal_safety_result_helpers",
+    "no_destructive_delete_boundary"
+  ],
+  "disabled_boundaries": {
+    "schema_migration": false,
+    "runtime_database_reads": false,
+    "runtime_database_writes": false,
+    "carnos_runtime_behavior": false,
+    "model_calls": false,
+    "network_calls": false,
+    "memory_writes": false,
+    "action_execution": false,
+    "destructive_removal": false
+  }
+}
