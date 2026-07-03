@@ -3744,3 +3744,23 @@ Boundary:
 - no audit inserts
 - no SQL migration
 - no API route
+
+## Phase 16Q — Web Source Audit Trail
+
+Added:
+- `src/lib/current-info-capture/current-info-web-source-audit-trail.ts`
+- `src/components/dashboard/current-info-web-source-audit-trail-panel.tsx`
+- `scripts/audit-phase-16q.mjs`
+- Phase 16Q contract/report/smoke checklist
+
+Updated:
+- `src/lib/current-info-capture/index.ts`
+- `src/components/dashboard/index.ts`
+- `package.json`
+
+Boundary:
+- read-only audit trail summarization
+- no audit event insertion
+- no generic audit log write
+- no SQL migration
+- no API route

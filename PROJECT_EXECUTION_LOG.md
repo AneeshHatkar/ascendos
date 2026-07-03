@@ -4869,3 +4869,26 @@ Boundary:
 - no embeddings
 - no SQL migration
 - no API route
+
+## 2026-07-02 — Phase 16Q Web Source Audit Trail
+
+Completed read-only web source audit trail layer.
+
+Added:
+- web source audit trail helper
+- audit event type and actor breakdowns
+- source/candidate/source-link provenance labels
+- coverage warnings for missing linked rows
+- web source audit trail dashboard panel
+- Phase 16Q audit gate and docs
+
+Boundary:
+- no audit event inserts
+- no generic audit log writes
+- no source link updates
+- no candidate status mutation
+- no source saves
+- no provider calls
+- no embeddings
+- no SQL migration
+- no API route

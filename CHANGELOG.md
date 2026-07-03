@@ -1769,3 +1769,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added privacy retention dashboard panel.
 - Added Phase 16P docs, smoke checklist, and audit gate.
 - Wired `audit:phase16p` into verification.
+
+## Phase 16Q — Web Source Audit Trail
+
+- Added current-info web source audit trail helper.
+- Added event/actor breakdowns, provenance labels, and coverage warnings.
+- Added web source audit trail dashboard panel.
+- Added Phase 16Q docs, smoke checklist, and audit gate.
+- Wired `audit:phase16q` into verification.

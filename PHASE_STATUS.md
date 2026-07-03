@@ -3309,3 +3309,15 @@ Scope completed:
 
 Next:
 - Phase 16P — Privacy, Sensitive Search, Retention Rules.
+
+## Phase 16Q — Web Source Audit Trail
+
+Status: Complete pending verification and commit.
+
+Scope completed:
+- Read-only current-info web source audit trail.
+- Source/candidate/link provenance coverage.
+- No persistence or execution.
+
+Next:
+- Phase 16R — Final Phase 16 Audit + Smoke Checklist + Completion Report.

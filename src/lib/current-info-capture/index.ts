@@ -5,3 +5,4 @@ export * from "./current-info-extraction-candidate";
 export * from "./knowledge-vault-source-bridge";
 export * from "./current-info-review-to-save-flow";
 export * from "./current-info-privacy-retention-rules";
+export * from "./current-info-web-source-audit-trail";
