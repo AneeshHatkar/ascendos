@@ -3723,3 +3723,24 @@ Boundary:
 - no direct save/approve/reject/update flow
 - no SQL migration
 - no API route
+
+## Phase 16P — Privacy, Sensitive Search, Retention Rules
+
+Added:
+- `src/lib/current-info-capture/current-info-privacy-retention-rules.ts`
+- `src/components/dashboard/current-info-privacy-retention-panel.tsx`
+- `scripts/audit-phase-16p.mjs`
+- Phase 16P contract/report/smoke checklist
+
+Updated:
+- `src/lib/current-info-capture/index.ts`
+- `src/components/dashboard/index.ts`
+- `package.json`
+
+Boundary:
+- preview-only privacy/retention evaluation
+- no private-mode activation
+- no deletion/update/redaction execution
+- no audit inserts
+- no SQL migration
+- no API route

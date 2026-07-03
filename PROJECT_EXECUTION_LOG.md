@@ -4839,3 +4839,33 @@ Boundary:
 - no embeddings
 - no SQL migration
 - no API route
+
+## 2026-07-02 — Phase 16P Privacy, Sensitive Search, Retention Rules
+
+Completed preview-only current-info privacy and retention-rule evaluation.
+
+Added:
+- query privacy and retention preview
+- source privacy, raw-content, and retention preview
+- candidate privacy warning and blocked-state preview
+- private-mode ephemeral retention preview
+- do-not-retain preview
+- manual-save-only preview
+- sensitive search review preview
+- redaction preview
+- audit event preview
+- privacy retention dashboard panel
+- Phase 16P audit gate and docs
+
+Boundary:
+- no private-mode activation
+- no deletion
+- no persisted redaction
+- no updates
+- no candidate status mutation
+- no source saves
+- no audit inserts
+- no provider calls
+- no embeddings
+- no SQL migration
+- no API route

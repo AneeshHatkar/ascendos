@@ -1761,3 +1761,11 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Added dashboard panel for review-to-save flow visibility.
 - Added Phase 16O docs, smoke checklist, and audit gate.
 - Wired `audit:phase16o` into verification.
+
+## Phase 16P — Privacy, Sensitive Search, Retention Rules
+
+- Added current-info privacy and retention-rule preview helper.
+- Added private-mode, do-not-retain, manual-save-only, sensitive-search, raw-content, and redaction preview handling.
+- Added privacy retention dashboard panel.
+- Added Phase 16P docs, smoke checklist, and audit gate.
+- Wired `audit:phase16p` into verification.
