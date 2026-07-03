@@ -1793,3 +1793,12 @@ Next locked implementation step: Phase 14C — Types / Schemas / State Machine /
 - Locked Phase 16.5 chunk sequence from 16.5A through 16.5J.
 - Added truthfulness, accessibility, reduced-motion, mobile behavior, and safety boundaries.
 - Added `audit:phase16_5a` and wired it into verification.
+
+## Phase 16.5B — Carnos Identity, State, and Capability Contract
+
+- Added Carnos visual identity contract.
+- Added Carnos visual states and state priority map.
+- Added Carnos capability matrix and capability statuses.
+- Added Carnos boundary badges and companion surfaces.
+- Added truthfulness helpers for enabled/deferred/forbidden capabilities.
+- Added `audit:phase16_5b` and wired it into verification.

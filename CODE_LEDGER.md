@@ -3809,3 +3809,24 @@ Boundary:
 - no document ingestion
 - no memory writes
 - no autonomous actions
+
+## Phase 16.5B — Carnos Identity, State, and Capability Contract
+
+Added:
+- `src/lib/carnos-identity/carnos-visual-identity.ts`
+- `src/lib/carnos-identity/index.ts`
+- `docs/contracts/PHASE_16_5B_CARNOS_IDENTITY_STATE_CONTRACT.md`
+- `docs/phase-reports/PHASE_16_5B_CARNOS_IDENTITY_STATE_CONTRACT_REPORT.md`
+- `docs/qa/PHASE_16_5B_CARNOS_IDENTITY_STATE_CONTRACT_SMOKE_CHECKLIST.md`
+- `scripts/audit-phase-16-5b.mjs`
+
+Updated:
+- `package.json`
+- `PROJECT_EXECUTION_LOG.md`
+- `CHANGELOG.md`
+- `PHASE_STATUS.md`
+
+Boundary:
+- contract-only
+- no UI/runtime activation
+- no voice/web/Python/document/memory/action execution
