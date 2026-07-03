@@ -1,0 +1,25 @@
+# Phase 19L QA Checklist
+
+- [x] Repository boundary contract exists
+- [x] RLS/user ownership boundary exists
+- [x] Tracker ownership validation exists
+- [x] Field ownership validation through tracker ownership exists
+- [x] Entry ownership validation through tracker ownership exists
+- [x] Dashboard card ownership validation exists
+- [x] Tracker ID / field ID cross-user protection exists
+- [x] Audit trail contract exists
+- [x] Audit events for tracker creation exist
+- [x] Audit events for field creation/change/deprecation exist
+- [x] Audit events for entry creation/change/archive exist
+- [x] Audit events for dashboard placement changes exist
+- [x] Audit events for AI mapping proposal approval/rejection exist
+- [x] Write operation approval boundary exists
+- [x] Review queue reference requirement exists
+- [x] Cross-user access blocking exists
+- [x] System-resource misuse blocking exists
+- [x] No bypassing RLS/user ownership boundary exists
+- [x] No unreviewed tracker writes boundary exists
+- [x] No SQL migration is added
+- [x] No runtime database read/write is added
+- [x] npm run audit:phase19l
+- [x] npm run check

@@ -8,3 +8,4 @@ export * from "./carnos-proposals-review-queue";
 export * from "./dashboard-placement-rules";
 export * from "./timeline-analytics-compatibility";
 export * from "./evidence-attachment-boundaries";
+export * from "./repository-rls-audit-ownership";

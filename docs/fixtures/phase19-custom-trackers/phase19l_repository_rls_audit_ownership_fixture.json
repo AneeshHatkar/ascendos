@@ -1,0 +1,36 @@
+{
+  "phase": "19L",
+  "status": "complete",
+  "features": [
+    "repository_boundary_contract",
+    "rls_user_ownership_boundary",
+    "tracker_ownership_validation",
+    "field_ownership_validation_through_tracker_ownership",
+    "entry_ownership_validation_through_tracker_ownership",
+    "dashboard_card_ownership_validation",
+    "tracker_id_field_id_cross_user_protection",
+    "audit_trail_contract",
+    "audit_events_for_tracker_creation",
+    "audit_events_for_field_creation_change_deprecation",
+    "audit_events_for_entry_creation_change_archive",
+    "audit_events_for_dashboard_placement_changes",
+    "audit_events_for_ai_mapping_proposal_approval_rejection",
+    "write_operation_approval_boundary",
+    "review_queue_reference_requirement",
+    "cross_user_access_blocking",
+    "system_resource_misuse_blocking",
+    "no_bypassing_rls_user_ownership",
+    "no_unreviewed_tracker_writes"
+  ],
+  "disabled_boundaries": {
+    "schema_migration": false,
+    "runtime_repository": false,
+    "runtime_database_reads": false,
+    "runtime_database_writes": false,
+    "supabase_runtime": false,
+    "ui_behavior": false,
+    "model_calls": false,
+    "network_calls": false,
+    "action_execution": false
+  }
+}
