@@ -5197,3 +5197,7 @@ Boundary:
 - Added deferred embedding record previews validated against Memory/RAG schema validators.
 - Preserved no runtime retrieval, no embedding generation, no fake vectors, no provider calls, no vector search, no SQL reads/writes, no Supabase calls, no Carnos prompt/context injection, and no background queue execution.
 - Next: Phase 17I — Retrieval Ranking + Budget + Dedupe Rules.
+
+## Phase 17I — Retrieval Ranking + Budget + Dedupe Rules
+
+Added deterministic Memory/RAG retrieval planning rules. No runtime retrieval, memory_retrieval_events writes, embeddings, semantic retrieval activation, providers, vector search, Supabase, SQL, Carnos prompt/context injection, or background scanning were added.

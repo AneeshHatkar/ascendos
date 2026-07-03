@@ -1,0 +1,21 @@
+# Phase 17I Retrieval Ranking Budget Dedupe Smoke Checklist
+
+- [ ] rankMemoryRetrievalCandidates ranks candidates deterministically.
+- [ ] buildMemoryRetrievalPlan returns included and excluded candidates.
+- [ ] Approved-only filtering is enforced.
+- [ ] Sensitive memory is excluded by default.
+- [ ] Stale memory is excluded by default.
+- [ ] Conflict memory is excluded by default.
+- [ ] Duplicate candidates are removed.
+- [ ] Budget limits are enforced.
+- [ ] Visible inclusion and exclusion reasons are emitted.
+- [ ] No runtime retrieval occurs.
+- [ ] No memory_retrieval_events writes occur.
+- [ ] No embeddings are generated.
+- [ ] No provider calls occur.
+- [ ] No vector search occurs.
+- [ ] No Supabase calls occur.
+- [ ] No SQL reads or writes occur.
+- [ ] No Carnos prompt/context injection occurs.
+- [ ] npm run audit:phase17i passes.
+- [ ] npm run check passes.

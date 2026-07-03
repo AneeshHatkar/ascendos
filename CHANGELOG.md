@@ -1926,3 +1926,7 @@ This phase is side-effect-free and does not retrieve, embed, call providers, wri
 - Added official Memory/RAG embedding provider boundary with noop/deferred provider behavior.
 - Added deterministic evaluation and deferred embedding record previews.
 - Preserved no runtime retrieval, no embedding generation, no fake vectors, no provider calls, no vector search, no SQL/Supabase access, and no Carnos prompt/context injection.
+
+## Phase 17I — Retrieval Ranking + Budget + Dedupe Rules
+
+Added deterministic retrieval ranking, budget, and dedupe planning safeguards.

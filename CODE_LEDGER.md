@@ -4182,3 +4182,7 @@ Implementation:
   - Records implementation summary.
 - `docs/qa/PHASE_17H_EMBEDDING_PROVIDER_BOUNDARY_SMOKE_CHECKLIST.md`
   - Records smoke checklist.
+
+## Phase 17I — Retrieval Ranking + Budget + Dedupe Rules
+
+Added runtime file, docs, QA checklist, audit script, package script, and check chain entry.

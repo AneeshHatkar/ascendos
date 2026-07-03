@@ -3565,3 +3565,7 @@ Not added:
 
 Next:
 - Phase 17I — Retrieval Ranking + Budget + Dedupe Rules.
+
+## Phase 17I — Retrieval Ranking + Budget + Dedupe Rules
+
+Status: Complete pending verification and commit.
