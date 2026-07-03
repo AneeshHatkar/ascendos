@@ -11,3 +11,4 @@ export * from "./self-experiment-lab-view-model";
 export * from "./carnos-analytics-explanation-boundary";
 export * from "./local-carnos-runtime-boundary";
 export * from "./anti-demo-data-privacy-audit";
+export * from "./phase18-completion-proof";
