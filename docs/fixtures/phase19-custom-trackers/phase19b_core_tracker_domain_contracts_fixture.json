@@ -1,0 +1,31 @@
+{
+  "phase": "19B",
+  "status": "complete",
+  "name": "Core tracker domain contracts",
+  "coded_features": [
+    "custom_tracker_domain_model",
+    "custom_tracker_field_model",
+    "custom_tracker_entry_model",
+    "tracker_lifecycle_status_model",
+    "tracker_privacy_model",
+    "tracker_origin_model",
+    "stable_tracker_key_slug",
+    "reserved_system_tracker_keys",
+    "naming_collision_handling",
+    "display_name_can_change_stable_key_cannot",
+    "system_tracker_vs_user_tracker_boundary",
+    "custom_trackers_cannot_override_core_modules",
+    "custom_tracker_ids_cannot_collide_with_system_domains",
+    "ownership_alignment_helpers"
+  ],
+  "disabled_boundaries": {
+    "schema_migration": false,
+    "runtime_database_reads": false,
+    "runtime_database_writes": false,
+    "carnos_runtime_behavior": false,
+    "model_calls": false,
+    "network_calls": false,
+    "memory_writes": false,
+    "action_execution": false
+  }
+}
