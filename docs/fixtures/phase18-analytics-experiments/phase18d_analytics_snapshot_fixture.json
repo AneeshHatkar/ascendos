@@ -1,0 +1,51 @@
+{
+  "phase": "18D",
+  "title": "Analytics Snapshot Contracts + Validators",
+  "snapshot_ranges": [
+    "daily",
+    "weekly",
+    "monthly",
+    "rolling"
+  ],
+  "freshness_states": [
+    "fresh",
+    "cached",
+    "stale",
+    "partial",
+    "missing"
+  ],
+  "provenance_modes": [
+    "online_source_of_truth",
+    "eligible_offline_cache",
+    "mixed_online_offline",
+    "deterministic_preview"
+  ],
+  "export_readiness_states": [
+    "export_ready",
+    "export_ready_with_warnings",
+    "not_export_ready"
+  ],
+  "validator_rules": [
+    "registered metrics only",
+    "range start before range end",
+    "no high confidence with confounders",
+    "no high confidence with unsynced records",
+    "no high confidence with stale cached snapshots",
+    "cached metrics disclose cached context",
+    "stale metrics disclose stale context",
+    "unsynced metrics disclose unsynced context",
+    "no runtime data reads",
+    "no schema writes",
+    "no Supabase client calls",
+    "no localStorage core data",
+    "no local Carnos runtime required"
+  ],
+  "boundaries": {
+    "runtime_data_reads_enabled": false,
+    "schema_writes_enabled": false,
+    "supabase_calls_enabled": false,
+    "fake_snapshot_data_enabled": false,
+    "local_storage_core_data_enabled": false,
+    "local_carnos_runtime_required": false
+  }
+}

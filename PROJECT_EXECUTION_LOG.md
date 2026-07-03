@@ -5253,3 +5253,7 @@ Inserted a dedicated future build chunk for local Carnos runtime work: 18M-B —
 ## Metric Registry + Data Quality Contracts
 
 Added the canonical analytics/experiment metric registry and data quality rules. The registry defines metric ids, domains, sensitivity labels, offline cache eligibility, source requirements, minimum data rules, data completeness scoring, quality levels, Carnos explanation limits, experiment evaluation eligibility, and future local Carnos runtime compatibility. Boundary preserved: no schema writes, no runtime SQL reads, no Supabase client calls, no fake metrics, no fake analytics data, and no local runtime requirement during checks.
+
+## Analytics Snapshot Contracts + Validators
+
+Added analytics snapshot contracts and validators. This includes snapshot ranges, freshness states, provenance modes, export readiness, metric-value contracts, completeness summaries, quality summaries, comparison eligibility, Carnos explanation limits, cached/stale/unsynced disclosure, and safety boundaries. Boundary preserved: no schema writes, no runtime SQL reads, no Supabase client calls, no fake snapshot data, no dashboard UI, and no local runtime requirement during checks.

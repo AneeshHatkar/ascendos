@@ -1992,3 +1992,7 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 ## Metric Registry + Data Quality Contracts
 
 - Added the canonical analytics/experiment metric registry with data quality scoring, cache eligibility, sensitivity labels, Carnos explanation limits, experiment eligibility, and offline/local-runtime compatibility markers.
+
+## Analytics Snapshot Contracts + Validators
+
+- Added analytics snapshot contract and validation layer with freshness, provenance, export readiness, comparison eligibility, quality summaries, and Carnos explanation limits for cached/stale/unsynced snapshot contexts.

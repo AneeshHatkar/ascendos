@@ -3653,3 +3653,9 @@ Locked: 18M-B — Local Carnos Runtime Boundary + Option C Offline AI Adapter. T
 Status: Complete pending verification and commit.
 
 Added deterministic metric registry and data quality contracts for analytics, experiments, offline cache behavior, Carnos explanations, and future local runtime compatibility. Boundary: no schema writes, no Supabase calls, no fake metrics, no local runtime requirement during checks.
+
+## Analytics Snapshot Contracts + Validators
+
+Status: Complete pending verification and commit.
+
+Added deterministic snapshot contracts and validators for analytics freshness, provenance, completeness, quality, export readiness, comparison eligibility, cached/stale/unsynced disclosure, and future local Carnos runtime explanation safety. Boundary: no schema writes, no Supabase calls, no fake snapshot data.

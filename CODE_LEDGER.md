@@ -4288,3 +4288,14 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `docs/phase-reports/PHASE_18C_METRIC_REGISTRY_DATA_QUALITY_REPORT.md`.
 - Added `scripts/audit-phase-18c.mjs`.
 - Added `audit:phase18c` to package verification chain.
+
+## Analytics Snapshot Contracts + Validators
+
+- Added `src/lib/analytics-experiments/analytics-snapshot-contracts.ts`.
+- Updated `src/lib/analytics-experiments/index.ts`.
+- Added `docs/fixtures/phase18-analytics-experiments/phase18d_analytics_snapshot_fixture.json`.
+- Added `docs/contracts/PHASE_18D_ANALYTICS_SNAPSHOT_CONTRACTS.md`.
+- Added `docs/qa/PHASE_18D_ANALYTICS_SNAPSHOT_SMOKE_CHECKLIST.md`.
+- Added `docs/phase-reports/PHASE_18D_ANALYTICS_SNAPSHOT_CONTRACTS_REPORT.md`.
+- Added `scripts/audit-phase-18d.mjs`.
+- Added `audit:phase18d` to package verification chain.

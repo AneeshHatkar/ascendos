@@ -1,0 +1,35 @@
+# Phase 18D Analytics Snapshot Smoke Checklist
+
+- [ ] Analytics snapshot contract implementation exists.
+- [ ] Analytics experiments index exports snapshot contracts.
+- [ ] Snapshot fixture exists.
+- [ ] Snapshot ranges include daily.
+- [ ] Snapshot ranges include weekly.
+- [ ] Snapshot ranges include monthly.
+- [ ] Snapshot ranges include rolling.
+- [ ] Freshness states include fresh.
+- [ ] Freshness states include cached.
+- [ ] Freshness states include stale.
+- [ ] Freshness states include partial.
+- [ ] Freshness states include missing.
+- [ ] Provenance modes include online_source_of_truth.
+- [ ] Provenance modes include eligible_offline_cache.
+- [ ] Provenance modes include mixed_online_offline.
+- [ ] Provenance modes include deterministic_preview.
+- [ ] Export readiness states are represented.
+- [ ] Export readiness includes export_ready.
+- [ ] Export readiness includes export_ready_with_warnings.
+- [ ] Export readiness includes not_export_ready.
+- [ ] Registered metric validation exists.
+- [ ] Time range validation exists.
+- [ ] No high confidence with confounders rule exists.
+- [ ] No high confidence with unsynced records rule exists.
+- [ ] No high confidence with stale cached snapshots rule exists.
+- [ ] Cached/stale/unsynced explanation limits exist.
+- [ ] Carnos snapshot explanation limits exist.
+- [ ] Future local Carnos runtime compatibility is represented.
+- [ ] No runtime SQL reads are added.
+- [ ] No Supabase client calls are added.
+- [ ] No schema writes are added.
+- [ ] npm run audit:phase18d passes.
+- [ ] npm run check passes.
