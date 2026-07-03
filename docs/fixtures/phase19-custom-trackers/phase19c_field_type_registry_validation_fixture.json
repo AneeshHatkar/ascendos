@@ -1,0 +1,37 @@
+{
+  "phase": "19C",
+  "status": "complete",
+  "name": "Field type registry and validation rules",
+  "coded_features": [
+    "allowed_field_type_registry",
+    "field_type_validation",
+    "required_optional_field_rules",
+    "field_ordering_validation",
+    "select_options_json_contract",
+    "multi_select_options_json_contract",
+    "select_option_validation",
+    "multi_select_option_validation",
+    "number_validation_boundary",
+    "rating_validation_boundary",
+    "date_validation_boundary",
+    "duration_validation_boundary",
+    "text_validation_boundary",
+    "boolean_validation_boundary",
+    "json_object_validation_boundary",
+    "field_units_metadata_boundary",
+    "field_normalization_metadata_boundary",
+    "field_privacy_validation",
+    "unknown_field_reject_quarantine_rules",
+    "field_validation_result_helpers"
+  ],
+  "disabled_boundaries": {
+    "schema_migration": false,
+    "runtime_database_reads": false,
+    "runtime_database_writes": false,
+    "carnos_runtime_behavior": false,
+    "model_calls": false,
+    "network_calls": false,
+    "memory_writes": false,
+    "action_execution": false
+  }
+}

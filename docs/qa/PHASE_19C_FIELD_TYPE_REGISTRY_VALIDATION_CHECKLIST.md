@@ -1,0 +1,24 @@
+# Phase 19C Field Type Registry and Validation Checklist
+
+- [x] Field type registry exists.
+- [x] Field validation rules exist.
+- [x] Required field behavior exists.
+- [x] Optional field behavior exists.
+- [x] Field order validation exists.
+- [x] Select options JSON validation exists.
+- [x] Multi-select options JSON validation exists.
+- [x] Text value validation exists.
+- [x] Number value validation exists.
+- [x] Boolean value validation exists.
+- [x] Date value validation exists.
+- [x] Rating value validation exists.
+- [x] Duration value validation exists.
+- [x] JSON object value validation exists.
+- [x] Unit metadata boundary exists.
+- [x] Normalization metadata boundary exists.
+- [x] Privacy validation exists.
+- [x] Unknown-field reject/quarantine rules exist.
+- [x] No SQL migration is added.
+- [x] No runtime database read/write is added.
+- [x] npm run audit:phase19c is expected to pass.
+- [x] npm run check is expected to pass.
