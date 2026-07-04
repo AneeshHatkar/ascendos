@@ -4468,3 +4468,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock memory control behavior for Memory Inbox, Saved Memories, candidate review, Carnos access, source/evidence links, duplicate/conflict warnings, and audit requirements without inventing new schema.
+
+## Phase 20D — Forget Hide Archive Destructive Action Semantics
+
+Files added or updated:
+- docs/contracts/PHASE_20D_FORGET_HIDE_ARCHIVE_DESTRUCTIVE_SEMANTICS.md
+- docs/fixtures/phase20-privacy-export/phase20d_forget_hide_archive_destructive_fixture.json
+- docs/phase-reports/PHASE_20D_FORGET_HIDE_ARCHIVE_DESTRUCTIVE_SEMANTICS_REPORT.md
+- scripts/audit-phase-20d.mjs
+- package.json
+
+Purpose: lock the safety semantics for forget, hide, archive, destructive action, derived records, manifests, review, audit, and Carnos restrictions without inventing new schema.

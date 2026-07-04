@@ -2065,3 +2065,10 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added memory candidate and saved memory models.
 - Added Carnos memory access, source/evidence, duplicate/conflict, and audit rules.
 - Integrated audit:phase20c into package checks.
+
+## Phase 20D — Forget Hide Archive Destructive Action Semantics
+
+- Added forget, hide, archive, and destructive action semantics.
+- Added derived record behavior and manifest requirements.
+- Added review, confirmation, blocked reason, audit, and Carnos safety rules.
+- Integrated audit:phase20d into package checks.

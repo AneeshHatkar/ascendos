@@ -5317,3 +5317,7 @@ Defined the core privacy domain contract layer: privacy levels, sensitivity leve
 ## Phase 20C — Memory Control Contracts
 
 Defined Memory Inbox and Saved Memories control contracts, memory candidate and saved memory models, review rules, Carnos memory access rules, privacy mapping, source/evidence rules, duplicate/conflict warnings, audit event requirements, and blocked behaviors. Existing Phase 15 and Phase 17 memory schema/contracts were referenced; no new schema was invented.
+
+## Phase 20D — Forget Hide Archive Destructive Action Semantics
+
+Defined exact privacy action semantics for forget, hide, archive, and destructive action boundaries. Added behavior matrix, affected surfaces, derived record rules, manifest requirements, review/confirmation rules, blocked reasons, audit events, and Carnos safety rules. Existing privacy, memory, audit, retention, and readiness sources were referenced; no new schema was invented.

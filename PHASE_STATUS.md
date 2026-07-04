@@ -3743,3 +3743,7 @@ Phase 20B locked: core privacy levels, sensitivity levels, lock states, redactio
 ## Phase 20C Status
 
 Phase 20C locked: Memory Inbox, Saved Memories, memory candidate review, saved memory controls, Carnos memory access, source/evidence links, duplicate/conflict warnings, and memory audit requirements. Existing memory schema/contracts were referenced; no new schema was invented.
+
+## Phase 20D Status
+
+Phase 20D locked: forget, hide, archive, destructive action semantics, derived record behavior, manifest requirements, review/confirmation rules, blocked reasons, audit events, and Carnos safety restrictions. Existing schema/contracts were referenced; no new schema was invented.
