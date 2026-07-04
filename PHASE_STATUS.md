@@ -3787,3 +3787,7 @@ Phase 20M locked: forget manifest model, destructive action manifest model, affe
 ## Phase 20N Status
 
 Phase 20N locked: Audit Viewer model, audit event display model, detail panel model, filter dimensions, event groups, actor types, target types, payload visibility levels, append-only boundary rules, linked object rules, Carnos audit rules, audit export relationship rules, protected audit event rules, warning codes, blocked reasons, audit events, badge requirements, and connector/Spotify token boundaries. No schema was needed for this contract-only chunk.
+
+## Phase 20O Status
+
+Phase 20O locked: privacy audit event taxonomy, event group taxonomy, actor taxonomy, status taxonomy, redaction levels, redaction reasons, badge taxonomy, surface reuse rules, badge resolution rules, taxonomy mapping requirements, blocked reasons, audit events, connector badges, Spotify badges, and Carnos badges. No schema was needed for this contract-only chunk.

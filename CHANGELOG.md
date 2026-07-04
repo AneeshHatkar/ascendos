@@ -2132,3 +2132,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added Audit Viewer and append-only audit boundary contracts.
 - Added event display model, detail panel, filters, event groups, actors, targets, payload visibility, linked object rules, Carnos audit restrictions, audit export rules, protected audit events, blocked reasons, audit events, and badges.
 - Integrated audit:phase20n into package checks.
+
+## Phase 20O — Privacy Audit Taxonomy Redaction Badges
+
+- Added privacy audit taxonomy, redaction, and badge contracts.
+- Added event groups, actors, statuses, redaction levels, redaction reasons, surface reuse rules, badge resolution rules, connector badges, Spotify badges, and Carnos badges.
+- Integrated audit:phase20o into package checks.

@@ -4589,3 +4589,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock Audit Viewer model, filters, detail panels, actor/source/target metadata, linked manifests, linked reviews, source/evidence references, connector references, Spotify references, redaction behavior, append-only audit boundary, Carnos restrictions, protected audit events, audit export relationship, blocked reasons, and badges without adding schema or UI.
+
+## Phase 20O — Privacy Audit Taxonomy Redaction Badges
+
+Files added or updated:
+- docs/contracts/PHASE_20O_PRIVACY_AUDIT_TAXONOMY_REDACTION_BADGES.md
+- docs/fixtures/phase20-privacy-export/phase20o_privacy_audit_taxonomy_redaction_badges_fixture.json
+- docs/phase-reports/PHASE_20O_PRIVACY_AUDIT_TAXONOMY_REDACTION_BADGES_REPORT.md
+- scripts/audit-phase-20o.mjs
+- package.json
+
+Purpose: lock shared Phase 20 privacy audit taxonomy, event groups, actors, statuses, redaction levels, redaction reasons, badges, surface reuse rules, badge resolution, connector badges, Spotify badges, and Carnos badges without adding schema or UI.

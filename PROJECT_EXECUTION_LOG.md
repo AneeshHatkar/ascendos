@@ -5361,3 +5361,7 @@ Defined forget manifest, destructive action manifest, affected record, skipped r
 ## Phase 20N — Audit Viewer Append Only Boundary
 
 Defined Audit Viewer, audit event display, detail panel, filters, event groups, actor types, target types, payload visibility levels, append-only boundary, linked object rules, Carnos audit restrictions, audit export relationship rules, protected audit event rules, warning codes, blocked reasons, audit events, badge requirements, and connector/Spotify token boundaries. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, audit writes, audit edits, or UI implementation.
+
+## Phase 20O — Privacy Audit Taxonomy Redaction Badges
+
+Defined privacy audit event taxonomy, event group taxonomy, actor taxonomy, status taxonomy, redaction levels, redaction reasons, badge taxonomy, surface reuse rules, badge resolution rules, taxonomy mapping requirements, blocked reasons, audit events, connector badges, Spotify badges, and Carnos badges. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, UI components, or runtime enforcement.
