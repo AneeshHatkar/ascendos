@@ -5349,3 +5349,7 @@ Defined confirmation levels, one-step actions, two-step actions, cooldown-requir
 ## Phase 20K — Data Scope Selector
 
 Defined the shared data scope selector model with requested actions, domain dimensions, record type dimensions, source type dimensions, selector dimensions, action-specific rules, preview requirements, blocked reasons, audit events, badge requirements, and connector/Spotify selector rules. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, live queries, export generation, mutations, connector reads, or Spotify reads.
+
+## Phase 20L — Export Contracts Manifest Expiration
+
+Defined export request, preview, manifest, status, expiration, format, category, warning, blocked reason, audit event, badge, connector metadata, Spotify metadata, and token exclusion rules. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, storage, signed links, background jobs, checksum generation, or export execution.

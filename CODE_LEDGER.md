@@ -4556,3 +4556,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock shared scope selector behavior for export, forget, hide, archive, destructive action previews, privacy review, connectors, Spotify, memory, custom trackers, documents, current info, analytics, timeline, and audit surfaces without adding schema.
+
+## Phase 20L — Export Contracts Manifest Expiration
+
+Files added or updated:
+- docs/contracts/PHASE_20L_EXPORT_MANIFEST_EXPIRATION.md
+- docs/fixtures/phase20-privacy-export/phase20l_export_manifest_expiration_fixture.json
+- docs/phase-reports/PHASE_20L_EXPORT_MANIFEST_EXPIRATION_REPORT.md
+- scripts/audit-phase-20l.mjs
+- package.json
+
+Purpose: lock export request, preview, manifest, status, expiration, warnings, blocked reasons, audit events, badges, connector export rules, Spotify export rules, and token exclusion without adding schema or export execution.

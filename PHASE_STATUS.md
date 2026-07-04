@@ -3775,3 +3775,7 @@ Phase 20J locked: confirmation levels, one-step actions, two-step actions, coold
 ## Phase 20K Status
 
 Phase 20K locked: shared data scope selector model, requested actions, domain dimensions, record type dimensions, source type dimensions, selector dimensions, action-specific rules, preview requirements, blocked reasons, audit events, badge requirements, and connector/Spotify selector rules. No schema was needed for this contract-only chunk.
+
+## Phase 20L Status
+
+Phase 20L locked: export request model, preview model, manifest model, status model, format boundaries, expiration rules, scope category rules, warning codes, blocked reasons, audit events, badge requirements, connector export rules, Spotify export rules, and token exclusion. No schema was needed for this contract-only chunk.

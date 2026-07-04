@@ -2114,3 +2114,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added data scope selector contracts.
 - Added selector model, requested actions, domain/record/source dimensions, preview requirements, blocked reasons, audit events, badges, and connector/Spotify selector rules.
 - Integrated audit:phase20k into package checks.
+
+## Phase 20L — Export Contracts Manifest Expiration
+
+- Added export contracts for request, preview, manifest, status, expiration, formats, category rules, warnings, blocked reasons, audit events, and badges.
+- Added connector and Spotify export rules with explicit token exclusion.
+- Integrated audit:phase20l into package checks.
