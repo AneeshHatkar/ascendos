@@ -2180,3 +2180,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added Spotify Carnos action safety contracts.
 - Added action classes, safety levels, proposal manifests, approval rules, review queue rules, cooldown rules, scope/provider requirement rules, Private Mode rules, Emergency Lockdown rules, playlist/playback/listening-history rules, Carnos phrase boundaries, forbidden behaviors, audit events, blocked reasons, badge requirements, and runtime/schema gates.
 - Integrated audit:phase20v into package checks.
+
+## Phase 20W — Spotify UI Media Permission Cards
+
+- Added Spotify UI media permission card contracts.
+- Added connector card, media permissions card, connector audit card, action review card, states, permission groups, card actions, redaction rules, Private Mode UI rules, Emergency Lockdown UI rules, Carnos UI rules, badge map, audit events, blocked reasons, and runtime/schema gates.
+- Integrated audit:phase20w into package checks.

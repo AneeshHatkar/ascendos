@@ -4677,3 +4677,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock Spotify Carnos action proposals, action classes, approval, review queue, cooldowns, scope checks, provider limitations, playback action rules, playlist action rules, listening-history restrictions, privacy modes, audit events, blocked reasons, badges, and runtime schema gates before provider integration.
+
+## Phase 20W — Spotify UI Media Permission Cards
+
+Files added or updated:
+- docs/contracts/PHASE_20W_SPOTIFY_UI_MEDIA_PERMISSION_CARDS.md
+- docs/fixtures/phase20-privacy-export/phase20w_spotify_ui_media_permissions_cards_fixture.json
+- docs/phase-reports/PHASE_20W_SPOTIFY_UI_MEDIA_PERMISSION_CARDS_REPORT.md
+- scripts/audit-phase-20w.mjs
+- package.json
+
+Purpose: lock Spotify UI card, media permission, connector audit, redaction, privacy mode, emergency lockdown, Carnos UI, badge, blocked reason, audit, and schema gates before live UI or data wiring.

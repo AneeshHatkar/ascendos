@@ -3819,3 +3819,7 @@ Phase 20U locked: Spotify playback surface boundaries, device boundaries, playli
 ## Phase 20V Status
 
 Phase 20V locked: Spotify Carnos action proposal boundaries, action safety levels, proposal manifest fields, approval rules, review queue rules, cooldown rules, scope and provider requirement rules, Private Mode rules, Emergency Lockdown rules, playlist action rules, playback action rules, listening-history action rules, allowed Carnos phrase boundaries, forbidden Carnos behaviors, audit events, blocked reasons, badge requirements, no token exposure, no silent Carnos action, and runtime/schema gates. No schema was needed for this contract-only chunk.
+
+## Phase 20W Status
+
+Phase 20W locked: Spotify connector card, media permission card, connector audit card, action review card, card states, media permission groups, card actions, redaction rules, Private Mode UI rules, Emergency Lockdown UI rules, connector audit card rules, Carnos UI rules, visual badge map, audit events, blocked reasons, no token exposure, no raw OAuth payload exposure, no live UI implementation, and runtime/schema gates. No schema was needed for this contract-only chunk.

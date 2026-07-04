@@ -5393,3 +5393,7 @@ Defined Spotify playback, currently playing, playback state, device, queue, play
 ## Phase 20V — Spotify Carnos Action Safety
 
 Defined Spotify Carnos action proposal, review, approval, cooldown, provider limitation, scope, Premium, active device, playlist mutation, listening history, audit, blocked reason, badge, and runtime schema gate boundaries. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, runtime tools, Carnos execution adapters, provider API clients, provider calls, action request tables, review queue rows, playback actions, playlist actions, dashboard UI, or audit writes.
+
+## Phase 20W — Spotify UI Media Permission Cards
+
+Defined Spotify connector card, media permission card, connector audit card, action review card, card state, media permission group, card action, redaction, Private Mode UI, Emergency Lockdown UI, connector audit card, Carnos UI, badge, audit event, blocked reason, and runtime schema gate boundaries. No schema was needed because this chunk does not add migrations, React components, dashboard adapters, database reads, database writes, repositories, RLS policies, connector account storage, Spotify provider calls, audit writes, Carnos runtime tools, or live UI wiring.
