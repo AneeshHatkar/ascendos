@@ -3811,3 +3811,7 @@ Phase 20S locked: Spotify connector identity, developer app setup boundary, redi
 ## Phase 20T Status
 
 Phase 20T locked: Spotify account connection boundary, OAuth start boundary, callback boundary, redirect URI rules, token exchange boundary, token storage boundary, refresh and reauthorization boundary, scope grant boundary, connection status transitions, account profile boundary, error handling boundary, Private Mode rules, Emergency Lockdown rules, Carnos rules, audit events, blocked reasons, badge requirements, no token exposure, no silent OAuth, and runtime/schema gates. No schema was needed for this contract-only chunk.
+
+## Phase 20U Status
+
+Phase 20U locked: Spotify playback surface boundaries, device boundaries, playlist boundaries, listening-history boundaries, playback control boundaries, provider limitations, export boundaries, analytics boundaries, memory boundaries, Private Mode rules, Emergency Lockdown rules, Carnos rules, audit events, blocked reasons, badge requirements, no token exposure, no silent Carnos playback, and runtime/schema gates. No schema was needed for this contract-only chunk.

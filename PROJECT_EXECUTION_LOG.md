@@ -5385,3 +5385,7 @@ Defined Spotify connector identity, developer app setup boundary, redirect URI b
 ## Phase 20T — Spotify OAuth PKCE Callback Boundary
 
 Defined Spotify account connection boundary, OAuth start boundary, callback boundary, redirect URI rules, token exchange boundary, token storage boundary, refresh and reauthorization boundary, scope grant boundary, connection status transitions, account profile boundary, error handling boundary, Private Mode rules, Emergency Lockdown rules, Carnos rules, audit events, blocked reasons, badges, no token exposure, no silent OAuth, and runtime/schema gates. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, OAuth routes, callback routes, token exchange, token refresh, token storage, provider calls, UI cards, sync jobs, or runtime Spotify actions.
+
+## Phase 20U — Spotify Media Boundaries
+
+Defined Spotify playback, currently playing, playback state, device, queue, playlist, recently played, top item, provider limitation, export, analytics, memory, Private Mode, Emergency Lockdown, Carnos, audit, blocked reason, and badge boundaries. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, provider API clients, sync jobs, OAuth routes, playback reads, device reads, playlist reads, recently played reads, playback actions, playlist actions, UI cards, dashboard adapters, or runtime Spotify actions.

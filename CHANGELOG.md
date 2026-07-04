@@ -2168,3 +2168,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added Spotify OAuth PKCE callback boundary contracts.
 - Added account connection flow, OAuth start, callback, redirect URI, token exchange, token storage, refresh/reauth, scope grant, connection status, profile, error handling, privacy mode, Carnos, audit, blocked reason, badge, and runtime/schema gate rules.
 - Integrated audit:phase20t into package checks.
+
+## Phase 20U — Spotify Media Boundaries
+
+- Added Spotify media boundary contracts.
+- Added playback, device, playlist, recently played, top item, provider limitation, export, analytics, memory, Private Mode, Emergency Lockdown, Carnos, audit, blocked reason, badge, and runtime/schema gate rules.
+- Integrated audit:phase20u into package checks.

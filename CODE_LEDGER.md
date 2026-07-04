@@ -4655,3 +4655,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock Spotify account connection and OAuth PKCE callback boundaries for state, verifier, redirect URI, token exchange, token storage, refresh, reauthorization, scope grants, profile boundaries, Carnos restrictions, audit, and schema gates before runtime implementation.
+
+## Phase 20U — Spotify Media Boundaries
+
+Files added or updated:
+- docs/contracts/PHASE_20U_SPOTIFY_MEDIA_BOUNDARIES.md
+- docs/fixtures/phase20-privacy-export/phase20u_spotify_media_boundaries_fixture.json
+- docs/phase-reports/PHASE_20U_SPOTIFY_MEDIA_BOUNDARIES_REPORT.md
+- scripts/audit-phase-20u.mjs
+- package.json
+
+Purpose: lock Spotify playback, device, playlist, listening-history, provider limitation, export, analytics, memory, Carnos, privacy-mode, audit, blocked reason, badge, and schema gates before runtime provider integration.
