@@ -1,0 +1,422 @@
+# Phase 20N — Audit Viewer + Append-Only Audit Boundary
+
+## Purpose
+
+Define the Audit Viewer model, filters, detail panels, actor/source/target metadata, linked manifests, linked review requests, linked source and evidence references, connector references, Spotify references, redaction behavior, append-only audit boundary, Carnos audit restrictions, protected audit events, export relationship, blocked reasons, badges, and verification rules before any live audit viewer UI or audit persistence changes exist.
+
+## Schema Requirement
+
+- Needs live database schema: false
+- Reason: 20N defines Audit Viewer and append-only audit contracts only. It does not create audit tables, migrations, repositories, RLS policies, audit row writes, audit row edits, audit payload mutations, or UI implementation.
+- Future schema gate: If a later chunk implements audit log queries, audit viewer UI data adapters, audit row persistence, redacted payload storage, linked manifest lookup, connector audit lookup, Spotify audit lookup, or audit export generation, inspect exact schema before coding.
+
+## Audit Viewer Model
+
+- Route: /privacy
+- Card name: Audit Viewer
+
+- viewer_id
+- route
+- title
+- active_filters
+- visible_columns
+- redaction_mode
+- privacy_mode_state
+- emergency_lockdown_state
+- selected_event_id
+- detail_panel_state
+- export_audit_allowed
+- append_only_boundary_visible
+- last_refreshed_at_boundary
+
+## Audit Event Display Model
+
+- audit_event_id
+- event_type
+- event_group
+- actor_type
+- actor_id_boundary
+- actor_display_boundary
+- target_type
+- target_id_boundary
+- target_domain
+- target_scope
+- status
+- risk_level
+- privacy_level
+- sensitivity_level
+- lock_state
+- redaction_level
+- created_at
+- summary
+- payload_visibility
+- linked_review_id
+- linked_manifest_id
+- linked_source_id
+- linked_evidence_id
+- linked_connector_id
+- linked_spotify_action_id
+
+## Detail Panel Model
+
+- audit_event_id
+- summary
+- event_type
+- actor
+- target
+- status
+- risk_level
+- privacy_labels
+- redaction_labels
+- linked_objects
+- payload_preview
+- blocked_reasons
+- warnings
+- append_only_notice
+- carnos_access_notice
+- export_relationship_notice
+
+## Filter Dimensions
+
+- event_type
+- event_group
+- actor_type
+- target_type
+- target_domain
+- target_scope
+- status
+- risk_level
+- privacy_level
+- sensitivity_level
+- lock_state
+- redaction_level
+- date_range
+- source_type
+- connector_id
+- spotify_action_type
+- review_id
+- manifest_id
+- private_mode_state
+- emergency_lockdown_state
+- blocked_reason
+- warning_code
+
+## Event Groups
+
+- memory
+- privacy_action
+- private_mode
+- emergency_lockdown
+- sensitive_lock
+- carnos_permission
+- export
+- forget_manifest
+- destructive_manifest
+- data_scope
+- redaction
+- retention
+- custom_tracker
+- document_evidence
+- current_info_source
+- analytics
+- timeline
+- external_connector
+- spotify
+- system_boundary
+
+## Actor Types
+
+- user
+- carnos
+- system
+- review_queue
+- export_boundary
+- manifest_boundary
+- connector_boundary
+- spotify_boundary
+- future_runtime_boundary
+
+## Target Types
+
+- memory_item
+- memory_candidate
+- privacy_action_request
+- private_mode_session
+- emergency_lockdown_state
+- sensitive_lock
+- carnos_permission
+- data_scope
+- export_request
+- export_manifest
+- forget_manifest
+- destructive_manifest
+- redaction_rule
+- retention_rule
+- custom_tracker
+- custom_tracker_entry
+- document
+- evidence_attachment
+- current_info_source
+- analytics_snapshot
+- timeline_event
+- connector_account
+- connector_scope
+- connector_action_manifest
+- spotify_connection_status
+- spotify_scope_grant
+- spotify_playback_snapshot
+- spotify_action_manifest
+
+## Payload Visibility Levels
+
+### full_value
+- Rule: Allowed only for non-sensitive payloads where privacy, lock, and mode rules permit.
+
+### summary_only
+- Rule: Shows high-level summary without raw sensitive values.
+
+### metadata_only
+- Rule: Shows event metadata and hides payload details.
+
+### redacted
+- Rule: Shows redacted payload label and reason.
+
+### hidden
+- Rule: Payload is hidden from the viewer surface.
+
+## Append-Only Boundary Rules
+
+- Audit events are append-only.
+- Audit events are not edited by Carnos.
+- Audit events are not removed by Carnos.
+- Audit payload visibility can be redacted in viewer surfaces without changing the original event boundary.
+- Audit event metadata remains visible where retention and privacy rules allow.
+- Audit records linked to manifests remain protected.
+- Audit records linked to connector actions remain protected.
+- Audit records linked to Spotify actions remain protected.
+- Audit records linked to Private Mode remain protected.
+- Audit records linked to Emergency Lockdown remain protected.
+- Audit records linked to destructive action boundaries remain protected.
+- Audit export must preserve append-only semantics.
+- Audit viewer must show when payload details are redacted or hidden.
+- Audit viewer must not imply that redacted display means the event did not happen.
+
+## Linked Object Rules
+
+### review_request
+- Audit event can link to privacy review queue item.
+- Review status must be visible when allowed.
+- Review notes can be redacted.
+- Carnos cannot alter linked review state through Audit Viewer.
+
+### manifest
+- Audit event can link to export manifest.
+- Audit event can link to forget manifest.
+- Audit event can link to destructive manifest.
+- Manifest status and counts must be visible when allowed.
+- Manifest payload details can be redacted.
+
+### source_evidence
+- Audit event can link to source references.
+- Audit event can link to evidence attachments.
+- Source and evidence payloads can be metadata-only when restricted.
+- Source and evidence privacy labels must be preserved.
+
+### connector
+- Audit event can link to connector account boundary.
+- Audit event can link to connector action manifest.
+- Connector token values are never shown.
+- Connector scope and provider metadata can be shown when allowed.
+- Connector boundary badges must be shown.
+
+### spotify
+- Audit event can link to Spotify connection status.
+- Audit event can link to Spotify scope grants.
+- Audit event can link to Spotify action manifest.
+- Spotify token values are never shown.
+- Spotify recently played metadata is sensitive by default.
+- Spotify boundary badges must be shown.
+
+## Carnos Audit Rules
+
+- Carnos can summarize audit history only when audit visibility allows.
+- Carnos cannot edit audit events.
+- Carnos cannot remove audit events.
+- Carnos cannot hide audit events silently.
+- Carnos cannot redact audit payloads silently.
+- Carnos cannot clear audit history.
+- Carnos cannot bypass append-only boundary.
+- Carnos cannot access connector token values through audit records.
+- Carnos cannot access Spotify token values through audit records.
+- Carnos cannot use audit payloads as memory without explicit memory review.
+- Carnos cannot use forgotten memory through audit payloads.
+- Carnos can explain blocked reasons using metadata-only summaries when allowed.
+
+## Audit Export Relationship Rules
+
+- Audit logs require explicit inclusion in export scope.
+- Audit export can use metadata-only payload visibility.
+- Audit export can redact sensitive payloads.
+- Audit export must preserve event ids.
+- Audit export must preserve event types.
+- Audit export must preserve timestamps.
+- Audit export must preserve actor and target boundaries where allowed.
+- Audit export must preserve linked manifest ids where allowed.
+- Audit export must not expose connector token values.
+- Audit export must not expose Spotify token values.
+- Audit export must show redaction summary.
+- Audit export must show append-only notice.
+
+## Protected Audit Event Rules
+
+- Private Mode enable and disable events are protected.
+- Emergency Lockdown enable and disable events are protected.
+- Sensitive lock change events are protected.
+- Carnos permission change events are protected.
+- Export request and manifest events are protected.
+- Forget manifest events are protected.
+- Destructive manifest events are protected.
+- Connector connection and scope events are protected.
+- Spotify connection and scope events are protected.
+- Token boundary events are protected.
+- Carnos blocked action events are protected.
+- Audit viewer access events are protected.
+
+## Display Columns
+
+- created_at
+- event_type
+- event_group
+- actor_type
+- target_type
+- target_domain
+- status
+- risk_level
+- privacy_level
+- sensitivity_level
+- lock_state
+- redaction_level
+- linked_manifest_id
+- linked_review_id
+- blocked_reason
+- badges
+
+## Warning Codes
+
+- payload_redacted
+- payload_hidden
+- metadata_only
+- sensitive_event
+- locked_event
+- private_mode_event
+- emergency_lockdown_event
+- append_only_protected
+- connector_token_hidden
+- spotify_token_hidden
+- recently_played_sensitive
+- manifest_linked
+- review_linked
+- source_evidence_linked
+- carnos_access_restricted
+- export_requires_explicit_inclusion
+
+## Blocked Reasons
+
+- audit_visibility_blocked
+- payload_visibility_blocked
+- redaction_required
+- metadata_only_required
+- hidden_payload_required
+- private_mode_active
+- emergency_lockdown_active
+- fully_locked_domain
+- sensitive_lock_active
+- forgotten_memory_payload_blocked
+- source_evidence_restricted
+- connector_token_boundary
+- spotify_token_boundary
+- spotify_recently_played_sensitive
+- carnos_audit_access_blocked
+- append_only_boundary
+- audit_export_not_selected
+- audit_payload_export_blocked
+
+## Audit Events Required
+
+- audit_viewer_opened
+- audit_viewer_filter_changed
+- audit_viewer_event_selected
+- audit_detail_panel_opened
+- audit_payload_redacted_for_view
+- audit_payload_hidden_for_view
+- audit_metadata_only_viewed
+- audit_append_only_notice_shown
+- audit_export_scope_selected
+- audit_export_payload_redacted
+- audit_carnos_summary_requested
+- audit_carnos_summary_blocked
+- audit_connector_token_boundary_enforced
+- audit_spotify_token_boundary_enforced
+- audit_linked_manifest_opened
+- audit_linked_review_opened
+- audit_linked_source_evidence_opened
+
+## Badge Requirements
+
+- Append Only
+- Audit Protected
+- Payload Redacted
+- Metadata Only
+- Payload Hidden
+- Sensitive Event
+- Locked Event
+- Private Mode Event
+- Emergency Lockdown Event
+- Manifest Linked
+- Review Linked
+- Source Linked
+- Evidence Linked
+- Connector Boundary
+- Spotify Boundary
+- Token Hidden
+- Carnos Restricted
+- Export Explicit Only
+
+## Must Not Do
+
+- do not create migrations in 20N
+- do not invent audit persistence schema in 20N
+- do not implement audit row writes in 20N
+- do not implement audit row edits in 20N
+- do not implement Audit Viewer UI in 20N
+- do not expose connector token values
+- do not expose Spotify token values
+- do not let Carnos edit audit events
+- do not let Carnos remove audit events
+- do not let Carnos clear audit history
+- do not let redacted display imply the event did not happen
+- do not bypass append-only boundary
+- do not export audit logs without explicit inclusion
+
+## Acceptance
+
+- Audit viewer model is defined.
+- Audit event display model is defined.
+- Detail panel model is defined.
+- Filter dimensions are defined.
+- Event groups are defined.
+- Actor types are defined.
+- Target types are defined.
+- Payload visibility levels are defined.
+- Append-only boundary rules are defined.
+- Linked object rules are defined.
+- Carnos audit rules are defined.
+- Audit export relationship rules are defined.
+- Protected audit event rules are defined.
+- Warning codes are defined.
+- Blocked reasons are defined.
+- Audit events are defined.
+- Badge requirements are defined.
+- Connector and Spotify token boundaries are explicit.
+- 20N audit passes.
+- Full project check passes.

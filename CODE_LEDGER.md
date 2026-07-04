@@ -4578,3 +4578,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock forget and destructive manifests, affected and skipped records, skip reasons, derived record handling, count rules, warnings, blocked reasons, audit events, badges, Carnos denials, connector boundaries, Spotify boundaries, and hard-removal-deferred behavior without adding schema or runtime mutation.
+
+## Phase 20N — Audit Viewer Append Only Boundary
+
+Files added or updated:
+- docs/contracts/PHASE_20N_AUDIT_VIEWER_APPEND_ONLY_BOUNDARY.md
+- docs/fixtures/phase20-privacy-export/phase20n_audit_viewer_append_only_fixture.json
+- docs/phase-reports/PHASE_20N_AUDIT_VIEWER_APPEND_ONLY_BOUNDARY_REPORT.md
+- scripts/audit-phase-20n.mjs
+- package.json
+
+Purpose: lock Audit Viewer model, filters, detail panels, actor/source/target metadata, linked manifests, linked reviews, source/evidence references, connector references, Spotify references, redaction behavior, append-only audit boundary, Carnos restrictions, protected audit events, audit export relationship, blocked reasons, and badges without adding schema or UI.

@@ -5357,3 +5357,7 @@ Defined export request, preview, manifest, status, expiration, format, category,
 ## Phase 20M — Forget Destructive Manifest Safety
 
 Defined forget manifest, destructive action manifest, affected record, skipped record, skip reason, status, action type, derived record, action group, count, warning, blocked reason, audit event, badge, Carnos denial, connector boundary, Spotify boundary, and hard-removal-deferred safety rules. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, mutations, hard removal, audit writes, connector mutations, Spotify mutations, or runtime execution.
+
+## Phase 20N — Audit Viewer Append Only Boundary
+
+Defined Audit Viewer, audit event display, detail panel, filters, event groups, actor types, target types, payload visibility levels, append-only boundary, linked object rules, Carnos audit restrictions, audit export relationship rules, protected audit event rules, warning codes, blocked reasons, audit events, badge requirements, and connector/Spotify token boundaries. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, audit writes, audit edits, or UI implementation.

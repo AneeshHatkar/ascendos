@@ -2126,3 +2126,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added forget and destructive manifest safety contracts.
 - Added affected/skipped record rules, skip reasons, derived record rules, count rules, warnings, blocked reasons, audit events, badges, Carnos denials, connector boundaries, Spotify boundaries, and hard-removal-deferred behavior.
 - Integrated audit:phase20m into package checks.
+
+## Phase 20N — Audit Viewer Append Only Boundary
+
+- Added Audit Viewer and append-only audit boundary contracts.
+- Added event display model, detail panel, filters, event groups, actors, targets, payload visibility, linked object rules, Carnos audit restrictions, audit export rules, protected audit events, blocked reasons, audit events, and badges.
+- Integrated audit:phase20n into package checks.

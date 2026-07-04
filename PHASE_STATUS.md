@@ -3783,3 +3783,7 @@ Phase 20L locked: export request model, preview model, manifest model, status mo
 ## Phase 20M Status
 
 Phase 20M locked: forget manifest model, destructive action manifest model, affected record model, skipped record model, skip reasons, status model, action types, derived record rules, action group rules, count rules, warning codes, blocked reasons, audit events, badge requirements, connector and Spotify destructive boundaries, Carnos destructive denials, and hard-removal-deferred boundary. No schema was needed for this contract-only chunk.
+
+## Phase 20N Status
+
+Phase 20N locked: Audit Viewer model, audit event display model, detail panel model, filter dimensions, event groups, actor types, target types, payload visibility levels, append-only boundary rules, linked object rules, Carnos audit rules, audit export relationship rules, protected audit event rules, warning codes, blocked reasons, audit events, badge requirements, and connector/Spotify token boundaries. No schema was needed for this contract-only chunk.
