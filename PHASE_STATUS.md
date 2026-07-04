@@ -3799,3 +3799,7 @@ Phase 20P locked: retention policy taxonomy, retention subjects, retention state
 ## Phase 20Q Status
 
 Phase 20Q locked: cross-phase privacy enforcement principles, Phase 13.5 links, Phase 15 links, Phase 16 links, Phase 17 links, Phase 18 links, Phase 19 links, dashboard links, Carnos links, document/evidence links, export/forget/destructive links, connector links, Spotify links, cross-surface enforcement matrix, enforcement order, blocked reasons, audit events, and badge requirements. No schema was needed for this contract-only chunk.
+
+## Phase 20R Status
+
+Phase 20R locked: connector categories, registry model, account model, permission model, scope model, auth boundary, token boundary, connection status model, action request model, action manifest model, Private Mode connector rules, Emergency Lockdown connector rules, disconnect rules, retention rules, Carnos connector access rules, provider boundary rules, audit events, blocked reasons, badge requirements, excluded/deferred connectors, no token exposure, and no silent external action boundaries. No schema was needed for this contract-only chunk.

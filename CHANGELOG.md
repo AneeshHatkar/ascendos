@@ -2150,3 +2150,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added cross-phase privacy enforcement map contracts.
 - Added phase links, cross-surface matrix, enforcement order, blocked reasons, audit events, badges, connector links, Spotify links, Carnos links, and dashboard/source/analytics/custom tracker enforcement links.
 - Integrated audit:phase20q into package checks.
+
+## Phase 20R — Future API Connector Framework
+
+- Added future API connector framework contracts.
+- Added connector registry, accounts, permissions, scopes, auth boundary, token boundary, connection statuses, action requests, action manifests, Private Mode behavior, Emergency Lockdown behavior, disconnect behavior, retention behavior, Carnos rules, provider boundaries, audit events, badges, and deferred connector list.
+- Integrated audit:phase20r into package checks.

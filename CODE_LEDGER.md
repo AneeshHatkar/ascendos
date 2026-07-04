@@ -4622,3 +4622,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock cross-phase enforcement between Phase 20 privacy/export rules and settings, memory, current-info, memory RAG, analytics, custom trackers, dashboards, Carnos, documents/evidence, export/forget/destructive flows, connectors, and Spotify without adding runtime enforcement.
+
+## Phase 20R — Future API Connector Framework
+
+Files added or updated:
+- docs/contracts/PHASE_20R_FUTURE_API_CONNECTOR_FRAMEWORK.md
+- docs/fixtures/phase20-privacy-export/phase20r_future_api_connector_framework_fixture.json
+- docs/phase-reports/PHASE_20R_FUTURE_API_CONNECTOR_FRAMEWORK_REPORT.md
+- scripts/audit-phase-20r.mjs
+- package.json
+
+Purpose: lock the generic external API connector framework for registry, accounts, permissions, scopes, auth, token boundary, connection status, action requests, action manifests, privacy modes, disconnect, retention, Carnos access, provider boundaries, no token exposure, and no silent external actions before Spotify-specific work.
