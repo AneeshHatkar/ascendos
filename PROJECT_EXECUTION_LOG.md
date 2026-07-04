@@ -5397,3 +5397,7 @@ Defined Spotify Carnos action proposal, review, approval, cooldown, provider lim
 ## Phase 20W — Spotify UI Media Permission Cards
 
 Defined Spotify connector card, media permission card, connector audit card, action review card, card state, media permission group, card action, redaction, Private Mode UI, Emergency Lockdown UI, connector audit card, Carnos UI, badge, audit event, blocked reason, and runtime schema gate boundaries. No schema was needed because this chunk does not add migrations, React components, dashboard adapters, database reads, database writes, repositories, RLS policies, connector account storage, Spotify provider calls, audit writes, Carnos runtime tools, or live UI wiring.
+
+## Phase 20X — Manual Workout Deferred Connectors
+
+Locked manual workout logging as the active health/body logging stance for Phase 20 and defined excluded or deferred connector boundaries so the app does not falsely imply Garmin, Echo, Alexa, wearable sync, automatic workout import, device APIs, or external health connectors exist before source, schema, provider, privacy, and review gates are satisfied. No schema was needed because this chunk does not add migrations, custom tracker tables, connector tables, wearable sync jobs, provider clients, imports, dashboard adapters, /privacy UI, Carnos tools, audit writes, or health data storage.

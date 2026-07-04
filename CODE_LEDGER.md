@@ -4688,3 +4688,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock Spotify UI card, media permission, connector audit, redaction, privacy mode, emergency lockdown, Carnos UI, badge, blocked reason, audit, and schema gates before live UI or data wiring.
+
+## Phase 20X — Manual Workout Deferred Connectors
+
+Files added or updated:
+- docs/contracts/PHASE_20X_MANUAL_WORKOUT_DEFERRED_CONNECTORS.md
+- docs/fixtures/phase20-privacy-export/phase20x_manual_workout_deferred_connectors_fixture.json
+- docs/phase-reports/PHASE_20X_MANUAL_WORKOUT_DEFERRED_CONNECTORS_REPORT.md
+- scripts/audit-phase-20x.mjs
+- package.json
+
+Purpose: lock manual workout logging stance, deferred Garmin and health/wearable connectors, excluded Echo/Alexa boundary, privacy rules, Carnos limits, export/memory rules, audit events, blocked reasons, badges, and schema gates before future connector or health-data runtime implementation.

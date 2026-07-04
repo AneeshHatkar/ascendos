@@ -2186,3 +2186,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added Spotify UI media permission card contracts.
 - Added connector card, media permissions card, connector audit card, action review card, states, permission groups, card actions, redaction rules, Private Mode UI rules, Emergency Lockdown UI rules, Carnos UI rules, badge map, audit events, blocked reasons, and runtime/schema gates.
 - Integrated audit:phase20w into package checks.
+
+## Phase 20X — Manual Workout Deferred Connectors
+
+- Added manual workout logging stance and deferred connector registry contracts.
+- Added active connector position, deferred health/wearable connectors, excluded Echo/Alexa boundary, manual workout data classes, privacy rules, UI stance rules, Carnos rules, export/memory rules, audit events, blocked reasons, badge requirements, and runtime/schema gates.
+- Integrated audit:phase20x into package checks.
