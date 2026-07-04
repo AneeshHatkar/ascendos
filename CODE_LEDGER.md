@@ -4490,3 +4490,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock Private Mode and Timed Private Mode rules across memory, Carnos, dashboards, timeline, analytics, export, connectors, Spotify, audit, and UI badges without adding schema.
+
+## Phase 20F — Emergency Lockdown Contracts
+
+Files added or updated:
+- docs/contracts/PHASE_20F_EMERGENCY_LOCKDOWN_CONTRACTS.md
+- docs/fixtures/phase20-privacy-export/phase20f_emergency_lockdown_contracts_fixture.json
+- docs/phase-reports/PHASE_20F_EMERGENCY_LOCKDOWN_CONTRACTS_REPORT.md
+- scripts/audit-phase-20f.mjs
+- package.json
+
+Purpose: lock Emergency Lockdown behavior across memory, Carnos, dashboards, timeline, analytics, export, destructive actions, connectors, Spotify, sensitive domains, audit, and UI badges without adding schema.

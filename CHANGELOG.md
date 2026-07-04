@@ -2078,3 +2078,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added Private Mode and Timed Private Mode contracts.
 - Added enforcement, blocked reason, audit, badge, Carnos, connector, and Spotify rules.
 - Integrated audit:phase20e into package checks.
+
+## Phase 20F — Emergency Lockdown Contracts
+
+- Added Emergency Lockdown contracts.
+- Added activation effects, sensitive domain defaults, unlock rules, blocked reasons, audit events, badge requirements, Carnos rules, connector rules, and Spotify rules.
+- Integrated audit:phase20f into package checks.

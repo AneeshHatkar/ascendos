@@ -3751,3 +3751,7 @@ Phase 20D locked: forget, hide, archive, destructive action semantics, derived r
 ## Phase 20E Status
 
 Phase 20E locked: Private Mode states, Timed Private Mode options, enforcement rules, blocked reasons, audit events, badges, Carnos restrictions, connector restrictions, and Spotify restrictions. No schema was needed for this contract-only chunk.
+
+## Phase 20F Status
+
+Phase 20F locked: Emergency Lockdown states, activation effects, affected surfaces, sensitive domain defaults, unlock rules, blocked reasons, audit events, badges, Carnos restrictions, connector restrictions, and Spotify restrictions. No schema was needed for this contract-only chunk.

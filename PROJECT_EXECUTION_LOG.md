@@ -5325,3 +5325,7 @@ Defined exact privacy action semantics for forget, hide, archive, and destructiv
 ## Phase 20E — Private Mode Timed Contracts
 
 Defined Private Mode and Timed Private Mode states, timed options, enforcement rules, surface behavior, state transitions, blocked reasons, audit events, badge requirements, Carnos rules, connector rules, and Spotify rules. No schema was needed because this chunk does not add persistence or migrations.
+
+## Phase 20F — Emergency Lockdown Contracts
+
+Defined Emergency Lockdown states, activation effects, affected surfaces, sensitive domain defaults, lockdown rules, unlock rules, blocked reasons, audit events, badge requirements, Carnos rules, connector rules, and Spotify rules. No schema was needed because this chunk does not add persistence, migrations, RLS, or runtime toggles.
