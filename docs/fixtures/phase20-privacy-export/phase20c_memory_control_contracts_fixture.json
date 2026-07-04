@@ -1,0 +1,318 @@
+{
+  "phase": "20C",
+  "name": "Memory Control Contracts",
+  "purpose": "Define the Phase 20 memory control layer for Memory Inbox, Saved Memories, candidate review, Carnos memory access, privacy states, source/evidence links, duplicate/conflict warnings, and audit requirements.",
+  "schema_requirement": {
+    "needs_live_database_schema": false,
+    "reason": "20C is a contract and control layer. Existing memory SQL and repository contracts already exist, and this chunk maps Phase 20 rules onto those sources without adding migrations or table columns.",
+    "discovery_summary": {
+      "interesting_files": 563,
+      "migrations": 16,
+      "contracts": 77,
+      "reports": 96,
+      "fixtures": 26,
+      "scripts": 93,
+      "app": 3,
+      "src": 96,
+      "docs": 146
+    },
+    "source_files_used_as_reference": [
+      "supabase/migrations/0024_phase15_memory_sql_foundation.sql",
+      "supabase/migrations/0025_phase15_memory_parent_ownership_guards.sql",
+      "supabase/migrations/0028_memory_rag_schema_alignment.sql",
+      "docs/contracts/PHASE_15C_MEMORY_TYPES_SCHEMAS_CONFLICT_RULES.md",
+      "docs/contracts/PHASE_15D_MEMORY_CANDIDATE_ENGINE.md",
+      "docs/contracts/PHASE_15E_MEMORY_INBOX_UI.md",
+      "docs/contracts/PHASE_15F_PRIVACY_PRIVATE_MODE_DO_NOT_REMEMBER_RULES.md",
+      "docs/contracts/PHASE_15G_APPROVED_MEMORY_READ_LAYER_RANKING_STALENESS_RULES.md",
+      "docs/contracts/PHASE_15K_CARNOS_MEMORY_VISIBILITY_PANEL.md",
+      "docs/contracts/PHASE_15O_FORGET_DELETE_DERIVED_RECORDS.md",
+      "docs/contracts/PHASE_15P_MEMORY_AUDIT_EVENTS_USAGE_TRANSPARENCY.md",
+      "docs/contracts/PHASE_17E_MEMORY_INBOX_REPOSITORY.md",
+      "docs/contracts/PHASE_17F_APPROVED_MEMORY_REPOSITORY.md",
+      "docs/contracts/PHASE_17G_PROVENANCE_CONFIDENCE_CONFLICT_ENGINE.md"
+    ],
+    "future_schema_gate": "If later chunks add memory tables, privacy columns, review queue rows, or audit rows, inspect actual schema first before coding."
+  },
+  "memory_surfaces": [
+    {
+      "id": "memory_inbox",
+      "label": "Memory Inbox",
+      "purpose": "Review proposed memories before they become usable by Carnos or saved memory surfaces.",
+      "allowed_actions": [
+        "approve_memory",
+        "reject_memory",
+        "defer_memory",
+        "mark_sensitive",
+        "change_privacy_level",
+        "block_carnos_access",
+        "allow_carnos_access",
+        "view_source_evidence",
+        "view_duplicate_warning",
+        "view_conflict_warning"
+      ],
+      "required_states": [
+        "empty",
+        "loading",
+        "error",
+        "ready",
+        "review_required",
+        "private_mode_active",
+        "blocked",
+        "approved",
+        "rejected",
+        "deferred"
+      ]
+    },
+    {
+      "id": "saved_memories",
+      "label": "Saved Memories",
+      "purpose": "Show approved memories and what Carnos may or may not use.",
+      "allowed_actions": [
+        "view_memory",
+        "change_privacy_level",
+        "change_sensitivity_level",
+        "hide_memory",
+        "archive_memory",
+        "forget_memory",
+        "block_carnos_access",
+        "allow_carnos_access",
+        "view_audit_link"
+      ],
+      "required_states": [
+        "empty",
+        "loading",
+        "error",
+        "ready",
+        "hidden",
+        "archived",
+        "forgotten",
+        "locked",
+        "carnos_disabled",
+        "redacted"
+      ]
+    }
+  ],
+  "memory_candidate_model": {
+    "required_fields": [
+      "candidate_id",
+      "proposed_summary",
+      "proposed_memory_type",
+      "source_type",
+      "source_reference",
+      "domain",
+      "confidence",
+      "privacy_level",
+      "sensitivity_level",
+      "lock_state",
+      "redaction_level",
+      "created_by",
+      "proposed_at",
+      "review_status",
+      "duplicate_warning",
+      "conflict_warning",
+      "evidence_link",
+      "audit_link"
+    ],
+    "review_statuses": [
+      "draft",
+      "needs_review",
+      "approved",
+      "rejected",
+      "deferred",
+      "blocked",
+      "expired"
+    ],
+    "created_by_values": [
+      "user",
+      "carnos",
+      "system"
+    ]
+  },
+  "saved_memory_model": {
+    "required_fields": [
+      "memory_id",
+      "title",
+      "summary",
+      "domain",
+      "source_type",
+      "source_reference",
+      "privacy_level",
+      "sensitivity_level",
+      "lock_state",
+      "redaction_level",
+      "carnos_read_allowed",
+      "carnos_summarize_allowed",
+      "carnos_context_allowed",
+      "dashboard_allowed",
+      "timeline_allowed",
+      "analytics_allowed",
+      "export_allowed",
+      "status",
+      "approved_at",
+      "updated_at",
+      "audit_link"
+    ],
+    "statuses": [
+      "active",
+      "hidden",
+      "archived",
+      "forgotten",
+      "locked",
+      "redacted"
+    ]
+  },
+  "review_rules": [
+    "Carnos can propose memory candidates only when memory creation is allowed for the domain.",
+    "Carnos cannot approve its own memory candidate.",
+    "Sensitive memory candidates require user review.",
+    "Private Mode blocks automatic memory candidate creation unless the user explicitly allows a narrow exception.",
+    "Emergency Lockdown blocks memory candidate creation by default.",
+    "Rejected memory candidates cannot be used by Carnos.",
+    "Deferred memory candidates remain unavailable to Carnos until reviewed.",
+    "Forgotten saved memories cannot be used by Carnos context, summaries, analytics, or dashboard personalization.",
+    "Hidden saved memories must not appear on broad dashboards or timeline surfaces.",
+    "Archived saved memories remain preserved for history/audit but are removed from active memory use.",
+    "Locked memories require explicit review before broad display, export, analytics, or Carnos use.",
+    "Duplicate warnings must be visible before approval.",
+    "Conflict warnings must be visible before approval.",
+    "Source and evidence references must be preserved where available.",
+    "Every review action requires an audit event."
+  ],
+  "carnos_memory_access_rules": [
+    "Carnos can read active saved memories only when carnos_read_allowed is true.",
+    "Carnos can summarize active saved memories only when carnos_summarize_allowed is true.",
+    "Carnos can use a memory in context only when carnos_context_allowed is true.",
+    "Carnos cannot read hidden_from_carnos memories.",
+    "Carnos cannot use fully_locked memories.",
+    "Carnos cannot use forgotten memories.",
+    "Carnos cannot use rejected memory candidates.",
+    "Carnos cannot use deferred memory candidates.",
+    "Carnos cannot override Private Mode.",
+    "Carnos cannot override Emergency Lockdown.",
+    "Carnos cannot access raw source evidence when redaction_level blocks it."
+  ],
+  "privacy_mapping": [
+    {
+      "privacy_level": "public",
+      "memory_behavior": "may appear in normal memory surfaces when approved",
+      "carnos_default": "allowed if domain permission allows"
+    },
+    {
+      "privacy_level": "internal",
+      "memory_behavior": "may appear inside ascendOS after approval",
+      "carnos_default": "allowed if sensitivity and lock state allow"
+    },
+    {
+      "privacy_level": "private",
+      "memory_behavior": "requires careful display and is blocked during Private Mode by default",
+      "carnos_default": "blocked unless explicitly allowed"
+    },
+    {
+      "privacy_level": "sensitive",
+      "memory_behavior": "requires review, badges, redaction handling, and audit",
+      "carnos_default": "blocked unless explicitly approved"
+    },
+    {
+      "privacy_level": "locked",
+      "memory_behavior": "hidden from broad surfaces and blocked from Carnos by default",
+      "carnos_default": "blocked"
+    }
+  ],
+  "source_evidence_rules": [
+    "Memory candidates should keep source_type when available.",
+    "Memory candidates should keep source_reference when available.",
+    "Memory candidates should expose evidence_link when safe.",
+    "Saved memories should preserve source lineage.",
+    "Evidence display must respect redaction_level.",
+    "Source details must not bypass privacy_level.",
+    "Source details must not bypass lock_state.",
+    "Audit events should link to source/evidence when safe."
+  ],
+  "duplicate_conflict_rules": [
+    "Duplicate candidates must show duplicate_warning.",
+    "Conflict candidates must show conflict_warning.",
+    "High-confidence conflict candidates still require user review.",
+    "Carnos should not auto-merge conflicts.",
+    "Carnos should not auto-overwrite approved memories.",
+    "User review decides whether to approve, reject, defer, or revise."
+  ],
+  "audit_events_required": [
+    "memory_candidate_created",
+    "memory_candidate_blocked",
+    "memory_approved",
+    "memory_rejected",
+    "memory_deferred",
+    "memory_hidden",
+    "memory_archived",
+    "memory_forgotten",
+    "memory_privacy_changed",
+    "memory_sensitivity_changed",
+    "memory_carnos_access_changed",
+    "memory_source_viewed",
+    "memory_conflict_detected",
+    "memory_duplicate_detected"
+  ],
+  "ui_card_requirements": [
+    {
+      "card": "Memory Inbox",
+      "must_show": [
+        "candidate summary",
+        "source type",
+        "domain",
+        "confidence",
+        "privacy level",
+        "sensitivity level",
+        "review status",
+        "duplicate warning",
+        "conflict warning",
+        "Carnos proposed badge",
+        "review actions"
+      ]
+    },
+    {
+      "card": "Saved Memories",
+      "must_show": [
+        "memory title",
+        "summary",
+        "domain",
+        "source type",
+        "privacy level",
+        "sensitivity level",
+        "lock state",
+        "redaction level",
+        "Carnos access status",
+        "status",
+        "audit link"
+      ]
+    }
+  ],
+  "blocked_behaviors": [
+    "no silent memory save",
+    "no Carnos self-approval",
+    "no sensitive memory auto-approval",
+    "no rejected memory use",
+    "no deferred memory use",
+    "no forgotten memory use",
+    "no hidden memory dashboard exposure",
+    "no locked memory Carnos access",
+    "no source/evidence privacy bypass",
+    "no audit-free memory review action"
+  ],
+  "acceptance": [
+    "Memory Inbox control contract exists.",
+    "Saved Memories control contract exists.",
+    "Memory candidate model is defined.",
+    "Saved memory model is defined.",
+    "Review rules are defined.",
+    "Carnos memory access rules are defined.",
+    "Privacy mapping is defined.",
+    "Source/evidence rules are defined.",
+    "Duplicate/conflict rules are defined.",
+    "Audit event requirements are defined.",
+    "Blocked behaviors are defined.",
+    "Existing schema/source references are recorded.",
+    "20C audit passes.",
+    "Full project check passes."
+  ]
+}

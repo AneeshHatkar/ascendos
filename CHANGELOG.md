@@ -2058,3 +2058,10 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added privacy/sensitivity/lock/redaction/status primitives.
 - Added connector and Spotify compatibility markers.
 - Integrated audit:phase20b into package checks.
+
+## Phase 20C — Memory Control Contracts
+
+- Added Memory Inbox and Saved Memories control contracts.
+- Added memory candidate and saved memory models.
+- Added Carnos memory access, source/evidence, duplicate/conflict, and audit rules.
+- Integrated audit:phase20c into package checks.

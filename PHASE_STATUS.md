@@ -3739,3 +3739,7 @@ Phase 20A locked: complete Phase 20 feature inventory, total steps, 20A-20Z chun
 ## Phase 20B Status
 
 Phase 20B locked: core privacy levels, sensitivity levels, lock states, redaction levels, action statuses, actor model, domain primitives, validation rules, and connector/Spotify compatibility. No live database schema was needed for this contract-only chunk.
+
+## Phase 20C Status
+
+Phase 20C locked: Memory Inbox, Saved Memories, memory candidate review, saved memory controls, Carnos memory access, source/evidence links, duplicate/conflict warnings, and memory audit requirements. Existing memory schema/contracts were referenced; no new schema was invented.

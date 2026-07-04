@@ -4457,3 +4457,14 @@ Files added or updated:
 - package.json
 
 Purpose: define the shared privacy vocabulary used by memory, Private Mode, Sensitive Locks, export, destructive action boundaries, Carnos permissions, external connectors, and Spotify.
+
+## Phase 20C — Memory Control Contracts
+
+Files added or updated:
+- docs/contracts/PHASE_20C_MEMORY_CONTROL_CONTRACTS.md
+- docs/fixtures/phase20-privacy-export/phase20c_memory_control_contracts_fixture.json
+- docs/phase-reports/PHASE_20C_MEMORY_CONTROL_CONTRACTS_REPORT.md
+- scripts/audit-phase-20c.mjs
+- package.json
+
+Purpose: lock memory control behavior for Memory Inbox, Saved Memories, candidate review, Carnos access, source/evidence links, duplicate/conflict warnings, and audit requirements without inventing new schema.

@@ -5313,3 +5313,7 @@ Locked the complete Phase 20 constitution, including every feature, total step, 
 ## Phase 20B — Core Privacy Domain Contracts
 
 Defined the core privacy domain contract layer: privacy levels, sensitivity levels, lock states, redaction levels, action statuses, actor model, privacy surfaces, domain primitives, validation rules, transition rules, and connector/Spotify compatibility. No live database schema was needed for this contract-only chunk.
+
+## Phase 20C — Memory Control Contracts
+
+Defined Memory Inbox and Saved Memories control contracts, memory candidate and saved memory models, review rules, Carnos memory access rules, privacy mapping, source/evidence rules, duplicate/conflict warnings, audit event requirements, and blocked behaviors. Existing Phase 15 and Phase 17 memory schema/contracts were referenced; no new schema was invented.
