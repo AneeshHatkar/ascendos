@@ -4666,3 +4666,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock Spotify playback, device, playlist, listening-history, provider limitation, export, analytics, memory, Carnos, privacy-mode, audit, blocked reason, badge, and schema gates before runtime provider integration.
+
+## Phase 20V — Spotify Carnos Action Safety
+
+Files added or updated:
+- docs/contracts/PHASE_20V_SPOTIFY_CARNOS_ACTION_SAFETY.md
+- docs/fixtures/phase20-privacy-export/phase20v_spotify_carnos_action_safety_fixture.json
+- docs/phase-reports/PHASE_20V_SPOTIFY_CARNOS_ACTION_SAFETY_REPORT.md
+- scripts/audit-phase-20v.mjs
+- package.json
+
+Purpose: lock Spotify Carnos action proposals, action classes, approval, review queue, cooldowns, scope checks, provider limitations, playback action rules, playlist action rules, listening-history restrictions, privacy modes, audit events, blocked reasons, badges, and runtime schema gates before provider integration.

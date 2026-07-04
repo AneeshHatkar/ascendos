@@ -5389,3 +5389,7 @@ Defined Spotify account connection boundary, OAuth start boundary, callback boun
 ## Phase 20U — Spotify Media Boundaries
 
 Defined Spotify playback, currently playing, playback state, device, queue, playlist, recently played, top item, provider limitation, export, analytics, memory, Private Mode, Emergency Lockdown, Carnos, audit, blocked reason, and badge boundaries. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, provider API clients, sync jobs, OAuth routes, playback reads, device reads, playlist reads, recently played reads, playback actions, playlist actions, UI cards, dashboard adapters, or runtime Spotify actions.
+
+## Phase 20V — Spotify Carnos Action Safety
+
+Defined Spotify Carnos action proposal, review, approval, cooldown, provider limitation, scope, Premium, active device, playlist mutation, listening history, audit, blocked reason, badge, and runtime schema gate boundaries. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, runtime tools, Carnos execution adapters, provider API clients, provider calls, action request tables, review queue rows, playback actions, playlist actions, dashboard UI, or audit writes.
