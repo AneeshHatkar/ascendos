@@ -3747,3 +3747,7 @@ Phase 20C locked: Memory Inbox, Saved Memories, memory candidate review, saved m
 ## Phase 20D Status
 
 Phase 20D locked: forget, hide, archive, destructive action semantics, derived record behavior, manifest requirements, review/confirmation rules, blocked reasons, audit events, and Carnos safety restrictions. Existing schema/contracts were referenced; no new schema was invented.
+
+## Phase 20E Status
+
+Phase 20E locked: Private Mode states, Timed Private Mode options, enforcement rules, blocked reasons, audit events, badges, Carnos restrictions, connector restrictions, and Spotify restrictions. No schema was needed for this contract-only chunk.

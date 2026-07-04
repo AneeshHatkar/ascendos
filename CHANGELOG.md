@@ -2072,3 +2072,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added derived record behavior and manifest requirements.
 - Added review, confirmation, blocked reason, audit, and Carnos safety rules.
 - Integrated audit:phase20d into package checks.
+
+## Phase 20E — Private Mode Timed Contracts
+
+- Added Private Mode and Timed Private Mode contracts.
+- Added enforcement, blocked reason, audit, badge, Carnos, connector, and Spotify rules.
+- Integrated audit:phase20e into package checks.

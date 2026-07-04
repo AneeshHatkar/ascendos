@@ -4479,3 +4479,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock the safety semantics for forget, hide, archive, destructive action, derived records, manifests, review, audit, and Carnos restrictions without inventing new schema.
+
+## Phase 20E — Private Mode Timed Contracts
+
+Files added or updated:
+- docs/contracts/PHASE_20E_PRIVATE_MODE_TIMED_CONTRACTS.md
+- docs/fixtures/phase20-privacy-export/phase20e_private_mode_timed_contracts_fixture.json
+- docs/phase-reports/PHASE_20E_PRIVATE_MODE_TIMED_CONTRACTS_REPORT.md
+- scripts/audit-phase-20e.mjs
+- package.json
+
+Purpose: lock Private Mode and Timed Private Mode rules across memory, Carnos, dashboards, timeline, analytics, export, connectors, Spotify, audit, and UI badges without adding schema.
