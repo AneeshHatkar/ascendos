@@ -2102,3 +2102,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added privacy action review queue contracts.
 - Added queue item model, action types, statuses, risk levels, actor rules, expiration rules, blocked reasons, audit events, badges, and connector/Spotify review rules.
 - Integrated audit:phase20i into package checks.
+
+## Phase 20J — Two-Step Confirmation Cooldown Boundary
+
+- Added two-step confirmation and cooldown boundary contracts.
+- Added confirmation levels, action lists, cooldown states, readiness rules, blocked reasons, audit events, badges, and connector/Spotify confirmation rules.
+- Integrated audit:phase20j into package checks.

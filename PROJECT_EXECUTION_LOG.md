@@ -5341,3 +5341,7 @@ Defined the Carnos access matrix for reading, summarizing, suggesting, memory ca
 ## Phase 20I — Privacy Action Review Queue
 
 Defined the privacy action review queue contract with queue item model, reviewable action types, status model, risk levels, priority levels, actor rules, action review rules, expiration rules, blocked reasons, audit events, badge requirements, and connector/Spotify review rules. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, or live approval execution.
+
+## Phase 20J — Two-Step Confirmation Cooldown Boundary
+
+Defined confirmation levels, one-step actions, two-step actions, cooldown-required actions, cooldown state model, confirmation state model, future timestamp fields, execution readiness rules, action group rules, blocked reasons, audit events, badge requirements, and connector/Spotify confirmation rules. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, or runtime execution.

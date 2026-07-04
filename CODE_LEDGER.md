@@ -4534,3 +4534,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock the privacy action review queue model, action types, status/risk/priority rules, actor restrictions, expiration rules, blocked reasons, audit events, badges, and connector/Spotify review behavior without adding schema.
+
+## Phase 20J — Two-Step Confirmation Cooldown Boundary
+
+Files added or updated:
+- docs/contracts/PHASE_20J_TWO_STEP_COOLDOWN_BOUNDARY.md
+- docs/fixtures/phase20-privacy-export/phase20j_two_step_cooldown_boundary_fixture.json
+- docs/phase-reports/PHASE_20J_TWO_STEP_COOLDOWN_BOUNDARY_REPORT.md
+- scripts/audit-phase-20j.mjs
+- package.json
+
+Purpose: lock confirmation levels, cooldown boundaries, expiry, execution readiness, action group rules, blocked reasons, audit events, badges, connector confirmation, and Spotify confirmation without adding schema.
