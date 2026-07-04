@@ -1,0 +1,361 @@
+# Phase 20H — Carnos Access Matrix
+
+## Purpose
+
+Define exactly what Carnos may read, summarize, suggest, remember, use in context, use in analytics, show on dashboards, reference in chat, include in export summaries, propose as actions, or execute after approval under privacy, sensitive lock, Private Mode, Emergency Lockdown, connector, and Spotify constraints.
+
+## Schema Requirement
+
+- Needs live database schema: false
+- Reason: 20H defines Carnos access rules only. It does not create persisted Carnos permission rows, migrations, repositories, RLS policies, connector permission storage, or runtime authorization code.
+- Future schema gate: If a later chunk persists Carnos permissions, domain permission overrides, connector permissions, Spotify permissions, audit rows, or runtime access checks, inspect exact schema before coding.
+
+## Capability Matrix
+
+### can_read
+- Meaning: Carnos may read the data as input.
+- Default rule: allowed only when domain permission, sensitivity level, lock state, Private Mode, and Emergency Lockdown all allow it
+- Blocked by:
+  - hidden_from_carnos
+  - fully_locked
+  - private_mode_active
+  - emergency_lockdown_active
+  - forgotten
+  - rejected
+  - deferred
+- Audit required when sensitive: true
+
+### can_summarize
+- Meaning: Carnos may summarize the data for the user.
+- Default rule: allowed only when can_read is allowed and summarization permission is enabled
+- Blocked by:
+  - hidden_from_carnos
+  - fully_locked
+  - private_mode_active
+  - emergency_lockdown_active
+  - redacted
+  - forgotten
+- Audit required when sensitive: true
+
+### can_suggest
+- Meaning: Carnos may suggest an action, insight, review, or next step based on the data.
+- Default rule: allowed only when the data may be referenced safely and the suggestion does not expose restricted details
+- Blocked by:
+  - fully_locked
+  - emergency_lockdown_active
+  - redacted
+  - forgotten
+- Audit required when sensitive: true
+
+### can_create_memory_candidate
+- Meaning: Carnos may propose a memory candidate for user review.
+- Default rule: allowed only when the domain permits memory candidates and no mode blocks memory creation
+- Blocked by:
+  - private_mode_active
+  - emergency_lockdown_active
+  - hidden_from_carnos
+  - fully_locked
+  - do_not_remember
+  - forgotten
+- Audit required when sensitive: true
+
+### can_use_in_context_pack
+- Meaning: Carnos may include the data in its current context pack.
+- Default rule: allowed only when context permission is true and the item is not private-mode blocked, forgotten, hidden from Carnos, or locked
+- Blocked by:
+  - private_mode_active
+  - emergency_lockdown_active
+  - hidden_from_carnos
+  - fully_locked
+  - forgotten
+  - archived
+- Audit required when sensitive: true
+
+### can_use_in_analytics
+- Meaning: Carnos or analytics logic may use the data for trend, experiment, or insight generation.
+- Default rule: allowed only when analytics permission is true and the domain is not sensitive or locked without review
+- Blocked by:
+  - analytics_permission_blocked
+  - fully_locked
+  - private_mode_active
+  - emergency_lockdown_active
+  - forgotten
+- Audit required when sensitive: true
+
+### can_show_on_dashboard
+- Meaning: Carnos may contribute the data to dashboard-facing output.
+- Default rule: allowed only when dashboard permission is true and the lock state allows broad surface exposure
+- Blocked by:
+  - hidden_from_dashboards
+  - fully_locked
+  - private_mode_active
+  - emergency_lockdown_active
+  - redaction_required
+  - forgotten
+- Audit required when sensitive: true
+
+### can_reference_in_chat
+- Meaning: Carnos may mention the data in chat.
+- Default rule: allowed only when Carnos read permission and chat reference permission are true and redaction rules are satisfied
+- Blocked by:
+  - hidden_from_carnos
+  - fully_locked
+  - private_mode_active
+  - emergency_lockdown_active
+  - redaction_required
+  - forgotten
+- Audit required when sensitive: true
+
+### can_include_in_export_summary
+- Meaning: Carnos may describe the data category or summary inside an export preview or export summary.
+- Default rule: allowed only when export permission is true and redaction rules are satisfied
+- Blocked by:
+  - export_permission_blocked
+  - fully_locked
+  - private_mode_active
+  - emergency_lockdown_active
+  - redaction_required
+- Audit required when sensitive: true
+
+### can_trigger_action_proposal
+- Meaning: Carnos may propose a user-reviewed action.
+- Default rule: allowed only when the action type, domain, connector, and mode permit proposals
+- Blocked by:
+  - private_mode_active
+  - emergency_lockdown_active
+  - fully_locked
+  - connector_permission_blocked
+  - spotify_permission_blocked
+- Audit required when sensitive: true
+
+### can_execute_approved_action
+- Meaning: Carnos may execute an action only after explicit approval and only if the action class is allowed.
+- Default rule: allowed only for safe pre-approved action classes; never for destructive action, privacy unlock, token access, or permission escalation
+- Blocked by:
+  - destructive_action
+  - privacy_unlock
+  - token_access
+  - permission_escalation
+  - private_mode_active
+  - emergency_lockdown_active
+  - approval_missing
+  - action_expired
+- Audit required when sensitive: true
+
+## Absolute Denials
+
+- Carnos cannot approve its own memory candidates.
+- Carnos cannot approve privacy actions.
+- Carnos cannot execute destructive actions.
+- Carnos cannot disable Private Mode.
+- Carnos cannot disable Emergency Lockdown.
+- Carnos cannot unlock fully locked domains.
+- Carnos cannot change domain privacy permissions silently.
+- Carnos cannot access connector tokens.
+- Carnos cannot access Spotify token values.
+- Carnos cannot connect or disconnect external APIs silently.
+- Carnos cannot change connector scopes silently.
+- Carnos cannot use forgotten memory.
+- Carnos cannot use rejected memory candidates.
+- Carnos cannot use deferred memory candidates.
+- Carnos cannot bypass redaction rules.
+- Carnos cannot bypass audit requirements.
+
+## Domain Interaction Rules
+
+- Domain permissions are the first gate for Carnos access.
+- Sensitive lock levels override normal domain permissions.
+- Private Mode overrides normal domain permissions.
+- Emergency Lockdown overrides normal domain permissions.
+- Fully locked domains deny Carnos read, summarize, suggest, memory candidate, context, analytics, dashboard, chat reference, export summary, and action proposal by default.
+- Hidden-from-Carnos domains deny Carnos read, summarize, memory candidate, context pack, and chat reference.
+- Hidden-from-dashboards domains deny Carnos dashboard contribution even if Carnos read is allowed.
+- Review-required domains require user review before Carnos uses sensitive details.
+- Forgotten memory denies all Carnos use even if domain permissions are open.
+- Archived memory is excluded from active context unless a future narrow history mode allows it.
+
+## Private Mode Rules
+
+- Private Mode blocks Carnos memory writes.
+- Private Mode blocks Carnos automatic memory candidates.
+- Private Mode blocks Carnos sensitive summaries by default.
+- Private Mode blocks broad sensitive context pack inclusion.
+- Private Mode blocks Carnos-triggered connector actions unless explicitly reviewed.
+- Private Mode blocks Carnos-triggered Spotify actions unless explicitly reviewed.
+- Private Mode blocks using listening history as memory without explicit approval.
+- Carnos cannot disable Private Mode.
+- Carnos cannot bypass Private Mode with older context.
+
+## Emergency Lockdown Rules
+
+- Emergency Lockdown blocks Carnos memory writes.
+- Emergency Lockdown blocks Carnos automatic memory candidates.
+- Emergency Lockdown blocks sensitive summaries.
+- Emergency Lockdown blocks broad dashboard and timeline exposure.
+- Emergency Lockdown blocks analytics use of sensitive domains.
+- Emergency Lockdown blocks Carnos-triggered connector actions by default.
+- Emergency Lockdown blocks Carnos-triggered Spotify actions by default.
+- Emergency Lockdown blocks destructive action automation.
+- Carnos cannot disable Emergency Lockdown.
+- Carnos cannot bypass Emergency Lockdown with older context.
+
+## Connector Rules
+
+- Carnos can see connector connection status only when connector privacy rules allow.
+- Carnos can suggest connector actions only when connector permission, scope, lock state, Private Mode, and Emergency Lockdown allow.
+- Carnos cannot see access tokens.
+- Carnos cannot see refresh tokens.
+- Carnos cannot store token values as memory.
+- Carnos cannot change connector scopes silently.
+- Carnos cannot connect or disconnect connectors silently.
+- Carnos cannot execute connector actions without explicit approval unless a future safe pre-approved class exists.
+- Connector action proposals must show required scopes and risk.
+- Connector action proposals must be audited.
+
+## Spotify Rules
+
+- Carnos can see Spotify connection status only when Spotify privacy rules allow.
+- Carnos can suggest Spotify actions only when Spotify permission, scope, lock state, Private Mode, and Emergency Lockdown allow.
+- Carnos cannot see Spotify access tokens.
+- Carnos cannot see Spotify refresh tokens.
+- Carnos cannot store Spotify token values as memory.
+- Carnos cannot use recently played data as memory without explicit approval.
+- Carnos cannot change Spotify scopes silently.
+- Carnos cannot connect or disconnect Spotify silently.
+- Carnos cannot execute Spotify playback actions without explicit approval unless a future safe pre-approved class exists.
+- Spotify action proposals must show required scopes, risk, device state, premium requirement, and blocked reasons.
+- Spotify action proposals must be audited.
+
+## Access Decision Inputs
+
+- domain_id
+- privacy_level
+- sensitivity_level
+- lock_state
+- redaction_level
+- memory_status
+- candidate_review_status
+- private_mode_state
+- emergency_lockdown_state
+- domain_permission
+- carnos_permission
+- dashboard_permission
+- timeline_permission
+- analytics_permission
+- export_permission
+- connector_permission
+- spotify_permission
+- required_scope
+- approval_status
+- audit_requirement
+
+## Blocked Reasons
+
+- domain_permission_blocked
+- carnos_permission_blocked
+- dashboard_permission_blocked
+- timeline_permission_blocked
+- analytics_permission_blocked
+- export_permission_blocked
+- connector_permission_blocked
+- spotify_permission_blocked
+- hidden_from_carnos
+- hidden_from_dashboards
+- fully_locked
+- review_required
+- private_mode_active
+- emergency_lockdown_active
+- do_not_remember
+- forgotten
+- archived
+- rejected
+- deferred
+- redaction_required
+- approval_missing
+- action_expired
+- token_access_denied
+- destructive_action_denied
+- privacy_unlock_denied
+- permission_escalation_denied
+
+## Audit Events Required
+
+- carnos_access_allowed
+- carnos_access_blocked
+- carnos_summary_allowed
+- carnos_summary_blocked
+- carnos_memory_candidate_allowed
+- carnos_memory_candidate_blocked
+- carnos_context_allowed
+- carnos_context_blocked
+- carnos_dashboard_reference_allowed
+- carnos_dashboard_reference_blocked
+- carnos_chat_reference_allowed
+- carnos_chat_reference_blocked
+- carnos_export_summary_allowed
+- carnos_export_summary_blocked
+- carnos_action_proposal_allowed
+- carnos_action_proposal_blocked
+- carnos_execute_approved_action_allowed
+- carnos_execute_approved_action_blocked
+- carnos_connector_action_blocked
+- carnos_spotify_action_blocked
+- carnos_token_access_blocked
+- carnos_destructive_action_blocked
+
+## Badge Requirements
+
+- Carnos Allowed
+- Carnos Restricted
+- Carnos Disabled
+- Memory Disabled
+- Context Blocked
+- Summary Blocked
+- Dashboard Blocked
+- Analytics Blocked
+- Export Restricted
+- Action Proposal Pending
+- Action Blocked
+- Connector Restricted
+- Spotify Restricted
+- Token Hidden
+- Private Mode Active
+- Emergency Lockdown Active
+- Review Required
+- Redacted
+- Forgotten
+- Locked
+
+## Must Not Do
+
+- do not create migrations in 20H
+- do not invent Carnos permission persistence schema in 20H
+- do not implement runtime authorization in 20H
+- do not implement repository writes in 20H
+- do not let Carnos approve its own memory candidates
+- do not let Carnos approve privacy actions
+- do not let Carnos execute destructive actions
+- do not let Carnos disable Private Mode
+- do not let Carnos disable Emergency Lockdown
+- do not let Carnos access connector tokens
+- do not let Carnos access Spotify tokens
+- do not let Carnos bypass domain permissions
+- do not let Carnos bypass sensitive locks
+- do not let Carnos bypass redaction
+- do not let Carnos bypass audit
+
+## Acceptance
+
+- Carnos capability matrix is defined.
+- Absolute denial rules are defined.
+- Domain interaction rules are defined.
+- Private Mode rules are defined.
+- Emergency Lockdown rules are defined.
+- Connector rules are defined.
+- Spotify rules are defined.
+- Access decision inputs are defined.
+- Blocked reasons are defined.
+- Audit events are defined.
+- Badge requirements are defined.
+- 20H audit passes.
+- Full project check passes.

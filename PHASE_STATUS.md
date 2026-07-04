@@ -3759,3 +3759,7 @@ Phase 20F locked: Emergency Lockdown states, activation effects, affected surfac
 ## Phase 20G Status
 
 Phase 20G locked: sensitive lock levels, domain privacy permission fields, domain registry, permission rules, lock transitions, redaction defaults, retention defaults, blocked reasons, audit events, badges, and connector/Spotify restrictions. No schema was needed for this contract-only chunk.
+
+## Phase 20H Status
+
+Phase 20H locked: Carnos capability matrix, absolute denials, domain interaction rules, Private Mode rules, Emergency Lockdown rules, connector rules, Spotify rules, access decision inputs, blocked reasons, audit events, and badge requirements. No schema was needed for this contract-only chunk.

@@ -2090,3 +2090,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added sensitive lock and domain privacy permission contracts.
 - Added domain registry, permission rules, lock transitions, redaction defaults, retention defaults, audit events, badges, and connector/Spotify restrictions.
 - Integrated audit:phase20g into package checks.
+
+## Phase 20H — Carnos Access Matrix
+
+- Added Carnos access matrix contracts.
+- Added capability rules, absolute denials, domain/mode interactions, connector and Spotify restrictions, blocked reasons, audit events, and badges.
+- Integrated audit:phase20h into package checks.

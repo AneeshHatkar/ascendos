@@ -4512,3 +4512,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock sensitive lock levels and domain privacy permissions across dashboards, timeline, analytics, export, Carnos, connectors, Spotify, redaction, retention, audit, and badges without adding schema.
+
+## Phase 20H — Carnos Access Matrix
+
+Files added or updated:
+- docs/contracts/PHASE_20H_CARNOS_ACCESS_MATRIX.md
+- docs/fixtures/phase20-privacy-export/phase20h_carnos_access_matrix_fixture.json
+- docs/phase-reports/PHASE_20H_CARNOS_ACCESS_MATRIX_REPORT.md
+- scripts/audit-phase-20h.mjs
+- package.json
+
+Purpose: lock Carnos access capabilities, absolute denials, domain/mode interactions, connector and Spotify restrictions, blocked reasons, audit events, and badge requirements without adding schema.

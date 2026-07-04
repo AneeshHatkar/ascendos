@@ -5333,3 +5333,7 @@ Defined Emergency Lockdown states, activation effects, affected surfaces, sensit
 ## Phase 20G — Sensitive Locks Domain Permissions
 
 Defined sensitive lock levels, domain privacy permission fields, domain registry, permission rules, lock transitions, redaction defaults, retention defaults, blocked reasons, audit events, badge requirements, and connector/Spotify restrictions. No schema was needed because this chunk does not add persistence, migrations, RLS, or repositories.
+
+## Phase 20H — Carnos Access Matrix
+
+Defined the Carnos access matrix for reading, summarizing, suggesting, memory candidates, context packs, analytics, dashboards, chat references, export summaries, action proposals, and approved action execution. Added absolute denials, domain interaction rules, Private Mode rules, Emergency Lockdown rules, connector rules, Spotify rules, access decision inputs, blocked reasons, audit events, and badge requirements. No schema was needed because this chunk does not add persistence, migrations, RLS, or repositories.
