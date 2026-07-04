@@ -1,0 +1,323 @@
+{
+  "phase": "20B",
+  "name": "Core Privacy Domain Contracts",
+  "purpose": "Define the shared privacy vocabulary used by memory controls, private mode, sensitive locks, export, destructive action boundaries, Carnos permissions, external connectors, and Spotify.",
+  "schema_requirement": {
+    "needs_live_database_schema": false,
+    "reason": "20B defines contract enums, state models, validation rules, and compatibility boundaries. It does not create or modify tables, migrations, RLS, token storage, export rows, or connector rows.",
+    "future_schema_gate": "When a later chunk creates or modifies tables, migrations, RLS policies, or token storage boundaries, schema must be inspected or provided before coding."
+  },
+  "privacy_levels": [
+    {
+      "id": "public",
+      "label": "Public",
+      "meaning": "Safe to show in normal app surfaces when the user chooses to expose it.",
+      "dashboard_allowed": true,
+      "carnos_read_default": true,
+      "export_default": true,
+      "audit_required": true
+    },
+    {
+      "id": "internal",
+      "label": "Internal",
+      "meaning": "Normal personal app data that can appear inside ascendOS but should not be externally exposed without user action.",
+      "dashboard_allowed": true,
+      "carnos_read_default": true,
+      "export_default": true,
+      "audit_required": true
+    },
+    {
+      "id": "private",
+      "label": "Private",
+      "meaning": "Personal data that needs explicit privacy handling and should be restricted during Private Mode.",
+      "dashboard_allowed": false,
+      "carnos_read_default": false,
+      "export_default": false,
+      "audit_required": true
+    },
+    {
+      "id": "sensitive",
+      "label": "Sensitive",
+      "meaning": "Data that can reveal health, finance, personal reflections, private goals, documents, connector activity, or listening behavior.",
+      "dashboard_allowed": false,
+      "carnos_read_default": false,
+      "export_default": false,
+      "audit_required": true
+    },
+    {
+      "id": "locked",
+      "label": "Locked",
+      "meaning": "Data blocked from broad UI, Carnos context, analytics, export, and connector use unless the user explicitly unlocks or approves a narrow action.",
+      "dashboard_allowed": false,
+      "carnos_read_default": false,
+      "export_default": false,
+      "audit_required": true
+    }
+  ],
+  "sensitivity_levels": [
+    {
+      "id": "normal",
+      "meaning": "Default non-sensitive personal data.",
+      "requires_review": false
+    },
+    {
+      "id": "personal",
+      "meaning": "Personal but not highly sensitive data.",
+      "requires_review": false
+    },
+    {
+      "id": "sensitive",
+      "meaning": "Health, finance, identity-adjacent, private reflection, document, connector, Spotify history, or high-trust data.",
+      "requires_review": true
+    },
+    {
+      "id": "highly_sensitive",
+      "meaning": "Data that should normally be hidden from dashboards, analytics, broad Carnos context, exports, and connector actions.",
+      "requires_review": true
+    }
+  ],
+  "lock_states": [
+    {
+      "id": "unlocked",
+      "dashboard_behavior": "normal allowed surfaces can show the item",
+      "carnos_behavior": "Carnos may use the item if permission allows",
+      "export_behavior": "export allowed if privacy level allows"
+    },
+    {
+      "id": "review_required",
+      "dashboard_behavior": "show review-required state before broad exposure",
+      "carnos_behavior": "Carnos may not use without review",
+      "export_behavior": "export preview must flag review requirement"
+    },
+    {
+      "id": "hidden_from_dashboards",
+      "dashboard_behavior": "hide from broad dashboard cards and timeline surfaces",
+      "carnos_behavior": "Carnos may use only if separate permission allows",
+      "export_behavior": "export preview must show hidden status"
+    },
+    {
+      "id": "hidden_from_carnos",
+      "dashboard_behavior": "user-facing UI may show with badge",
+      "carnos_behavior": "Carnos cannot read, summarize, remember, or use in context",
+      "export_behavior": "export requires explicit user approval if sensitive"
+    },
+    {
+      "id": "fully_locked",
+      "dashboard_behavior": "hide from broad surfaces and show only locked metadata where safe",
+      "carnos_behavior": "Carnos cannot access",
+      "export_behavior": "export blocked by default and requires explicit review"
+    }
+  ],
+  "redaction_levels": [
+    {
+      "id": "full_value",
+      "display": "show complete value only where allowed",
+      "carnos_allowed": true
+    },
+    {
+      "id": "summary_only",
+      "display": "show safe summary without full details",
+      "carnos_allowed": true
+    },
+    {
+      "id": "metadata_only",
+      "display": "show non-content metadata only",
+      "carnos_allowed": false
+    },
+    {
+      "id": "redacted",
+      "display": "show redacted placeholder",
+      "carnos_allowed": false
+    },
+    {
+      "id": "hidden",
+      "display": "do not show in normal surfaces",
+      "carnos_allowed": false
+    }
+  ],
+  "action_statuses": [
+    "draft",
+    "needs_review",
+    "approved",
+    "rejected",
+    "expired",
+    "completed",
+    "failed",
+    "blocked"
+  ],
+  "actor_model": [
+    {
+      "id": "user",
+      "permissions": [
+        "request",
+        "review",
+        "approve",
+        "reject",
+        "configure"
+      ],
+      "restrictions": [
+        "high-risk actions may require confirmation"
+      ]
+    },
+    {
+      "id": "carnos",
+      "permissions": [
+        "suggest",
+        "summarize when allowed",
+        "create proposal when allowed"
+      ],
+      "restrictions": [
+        "no self-approval",
+        "no raw token access",
+        "no silent memory save",
+        "no silent export",
+        "no destructive action",
+        "no silent Spotify action"
+      ]
+    },
+    {
+      "id": "system",
+      "permissions": [
+        "enforce state",
+        "record audit boundary",
+        "expire actions"
+      ],
+      "restrictions": [
+        "no silent user-consent substitution"
+      ]
+    }
+  ],
+  "privacy_surfaces": [
+    "/privacy dashboard",
+    "Memory Inbox",
+    "Saved Memories",
+    "Private Mode",
+    "Timed Private Mode",
+    "Emergency Lockdown",
+    "Sensitive Locks",
+    "Domain Privacy",
+    "Carnos Access",
+    "Export Preview",
+    "Destructive Action Preview",
+    "Audit Viewer",
+    "External API Connectors",
+    "Spotify Connector",
+    "Media Permissions",
+    "Connector Audit"
+  ],
+  "domain_primitives": [
+    "domain_id",
+    "privacy_level",
+    "sensitivity_level",
+    "lock_state",
+    "redaction_level",
+    "carnos_read_allowed",
+    "carnos_summarize_allowed",
+    "carnos_memory_allowed",
+    "dashboard_allowed",
+    "timeline_allowed",
+    "analytics_allowed",
+    "export_allowed",
+    "connector_allowed",
+    "spotify_allowed",
+    "audit_required",
+    "review_required"
+  ],
+  "transition_rules": [
+    {
+      "from": "public",
+      "to": "private",
+      "allowed": true,
+      "review_required": false,
+      "audit_required": true
+    },
+    {
+      "from": "private",
+      "to": "public",
+      "allowed": true,
+      "review_required": true,
+      "audit_required": true
+    },
+    {
+      "from": "sensitive",
+      "to": "internal",
+      "allowed": true,
+      "review_required": true,
+      "audit_required": true
+    },
+    {
+      "from": "locked",
+      "to": "internal",
+      "allowed": true,
+      "review_required": true,
+      "audit_required": true
+    },
+    {
+      "from": "fully_locked",
+      "to": "unlocked",
+      "allowed": true,
+      "review_required": true,
+      "audit_required": true
+    }
+  ],
+  "validation_rules": [
+    "Every privacy-controlled item must have privacy_level.",
+    "Every privacy-controlled item must have sensitivity_level.",
+    "Every privacy-controlled item must have lock_state.",
+    "Every privacy-controlled item must have redaction_level.",
+    "Every high-risk action must have action_status.",
+    "Every Carnos permission decision must identify the actor and domain.",
+    "Every connector or Spotify action must pass private mode and lock checks.",
+    "Every sensitive export preview must include redaction and warning metadata.",
+    "Every destructive action boundary must require review and audit.",
+    "Every privacy state transition must record whether review and audit are required."
+  ],
+  "audit_requirement_map": [
+    "privacy level changed",
+    "sensitivity level changed",
+    "lock state changed",
+    "redaction level changed",
+    "Carnos access changed",
+    "memory candidate reviewed",
+    "export requested",
+    "destructive action requested",
+    "connector permission changed",
+    "Spotify scope changed",
+    "Spotify action proposed",
+    "Private Mode enabled",
+    "Emergency Lockdown enabled"
+  ],
+  "connector_and_spotify_compatibility": [
+    "connector token boundary must not expose raw tokens",
+    "connector action request must use action_status",
+    "connector action must respect lock_state",
+    "connector action must respect Private Mode",
+    "Spotify account connection must require user OAuth",
+    "Spotify token access by Carnos is blocked",
+    "Spotify action proposal must use action_status",
+    "Spotify recently played data defaults to sensitive",
+    "Spotify playback control requires permission review"
+  ],
+  "must_not_do": [
+    "do not create migrations in 20B",
+    "do not invent live database schema in 20B",
+    "do not implement runtime Spotify OAuth in 20B",
+    "do not implement connector token storage in 20B",
+    "do not implement destructive action execution in 20B",
+    "do not allow Carnos to bypass privacy states"
+  ],
+  "acceptance": [
+    "Core privacy levels are defined.",
+    "Sensitivity levels are defined.",
+    "Lock states are defined.",
+    "Redaction levels are defined.",
+    "Action statuses are defined.",
+    "Actor model is defined.",
+    "Privacy surfaces are defined.",
+    "Domain primitives are defined.",
+    "Validation rules are defined.",
+    "Connector and Spotify compatibility markers are defined.",
+    "20B audit passes.",
+    "Full project check passes."
+  ]
+}

@@ -3735,3 +3735,7 @@ Phase 18 is closed from 18A through 18O pending final verification. Final proof 
 ## Phase 20A Status
 
 Phase 20A locked: complete Phase 20 feature inventory, total steps, 20A-20Z chunk map, source coverage carryover, Spotify account connection flow, Future API Connector Framework, exclusions/deferred items, and safety guarantees. Each chunk records Purpose, Builds, Does, Acceptance, Not Allowed, and Feature Markers.
+
+## Phase 20B Status
+
+Phase 20B locked: core privacy levels, sensitivity levels, lock states, redaction levels, action statuses, actor model, domain primitives, validation rules, and connector/Spotify compatibility. No live database schema was needed for this contract-only chunk.

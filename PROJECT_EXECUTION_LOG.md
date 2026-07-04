@@ -5309,3 +5309,7 @@ Added final Phase 18 completion proof, fixture, report, checklist, and audit. Th
 ## Phase 20A — Privacy Export Connector Scope Lock
 
 Locked the complete Phase 20 constitution, including every feature, total step, 20A-20Z build chunk, source coverage carryover, cross-phase connection, Spotify account connection flow, future API connector framework, exclusions, deferrals, and safety guarantees. Each chunk records Purpose, Builds, Does, Acceptance, Not Allowed, and Feature Markers.
+
+## Phase 20B — Core Privacy Domain Contracts
+
+Defined the core privacy domain contract layer: privacy levels, sensitivity levels, lock states, redaction levels, action statuses, actor model, privacy surfaces, domain primitives, validation rules, transition rules, and connector/Spotify compatibility. No live database schema was needed for this contract-only chunk.

@@ -4446,3 +4446,14 @@ Files added or updated:
 - package.json
 
 Purpose: make the repo itself remember every Phase 20 feature, total step, and chunk-level Purpose/Builds/Does/Acceptance/Not Allowed/Feature Markers before implementation continues.
+
+## Phase 20B — Core Privacy Domain Contracts
+
+Files added or updated:
+- docs/contracts/PHASE_20B_CORE_PRIVACY_DOMAIN_CONTRACTS.md
+- docs/fixtures/phase20-privacy-export/phase20b_core_privacy_domain_contracts_fixture.json
+- docs/phase-reports/PHASE_20B_CORE_PRIVACY_DOMAIN_CONTRACTS_REPORT.md
+- scripts/audit-phase-20b.mjs
+- package.json
+
+Purpose: define the shared privacy vocabulary used by memory, Private Mode, Sensitive Locks, export, destructive action boundaries, Carnos permissions, external connectors, and Spotify.

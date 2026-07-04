@@ -2051,3 +2051,10 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added complete 20A-20Z chunk-by-chunk plan with Purpose, Builds, Does, Acceptance, Not Allowed, and Feature Markers.
 - Added Phase 20A fixture and audit script.
 - Integrated audit:phase20a into package checks.
+
+## Phase 20B — Core Privacy Domain Contracts
+
+- Added core privacy domain contracts.
+- Added privacy/sensitivity/lock/redaction/status primitives.
+- Added connector and Spotify compatibility markers.
+- Integrated audit:phase20b into package checks.
