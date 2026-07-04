@@ -2096,3 +2096,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added Carnos access matrix contracts.
 - Added capability rules, absolute denials, domain/mode interactions, connector and Spotify restrictions, blocked reasons, audit events, and badges.
 - Integrated audit:phase20h into package checks.
+
+## Phase 20I — Privacy Action Review Queue
+
+- Added privacy action review queue contracts.
+- Added queue item model, action types, statuses, risk levels, actor rules, expiration rules, blocked reasons, audit events, badges, and connector/Spotify review rules.
+- Integrated audit:phase20i into package checks.

@@ -5337,3 +5337,7 @@ Defined sensitive lock levels, domain privacy permission fields, domain registry
 ## Phase 20H — Carnos Access Matrix
 
 Defined the Carnos access matrix for reading, summarizing, suggesting, memory candidates, context packs, analytics, dashboards, chat references, export summaries, action proposals, and approved action execution. Added absolute denials, domain interaction rules, Private Mode rules, Emergency Lockdown rules, connector rules, Spotify rules, access decision inputs, blocked reasons, audit events, and badge requirements. No schema was needed because this chunk does not add persistence, migrations, RLS, or repositories.
+
+## Phase 20I — Privacy Action Review Queue
+
+Defined the privacy action review queue contract with queue item model, reviewable action types, status model, risk levels, priority levels, actor rules, action review rules, expiration rules, blocked reasons, audit events, badge requirements, and connector/Spotify review rules. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, or live approval execution.

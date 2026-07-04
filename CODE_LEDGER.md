@@ -4523,3 +4523,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock Carnos access capabilities, absolute denials, domain/mode interactions, connector and Spotify restrictions, blocked reasons, audit events, and badge requirements without adding schema.
+
+## Phase 20I — Privacy Action Review Queue
+
+Files added or updated:
+- docs/contracts/PHASE_20I_PRIVACY_ACTION_REVIEW_QUEUE.md
+- docs/fixtures/phase20-privacy-export/phase20i_privacy_action_review_queue_fixture.json
+- docs/phase-reports/PHASE_20I_PRIVACY_ACTION_REVIEW_QUEUE_REPORT.md
+- scripts/audit-phase-20i.mjs
+- package.json
+
+Purpose: lock the privacy action review queue model, action types, status/risk/priority rules, actor restrictions, expiration rules, blocked reasons, audit events, badges, and connector/Spotify review behavior without adding schema.
