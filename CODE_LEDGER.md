@@ -4600,3 +4600,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock shared Phase 20 privacy audit taxonomy, event groups, actors, statuses, redaction levels, redaction reasons, badges, surface reuse rules, badge resolution, connector badges, Spotify badges, and Carnos badges without adding schema or UI.
+
+## Phase 20P — Data Retention Boundary
+
+Files added or updated:
+- docs/contracts/PHASE_20P_DATA_RETENTION_BOUNDARY.md
+- docs/fixtures/phase20-privacy-export/phase20p_data_retention_boundary_fixture.json
+- docs/phase-reports/PHASE_20P_DATA_RETENTION_BOUNDARY_REPORT.md
+- scripts/audit-phase-20p.mjs
+- package.json
+
+Purpose: lock retention policy taxonomy, retention subjects, retention states, future timestamp fields, retention versus privacy rules, retention actions, warnings, blocked reasons, audit events, badges, connector retention, Spotify retention, source/evidence retention, and custom tracker privacy proposal retention without adding schema or runtime jobs.

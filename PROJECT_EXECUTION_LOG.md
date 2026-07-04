@@ -5365,3 +5365,7 @@ Defined Audit Viewer, audit event display, detail panel, filters, event groups, 
 ## Phase 20O — Privacy Audit Taxonomy Redaction Badges
 
 Defined privacy audit event taxonomy, event group taxonomy, actor taxonomy, status taxonomy, redaction levels, redaction reasons, badge taxonomy, surface reuse rules, badge resolution rules, taxonomy mapping requirements, blocked reasons, audit events, connector badges, Spotify badges, and Carnos badges. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, UI components, or runtime enforcement.
+
+## Phase 20P — Data Retention Boundary
+
+Defined retention policy taxonomy, retention subjects, retention state model, future timestamp fields, retention versus privacy rules, retention action rules, warning codes, blocked reasons, audit events, badge requirements, memory candidate retention, saved memory retention, export retention, private session retention, privacy review request retention, audit preview retention, connector action retention, Spotify action retention, source/evidence retention, and custom tracker privacy proposal retention. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, retention jobs, cron workers, archive mutations, expiry mutations, or runtime enforcement.

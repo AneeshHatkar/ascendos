@@ -2138,3 +2138,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added privacy audit taxonomy, redaction, and badge contracts.
 - Added event groups, actors, statuses, redaction levels, redaction reasons, surface reuse rules, badge resolution rules, connector badges, Spotify badges, and Carnos badges.
 - Integrated audit:phase20o into package checks.
+
+## Phase 20P — Data Retention Boundary
+
+- Added data retention boundary contracts.
+- Added retention policies, subjects, states, future timestamp fields, retention/privacy rules, action rules, warnings, blocked reasons, audit events, badges, connector retention, Spotify retention, source/evidence retention, and custom tracker privacy proposal retention.
+- Integrated audit:phase20p into package checks.
