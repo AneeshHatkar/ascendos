@@ -4611,3 +4611,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock retention policy taxonomy, retention subjects, retention states, future timestamp fields, retention versus privacy rules, retention actions, warnings, blocked reasons, audit events, badges, connector retention, Spotify retention, source/evidence retention, and custom tracker privacy proposal retention without adding schema or runtime jobs.
+
+## Phase 20Q — Cross-Phase Privacy Enforcement Map
+
+Files added or updated:
+- docs/contracts/PHASE_20Q_CROSS_PHASE_PRIVACY_ENFORCEMENT_MAP.md
+- docs/fixtures/phase20-privacy-export/phase20q_cross_phase_privacy_enforcement_fixture.json
+- docs/phase-reports/PHASE_20Q_CROSS_PHASE_PRIVACY_ENFORCEMENT_MAP_REPORT.md
+- scripts/audit-phase-20q.mjs
+- package.json
+
+Purpose: lock cross-phase enforcement between Phase 20 privacy/export rules and settings, memory, current-info, memory RAG, analytics, custom trackers, dashboards, Carnos, documents/evidence, export/forget/destructive flows, connectors, and Spotify without adding runtime enforcement.

@@ -5369,3 +5369,7 @@ Defined privacy audit event taxonomy, event group taxonomy, actor taxonomy, stat
 ## Phase 20P — Data Retention Boundary
 
 Defined retention policy taxonomy, retention subjects, retention state model, future timestamp fields, retention versus privacy rules, retention action rules, warning codes, blocked reasons, audit events, badge requirements, memory candidate retention, saved memory retention, export retention, private session retention, privacy review request retention, audit preview retention, connector action retention, Spotify action retention, source/evidence retention, and custom tracker privacy proposal retention. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, retention jobs, cron workers, archive mutations, expiry mutations, or runtime enforcement.
+
+## Phase 20Q — Cross-Phase Privacy Enforcement Map
+
+Defined cross-phase privacy enforcement principles, Phase 13.5 settings/privacy links, Phase 15 memory/private-mode/do-not-remember links, Phase 16 current-info/source-review links, Phase 17 memory RAG privacy links, Phase 18 analytics privacy links, Phase 19 custom tracker privacy links, dashboard links, Carnos links, document/evidence links, export/forget/destructive links, connector links, Spotify links, cross-surface enforcement matrix, enforcement order, blocked reasons, audit events, and badge requirements. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, runtime guards, adapters, queries, UI wiring, or enforcement code.

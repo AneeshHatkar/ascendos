@@ -2144,3 +2144,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added data retention boundary contracts.
 - Added retention policies, subjects, states, future timestamp fields, retention/privacy rules, action rules, warnings, blocked reasons, audit events, badges, connector retention, Spotify retention, source/evidence retention, and custom tracker privacy proposal retention.
 - Integrated audit:phase20p into package checks.
+
+## Phase 20Q — Cross-Phase Privacy Enforcement Map
+
+- Added cross-phase privacy enforcement map contracts.
+- Added phase links, cross-surface matrix, enforcement order, blocked reasons, audit events, badges, connector links, Spotify links, Carnos links, and dashboard/source/analytics/custom tracker enforcement links.
+- Integrated audit:phase20q into package checks.
