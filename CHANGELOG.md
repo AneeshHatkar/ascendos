@@ -2108,3 +2108,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added two-step confirmation and cooldown boundary contracts.
 - Added confirmation levels, action lists, cooldown states, readiness rules, blocked reasons, audit events, badges, and connector/Spotify confirmation rules.
 - Integrated audit:phase20j into package checks.
+
+## Phase 20K — Data Scope Selector
+
+- Added data scope selector contracts.
+- Added selector model, requested actions, domain/record/source dimensions, preview requirements, blocked reasons, audit events, badges, and connector/Spotify selector rules.
+- Integrated audit:phase20k into package checks.

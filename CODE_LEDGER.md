@@ -4545,3 +4545,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock confirmation levels, cooldown boundaries, expiry, execution readiness, action group rules, blocked reasons, audit events, badges, connector confirmation, and Spotify confirmation without adding schema.
+
+## Phase 20K — Data Scope Selector
+
+Files added or updated:
+- docs/contracts/PHASE_20K_DATA_SCOPE_SELECTOR.md
+- docs/fixtures/phase20-privacy-export/phase20k_data_scope_selector_fixture.json
+- docs/phase-reports/PHASE_20K_DATA_SCOPE_SELECTOR_REPORT.md
+- scripts/audit-phase-20k.mjs
+- package.json
+
+Purpose: lock shared scope selector behavior for export, forget, hide, archive, destructive action previews, privacy review, connectors, Spotify, memory, custom trackers, documents, current info, analytics, timeline, and audit surfaces without adding schema.

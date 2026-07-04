@@ -5345,3 +5345,7 @@ Defined the privacy action review queue contract with queue item model, reviewab
 ## Phase 20J — Two-Step Confirmation Cooldown Boundary
 
 Defined confirmation levels, one-step actions, two-step actions, cooldown-required actions, cooldown state model, confirmation state model, future timestamp fields, execution readiness rules, action group rules, blocked reasons, audit events, badge requirements, and connector/Spotify confirmation rules. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, or runtime execution.
+
+## Phase 20K — Data Scope Selector
+
+Defined the shared data scope selector model with requested actions, domain dimensions, record type dimensions, source type dimensions, selector dimensions, action-specific rules, preview requirements, blocked reasons, audit events, badge requirements, and connector/Spotify selector rules. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, live queries, export generation, mutations, connector reads, or Spotify reads.
