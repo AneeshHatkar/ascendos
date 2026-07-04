@@ -3731,3 +3731,7 @@ Added Phase 18 anti-demo-data and privacy/sensitivity audit covering fake analyt
 Status: Complete pending verification and commit.
 
 Phase 18 is closed from 18A through 18O pending final verification. Final proof preserves analytics/experiments completion, 18A-B offline persistence boundaries, optional local Carnos runtime boundary, no fake analytics/experiment data, no runtime SQL/Supabase/model/network/embedding/vector paths, no memory writes, no action execution, no causality/proof claims, and review-before-memory-write.
+
+## Phase 20A Status
+
+Phase 20A locked: complete Phase 20 feature inventory, total steps, 20A-20Z chunk map, source coverage carryover, Spotify account connection flow, Future API Connector Framework, exclusions/deferred items, and safety guarantees. Each chunk records Purpose, Builds, Does, Acceptance, Not Allowed, and Feature Markers.

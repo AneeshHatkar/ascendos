@@ -2044,3 +2044,10 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 ## Final Phase 18 Fixtures + Completion Report
 
 - Added final Phase 18 completion proof, fixture, report, checklist, and audit chaining through `audit:phase18o`.
+
+## Phase 20A — Privacy Export Connector Scope Lock
+
+- Locked the expanded Phase 20 privacy/export/memory/connector/Spotify scope.
+- Added complete 20A-20Z chunk-by-chunk plan with Purpose, Builds, Does, Acceptance, Not Allowed, and Feature Markers.
+- Added Phase 20A fixture and audit script.
+- Integrated audit:phase20a into package checks.

@@ -5305,3 +5305,7 @@ Added Phase 18 anti-demo-data and privacy/sensitivity audit. This covers anti-fa
 ## Final Phase 18 Fixtures + Completion Report
 
 Added final Phase 18 completion proof, fixture, report, checklist, and audit. This closes Phase 18 from 18A through 18O and proves the analytics/experiments stack is complete while preserving all 18A-B offline persistence and local runtime boundaries. Final boundary remains: no runtime SQL reads, no schema writes, no Supabase runtime calls, no model calls, no network calls, no embedding/vector calls, no memory writes, no action execution, no fake analytics/experiment data, no causality/proof claims, local runtime not required, and review-before-memory-write preserved.
+
+## Phase 20A — Privacy Export Connector Scope Lock
+
+Locked the complete Phase 20 constitution, including every feature, total step, 20A-20Z build chunk, source coverage carryover, cross-phase connection, Spotify account connection flow, future API connector framework, exclusions, deferrals, and safety guarantees. Each chunk records Purpose, Builds, Does, Acceptance, Not Allowed, and Feature Markers.

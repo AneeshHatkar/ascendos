@@ -1,0 +1,1595 @@
+{
+  "phase": "20A",
+  "phase_name": "Privacy Export Connector Scope Lock",
+  "master_phase_name": "Phase 20 — Privacy / Export / Memory Control / External Connector Trust Layer",
+  "rule": "If a Phase 20 feature is not written into this lock, memory is not trusted to remember it later.",
+  "purpose": "Lock every Phase 20 feature, step, build chunk, cross-phase connection, safety rule, source coverage note, Spotify account connection boundary, and connector trust boundary before implementation continues.",
+  "source_coverage_carryover": {
+    "scanned_items": 6760,
+    "likely_covered": 6739,
+    "partial": 12,
+    "weak": 1,
+    "missing_by_keyword_scan": 8,
+    "decision": "No major original DOCX or JSON gap blocks Phase 20. New Phase 20 additions must be locked here before implementation."
+  },
+  "minor_old_source_notes": [
+    "schema_version 1.1.1",
+    "log bug",
+    "add lab",
+    "add set",
+    "event_source system",
+    "voice command log my day",
+    "python ML worker current_patch Phase 5.15"
+  ],
+  "new_additions_to_lock": [
+    "Spotify Connector",
+    "Spotify OAuth/PKCE boundary",
+    "Spotify account connection flow",
+    "Spotify Developer App setup instructions",
+    "Spotify redirect URI boundary",
+    "Spotify environment variable boundary",
+    "External API Connector Framework",
+    "connector account model",
+    "connector permission model",
+    "connector scope model",
+    "connector token boundary",
+    "connector action request",
+    "connector action manifest",
+    "connector audit event",
+    "Spotify device snapshot",
+    "Spotify action proposal",
+    "Amazon Echo excluded",
+    "Garmin deferred",
+    "Emergency Lockdown"
+  ],
+  "full_feature_inventory": [
+    "/privacy dashboard upgrade",
+    "Memory Inbox",
+    "Saved Memories",
+    "memory approval",
+    "memory rejection",
+    "memory deferral",
+    "memory candidate list",
+    "Carnos-created memory candidates",
+    "manual memory candidates",
+    "memory source and evidence links",
+    "memory confidence",
+    "memory sensitivity level",
+    "memory privacy level",
+    "duplicate memory warning",
+    "memory conflict warning",
+    "forget memory",
+    "hide memory and data",
+    "archive memory and data",
+    "Delete / Destructive Actions card",
+    "destructive action boundary",
+    "forget versus hide versus archive versus destructive action definitions",
+    "export data",
+    "export scope selector",
+    "export preview",
+    "export manifest",
+    "export expiration",
+    "export history",
+    "forget manifest",
+    "destructive action manifest",
+    "data scope selector",
+    "Private Mode",
+    "Timed Private Mode",
+    "Emergency Lockdown",
+    "Sensitive Locks",
+    "domain privacy permissions",
+    "Carnos access matrix",
+    "privacy action review queue",
+    "two-step confirmation",
+    "cooldown boundary",
+    "Audit Viewer",
+    "append-only audit boundary",
+    "privacy audit event taxonomy",
+    "redaction rules",
+    "privacy badges",
+    "privacy preview before export",
+    "privacy preview before forget",
+    "privacy preview before destructive action",
+    "data retention boundary",
+    "cross-phase privacy enforcement",
+    "Future API Connector Framework",
+    "external connector registry",
+    "connector account model",
+    "connector permission model",
+    "connector scope model",
+    "connector auth boundary",
+    "connector token boundary",
+    "connector status",
+    "connector action request",
+    "connector action manifest",
+    "connector audit event",
+    "connector private-mode rule",
+    "connector redaction rule",
+    "connector disconnect boundary",
+    "connector retention rule",
+    "connector review queue integration",
+    "connector Carnos access rule",
+    "Spotify Connector",
+    "Spotify Developer App setup instructions",
+    "Spotify account connection flow",
+    "Spotify redirect URI boundary",
+    "Spotify environment variable boundary",
+    "Spotify OAuth/PKCE boundary",
+    "Spotify authorization URL boundary",
+    "Spotify callback boundary",
+    "Spotify state parameter boundary",
+    "Spotify code verifier boundary",
+    "Spotify code challenge boundary",
+    "Spotify token exchange boundary",
+    "Spotify refresh boundary",
+    "Spotify revoke boundary",
+    "Spotify connection status",
+    "Spotify connect boundary",
+    "Spotify disconnect boundary",
+    "Spotify scope grants",
+    "Spotify missing scopes",
+    "Spotify account/profile snapshot boundary",
+    "Spotify playback state snapshot",
+    "Spotify current track boundary",
+    "Spotify device snapshot",
+    "Spotify playlist read boundary",
+    "Spotify recently played sensitive boundary",
+    "Spotify media permission model",
+    "Spotify action proposal model",
+    "Spotify action manifest",
+    "Spotify action audit",
+    "Spotify private-mode rule",
+    "Spotify Premium-required boundary",
+    "Spotify no-active-device boundary",
+    "Spotify Carnos action proposals",
+    "Spotify action safety",
+    "Spotify blocked reasons",
+    "Spotify UI card",
+    "Media Permissions card",
+    "Connector Audit card",
+    "manual workout logging through Carnos chat",
+    "manual workout logging through Carnos voice later",
+    "structured workout entry proposal",
+    "exercise name",
+    "sets",
+    "reps",
+    "weight",
+    "duration",
+    "cardio",
+    "energy",
+    "notes",
+    "health/body compatibility",
+    "custom tracker compatibility",
+    "timeline compatibility",
+    "analytics compatibility",
+    "Amazon Echo/Alexa integration excluded",
+    "Garmin integration deferred",
+    "Apple Health full integration deferred",
+    "Gmail connector deferred",
+    "Google Calendar connector deferred",
+    "Notion connector deferred",
+    "GitHub connector deferred",
+    "Slack connector deferred",
+    "Discord connector deferred",
+    "YouTube connector deferred",
+    "LinkedIn connector deferred",
+    "full commercial streaming replacement excluded",
+    "uncontrolled Carnos external actions excluded",
+    "silent token storage excluded",
+    "silent memory writes excluded",
+    "silent data export excluded",
+    "silent destructive actions excluded",
+    "final v1 polish/deployment/demo polish excluded because that is Phase 21"
+  ],
+  "total_steps": [
+    "Clean temporary audit files and confirm repo is clean.",
+    "Lock Phase 20 expanded scope.",
+    "Record source-to-repo coverage audit summary.",
+    "Record all minor old-source notes and all new Phase 20 additions.",
+    "Create Phase 20 schema/source interconnection map.",
+    "Lock all 20A-20Z build chunks inside the repo.",
+    "Add a 20A audit that fails if any Phase 20 feature/chunk is missing from the lock.",
+    "Define core privacy domain contracts.",
+    "Define memory control contracts.",
+    "Define forget/hide/archive/destructive semantics.",
+    "Define Private Mode and Timed Private Mode.",
+    "Define Emergency Lockdown.",
+    "Define Sensitive Locks and domain privacy permissions.",
+    "Define Carnos access matrix.",
+    "Define privacy action review queue.",
+    "Define two-step confirmation and cooldown boundary.",
+    "Define data scope selector.",
+    "Define export contracts, export manifest, and export expiration.",
+    "Define forget/destructive action manifest and safety boundary.",
+    "Define Audit Viewer and append-only audit boundary.",
+    "Define privacy audit taxonomy, redaction rules, and privacy badges.",
+    "Define data retention boundary.",
+    "Define cross-phase privacy enforcement map.",
+    "Define Future API Connector Framework.",
+    "Define connector registry, account model, permissions, scopes, token boundary, action review, audit events.",
+    "Define Spotify connector foundation.",
+    "Define Spotify account connection flow.",
+    "Define Spotify OAuth/PKCE boundary.",
+    "Define Spotify permissions, scopes, and risk levels.",
+    "Define Spotify playback, current-track, device, playlist, and recently-played boundaries.",
+    "Define Spotify Carnos actions and action safety.",
+    "Define Spotify action manifest and audit events.",
+    "Define manual workout logging through Carnos chat/voice.",
+    "Define explicit exclusions and deferred items.",
+    "Build /privacy dashboard view model.",
+    "Build Memory Inbox card.",
+    "Build Saved Memories card.",
+    "Build Forget card.",
+    "Build Destructive Actions card.",
+    "Build Export card.",
+    "Build Private Mode card.",
+    "Build Timed Private Mode display.",
+    "Build Emergency Lockdown card.",
+    "Build Sensitive Locks card.",
+    "Build Domain Privacy card.",
+    "Build Carnos Access card.",
+    "Build Privacy Review Queue card.",
+    "Build Audit Viewer card.",
+    "Build Data Retention card.",
+    "Build Redaction Controls card.",
+    "Build External API Connectors card.",
+    "Build Spotify Connector card.",
+    "Build Media Permissions card.",
+    "Build Connector Audit card.",
+    "Add Phase 20 fixtures covering memory, privacy, export, destructive, connector, and Spotify states.",
+    "Add Phase 20 audits.",
+    "Add package check integration for Phase 20 audits.",
+    "Run full verification.",
+    "Add Phase 20 completion report.",
+    "Commit and push Phase 20 completion."
+  ],
+  "chunks": [
+    {
+      "id": "20A",
+      "name": "Scope lock + coverage carryover + source interconnection map",
+      "purpose": "Create the repo-side Phase 20 constitution so no Phase 20 feature, step, chunk, Spotify requirement, connector requirement, exclusion, deferral, source note, or safety rule can be forgotten later.",
+      "builds": [
+        "full Phase 20 constitution",
+        "Phase 20 feature inventory",
+        "Phase 20 total step list",
+        "20A through 20Z chunk map",
+        "source coverage carryover",
+        "minor old-source notes",
+        "new Phase 20 additions",
+        "cross-phase interconnection map",
+        "Spotify account connection flow",
+        "Spotify OAuth/PKCE boundary",
+        "Future API Connector Framework lock",
+        "exclusion and deferral registry",
+        "safety guarantee registry",
+        "Phase 20A audit"
+      ],
+      "does": [
+        "locks every Phase 20 feature before implementation",
+        "locks what every chunk builds and does",
+        "records acceptance and not-allowed rules for every chunk",
+        "makes the repo the source of memory for Phase 20",
+        "prevents chat drift and terminal drift"
+      ],
+      "acceptance": [
+        "all 20A through 20Z chunks exist in the fixture and roadmap",
+        "each chunk has purpose, builds, does, acceptance, not_allowed, and feature_markers",
+        "source coverage numbers are recorded",
+        "Spotify connection flow is recorded",
+        "connector framework is recorded",
+        "exclusions and deferrals are recorded",
+        "audit:phase20a passes",
+        "npm run check passes"
+      ],
+      "not_allowed": [
+        "do not implement runtime Spotify OAuth yet",
+        "do not create live connector execution yet",
+        "do not add real destructive action execution",
+        "do not skip any Phase 20 feature from the lock",
+        "do not rely on chat memory after this chunk"
+      ],
+      "feature_markers": [
+        "Phase 20 constitution",
+        "coverage carryover",
+        "20A-20Z chunk map",
+        "Spotify account connection flow",
+        "Future API Connector Framework",
+        "exclusions and deferrals"
+      ]
+    },
+    {
+      "id": "20B",
+      "name": "Core privacy domain contracts",
+      "purpose": "Define the primitive privacy language used by every later Phase 20 feature.",
+      "builds": [
+        "privacy levels",
+        "sensitivity levels",
+        "lock states",
+        "redaction levels",
+        "action statuses",
+        "actor model",
+        "privacy surfaces",
+        "domain privacy primitives"
+      ],
+      "does": [
+        "creates the shared privacy vocabulary",
+        "prevents later features from inventing conflicting states",
+        "supports memory, export, destructive actions, connectors, and Spotify"
+      ],
+      "acceptance": [
+        "privacy levels are documented",
+        "sensitivity levels are documented",
+        "lock states are documented",
+        "redaction levels are documented",
+        "action statuses are documented",
+        "actor model is documented"
+      ],
+      "not_allowed": [
+        "do not add UI yet",
+        "do not add live DB writes",
+        "do not make Carnos bypass rules"
+      ],
+      "feature_markers": [
+        "privacy levels",
+        "sensitivity levels",
+        "lock states",
+        "redaction levels",
+        "action statuses"
+      ]
+    },
+    {
+      "id": "20C",
+      "name": "Memory control contracts",
+      "purpose": "Upgrade memory into user-governed memory control with Memory Inbox and Saved Memories.",
+      "builds": [
+        "Memory Inbox",
+        "memory candidate list",
+        "Carnos-created memory candidates",
+        "manual memory candidates",
+        "memory source and evidence links",
+        "memory confidence",
+        "memory sensitivity level",
+        "memory privacy level",
+        "duplicate memory warning",
+        "memory conflict warning",
+        "Saved Memories",
+        "memory approval",
+        "memory rejection",
+        "memory deferral",
+        "memory Carnos access changes",
+        "no silent memory write rules"
+      ],
+      "does": [
+        "lets user review proposed memories before saving",
+        "shows what Carnos can remember and use",
+        "blocks silent memory creation",
+        "links memory actions to audit"
+      ],
+      "acceptance": [
+        "Memory Inbox contract exists",
+        "Saved Memories contract exists",
+        "approval, rejection, and deferral are defined",
+        "Carnos self-approval is blocked",
+        "silent sensitive memory save is blocked"
+      ],
+      "not_allowed": [
+        "do not allow Carnos to approve its own memory",
+        "do not silently save sensitive memory",
+        "do not allow rejected memory in Carnos context"
+      ],
+      "feature_markers": [
+        "Memory Inbox",
+        "Saved Memories",
+        "memory approval",
+        "memory rejection",
+        "memory deferral",
+        "no silent memory write"
+      ]
+    },
+    {
+      "id": "20D",
+      "name": "Forget / hide / archive / destructive action semantics",
+      "purpose": "Define the difference between forget, hide, archive, and protected destructive actions.",
+      "builds": [
+        "forget definition",
+        "hide definition",
+        "archive definition",
+        "destructive action definition",
+        "forget behavior",
+        "hide behavior",
+        "archive behavior",
+        "destructive action safety behavior",
+        "forget manifest foundation",
+        "destructive action manifest foundation"
+      ],
+      "does": [
+        "prevents privacy ambiguity",
+        "defines what Carnos can no longer use",
+        "defines what dashboards should no longer show",
+        "defines what remains for proof and audit",
+        "defines protected high-risk removal boundaries"
+      ],
+      "acceptance": [
+        "forget is defined as removing from Carnos use",
+        "hide is defined as removing from normal surfaces",
+        "archive is defined as retaining proof but removing active use",
+        "destructive action is defined as protected high-risk removal",
+        "manifest foundation is recorded"
+      ],
+      "not_allowed": [
+        "do not confuse forget with destructive action",
+        "do not allow Carnos destructive action",
+        "do not remove audit history casually"
+      ],
+      "feature_markers": [
+        "forget definition",
+        "hide definition",
+        "archive definition",
+        "destructive action boundary",
+        "forget manifest",
+        "destructive action manifest"
+      ]
+    },
+    {
+      "id": "20E",
+      "name": "Private Mode + Timed Private Mode",
+      "purpose": "Make Private Mode an enforceable ruleset across memory, dashboards, analytics, connectors, and Spotify.",
+      "builds": [
+        "private mode states",
+        "timed private mode",
+        "private mode expiry",
+        "private mode audit events",
+        "memory blocking",
+        "dashboard blocking",
+        "analytics blocking",
+        "connector blocking",
+        "Spotify blocking",
+        "private mode status badges"
+      ],
+      "does": [
+        "blocks automatic memory candidate creation",
+        "blocks sensitive summaries",
+        "blocks broad dashboard exposure",
+        "restricts connector actions",
+        "restricts Spotify actions",
+        "records enable, disable, and expiry events"
+      ],
+      "acceptance": [
+        "private mode states are defined",
+        "timed private mode is defined",
+        "expiry behavior is defined",
+        "connector and Spotify restrictions are defined",
+        "audit behavior is defined"
+      ],
+      "not_allowed": [
+        "do not make Private Mode a vague toggle",
+        "do not allow silent memory creation during Private Mode",
+        "do not allow Spotify private-mode bypass"
+      ],
+      "feature_markers": [
+        "Private Mode",
+        "Timed Private Mode",
+        "private mode expiry",
+        "Spotify blocking",
+        "connector blocking"
+      ]
+    },
+    {
+      "id": "20F",
+      "name": "Emergency Lockdown",
+      "purpose": "Add stronger privacy protection than Private Mode for sensitive situations.",
+      "builds": [
+        "emergency lockdown state",
+        "lockdown effects",
+        "sensitive domain lock behavior",
+        "Carnos memory disablement",
+        "connector restrictions",
+        "Spotify restrictions",
+        "unlock confirmation rules",
+        "lockdown audit events"
+      ],
+      "does": [
+        "turns on strong privacy protections",
+        "locks sensitive domains",
+        "blocks sensitive Carnos usage",
+        "restricts connector and Spotify actions",
+        "requires confirmation to disable"
+      ],
+      "acceptance": [
+        "Emergency Lockdown is defined",
+        "lockdown effects are listed",
+        "Carnos cannot disable lockdown",
+        "unlock confirmation is required",
+        "audit events are defined"
+      ],
+      "not_allowed": [
+        "do not let Carnos disable lockdown",
+        "do not allow sensitive exports by default during lockdown",
+        "do not allow connector or Spotify bypass"
+      ],
+      "feature_markers": [
+        "Emergency Lockdown",
+        "lockdown effects",
+        "unlock confirmation",
+        "Spotify restrictions",
+        "connector restrictions"
+      ]
+    },
+    {
+      "id": "20G",
+      "name": "Sensitive Locks + domain privacy permissions",
+      "purpose": "Make privacy domain-aware across every major ascendOS area.",
+      "builds": [
+        "sensitive lock levels",
+        "sensitive domains",
+        "domain privacy defaults",
+        "dashboard visibility permission",
+        "timeline exposure permission",
+        "analytics permission",
+        "export permission",
+        "Carnos access permission",
+        "redaction default",
+        "retention default"
+      ],
+      "does": [
+        "locks health, body, finance, documents, memory, custom trackers, analytics, external connectors, and Spotify data",
+        "controls what dashboards can show",
+        "controls what Carnos can access",
+        "controls export and analytics behavior"
+      ],
+      "acceptance": [
+        "lock levels are documented",
+        "sensitive domains are listed",
+        "domain privacy permissions are documented",
+        "Spotify data is included as a sensitive domain",
+        "custom trackers are included"
+      ],
+      "not_allowed": [
+        "do not let locked data leak into dashboards",
+        "do not let locked data leak into analytics",
+        "do not let Carnos read fully locked domains"
+      ],
+      "feature_markers": [
+        "Sensitive Locks",
+        "domain privacy permissions",
+        "Spotify data",
+        "custom trackers",
+        "analytics permission"
+      ]
+    },
+    {
+      "id": "20H",
+      "name": "Carnos access matrix",
+      "purpose": "Define exactly what Carnos can read, summarize, suggest, remember, expose, or propose.",
+      "builds": [
+        "can_read",
+        "can_summarize",
+        "can_suggest",
+        "can_create_memory_candidate",
+        "can_use_in_context_pack",
+        "can_use_in_analytics",
+        "can_show_on_dashboard",
+        "can_reference_in_chat",
+        "can_include_in_export_summary",
+        "can_trigger_action_proposal",
+        "can_execute_approved_action",
+        "Carnos block rules"
+      ],
+      "does": [
+        "prevents Carnos from bypassing privacy",
+        "blocks Carnos from locked domains",
+        "blocks Carnos from raw token access",
+        "blocks Carnos from export and destructive actions",
+        "allows only approved safe action execution boundaries"
+      ],
+      "acceptance": [
+        "all Carnos permissions are listed",
+        "blocked behaviors are listed",
+        "connector and Spotify restrictions are included",
+        "memory restrictions are included"
+      ],
+      "not_allowed": [
+        "do not allow Carnos raw token access",
+        "do not allow Carnos silent export",
+        "do not allow Carnos destructive action",
+        "do not allow Carnos silent Spotify action"
+      ],
+      "feature_markers": [
+        "Carnos access matrix",
+        "can_read",
+        "can_summarize",
+        "can_trigger_action_proposal",
+        "can_execute_approved_action"
+      ]
+    },
+    {
+      "id": "20I",
+      "name": "Privacy action review queue",
+      "purpose": "Centralize review for privacy, memory, export, destructive, connector, and Spotify actions.",
+      "builds": [
+        "privacy review queue",
+        "memory action review",
+        "export action review",
+        "destructive action review",
+        "private mode action review",
+        "sensitive lock review",
+        "Carnos permission review",
+        "connector action review",
+        "Spotify action review",
+        "review statuses",
+        "no Carnos self-approval"
+      ],
+      "does": [
+        "reuses the safe write pattern",
+        "prevents dangerous actions from executing silently",
+        "records review statuses",
+        "blocks Carnos self-approval"
+      ],
+      "acceptance": [
+        "review action types are listed",
+        "statuses are listed",
+        "connector action review is included",
+        "Spotify action review is included",
+        "Carnos self-approval is blocked"
+      ],
+      "not_allowed": [
+        "do not allow unreviewed high-risk actions",
+        "do not allow Carnos to approve its own action",
+        "do not skip audit links"
+      ],
+      "feature_markers": [
+        "privacy action review queue",
+        "connector action review",
+        "Spotify action review",
+        "no Carnos self-approval",
+        "review statuses"
+      ]
+    },
+    {
+      "id": "20J",
+      "name": "Two-step confirmation + cooldown boundary",
+      "purpose": "Protect high-risk actions with stronger confirmation and waiting boundaries.",
+      "builds": [
+        "one-step action list",
+        "two-step action list",
+        "cooldown required actions",
+        "requested timestamp",
+        "confirmation timestamp",
+        "cooldown expiry timestamp",
+        "action expiry timestamp",
+        "blocked reasons"
+      ],
+      "does": [
+        "protects destructive actions",
+        "protects bulk forget",
+        "protects export all",
+        "protects connector scope changes",
+        "protects Spotify device and volume control"
+      ],
+      "acceptance": [
+        "one-step actions are listed",
+        "two-step actions are listed",
+        "cooldown fields are listed",
+        "Spotify high-risk actions are included",
+        "connector high-risk actions are included"
+      ],
+      "not_allowed": [
+        "do not allow high-risk actions without confirmation",
+        "do not allow expired actions to execute",
+        "do not bypass cooldown"
+      ],
+      "feature_markers": [
+        "two-step confirmation",
+        "cooldown boundary",
+        "export all",
+        "Spotify device control",
+        "Spotify volume control"
+      ]
+    },
+    {
+      "id": "20K",
+      "name": "Data scope selector",
+      "purpose": "Create one shared scope model for export, forget, hide, archive, destructive actions, connectors, and Spotify previews.",
+      "builds": [
+        "domain scope",
+        "route scope",
+        "record type scope",
+        "source type scope",
+        "date range scope",
+        "privacy level scope",
+        "sensitivity level scope",
+        "memory source scope",
+        "custom tracker scope",
+        "document/evidence scope",
+        "analytics source scope",
+        "connector scope",
+        "Spotify scope"
+      ],
+      "does": [
+        "supports safe previews",
+        "prevents broad unscoped actions",
+        "makes export and destructive actions explainable",
+        "includes connector and Spotify data"
+      ],
+      "acceptance": [
+        "all scope dimensions are listed",
+        "connector scope is included",
+        "Spotify scope is included",
+        "custom tracker and evidence scopes are included"
+      ],
+      "not_allowed": [
+        "do not allow unscoped export",
+        "do not allow unscoped destructive action",
+        "do not skip sensitive and privacy filters"
+      ],
+      "feature_markers": [
+        "data scope selector",
+        "connector scope",
+        "Spotify scope",
+        "custom tracker scope",
+        "document/evidence scope"
+      ]
+    },
+    {
+      "id": "20L",
+      "name": "Export contracts + export manifest + expiration",
+      "purpose": "Make exports scoped, previewed, manifested, expiring, and audited.",
+      "builds": [
+        "export request",
+        "export preview",
+        "export scope",
+        "export manifest",
+        "export statuses",
+        "export expiration",
+        "export warnings",
+        "export audit link",
+        "no silent export"
+      ],
+      "does": [
+        "prevents silent export",
+        "shows included and excluded data",
+        "marks sensitive and locked records",
+        "creates export proof",
+        "expires export availability"
+      ],
+      "acceptance": [
+        "export request is defined",
+        "export preview is defined",
+        "export manifest fields are defined",
+        "export statuses are defined",
+        "no silent export rule exists"
+      ],
+      "not_allowed": [
+        "do not allow Carnos export",
+        "do not allow export all without stronger confirmation",
+        "do not include locked data without warning or explicit approval"
+      ],
+      "feature_markers": [
+        "export data",
+        "export preview",
+        "export manifest",
+        "export expiration",
+        "no silent export"
+      ]
+    },
+    {
+      "id": "20M",
+      "name": "Forget/destructive manifest + destructive safety",
+      "purpose": "Make forget and protected destructive actions previewable, confirmable, manifested, and audited.",
+      "builds": [
+        "forget manifest",
+        "destructive action manifest",
+        "affected records",
+        "skipped records",
+        "skip reasons",
+        "hard-removal deferred boundary",
+        "confirmation level",
+        "cooldown status",
+        "destructive action audit link",
+        "no Carnos destructive action"
+      ],
+      "does": [
+        "tracks what is affected",
+        "tracks what is skipped",
+        "records why records are skipped",
+        "prevents Carnos from performing destructive actions",
+        "links high-risk actions to audit"
+      ],
+      "acceptance": [
+        "forget manifest is defined",
+        "destructive action manifest is defined",
+        "skip reasons are defined",
+        "hard-removal deferred boundary is defined",
+        "Carnos destructive action is blocked"
+      ],
+      "not_allowed": [
+        "do not allow Carnos destructive action",
+        "do not allow high-risk removal without manifest",
+        "do not skip audit"
+      ],
+      "feature_markers": [
+        "forget manifest",
+        "destructive action manifest",
+        "hard-removal deferred boundary",
+        "no Carnos destructive action"
+      ]
+    },
+    {
+      "id": "20N",
+      "name": "Audit Viewer + append-only audit boundary",
+      "purpose": "Make privacy trust visible and tamper-resistant.",
+      "builds": [
+        "audit viewer contract",
+        "audit filters",
+        "actor display",
+        "domain display",
+        "status display",
+        "linked manifest display",
+        "linked connector display",
+        "linked source/evidence display",
+        "append-only audit boundary",
+        "audit redaction"
+      ],
+      "does": [
+        "shows privacy, memory, export, connector, and Spotify events",
+        "supports filtering",
+        "links events to manifests and sources",
+        "prevents silent audit tampering"
+      ],
+      "acceptance": [
+        "Audit Viewer is defined",
+        "append-only boundary is defined",
+        "filters are defined",
+        "connector and Spotify audit events are supported",
+        "audit redaction is defined"
+      ],
+      "not_allowed": [
+        "do not allow Carnos audit edits",
+        "do not allow silent audit removal",
+        "do not expose sensitive payloads without redaction"
+      ],
+      "feature_markers": [
+        "Audit Viewer",
+        "append-only audit boundary",
+        "linked connector display",
+        "linked source/evidence display",
+        "audit redaction"
+      ]
+    },
+    {
+      "id": "20O",
+      "name": "Privacy audit taxonomy + redaction + badges",
+      "purpose": "Standardize privacy event names, redaction behavior, and UI badges.",
+      "builds": [
+        "privacy audit event taxonomy",
+        "memory audit events",
+        "private mode audit events",
+        "export audit events",
+        "destructive action audit events",
+        "connector audit events",
+        "Spotify audit events",
+        "redaction rules",
+        "privacy badges"
+      ],
+      "does": [
+        "prevents inconsistent event naming",
+        "shows privacy state clearly in UI",
+        "supports redacted display across dashboard, export, memory, analytics, connectors, and Spotify"
+      ],
+      "acceptance": [
+        "memory events are listed",
+        "export events are listed",
+        "connector events are listed",
+        "Spotify events are listed",
+        "redaction levels are listed",
+        "privacy badges are listed"
+      ],
+      "not_allowed": [
+        "do not use inconsistent event names",
+        "do not expose sensitive fields without redaction",
+        "do not skip Spotify badges"
+      ],
+      "feature_markers": [
+        "privacy audit event taxonomy",
+        "redaction rules",
+        "privacy badges",
+        "Spotify audit events",
+        "connector audit events"
+      ]
+    },
+    {
+      "id": "20P",
+      "name": "Data retention boundary",
+      "purpose": "Define how long privacy artifacts remain active before review, archive, or expiry.",
+      "builds": [
+        "memory candidate retention",
+        "saved memory retention",
+        "export retention",
+        "private session retention",
+        "privacy review retention",
+        "connector action retention",
+        "Spotify action retention",
+        "source/evidence retention"
+      ],
+      "does": [
+        "prevents stale exports",
+        "prevents stale approvals",
+        "prevents stale connector actions",
+        "prevents stale Spotify proposals",
+        "supports review and archive flows"
+      ],
+      "acceptance": [
+        "retention policies are listed",
+        "exports expire",
+        "privacy action requests expire",
+        "connector actions expire",
+        "Spotify actions expire"
+      ],
+      "not_allowed": [
+        "do not keep active exports forever",
+        "do not keep action approvals valid forever",
+        "do not skip audit for retention changes"
+      ],
+      "feature_markers": [
+        "data retention boundary",
+        "expire_export_after_n_days",
+        "expire_action_request_after_n_days",
+        "expire_connector_action_after_n_days",
+        "expire_spotify_action_after_n_days"
+      ]
+    },
+    {
+      "id": "20Q",
+      "name": "Cross-phase privacy enforcement map",
+      "purpose": "Prove Phase 20 is connected to earlier phases and not a standalone page.",
+      "builds": [
+        "Phase 13.5E settings/privacy connection",
+        "Phase 15 memory/private mode/forget connection",
+        "Phase 16 current-info privacy/source connection",
+        "Phase 17 memory RAG privacy connection",
+        "Phase 18 analytics privacy connection",
+        "Phase 19 custom tracker privacy connection",
+        "documents/evidence connection",
+        "dashboard card connection",
+        "Carnos context connection",
+        "Spotify connector permission connection",
+        "external connector token boundary connection"
+      ],
+      "does": [
+        "connects privacy enforcement to memory",
+        "connects privacy enforcement to analytics",
+        "connects privacy enforcement to custom trackers",
+        "connects privacy enforcement to current info",
+        "connects privacy enforcement to connectors and Spotify"
+      ],
+      "acceptance": [
+        "all prior phase links are recorded",
+        "custom trackers respect sensitive locks",
+        "analytics respects private mode",
+        "memory RAG respects forget/private mode",
+        "Spotify respects connector permissions"
+      ],
+      "not_allowed": [
+        "do not make Phase 20 standalone",
+        "do not ignore Phase 19 custom tracker privacy",
+        "do not ignore Phase 18 analytics privacy"
+      ],
+      "feature_markers": [
+        "cross-phase privacy enforcement",
+        "Phase 15 memory/private mode",
+        "Phase 18 analytics privacy",
+        "Phase 19 custom tracker privacy",
+        "Spotify connector permissions"
+      ]
+    },
+    {
+      "id": "20R",
+      "name": "Future API Connector Framework",
+      "purpose": "Create the reusable trust layer for present Spotify and later external APIs.",
+      "builds": [
+        "external connector registry",
+        "connector account model",
+        "connector permission model",
+        "connector scope model",
+        "connector auth boundary",
+        "connector token boundary",
+        "connector status",
+        "connector action request",
+        "connector action manifest",
+        "connector audit event",
+        "connector private-mode rule",
+        "connector redaction rule",
+        "connector disconnect boundary",
+        "connector retention rule",
+        "connector Carnos access rule"
+      ],
+      "does": [
+        "creates a common model for future APIs",
+        "prevents raw token exposure",
+        "requires review for external actions",
+        "supports connector audit trail",
+        "supports Spotify as the first connector"
+      ],
+      "acceptance": [
+        "connector registry is defined",
+        "connector account model is defined",
+        "connector permissions are defined",
+        "connector scopes are defined",
+        "connector token boundary is defined",
+        "connector audit is defined"
+      ],
+      "not_allowed": [
+        "do not build every future connector now",
+        "do not expose raw tokens",
+        "do not allow Carnos to connect APIs by itself",
+        "do not allow silent external actions"
+      ],
+      "feature_markers": [
+        "Future API Connector Framework",
+        "external connector registry",
+        "connector account model",
+        "connector scope model",
+        "connector token boundary"
+      ]
+    },
+    {
+      "id": "20S",
+      "name": "Spotify connector foundation",
+      "purpose": "Make Spotify the first real connector inside the Phase 20 trust layer.",
+      "builds": [
+        "Spotify connector contract",
+        "Spotify connection status",
+        "Spotify connect boundary",
+        "Spotify disconnect boundary",
+        "Spotify Developer App setup instructions",
+        "Spotify redirect URI boundary",
+        "Spotify environment variable boundary",
+        "Spotify scope grants",
+        "Spotify missing scopes",
+        "Spotify token safety",
+        "Spotify Premium-required boundary"
+      ],
+      "does": [
+        "defines Spotify as a connector",
+        "records how setup works",
+        "records connection status",
+        "records scope grants and missing scopes",
+        "records Premium-required behavior"
+      ],
+      "acceptance": [
+        "Spotify connector is defined",
+        "Developer App setup is documented",
+        "redirect URI boundary is documented",
+        "environment variable boundary is documented",
+        "Premium-required boundary is documented"
+      ],
+      "not_allowed": [
+        "do not ask user for Spotify password",
+        "do not expose raw Spotify tokens",
+        "do not allow Carnos token access",
+        "do not execute Spotify actions silently"
+      ],
+      "feature_markers": [
+        "Spotify Connector",
+        "Spotify Developer App setup instructions",
+        "Spotify redirect URI boundary",
+        "Spotify environment variable boundary",
+        "Spotify Premium-required boundary"
+      ]
+    },
+    {
+      "id": "20T",
+      "name": "Spotify account connection + OAuth/PKCE callback boundary",
+      "purpose": "Define exactly how the user connects a Spotify account safely.",
+      "builds": [
+        "Connect Spotify user flow",
+        "Spotify authorization URL boundary",
+        "PKCE code verifier boundary",
+        "PKCE code challenge boundary",
+        "state parameter boundary",
+        "callback route boundary",
+        "scope grant boundary",
+        "token exchange boundary",
+        "refresh boundary",
+        "revoke/disconnect boundary",
+        "SPOTIFY_CLIENT_ID boundary",
+        "SPOTIFY_REDIRECT_URI boundary",
+        "SPOTIFY_CLIENT_SECRET optional future boundary",
+        "no token exposure to Carnos/UI/audit/memory"
+      ],
+      "does": [
+        "connects through Spotify OAuth",
+        "uses PKCE boundary first",
+        "records callback behavior",
+        "records environment setup",
+        "keeps Carnos away from raw tokens"
+      ],
+      "acceptance": [
+        "account connection flow is recorded",
+        "OAuth/PKCE boundary is recorded",
+        "state parameter boundary is recorded",
+        "callback boundary is recorded",
+        "environment variables are recorded",
+        "raw token exposure is blocked"
+      ],
+      "not_allowed": [
+        "do not ask user for password",
+        "do not log tokens",
+        "do not store tokens in memory",
+        "do not expose token values to Carnos",
+        "do not connect without user OAuth"
+      ],
+      "feature_markers": [
+        "Spotify account connection flow",
+        "Spotify OAuth/PKCE boundary",
+        "SPOTIFY_CLIENT_ID",
+        "SPOTIFY_REDIRECT_URI",
+        "no token exposure"
+      ]
+    },
+    {
+      "id": "20U",
+      "name": "Spotify playback/device/playlist/recently-played boundaries",
+      "purpose": "Safely model Spotify read-side data without leaking sensitive listening history.",
+      "builds": [
+        "playback state snapshot",
+        "current track boundary",
+        "device snapshot",
+        "playlist read boundary",
+        "recently played sensitive boundary",
+        "private mode restrictions",
+        "missing scope states",
+        "Premium required states",
+        "no active device states"
+      ],
+      "does": [
+        "models current playback safely",
+        "models device availability safely",
+        "treats recently played as sensitive",
+        "blocks reads when scopes are missing",
+        "shows Premium and no-active-device states"
+      ],
+      "acceptance": [
+        "playback snapshot is defined",
+        "device snapshot is defined",
+        "playlist read boundary is defined",
+        "recently played sensitive boundary is defined",
+        "missing scope states are defined"
+      ],
+      "not_allowed": [
+        "do not convert listening history into memory without approval",
+        "do not expose sensitive Spotify data during Private Mode",
+        "do not ignore missing scopes"
+      ],
+      "feature_markers": [
+        "Spotify playback state snapshot",
+        "Spotify current track boundary",
+        "Spotify device snapshot",
+        "Spotify playlist read boundary",
+        "Spotify recently played sensitive boundary"
+      ]
+    },
+    {
+      "id": "20V",
+      "name": "Spotify Carnos actions + action safety",
+      "purpose": "Allow Carnos to propose Spotify actions while preventing silent media control.",
+      "builds": [
+        "Spotify action proposals",
+        "play playlist proposal",
+        "pause/resume proposal",
+        "skip proposal",
+        "volume proposal",
+        "transfer device proposal",
+        "queue proposal",
+        "read current track proposal",
+        "playlist suggestion proposal",
+        "Spotify action states",
+        "Spotify blocked reasons",
+        "Spotify action manifest",
+        "Spotify no-silent-action proof"
+      ],
+      "does": [
+        "lets Carnos suggest music actions",
+        "requires permission and review",
+        "blocks action when private mode is active",
+        "blocks action when scope is missing",
+        "blocks action when Premium or device requirements fail"
+      ],
+      "acceptance": [
+        "Spotify action proposal model is defined",
+        "action states are defined",
+        "blocked reasons are defined",
+        "action manifest is defined",
+        "no silent Spotify action guarantee exists"
+      ],
+      "not_allowed": [
+        "do not allow Carnos to play music silently",
+        "do not allow volume or device control without approval",
+        "do not bypass private mode",
+        "do not ignore missing scopes"
+      ],
+      "feature_markers": [
+        "Spotify action proposal",
+        "Spotify action manifest",
+        "Spotify blocked reasons",
+        "no silent Spotify action",
+        "volume proposal",
+        "transfer device proposal"
+      ]
+    },
+    {
+      "id": "20W",
+      "name": "Spotify UI + Media Permissions + Connector Audit cards",
+      "purpose": "Make Spotify and connector controls visible on /privacy.",
+      "builds": [
+        "Spotify Connector card",
+        "connected/disconnected state",
+        "allowed scopes display",
+        "missing scopes display",
+        "Premium note",
+        "developer setup hints",
+        "redirect URI hint",
+        "environment variable hint",
+        "playback/device summary",
+        "pending action display",
+        "blocked action display",
+        "Media Permissions card",
+        "Connector Audit card"
+      ],
+      "does": [
+        "shows Spotify connection state",
+        "shows setup instructions",
+        "shows permissions and risks",
+        "shows pending and blocked actions",
+        "shows connector and Spotify audit summaries"
+      ],
+      "acceptance": [
+        "Spotify Connector card is defined",
+        "Media Permissions card is defined",
+        "Connector Audit card is defined",
+        "developer setup hints are defined",
+        "blocked states are displayed"
+      ],
+      "not_allowed": [
+        "do not build unsafe live action buttons without review boundary",
+        "do not hide missing scope warnings",
+        "do not hide Premium-required warnings"
+      ],
+      "feature_markers": [
+        "Spotify UI card",
+        "Media Permissions card",
+        "Connector Audit card",
+        "developer setup hints",
+        "missing scopes"
+      ]
+    },
+    {
+      "id": "20X",
+      "name": "Manual workout logging stance + exclusion/deferred registry",
+      "purpose": "Lock workout logging through Carnos and prevent accidental connector sprawl.",
+      "builds": [
+        "manual workout logging through Carnos chat",
+        "manual workout logging through Carnos voice later",
+        "structured workout proposal",
+        "exercise name",
+        "sets",
+        "reps",
+        "weight",
+        "duration",
+        "cardio",
+        "energy",
+        "notes",
+        "health/body compatibility",
+        "custom tracker compatibility",
+        "timeline compatibility",
+        "analytics compatibility",
+        "Echo excluded",
+        "Garmin deferred",
+        "Apple Health deferred",
+        "Gmail deferred",
+        "Google Calendar deferred",
+        "Notion deferred",
+        "GitHub deferred",
+        "Slack deferred",
+        "Discord deferred",
+        "YouTube deferred",
+        "LinkedIn deferred"
+      ],
+      "does": [
+        "keeps workout logging manual through Carnos for now",
+        "connects workout logs to custom trackers and health/body systems",
+        "records voice as later route",
+        "explicitly excludes Echo",
+        "explicitly defers Garmin and other connectors"
+      ],
+      "acceptance": [
+        "manual workout logging is recorded",
+        "structured workout proposal fields are recorded",
+        "Echo is excluded",
+        "Garmin is deferred",
+        "other future connectors are deferred"
+      ],
+      "not_allowed": [
+        "do not build Garmin in Phase 20",
+        "do not build Echo in Phase 20",
+        "do not build all future connectors in Phase 20",
+        "do not skip Carnos review-before-save"
+      ],
+      "feature_markers": [
+        "manual workout logging through Carnos chat",
+        "structured workout proposal",
+        "Echo excluded",
+        "Garmin deferred",
+        "Apple Health deferred"
+      ]
+    },
+    {
+      "id": "20Y",
+      "name": "/privacy dashboard view model + UI",
+      "purpose": "Upgrade /privacy into the visible Phase 20 command center.",
+      "builds": [
+        "/privacy dashboard view model",
+        "Memory Inbox card",
+        "Saved Memories card",
+        "Forget card",
+        "Export card",
+        "Destructive Actions card",
+        "Private Mode card",
+        "Timed Private Mode display",
+        "Emergency Lockdown card",
+        "Sensitive Locks card",
+        "Domain Privacy card",
+        "Carnos Access card",
+        "Privacy Review Queue card",
+        "Audit Viewer card",
+        "Data Retention card",
+        "Redaction Controls card",
+        "Privacy Badges display",
+        "External API Connectors card",
+        "Spotify Connector card",
+        "Media Permissions card",
+        "Connector Audit card",
+        "all required states",
+        "no unsafe runtime action"
+      ],
+      "does": [
+        "turns Phase 20 contracts into UI-ready state",
+        "shows all privacy and connector controls",
+        "shows blocked, expired, missing scope, Premium-required, and no-active-device states",
+        "avoids unsafe runtime actions"
+      ],
+      "acceptance": [
+        "all required /privacy cards are present",
+        "all required states are represented",
+        "Spotify card is present",
+        "connector cards are present",
+        "no unsafe runtime action is introduced"
+      ],
+      "not_allowed": [
+        "do not add fake live destructive actions",
+        "do not add unsafe Spotify execution",
+        "do not omit any locked card",
+        "do not use hardcoded demo data as final state"
+      ],
+      "feature_markers": [
+        "/privacy dashboard view model",
+        "Memory Inbox card",
+        "Spotify Connector card",
+        "Media Permissions card",
+        "Connector Audit card"
+      ]
+    },
+    {
+      "id": "20Z",
+      "name": "Final Phase 20 proof + package check integration + completion",
+      "purpose": "Prove Phase 20 complete, safe, checked, committed, and ready for Phase 21.",
+      "builds": [
+        "Phase 20 final fixture",
+        "Phase 20 final audit",
+        "Phase 20 safety audit",
+        "Phase 20 cross-phase audit",
+        "no silent memory proof",
+        "no silent export proof",
+        "no Carnos destructive action proof",
+        "no raw token exposure proof",
+        "no Spotify silent action proof",
+        "no private mode bypass proof",
+        "package check integration",
+        "completion report",
+        "final commit/push"
+      ],
+      "does": [
+        "verifies all Phase 20 features",
+        "verifies cross-phase enforcement",
+        "verifies package checks",
+        "records completion proof",
+        "locks Phase 20 before Phase 21"
+      ],
+      "acceptance": [
+        "Phase 20 final audit passes",
+        "safety audit passes",
+        "cross-phase audit passes",
+        "npm run check passes",
+        "completion report exists",
+        "commit and push complete"
+      ],
+      "not_allowed": [
+        "do not declare Phase 20 complete without full check",
+        "do not skip completion report",
+        "do not start Phase 21 before Phase 20Z is committed"
+      ],
+      "feature_markers": [
+        "Phase 20 final proof",
+        "no silent memory proof",
+        "no silent export proof",
+        "no raw token exposure proof",
+        "no Spotify silent action proof"
+      ]
+    }
+  ],
+  "cross_phase_connections": [
+    "Phase 13.5E settings/privacy",
+    "Phase 15 memory/private mode/do-not-remember",
+    "Phase 15 forget/destructive derived-record boundaries",
+    "Phase 16 current-info privacy retention",
+    "Phase 16 source review/audit trail",
+    "Phase 17 memory RAG privacy/sensitive/forget/destructive readiness",
+    "Phase 18 analytics privacy audit",
+    "Phase 19 custom tracker privacy/Carnos permissions",
+    "Phase 19 repository/RLS/audit/ownership boundaries",
+    "documents/evidence attachments",
+    "dashboard cards",
+    "Carnos context packs",
+    "Spotify connector permissions",
+    "external connector token boundaries"
+  ],
+  "enforcement_requirements": [
+    "custom tracker privacy respects sensitive locks",
+    "analytics respects private mode",
+    "documents respect redaction/export boundaries",
+    "memory RAG respects forget/private mode",
+    "current-info sources respect privacy review",
+    "Carnos respects access matrix",
+    "dashboard cards respect hidden/locked states",
+    "audit logs capture privacy actions",
+    "source/evidence attachments respect redaction/export rules",
+    "Spotify respects connector permissions/private mode/audit",
+    "external connectors respect token boundaries/review/audit"
+  ],
+  "spotify_account_connection_flow": [
+    "Go to /privacy.",
+    "Open Spotify Connector card.",
+    "Click Connect Spotify.",
+    "ascendOS redirects user to Spotify.",
+    "User logs in to Spotify.",
+    "User approves requested permissions.",
+    "Spotify redirects back to ascendOS callback route.",
+    "ascendOS validates state and PKCE boundary.",
+    "ascendOS stores token boundary server-side.",
+    "ascendOS marks Spotify as connected.",
+    "Carnos can see connection status and allowed permissions.",
+    "Carnos cannot see raw tokens."
+  ],
+  "spotify_required_user_setup": [
+    "Create Spotify Developer app.",
+    "Copy SPOTIFY_CLIENT_ID.",
+    "Set SPOTIFY_REDIRECT_URI.",
+    "Use local redirect URI for development.",
+    "Use production redirect URI later."
+  ],
+  "spotify_env_boundary": [
+    "SPOTIFY_CLIENT_ID",
+    "SPOTIFY_REDIRECT_URI",
+    "SPOTIFY_CLIENT_SECRET optional future boundary"
+  ],
+  "spotify_permissions": [
+    "spotify_read_playback",
+    "spotify_modify_playback",
+    "spotify_read_currently_playing",
+    "spotify_read_recently_played",
+    "spotify_read_playlists",
+    "spotify_start_playlist",
+    "spotify_pause_resume",
+    "spotify_skip_track",
+    "spotify_set_volume",
+    "spotify_transfer_device",
+    "spotify_add_to_queue",
+    "spotify_read_devices"
+  ],
+  "spotify_carnos_actions": [
+    "play focus playlist",
+    "play workout playlist",
+    "play deep work playlist",
+    "play sleep playlist",
+    "pause music",
+    "resume music",
+    "skip track",
+    "set volume",
+    "transfer playback device",
+    "add song to queue",
+    "read current track",
+    "suggest playlist based on mode",
+    "suggest playlist based on workout",
+    "suggest playlist based on focus session"
+  ],
+  "exclusions_and_deferrals": [
+    "Amazon Echo/Alexa integration excluded",
+    "Garmin integration deferred",
+    "Apple Health full integration deferred",
+    "Gmail connector deferred",
+    "Google Calendar connector deferred",
+    "Notion connector deferred",
+    "GitHub connector deferred",
+    "Slack connector deferred",
+    "Discord connector deferred",
+    "YouTube connector deferred",
+    "LinkedIn connector deferred",
+    "full commercial streaming replacement excluded",
+    "uncontrolled Carnos external actions excluded",
+    "silent token storage excluded",
+    "silent memory writes excluded",
+    "silent data export excluded",
+    "silent destructive actions excluded",
+    "final v1 polish/deployment/demo polish excluded because that is Phase 21"
+  ],
+  "safety_guarantees": [
+    "No memory without user control.",
+    "No sensitive data without locks.",
+    "No export without explicit user action.",
+    "No destructive action without explicit confirmation.",
+    "No Carnos destructive action.",
+    "No Carnos silent memory save.",
+    "No Carnos connector action without permission.",
+    "No raw token exposure.",
+    "No private data leakage into dashboards.",
+    "No private data leakage into analytics.",
+    "No locked custom tracker exposure.",
+    "No forgotten memory in Carnos context.",
+    "No Spotify action without connector permission.",
+    "No Spotify private-mode bypass.",
+    "No connector scope change without audit.",
+    "No audit log tampering.",
+    "No privacy action without audit trail.",
+    "No Spotify account connection without user OAuth.",
+    "No Spotify token access by Carnos.",
+    "No Spotify listening history memory without approval."
+  ],
+  "data_source_concepts": [
+    "memory_items",
+    "memory_candidates",
+    "audit_logs",
+    "privacy_settings",
+    "data_exports",
+    "export_manifests",
+    "privacy_action_requests",
+    "sensitive_locks",
+    "carnos_permissions",
+    "redaction_rules",
+    "retention_rules",
+    "forget_destructive_manifests",
+    "external_connectors",
+    "connector_accounts",
+    "connector_permissions",
+    "connector_scopes",
+    "connector_action_requests",
+    "connector_action_manifests",
+    "connector_audit_events",
+    "spotify_connection_status",
+    "spotify_scope_grants",
+    "spotify_playback_snapshots",
+    "spotify_device_snapshots",
+    "spotify_action_proposals",
+    "spotify_action_manifests",
+    "spotify_action_audit_events",
+    "custom_trackers",
+    "custom_tracker_fields",
+    "custom_tracker_entries",
+    "dashboard_cards",
+    "documents",
+    "knowledge_items",
+    "current_info_sources",
+    "analytics_snapshots",
+    "self_experiments",
+    "timeline/events/tasks/proof"
+  ]
+}

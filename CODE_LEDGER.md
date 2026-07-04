@@ -4435,3 +4435,14 @@ Added runtime file, docs, QA checklist, audit script, package script, and check 
 - Added `docs/phase-reports/PHASE_18O_FINAL_COMPLETION_REPORT.md`.
 - Added `scripts/audit-phase-18o.mjs`.
 - Added `audit:phase18o` to package verification chain.
+
+## Phase 20A — Privacy Export Connector Scope Lock
+
+Files added or updated:
+- docs/roadmap/PHASE_20_PRIVACY_EXPORT_CONNECTOR_SCOPE_LOCK.md
+- docs/fixtures/phase20-privacy-export/phase20a_scope_lock_fixture.json
+- docs/phase-reports/PHASE_20A_PRIVACY_EXPORT_CONNECTOR_SCOPE_LOCK_REPORT.md
+- scripts/audit-phase-20a.mjs
+- package.json
+
+Purpose: make the repo itself remember every Phase 20 feature, total step, and chunk-level Purpose/Builds/Does/Acceptance/Not Allowed/Feature Markers before implementation continues.
