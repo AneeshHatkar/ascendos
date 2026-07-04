@@ -5377,3 +5377,7 @@ Defined cross-phase privacy enforcement principles, Phase 13.5 settings/privacy 
 ## Phase 20R — Future API Connector Framework
 
 Defined future API connector framework categories, connector registry, connector accounts, permissions, scopes, auth boundary, token boundary, connection statuses, action requests, action manifests, Private Mode behavior, Emergency Lockdown behavior, disconnect behavior, retention behavior, Carnos connector access, provider boundaries, audit events, blocked reasons, badges, and excluded/deferred connectors. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, OAuth routes, token storage, provider calls, connector UI, sync jobs, or runtime connector actions.
+
+## Phase 20S — Spotify Connector Foundation
+
+Defined Spotify connector identity, developer app setup boundary, redirect URI boundary, OAuth PKCE boundary, environment variable boundary, scope groups, connection statuses, provider policy boundary, token boundary rules, account profile boundary, Private Mode behavior, Emergency Lockdown behavior, Carnos Spotify access rules, Spotify data classes, audit events, blocked reasons, and badges. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, OAuth routes, callback routes, token storage, provider calls, UI cards, sync jobs, or runtime Spotify actions.

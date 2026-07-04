@@ -4633,3 +4633,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock the generic external API connector framework for registry, accounts, permissions, scopes, auth, token boundary, connection status, action requests, action manifests, privacy modes, disconnect, retention, Carnos access, provider boundaries, no token exposure, and no silent external actions before Spotify-specific work.
+
+## Phase 20S — Spotify Connector Foundation
+
+Files added or updated:
+- docs/contracts/PHASE_20S_SPOTIFY_CONNECTOR_FOUNDATION.md
+- docs/fixtures/phase20-privacy-export/phase20s_spotify_connector_foundation_fixture.json
+- docs/phase-reports/PHASE_20S_SPOTIFY_CONNECTOR_FOUNDATION_REPORT.md
+- scripts/audit-phase-20s.mjs
+- package.json
+
+Purpose: lock Spotify connector foundation, developer setup, redirect URI, OAuth PKCE stance, env boundaries, scopes, provider policy, token safety, Carnos access, privacy modes, audit events, blocked reasons, and badges before account connection implementation.

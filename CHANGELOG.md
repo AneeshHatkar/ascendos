@@ -2156,3 +2156,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added future API connector framework contracts.
 - Added connector registry, accounts, permissions, scopes, auth boundary, token boundary, connection statuses, action requests, action manifests, Private Mode behavior, Emergency Lockdown behavior, disconnect behavior, retention behavior, Carnos rules, provider boundaries, audit events, badges, and deferred connector list.
 - Integrated audit:phase20r into package checks.
+
+## Phase 20S — Spotify Connector Foundation
+
+- Added Spotify connector foundation contracts.
+- Added Spotify identity, developer setup boundary, redirect URI boundary, OAuth PKCE boundary, env boundaries, scopes, statuses, token boundary, account profile boundary, privacy modes, Carnos rules, provider policy, audit events, blocked reasons, and badges.
+- Integrated audit:phase20s into package checks.
