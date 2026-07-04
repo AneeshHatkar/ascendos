@@ -4567,3 +4567,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock export request, preview, manifest, status, expiration, warnings, blocked reasons, audit events, badges, connector export rules, Spotify export rules, and token exclusion without adding schema or export execution.
+
+## Phase 20M — Forget Destructive Manifest Safety
+
+Files added or updated:
+- docs/contracts/PHASE_20M_FORGET_DESTRUCTIVE_MANIFEST_SAFETY.md
+- docs/fixtures/phase20-privacy-export/phase20m_forget_destructive_manifest_fixture.json
+- docs/phase-reports/PHASE_20M_FORGET_DESTRUCTIVE_MANIFEST_SAFETY_REPORT.md
+- scripts/audit-phase-20m.mjs
+- package.json
+
+Purpose: lock forget and destructive manifests, affected and skipped records, skip reasons, derived record handling, count rules, warnings, blocked reasons, audit events, badges, Carnos denials, connector boundaries, Spotify boundaries, and hard-removal-deferred behavior without adding schema or runtime mutation.

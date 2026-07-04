@@ -3779,3 +3779,7 @@ Phase 20K locked: shared data scope selector model, requested actions, domain di
 ## Phase 20L Status
 
 Phase 20L locked: export request model, preview model, manifest model, status model, format boundaries, expiration rules, scope category rules, warning codes, blocked reasons, audit events, badge requirements, connector export rules, Spotify export rules, and token exclusion. No schema was needed for this contract-only chunk.
+
+## Phase 20M Status
+
+Phase 20M locked: forget manifest model, destructive action manifest model, affected record model, skipped record model, skip reasons, status model, action types, derived record rules, action group rules, count rules, warning codes, blocked reasons, audit events, badge requirements, connector and Spotify destructive boundaries, Carnos destructive denials, and hard-removal-deferred boundary. No schema was needed for this contract-only chunk.

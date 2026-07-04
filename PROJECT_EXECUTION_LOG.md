@@ -5353,3 +5353,7 @@ Defined the shared data scope selector model with requested actions, domain dime
 ## Phase 20L — Export Contracts Manifest Expiration
 
 Defined export request, preview, manifest, status, expiration, format, category, warning, blocked reason, audit event, badge, connector metadata, Spotify metadata, and token exclusion rules. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, storage, signed links, background jobs, checksum generation, or export execution.
+
+## Phase 20M — Forget Destructive Manifest Safety
+
+Defined forget manifest, destructive action manifest, affected record, skipped record, skip reason, status, action type, derived record, action group, count, warning, blocked reason, audit event, badge, Carnos denial, connector boundary, Spotify boundary, and hard-removal-deferred safety rules. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, mutations, hard removal, audit writes, connector mutations, Spotify mutations, or runtime execution.

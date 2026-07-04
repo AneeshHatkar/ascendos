@@ -2120,3 +2120,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added export contracts for request, preview, manifest, status, expiration, formats, category rules, warnings, blocked reasons, audit events, and badges.
 - Added connector and Spotify export rules with explicit token exclusion.
 - Integrated audit:phase20l into package checks.
+
+## Phase 20M — Forget Destructive Manifest Safety
+
+- Added forget and destructive manifest safety contracts.
+- Added affected/skipped record rules, skip reasons, derived record rules, count rules, warnings, blocked reasons, audit events, badges, Carnos denials, connector boundaries, Spotify boundaries, and hard-removal-deferred behavior.
+- Integrated audit:phase20m into package checks.
