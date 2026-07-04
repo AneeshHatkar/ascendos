@@ -2084,3 +2084,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added Emergency Lockdown contracts.
 - Added activation effects, sensitive domain defaults, unlock rules, blocked reasons, audit events, badge requirements, Carnos rules, connector rules, and Spotify rules.
 - Integrated audit:phase20f into package checks.
+
+## Phase 20G — Sensitive Locks Domain Permissions
+
+- Added sensitive lock and domain privacy permission contracts.
+- Added domain registry, permission rules, lock transitions, redaction defaults, retention defaults, audit events, badges, and connector/Spotify restrictions.
+- Integrated audit:phase20g into package checks.

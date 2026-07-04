@@ -5329,3 +5329,7 @@ Defined Private Mode and Timed Private Mode states, timed options, enforcement r
 ## Phase 20F — Emergency Lockdown Contracts
 
 Defined Emergency Lockdown states, activation effects, affected surfaces, sensitive domain defaults, lockdown rules, unlock rules, blocked reasons, audit events, badge requirements, Carnos rules, connector rules, and Spotify rules. No schema was needed because this chunk does not add persistence, migrations, RLS, or runtime toggles.
+
+## Phase 20G — Sensitive Locks Domain Permissions
+
+Defined sensitive lock levels, domain privacy permission fields, domain registry, permission rules, lock transitions, redaction defaults, retention defaults, blocked reasons, audit events, badge requirements, and connector/Spotify restrictions. No schema was needed because this chunk does not add persistence, migrations, RLS, or repositories.

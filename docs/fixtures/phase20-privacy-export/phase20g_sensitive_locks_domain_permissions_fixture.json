@@ -1,0 +1,502 @@
+{
+  "phase": "20G",
+  "name": "Sensitive Locks Domain Privacy Permissions",
+  "purpose": "Define sensitive lock levels and domain privacy permissions across dashboards, timeline, analytics, export, Carnos, connectors, Spotify, redaction, retention, audit, and badges.",
+  "schema_requirement": {
+    "needs_live_database_schema": false,
+    "reason": "20G defines domain permission contracts and sensitive lock behavior only. It does not create settings tables, sensitive lock rows, migrations, RLS policies, repositories, or live persistence.",
+    "future_schema_gate": "If a later chunk persists sensitive_locks, domain privacy settings, Carnos permissions, connector permissions, audit rows, or per-domain overrides, inspect exact schema before coding."
+  },
+  "sensitive_lock_levels": [
+    {
+      "id": "unlocked",
+      "meaning": "Normal permission rules apply.",
+      "dashboard_behavior": "allowed when domain permission allows",
+      "carnos_behavior": "allowed when domain permission allows",
+      "export_behavior": "allowed when domain permission allows"
+    },
+    {
+      "id": "review_required",
+      "meaning": "Data requires review before broad use or exposure.",
+      "dashboard_behavior": "show review-required state or safe metadata",
+      "carnos_behavior": "Carnos cannot use until approved",
+      "export_behavior": "export preview must flag review requirement"
+    },
+    {
+      "id": "hidden_from_dashboards",
+      "meaning": "Data is hidden from broad dashboard and timeline surfaces.",
+      "dashboard_behavior": "hidden from broad dashboard cards",
+      "carnos_behavior": "depends on separate Carnos permission",
+      "export_behavior": "export preview must mark hidden state"
+    },
+    {
+      "id": "hidden_from_carnos",
+      "meaning": "Data is blocked from Carnos while still possibly visible to the user.",
+      "dashboard_behavior": "may show to user with badge if allowed",
+      "carnos_behavior": "Carnos cannot read, summarize, remember, or use",
+      "export_behavior": "export requires explicit review if sensitive"
+    },
+    {
+      "id": "fully_locked",
+      "meaning": "Data is blocked from broad UI, Carnos, analytics, export, connectors, and Spotify by default.",
+      "dashboard_behavior": "show locked metadata only where safe",
+      "carnos_behavior": "Carnos cannot access",
+      "export_behavior": "blocked by default and requires explicit review"
+    }
+  ],
+  "domain_permission_fields": [
+    "domain_id",
+    "domain_label",
+    "default_privacy_level",
+    "default_sensitivity_level",
+    "default_lock_level",
+    "dashboard_allowed",
+    "timeline_allowed",
+    "analytics_allowed",
+    "export_allowed",
+    "carnos_read_allowed",
+    "carnos_summarize_allowed",
+    "carnos_memory_candidate_allowed",
+    "carnos_context_allowed",
+    "connector_allowed",
+    "spotify_allowed",
+    "redaction_default",
+    "retention_default",
+    "review_required",
+    "audit_required"
+  ],
+  "domain_registry": [
+    {
+      "domain_id": "career",
+      "label": "Career",
+      "default_privacy_level": "internal",
+      "default_sensitivity_level": "personal",
+      "default_lock_level": "unlocked",
+      "dashboard_allowed": true,
+      "timeline_allowed": true,
+      "analytics_allowed": true,
+      "export_allowed": true,
+      "carnos_read_allowed": true,
+      "connector_allowed": true,
+      "spotify_allowed": false
+    },
+    {
+      "domain_id": "learning",
+      "label": "Learning",
+      "default_privacy_level": "internal",
+      "default_sensitivity_level": "normal",
+      "default_lock_level": "unlocked",
+      "dashboard_allowed": true,
+      "timeline_allowed": true,
+      "analytics_allowed": true,
+      "export_allowed": true,
+      "carnos_read_allowed": true,
+      "connector_allowed": true,
+      "spotify_allowed": false
+    },
+    {
+      "domain_id": "research",
+      "label": "Research",
+      "default_privacy_level": "internal",
+      "default_sensitivity_level": "personal",
+      "default_lock_level": "unlocked",
+      "dashboard_allowed": true,
+      "timeline_allowed": true,
+      "analytics_allowed": true,
+      "export_allowed": true,
+      "carnos_read_allowed": true,
+      "connector_allowed": true,
+      "spotify_allowed": false
+    },
+    {
+      "domain_id": "health",
+      "label": "Health",
+      "default_privacy_level": "sensitive",
+      "default_sensitivity_level": "sensitive",
+      "default_lock_level": "review_required",
+      "dashboard_allowed": false,
+      "timeline_allowed": false,
+      "analytics_allowed": false,
+      "export_allowed": false,
+      "carnos_read_allowed": false,
+      "connector_allowed": false,
+      "spotify_allowed": false
+    },
+    {
+      "domain_id": "body",
+      "label": "Body",
+      "default_privacy_level": "sensitive",
+      "default_sensitivity_level": "sensitive",
+      "default_lock_level": "review_required",
+      "dashboard_allowed": false,
+      "timeline_allowed": false,
+      "analytics_allowed": false,
+      "export_allowed": false,
+      "carnos_read_allowed": false,
+      "connector_allowed": false,
+      "spotify_allowed": false
+    },
+    {
+      "domain_id": "nutrition",
+      "label": "Nutrition",
+      "default_privacy_level": "sensitive",
+      "default_sensitivity_level": "sensitive",
+      "default_lock_level": "review_required",
+      "dashboard_allowed": false,
+      "timeline_allowed": false,
+      "analytics_allowed": false,
+      "export_allowed": false,
+      "carnos_read_allowed": false,
+      "connector_allowed": false,
+      "spotify_allowed": false
+    },
+    {
+      "domain_id": "sleep_energy",
+      "label": "Sleep Energy",
+      "default_privacy_level": "sensitive",
+      "default_sensitivity_level": "sensitive",
+      "default_lock_level": "review_required",
+      "dashboard_allowed": false,
+      "timeline_allowed": false,
+      "analytics_allowed": false,
+      "export_allowed": false,
+      "carnos_read_allowed": false,
+      "connector_allowed": false,
+      "spotify_allowed": false
+    },
+    {
+      "domain_id": "mental_health",
+      "label": "Mental Health",
+      "default_privacy_level": "locked",
+      "default_sensitivity_level": "highly_sensitive",
+      "default_lock_level": "fully_locked",
+      "dashboard_allowed": false,
+      "timeline_allowed": false,
+      "analytics_allowed": false,
+      "export_allowed": false,
+      "carnos_read_allowed": false,
+      "connector_allowed": false,
+      "spotify_allowed": false
+    },
+    {
+      "domain_id": "finance",
+      "label": "Finance",
+      "default_privacy_level": "locked",
+      "default_sensitivity_level": "highly_sensitive",
+      "default_lock_level": "fully_locked",
+      "dashboard_allowed": false,
+      "timeline_allowed": false,
+      "analytics_allowed": false,
+      "export_allowed": false,
+      "carnos_read_allowed": false,
+      "connector_allowed": false,
+      "spotify_allowed": false
+    },
+    {
+      "domain_id": "life_admin",
+      "label": "Life Admin",
+      "default_privacy_level": "sensitive",
+      "default_sensitivity_level": "sensitive",
+      "default_lock_level": "review_required",
+      "dashboard_allowed": false,
+      "timeline_allowed": false,
+      "analytics_allowed": false,
+      "export_allowed": false,
+      "carnos_read_allowed": false,
+      "connector_allowed": false,
+      "spotify_allowed": false
+    },
+    {
+      "domain_id": "documents",
+      "label": "Documents",
+      "default_privacy_level": "locked",
+      "default_sensitivity_level": "highly_sensitive",
+      "default_lock_level": "fully_locked",
+      "dashboard_allowed": false,
+      "timeline_allowed": false,
+      "analytics_allowed": false,
+      "export_allowed": false,
+      "carnos_read_allowed": false,
+      "connector_allowed": false,
+      "spotify_allowed": false
+    },
+    {
+      "domain_id": "memory",
+      "label": "Memory",
+      "default_privacy_level": "private",
+      "default_sensitivity_level": "sensitive",
+      "default_lock_level": "review_required",
+      "dashboard_allowed": false,
+      "timeline_allowed": false,
+      "analytics_allowed": false,
+      "export_allowed": false,
+      "carnos_read_allowed": false,
+      "connector_allowed": false,
+      "spotify_allowed": false
+    },
+    {
+      "domain_id": "private_reflections",
+      "label": "Private Reflections",
+      "default_privacy_level": "locked",
+      "default_sensitivity_level": "highly_sensitive",
+      "default_lock_level": "fully_locked",
+      "dashboard_allowed": false,
+      "timeline_allowed": false,
+      "analytics_allowed": false,
+      "export_allowed": false,
+      "carnos_read_allowed": false,
+      "connector_allowed": false,
+      "spotify_allowed": false
+    },
+    {
+      "domain_id": "custom_trackers",
+      "label": "Custom Trackers",
+      "default_privacy_level": "private",
+      "default_sensitivity_level": "sensitive",
+      "default_lock_level": "review_required",
+      "dashboard_allowed": false,
+      "timeline_allowed": false,
+      "analytics_allowed": false,
+      "export_allowed": false,
+      "carnos_read_allowed": false,
+      "connector_allowed": false,
+      "spotify_allowed": false
+    },
+    {
+      "domain_id": "analytics",
+      "label": "Analytics",
+      "default_privacy_level": "private",
+      "default_sensitivity_level": "sensitive",
+      "default_lock_level": "review_required",
+      "dashboard_allowed": false,
+      "timeline_allowed": false,
+      "analytics_allowed": false,
+      "export_allowed": false,
+      "carnos_read_allowed": false,
+      "connector_allowed": false,
+      "spotify_allowed": false
+    },
+    {
+      "domain_id": "timeline",
+      "label": "Timeline",
+      "default_privacy_level": "internal",
+      "default_sensitivity_level": "personal",
+      "default_lock_level": "review_required",
+      "dashboard_allowed": true,
+      "timeline_allowed": true,
+      "analytics_allowed": false,
+      "export_allowed": true,
+      "carnos_read_allowed": false,
+      "connector_allowed": false,
+      "spotify_allowed": false
+    },
+    {
+      "domain_id": "external_connectors",
+      "label": "External Connectors",
+      "default_privacy_level": "locked",
+      "default_sensitivity_level": "highly_sensitive",
+      "default_lock_level": "fully_locked",
+      "dashboard_allowed": false,
+      "timeline_allowed": false,
+      "analytics_allowed": false,
+      "export_allowed": false,
+      "carnos_read_allowed": false,
+      "connector_allowed": false,
+      "spotify_allowed": false
+    },
+    {
+      "domain_id": "spotify",
+      "label": "Spotify",
+      "default_privacy_level": "sensitive",
+      "default_sensitivity_level": "sensitive",
+      "default_lock_level": "review_required",
+      "dashboard_allowed": false,
+      "timeline_allowed": false,
+      "analytics_allowed": false,
+      "export_allowed": false,
+      "carnos_read_allowed": false,
+      "connector_allowed": false,
+      "spotify_allowed": true
+    }
+  ],
+  "permission_rules": [
+    "Fully locked domains block Carnos read, summarize, memory candidate, context, analytics, export, connector, and Spotify use by default.",
+    "Hidden-from-Carnos domains block Carnos read, summarize, memory candidate, and context use.",
+    "Hidden-from-dashboards domains block broad dashboard and timeline exposure.",
+    "Review-required domains must show review-required state before broad use.",
+    "Sensitive domains default to redaction unless the user explicitly allows more detail.",
+    "Domain permissions cannot bypass Private Mode.",
+    "Domain permissions cannot bypass Emergency Lockdown.",
+    "Connector permissions cannot bypass sensitive lock levels.",
+    "Spotify permissions cannot bypass sensitive lock levels.",
+    "Analytics cannot use sensitive or locked domains unless explicitly allowed.",
+    "Export cannot include sensitive or locked domains without explicit preview and review.",
+    "Carnos cannot change domain privacy permissions silently."
+  ],
+  "lock_transition_rules": [
+    {
+      "from": "unlocked",
+      "to": "review_required",
+      "review_required": false,
+      "audit_required": true
+    },
+    {
+      "from": "review_required",
+      "to": "hidden_from_dashboards",
+      "review_required": false,
+      "audit_required": true
+    },
+    {
+      "from": "review_required",
+      "to": "hidden_from_carnos",
+      "review_required": false,
+      "audit_required": true
+    },
+    {
+      "from": "hidden_from_carnos",
+      "to": "fully_locked",
+      "review_required": false,
+      "audit_required": true
+    },
+    {
+      "from": "fully_locked",
+      "to": "review_required",
+      "review_required": true,
+      "audit_required": true
+    },
+    {
+      "from": "fully_locked",
+      "to": "unlocked",
+      "review_required": true,
+      "audit_required": true
+    }
+  ],
+  "redaction_defaults": [
+    {
+      "domain_group": "normal_domains",
+      "redaction_default": "summary_only"
+    },
+    {
+      "domain_group": "private_domains",
+      "redaction_default": "metadata_only"
+    },
+    {
+      "domain_group": "sensitive_domains",
+      "redaction_default": "redacted"
+    },
+    {
+      "domain_group": "locked_domains",
+      "redaction_default": "hidden"
+    },
+    {
+      "domain_group": "spotify_recently_played",
+      "redaction_default": "metadata_only"
+    },
+    {
+      "domain_group": "connector_tokens",
+      "redaction_default": "hidden"
+    }
+  ],
+  "retention_defaults": [
+    {
+      "domain_group": "normal_domains",
+      "retention_default": "keep_until_user_changes"
+    },
+    {
+      "domain_group": "private_domains",
+      "retention_default": "review_after_n_days"
+    },
+    {
+      "domain_group": "sensitive_domains",
+      "retention_default": "review_after_n_days"
+    },
+    {
+      "domain_group": "locked_domains",
+      "retention_default": "keep_protected_until_user_review"
+    },
+    {
+      "domain_group": "connector_action_requests",
+      "retention_default": "expire_action_request_after_n_days"
+    },
+    {
+      "domain_group": "spotify_action_requests",
+      "retention_default": "expire_spotify_action_after_n_days"
+    }
+  ],
+  "blocked_reasons": [
+    "sensitive_lock_active",
+    "domain_review_required",
+    "hidden_from_dashboards",
+    "hidden_from_carnos",
+    "fully_locked_domain",
+    "private_mode_active",
+    "emergency_lockdown_active",
+    "analytics_permission_blocked",
+    "export_permission_blocked",
+    "carnos_permission_blocked",
+    "connector_permission_blocked",
+    "spotify_permission_blocked",
+    "redaction_required",
+    "audit_required",
+    "user_review_required"
+  ],
+  "audit_events_required": [
+    "sensitive_lock_enabled",
+    "sensitive_lock_disabled",
+    "domain_privacy_permission_changed",
+    "domain_dashboard_permission_changed",
+    "domain_timeline_permission_changed",
+    "domain_analytics_permission_changed",
+    "domain_export_permission_changed",
+    "domain_carnos_permission_changed",
+    "domain_connector_permission_changed",
+    "domain_spotify_permission_changed",
+    "domain_redaction_changed",
+    "domain_retention_changed",
+    "domain_review_required",
+    "sensitive_domain_blocked"
+  ],
+  "badge_requirements": [
+    "Sensitive",
+    "Locked",
+    "Review Required",
+    "Hidden From Dashboards",
+    "Hidden From Carnos",
+    "Carnos Disabled",
+    "Analytics Disabled",
+    "Export Restricted",
+    "Connector Restricted",
+    "Spotify Restricted",
+    "Redacted",
+    "Audit Required",
+    "Private Mode Active",
+    "Emergency Lockdown Active"
+  ],
+  "must_not_do": [
+    "do not create migrations in 20G",
+    "do not invent sensitive_locks schema in 20G",
+    "do not implement live domain privacy persistence in 20G",
+    "do not implement RLS policies in 20G",
+    "do not implement repository writes in 20G",
+    "do not let domain permissions bypass Private Mode",
+    "do not let domain permissions bypass Emergency Lockdown",
+    "do not let Carnos change domain permissions silently",
+    "do not allow Spotify permissions to bypass sensitive locks",
+    "do not expose connector tokens through any domain permission"
+  ],
+  "acceptance": [
+    "Sensitive lock levels are defined.",
+    "Domain permission fields are defined.",
+    "Domain registry is defined.",
+    "Permission rules are defined.",
+    "Lock transition rules are defined.",
+    "Redaction defaults are defined.",
+    "Retention defaults are defined.",
+    "Blocked reasons are defined.",
+    "Audit events are defined.",
+    "Badge requirements are defined.",
+    "Connector and Spotify restrictions are included.",
+    "20G audit passes.",
+    "Full project check passes."
+  ]
+}

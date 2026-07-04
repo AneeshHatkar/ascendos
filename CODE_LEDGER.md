@@ -4501,3 +4501,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock Emergency Lockdown behavior across memory, Carnos, dashboards, timeline, analytics, export, destructive actions, connectors, Spotify, sensitive domains, audit, and UI badges without adding schema.
+
+## Phase 20G — Sensitive Locks Domain Permissions
+
+Files added or updated:
+- docs/contracts/PHASE_20G_SENSITIVE_LOCKS_DOMAIN_PERMISSIONS.md
+- docs/fixtures/phase20-privacy-export/phase20g_sensitive_locks_domain_permissions_fixture.json
+- docs/phase-reports/PHASE_20G_SENSITIVE_LOCKS_DOMAIN_PERMISSIONS_REPORT.md
+- scripts/audit-phase-20g.mjs
+- package.json
+
+Purpose: lock sensitive lock levels and domain privacy permissions across dashboards, timeline, analytics, export, Carnos, connectors, Spotify, redaction, retention, audit, and badges without adding schema.
