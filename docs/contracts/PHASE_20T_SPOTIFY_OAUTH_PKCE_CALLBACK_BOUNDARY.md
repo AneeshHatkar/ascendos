@@ -1,0 +1,469 @@
+# Phase 20T — Spotify Account Connection + OAuth/PKCE Callback Boundary
+
+## Purpose
+
+Define the Spotify account connection, OAuth PKCE start, callback, state validation, code verifier, redirect URI validation, token exchange boundary, refresh token expiration and reauth boundary, connection status transitions, scope grants, account profile boundary, token storage boundary, audit events, blocked reasons, and badges before any runtime OAuth implementation exists.
+
+## Schema Requirement
+
+- Needs live database schema: false
+- Reason: 20T defines account connection and OAuth PKCE callback boundary contracts only. It does not create OAuth routes, callback routes, token exchange code, token refresh code, token storage, Spotify API clients, connector tables, account persistence, scope persistence, UI cards, provider calls, sync jobs, or runtime actions.
+- Future schema gate: If a later chunk implements OAuth start route, callback route, token exchange, token refresh, encrypted token reference storage, Spotify account persistence, scope grant persistence, connection status persistence, audit writes, provider API calls, or UI connection cards, inspect exact schema before coding.
+
+## Official Spotify Reference Boundary
+
+- Spotify supports Authorization Code with PKCE for applications where a client secret cannot be safely stored.
+- Spotify redirect URIs must match the app allowlist except documented loopback behavior.
+- Spotify access tokens are bearer credentials used to access protected resources.
+- Spotify refresh tokens are security credentials used to obtain new access tokens.
+- Spotify refresh tokens can expire and apps must handle reauthorization.
+- Scopes define user-granted permission boundaries.
+
+- Implementation note: 20T stores boundary summaries only. Runtime chunks must re-check official Spotify docs before implementing token exchange or callback behavior.
+
+## Account Connection Flow Boundary
+
+### Future Steps
+- user_clicks_connect_spotify
+- system_checks_developer_setup
+- system_checks_env_boundary
+- system_generates_state
+- system_generates_pkce_verifier
+- system_derives_pkce_challenge
+- system_redirects_to_spotify_authorization
+- spotify_redirects_to_callback
+- callback_validates_state
+- callback_validates_provider
+- callback_validates_redirect_uri
+- callback_handles_error_or_denial
+- callback_exchanges_code_for_tokens
+- system_stores_token_boundary_reference
+- system_records_granted_scopes
+- system_records_connection_status
+- system_audits_connection_event
+
+### Rules
+- 20T does not implement these steps.
+- Every step must be auditable in future runtime.
+- Token values must not be shown during any step.
+- Carnos cannot initiate account connection silently.
+- Carnos cannot complete account connection silently.
+- User approval is required before redirecting to Spotify.
+- Callback errors must be safe and must not reveal secrets.
+
+## OAuth Start Boundary
+
+- Future route candidate: /api/connectors/spotify/start
+
+### Required Inputs Future
+- requested_scope_group_ids
+- return_to_boundary
+- connection_intent
+- csrf_or_state_seed_boundary
+
+### Generated Values Future
+- state
+- code_verifier
+- code_challenge
+- code_challenge_method
+- nonce_or_request_id_boundary
+- expires_at
+
+### Rules
+- State must be unique and unpredictable.
+- State must be temporary.
+- State must be verified on callback.
+- Code verifier must be temporary and secret.
+- Code verifier must not be logged.
+- Code verifier must not be available to Carnos.
+- Code challenge can be sent to Spotify.
+- Requested scopes must be minimal for the intended feature.
+- Requested scopes must be visible to the user.
+- OAuth start must be blocked during Emergency Lockdown unless future reviewed unlock allows it.
+- OAuth start must respect Private Mode.
+- 20T does not create the start route.
+
+## OAuth Callback Boundary
+
+- Future route candidate: /api/connectors/spotify/callback
+
+### Expected Query Values Future
+- code
+- state
+- error
+
+### Validation Rules
+- Callback must validate state.
+- Callback must validate provider.
+- Callback must validate redirect URI boundary.
+- Callback must handle user denial safely.
+- Callback must handle missing code safely.
+- Callback must handle missing state safely.
+- Callback must handle expired state safely.
+- Callback must handle state mismatch safely.
+- Callback must not expose code in UI.
+- Callback must not expose token values.
+- Callback must not pass secrets to Carnos.
+- Callback must create safe connection status in future runtime.
+- 20T does not create the callback route.
+
+## Redirect URI Rules
+
+- Local development redirect URI candidate remains http://127.0.0.1:3000/api/connectors/spotify/callback.
+- Production redirect URI must use HTTPS.
+- Redirect URI must match the Spotify Developer App allowlist.
+- Redirect URI mismatch must block connection.
+- localhost alias must not be used unless future provider docs explicitly allow it.
+- Wildcard redirect URIs must not be used.
+- Redirect URI must not contain token values.
+- Redirect URI must not expose authorization code outside callback handling.
+
+## Token Exchange Boundary
+
+### Future Exchange Inputs
+- authorization_code
+- code_verifier
+- redirect_uri
+- client_id
+
+### Future Exchange Outputs
+- access_token
+- token_type
+- scope
+- expires_in
+- refresh_token
+
+### Rules
+- Authorization code must be short-lived.
+- Authorization code must not be logged.
+- Access token must not be logged.
+- Refresh token must not be logged.
+- Token response must not be shown in UI.
+- Token response must not be stored as memory.
+- Token response must not be available to Carnos.
+- Token exchange failure must not reveal secrets.
+- Token exchange must be audited as boundary event without token values.
+- 20T does not implement token exchange.
+
+## Token Storage Boundary
+
+- Storage status: not_implemented_in_20T
+
+### Future Storage Requirements
+- server_only_storage
+- encrypted_or_secret_boundary_reference
+- owner_scoped_reference
+- provider_scoped_reference
+- rotation_or_refresh_status
+- revocation_status
+- reauthorization_status
+- audit_event_link
+
+### Rules
+- Token values must never be committed.
+- Token values must never be printed.
+- Token values must never be shown in audit payloads.
+- Token values must never be exported.
+- Token values must never be sent to Carnos.
+- Token values must never be stored in memory_items.
+- Token values must never be stored in fixtures.
+- Token values must never be stored in docs.
+- Only token boundary references can appear in user-facing state.
+- 20T does not create token storage.
+
+## Refresh And Reauthorization Boundary
+
+### Required Future States
+- access_token_valid
+- access_token_expired
+- refresh_attempt_required
+- refresh_succeeded
+- refresh_failed
+- refresh_token_expiring
+- refresh_token_expired
+- reauthorization_required
+- revoked
+
+### Rules
+- Access tokens must be treated as short-lived credentials.
+- Refresh tokens must be treated as sensitive security credentials.
+- Refresh token expiration must be handled gracefully.
+- Expired refresh token must force reauthorization.
+- Reauthorization must not happen silently through Carnos.
+- Refresh failures must not reveal secrets.
+- Refresh events must be audited without token values.
+- Reauth required state must be visible as a badge.
+- 20T does not implement refresh.
+
+## Scope Grant Boundary
+
+### Required Future Fields
+- spotify_scope_grant_id
+- spotify_connection_id
+- scope_id
+- provider_scope_string_boundary
+- granted
+- missing
+- revoked
+- risk_level
+- granted_at
+- revoked_at
+- last_checked_at
+- audit_event_id
+
+### Rules
+- Scopes must be mapped to Phase 20R connector scope model.
+- Scopes must be mapped to Phase 20S Spotify scope groups.
+- Missing scopes must block dependent features.
+- Revoked scopes must block dependent features.
+- High-risk scope grants require clear visibility.
+- Write scopes require review before action execution.
+- Listening history scopes are sensitive by default.
+- Scope changes must be audited.
+- 20T does not persist scope grants.
+
+## Connection Status Transitions
+
+### not_configured -> developer_app_required
+- Trigger: missing_spotify_developer_setup
+
+### developer_app_required -> configured_not_connected
+- Trigger: developer_setup_present
+
+### configured_not_connected -> connecting
+- Trigger: user_starts_oauth
+
+### connecting -> connected
+- Trigger: callback_success_and_boundary_storage_ready
+
+### connecting -> failed
+- Trigger: callback_error_or_validation_failure
+
+### connected -> missing_scope
+- Trigger: required_scope_missing
+
+### connected -> reauthorization_required
+- Trigger: refresh_token_expired_or_invalid
+
+### connected -> revoked
+- Trigger: provider_or_user_revocation_detected
+
+### revoked -> configured_not_connected
+- Trigger: user_prepares_reconnect
+
+### connected -> disconnected
+- Trigger: user_disconnects_with_review_where_required
+
+## Account Profile Boundary
+
+### Future Profile Fields
+- spotify_connection_id
+- provider_user_id_boundary
+- display_name_boundary
+- email_boundary
+- country_boundary
+- product_boundary
+- profile_image_boundary
+- explicit_content_boundary
+- followers_count_boundary
+- href_boundary
+- uri_boundary
+- connected_at
+- last_refreshed_at
+- revoked_at
+- connection_status
+
+### Rules
+- Provider user id is boundary metadata.
+- Email is private metadata.
+- Country and product are private metadata.
+- Profile image can be hidden or redacted.
+- Account profile must not become memory without explicit review.
+- Account profile must respect Private Mode.
+- Account profile must respect Emergency Lockdown.
+- 20T does not persist account profile.
+
+## Error Handling Boundary
+
+### Error Classes
+- user_denied_access
+- missing_code
+- missing_state
+- state_mismatch
+- state_expired
+- redirect_uri_mismatch
+- missing_client_id
+- missing_code_verifier
+- token_exchange_failed
+- provider_unavailable
+- rate_limited
+- refresh_token_expired
+- reauthorization_required
+- unknown_provider_error
+
+### Rules
+- Errors must be user-safe.
+- Errors must not show token values.
+- Errors must not show code verifier.
+- Errors must not show authorization code.
+- Errors must not show client secret.
+- Errors must create auditable boundary status in future runtime.
+- Errors must preserve user ability to retry safely.
+- Errors must not leak through Carnos context.
+
+## Private Mode Rules
+
+- Private Mode can block OAuth start.
+- Private Mode can block account profile refresh.
+- Private Mode can block automatic scope checks.
+- Private Mode can block Carnos account connection suggestions.
+- Private Mode cannot reveal token values.
+- Carnos cannot disable Private Mode to connect Spotify.
+- Callback handling must preserve Private Mode privacy flags in future runtime.
+
+## Emergency Lockdown Rules
+
+- Emergency Lockdown blocks OAuth start by default.
+- Emergency Lockdown blocks scope expansion by default.
+- Emergency Lockdown blocks account profile refresh by default.
+- Emergency Lockdown blocks Carnos connection suggestions by default.
+- Emergency Lockdown cannot reveal token values.
+- Carnos cannot disable Emergency Lockdown to connect Spotify.
+- Callback handling during lockdown must fail safely or defer future status updates.
+
+## Carnos Rules
+
+- Carnos can explain how to connect Spotify using safe setup guidance.
+- Carnos cannot start OAuth silently.
+- Carnos cannot complete callback silently.
+- Carnos cannot approve scopes.
+- Carnos cannot request broad scopes without user approval.
+- Carnos cannot see authorization code.
+- Carnos cannot see code verifier.
+- Carnos cannot see access token.
+- Carnos cannot see refresh token.
+- Carnos cannot store Spotify account profile as memory without review.
+- Carnos cannot treat successful connection as consent for all Spotify actions.
+
+## Audit Events Required
+
+- spotify_oauth_start_requested
+- spotify_oauth_start_blocked
+- spotify_oauth_state_created
+- spotify_oauth_redirect_created
+- spotify_oauth_callback_received
+- spotify_oauth_callback_blocked
+- spotify_oauth_state_validated
+- spotify_oauth_state_mismatch
+- spotify_oauth_state_expired
+- spotify_oauth_user_denied
+- spotify_oauth_code_received_boundary
+- spotify_oauth_token_exchange_requested_boundary
+- spotify_oauth_token_exchange_succeeded_boundary
+- spotify_oauth_token_exchange_failed_boundary
+- spotify_token_boundary_stored
+- spotify_scope_grants_recorded
+- spotify_connection_status_changed
+- spotify_refresh_required
+- spotify_refresh_failed_boundary
+- spotify_reauthorization_required
+- spotify_account_profile_boundary_recorded
+- spotify_private_mode_connection_blocked
+- spotify_emergency_lockdown_connection_blocked
+- spotify_carnos_connection_blocked
+
+## Blocked Reasons
+
+- spotify_developer_app_missing
+- spotify_client_id_missing
+- spotify_redirect_uri_missing
+- spotify_redirect_uri_mismatch
+- spotify_env_missing
+- spotify_oauth_state_missing
+- spotify_oauth_state_mismatch
+- spotify_oauth_state_expired
+- spotify_code_missing
+- spotify_user_denied
+- spotify_code_verifier_missing
+- spotify_token_exchange_failed
+- spotify_token_storage_boundary_missing
+- spotify_scope_missing
+- spotify_scope_revoked
+- spotify_private_mode_active
+- spotify_emergency_lockdown_active
+- spotify_carnos_access_blocked
+- spotify_reauthorization_required
+- spotify_refresh_token_expired
+- spotify_provider_unavailable
+- spotify_rate_limited
+- spotify_secret_exposure_blocked
+- spotify_schema_required_for_runtime
+
+## Badge Requirements
+
+- OAuth Boundary
+- PKCE Required
+- State Required
+- State Validated
+- State Failed
+- Redirect URI Required
+- Redirect URI Mismatch
+- Connecting
+- Connected
+- Connection Failed
+- Missing Scope
+- Scope Revoked
+- Token Hidden
+- Refresh Required
+- Reauthorization Required
+- Private Mode Blocked
+- Emergency Lockdown Blocked
+- Carnos Restricted
+- Provider Boundary
+- Schema Required For Runtime
+
+## Must Not Do
+
+- do not create migrations in 20T
+- do not invent Spotify persistence schema in 20T
+- do not implement OAuth start route in 20T
+- do not implement callback route in 20T
+- do not implement token exchange in 20T
+- do not implement token refresh in 20T
+- do not implement token storage in 20T
+- do not implement Spotify provider calls in 20T
+- do not implement Spotify UI cards in 20T
+- do not connect a real Spotify account in 20T
+- do not expose authorization code
+- do not expose code verifier
+- do not expose access token
+- do not expose refresh token
+- do not let Carnos start OAuth silently
+- do not let Carnos complete callback silently
+- do not let Carnos approve scopes
+- do not let Spotify connection imply consent for all Spotify actions
+
+## Acceptance
+
+- Spotify account connection boundary is defined.
+- OAuth start boundary is defined.
+- OAuth callback boundary is defined.
+- Redirect URI rules are defined.
+- Token exchange boundary is defined.
+- Token storage boundary is defined.
+- Refresh and reauthorization boundary is defined.
+- Scope grant boundary is defined.
+- Connection status transitions are defined.
+- Account profile boundary is defined.
+- Error handling boundary is defined.
+- Private Mode rules are defined.
+- Emergency Lockdown rules are defined.
+- Carnos rules are defined.
+- Audit events are defined.
+- Blocked reasons are defined.
+- Badge requirements are defined.
+- No token exposure rule is explicit.
+- No silent OAuth rule is explicit.
+- Runtime/schema gate is explicit.
+- 20T audit passes.
+- Full project check passes.

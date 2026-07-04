@@ -5381,3 +5381,7 @@ Defined future API connector framework categories, connector registry, connector
 ## Phase 20S — Spotify Connector Foundation
 
 Defined Spotify connector identity, developer app setup boundary, redirect URI boundary, OAuth PKCE boundary, environment variable boundary, scope groups, connection statuses, provider policy boundary, token boundary rules, account profile boundary, Private Mode behavior, Emergency Lockdown behavior, Carnos Spotify access rules, Spotify data classes, audit events, blocked reasons, and badges. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, OAuth routes, callback routes, token storage, provider calls, UI cards, sync jobs, or runtime Spotify actions.
+
+## Phase 20T — Spotify OAuth PKCE Callback Boundary
+
+Defined Spotify account connection boundary, OAuth start boundary, callback boundary, redirect URI rules, token exchange boundary, token storage boundary, refresh and reauthorization boundary, scope grant boundary, connection status transitions, account profile boundary, error handling boundary, Private Mode rules, Emergency Lockdown rules, Carnos rules, audit events, blocked reasons, badges, no token exposure, no silent OAuth, and runtime/schema gates. No schema was needed because this chunk does not add persistence, migrations, RLS, repositories, OAuth routes, callback routes, token exchange, token refresh, token storage, provider calls, UI cards, sync jobs, or runtime Spotify actions.

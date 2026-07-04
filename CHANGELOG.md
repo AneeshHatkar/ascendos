@@ -2162,3 +2162,9 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added Spotify connector foundation contracts.
 - Added Spotify identity, developer setup boundary, redirect URI boundary, OAuth PKCE boundary, env boundaries, scopes, statuses, token boundary, account profile boundary, privacy modes, Carnos rules, provider policy, audit events, blocked reasons, and badges.
 - Integrated audit:phase20s into package checks.
+
+## Phase 20T — Spotify OAuth PKCE Callback Boundary
+
+- Added Spotify OAuth PKCE callback boundary contracts.
+- Added account connection flow, OAuth start, callback, redirect URI, token exchange, token storage, refresh/reauth, scope grant, connection status, profile, error handling, privacy mode, Carnos, audit, blocked reason, badge, and runtime/schema gate rules.
+- Integrated audit:phase20t into package checks.

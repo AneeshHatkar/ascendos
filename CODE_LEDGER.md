@@ -4644,3 +4644,14 @@ Files added or updated:
 - package.json
 
 Purpose: lock Spotify connector foundation, developer setup, redirect URI, OAuth PKCE stance, env boundaries, scopes, provider policy, token safety, Carnos access, privacy modes, audit events, blocked reasons, and badges before account connection implementation.
+
+## Phase 20T — Spotify OAuth PKCE Callback Boundary
+
+Files added or updated:
+- docs/contracts/PHASE_20T_SPOTIFY_OAUTH_PKCE_CALLBACK_BOUNDARY.md
+- docs/fixtures/phase20-privacy-export/phase20t_spotify_oauth_pkce_callback_boundary_fixture.json
+- docs/phase-reports/PHASE_20T_SPOTIFY_OAUTH_PKCE_CALLBACK_BOUNDARY_REPORT.md
+- scripts/audit-phase-20t.mjs
+- package.json
+
+Purpose: lock Spotify account connection and OAuth PKCE callback boundaries for state, verifier, redirect URI, token exchange, token storage, refresh, reauthorization, scope grants, profile boundaries, Carnos restrictions, audit, and schema gates before runtime implementation.

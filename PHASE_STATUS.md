@@ -3807,3 +3807,7 @@ Phase 20R locked: connector categories, registry model, account model, permissio
 ## Phase 20S Status
 
 Phase 20S locked: Spotify connector identity, developer app setup boundary, redirect URI boundary, OAuth PKCE boundary, environment variable boundary, scope groups, connection status model, provider policy boundary, token boundary rules, account profile boundary, Private Mode rules, Emergency Lockdown rules, Carnos Spotify access rules, Spotify data classes, audit events, blocked reasons, badge requirements, no token exposure, and no silent Spotify action boundaries. No schema was needed for this contract-only chunk.
+
+## Phase 20T Status
+
+Phase 20T locked: Spotify account connection boundary, OAuth start boundary, callback boundary, redirect URI rules, token exchange boundary, token storage boundary, refresh and reauthorization boundary, scope grant boundary, connection status transitions, account profile boundary, error handling boundary, Private Mode rules, Emergency Lockdown rules, Carnos rules, audit events, blocked reasons, badge requirements, no token exposure, no silent OAuth, and runtime/schema gates. No schema was needed for this contract-only chunk.
