@@ -2192,3 +2192,10 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added manual workout logging stance and deferred connector registry contracts.
 - Added active connector position, deferred health/wearable connectors, excluded Echo/Alexa boundary, manual workout data classes, privacy rules, UI stance rules, Carnos rules, export/memory rules, audit events, blocked reasons, badge requirements, and runtime/schema gates.
 - Integrated audit:phase20x into package checks.
+
+## Phase 20Y — Privacy Dashboard View Model UI
+
+- Added read-only /privacy dashboard view model and UI.
+- Added memory, private mode, emergency lockdown, export, destructive action, sensitive lock, audit, Carnos access, Spotify connector, media permission, manual workout, and deferred connector cards.
+- Reused existing settings/privacy read helpers without adding schema, writes, provider calls, token storage, export generation, destructive actions, or Carnos runtime tools.
+- Integrated audit:phase20y into package checks.

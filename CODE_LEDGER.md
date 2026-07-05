@@ -4699,3 +4699,17 @@ Files added or updated:
 - package.json
 
 Purpose: lock manual workout logging stance, deferred Garmin and health/wearable connectors, excluded Echo/Alexa boundary, privacy rules, Carnos limits, export/memory rules, audit events, blocked reasons, badges, and schema gates before future connector or health-data runtime implementation.
+
+## Phase 20Y — Privacy Dashboard View Model UI
+
+Files added or updated:
+- src/app/privacy/page.tsx
+- src/lib/privacy/privacy-dashboard-view-model.ts
+- src/components/privacy/privacy-dashboard-ui.tsx
+- docs/contracts/PHASE_20Y_PRIVACY_DASHBOARD_VIEW_MODEL_UI.md
+- docs/fixtures/phase20-privacy-export/phase20y_privacy_dashboard_view_model_ui_fixture.json
+- docs/phase-reports/PHASE_20Y_PRIVACY_DASHBOARD_VIEW_MODEL_UI_REPORT.md
+- scripts/audit-phase-20y.mjs
+- package.json
+
+Purpose: wire /privacy to a read-only Phase 20 dashboard view model and UI using existing settings/privacy read helpers while preserving connector, Spotify, export, memory, audit, redaction, Carnos, and runtime safety boundaries.

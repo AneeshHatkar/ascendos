@@ -1,0 +1,88 @@
+{
+  "phase": "20Y",
+  "name": "Privacy Dashboard View Model And UI",
+  "purpose": "Wire the /privacy dashboard to a real read-only view model and UI using existing settings/privacy read helpers while preserving Phase 20 privacy, export, memory, connector, Spotify, manual workout, deferred connector, audit, and Carnos boundaries.",
+  "source_discovery": {
+    "route": "src/app/privacy/page.tsx",
+    "existing_dashboard_helper": "src/lib/dashboard/settings-privacy-dashboard-data-helpers.ts",
+    "existing_repository_file": "src/lib/repositories/settings-privacy-read.ts",
+    "existing_read_helpers": [
+      "getSettingsPrivacyDashboardDataSummary",
+      "listAppSettings",
+      "listPrivacySettings"
+    ],
+    "existing_component_pattern": "AuthenticatedDashboardShell"
+  },
+  "schema_requirement": {
+    "needs_new_database_schema": false,
+    "reason": "20Y uses existing discovered settings and privacy read helpers. It does not create migrations, connector tables, Spotify account tables, export tables, action review tables, audit writes, token storage, or provider calls.",
+    "runtime_boundary": "The UI is read-only and status-only. Any future write action, connector account storage, export generation, destructive manifest, token storage, action review persistence, or audit insertion requires schema inspection before coding."
+  },
+  "ui_sections": [
+    "privacy hero",
+    "privacy command tiles",
+    "memory controls",
+    "private mode and lockdown",
+    "export and destructive boundaries",
+    "sensitive locks",
+    "Spotify connector trust card",
+    "manual workout and deferred connectors",
+    "audit and redaction cards",
+    "existing settings privacy foundation panel",
+    "existing forget destructive records panel",
+    "existing memory audit usage transparency panel"
+  ],
+  "read_only_guards": [
+    "No form submission is added.",
+    "No direct setting mutation is added.",
+    "No export generation is added.",
+    "No destructive action is added.",
+    "No Spotify OAuth route is added.",
+    "No Spotify provider call is added.",
+    "No connector token is stored.",
+    "No audit write is added.",
+    "No Carnos runtime action is added.",
+    "No schema is invented."
+  ],
+  "dashboard_cards": [
+    "Memory Inbox",
+    "Saved Memories",
+    "Forget",
+    "Export",
+    "Destructive Action",
+    "Private Mode",
+    "Sensitive Locks",
+    "Audit Viewer",
+    "Spotify Connector",
+    "Media Permissions",
+    "Manual Workout Logging",
+    "Deferred Connectors"
+  ],
+  "privacy_statuses": [
+    "read_only",
+    "schema_existing_reads_only",
+    "private_mode_boundary",
+    "emergency_lockdown_boundary",
+    "explicit_export_scope_required",
+    "memory_review_required",
+    "token_hidden",
+    "connector_deferred",
+    "audit_redacted"
+  ],
+  "acceptance": [
+    "The existing /privacy route renders the new Phase 20Y dashboard UI.",
+    "The route keeps AuthenticatedDashboardShell.",
+    "The route still reads app settings and privacy settings with existing helpers.",
+    "A privacy dashboard view model builder exists.",
+    "The UI displays Phase 20 cards for memory, private mode, export, destructive action, sensitive locks, audit, Spotify, media permissions, manual workout logging, and deferred connectors.",
+    "The UI clearly marks Spotify as boundary-only and token-hidden.",
+    "The UI clearly marks Garmin and health connectors as deferred.",
+    "The UI clearly marks Echo/Alexa as excluded from Phase 20.",
+    "No migrations are added.",
+    "No write action is added.",
+    "No provider call is added.",
+    "No token exposure is added.",
+    "20Y audit passes.",
+    "Full project check passes."
+  ]
+}

@@ -5401,3 +5401,7 @@ Defined Spotify connector card, media permission card, connector audit card, act
 ## Phase 20X — Manual Workout Deferred Connectors
 
 Locked manual workout logging as the active health/body logging stance for Phase 20 and defined excluded or deferred connector boundaries so the app does not falsely imply Garmin, Echo, Alexa, wearable sync, automatic workout import, device APIs, or external health connectors exist before source, schema, provider, privacy, and review gates are satisfied. No schema was needed because this chunk does not add migrations, custom tracker tables, connector tables, wearable sync jobs, provider clients, imports, dashboard adapters, /privacy UI, Carnos tools, audit writes, or health data storage.
+
+## Phase 20Y — Privacy Dashboard View Model UI
+
+Wired the existing /privacy route to a read-only Phase 20 dashboard view model and UI using existing discovered settings/privacy read helpers. Added memory, private mode, emergency lockdown, export, destructive action, sensitive lock, audit, Carnos access, Spotify connector, media permission, manual workout, and deferred connector cards. No schema was added because 20Y uses existing read helpers only and does not add migrations, database writes, provider calls, OAuth routes, token storage, export generation, destructive actions, audit writes, or Carnos runtime tools.

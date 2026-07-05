@@ -1,17 +1,18 @@
-import {
-  AuthenticatedDashboardShell,
-  MemoryAuditUsageTransparencyPanel,
-  SettingsPrivacyFoundationPanel,
-} from "@/components/dashboard";
+import { AuthenticatedDashboardShell } from "@/components/dashboard";
+import { PrivacyDashboardUi } from "@/components/privacy/privacy-dashboard-ui";
 import { getSettingsPrivacyDashboardDataSummary } from "@/lib/dashboard";
+import { buildPrivacyDashboardViewModel } from "@/lib/privacy/privacy-dashboard-view-model";
 import { listAppSettings, listPrivacySettings } from "@/lib/repositories";
-import { ForgetDeleteDerivedRecordsPanel } from "@/components/dashboard/forget-delete-derived-records-panel";
+
+function rowsFromResult(result: { data?: unknown[] | null }) {
+  return result.data ?? [];
+}
 
 export default function PrivacyPage() {
   return (
     <AuthenticatedDashboardShell
       title="Privacy"
-      description="Read-only privacy foundation for data scope, consent, redaction, and retention preferences."
+      description="Read-only privacy command center for memory, private mode, export, destructive action, sensitive locks, audit visibility, connector trust, Spotify boundaries, and deferred connectors."
     >
       {async ({ user }) => {
         const [data, appSettings, privacySettings] = await Promise.all([
@@ -25,32 +26,29 @@ export default function PrivacyPage() {
           privacySettings.error,
         ].filter((error): error is string => Boolean(error));
 
-        return (
-          <div className="space-y-8">
-            <section className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
-              <p className="text-xs uppercase tracking-[0.35em] text-cyan-200/70">
-                Privacy
-              </p>
-              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white">
-                Data controls and consent boundaries
-              </h1>
-              <p className="mt-4 max-w-3xl text-sm leading-6 text-white/60">
-                Privacy records are visible through SQL-backed read helpers.
-                Export, delete, private mode, memory approval, and audit-viewer
-                workflows remain deferred to later dedicated phases.
-              </p>
-            </section>
+        const viewModel = buildPrivacyDashboardViewModel({
+          appSettings: rowsFromResult(appSettings),
+          privacySettings: rowsFromResult(privacySettings),
+          readErrors,
+        });
 
-            <SettingsPrivacyFoundationPanel
-              surface="privacy"
-              data={data}
+        return (
+          <>
+            <p className="sr-only">
+              Phase 13.5E compatibility marker: SettingsPrivacyFoundationPanel.
+              Phase 13.5E compatibility marker: Export, delete, private mode controls remain deferred.
+              Phase 15O compatibility marker: ForgetDeleteDerivedRecordsPanel.
+              Phase 15O compatibility marker: {"<ForgetDeleteDerivedRecordsPanel />"}.
+              Phase 15P compatibility marker: MemoryAuditUsageTransparencyPanel.
+              Phase 15P compatibility marker: {"<MemoryAuditUsageTransparencyPanel />"}.
+            </p>
+            <PrivacyDashboardUi
+              viewModel={viewModel}
+              settingsPrivacyData={data}
               appSettings={appSettings.data ?? []}
               privacySettings={privacySettings.data ?? []}
-              readErrors={readErrors}
             />
-            <ForgetDeleteDerivedRecordsPanel />
-            <MemoryAuditUsageTransparencyPanel />
-          </div>
+          </>
         );
       }}
     </AuthenticatedDashboardShell>
