@@ -7,7 +7,7 @@ export function AppSidebar() {
         <p className="text-xs uppercase tracking-[0.35em] text-white/40">
           ascendOS
         </p>
-        <h2 className="mt-2 text-xl font-semibold">Carnos Shell</h2>
+        <h2 className="mt-2 text-xl font-semibold">Athena Shell</h2>
       </div>
 
       <nav className="mt-8 space-y-2">

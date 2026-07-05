@@ -147,7 +147,7 @@ export function SettingsPrivacyFoundationPanel({
           Read-only foundation for app settings and privacy settings. This layer
           displays confirmed SQL records only; it does not mutate preferences,
           export data, delete data, enable private mode, activate memory, rename
-          Carnos, start voice, search the web, or run analytics.
+          Athena, start voice, search the web, or run analytics.
         </p>
 
         <div className="mt-6 grid gap-4 md:grid-cols-3 xl:grid-cols-6">

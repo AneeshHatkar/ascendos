@@ -140,7 +140,7 @@ export async function HealthBodySleepEnergyDashboardV1({
         <p className="font-semibold text-white">Sleep and energy safety note</p>
         <p className="mt-2 leading-6">
           This surface avoids medical diagnosis, treatment claims, mental health diagnosis,
-          medication claims, body-shaming, and autonomous changes. Carnos may later propose sleep
+          medication claims, body-shaming, and autonomous changes. Athena may later propose sleep
           or energy records only through the confirmed safe-action flow.
         </p>
       </div>

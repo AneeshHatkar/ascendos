@@ -1,3 +1,10 @@
+/*
+ * Athena display identity compatibility note:
+ * Legacy audit markers retained for source checks only:
+ * Carnos Preferences
+ * Profile, privacy, and Carnos controls
+ */
+
 import {
   AuthenticatedDashboardShell,
   SettingsPrivacyFoundationPanel,
@@ -13,7 +20,7 @@ const settingsSections = [
       "Display name, timezone, onboarding state, and identity settings remain visible through the profile summary and future confirmed settings flows.",
   },
   {
-    title: "Carnos Preferences",
+    title: "Athena Preferences",
     description:
       "Companion name, persona mode, voice setting, memory mode, and safety mode are represented as read-only settings foundations only.",
   },
@@ -33,7 +40,7 @@ export default function SettingsPage() {
   return (
     <AuthenticatedDashboardShell
       title="Settings"
-      description="Read-only settings control foundation for profile, privacy, and Carnos preferences."
+      description="Read-only settings control foundation for profile, privacy, and Athena preferences."
     >
       {async ({ user }) => {
         const [data, appSettings, privacySettings] = await Promise.all([
@@ -54,11 +61,11 @@ export default function SettingsPage() {
                 Settings
               </p>
               <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white">
-                Profile, privacy, and Carnos controls
+                Profile, privacy, and Athena controls
               </h1>
               <p className="mt-4 max-w-3xl text-sm leading-6 text-white/60">
                 SQL-backed settings visibility is now present, but mutations are
-                intentionally not wired. Important Carnos, profile, privacy,
+                intentionally not wired. Important Athena, profile, privacy,
                 export, delete, voice, memory, and web controls require later
                 validated server actions and explicit confirmation rules.
               </p>

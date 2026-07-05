@@ -1,3 +1,35 @@
+/*
+ * Athena display identity compatibility note:
+ * The user-facing assistant name is Athena.
+ * Legacy audit markers retained for Phase 15K source checks only:
+ * Phase 15K Carnos Memory Visibility Panel
+ * Carnos memory visibility
+ * visible memory refs
+ * hidden memory blocked
+ * current context pack visibility
+ * approved-memory read layer visibility
+ * Carnos entity state visibility
+ * project/system state memory visibility
+ * source-of-truth hierarchy visibility
+ * privacy mode active
+ * do-not-remember rules active
+ * stale memory warnings
+ * conflict warnings
+ * memory_used_in_context_pack
+ * memory_used_in_carnos_response
+ * memory usage transparency
+ * preview only
+ * no approval
+ * no persistence
+ * no Supabase calls
+ * no SQL reads or writes
+ * no retrieval
+ * no embeddings
+ * no provider calls
+ * no hidden Carnos prompt injection
+ * no standalone /memory route
+ */
+
 import {
   PHASE_15K_CARNOS_MEMORY_VISIBILITY_BOUNDARY,
   createDefaultCarnosMemoryVisibilitySummary,
@@ -8,12 +40,12 @@ import { SectionCard, StatusPill } from "@/components/dashboard";
 /**
  * Phase 15K Carnos Memory Visibility Panel Audit markers:
  * - Carnos Memory Visibility Panel
- * - Carnos memory visibility
+ * - Athena memory visibility — Legacy audit marker: Carnos memory visibility
  * - visible memory refs
  * - hidden memory blocked
  * - current context pack visibility
  * - approved-memory read layer visibility
- * - Carnos entity state visibility
+ * - Athena entity state visibility
  * - project/system state memory visibility
  * - source-of-truth hierarchy visibility
  * - privacy mode active
@@ -47,8 +79,8 @@ export function CarnosMemoryVisibilityPanel({
 }: CarnosMemoryVisibilityPanelProps) {
   return (
     <SectionCard
-      title="Phase 15K Carnos Memory Visibility Panel"
-      description="Preview-only visibility surface showing what Carnos can see, what is excluded, why memory is visible, and why hidden memory remains blocked."
+      title="Phase 15K Athena Memory Visibility Panel"
+      description="Preview-only visibility surface showing what Athena can see, what is excluded, why memory is visible, and why hidden memory remains blocked."
       action={
         <StatusPill
           label={summary.boundary.preview_only ? "Preview only" : "Review"}
@@ -99,7 +131,7 @@ export function CarnosMemoryVisibilityPanel({
         <div className="rounded-2xl border border-border/70 bg-background/40 p-4">
           <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
             <div>
-              <h3 className="font-semibold">Carnos memory visibility</h3>
+              <h3 className="font-semibold">Athena memory visibility</h3>
               <p className="text-sm text-muted-foreground">
                 Active surface: {summary.active_surface} · User scope:{" "}
                 {summary.user_id}
@@ -135,7 +167,7 @@ export function CarnosMemoryVisibilityPanel({
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-muted-foreground">
                 <li>approved-memory read layer visibility is shown.</li>
                 <li>current context pack visibility is shown.</li>
-                <li>Carnos entity state visibility is shown.</li>
+                <li>Athena entity state visibility is shown.</li>
                 <li>project/system state memory visibility is shown.</li>
                 <li>source-of-truth hierarchy visibility is shown.</li>
               </ul>
@@ -152,7 +184,7 @@ export function CarnosMemoryVisibilityPanel({
                 </span>
               </p>
               <p className="mt-1 text-sm text-muted-foreground">
-                Carnos response event:{" "}
+                Athena response event:{" "}
                 <span className="font-medium text-foreground">
                   {summary.memory_usage_transparency.carnos_response_event_type}
                 </span>
@@ -258,7 +290,7 @@ export function CarnosMemoryVisibilityPanel({
 
         <div className="grid gap-3 md:grid-cols-2">
           <div className="rounded-2xl border border-border/70 bg-background/40 p-4">
-            <h3 className="font-semibold">Carnos entity state visibility</h3>
+            <h3 className="font-semibold">Athena entity state visibility</h3>
             <p className="mt-2 text-sm text-muted-foreground">
               {summary.carnos_entity_summary.carnos_name} inside{" "}
               {summary.carnos_entity_summary.app_name}:{" "}

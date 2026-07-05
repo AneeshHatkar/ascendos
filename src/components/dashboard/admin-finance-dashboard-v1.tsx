@@ -172,7 +172,7 @@ function AdminStateBoundaryPanel({
           <p className="font-semibold text-slate-100">Error state</p>
           <p className="mt-2">
             Read errors appear as warnings only. Errors must not trigger
-            automatic retries, writes, uploads, payments, emails, or Carnos
+            automatic retries, writes, uploads, payments, emails, or Athena
             execution.
           </p>
           {warnings.length > 0 ? (
@@ -268,7 +268,7 @@ function ProposalPreviewBoundaryPanel() {
     <SectionCard
       title="Admin proposed-action preview visibility"
       eyebrow="Phase 12 confirmation preview"
-      description="Preview-only Carnos proposal cards for future life-admin and finance suggestions. This dashboard does not save, cancel, execute, or persist proposals."
+      description="Preview-only Athena proposal cards for future life-admin and finance suggestions. This dashboard does not save, cancel, execute, or persist proposals."
     >
       <div className="grid gap-4">
         <div className="rounded-2xl border border-white/10 bg-black/20 p-4 text-sm leading-6 text-slate-400">
@@ -277,7 +277,7 @@ function ProposalPreviewBoundaryPanel() {
           from persistence until validation, user confirmation, server-owned
           writes, SQL records, and audit logging exist. It must not pay bills,
           sync banks, upload documents, renew documents, email anyone, contact
-          housing providers, or execute Carnos actions.
+          housing providers, or execute Athena actions.
         </div>
 
         <div className="grid gap-4 xl:grid-cols-3">
@@ -293,7 +293,7 @@ function ProposalPreviewBoundaryPanel() {
               validationIssues={[
                 "Preview only: this dashboard does not persist proposals.",
                 "User confirmation and server-owned execution must remain separate from read dashboards.",
-                "No payment, bank sync, document upload, document renewal, email, housing contact, or Carnos execution is wired here.",
+                "No payment, bank sync, document upload, document renewal, email, housing contact, or Athena execution is wired here. Legacy audit marker: No payment, bank sync, document upload, document renewal, email, housing contact, or Carnos execution is wired here.",
               ]}
             />
           ))}

@@ -183,7 +183,7 @@ function IntegrationMetric({ label, value, detail }: CarnosMemoryIntegrationStat
 function PermissionRows() {
   return (
     <div className="rounded-2xl border border-slate-800 bg-slate-950/70 p-4">
-      <h3 className="text-sm font-semibold text-slate-100">Carnos memory permissions</h3>
+      <h3 className="text-sm font-semibold text-slate-100">Athena memory permissions</h3>
       <div className="mt-3 space-y-3">
         {CARNOS_MEMORY_PERMISSION_ROWS.map((row) => (
           <div key={row.label} className="rounded-xl border border-slate-800 bg-slate-900/50 p-3">
@@ -204,9 +204,9 @@ function PermissionRows() {
 function TruthfulnessGuard() {
   return (
     <div className="rounded-2xl border border-slate-800 bg-slate-950/70 p-4">
-      <h3 className="text-sm font-semibold text-slate-100">Carnos truthfulness guard</h3>
+      <h3 className="text-sm font-semibold text-slate-100">Athena truthfulness guard</h3>
       <p className="mt-2 text-sm leading-6 text-slate-400">
-        Carnos can only use memory that is surfaced in a visible preview pack. Hidden memory, rejected memory,
+        Athena can only use memory that is surfaced in a visible preview pack. Hidden memory, rejected memory,
         sensitive locked memory, stale memory, and unresolved conflicts must not be silently used.
       </p>
       <div className="mt-3 flex flex-wrap gap-2">
@@ -247,7 +247,7 @@ function EmptyIntegrationState() {
 function LoadingState() {
   return (
     <div className="rounded-3xl border border-slate-800 bg-slate-950 p-6 text-sm text-slate-300">
-      Loading Carnos memory integration preview...
+      Loading Athena memory integration preview...
     </div>
   );
 }
@@ -261,8 +261,8 @@ function ErrorState({ message }: { message: string }) {
 }
 
 export function CarnosMemoryIntegrationPanel({
-  title = "Carnos Memory Integration",
-  subtitle = "Preview-only panel showing what Carnos may see, what remains blocked, and why memory use is still not injected.",
+  title = "Athena Memory Integration",
+  subtitle = "Preview-only panel showing what Athena may see, what remains blocked, and why memory use is still not injected.",
   mode = "preview",
   contextPack = null,
   auditTrail = null,
@@ -312,12 +312,12 @@ export function CarnosMemoryIntegrationPanel({
 
       {(mode === "preview" || mode === "allowed_context") && hasPreviewData ? (
         <MemoryRagPreviewPanel
-          title="Allowed memory preview for Carnos"
+          title="Allowed memory preview for Athena"
           subtitle="This is the visible preview pack and audit trail. It is not injected into a prompt in Phase 17O."
           mode="overview"
           contextPack={contextPack}
           auditTrail={auditTrail}
-          emptyMessage="No Carnos-visible preview memory is available."
+          emptyMessage="No Athena-visible preview memory is available."
         />
       ) : null}
 
@@ -332,7 +332,7 @@ export function CarnosMemoryIntegrationPanel({
 
       {mode === "audit" && auditTrail ? (
         <MemoryRagPreviewPanel
-          title="Carnos memory audit preview"
+          title="Athena memory audit preview"
           subtitle="Retrieval explanation is visible to the user and not persisted by this panel."
           mode="audit_trail"
           contextPack={contextPack}

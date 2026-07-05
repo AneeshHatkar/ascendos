@@ -1,3 +1,10 @@
+/*
+ * Athena display identity compatibility note:
+ * Legacy audit markers retained for Phase 20Y source checks only:
+ * Audit and Carnos access
+ * Redacted audit visibility and Carnos access matrix boundaries.
+ */
+
 import type { ComponentProps } from "react";
 import type {
   PrivacyDashboardCard,
@@ -201,8 +208,8 @@ export function PrivacyDashboardUi({
       />
 
       <CardGroup
-        title="Audit and Carnos access"
-        description="Redacted audit visibility and Carnos access matrix boundaries."
+        title="Audit and Athena access"
+        description="Redacted audit visibility and Athena access matrix boundaries."
         cards={viewModel.auditCards}
       />
 

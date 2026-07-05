@@ -7,7 +7,7 @@ export function AppTopbar() {
         <p className="text-xs uppercase tracking-[0.3em] text-white/40">
           Proof-first operating system
         </p>
-        <h1 className="mt-1 text-lg font-semibold">ascendOS + Carnos</h1>
+        <h1 className="mt-1 text-lg font-semibold">ascendOS + Athena</h1>
       </div>
 
       <AuthStatus />

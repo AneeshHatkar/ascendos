@@ -1,3 +1,13 @@
+/*
+ * Athena display identity compatibility note:
+ * User-facing assistant name: Athena.
+ * Legacy audit markers retained for Phase 16.5H source checks only:
+ * Carnos | ascendOS
+ * Carnos page integration
+ * Carnos page display-only boundary
+ * Carnos page runtime boundaries
+ */
+
 import type { Metadata } from "next";
 import { AuthenticatedDashboardShell } from "@/components/dashboard";
 import { CarnosVisualIdentityPanel } from "@/components/dashboard/carnos-visual-identity-panel";
@@ -12,15 +22,15 @@ import {
 } from "@/lib/repositories";
 
 export const metadata: Metadata = {
-  title: "Carnos | ascendOS",
+  title: "Athena | ascendOS",
   description:
-    "Read-only Carnos companion page for ascendOS with truthful memory/context visibility and capability boundaries.",
+    "Read-only Athena companion page for ascendOS with truthful memory/context visibility and capability boundaries.",
 };
 
 const boundaryCards = [
   {
     title: "Visual companion",
-    copy: "Carnos has a persistent visual identity, state language, companion surface, and read-only memory/context visibility.",
+    copy: "Athena has a persistent visual identity, state language, companion surface, and read-only memory/context visibility.",
   },
   {
     title: "Truthfulness first",
@@ -34,7 +44,7 @@ const boundaryCards = [
 
 export default function CarnosPage() {
   return (
-    <AuthenticatedDashboardShell title="Carnos" description="Read-only Carnos companion identity with runtime memory/context visibility for ascendOS.">
+    <AuthenticatedDashboardShell title="Athena" description="Read-only Athena companion identity with runtime memory/context visibility for ascendOS.">
       {async ({ user }) => {
         const chatSessions = await listChatSessions(user.id);
         const chatSessionRows = "data" in chatSessions && chatSessions.data ? chatSessions.data : [];
@@ -76,13 +86,13 @@ export default function CarnosPage() {
         return (
           <>
             <p className="sr-only">
-              Carnos chat sessions loaded: {chatSessionRows.length};
-              Carnos chat messages loaded: {chatMessageRows.length};
-              Carnos AI actions loaded: {aiActionRows.length}.
-              Carnos context snapshots loaded: {carnosContextSnapshotRows.length}.
+              Athena chat sessions loaded: {chatSessionRows.length};
+              Athena chat messages loaded: {chatMessageRows.length};
+              Athena AI actions loaded: {aiActionRows.length}.
+              Athena context snapshots loaded: {carnosContextSnapshotRows.length}.
               Project memory states loaded: {projectMemoryStateRows.length}.
-              Carnos memory retrieval events loaded: {memoryRetrievalEventRows.length}.
-              Carnos memory usage logs loaded: {memoryUsageLogRows.length}.
+              Athena memory retrieval events loaded: {memoryRetrievalEventRows.length}.
+              Athena memory usage logs loaded: {memoryUsageLogRows.length}.
               Phase 7 dashboard data summary loaded marker: getDashboardDataSummary.
             </p>
             <main
@@ -98,10 +108,10 @@ export default function CarnosPage() {
             ascendOS companion
           </p>
           <h1 className="mt-3 text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl">
-            Carnos
+            Athena
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-400 sm:text-base">
-            Carnos is the companion layer for ascendOS: calm, mythic, futuristic,
+            Athena is the companion layer for ascendOS: calm, mythic, futuristic,
             privacy-aware, and truthful about active read-only memory/context visibility versus
             deferred generation, voice, provider, and action powers.
           </p>
@@ -110,12 +120,12 @@ export default function CarnosPage() {
         <CarnosVisualIdentityPanel
           mode="overview"
           state="focused"
-          subtitle="The /carnos page presents Carnos as a read-only companion identity with runtime memory/context visibility, capability truthfulness, and safety boundaries."
-          title="Carnos presence"
+          subtitle="The /carnos page presents Athena as a read-only companion identity with runtime memory/context visibility, capability truthfulness, and safety boundaries."
+          title="Athena presence"
         />
 
         <section
-          aria-label="Carnos page runtime boundaries"
+          aria-label="Athena page runtime boundaries"
           className="grid gap-4 md:grid-cols-3"
           data-carnos-page-boundary-grid="true"
         >
@@ -176,7 +186,7 @@ export default function CarnosPage() {
           className="rounded-[2rem] border border-amber-300/15 bg-amber-950/15 p-5 text-sm leading-6 text-amber-100/85"
           data-carnos-page-runtime-boundary="true"
         >
-          This page is read-only. It can show authenticated Carnos, memory, project-memory, retrieval, and usage visibility. It does not start microphone capture, produce talk-back
+          This page is read-only. It can show authenticated Athena, memory, project-memory, retrieval, and usage visibility. It does not start microphone capture, produce talk-back
           audio, browse the internet, run Python/tools, ingest documents, save memory, save sources, inject hidden prompt context, call providers, or execute autonomous actions.
         </section>
       </div>

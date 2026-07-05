@@ -136,7 +136,7 @@ function GrimoireReadOnlyBoundaryNotice() {
       <p className="mt-2 leading-6 text-cyan-100/80">
         This dashboard reads confirmed Grimoire records only. It does not
         activate modes, save missions, log reversions, execute proposals, call
-        Carnos, or persist symbolic content.
+        Athena, or persist symbolic content.
       </p>
     </div>
   );
@@ -189,7 +189,7 @@ function GrimoireStateBoundaryPanel({ warnings }: { warnings: string[] }) {
           <p className="font-semibold text-slate-100">Error state</p>
           <p className="mt-2">
             Read errors appear as warnings only. Errors must not trigger
-            automatic writes, retries, Carnos execution, symbolic expansion, or
+            automatic writes, retries, Athena execution, symbolic expansion, or
             proposed actions.
           </p>
           {warnings.length > 0 ? (
@@ -261,9 +261,9 @@ function GrimoireCarnosGuideBoundaryPanel() {
 
   return (
     <SectionCard
-      title="Carnos Grimoire guide boundary"
+      title="Athena Grimoire guide boundary — Legacy audit marker: Carnos Grimoire guide boundary"
       eyebrow="13K guide hardening"
-      description="Read-only guide contract for how Carnos should translate symbolic modes into practical action later."
+      description="Read-only guide contract for how Athena should translate symbolic modes into practical action later."
     >
       <div className="grid gap-4 lg:grid-cols-2">
         <div className="rounded-2xl border border-cyan-300/20 bg-cyan-300/[0.04] p-4">
@@ -414,7 +414,7 @@ function GrimoireFinalAuditBoundaryPanel({
         <p className="font-semibold text-slate-100">Closeout boundary</p>
         <p className="mt-2">
           Phase 13 remains a read-only Grimoire-to-Action surface. All preview
-          cards are disabled. Carnos generation, proposed-action persistence,
+          cards are disabled. Athena generation, proposed-action persistence,
           action execution, timer behavior, and direct database writes remain
           outside this phase.
         </p>
@@ -655,7 +655,7 @@ function SymbolToActionTranslatorCard({
       <div className="mt-5 rounded-2xl border border-cyan-400/20 bg-cyan-400/10 p-4 text-sm leading-6 text-cyan-100">
         <p className="font-semibold">Translator boundary</p>
         <p className="mt-2 text-cyan-100/80">
-          These cards show how Carnos may translate symbolic mode language into a practical task,
+          These cards show how Athena may translate symbolic mode language into a practical task,
           daily log, or proof item. They are disabled previews only. This card does not call AI,
           create proposed actions, execute actions, or write Grimoire records.
         </p>

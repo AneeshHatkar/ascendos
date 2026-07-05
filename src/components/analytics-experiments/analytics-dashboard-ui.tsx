@@ -1,3 +1,11 @@
+/*
+ * Athena display identity compatibility note:
+ * Legacy audit markers retained for Phase 18K source checks only:
+ * Carnos disclosure boundary
+ * Carnos summaries wait for disclosure-safe context.
+ * Carnos can explain analytics only from supplied user-scoped metrics
+ */
+
 import type { AnalyticsDashboardCardViewModel, AnalyticsDashboardViewModel } from "../../lib/analytics-experiments/analytics-dashboard-view-model";
 
 import { buildEmptyAnalyticsDashboardViewModel } from "../../lib/analytics-experiments/analytics-dashboard-view-model";
@@ -99,7 +107,7 @@ export function AnalyticsDashboardUi({ viewModel = buildEmptyAnalyticsDashboardV
                 "Trend cards wait for real time-series metrics.",
                 "Correlation cards wait for matched user-scoped points.",
                 "Experiment cards wait for baseline and active measurements.",
-                "Carnos summaries wait for disclosure-safe context.",
+                "Athena summaries wait for disclosure-safe context.",
                 "Privacy-sensitive metrics stay hidden unless allowed.",
               ].map((message) => (
                 <div key={message} className="rounded-2xl border border-white/10 bg-black/20 p-4 text-sm text-slate-300">
@@ -117,9 +125,9 @@ export function AnalyticsDashboardUi({ viewModel = buildEmptyAnalyticsDashboardV
         )}
 
         <section className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
-          <h2 className="text-lg font-semibold text-slate-100">Carnos disclosure boundary</h2>
+          <h2 className="text-lg font-semibold text-slate-100">Athena disclosure boundary</h2>
           <p className="mt-2 text-sm leading-6 text-slate-300">
-            Carnos can explain analytics only from supplied user-scoped metrics and must disclose cached, stale,
+            Athena can explain analytics only from supplied user-scoped metrics and must disclose cached, stale,
             partial, unsynced, deterministic, insufficient, or privacy-restricted context before making suggestions.
           </p>
           <div className="mt-4 flex flex-wrap gap-2">

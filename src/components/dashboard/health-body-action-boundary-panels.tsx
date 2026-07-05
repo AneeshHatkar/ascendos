@@ -70,7 +70,7 @@ const HEALTH_BODY_LINKS = [
     description: "Calendar events linked to workouts, routines, sleep, and recovery context.",
   },
   {
-    label: "Carnos",
+    label: "Athena",
     route: "/carnos" as CanonicalRoute,
     description: "Companion review surface for future proposed health/body records.",
   },
@@ -132,7 +132,7 @@ export function HealthBodyProposedActionVisibilityPanel() {
     <SectionCard
       title="Health/body proposed-action visibility"
       eyebrow="11.39 confirmation preview"
-      description="Preview-only Carnos proposal cards for future health/body suggestions. This dashboard does not save, cancel, execute, or persist proposals."
+      description="Preview-only Athena proposal cards for future health/body suggestions. This dashboard does not save, cancel, execute, or persist proposals."
     >
       <div className="grid gap-4">
         <div className="rounded-2xl border border-white/10 bg-black/20 p-4 text-sm leading-6 text-slate-400">
@@ -233,7 +233,7 @@ export function HealthBodyCrossLinks({
     <CrossDashboardLinks
       activeRoute={activeRoute}
       title="Health/body system links"
-      description="Move between health/body overview, nutrition, supplements, sleep-energy, emotion, hair-skincare, goals, timeline, calendar, and Carnos review surfaces."
+      description="Move between health/body overview, nutrition, supplements, sleep-energy, emotion, hair-skincare, goals, timeline, calendar, and Athena review surfaces."
       links={HEALTH_BODY_LINKS}
     />
   );

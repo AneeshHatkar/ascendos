@@ -10,7 +10,7 @@ export default function SignupPage() {
         </p>
         <h1 className="mt-4 text-3xl font-semibold">Create account</h1>
         <p className="mt-3 text-sm leading-6 text-white/50">
-          Start building your Carnos-backed personal operating system.
+          Start building your Athena-backed personal operating system.
         </p>
 
         <form action={signUpWithPassword} className="mt-8 space-y-4">

@@ -8,7 +8,7 @@ const coreSignals = [
   "Proof",
   "Calendar",
   "Timeline",
-  "Carnos",
+  "Athena",
   "Audit",
 ];
 
@@ -29,7 +29,7 @@ export default function Home() {
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/62">
               ascendOS coordinates goals, proof, calendar reality, learning,
               career, health, research, grimoire translation, analytics,
-              privacy, and Carnos-powered reflection through confirmed actions
+              privacy, and Athena-powered reflection through confirmed actions
               only.
             </p>
 

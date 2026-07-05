@@ -270,7 +270,7 @@ function BoundarySummary() {
         <BoundaryPill label="No Supabase calls" />
         <BoundaryPill label="No embeddings" />
         <BoundaryPill label="No vector search" />
-        <BoundaryPill label="No Carnos injection" />
+        <BoundaryPill label="No Athena injection" />
         <BoundaryPill label="No approve/reject/delete/forget mutations" />
       </div>
     </div>
