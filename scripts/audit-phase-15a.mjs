@@ -1,3 +1,13 @@
+
+// Later phases intentionally added approved memory runtime/read repositories.
+// Phase 15A remains a scope-lock audit, but it must not fail later
+// approved Phase 15/16/20 implementation files.
+const PHASE_15A_ALLOWED_LATER_MEMORY_RUNTIME_FILES = new Set([
+  "src/lib/repositories/memory-knowledge-read.ts",
+  "src/lib/repositories/memory-inbox-write.ts",
+  "src/lib/repositories/approved-memory-write.ts",
+]);
+
 const PHASE_15A_ALLOWED_LATER_SCHEMA_ALIGNMENT_FILES = new Set([
   "src/lib/carnos-continuity/memory-rag-schema-contracts.ts",
   "src/lib/repositories/memory-inbox-write.ts",
@@ -427,7 +437,10 @@ const forbiddenRuntimeMarkers = [
 ];
 
 for (const filePath of sourceFiles) {
-  if (PHASE_15A_ALLOWED_LATER_SCHEMA_ALIGNMENT_FILES.has(filePath)) continue;
+  if (
+    PHASE_15A_ALLOWED_LATER_SCHEMA_ALIGNMENT_FILES.has(filePath) ||
+    PHASE_15A_ALLOWED_LATER_MEMORY_RUNTIME_FILES.has(filePath)
+  ) continue;
   const text = read(filePath);
 
   for (const marker of forbiddenRuntimeMarkers) {

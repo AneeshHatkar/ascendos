@@ -10,10 +10,10 @@
     "no_supabase_client_calls",
     "phase_18a_b_persistence_offline_lock_applies"
   ],
-  "migration_file_count": 28,
-  "source_file_count": 279,
-  "docs_file_count": 329,
-  "discovered_table_count": 118,
+  "migration_file_count": 29,
+  "source_file_count": 321,
+  "docs_file_count": 486,
+  "discovered_table_count": 120,
   "discovered_tables": [
     {
       "table": "ai_actions",
@@ -932,6 +932,24 @@
       ]
     },
     {
+      "table": "spotify_connections",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0029_phase20_spotify_connector_runtime.sql"
+      ]
+    },
+    {
+      "table": "spotify_events",
+      "tags": [
+        "general"
+      ],
+      "sources": [
+        "supabase/migrations/0029_phase20_spotify_connector_runtime.sql"
+      ]
+    },
+    {
       "table": "subscriptions",
       "tags": [
         "general"
@@ -1505,6 +1523,8 @@
     "skincare_logs",
     "sleep_logs",
     "sop_versions",
+    "spotify_connections",
+    "spotify_events",
     "subscriptions",
     "supplement_logs",
     "supplements",

@@ -1,0 +1,598 @@
+{
+  "status": "PASS_WITH_REVIEW_NOTES",
+  "generatedAt": "2026-07-05T12:37:09.494Z",
+  "hardBlockers": [],
+  "counts": {
+    "totalTablesChecked": 19,
+    "closed": 18,
+    "review": 1,
+    "open": 0
+  },
+  "rows": [
+    {
+      "table": "audit_logs",
+      "domain": "Command / audit / privacy",
+      "status": "CLOSED",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/core-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/core-read.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "exists": true,
+          "exactRead": true,
+          "textReference": true
+        },
+        {
+          "file": "src/lib/repositories/settings-privacy-read.ts",
+          "exists": true,
+          "exactRead": false,
+          "textReference": false
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": []
+    },
+    {
+      "table": "carnos_context_snapshots",
+      "domain": "Carnos / memory / analytics",
+      "status": "CLOSED",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/memory-knowledge-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/memory-knowledge-read.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/memory-knowledge-read.ts",
+          "exists": true,
+          "exactRead": true,
+          "textReference": true
+        },
+        {
+          "file": "src/lib/repositories/carnos-persona-read.ts",
+          "exists": true,
+          "exactRead": false,
+          "textReference": false
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": []
+    },
+    {
+      "table": "carnos_entity_state",
+      "domain": "Carnos / memory",
+      "status": "CLOSED",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/memory-knowledge-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/approved-memory-write.ts",
+        "src/lib/repositories/memory-inbox-write.ts",
+        "src/lib/repositories/memory-knowledge-read.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/memory-knowledge-read.ts",
+          "exists": true,
+          "exactRead": true,
+          "textReference": true
+        },
+        {
+          "file": "src/lib/repositories/carnos-persona-read.ts",
+          "exists": true,
+          "exactRead": false,
+          "textReference": false
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": []
+    },
+    {
+      "table": "daily_logs",
+      "domain": "Command / goals / health / grimoire",
+      "status": "CLOSED",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/core-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/core-read.ts",
+        "src/lib/repositories/grimoire-read.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "exists": true,
+          "exactRead": true,
+          "textReference": true
+        },
+        {
+          "file": "src/lib/repositories/health-body-read.ts",
+          "exists": true,
+          "exactRead": false,
+          "textReference": false
+        },
+        {
+          "file": "src/lib/repositories/grimoire-read.ts",
+          "exists": true,
+          "exactRead": false,
+          "textReference": true
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": []
+    },
+    {
+      "table": "events",
+      "domain": "Analytics / command timeline",
+      "status": "CLOSED",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/core-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/approved-memory-write.ts",
+        "src/lib/repositories/core-read.ts",
+        "src/lib/repositories/current-info-read.ts",
+        "src/lib/repositories/memory-knowledge-read.ts",
+        "src/lib/repositories/spotify-connector-read-write.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "exists": true,
+          "exactRead": true,
+          "textReference": true
+        },
+        {
+          "file": "src/lib/repositories/current-info-read.ts",
+          "exists": true,
+          "exactRead": false,
+          "textReference": true
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": []
+    },
+    {
+      "table": "memory_candidates",
+      "domain": "Memory inbox / Carnos review queue",
+      "status": "CLOSED",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/memory-knowledge-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/approved-memory-write.ts",
+        "src/lib/repositories/memory-inbox-write.ts",
+        "src/lib/repositories/memory-knowledge-read.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/memory-knowledge-read.ts",
+          "exists": true,
+          "exactRead": true,
+          "textReference": true
+        },
+        {
+          "file": "src/lib/repositories/memory-inbox-write.ts",
+          "exists": true,
+          "exactRead": false,
+          "textReference": true
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": []
+    },
+    {
+      "table": "memory_events",
+      "domain": "Memory audit / analytics",
+      "status": "CLOSED",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/memory-knowledge-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/approved-memory-write.ts",
+        "src/lib/repositories/memory-knowledge-read.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/memory-knowledge-read.ts",
+          "exists": true,
+          "exactRead": true,
+          "textReference": true
+        },
+        {
+          "file": "src/lib/repositories/approved-memory-write.ts",
+          "exists": true,
+          "exactRead": false,
+          "textReference": true
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": []
+    },
+    {
+      "table": "memory_items",
+      "domain": "Memory / knowledge / Carnos",
+      "status": "CLOSED",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/memory-knowledge-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/approved-memory-write.ts",
+        "src/lib/repositories/memory-inbox-write.ts",
+        "src/lib/repositories/memory-knowledge-read.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/memory-knowledge-read.ts",
+          "exists": true,
+          "exactRead": true,
+          "textReference": true
+        },
+        {
+          "file": "src/lib/repositories/approved-memory-write.ts",
+          "exists": true,
+          "exactRead": false,
+          "textReference": true
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": []
+    },
+    {
+      "table": "memory_review_queue",
+      "domain": "Memory review / current-info save queue",
+      "status": "CLOSED",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/memory-knowledge-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/memory-knowledge-read.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/memory-knowledge-read.ts",
+          "exists": true,
+          "exactRead": true,
+          "textReference": true
+        },
+        {
+          "file": "src/lib/repositories/current-info-read.ts",
+          "exists": true,
+          "exactRead": false,
+          "textReference": false
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": []
+    },
+    {
+      "table": "project_memory_state",
+      "domain": "Projects / memory state",
+      "status": "CLOSED",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/memory-knowledge-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/memory-knowledge-read.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/memory-knowledge-read.ts",
+          "exists": true,
+          "exactRead": true,
+          "textReference": true
+        },
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "exists": true,
+          "exactRead": false,
+          "textReference": false
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": []
+    },
+    {
+      "table": "quiz_attempts",
+      "domain": "Learning",
+      "status": "CLOSED",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/core-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/core-read.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "exists": true,
+          "exactRead": true,
+          "textReference": true
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": []
+    },
+    {
+      "table": "quizzes",
+      "domain": "Learning",
+      "status": "CLOSED",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/core-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/core-read.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "exists": true,
+          "exactRead": true,
+          "textReference": true
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": []
+    },
+    {
+      "table": "recommendation_targets",
+      "domain": "Learning / career / Carnos recommendations",
+      "status": "CLOSED",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/research-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/research-read.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "exists": true,
+          "exactRead": false,
+          "textReference": false
+        },
+        {
+          "file": "src/lib/repositories/research-read.ts",
+          "exists": true,
+          "exactRead": true,
+          "textReference": true
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": []
+    },
+    {
+      "table": "skill_paths",
+      "domain": "Grimoire / skills",
+      "status": "CLOSED",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/core-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/core-read.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/grimoire-read.ts",
+          "exists": true,
+          "exactRead": false,
+          "textReference": false
+        },
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "exists": true,
+          "exactRead": true,
+          "textReference": true
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": []
+    },
+    {
+      "table": "skill_prerequisites",
+      "domain": "Grimoire / skills",
+      "status": "CLOSED",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/core-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/core-read.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/grimoire-read.ts",
+          "exists": true,
+          "exactRead": false,
+          "textReference": false
+        },
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "exists": true,
+          "exactRead": true,
+          "textReference": true
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": []
+    },
+    {
+      "table": "skill_progress",
+      "domain": "Grimoire / skills",
+      "status": "CLOSED",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/core-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/core-read.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/grimoire-read.ts",
+          "exists": true,
+          "exactRead": false,
+          "textReference": false
+        },
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "exists": true,
+          "exactRead": true,
+          "textReference": true
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": []
+    },
+    {
+      "table": "skills",
+      "domain": "Grimoire / skills",
+      "status": "CLOSED",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/core-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/core-read.ts",
+        "src/lib/repositories/grimoire-read.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/grimoire-read.ts",
+          "exists": true,
+          "exactRead": false,
+          "textReference": true
+        },
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "exists": true,
+          "exactRead": true,
+          "textReference": true
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": []
+    },
+    {
+      "table": "sop_versions",
+      "domain": "Learning / projects / operating system",
+      "status": "REVIEW",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/research-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/research-read.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "exists": true,
+          "exactRead": false,
+          "textReference": false
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": [
+        "Exact read exists, but not in the expected domain repository. Review placement."
+      ]
+    },
+    {
+      "table": "system_memory_state",
+      "domain": "System memory / Carnos state",
+      "status": "CLOSED",
+      "migration": true,
+      "rls": true,
+      "exactReads": [
+        "src/lib/repositories/memory-knowledge-read.ts"
+      ],
+      "textReferences": [
+        "src/lib/repositories/memory-knowledge-read.ts"
+      ],
+      "expectedRepoEvidence": [
+        {
+          "file": "src/lib/repositories/memory-knowledge-read.ts",
+          "exists": true,
+          "exactRead": true,
+          "textReference": true
+        },
+        {
+          "file": "src/lib/repositories/carnos-persona-read.ts",
+          "exists": true,
+          "exactRead": false,
+          "textReference": false
+        }
+      ],
+      "acceptableIfNoDirectRead": false,
+      "blockers": [],
+      "review": []
+    }
+  ],
+  "npmCheck": {
+    "ok": true,
+    "tail": "\n> ascendos@0.1.0 check\n> node scripts/run-check-quiet.mjs \"npm run lint && npm run validate:routes && npm run validate:registry && npm run validate:migrations && npm run audit:phase3 && npm run audit:phase4 && npm run audit:phase5 && npm run audit:phase6 && npm run audit:source && npm run audit:pythonml && npm run audit:phase8 && npm run audit:phase10 && npm run audit:phase11 && npm run audit:phase12 && npm run audit:phase13 && npm run audit:integration && npm run audit:phase13_5 && npm run audit:phase13_5b && npm run audit:phase13_5c && npm run audit:phase13_5d && npm run audit:phase13_5e && npm run audit:phase13_5f && npm run audit:phase13_5g && npm run audit:phase14a && npm run audit:phase14b && npm run audit:phase14c && npm run audit:phase14d && npm run audit:phase14e && npm run audit:phase14f && npm run audit:phase14g && npm run audit:phase14h && npm run audit:phase14i && npm run audit:phase14j && npm run audit:phase15a && npm run audit:phase15b && npm run audit:phase15c && npm run audit:phase15d && npm run audit:phase15e && npm run audit:phase15f && npm run audit:phase15g && npm run audit:phase15h && npm run audit:phase15i && npm run audit:phase15j && npm run audit:phase15k && npm run audit:phase15l && npm run audit:phase15m && npm run audit:phase15n && npm run audit:phase15o && npm run audit:phase15p && npm run audit:phase15q && npm run audit:phase15r && npm run audit:phase16a && npm run audit:phase16b && npm run audit:phase16c && npm run audit:phase16d && npm run audit:phase16e && npm run audit:phase16f && npm run audit:phase16g && npm run audit:phase16g_b && npm run audit:phase16h && npm run audit:phase16h_b && npm run audit:phase16i && npm run audit:phase16j && npm run audit:phase16k && npm run audit:phase16l && npm run audit:phase16m && npm run audit:phase16n && npm run audit:phase16o && npm run audit:phase16p && npm run audit:phase16q && npm run audit:phase16r && npm run audit:phase16_5a && npm run audit:phase16_5b && npm run audit:phase16_5c && npm run audit:phase16_5d && npm run audit:phase16_5e && npm run audit:phase16_5f && npm run audit:phase16_5g && npm run audit:phase16_5h && npm run audit:phase16_5i && npm run audit:phase16_5j && npm run audit:phase17a && npm run audit:phase17b && npm run audit:phase17c && npm run audit:phase17d && npm run audit:phase17e && npm run audit:phase17f && npm run audit:phase17g && npm run audit:phase17h && npm run audit:phase17i && npm run audit:phase17j && npm run audit:phase17k && npm run audit:phase17l && npm run audit:phase17m && npm run audit:phase17n && npm run audit:phase17o && npm run audit:phase17p && npm run audit:phase17q && npm run audit:phase18a && npm run audit:phase18a_b && npm run audit:phase18b && npm run audit:phase18b_b && npm run audit:phase18c && npm run audit:phase18d && npm run audit:phase18e && npm run audit:phase18f && npm run audit:phase18g && npm run audit:phase18h && npm run audit:phase18i && npm run audit:phase18j && npm run audit:phase18k && npm run audit:phase18l && npm run audit:phase18m && npm run audit:phase18m_b && npm run audit:phase18n && npm run audit:phase18o && npm run build && npm run audit:phase19a && npm run audit:phase19b && npm run audit:phase19c && npm run audit:phase19d && npm run audit:phase19e && npm run audit:phase19f && npm run audit:phase19g && npm run audit:phase19h && npm run audit:phase19i && npm run audit:phase19j && npm run audit:phase19k && npm run audit:phase19l && npm run audit:phase19m && npm run audit:phase19n && npm run audit:phase20a && npm run audit:phase20b && npm run audit:phase20c && npm run audit:phase20d && npm run audit:phase20e && npm run audit:phase20f && npm run audit:phase20g && npm run audit:phase20h && npm run audit:phase20i && npm run audit:phase20j && npm run audit:phase20k && npm run audit:phase20l && npm run audit:phase20m && npm run audit:phase20n && npm run audit:phase20o && npm run audit:phase20p && npm run audit:phase20q && npm run audit:phase20r && npm run audit:phase20s && npm run audit:phase20t && npm run audit:phase20u && npm run audit:phase20v && npm run audit:phase20w && npm run audit:phase20x && npm run audit:phase20y\" && npm run audit:phase20z\n\n=== ascendOS quiet verification ===\nRunning full verification with compact terminal output.\nFull log will be saved to .verify-logs/last-check-output.log.\n\n✓ Full verification passed.\n✓ Full verification log saved to .verify-logs/last-check-output.log.\n\n> ascendos@0.1.0 audit:phase20z\n> node scripts/audit-phase-20z.mjs\n\n✓ Phase 20Z final privacy/export/connector completion audit passed.\n✓ Phase 20 is fully represented, check-integrated, and closed with explicit Spotify runtime connector allowance.\n"
+  },
+  "diffCheck": {
+    "ok": true,
+    "output": ""
+  },
+  "git": {
+    "head": "600178d Clarify runtime memory knowledge boundaries",
+    "status": "M docs/audits/PHASE_1_13_5_FULL_SOURCE_SCOPE_AUDIT.md\n M docs/fixtures/phase18-analytics-experiments/phase18b_schema_source_map.json\n M docs/roadmap/PHASE_18B_SCHEMA_DISCOVERY_METRIC_SOURCE_MAP.md\n M scripts/audit-phase-15a.mjs\n M scripts/audit-phase-20z.mjs\n M src/app/custom-trackers/page.tsx\n M src/lib/custom-trackers/custom-trackers-dashboard-view-model.ts\n M src/lib/privacy/privacy-dashboard-view-model.ts\n M src/lib/repositories/index.ts\n M src/lib/repositories/memory-knowledge-read.ts\n?? \"I am continuing the ascendOS.docx\"\n?? docs/fixtures/full-project-connectivity/\n?? docs/phase-reports/DELEGATED_PAGE_DATA_FLOW_AUDIT.md\n?? docs/phase-reports/DOMAIN_OPERATIONAL_MATRIX_AUDIT.md\n?? docs/phase-reports/FULL_SYSTEM_INTERCONNECTION_TRUTH_AUDIT.md\n?? docs/phase-reports/PHASE_20Z_100_PERCENT_INTERCONNECTIVITY.md\n?? docs/phase-reports/PHASE_20Z_ACTUAL_PROJECT_CONNECTIVITY_V2.md\n?? docs/phase-reports/PHASE_20Z_EXACT_CHAIN_CONNECTIVITY_V4.md\n?? docs/phase-reports/PHASE_20Z_FINAL_CONNECTIVITY_V3.md\n?? docs/phase-reports/PHASE_20Z_FULL_PROJECT_FEATURE_CONNECTIVITY_VERIFICATION.md\n?? docs/phase-reports/PHASE_20Z_H_POST_V1_RUNTIME_BOUNDARY_LOCK.md\n?? docs/phase-reports/PHASE_20Z_I_PRE_PHASE_21_READINESS_AUDIT.md\n?? docs/phase-reports/PHASE_20Z_J_FULL_PROJECT_PHASE_0_20_TRUTH_AUDIT.md\n?? docs/phase-reports/PHASE_20Z_TABLE_CLOSURE_V4B.md\n?? docs/phase-reports/PHASE_20Z_TOTAL_PROJECT_PHASE_0_20_CONNECTIVITY_VERIFICATION.md\n?? scripts/audit-delegated-page-data-flow.mjs\n?? scripts/audit-domain-operational-matrix.mjs\n?? scripts/audit-full-system-interconnection-truth.mjs\n?? scripts/verify-full-project-phase-connectivity.mjs\n?? scripts/verify-phase-0-20-100-connectivity.mjs\n?? scripts/verify-phase-0-20-actual-connectivity-v2.mjs\n?? scripts/verify-phase-0-20-exact-chain-v4.mjs\n?? scripts/verify-phase-0-20-final-connectivity-v3.mjs\n?? scripts/verify-phase-0-20-table-closure-v4b.mjs\n?? scripts/verify-phase-0-20-total-project-connectivity.mjs\n?? src/app/api/connectors/\n?? src/lib/connectors/\n?? src/lib/repositories/spotify-connector-read-write.ts\n?? supabase/.temp/\n?? supabase/migrations/0029_phase20_spotify_connector_runtime.sql"
+  }
+}

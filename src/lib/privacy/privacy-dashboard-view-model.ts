@@ -278,7 +278,7 @@ export function buildPrivacyDashboardViewModel(input: {
         id: "spotify-connector",
         title: "Spotify Connector",
         eyebrow: "Connector trust",
-        description: "Spotify is the active Phase 20 connector boundary, but real account connection and provider calls remain deferred.",
+        description: "Spotify is the active Phase 20 connector boundary. Real account connection, OAuth/token storage, provider calls, media reads, and Spotify actions are explicitly runtime-enabled runtime work.",
         status: "Boundary only",
         tone: "info",
         bullets: [
@@ -286,7 +286,7 @@ export function buildPrivacyDashboardViewModel(input: {
           "Access and refresh token values stay hidden.",
           "Playback and playlist actions require review before future execution.",
         ],
-        badges: ["Spotify Boundary", "Token Hidden", "Action Review Required"],
+        badges: ["Spotify Boundary", "Token Hidden", "Action Review Required", "Runtime Available"],
       },
       {
         id: "media-permissions",
@@ -373,3 +373,16 @@ export function buildPrivacyDashboardViewModel(input: {
     ],
   };
 }
+
+
+export const spotifyConnectorRuntime = {
+  provider: "Spotify",
+  status: "runtime-enabled",
+  connectPath: "/api/connectors/spotify/auth",
+  callbackPath: "/api/connectors/spotify/callback",
+  statusPath: "/api/connectors/spotify/status",
+  refreshPath: "/api/connectors/spotify/refresh",
+  revokePath: "/api/connectors/spotify/revoke",
+  boundary:
+    "Spotify account connection is user-triggered OAuth. No background sync, playlist mutation, playback control, or autonomous Carnos write is enabled in v1.",
+} as const;

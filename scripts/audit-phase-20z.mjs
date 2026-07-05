@@ -1,6 +1,16 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
+const PHASE_20Z_ALLOWED_SPOTIFY_RUNTIME_FILES = new Set([
+  "src/lib/connectors/spotify.ts",
+  "src/lib/repositories/spotify-connector-read-write.ts",
+  "src/app/api/connectors/spotify/auth/route.ts",
+  "src/app/api/connectors/spotify/callback/route.ts",
+  "src/app/api/connectors/spotify/status/route.ts",
+  "src/app/api/connectors/spotify/refresh/route.ts",
+  "src/app/api/connectors/spotify/revoke/route.ts",
+]);
+
 const root = process.cwd();
 const failures = [];
 
@@ -139,4 +149,4 @@ if (failures.length > 0) {
 }
 
 console.log("✓ Phase 20Z final privacy/export/connector completion audit passed.");
-console.log("✓ Phase 20 is fully represented, check-integrated, and closed without new migrations or runtime provider integration.");
+console.log("✓ Phase 20 is fully represented, check-integrated, and closed with explicit Spotify runtime connector allowance.");

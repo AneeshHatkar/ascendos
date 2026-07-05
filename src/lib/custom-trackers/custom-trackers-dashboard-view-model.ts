@@ -323,7 +323,7 @@ export function buildCustomTrackerDashboardStateMessage(
     return {
       status,
       title: "Loading custom trackers",
-      description: "The dashboard shell is ready while runtime tracker reads remain disabled in Phase 19M.",
+      description: "The dashboard shell is ready while runtime tracker reads remain disabled for v1 and locked as post-v1 persistence work.",
     };
   }
 
@@ -355,7 +355,7 @@ export function buildCustomTrackerDashboardStateMessage(
     return {
       status,
       title: "Custom tracker dashboard ready",
-      description: "The UI shell is ready. Runtime persistence remains disabled until later approved repository work.",
+      description: "The UI shell is ready. Runtime custom tracker persistence is explicitly post-v1 and remains disabled until later approved repository work.",
     };
   }
 

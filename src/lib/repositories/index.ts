@@ -12,3 +12,4 @@ export * from "./current-info-read";
 export * from "./memory-inbox-write";
 export * from "./approved-memory-write";
 export * from "./memory-knowledge-read";
+export * from "./spotify-connector-read-write";

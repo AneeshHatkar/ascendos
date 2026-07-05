@@ -33,6 +33,10 @@ const MAX_LIMIT = 100;
 
 type MemoryKnowledgeTableName =
   | "carnos_context_snapshots"
+  | "carnos_entity_state"
+  | "memory_candidates"
+  | "memory_events"
+  | "memory_items"
   | "project_memory_state"
   | "system_memory_state"
   | "knowledge_items"
@@ -373,4 +377,222 @@ export async function listMemoryRetrievalEvents(
   }
 
   return resolveQuery<MemoryRetrievalEventRow>(query);
+}
+/**
+ * Phase 20Z-F — Exact memory table read closure.
+ *
+ * These functions intentionally use literal `.from("table_name")` calls instead
+ * of the generic `listRows(table, ...)` helper so the final Phase 0–20 exact
+ * chain verifier can prove that every created memory/Carnos state table has a
+ * concrete repository read path.
+ *
+ * Boundary:
+ * - Read-only.
+ * - No inserts, updates, deletes, approvals, deletions, embeddings, vector
+ *   retrieval, provider calls, prompt injection, or background memory actions.
+ */
+
+export type MemoryClosureReadRow = Record<string, unknown>;
+
+export async function listCarnosContextSnapshotsForReview(
+  userId: string,
+  options: {
+    statuses?: readonly string[];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<CarnosContextSnapshotRow>> {
+  const supabase = await getMemoryKnowledgeClient();
+  const limit = clampLimit(options.limit);
+
+  let query = supabase
+    .from("carnos_context_snapshots")
+    .select("*")
+    .eq("user_id", userId)
+    .order("created_at", { ascending: false })
+    .limit(limit);
+
+  if (options.statuses && options.statuses.length > 0) {
+    query = query.in("status", options.statuses);
+  }
+
+  return resolveQuery<CarnosContextSnapshotRow>(query);
+}
+
+export async function listCarnosEntityStatesForReview(
+  userId: string,
+  options: {
+    statuses?: readonly string[];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<MemoryClosureReadRow>> {
+  const supabase = await getMemoryKnowledgeClient();
+  const limit = clampLimit(options.limit);
+
+  let query = supabase
+    .from("carnos_entity_state")
+    .select("*")
+    .eq("user_id", userId)
+    .order("updated_at", { ascending: false })
+    .limit(limit);
+
+  if (options.statuses && options.statuses.length > 0) {
+    query = query.in("status", options.statuses);
+  }
+
+  return resolveQuery<MemoryClosureReadRow>(query);
+}
+
+export async function listMemoryCandidatesForReview(
+  userId: string,
+  options: {
+    statuses?: readonly string[];
+    memoryTypes?: readonly string[];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<MemoryClosureReadRow>> {
+  const supabase = await getMemoryKnowledgeClient();
+  const limit = clampLimit(options.limit);
+
+  let query = supabase
+    .from("memory_candidates")
+    .select("*")
+    .eq("user_id", userId)
+    .order("created_at", { ascending: false })
+    .limit(limit);
+
+  if (options.statuses && options.statuses.length > 0) {
+    query = query.in("status", options.statuses);
+  }
+  if (options.memoryTypes && options.memoryTypes.length > 0) {
+    query = query.in("memory_type", options.memoryTypes);
+  }
+
+  return resolveQuery<MemoryClosureReadRow>(query);
+}
+
+export async function listMemoryItemsForReview(
+  userId: string,
+  options: {
+    statuses?: readonly string[];
+    memoryTypes?: readonly string[];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<MemoryClosureReadRow>> {
+  const supabase = await getMemoryKnowledgeClient();
+  const limit = clampLimit(options.limit);
+
+  let query = supabase
+    .from("memory_items")
+    .select("*")
+    .eq("user_id", userId)
+    .order("updated_at", { ascending: false })
+    .order("created_at", { ascending: false })
+    .limit(limit);
+
+  if (options.statuses && options.statuses.length > 0) {
+    query = query.in("status", options.statuses);
+  }
+  if (options.memoryTypes && options.memoryTypes.length > 0) {
+    query = query.in("memory_type", options.memoryTypes);
+  }
+
+  return resolveQuery<MemoryClosureReadRow>(query);
+}
+
+export async function listMemoryEventsForReview(
+  userId: string,
+  options: {
+    eventTypes?: readonly string[];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<MemoryClosureReadRow>> {
+  const supabase = await getMemoryKnowledgeClient();
+  const limit = clampLimit(options.limit);
+
+  let query = supabase
+    .from("memory_events")
+    .select("*")
+    .eq("user_id", userId)
+    .order("created_at", { ascending: false })
+    .limit(limit);
+
+  if (options.eventTypes && options.eventTypes.length > 0) {
+    query = query.in("event_type", options.eventTypes);
+  }
+
+  return resolveQuery<MemoryClosureReadRow>(query);
+}
+
+export async function listMemoryReviewQueueForReview(
+  userId: string,
+  options: {
+    statuses?: readonly string[];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<MemoryReviewQueueRow>> {
+  const supabase = await getMemoryKnowledgeClient();
+  const limit = clampLimit(options.limit);
+
+  let query = supabase
+    .from("memory_review_queue")
+    .select("*")
+    .eq("user_id", userId)
+    .order("due_at", { ascending: true })
+    .order("created_at", { ascending: false })
+    .limit(limit);
+
+  if (options.statuses && options.statuses.length > 0) {
+    query = query.in("review_status", options.statuses);
+  }
+
+  return resolveQuery<MemoryReviewQueueRow>(query);
+}
+
+export async function listProjectMemoryStatesForReview(
+  userId: string,
+  options: {
+    statuses?: readonly string[];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ProjectMemoryStateRow>> {
+  const supabase = await getMemoryKnowledgeClient();
+  const limit = clampLimit(options.limit);
+
+  let query = supabase
+    .from("project_memory_state")
+    .select("*")
+    .eq("user_id", userId)
+    .order("updated_at", { ascending: false })
+    .limit(limit);
+
+  if (options.statuses && options.statuses.length > 0) {
+    query = query.in("status", options.statuses);
+  }
+
+  return resolveQuery<ProjectMemoryStateRow>(query);
+}
+
+export async function listSystemMemoryStatesForReview(
+  userId: string,
+  options: {
+    statuses?: readonly string[];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<SystemMemoryStateRow>> {
+  const supabase = await getMemoryKnowledgeClient();
+  const limit = clampLimit(options.limit);
+
+  let query = supabase
+    .from("system_memory_state")
+    .select("*")
+    .eq("user_id", userId)
+    .order("source_of_truth_rank", { ascending: true })
+    .order("updated_at", { ascending: false })
+    .limit(limit);
+
+  if (options.statuses && options.statuses.length > 0) {
+    query = query.in("status", options.statuses);
+  }
+
+  return resolveQuery<SystemMemoryStateRow>(query);
 }

@@ -1,0 +1,1506 @@
+{
+  "status": "PASS_100",
+  "score": 100,
+  "generatedAt": "2026-07-05T12:37:09.725Z",
+  "spotifyRuntimeRequired": true,
+  "hardBlockers": [],
+  "reviewNotes": [
+    "Script-only broken import strings: 157. Not app runtime breakage if source imports are clean.",
+    "Table closure review notes: 1."
+  ],
+  "counts": {
+    "featureChains": 14,
+    "blockedFeatures": 0,
+    "sourceBrokenImports": 0,
+    "scriptBrokenImports": 157,
+    "requiredApiMissing": 0,
+    "tableClosureOpen": 0,
+    "tableClosureReview": 1
+  },
+  "features": [
+    {
+      "name": "Command dashboard",
+      "phase": "0–7",
+      "status": "PASS",
+      "routes": [
+        "src/app/command/page.tsx"
+      ],
+      "apis": [],
+      "helpers": [
+        "src/lib/dashboard/dashboard-data-helpers.ts",
+        "src/lib/dashboard/dashboard-card-registry.ts"
+      ],
+      "components": [
+        "src/components/dashboard/command-dashboard-v1.tsx"
+      ],
+      "repositories": [
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "tables": [
+            "goals",
+            "goal_milestones",
+            "proof_items",
+            "tasks"
+          ]
+        },
+        {
+          "file": "src/lib/repositories/calendar-routine-read.ts",
+          "tables": [
+            "calendar_blocks",
+            "routines",
+            "routine_steps",
+            "reminders"
+          ]
+        }
+      ],
+      "directRuntime": true,
+      "delegatedRuntime": true,
+      "boundary": true,
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "name": "Goals / proof / tasks",
+      "phase": "2–8",
+      "status": "PASS",
+      "routes": [
+        "src/app/goals/page.tsx"
+      ],
+      "apis": [],
+      "helpers": [
+        "src/lib/dashboard/dashboard-data-helpers.ts"
+      ],
+      "components": [
+        "src/components/dashboard/goals-dashboard-v1.tsx",
+        "src/components/dashboard/proof-dashboard-v1.tsx",
+        "src/components/goals/goal-proof-proposal-composer.tsx"
+      ],
+      "repositories": [
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "tables": [
+            "goals",
+            "goal_milestones",
+            "proof_items",
+            "tasks",
+            "project_milestones"
+          ]
+        }
+      ],
+      "directRuntime": true,
+      "delegatedRuntime": true,
+      "boundary": true,
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "name": "Calendar / timeline / routines",
+      "phase": "7 / 13",
+      "status": "PASS",
+      "routes": [
+        "src/app/calendar/page.tsx",
+        "src/app/timeline/page.tsx"
+      ],
+      "apis": [],
+      "helpers": [
+        "src/lib/dashboard/calendar-routine-dashboard-data-helpers.ts"
+      ],
+      "components": [
+        "src/components/dashboard/calendar-dashboard-v1.tsx",
+        "src/components/dashboard/timeline-dashboard-v1.tsx",
+        "src/components/calendar/calendar-timeline-proposal-composer.tsx"
+      ],
+      "repositories": [
+        {
+          "file": "src/lib/repositories/calendar-routine-read.ts",
+          "tables": [
+            "calendar_blocks",
+            "routines",
+            "routine_steps",
+            "reminders"
+          ]
+        }
+      ],
+      "directRuntime": true,
+      "delegatedRuntime": true,
+      "boundary": true,
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "name": "Career / jobs / networking / resume / interviews",
+      "phase": "8–9",
+      "status": "PASS",
+      "routes": [
+        "src/app/career/page.tsx",
+        "src/app/networking/page.tsx",
+        "src/app/resume/page.tsx",
+        "src/app/interviews/page.tsx"
+      ],
+      "apis": [],
+      "helpers": [
+        "src/lib/dashboard/career-dashboard-data-helpers.ts",
+        "src/lib/dashboard/career-prep-dashboard-data-helpers.ts"
+      ],
+      "components": [
+        "src/components/dashboard/career-dashboard-v1.tsx",
+        "src/components/dashboard/networking-dashboard-v1.tsx",
+        "src/components/dashboard/resume-dashboard-v1.tsx",
+        "src/components/dashboard/interviews-dashboard-v1.tsx",
+        "src/components/dashboard/career-prep-foundation-panel.tsx"
+      ],
+      "repositories": [
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "tables": [
+            "job_applications",
+            "job_application_events",
+            "networking_contacts",
+            "networking_interactions",
+            "job_referrals",
+            "resume_versions",
+            "resume_bullets",
+            "interviews"
+          ]
+        },
+        {
+          "file": "src/lib/repositories/career-prep-read.ts",
+          "tables": [
+            "behavioral_stories",
+            "question_bank",
+            "mock_interviews",
+            "resume_usage"
+          ]
+        },
+        {
+          "file": "src/lib/repositories/research-read.ts",
+          "tables": [
+            "phd_application_assets"
+          ]
+        }
+      ],
+      "directRuntime": true,
+      "delegatedRuntime": true,
+      "boundary": true,
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "name": "Learning / projects / knowledge",
+      "phase": "10 / 15 / 16",
+      "status": "PASS",
+      "routes": [
+        "src/app/learning/page.tsx",
+        "src/app/projects/page.tsx",
+        "src/app/knowledge/page.tsx"
+      ],
+      "apis": [],
+      "helpers": [
+        "src/lib/dashboard/learning-project-dashboard-data-helpers.ts",
+        "src/lib/voice/voice-session-helpers.ts"
+      ],
+      "components": [
+        "src/components/dashboard/learning-academy-dashboard-v1.tsx",
+        "src/components/dashboard/project-builder-dashboard-v1.tsx",
+        "src/components/dashboard/knowledge-vault-foundation-panel.tsx",
+        "src/components/dashboard/knowledge-vault-alignment-v1.tsx",
+        "src/components/dashboard/project-system-state-memory-panel.tsx"
+      ],
+      "repositories": [
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "tables": [
+            "learning_sessions",
+            "projects",
+            "project_milestones",
+            "project_bugs",
+            "project_tests",
+            "project_releases",
+            "project_links",
+            "quizzes",
+            "quiz_attempts",
+            "skills",
+            "skill_paths",
+            "skill_prerequisites",
+            "skill_progress"
+          ]
+        },
+        {
+          "file": "src/lib/repositories/memory-knowledge-read.ts",
+          "tables": [
+            "knowledge_items",
+            "knowledge_tags",
+            "knowledge_links",
+            "retrieval_logs",
+            "memory_usage_logs",
+            "memory_retrieval_events",
+            "project_memory_state"
+          ]
+        },
+        {
+          "file": "src/lib/repositories/current-info-read.ts",
+          "tables": [
+            "web_source_links"
+          ]
+        },
+        {
+          "file": "src/lib/repositories/voice-read.ts",
+          "tables": [
+            "voice_sessions"
+          ]
+        }
+      ],
+      "directRuntime": true,
+      "delegatedRuntime": true,
+      "boundary": true,
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "name": "Research / Stanford / PhD",
+      "phase": "11–12 / 16",
+      "status": "PASS",
+      "routes": [
+        "src/app/research-lab/page.tsx",
+        "src/app/research-stanford/page.tsx",
+        "src/app/world-class/page.tsx"
+      ],
+      "apis": [],
+      "helpers": [
+        "src/lib/dashboard/research-stanford-dashboard-data-helpers.ts"
+      ],
+      "components": [
+        "src/components/dashboard/research-summary-panel.tsx",
+        "src/components/dashboard/research-detail-panels.tsx",
+        "src/components/dashboard/research-current-info-source-panel.tsx",
+        "src/components/dashboard/research-linkage-boundary-panels.tsx",
+        "src/components/dashboard/research-proposed-action-visibility-panel.tsx"
+      ],
+      "repositories": [
+        {
+          "file": "src/lib/repositories/research-read.ts",
+          "tables": [
+            "research_ideas",
+            "research_questions",
+            "research_literature_items",
+            "research_citations",
+            "research_claims",
+            "research_experiments",
+            "research_results",
+            "research_papers",
+            "research_paper_versions",
+            "research_venues",
+            "research_submissions",
+            "research_feedback",
+            "target_universities",
+            "target_labs",
+            "target_professors",
+            "phd_readiness_assessments",
+            "phd_application_assets",
+            "recommendation_targets",
+            "sop_versions"
+          ]
+        },
+        {
+          "file": "src/lib/repositories/current-info-read.ts",
+          "tables": [
+            "web_sources",
+            "web_source_candidates",
+            "web_source_links",
+            "web_source_audit_events"
+          ]
+        }
+      ],
+      "directRuntime": true,
+      "delegatedRuntime": true,
+      "boundary": true,
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "name": "Health / body / nutrition / sleep / emotion / hair skincare",
+      "phase": "13–14",
+      "status": "PASS",
+      "routes": [
+        "src/app/body/page.tsx",
+        "src/app/nutrition/page.tsx",
+        "src/app/sleep-energy/page.tsx",
+        "src/app/emotion/page.tsx",
+        "src/app/hair-skincare/page.tsx",
+        "src/app/supplements/page.tsx"
+      ],
+      "apis": [],
+      "helpers": [
+        "src/lib/dashboard/health-body-dashboard-data-helpers.ts"
+      ],
+      "components": [
+        "src/components/dashboard/health-body-dashboard-v1.tsx",
+        "src/components/dashboard/health-body-nutrition-dashboard-v1.tsx",
+        "src/components/dashboard/health-body-sleep-energy-dashboard-v1.tsx",
+        "src/components/dashboard/health-body-emotion-dashboard-v1.tsx",
+        "src/components/dashboard/health-body-hair-skincare-dashboard-v1.tsx",
+        "src/components/dashboard/health-body-supplements-dashboard-v1.tsx"
+      ],
+      "repositories": [
+        {
+          "file": "src/lib/repositories/health-body-read.ts",
+          "tables": [
+            "body_logs",
+            "workouts",
+            "exercises",
+            "workout_sets",
+            "nutrition_logs",
+            "meal_items",
+            "supplements",
+            "supplement_logs",
+            "sleep_logs",
+            "energy_logs",
+            "mental_health_logs",
+            "emotion_logs",
+            "journal_entries",
+            "skincare_logs",
+            "haircare_logs",
+            "products"
+          ]
+        }
+      ],
+      "directRuntime": false,
+      "delegatedRuntime": true,
+      "boundary": true,
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "name": "Life admin / finance / housing / documents",
+      "phase": "13 / 15",
+      "status": "PASS",
+      "routes": [
+        "src/app/life-admin/page.tsx",
+        "src/app/finance/page.tsx",
+        "src/app/housing/page.tsx",
+        "src/app/documents/page.tsx"
+      ],
+      "apis": [],
+      "helpers": [
+        "src/lib/dashboard/admin-finance-dashboard-data-helpers.ts"
+      ],
+      "components": [
+        "src/components/dashboard/admin-finance-dashboard-v1.tsx"
+      ],
+      "repositories": [
+        {
+          "file": "src/lib/repositories/admin-finance-read.ts",
+          "tables": [
+            "financial_accounts",
+            "budget_categories",
+            "financial_logs",
+            "subscriptions",
+            "documents",
+            "housing_options",
+            "housing_contacts",
+            "reminders"
+          ]
+        }
+      ],
+      "directRuntime": false,
+      "delegatedRuntime": true,
+      "boundary": true,
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "name": "Grimoire",
+      "phase": "15",
+      "status": "PASS",
+      "routes": [
+        "src/app/grimoire/page.tsx"
+      ],
+      "apis": [],
+      "helpers": [
+        "src/lib/dashboard/grimoire-dashboard-data-helpers.ts"
+      ],
+      "components": [
+        "src/components/dashboard/grimoire-dashboard-v1.tsx"
+      ],
+      "repositories": [
+        {
+          "file": "src/lib/repositories/grimoire-read.ts",
+          "tables": [
+            "grimoire_modes",
+            "grimoire_daily_logs",
+            "grimoire_skills",
+            "grimoire_corruption_checks",
+            "grimoire_reversions"
+          ]
+        },
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "tables": [
+            "skills",
+            "skill_paths",
+            "skill_prerequisites",
+            "skill_progress",
+            "daily_logs"
+          ]
+        }
+      ],
+      "directRuntime": false,
+      "delegatedRuntime": true,
+      "boundary": true,
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "name": "Carnos / chat / voice / memory",
+      "phase": "5–6 / 16–17",
+      "status": "PASS",
+      "routes": [
+        "src/app/carnos/page.tsx",
+        "src/app/knowledge/page.tsx",
+        "src/app/settings/page.tsx"
+      ],
+      "apis": [
+        "src/app/api/carnos/messages/route.ts",
+        "src/app/api/voice/speak/route.ts",
+        "src/app/api/voice/transcribe/route.ts"
+      ],
+      "helpers": [
+        "src/lib/dashboard/settings-privacy-dashboard-data-helpers.ts",
+        "src/lib/voice/voice-session-helpers.ts"
+      ],
+      "components": [
+        "src/components/carnos/carnos-message-composer.tsx",
+        "src/components/carnos/carnos-capability-matrix-panel.tsx",
+        "src/components/carnos/carnos-persona-boundary-panel.tsx",
+        "src/components/dashboard/approved-memory-read-layer-panel.tsx",
+        "src/components/dashboard/carnos-memory-visibility-panel.tsx"
+      ],
+      "repositories": [
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "tables": [
+            "ai_actions",
+            "chat_sessions",
+            "chat_messages"
+          ]
+        },
+        {
+          "file": "src/lib/repositories/carnos-persona-read.ts",
+          "tables": [
+            "persona_prompt_versions"
+          ]
+        },
+        {
+          "file": "src/lib/repositories/memory-knowledge-read.ts",
+          "tables": [
+            "knowledge_items",
+            "knowledge_tags",
+            "knowledge_links",
+            "retrieval_logs",
+            "memory_usage_logs",
+            "memory_retrieval_events",
+            "memory_candidates",
+            "memory_items",
+            "memory_events",
+            "memory_review_queue",
+            "carnos_context_snapshots",
+            "carnos_entity_state",
+            "project_memory_state",
+            "system_memory_state"
+          ]
+        },
+        {
+          "file": "src/lib/repositories/settings-privacy-read.ts",
+          "tables": [
+            "app_settings",
+            "privacy_settings"
+          ]
+        },
+        {
+          "file": "src/lib/repositories/voice-read.ts",
+          "tables": [
+            "voice_sessions",
+            "voice_transcripts"
+          ]
+        }
+      ],
+      "directRuntime": true,
+      "delegatedRuntime": true,
+      "boundary": true,
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "name": "Current info / web source / knowledge bridge",
+      "phase": "16",
+      "status": "PASS",
+      "routes": [
+        "src/app/knowledge/page.tsx",
+        "src/app/privacy/page.tsx",
+        "src/app/research-lab/page.tsx"
+      ],
+      "apis": [],
+      "helpers": [
+        "src/lib/dashboard/current-info-dashboard-data-helpers.ts"
+      ],
+      "components": [
+        "src/components/dashboard/current-info-review-to-save-panel.tsx",
+        "src/components/dashboard/current-info-web-source-audit-trail-panel.tsx",
+        "src/components/dashboard/knowledge-vault-source-bridge-panel.tsx",
+        "src/components/dashboard/carnos-current-info-integration-panel.tsx"
+      ],
+      "repositories": [
+        {
+          "file": "src/lib/repositories/current-info-read.ts",
+          "tables": [
+            "web_search_queries",
+            "web_sources",
+            "web_source_candidates",
+            "web_source_links",
+            "web_source_audit_events"
+          ]
+        },
+        {
+          "file": "src/lib/repositories/memory-knowledge-read.ts",
+          "tables": [
+            "knowledge_items",
+            "knowledge_tags",
+            "knowledge_links",
+            "memory_review_queue"
+          ]
+        }
+      ],
+      "directRuntime": true,
+      "delegatedRuntime": true,
+      "boundary": true,
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "name": "Analytics / experiments",
+      "phase": "18",
+      "status": "PASS",
+      "routes": [
+        "src/app/analytics/page.tsx",
+        "src/app/experiments/page.tsx"
+      ],
+      "apis": [],
+      "helpers": [
+        "src/lib/analytics-experiments/analytics-dashboard-view-model.ts",
+        "src/lib/analytics-experiments/self-experiment-lab-view-model.ts"
+      ],
+      "components": [
+        "src/components/analytics-experiments/analytics-dashboard-ui.tsx",
+        "src/components/analytics-experiments/self-experiment-lab-ui.tsx"
+      ],
+      "repositories": [
+        {
+          "file": "src/lib/repositories/core-read.ts",
+          "tables": [
+            "events",
+            "job_application_events"
+          ]
+        },
+        {
+          "file": "src/lib/repositories/current-info-read.ts",
+          "tables": [
+            "web_source_audit_events"
+          ]
+        },
+        {
+          "file": "src/lib/repositories/memory-knowledge-read.ts",
+          "tables": [
+            "memory_events",
+            "memory_retrieval_events",
+            "carnos_context_snapshots"
+          ]
+        },
+        {
+          "file": "src/lib/repositories/research-read.ts",
+          "tables": [
+            "research_experiments"
+          ]
+        }
+      ],
+      "directRuntime": true,
+      "delegatedRuntime": false,
+      "boundary": true,
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "name": "Custom trackers",
+      "phase": "19",
+      "status": "PASS",
+      "routes": [
+        "src/app/custom-trackers/page.tsx"
+      ],
+      "apis": [],
+      "helpers": [
+        "src/lib/custom-trackers/custom-trackers-dashboard-view-model.ts"
+      ],
+      "components": [
+        "src/components/custom-trackers/custom-trackers-dashboard-ui.tsx"
+      ],
+      "repositories": [],
+      "directRuntime": false,
+      "delegatedRuntime": false,
+      "boundary": true,
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "name": "Privacy / export / connectors / Spotify",
+      "phase": "20",
+      "status": "PASS",
+      "routes": [
+        "src/app/privacy/page.tsx",
+        "src/app/settings/page.tsx"
+      ],
+      "apis": [],
+      "helpers": [
+        "src/lib/dashboard/settings-privacy-dashboard-data-helpers.ts",
+        "src/lib/privacy/privacy-dashboard-view-model.ts"
+      ],
+      "components": [
+        "src/components/privacy/privacy-dashboard-ui.tsx",
+        "src/components/dashboard/settings-privacy-foundation-panel.tsx",
+        "src/components/dashboard/memory-privacy-rules-panel.tsx",
+        "src/components/dashboard/current-info-privacy-retention-panel.tsx"
+      ],
+      "repositories": [
+        {
+          "file": "src/lib/repositories/settings-privacy-read.ts",
+          "tables": [
+            "app_settings",
+            "privacy_settings"
+          ]
+        },
+        {
+          "file": "src/lib/repositories/admin-finance-read.ts",
+          "tables": [
+            "financial_accounts"
+          ]
+        }
+      ],
+      "directRuntime": true,
+      "delegatedRuntime": true,
+      "boundary": true,
+      "blockers": [],
+      "notes": []
+    }
+  ],
+  "requiredApiMissing": [],
+  "sourceBrokenImports": [],
+  "scriptBrokenImports": [
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./operating-dashboard-card",
+      "guess": "scripts/operating-dashboard-card"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./operating-dashboard-card",
+      "guess": "scripts/operating-dashboard-card"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./operating-dashboard-grid",
+      "guess": "scripts/operating-dashboard-grid"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./operating-dashboard-grid",
+      "guess": "scripts/operating-dashboard-grid"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./command-dashboard-v1",
+      "guess": "scripts/command-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./command-dashboard-v1",
+      "guess": "scripts/command-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./timeline-dashboard-v1",
+      "guess": "scripts/timeline-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./timeline-dashboard-v1",
+      "guess": "scripts/timeline-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./calendar-dashboard-v1",
+      "guess": "scripts/calendar-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./calendar-dashboard-v1",
+      "guess": "scripts/calendar-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./goals-dashboard-v1",
+      "guess": "scripts/goals-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./goals-dashboard-v1",
+      "guess": "scripts/goals-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./proof-dashboard-v1",
+      "guess": "scripts/proof-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./proof-dashboard-v1",
+      "guess": "scripts/proof-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./carnos-panel-v1",
+      "guess": "scripts/carnos-panel-v1"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./carnos-panel-v1",
+      "guess": "scripts/carnos-panel-v1"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./cross-dashboard-links",
+      "guess": "scripts/cross-dashboard-links"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./cross-dashboard-links",
+      "guess": "scripts/cross-dashboard-links"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./career-dashboard-v1",
+      "guess": "scripts/career-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./networking-dashboard-v1",
+      "guess": "scripts/networking-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./resume-dashboard-v1",
+      "guess": "scripts/resume-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./interviews-dashboard-v1",
+      "guess": "scripts/interviews-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./career-evidence-linkage-panel",
+      "guess": "scripts/career-evidence-linkage-panel"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./career-proposed-action-visibility-panel",
+      "guess": "scripts/career-proposed-action-visibility-panel"
+    },
+    {
+      "from": "scripts/audit-integration-sanity.mjs",
+      "import": "./career-state-boundary-panel",
+      "guess": "scripts/career-state-boundary-panel"
+    },
+    {
+      "from": "scripts/audit-phase-10.mjs",
+      "import": "./research-summary-panel",
+      "guess": "scripts/research-summary-panel"
+    },
+    {
+      "from": "scripts/audit-phase-10.mjs",
+      "import": "./research-linkage-boundary-panels",
+      "guess": "scripts/research-linkage-boundary-panels"
+    },
+    {
+      "from": "scripts/audit-phase-10.mjs",
+      "import": "./research-detail-panels",
+      "guess": "scripts/research-detail-panels"
+    },
+    {
+      "from": "scripts/audit-phase-10.mjs",
+      "import": "./research-proposed-action-visibility-panel",
+      "guess": "scripts/research-proposed-action-visibility-panel"
+    },
+    {
+      "from": "scripts/audit-phase-11.mjs",
+      "import": "./health-body-read",
+      "guess": "scripts/health-body-read"
+    },
+    {
+      "from": "scripts/audit-phase-11.mjs",
+      "import": "./health-body-dashboard-v1",
+      "guess": "scripts/health-body-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-phase-11.mjs",
+      "import": "./health-body-dashboard-states",
+      "guess": "scripts/health-body-dashboard-states"
+    },
+    {
+      "from": "scripts/audit-phase-11.mjs",
+      "import": "./health-body-nutrition-dashboard-v1",
+      "guess": "scripts/health-body-nutrition-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-phase-11.mjs",
+      "import": "./health-body-supplements-dashboard-v1",
+      "guess": "scripts/health-body-supplements-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-phase-11.mjs",
+      "import": "./health-body-sleep-energy-dashboard-v1",
+      "guess": "scripts/health-body-sleep-energy-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-phase-11.mjs",
+      "import": "./health-body-emotion-dashboard-v1",
+      "guess": "scripts/health-body-emotion-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-phase-11.mjs",
+      "import": "./health-body-hair-skincare-dashboard-v1",
+      "guess": "scripts/health-body-hair-skincare-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-phase-11.mjs",
+      "import": "./health-body-detail-panels",
+      "guess": "scripts/health-body-detail-panels"
+    },
+    {
+      "from": "scripts/audit-phase-11.mjs",
+      "import": "./health-body-linkage-panels",
+      "guess": "scripts/health-body-linkage-panels"
+    },
+    {
+      "from": "scripts/audit-phase-11.mjs",
+      "import": "./health-body-action-boundary-panels",
+      "guess": "scripts/health-body-action-boundary-panels"
+    },
+    {
+      "from": "scripts/audit-phase-12.mjs",
+      "import": "./admin-finance-read",
+      "guess": "scripts/admin-finance-read"
+    },
+    {
+      "from": "scripts/audit-phase-12.mjs",
+      "import": "./admin-finance-dashboard-data-helpers",
+      "guess": "scripts/admin-finance-dashboard-data-helpers"
+    },
+    {
+      "from": "scripts/audit-phase-13-5c.mjs",
+      "import": "./calendar-routine-read",
+      "guess": "scripts/calendar-routine-read"
+    },
+    {
+      "from": "scripts/audit-phase-13-5c.mjs",
+      "import": "./calendar-routine-dashboard-data-helpers",
+      "guess": "scripts/calendar-routine-dashboard-data-helpers"
+    },
+    {
+      "from": "scripts/audit-phase-13-5d.mjs",
+      "import": "./career-prep-read",
+      "guess": "scripts/career-prep-read"
+    },
+    {
+      "from": "scripts/audit-phase-13-5d.mjs",
+      "import": "./career-prep-dashboard-data-helpers",
+      "guess": "scripts/career-prep-dashboard-data-helpers"
+    },
+    {
+      "from": "scripts/audit-phase-13-5d.mjs",
+      "import": "./career-prep-foundation-panel",
+      "guess": "scripts/career-prep-foundation-panel"
+    },
+    {
+      "from": "scripts/audit-phase-13.mjs",
+      "import": "./grimoire-dashboard-v1",
+      "guess": "scripts/grimoire-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-phase-14c.mjs",
+      "import": "./voice-session-helpers",
+      "guess": "scripts/voice-session-helpers"
+    },
+    {
+      "from": "scripts/audit-phase-14c.mjs",
+      "import": "./voice-session-state",
+      "guess": "scripts/voice-session-state"
+    },
+    {
+      "from": "scripts/audit-phase-14f.mjs",
+      "import": "./voice-manual-simulator-preview",
+      "guess": "scripts/voice-manual-simulator-preview"
+    },
+    {
+      "from": "scripts/audit-phase-14f.mjs",
+      "import": "./transcript-draft",
+      "guess": "scripts/transcript-draft"
+    },
+    {
+      "from": "scripts/audit-phase-14g.mjs",
+      "import": "./carnos-voice-panel-integration",
+      "guess": "scripts/carnos-voice-panel-integration"
+    },
+    {
+      "from": "scripts/audit-phase-14h.mjs",
+      "import": "./voice-action-bridge-preview",
+      "guess": "scripts/voice-action-bridge-preview"
+    },
+    {
+      "from": "scripts/audit-phase-14h.mjs",
+      "import": "./voice-action-bridge",
+      "guess": "scripts/voice-action-bridge"
+    },
+    {
+      "from": "scripts/audit-phase-15d.mjs",
+      "import": "./memory-candidate-engine",
+      "guess": "scripts/memory-candidate-engine"
+    },
+    {
+      "from": "scripts/audit-phase-15e.mjs",
+      "import": "./memory-inbox-preview-panel",
+      "guess": "scripts/memory-inbox-preview-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15f.mjs",
+      "import": "./memory-privacy-rules",
+      "guess": "scripts/memory-privacy-rules"
+    },
+    {
+      "from": "scripts/audit-phase-15f.mjs",
+      "import": "./memory-privacy-rules-panel",
+      "guess": "scripts/memory-privacy-rules-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15g.mjs",
+      "import": "./approved-memory-read-layer",
+      "guess": "scripts/approved-memory-read-layer"
+    },
+    {
+      "from": "scripts/audit-phase-15g.mjs",
+      "import": "./approved-memory-read-layer-panel",
+      "guess": "scripts/approved-memory-read-layer-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15h.mjs",
+      "import": "./carnos-entity-state",
+      "guess": "scripts/carnos-entity-state"
+    },
+    {
+      "from": "scripts/audit-phase-15h.mjs",
+      "import": "./carnos-entity-state-panel",
+      "guess": "scripts/carnos-entity-state-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15i.mjs",
+      "import": "./project-system-state-memory",
+      "guess": "scripts/project-system-state-memory"
+    },
+    {
+      "from": "scripts/audit-phase-15i.mjs",
+      "import": "./project-system-state-memory-panel",
+      "guess": "scripts/project-system-state-memory-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15j.mjs",
+      "import": "./current-context-pack-builder",
+      "guess": "scripts/current-context-pack-builder"
+    },
+    {
+      "from": "scripts/audit-phase-15j.mjs",
+      "import": "./current-context-pack-builder-panel",
+      "guess": "scripts/current-context-pack-builder-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15k.mjs",
+      "import": "./carnos-memory-visibility",
+      "guess": "scripts/carnos-memory-visibility"
+    },
+    {
+      "from": "scripts/audit-phase-15k.mjs",
+      "import": "./carnos-memory-visibility-panel",
+      "guess": "scripts/carnos-memory-visibility-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15l.mjs",
+      "import": "./knowledge-vault-foundation",
+      "guess": "scripts/knowledge-vault-foundation"
+    },
+    {
+      "from": "scripts/audit-phase-15l.mjs",
+      "import": "./knowledge-vault-foundation-panel",
+      "guess": "scripts/knowledge-vault-foundation-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15m.mjs",
+      "import": "./retrieval-contract",
+      "guess": "scripts/retrieval-contract"
+    },
+    {
+      "from": "scripts/audit-phase-15m.mjs",
+      "import": "./retrieval-contract-panel",
+      "guess": "scripts/retrieval-contract-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15n.mjs",
+      "import": "./embedding-boundary",
+      "guess": "scripts/embedding-boundary"
+    },
+    {
+      "from": "scripts/audit-phase-15n.mjs",
+      "import": "./embedding-boundary-panel",
+      "guess": "scripts/embedding-boundary-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15o.mjs",
+      "import": "./forget-delete-derived-records",
+      "guess": "scripts/forget-delete-derived-records"
+    },
+    {
+      "from": "scripts/audit-phase-15o.mjs",
+      "import": "./forget-delete-derived-records-panel",
+      "guess": "scripts/forget-delete-derived-records-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15p.mjs",
+      "import": "./memory-audit-usage-transparency",
+      "guess": "scripts/memory-audit-usage-transparency"
+    },
+    {
+      "from": "scripts/audit-phase-15p.mjs",
+      "import": "./memory-audit-usage-transparency-panel",
+      "guess": "scripts/memory-audit-usage-transparency-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15q.mjs",
+      "import": "./cross-domain-integration-preview",
+      "guess": "scripts/cross-domain-integration-preview"
+    },
+    {
+      "from": "scripts/audit-phase-15q.mjs",
+      "import": "./cross-domain-memory-integration-panel",
+      "guess": "scripts/cross-domain-memory-integration-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./memory-enums",
+      "guess": "scripts/memory-enums"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./memory-contracts",
+      "guess": "scripts/memory-contracts"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./memory-validators",
+      "guess": "scripts/memory-validators"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./memory-conflict-rules",
+      "guess": "scripts/memory-conflict-rules"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./memory-candidate-engine",
+      "guess": "scripts/memory-candidate-engine"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./memory-privacy-rules",
+      "guess": "scripts/memory-privacy-rules"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./approved-memory-read-layer",
+      "guess": "scripts/approved-memory-read-layer"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./carnos-entity-state",
+      "guess": "scripts/carnos-entity-state"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./project-system-state-memory",
+      "guess": "scripts/project-system-state-memory"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./current-context-pack-builder",
+      "guess": "scripts/current-context-pack-builder"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./carnos-memory-visibility",
+      "guess": "scripts/carnos-memory-visibility"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./knowledge-vault-foundation",
+      "guess": "scripts/knowledge-vault-foundation"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./retrieval-contract",
+      "guess": "scripts/retrieval-contract"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./embedding-boundary",
+      "guess": "scripts/embedding-boundary"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./forget-delete-derived-records",
+      "guess": "scripts/forget-delete-derived-records"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./memory-audit-usage-transparency",
+      "guess": "scripts/memory-audit-usage-transparency"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./cross-domain-integration-preview",
+      "guess": "scripts/cross-domain-integration-preview"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./memory-inbox-preview-panel",
+      "guess": "scripts/memory-inbox-preview-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./memory-privacy-rules-panel",
+      "guess": "scripts/memory-privacy-rules-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./approved-memory-read-layer-panel",
+      "guess": "scripts/approved-memory-read-layer-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./carnos-entity-state-panel",
+      "guess": "scripts/carnos-entity-state-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./project-system-state-memory-panel",
+      "guess": "scripts/project-system-state-memory-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./current-context-pack-builder-panel",
+      "guess": "scripts/current-context-pack-builder-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./carnos-memory-visibility-panel",
+      "guess": "scripts/carnos-memory-visibility-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./knowledge-vault-foundation-panel",
+      "guess": "scripts/knowledge-vault-foundation-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./retrieval-contract-panel",
+      "guess": "scripts/retrieval-contract-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./embedding-boundary-panel",
+      "guess": "scripts/embedding-boundary-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./forget-delete-derived-records-panel",
+      "guess": "scripts/forget-delete-derived-records-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./memory-audit-usage-transparency-panel",
+      "guess": "scripts/memory-audit-usage-transparency-panel"
+    },
+    {
+      "from": "scripts/audit-phase-15r.mjs",
+      "import": "./cross-domain-memory-integration-panel",
+      "guess": "scripts/cross-domain-memory-integration-panel"
+    },
+    {
+      "from": "scripts/audit-phase-16-5i.mjs",
+      "import": "./carnos-lightweight-companion-panel",
+      "guess": "scripts/carnos-lightweight-companion-panel"
+    },
+    {
+      "from": "scripts/audit-phase-16c.mjs",
+      "import": "./current-info-enums",
+      "guess": "scripts/current-info-enums"
+    },
+    {
+      "from": "scripts/audit-phase-16c.mjs",
+      "import": "./current-info-contracts",
+      "guess": "scripts/current-info-contracts"
+    },
+    {
+      "from": "scripts/audit-phase-16c.mjs",
+      "import": "./current-info-validators",
+      "guess": "scripts/current-info-validators"
+    },
+    {
+      "from": "scripts/audit-phase-16d.mjs",
+      "import": "./current-info-provider-types",
+      "guess": "scripts/current-info-provider-types"
+    },
+    {
+      "from": "scripts/audit-phase-16d.mjs",
+      "import": "./provider-boundary",
+      "guess": "scripts/provider-boundary"
+    },
+    {
+      "from": "scripts/audit-phase-16d.mjs",
+      "import": "./noop-current-info-provider",
+      "guess": "scripts/noop-current-info-provider"
+    },
+    {
+      "from": "scripts/audit-phase-16e.mjs",
+      "import": "./current-info-query-classifier",
+      "guess": "scripts/current-info-query-classifier"
+    },
+    {
+      "from": "scripts/audit-phase-16e.mjs",
+      "import": "./current-info-safety-gate",
+      "guess": "scripts/current-info-safety-gate"
+    },
+    {
+      "from": "scripts/audit-phase-16f.mjs",
+      "import": "./current-info-citation-engine",
+      "guess": "scripts/current-info-citation-engine"
+    },
+    {
+      "from": "scripts/audit-phase-16f.mjs",
+      "import": "./current-info-reliability-engine",
+      "guess": "scripts/current-info-reliability-engine"
+    },
+    {
+      "from": "scripts/audit-phase-16f.mjs",
+      "import": "./current-info-freshness-engine",
+      "guess": "scripts/current-info-freshness-engine"
+    },
+    {
+      "from": "scripts/audit-phase-16g-b.mjs",
+      "import": "./current-info-extraction-candidate",
+      "guess": "scripts/current-info-extraction-candidate"
+    },
+    {
+      "from": "scripts/audit-phase-16g.mjs",
+      "import": "./current-info-source-candidate",
+      "guess": "scripts/current-info-source-candidate"
+    },
+    {
+      "from": "scripts/audit-phase-16g.mjs",
+      "import": "./current-info-destination-router",
+      "guess": "scripts/current-info-destination-router"
+    },
+    {
+      "from": "scripts/audit-phase-16h-b.mjs",
+      "import": "./current-info-source-candidate",
+      "guess": "scripts/current-info-source-candidate"
+    },
+    {
+      "from": "scripts/audit-phase-16h-b.mjs",
+      "import": "./current-info-destination-router",
+      "guess": "scripts/current-info-destination-router"
+    },
+    {
+      "from": "scripts/audit-phase-16h-b.mjs",
+      "import": "./current-info-duplicate-detector",
+      "guess": "scripts/current-info-duplicate-detector"
+    },
+    {
+      "from": "scripts/audit-phase-16h.mjs",
+      "import": "./current-info-review-queue-item",
+      "guess": "scripts/current-info-review-queue-item"
+    },
+    {
+      "from": "scripts/audit-phase-16h.mjs",
+      "import": "./current-info-review-decision",
+      "guess": "scripts/current-info-review-decision"
+    },
+    {
+      "from": "scripts/audit-phase-16i.mjs",
+      "import": "./current-info-read",
+      "guess": "scripts/current-info-read"
+    },
+    {
+      "from": "scripts/audit-phase-16i.mjs",
+      "import": "./current-info-dashboard-data-helpers",
+      "guess": "scripts/current-info-dashboard-data-helpers"
+    },
+    {
+      "from": "scripts/audit-phase-16j.mjs",
+      "import": "./current-info-ui-components",
+      "guess": "scripts/current-info-ui-components"
+    },
+    {
+      "from": "scripts/audit-phase-16k.mjs",
+      "import": "./carnos-current-info-integration-panel",
+      "guess": "scripts/carnos-current-info-integration-panel"
+    },
+    {
+      "from": "scripts/audit-phase-16n.mjs",
+      "import": "./knowledge-vault-source-bridge",
+      "guess": "scripts/knowledge-vault-source-bridge"
+    },
+    {
+      "from": "scripts/audit-phase-16n.mjs",
+      "import": "./knowledge-vault-source-bridge-panel",
+      "guess": "scripts/knowledge-vault-source-bridge-panel"
+    },
+    {
+      "from": "scripts/audit-phase-16o.mjs",
+      "import": "./current-info-review-to-save-flow",
+      "guess": "scripts/current-info-review-to-save-flow"
+    },
+    {
+      "from": "scripts/audit-phase-16o.mjs",
+      "import": "./current-info-review-to-save-panel",
+      "guess": "scripts/current-info-review-to-save-panel"
+    },
+    {
+      "from": "scripts/audit-phase-16p.mjs",
+      "import": "./current-info-privacy-retention-rules",
+      "guess": "scripts/current-info-privacy-retention-rules"
+    },
+    {
+      "from": "scripts/audit-phase-16p.mjs",
+      "import": "./current-info-privacy-retention-panel",
+      "guess": "scripts/current-info-privacy-retention-panel"
+    },
+    {
+      "from": "scripts/audit-phase-16q.mjs",
+      "import": "./current-info-web-source-audit-trail",
+      "guess": "scripts/current-info-web-source-audit-trail"
+    },
+    {
+      "from": "scripts/audit-phase-16q.mjs",
+      "import": "./current-info-web-source-audit-trail-panel",
+      "guess": "scripts/current-info-web-source-audit-trail-panel"
+    },
+    {
+      "from": "scripts/audit-phase-17d.mjs",
+      "import": "./memory-rag-schema-contracts",
+      "guess": "scripts/memory-rag-schema-contracts"
+    },
+    {
+      "from": "scripts/audit-phase-17d.mjs",
+      "import": "./memory-rag-schema-validators",
+      "guess": "scripts/memory-rag-schema-validators"
+    },
+    {
+      "from": "scripts/audit-phase-17e.mjs",
+      "import": "./memory-inbox-write",
+      "guess": "scripts/memory-inbox-write"
+    },
+    {
+      "from": "scripts/audit-phase-17f.mjs",
+      "import": "./approved-memory-write",
+      "guess": "scripts/approved-memory-write"
+    },
+    {
+      "from": "scripts/audit-phase-17g.mjs",
+      "import": "./memory-provenance-confidence-conflict-engine",
+      "guess": "scripts/memory-provenance-confidence-conflict-engine"
+    },
+    {
+      "from": "scripts/audit-phase-17h.mjs",
+      "import": "./memory-embedding-provider-boundary",
+      "guess": "scripts/memory-embedding-provider-boundary"
+    },
+    {
+      "from": "scripts/audit-phase-17i.mjs",
+      "import": "./memory-retrieval-ranking-budget-dedupe",
+      "guess": "scripts/memory-retrieval-ranking-budget-dedupe"
+    },
+    {
+      "from": "scripts/audit-phase-8.mjs",
+      "import": "./career-dashboard-v1",
+      "guess": "scripts/career-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-phase-8.mjs",
+      "import": "./networking-dashboard-v1",
+      "guess": "scripts/networking-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-phase-8.mjs",
+      "import": "./resume-dashboard-v1",
+      "guess": "scripts/resume-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-phase-8.mjs",
+      "import": "./interviews-dashboard-v1",
+      "guess": "scripts/interviews-dashboard-v1"
+    },
+    {
+      "from": "scripts/audit-phase-8.mjs",
+      "import": "./career-evidence-linkage-panel",
+      "guess": "scripts/career-evidence-linkage-panel"
+    },
+    {
+      "from": "scripts/audit-phase-8.mjs",
+      "import": "./career-proposed-action-visibility-panel",
+      "guess": "scripts/career-proposed-action-visibility-panel"
+    },
+    {
+      "from": "scripts/audit-phase-8.mjs",
+      "import": "./career-state-boundary-panel",
+      "guess": "scripts/career-state-boundary-panel"
+    }
+  ],
+  "npmCheck": {
+    "ok": true,
+    "tail": "\n> ascendos@0.1.0 check\n> node scripts/run-check-quiet.mjs \"npm run lint && npm run validate:routes && npm run validate:registry && npm run validate:migrations && npm run audit:phase3 && npm run audit:phase4 && npm run audit:phase5 && npm run audit:phase6 && npm run audit:source && npm run audit:pythonml && npm run audit:phase8 && npm run audit:phase10 && npm run audit:phase11 && npm run audit:phase12 && npm run audit:phase13 && npm run audit:integration && npm run audit:phase13_5 && npm run audit:phase13_5b && npm run audit:phase13_5c && npm run audit:phase13_5d && npm run audit:phase13_5e && npm run audit:phase13_5f && npm run audit:phase13_5g && npm run audit:phase14a && npm run audit:phase14b && npm run audit:phase14c && npm run audit:phase14d && npm run audit:phase14e && npm run audit:phase14f && npm run audit:phase14g && npm run audit:phase14h && npm run audit:phase14i && npm run audit:phase14j && npm run audit:phase15a && npm run audit:phase15b && npm run audit:phase15c && npm run audit:phase15d && npm run audit:phase15e && npm run audit:phase15f && npm run audit:phase15g && npm run audit:phase15h && npm run audit:phase15i && npm run audit:phase15j && npm run audit:phase15k && npm run audit:phase15l && npm run audit:phase15m && npm run audit:phase15n && npm run audit:phase15o && npm run audit:phase15p && npm run audit:phase15q && npm run audit:phase15r && npm run audit:phase16a && npm run audit:phase16b && npm run audit:phase16c && npm run audit:phase16d && npm run audit:phase16e && npm run audit:phase16f && npm run audit:phase16g && npm run audit:phase16g_b && npm run audit:phase16h && npm run audit:phase16h_b && npm run audit:phase16i && npm run audit:phase16j && npm run audit:phase16k && npm run audit:phase16l && npm run audit:phase16m && npm run audit:phase16n && npm run audit:phase16o && npm run audit:phase16p && npm run audit:phase16q && npm run audit:phase16r && npm run audit:phase16_5a && npm run audit:phase16_5b && npm run audit:phase16_5c && npm run audit:phase16_5d && npm run audit:phase16_5e && npm run audit:phase16_5f && npm run audit:phase16_5g && npm run audit:phase16_5h && npm run audit:phase16_5i && npm run audit:phase16_5j && npm run audit:phase17a && npm run audit:phase17b && npm run audit:phase17c && npm run audit:phase17d && npm run audit:phase17e && npm run audit:phase17f && npm run audit:phase17g && npm run audit:phase17h && npm run audit:phase17i && npm run audit:phase17j && npm run audit:phase17k && npm run audit:phase17l && npm run audit:phase17m && npm run audit:phase17n && npm run audit:phase17o && npm run audit:phase17p && npm run audit:phase17q && npm run audit:phase18a && npm run audit:phase18a_b && npm run audit:phase18b && npm run audit:phase18b_b && npm run audit:phase18c && npm run audit:phase18d && npm run audit:phase18e && npm run audit:phase18f && npm run audit:phase18g && npm run audit:phase18h && npm run audit:phase18i && npm run audit:phase18j && npm run audit:phase18k && npm run audit:phase18l && npm run audit:phase18m && npm run audit:phase18m_b && npm run audit:phase18n && npm run audit:phase18o && npm run build && npm run audit:phase19a && npm run audit:phase19b && npm run audit:phase19c && npm run audit:phase19d && npm run audit:phase19e && npm run audit:phase19f && npm run audit:phase19g && npm run audit:phase19h && npm run audit:phase19i && npm run audit:phase19j && npm run audit:phase19k && npm run audit:phase19l && npm run audit:phase19m && npm run audit:phase19n && npm run audit:phase20a && npm run audit:phase20b && npm run audit:phase20c && npm run audit:phase20d && npm run audit:phase20e && npm run audit:phase20f && npm run audit:phase20g && npm run audit:phase20h && npm run audit:phase20i && npm run audit:phase20j && npm run audit:phase20k && npm run audit:phase20l && npm run audit:phase20m && npm run audit:phase20n && npm run audit:phase20o && npm run audit:phase20p && npm run audit:phase20q && npm run audit:phase20r && npm run audit:phase20s && npm run audit:phase20t && npm run audit:phase20u && npm run audit:phase20v && npm run audit:phase20w && npm run audit:phase20x && npm run audit:phase20y\" && npm run audit:phase20z\n\n=== ascendOS quiet verification ===\nRunning full verification with compact terminal output.\nFull log will be saved to .verify-logs/last-check-output.log.\n\n✓ Full verification passed.\n✓ Full verification log saved to .verify-logs/last-check-output.log.\n\n> ascendos@0.1.0 audit:phase20z\n> node scripts/audit-phase-20z.mjs\n\n✓ Phase 20Z final privacy/export/connector completion audit passed.\n✓ Phase 20 is fully represented, check-integrated, and closed with explicit Spotify runtime connector allowance.\n"
+  },
+  "diffCheck": {
+    "ok": true,
+    "output": ""
+  },
+  "tableClosure": {
+    "ran": true,
+    "ok": true,
+    "status": "PASS_WITH_REVIEW_NOTES",
+    "counts": {
+      "totalTablesChecked": 19,
+      "closed": 18,
+      "review": 1,
+      "open": 0
+    },
+    "hardBlockers": []
+  },
+  "git": {
+    "head": "600178d Clarify runtime memory knowledge boundaries",
+    "status": "M docs/audits/PHASE_1_13_5_FULL_SOURCE_SCOPE_AUDIT.md\n M docs/fixtures/phase18-analytics-experiments/phase18b_schema_source_map.json\n M docs/roadmap/PHASE_18B_SCHEMA_DISCOVERY_METRIC_SOURCE_MAP.md\n M scripts/audit-phase-15a.mjs\n M scripts/audit-phase-20z.mjs\n M src/app/custom-trackers/page.tsx\n M src/lib/custom-trackers/custom-trackers-dashboard-view-model.ts\n M src/lib/privacy/privacy-dashboard-view-model.ts\n M src/lib/repositories/index.ts\n M src/lib/repositories/memory-knowledge-read.ts\n?? \"I am continuing the ascendOS.docx\"\n?? docs/fixtures/full-project-connectivity/\n?? docs/phase-reports/DELEGATED_PAGE_DATA_FLOW_AUDIT.md\n?? docs/phase-reports/DOMAIN_OPERATIONAL_MATRIX_AUDIT.md\n?? docs/phase-reports/FULL_SYSTEM_INTERCONNECTION_TRUTH_AUDIT.md\n?? docs/phase-reports/PHASE_20Z_100_PERCENT_INTERCONNECTIVITY.md\n?? docs/phase-reports/PHASE_20Z_ACTUAL_PROJECT_CONNECTIVITY_V2.md\n?? docs/phase-reports/PHASE_20Z_EXACT_CHAIN_CONNECTIVITY_V4.md\n?? docs/phase-reports/PHASE_20Z_FINAL_CONNECTIVITY_V3.md\n?? docs/phase-reports/PHASE_20Z_FULL_PROJECT_FEATURE_CONNECTIVITY_VERIFICATION.md\n?? docs/phase-reports/PHASE_20Z_H_POST_V1_RUNTIME_BOUNDARY_LOCK.md\n?? docs/phase-reports/PHASE_20Z_I_PRE_PHASE_21_READINESS_AUDIT.md\n?? docs/phase-reports/PHASE_20Z_J_FULL_PROJECT_PHASE_0_20_TRUTH_AUDIT.md\n?? docs/phase-reports/PHASE_20Z_TABLE_CLOSURE_V4B.md\n?? docs/phase-reports/PHASE_20Z_TOTAL_PROJECT_PHASE_0_20_CONNECTIVITY_VERIFICATION.md\n?? scripts/audit-delegated-page-data-flow.mjs\n?? scripts/audit-domain-operational-matrix.mjs\n?? scripts/audit-full-system-interconnection-truth.mjs\n?? scripts/verify-full-project-phase-connectivity.mjs\n?? scripts/verify-phase-0-20-100-connectivity.mjs\n?? scripts/verify-phase-0-20-actual-connectivity-v2.mjs\n?? scripts/verify-phase-0-20-exact-chain-v4.mjs\n?? scripts/verify-phase-0-20-final-connectivity-v3.mjs\n?? scripts/verify-phase-0-20-table-closure-v4b.mjs\n?? scripts/verify-phase-0-20-total-project-connectivity.mjs\n?? src/app/api/connectors/\n?? src/lib/connectors/\n?? src/lib/repositories/spotify-connector-read-write.ts\n?? supabase/.temp/\n?? supabase/migrations/0029_phase20_spotify_connector_runtime.sql"
+  }
+}
