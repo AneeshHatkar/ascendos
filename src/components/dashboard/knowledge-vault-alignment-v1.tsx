@@ -319,7 +319,7 @@ export function KnowledgeVaultAlignmentV1({
       <SectionCard
         title="Deferred memory/RAG boundary"
         eyebrow="safety"
-        description="This route is aligned with Phase 9 only. Full memory, embeddings, retrieval, web indexing, and deletion/export controls stay deferred."
+        description="This route now combines Phase 9 learning/project records with read-only knowledge-vault visibility. Memory approval, embeddings, vector retrieval, web indexing, and deletion/export controls stay deferred."
       >
         <div className="grid gap-3 md:grid-cols-2">
           <div className="rounded-xl border border-slate-800 bg-slate-950/50 p-4">

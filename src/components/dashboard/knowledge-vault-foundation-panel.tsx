@@ -63,7 +63,7 @@ export function KnowledgeVaultFoundationPanel({
       <SectionCard
         eyebrow="Phase 15L Knowledge Vault Foundation"
         title="Knowledge vault separation"
-        description="Preview-only foundation for non-personal knowledge records, source metadata, tags, and links. It does not approve memory, persist data, call Supabase, read or write SQL, retrieve, embed, call providers, inject hidden Carnos context, or create a standalone /memory route."
+        description="Read-only foundation for non-personal knowledge records, source metadata, tags, and links. Runtime knowledge-vault reads are active, while memory approval, writes, embeddings, provider calls, hidden Carnos context injection, and standalone /memory routing remain deferred."
       >
         <div className="grid gap-3 md:grid-cols-3 xl:grid-cols-6">
           <MetricTile
@@ -113,7 +113,7 @@ export function KnowledgeVaultFoundationPanel({
       <SectionCard
         eyebrow="vault items"
         title="Visible knowledge records"
-        description="These records represent source/reference knowledge metadata only. Conversion into personal memory remains deferred and requires explicit future review."
+        description="These records represent source/reference knowledge metadata with runtime read visibility. Conversion into personal memory remains deferred and requires explicit future review."
       >
         {preview.visible_items.length === 0 ? (
           <EmptyState

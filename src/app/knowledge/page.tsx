@@ -25,7 +25,7 @@ export default function KnowledgePage() {
     <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-8">
       <AuthenticatedDashboardShell
         title="Knowledge Vault"
-        description="Read-only knowledge alignment surface for learning and project source records. Full memory/RAG remains deferred."
+        description="Read-only knowledge alignment surface with runtime knowledge-vault reads. Memory approval, embeddings, vector retrieval, hidden prompt injection, and autonomous memory writes remain deferred."
       >
         {async ({ user }) => {
           const [
