@@ -1,4 +1,5 @@
 import {
+  listAdminFinanceReminders,
   listBudgetCategories,
   listFinancialAccounts,
   listFinancialLogs,
@@ -17,6 +18,7 @@ import type {
   LifeAdminDocumentRow,
   SubscriptionRow,
 } from "@/types/database";
+import type { ReminderRow } from "@/lib/repositories/calendar-routine-read";
 
 export interface AdminFinanceDashboardSummary {
   financial_account_count: number;
@@ -46,6 +48,9 @@ export interface AdminFinanceDashboardSummary {
   current_housing_option_count: number;
   housing_contact_count: number;
   housing_follow_up_due_count: number;
+  reminder_count: number;
+  pending_reminder_count: number;
+  overdue_reminder_count: number;
   admin_attention_count: number;
   read_only_boundary: true;
 }
@@ -71,6 +76,9 @@ export interface AdminFinanceDashboardDetailRows {
   current_housing_options: HousingOptionRow[];
   housing_contacts: HousingContactRow[];
   housing_follow_ups_due: HousingContactRow[];
+  reminders: ReminderRow[];
+  pending_reminders: ReminderRow[];
+  overdue_reminders: ReminderRow[];
 }
 
 export interface AdminFinanceDashboardDataResult {
@@ -163,6 +171,8 @@ export async function getAdminFinanceDashboardDataSummary(
     housingOptions,
     currentHousingOptions,
     housingContacts,
+    reminders,
+    pendingReminders,
   ] = await Promise.all([
     listFinancialAccounts(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
     listFinancialAccounts(userId, {
@@ -191,6 +201,11 @@ export async function getAdminFinanceDashboardDataSummary(
       limit: DEFAULT_SUMMARY_LIMIT,
     }),
     listHousingContacts(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listAdminFinanceReminders(userId, { limit: DEFAULT_SUMMARY_LIMIT }),
+    listAdminFinanceReminders(userId, {
+      status: "pending",
+      limit: DEFAULT_SUMMARY_LIMIT,
+    }),
   ]);
 
   const accountRows = asRows(financialAccounts);
@@ -205,6 +220,8 @@ export async function getAdminFinanceDashboardDataSummary(
   const housingRows = asRows(housingOptions);
   const currentHousingRows = asRows(currentHousingOptions);
   const contactRows = asRows(housingContacts);
+  const reminderRows = asRows(reminders);
+  const pendingReminderRows = asRows(pendingReminders);
 
   const plannedOrPendingFinanceRows = financeRows.filter((item) =>
     ["planned", "pending"].includes(item.payment_status),
@@ -239,6 +256,10 @@ export async function getAdminFinanceDashboardDataSummary(
     isDueTodayOrEarlier(item.next_follow_up_on),
   );
 
+  const overdueReminderRows = reminderRows.filter((item) =>
+    item.status === "pending" && isDueTodayOrEarlier(item.remind_at),
+  );
+
   const warnings = [
     collectWarning("financial_accounts", financialAccounts.error),
     collectWarning("active_financial_accounts", activeFinancialAccounts.error),
@@ -252,6 +273,8 @@ export async function getAdminFinanceDashboardDataSummary(
     collectWarning("housing_options", housingOptions.error),
     collectWarning("current_housing_options", currentHousingOptions.error),
     collectWarning("housing_contacts", housingContacts.error),
+    collectWarning("reminders", reminders.error),
+    collectWarning("pending_reminders", pendingReminders.error),
   ].filter((warning): warning is string => warning !== null);
 
   const adminAttentionCount =
@@ -261,7 +284,8 @@ export async function getAdminFinanceDashboardDataSummary(
     overdueSubscriptionRows.length +
     expiringDocumentRows.length +
     overdueDocumentRows.length +
-    housingFollowUpRows.length;
+    housingFollowUpRows.length +
+    overdueReminderRows.length;
 
   return {
     generated_at: new Date().toISOString(),
@@ -273,6 +297,7 @@ export async function getAdminFinanceDashboardDataSummary(
       "documents",
       "housing_options",
       "housing_contacts",
+    "reminders",
     ],
     warnings,
     detail_rows: {
@@ -296,6 +321,9 @@ export async function getAdminFinanceDashboardDataSummary(
       current_housing_options: currentHousingRows,
       housing_contacts: contactRows,
       housing_follow_ups_due: housingFollowUpRows,
+      reminders: reminderRows,
+      pending_reminders: pendingReminderRows,
+      overdue_reminders: overdueReminderRows,
     },
     summary: {
       financial_account_count: accountRows.length,
@@ -334,6 +362,9 @@ export async function getAdminFinanceDashboardDataSummary(
       current_housing_option_count: currentHousingRows.length,
       housing_contact_count: contactRows.length,
       housing_follow_up_due_count: housingFollowUpRows.length,
+      reminder_count: reminderRows.length,
+      pending_reminder_count: pendingReminderRows.length,
+      overdue_reminder_count: overdueReminderRows.length,
       admin_attention_count: adminAttentionCount,
       read_only_boundary: true,
     },

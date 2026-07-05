@@ -9,6 +9,7 @@ import type {
   SubscriptionRow,
 } from "@/types/database";
 
+import type { ReminderRow } from "./calendar-routine-read";
 import type { RepositoryListResult } from "./core-read";
 
 const DEFAULT_LIMIT = 25;
@@ -389,6 +390,41 @@ export async function listHousingContacts(
     }
 
     return { data: (data ?? []) as HousingContactRow[], error: null };
+  } catch (error) {
+    return { data: null, error: toErrorMessage(error) };
+  }
+}
+
+export async function listAdminFinanceReminders(
+  userId: string,
+  options: {
+    status?: ReminderRow["status"];
+    limit?: number;
+  } = {},
+): Promise<RepositoryListResult<ReminderRow>> {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const limit = clampLimit(options.limit);
+
+    let query = supabase
+      .from("reminders")
+      .select("*")
+      .eq("user_id", userId)
+      .order("remind_at", { ascending: true, nullsFirst: false })
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (options.status) {
+      query = query.eq("status", options.status as never);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { data: null, error: error.message };
+    }
+
+    return { data: (data ?? []) as unknown as ReminderRow[], error: null };
   } catch (error) {
     return { data: null, error: toErrorMessage(error) };
   }
