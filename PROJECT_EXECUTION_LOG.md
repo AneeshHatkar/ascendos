@@ -5405,3 +5405,7 @@ Locked manual workout logging as the active health/body logging stance for Phase
 ## Phase 20Y — Privacy Dashboard View Model UI
 
 Wired the existing /privacy route to a read-only Phase 20 dashboard view model and UI using existing discovered settings/privacy read helpers. Added memory, private mode, emergency lockdown, export, destructive action, sensitive lock, audit, Carnos access, Spotify connector, media permission, manual workout, and deferred connector cards. No schema was added because 20Y uses existing read helpers only and does not add migrations, database writes, provider calls, OAuth routes, token storage, export generation, destructive actions, audit writes, or Carnos runtime tools.
+
+## Phase 20Z — Final Privacy / Export / Connector Completion
+- Added final Phase 20 proof package, smoke checklist, and audit integration.
+- Confirmed Phase 20 closes without new database migrations, provider runtime calls, token storage, or deferred connector implementation.

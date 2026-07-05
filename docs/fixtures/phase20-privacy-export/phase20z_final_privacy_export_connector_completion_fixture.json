@@ -1,0 +1,66 @@
+{
+  "phase": "20Z",
+  "title": "Final Phase 20 privacy export connector completion proof",
+  "status": "complete",
+  "locked_scope": {
+    "phase_identity": "Privacy, export, memory control, private mode, sensitive locks, audit viewer, connector trust framework, Spotify connector boundaries, manual workout connector stance, and final proof.",
+    "no_new_database_migrations": true,
+    "no_provider_runtime_calls": true,
+    "no_token_storage": true,
+    "no_silent_external_actions": true,
+    "no_health_device_connector": true,
+    "echo_excluded": true,
+    "garmin_deferred": true
+  },
+  "completed_sequence": [
+    "20A privacy and Spotify planning lock",
+    "20B core privacy contracts",
+    "20C memory control contracts",
+    "20D privacy action safety rules",
+    "20E private mode rules",
+    "20F emergency lockdown rules",
+    "20G privacy/export action contracts",
+    "20H Carnos access matrix",
+    "20I data export boundary",
+    "20J destructive action review boundary",
+    "20K data scope selector rules",
+    "20L export manifest rules",
+    "20M forget destructive manifest rules",
+    "20N audit viewer boundary rules",
+    "20O privacy taxonomy badge rules",
+    "20P data retention boundary rules",
+    "20Q cross-phase privacy enforcement map",
+    "20R connector framework rules",
+    "20S Spotify connector foundation rules",
+    "20T Spotify OAuth boundary rules",
+    "20U Spotify media boundary rules",
+    "20V Spotify Carnos action safety rules",
+    "20W Spotify UI permission card rules",
+    "20X manual workout connector stance",
+    "20Y privacy dashboard view model and UI",
+    "20Z final proof and completion package"
+  ],
+  "final_dashboard_surface": {
+    "route": "/privacy",
+    "status": "read-only",
+    "cards": [
+      "memory control",
+      "private mode",
+      "sensitive locks",
+      "audit visibility",
+      "export manifest",
+      "destructive review",
+      "connector framework",
+      "spotify account boundary",
+      "spotify media boundary",
+      "manual workout stance",
+      "deferred connector stance"
+    ]
+  },
+  "phase20z_verification": {
+    "audit_script": "scripts/audit-phase-20z.mjs",
+    "package_script": "audit:phase20z",
+    "check_integration": "npm run check includes audit:phase20z",
+    "manual_smoke_checklist": "docs/qa/PHASE_20Z_PRIVACY_EXPORT_CONNECTOR_FINAL_SMOKE_CHECKLIST.md"
+  }
+}

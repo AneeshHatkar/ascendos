@@ -2199,3 +2199,8 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added memory, private mode, emergency lockdown, export, destructive action, sensitive lock, audit, Carnos access, Spotify connector, media permission, manual workout, and deferred connector cards.
 - Reused existing settings/privacy read helpers without adding schema, writes, provider calls, token storage, export generation, destructive actions, or Carnos runtime tools.
 - Integrated audit:phase20y into package checks.
+
+## Phase 20Z — Final Privacy / Export / Connector Completion
+- Added the final Phase 20 proof package and audit gate.
+- Integrated `audit:phase20z` into `npm run check`.
+- Closed Phase 20 without new migrations or runtime external-provider integration.

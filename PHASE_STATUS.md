@@ -3831,3 +3831,7 @@ Phase 20X locked: manual workout logging stance, active Phase 20 connector posit
 ## Phase 20Y Status
 
 Phase 20Y wired: /privacy dashboard view model, read-only UI cards, existing settings/privacy read helpers, memory controls, private mode, emergency lockdown, export boundary, destructive action boundary, sensitive locks, audit viewer, Carnos access, Spotify connector trust, media permissions, manual workout stance, deferred connectors, redaction guards, and runtime guards. No schema was added.
+
+## Phase 20Z — Final Privacy / Export / Connector Completion
+Status: Complete after `npm run audit:phase20z` and `npm run check` pass.
+Phase 20 status: Closed.

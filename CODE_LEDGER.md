@@ -4713,3 +4713,10 @@ Files added or updated:
 - package.json
 
 Purpose: wire /privacy to a read-only Phase 20 dashboard view model and UI using existing settings/privacy read helpers while preserving connector, Spotify, export, memory, audit, redaction, Carnos, and runtime safety boundaries.
+
+## Phase 20Z — Final Privacy / Export / Connector Completion
+- `docs/contracts/PHASE_20Z_PRIVACY_EXPORT_CONNECTOR_FINAL_COMPLETION.md` — final Phase 20 completion contract.
+- `docs/fixtures/phase20-privacy-export/phase20z_final_privacy_export_connector_completion_fixture.json` — final completion fixture.
+- `docs/phase-reports/PHASE_20Z_PRIVACY_EXPORT_CONNECTOR_FINAL_COMPLETION_REPORT.md` — final completion report.
+- `docs/qa/PHASE_20Z_PRIVACY_EXPORT_CONNECTOR_FINAL_SMOKE_CHECKLIST.md` — final manual smoke checklist.
+- `scripts/audit-phase-20z.mjs` — final Phase 20 audit gate.
