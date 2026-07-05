@@ -2204,3 +2204,6 @@ Added deterministic retrieval ranking, budget, and dedupe planning safeguards.
 - Added the final Phase 20 proof package and audit gate.
 - Integrated `audit:phase20z` into `npm run check`.
 - Closed Phase 20 without new migrations or runtime external-provider integration.
+
+## Phase 20Z-D — Integration Gap Closure Plan
+- Added the integration gap closure plan to prevent Phase 21 from proceeding before runtime/data-flow gaps are resolved.

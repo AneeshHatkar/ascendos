@@ -3835,3 +3835,7 @@ Phase 20Y wired: /privacy dashboard view model, read-only UI cards, existing set
 ## Phase 20Z — Final Privacy / Export / Connector Completion
 Status: Complete after `npm run audit:phase20z` and `npm run check` pass.
 Phase 20 status: Closed.
+
+## Phase 20Z-D — Integration Gap Closure Plan
+Status: Required corrective phase before Phase 21.
+Phase 21 status: Blocked until P0 integration gaps are closed or explicitly deferred.

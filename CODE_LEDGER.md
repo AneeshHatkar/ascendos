@@ -4720,3 +4720,6 @@ Purpose: wire /privacy to a read-only Phase 20 dashboard view model and UI using
 - `docs/phase-reports/PHASE_20Z_PRIVACY_EXPORT_CONNECTOR_FINAL_COMPLETION_REPORT.md` — final completion report.
 - `docs/qa/PHASE_20Z_PRIVACY_EXPORT_CONNECTOR_FINAL_SMOKE_CHECKLIST.md` — final manual smoke checklist.
 - `scripts/audit-phase-20z.mjs` — final Phase 20 audit gate.
+
+## Phase 20Z-D — Integration Gap Closure Plan
+- `docs/phase-reports/PHASE_20Z_D_INTEGRATION_GAP_CLOSURE_PLAN.md` — corrective integration hardening plan before Phase 21.

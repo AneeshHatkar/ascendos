@@ -5409,3 +5409,7 @@ Wired the existing /privacy route to a read-only Phase 20 dashboard view model a
 ## Phase 20Z — Final Privacy / Export / Connector Completion
 - Added final Phase 20 proof package, smoke checklist, and audit integration.
 - Confirmed Phase 20 closes without new database migrations, provider runtime calls, token storage, or deferred connector implementation.
+
+## Phase 20Z-D — Integration Gap Closure Plan
+- Added corrective pre-Phase-21 integration gap closure plan based on the whole-project interconnection reality audit.
+- Locked requirement that Phase 21 cannot proceed as visual polish until P0 wiring gaps are fixed or explicitly deferred.
