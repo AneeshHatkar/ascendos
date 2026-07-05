@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
 import { AuthenticatedDashboardShell } from "@/components/dashboard";
 import { CarnosVisualIdentityPanel } from "@/components/dashboard/carnos-visual-identity-panel";
-import { listAiActions, listChatMessages, listChatSessions } from "@/lib/repositories/core-read";
+import {
+  listAiActions,
+  listCarnosContextSnapshots,
+  listChatMessages,
+  listChatSessions,
+  listMemoryRetrievalEvents,
+  listMemoryUsageLogs,
+  listProjectMemoryStates,
+} from "@/lib/repositories";
 
 export const metadata: Metadata = {
   title: "Carnos | ascendOS",
@@ -35,8 +43,35 @@ export default function CarnosPage() {
           ? await listChatMessages(user.id, firstSessionId)
           : { data: [], error: null };
         const chatMessageRows = "data" in chatMessages && chatMessages.data ? chatMessages.data : [];
-        const aiActions = await listAiActions(user.id);
+        const [
+          aiActions,
+          carnosContextSnapshots,
+          projectMemoryStates,
+          memoryRetrievalEvents,
+          memoryUsageLogs,
+        ] = await Promise.all([
+          listAiActions(user.id),
+          listCarnosContextSnapshots(user.id, { limit: 25 }),
+          listProjectMemoryStates(user.id, { statuses: ["active", "paused"], limit: 25 }),
+          listMemoryRetrievalEvents(user.id, { used_by_carnos: true, limit: 25 }),
+          listMemoryUsageLogs(user.id, { used_in_carnos_response: true, limit: 25 }),
+        ]);
+
         const aiActionRows = "data" in aiActions && aiActions.data ? aiActions.data : [];
+        const carnosContextSnapshotRows =
+          "data" in carnosContextSnapshots && carnosContextSnapshots.data
+            ? carnosContextSnapshots.data
+            : [];
+        const projectMemoryStateRows =
+          "data" in projectMemoryStates && projectMemoryStates.data
+            ? projectMemoryStates.data
+            : [];
+        const memoryRetrievalEventRows =
+          "data" in memoryRetrievalEvents && memoryRetrievalEvents.data
+            ? memoryRetrievalEvents.data
+            : [];
+        const memoryUsageLogRows =
+          "data" in memoryUsageLogs && memoryUsageLogs.data ? memoryUsageLogs.data : [];
 
         return (
           <>
@@ -44,6 +79,10 @@ export default function CarnosPage() {
               Carnos chat sessions loaded: {chatSessionRows.length};
               Carnos chat messages loaded: {chatMessageRows.length};
               Carnos AI actions loaded: {aiActionRows.length}.
+              Carnos context snapshots loaded: {carnosContextSnapshotRows.length}.
+              Project memory states loaded: {projectMemoryStateRows.length}.
+              Carnos memory retrieval events loaded: {memoryRetrievalEventRows.length}.
+              Carnos memory usage logs loaded: {memoryUsageLogRows.length}.
               Phase 7 dashboard data summary loaded marker: getDashboardDataSummary.
             </p>
             <main

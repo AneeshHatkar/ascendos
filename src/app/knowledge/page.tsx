@@ -7,6 +7,9 @@ import {
 } from "@/components/dashboard";
 import { getLearningProjectDashboardDataSummary } from "@/lib/dashboard";
 import {
+  listKnowledgeItems,
+  listKnowledgeLinks,
+  listKnowledgeTags,
   listProjectLinks,
   listProjects,
   listSkillPaths,
@@ -25,12 +28,24 @@ export default function KnowledgePage() {
         description="Read-only knowledge alignment surface for learning and project source records. Full memory/RAG remains deferred."
       >
         {async ({ user }) => {
-          const [data, skillPaths, skills, projects, projectLinks] = await Promise.all([
+          const [
+            data,
+            skillPaths,
+            skills,
+            projects,
+            projectLinks,
+            knowledgeItems,
+            knowledgeTags,
+            knowledgeLinks,
+          ] = await Promise.all([
             getLearningProjectDashboardDataSummary(user.id),
             listSkillPaths(user.id, { limit: 100 }),
             listSkills(user.id, { limit: 100 }),
             listProjects(user.id, { limit: 100 }),
             listProjectLinks(user.id, { limit: 100 }),
+            listKnowledgeItems(user.id, { statuses: ["active"], limit: 100 }),
+            listKnowledgeTags(user.id, { limit: 100 }),
+            listKnowledgeLinks(user.id, { limit: 100 }),
           ]);
 
           return (
@@ -38,13 +53,27 @@ export default function KnowledgePage() {
               <KnowledgeVaultFoundationPanel />
               <RetrievalContractPanel />
               <EmbeddingBoundaryPanel />
+              <p className="sr-only">
+                Runtime knowledge vault rows loaded:
+                knowledge_items={knowledgeItems.data?.length ?? 0};
+                knowledge_tags={knowledgeTags.data?.length ?? 0};
+                knowledge_links={knowledgeLinks.data?.length ?? 0}.
+              </p>
               <KnowledgeVaultAlignmentV1
                 data={data}
                 skillPaths={skillPaths.data ?? []}
                 skills={skills.data ?? []}
                 projects={projects.data ?? []}
                 projectLinks={projectLinks.data ?? []}
-                readErrors={collectErrors([skillPaths, skills, projects, projectLinks])}
+                readErrors={collectErrors([
+                  skillPaths,
+                  skills,
+                  projects,
+                  projectLinks,
+                  knowledgeItems,
+                  knowledgeTags,
+                  knowledgeLinks,
+                ])}
               />
             </div>
           );

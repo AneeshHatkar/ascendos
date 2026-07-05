@@ -4402,3 +4402,195 @@ export type VoiceTranscriptInsert = Omit<VoiceTranscriptRow, "id" | "created_at"
 };
 
 export type VoiceTranscriptUpdate = Partial<VoiceTranscriptInsert>;
+
+// Phase 20Z-E memory/knowledge/Carnos SQL alignment aliases.
+// These tables exist in Supabase migrations 0024 and 0028 but are not represented
+// in the generated Tables aliases above yet. Keep these read-row shapes aligned
+// with the SQL migrations until the generated database type map is refreshed.
+
+export type MemoryKnowledgeJson = Record<string, unknown>;
+
+export interface CarnosContextSnapshotRow {
+  id: string;
+  user_id: string;
+  snapshot_title: string;
+  snapshot_reason: string;
+  context_pack_preview: MemoryKnowledgeJson;
+  included_memory_ids: string[];
+  excluded_memory_ids: string[];
+  token_budget_estimate: number;
+  status: "preview_only" | "used" | "archived";
+  source_route: string | null;
+  source_chat_message_id: string | null;
+  source_ai_action_id: string | null;
+  metadata: MemoryKnowledgeJson;
+  created_at: string;
+}
+
+export interface ProjectMemoryStateRow {
+  id: string;
+  user_id: string;
+  project_key: string;
+  project_name: string;
+  current_phase: string | null;
+  latest_commit: string | null;
+  latest_milestone: string | null;
+  next_step: string | null;
+  source_of_truth_ref: string | null;
+  state_summary: string;
+  status: "active" | "paused" | "archived" | "forgotten";
+  metadata: MemoryKnowledgeJson;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface SystemMemoryStateRow {
+  id: string;
+  user_id: string;
+  system_key: string;
+  system_name: string;
+  source_of_truth_rank: number;
+  state_summary: string;
+  status: "active" | "paused" | "archived" | "forgotten";
+  metadata: MemoryKnowledgeJson;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface KnowledgeItemRow {
+  id: string;
+  user_id: string;
+  title: string;
+  content: string;
+  knowledge_type:
+    | "note"
+    | "document_summary"
+    | "research_note"
+    | "project_note"
+    | "source_of_truth_note"
+    | "reference";
+  source_kind:
+    | "manual"
+    | "uploaded_document"
+    | "source_of_truth"
+    | "project_record"
+    | "research_record"
+    | "external_reference";
+  source_uri: string | null;
+  source_table: string | null;
+  source_record_id: string | null;
+  status: "active" | "archived" | "forgotten" | "blocked";
+  sensitivity: "low" | "medium" | "high" | "restricted";
+  metadata: MemoryKnowledgeJson;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface KnowledgeTagRow {
+  id: string;
+  user_id: string;
+  tag_name: string;
+  tag_scope:
+    | "knowledge"
+    | "memory"
+    | "project"
+    | "research"
+    | "career"
+    | "health"
+    | "grimoire"
+    | "system";
+  metadata: MemoryKnowledgeJson;
+  created_at: string;
+}
+
+export interface KnowledgeLinkRow {
+  id: string;
+  user_id: string;
+  knowledge_item_id: string;
+  knowledge_tag_id: string | null;
+  linked_table: string | null;
+  linked_record_id: string | null;
+  link_type:
+    | "tagged_as"
+    | "source"
+    | "derived_from"
+    | "related_context"
+    | "supports"
+    | "contradicts";
+  metadata: MemoryKnowledgeJson;
+  created_at: string;
+}
+
+export interface RetrievalLogRow {
+  id: string;
+  user_id: string;
+  retrieval_surface: string;
+  query_text: string | null;
+  retrieved_memory_ids: string[];
+  retrieved_knowledge_ids: string[];
+  blocked_memory_ids: string[];
+  retrieval_reason: string;
+  retrieval_mode: "preview_only" | "approved_memory_only" | "knowledge_only" | "disabled";
+  metadata: MemoryKnowledgeJson;
+  created_at: string;
+}
+
+export interface MemoryUsageLogRow {
+  id: string;
+  user_id: string;
+  memory_item_id: string | null;
+  knowledge_item_id: string | null;
+  usage_surface: string;
+  usage_reason: string;
+  used_in_context_pack: boolean;
+  used_in_carnos_response: boolean;
+  retrieval_log_id: string | null;
+  metadata: MemoryKnowledgeJson;
+  created_at: string;
+}
+
+export interface MemoryReviewQueueRow {
+  id: string;
+  user_id: string;
+  memory_candidate_id: string | null;
+  memory_item_id: string | null;
+  review_reason: string;
+  review_status: "pending_review" | "reviewed" | "snoozed" | "archived";
+  due_at: string | null;
+  reviewed_at: string | null;
+  metadata: MemoryKnowledgeJson;
+  created_at: string;
+}
+
+export interface MemoryRetrievalEventRow {
+  id: string;
+  user_id: string;
+  retrieval_log_id: string | null;
+  retrieval_surface: string;
+  retrieval_reason: string;
+  retrieval_mode:
+    | "disabled"
+    | "preview_only"
+    | "approved_memory_only"
+    | "knowledge_only"
+    | "keyword_only"
+    | "semantic_deferred";
+  provider_status:
+    | "disabled"
+    | "noop"
+    | "runtime_deferred"
+    | "keyword_only"
+    | "embedding_ready"
+    | "embedding_failed";
+  used_by_carnos: boolean;
+  retrieved_memory_ids: string[];
+  retrieved_knowledge_ids: string[];
+  blocked_memory_ids: string[];
+  excluded_reason_summary: string | null;
+  sensitivity_summary: string | null;
+  context_budget: number | null;
+  result_count: number;
+  retrieval_explanation: string;
+  metadata: MemoryKnowledgeJson;
+  created_at: string;
+}
