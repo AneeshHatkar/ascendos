@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 
+import { OfflineSyncStatusPill } from "@/components/storage/offline-sync-status-pill";
 import { AuthStatus } from "./auth-status";
 
 type AppTopbarProps = {
@@ -22,12 +23,16 @@ const statusItems = [
     value: "scoped",
     tone: "neutral",
   },
-  {
-    label: "Offline",
-    value: "21K pending",
-    tone: "warning",
-  },
 ] as const;
+
+type StatusTone = (typeof statusItems)[number]["tone"];
+
+function statusToneClass(tone: StatusTone) {
+  if (tone === "success") return "text-emerald-300";
+  if (tone === "info") return "text-cyan-300";
+
+  return "text-white/65";
+}
 
 export function AppTopbar({ menuSlot }: AppTopbarProps) {
   return (
@@ -54,29 +59,19 @@ export function AppTopbar({ menuSlot }: AppTopbarProps) {
             aria-label="Global app status"
           >
             {statusItems.map((item) => (
-              <div
-                key={item.label}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] px-3 py-2"
-              >
-                <p className="text-[10px] uppercase tracking-[0.2em] text-white/35">
-                  {item.label}
-                </p>
-                <p
-                  className={[
-                    "mt-1 text-xs font-semibold",
-                    item.tone === "success"
-                      ? "text-emerald-300"
-                      : item.tone === "warning"
-                        ? "text-amber-300"
-                        : item.tone === "info"
-                          ? "text-cyan-300"
-                          : "text-white/65",
-                  ].join(" ")}
+                <div
+                  key={item.label}
+                  className="rounded-2xl border border-white/10 bg-white/[0.03] px-3 py-2"
                 >
-                  {item.value}
-                </p>
-              </div>
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-white/35">
+                    {item.label}
+                  </p>
+                  <p className={`mt-1 text-xs font-semibold ${statusToneClass(item.tone)}`}>
+                    {item.value}
+                  </p>
+                </div>
             ))}
+            <OfflineSyncStatusPill />
           </div>
 
           <AuthStatus />

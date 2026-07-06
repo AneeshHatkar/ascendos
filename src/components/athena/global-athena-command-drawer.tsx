@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 import { DASHBOARD_REGISTRY } from "@/lib/dashboard-registry";
 import { ROUTE_GROUPS, type CanonicalRoute } from "@/lib/routes";
+import { queueOfflineSafeCard } from "@/lib/storage/offline-sync";
 import type {
   ProposedActionContract,
   ProposedActionDomain,
@@ -318,6 +319,39 @@ export function GlobalAthenaCommandDrawer() {
     });
   }
 
+  async function queueOfflineSafeCardDraft() {
+    const parsed = parseJsonAction(draftJson);
+
+    if (!parsed) {
+      setState({
+        status: "error",
+        message: "Safe-card JSON is invalid. Fix it before queueing offline.",
+      });
+      return;
+    }
+
+    try {
+      await queueOfflineSafeCard({
+        proposedAction: parsed,
+        sourceText: captureText,
+        routeContext: pathname,
+      });
+      setState({
+        status: "saved",
+        message:
+          "Safe card queued in IndexedDB for later sync. No dashboard write happened and no server call was required.",
+      });
+    } catch (error) {
+      setState({
+        status: "error",
+        message:
+          error instanceof Error
+            ? error.message
+            : "Could not queue safe card offline.",
+      });
+    }
+  }
+
   async function createPendingSafeCard() {
     const parsed = parseJsonAction(draftJson);
 
@@ -526,14 +560,23 @@ export function GlobalAthenaCommandDrawer() {
                         className="mt-2 min-h-64 w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 font-mono text-xs leading-5 text-slate-200 outline-none focus:border-cyan-300/60"
                         spellCheck={false}
                       />
-                      <button
-                        type="button"
-                        onClick={() => void createPendingSafeCard()}
-                        disabled={state.status === "saving"}
-                        className="mt-3 rounded-full border border-emerald-300/40 bg-emerald-300/10 px-4 py-2 text-sm font-semibold text-emerald-100 hover:bg-emerald-300/20 disabled:cursor-not-allowed disabled:opacity-50"
-                      >
-                        Create pending update
-                      </button>
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        <button
+                          type="button"
+                          onClick={() => void createPendingSafeCard()}
+                          disabled={state.status === "saving"}
+                          className="rounded-full border border-emerald-300/40 bg-emerald-300/10 px-4 py-2 text-sm font-semibold text-emerald-100 hover:bg-emerald-300/20 disabled:cursor-not-allowed disabled:opacity-50"
+                        >
+                          Create pending update
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => void queueOfflineSafeCardDraft()}
+                          className="rounded-full border border-orange-300/40 bg-orange-300/10 px-4 py-2 text-sm font-semibold text-orange-100 hover:bg-orange-300/20"
+                        >
+                          Queue offline
+                        </button>
+                      </div>
                     </div>
                   ) : null}
                 </section>
