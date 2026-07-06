@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { ChatMessageRow, ChatSessionRow } from "@/types/database";
 import type { AiProviderPublicStatus } from "@/lib/ai";
+import { AthenaSafeCardPanel } from "./athena-safe-card-panel";
 
 type AthenaChatPanelProps = {
   readonly initialSessions: ChatSessionRow[];
@@ -93,6 +94,11 @@ export function AthenaChatPanel({
           new Date(a.created_at).getTime() - new Date(b.created_at).getTime(),
       ),
     [messages],
+  );
+
+  const latestUserMessage = useMemo(
+    () => [...orderedMessages].reverse().find((message) => message.role === "user") ?? null,
+    [orderedMessages],
   );
 
   async function sendMessage() {
@@ -316,6 +322,14 @@ export function AthenaChatPanel({
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="mt-5">
+        <AthenaSafeCardPanel
+          sourceChatMessageId={latestUserMessage?.id ?? null}
+          sourceChatSessionId={activeSessionId}
+          sourceText={latestUserMessage?.content ?? ""}
+        />
       </div>
 
       <div className="mt-5 rounded-2xl border border-amber-300/15 bg-amber-950/15 p-4 text-sm leading-6 text-amber-100/80">
