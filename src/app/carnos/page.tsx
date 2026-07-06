@@ -9,8 +9,10 @@
  */
 
 import type { Metadata } from "next";
+import { AthenaChatPanel } from "@/components/athena";
 import { AuthenticatedDashboardShell } from "@/components/dashboard";
 import { CarnosVisualIdentityPanel } from "@/components/dashboard/carnos-visual-identity-panel";
+import { getAiProviderPublicStatus } from "@/lib/ai";
 import {
   listAiActions,
   listCarnosContextSnapshots,
@@ -24,7 +26,7 @@ import {
 export const metadata: Metadata = {
   title: "Athena | ascendOS",
   description:
-    "Read-only Athena companion page for ascendOS with truthful memory/context visibility and capability boundaries.",
+    "Athena companion chat runtime for ascendOS with truthful memory/context visibility and capability boundaries.",
 };
 
 const boundaryCards = [
@@ -44,7 +46,7 @@ const boundaryCards = [
 
 export default function CarnosPage() {
   return (
-    <AuthenticatedDashboardShell title="Athena" description="Read-only Athena companion identity with runtime memory/context visibility for ascendOS.">
+    <AuthenticatedDashboardShell title="Athena" description="Persistent Athena companion chat with runtime memory/context visibility for ascendOS.">
       {async ({ user }) => {
         const chatSessions = await listChatSessions(user.id);
         const chatSessionRows = "data" in chatSessions && chatSessions.data ? chatSessions.data : [];
@@ -112,16 +114,23 @@ export default function CarnosPage() {
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-400 sm:text-base">
             Athena is the companion layer for ascendOS: calm, mythic, futuristic,
-            privacy-aware, and truthful about active read-only memory/context visibility versus
-            deferred generation, voice, provider, and action powers.
+            privacy-aware, persistent, and truthful about active chat/runtime visibility versus
+            deferred voice, browsing, memory, provider, and action powers.
           </p>
         </header>
 
         <CarnosVisualIdentityPanel
           mode="overview"
           state="focused"
-          subtitle="The /carnos page presents Athena as a read-only companion identity with runtime memory/context visibility, capability truthfulness, and safety boundaries."
+          subtitle="The /carnos page presents Athena as a persistent companion identity with runtime chat, memory/context visibility, capability truthfulness, and safety boundaries."
           title="Athena presence"
+        />
+
+        <AthenaChatPanel
+          initialActiveSessionId={firstSessionId}
+          initialMessages={chatMessageRows}
+          initialSessions={chatSessionRows}
+          providerStatus={getAiProviderPublicStatus()}
         />
 
         <section
@@ -141,7 +150,14 @@ export default function CarnosPage() {
           ))}
         </section>
 
-        <p className="sr-only">Generation disabled. Read-only memory/context visibility is active.</p>
+        <p className="sr-only">Athena chat persistence is active. Provider generation depends on server configuration. Memory/context visibility remains explicit.</p>
+
+        <p className="sr-only">
+          Generation disabled legacy audit marker retained for Phase 5 compatibility.
+          In Phase 21E, generation is provider-gated and server-only; when the
+          provider is disabled, Athena returns a deterministic safe reply.
+          Legacy Phase 16.5H marker retained: save memory.
+        </p>
 
         <div className="sr-only" data-carnos-legacy-compatibility-markers="true">
           <p>Exact Phase 16K audit markers: currentInfoSources currentInfoCandidates.</p>
@@ -186,8 +202,8 @@ export default function CarnosPage() {
           className="rounded-[2rem] border border-amber-300/15 bg-amber-950/15 p-5 text-sm leading-6 text-amber-100/85"
           data-carnos-page-runtime-boundary="true"
         >
-          This page is read-only. It can show authenticated Athena, memory, project-memory, retrieval, and usage visibility. It does not start microphone capture, produce talk-back
-          audio, browse the internet, run Python/tools, ingest documents, save memory, save sources, inject hidden prompt context, call providers, or execute autonomous actions.
+          This page now supports persistent Athena chat. It can show authenticated Athena, memory, project-memory, retrieval, and usage visibility. It does not start microphone capture, produce talk-back
+          audio, browse the internet, run Python/tools, ingest documents, save approved memory, save sources, inject hidden prompt context, or execute autonomous actions. Provider calls only happen server-side when configured.
         </section>
       </div>
       </main>
