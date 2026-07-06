@@ -11,6 +11,7 @@ import {
 } from "@/components/dashboard";
 import { AiProviderStatusPanel } from "@/components/ai/ai-provider-status-panel";
 import { ProfileSummaryCard } from "@/components/profile/profile-summary-card";
+import { Phase21JTrustSettingsPanel } from "@/components/privacy/phase21j-trust-settings-panel";
 import { getSettingsPrivacyDashboardDataSummary } from "@/lib/dashboard";
 import { listAppSettings, listPrivacySettings } from "@/lib/repositories";
 
@@ -75,6 +76,8 @@ export default function SettingsPage() {
             <ProfileSummaryCard />
 
             <AiProviderStatusPanel />
+
+            <Phase21JTrustSettingsPanel surface="settings" />
 
             <section className="grid gap-4 md:grid-cols-2">
               {settingsSections.map((section) => (

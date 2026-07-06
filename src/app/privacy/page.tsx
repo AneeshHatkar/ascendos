@@ -1,5 +1,6 @@
 import { AuthenticatedDashboardShell } from "@/components/dashboard";
 import { PrivacyDashboardUi } from "@/components/privacy/privacy-dashboard-ui";
+import { Phase21JTrustSettingsPanel } from "@/components/privacy/phase21j-trust-settings-panel";
 import { getSettingsPrivacyDashboardDataSummary } from "@/lib/dashboard";
 import { buildPrivacyDashboardViewModel } from "@/lib/privacy/privacy-dashboard-view-model";
 import {
@@ -74,6 +75,10 @@ export default function PrivacyPage() {
               appSettings={appSettings.data ?? []}
               privacySettings={privacySettings.data ?? []}
             />
+
+            <div className="mt-8">
+              <Phase21JTrustSettingsPanel surface="privacy" />
+            </div>
           </>
         );
       }}
