@@ -1,5 +1,6 @@
 import { DashboardCard } from "@/components/dashboard/dashboard-card";
 import { AppShell } from "@/components/layout/app-shell";
+import { Phase21MOnboardingRitualPolishPanel } from "@/components/polish/phase21m-onboarding-ritual-polish-panel";
 import { DASHBOARD_REGISTRY } from "@/lib/dashboard-registry";
 import { CANONICAL_ROUTES } from "@/lib/routes";
 
@@ -64,6 +65,10 @@ export default function Home() {
               ))}
             </div>
           </section>
+        </div>
+
+        <div className="mt-8">
+          <Phase21MOnboardingRitualPolishPanel surface="home" />
         </div>
       </section>
     </AppShell>

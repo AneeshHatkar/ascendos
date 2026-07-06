@@ -62,7 +62,7 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
                     onClick={onNavigate}
                     aria-current={active ? "page" : undefined}
                     className={[
-                      "block rounded-2xl border px-4 py-3 transition",
+                      "block rounded-2xl border px-4 py-3 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/80 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950",
                       active
                         ? "border-cyan-300/50 bg-cyan-300/10 shadow-[0_0_24px_rgba(103,232,249,0.08)]"
                         : "border-white/10 bg-white/[0.03] hover:bg-white/[0.07]",
@@ -107,7 +107,7 @@ export function AppSidebar({ mobileOpen = false, onClose }: AppSidebarProps) {
       </aside>
 
       {mobileOpen ? (
-        <div className="fixed inset-0 z-50 lg:hidden" role="dialog" aria-modal="true">
+        <div id="ascendos-mobile-navigation" className="fixed inset-0 z-50 lg:hidden" role="dialog" aria-modal="true" aria-label="Mobile navigation">
           <button
             type="button"
             aria-label="Close navigation"
@@ -120,7 +120,7 @@ export function AppSidebar({ mobileOpen = false, onClose }: AppSidebarProps) {
               <button
                 type="button"
                 onClick={onClose}
-                className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/70"
+                className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/70 transition hover:bg-white/[0.07] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/80 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
               >
                 Close
               </button>

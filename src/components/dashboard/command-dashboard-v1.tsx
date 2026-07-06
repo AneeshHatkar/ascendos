@@ -13,6 +13,7 @@ import {
   type DashboardDataResult,
 } from "@/lib/dashboard";
 import { CarnosLightweightCompanionPanel } from "./carnos-lightweight-companion-panel";
+import { Phase21MOnboardingRitualPolishPanel } from "@/components/polish/phase21m-onboarding-ritual-polish-panel";
 
 interface CommandDashboardV1Props {
   data?: DashboardDataResult;
@@ -144,6 +145,8 @@ export function CommandDashboardV1({
         title="Manual command capture"
         description="Capture a task, goal, or proof item from Command as a pending proposal. This keeps Command usable before Athena runtime and before any direct dashboard write forms are enabled."
       />
+
+      <Phase21MOnboardingRitualPolishPanel surface="command" />
 
       <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
         {[
