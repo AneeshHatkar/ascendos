@@ -4,6 +4,7 @@ import {
   OperatingDashboardGrid,
   SectionCard,
   StatusPill,
+  ManualDashboardActivationPanel,
 } from "@/components/dashboard";
 import { CrossDashboardLinks } from "@/components/dashboard/cross-dashboard-links";
 import {
@@ -136,6 +137,13 @@ export function CommandDashboardV1({
       </section>
 
       <CrossDashboardLinks activeRoute="/command" />
+
+      <ManualDashboardActivationPanel
+        surface="/command"
+        defaultDomain="general"
+        title="Manual command capture"
+        description="Capture a task, goal, or proof item from Command as a pending proposal. This keeps Command usable before Athena runtime and before any direct dashboard write forms are enabled."
+      />
 
       <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
         {[

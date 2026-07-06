@@ -1,5 +1,6 @@
 import {
   AuthenticatedDashboardShell,
+  ManualDashboardActivationPanel,
   ProjectBuilderDashboardV1,
 } from "@/components/dashboard";
 import { getLearningProjectDashboardDataSummary } from "@/lib/dashboard";
@@ -43,7 +44,15 @@ export default function ProjectsPage() {
           ]);
 
           return (
-            <ProjectBuilderDashboardV1
+            <>
+              <ManualDashboardActivationPanel
+                surface="/projects"
+                defaultDomain="projects"
+                title="Manual project capture"
+                description="Capture project tasks, shipping goals, or project proof as pending proposals. This does not directly create projects, milestones, bugs, tests, releases, or links."
+              />
+
+              <ProjectBuilderDashboardV1
               data={data}
               projects={projects.data ?? []}
               milestones={milestones.data ?? []}
@@ -60,6 +69,7 @@ export default function ProjectsPage() {
                 links,
               ])}
             />
+            </>
           );
         }}
       </AuthenticatedDashboardShell>

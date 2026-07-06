@@ -5,6 +5,7 @@ import {
   AuthenticatedDashboardShell,
   DomainReadPage,
   HealthBodyDashboardV1,
+  ManualDashboardActivationPanel,
 } from "@/components/dashboard";
 
 const PHASE_5_DOMAIN_READ_PAGE_COMPATIBILITY_MARKER = {
@@ -23,7 +24,18 @@ export default function BodyPage() {
         title="Body Dashboard"
         description="Read-only health/body surface for body, training, nutrition, supplements, sleep, energy, emotion, haircare, skincare, and product records."
       >
-        {async ({ user }) => <HealthBodyDashboardV1 userId={user.id} />}
+        {async ({ user }) => (
+          <>
+            <ManualDashboardActivationPanel
+              surface="/body"
+              defaultDomain="body"
+              title="Manual body capture"
+              description="Capture training tasks, body goals, or health proof as pending proposals. This does not directly create workout, nutrition, supplement, sleep, emotion, hair, or skincare records."
+            />
+
+            <HealthBodyDashboardV1 userId={user.id} />
+          </>
+        )}
       </AuthenticatedDashboardShell>
     </main>
   );

@@ -5,6 +5,7 @@ import {
   AuthenticatedDashboardShell,
   CareerCurrentInfoSourcePanel,
   CareerDashboardV1,
+  ManualDashboardActivationPanel,
 } from "@/components/dashboard";
 import {
   getCareerDashboardDataSummary,
@@ -90,6 +91,13 @@ export default function CareerPage() {
               data={currentInfoData}
               sources={currentInfoSources.data}
               candidates={currentInfoCandidates.data}
+            />
+
+            <ManualDashboardActivationPanel
+              surface="/career"
+              defaultDomain="career"
+              title="Manual career capture"
+              description="Capture job-search tasks, career goals, or career proof as pending proposals. This does not directly create applications, contacts, interviews, referrals, or resume records."
             />
 
             <CareerDashboardV1

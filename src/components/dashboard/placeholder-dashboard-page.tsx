@@ -1,3 +1,4 @@
+import { ManualDashboardActivationPanel } from "@/components/dashboard";
 import { AppShell } from "@/components/layout/app-shell";
 import type { PlaceholderRouteDecision } from "@/lib/placeholder-route-decisions";
 
@@ -10,7 +11,7 @@ export function PlaceholderDashboardPage({
 }: PlaceholderDashboardPageProps) {
   return (
     <AppShell>
-      <section className="mx-auto max-w-5xl rounded-[2rem] border border-white/10 bg-white/[0.03] p-8">
+      <section className="mx-auto max-w-5xl space-y-6 rounded-[2rem] border border-white/10 bg-white/[0.03] p-8">
         <p className="text-sm uppercase tracking-[0.35em] text-cyan-200/70">
           Phase 13.5F intentional placeholder route
         </p>
@@ -69,6 +70,12 @@ export function PlaceholderDashboardPage({
             </ul>
           </div>
         </div>
+
+        <ManualDashboardActivationPanel
+          surface={decision.title}
+          title={`Manual capture for ${decision.title}`}
+          description="This deferred dashboard can still capture safe manual task, goal, or proof proposals without pretending the full domain system is implemented."
+        />
       </section>
     </AppShell>
   );

@@ -2,6 +2,7 @@ import {
   AuthenticatedDashboardShell,
   DomainReadPage,
   LearningAcademyDashboardV1,
+  ManualDashboardActivationPanel,
 } from "@/components/dashboard";
 import { getLearningProjectDashboardDataSummary } from "@/lib/dashboard";
 import {
@@ -53,7 +54,15 @@ export default function LearningPage() {
           ]);
 
           return (
-            <LearningAcademyDashboardV1
+            <>
+              <ManualDashboardActivationPanel
+                surface="/learning"
+                defaultDomain="learning"
+                title="Manual learning capture"
+                description="Capture study tasks, learning goals, or mastery proof as pending proposals. This does not directly create skills, sessions, quizzes, or progress records."
+              />
+
+              <LearningAcademyDashboardV1
               data={data}
               skillPaths={skillPaths.data ?? []}
               skills={skills.data ?? []}
@@ -70,6 +79,7 @@ export default function LearningPage() {
                 skillProgress,
               ])}
             />
+            </>
           );
         }}
       </AuthenticatedDashboardShell>

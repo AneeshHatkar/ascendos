@@ -11,6 +11,7 @@ import {
   ResearchStateBoundaryPanel,
   ResearchSummaryPanel,
   SectionCard,
+  ManualDashboardActivationPanel,
   ResearchCurrentInfoSourceServerPanel,
 } from "@/components/dashboard";
 import { getDashboardCardsForSurface, getResearchStanfordDashboardDataSummary } from "@/lib/dashboard";
@@ -85,6 +86,13 @@ export default function ResearchLabPage() {
 
           return (
             <>
+              <ManualDashboardActivationPanel
+                surface="/research-lab"
+                defaultDomain="research"
+                title="Manual research capture"
+                description="Capture research tasks, research goals, or proof as pending proposals. This does not directly create papers, citations, experiments, submissions, or outreach."
+              />
+
               <ResearchCurrentInfoSourceServerPanel userId={user.id} surfaceLabel="Research lab" />
 
               <ResearchCrossDashboardLinks activeRoute="/research-lab" />

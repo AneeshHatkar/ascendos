@@ -7,6 +7,7 @@ export { MetricTile } from "./metric-tile";
 export { SectionCard } from "./section-card";
 export { StatusPill } from "./status-pill";
 export * from "./dashboard-state";
+export * from "../manual/manual-dashboard-activation-panel";
 export * from "./operating-dashboard-card";
 export * from "./operating-dashboard-grid";
 export * from "./command-dashboard-v1";
