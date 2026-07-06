@@ -28,13 +28,13 @@ export const DASHBOARD_REGISTRY: DashboardRegistryItem[] = [
     title: "Command",
     route: "/command",
     domain: "command",
-    description: "Daily operating center for mission, proof actions, risks, and Carnos correction.",
+    description: "Daily operating center for mission, proof actions, risks, and Athena-guided correction.",
   },
   {
-    title: "Carnos",
+    title: "Athena",
     route: "/carnos",
     domain: "ai",
-    description: "Text and voice AI companion interface with confirmation-based updates.",
+    description: "Athena companion interface with confirmation-based updates and truthful capability boundaries.",
   },
   {
     title: "Calendar",
