@@ -6,6 +6,7 @@ import type { ChatMessageRow, ChatSessionRow } from "@/types/database";
 import type { AiProviderPublicStatus } from "@/lib/ai";
 import { AthenaSafeCardPanel } from "./athena-safe-card-panel";
 import { AthenaMemoryReviewPanel } from "./athena-memory-review-panel";
+import { AthenaVoiceCurrentInfoPanel } from "./athena-voice-current-info-panel";
 
 type AthenaChatPanelProps = {
   readonly initialSessions: ChatSessionRow[];
@@ -102,6 +103,14 @@ export function AthenaChatPanel({
     [orderedMessages],
   );
 
+  const latestAssistantMessage = useMemo(
+    () =>
+      [...orderedMessages]
+        .reverse()
+        .find((message) => message.role === "assistant") ?? null,
+    [orderedMessages],
+  );
+
   async function sendMessage() {
     const trimmed = content.trim();
 
@@ -171,7 +180,7 @@ export function AthenaChatPanel({
           <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-400">
             Athena now saves user and assistant messages in chat history. Provider
             calls run only on the server when configured. Memory, dashboard writes,
-            tools, browsing, and voice remain explicit future/confirmation-gated boundaries.
+            tools, browsing, and voice remain explicit confirmation-gated boundaries with honest disabled states.
           </p>
         </div>
 
@@ -326,6 +335,14 @@ export function AthenaChatPanel({
       </div>
 
       <div className="mt-5">
+        <AthenaVoiceCurrentInfoPanel
+          latestAssistantText={latestAssistantMessage?.content ?? ""}
+          onUseTranscript={(text) => setContent(text)}
+          onUseCurrentInfoPrompt={(text) => setContent(text)}
+        />
+      </div>
+
+      <div className="mt-5">
         <AthenaSafeCardPanel
           sourceChatMessageId={latestUserMessage?.id ?? null}
           sourceChatSessionId={activeSessionId}
@@ -343,7 +360,7 @@ export function AthenaChatPanel({
 
       <div className="mt-5 rounded-2xl border border-amber-300/15 bg-amber-950/15 p-4 text-sm leading-6 text-amber-100/80">
         Runtime truth: Athena chat persistence is active. Direct dashboard writes,
-        web browsing, voice capture, and tool execution are
+        web browsing, voice capture, current-info lookup, and tool execution are
         still blocked unless a later confirmation-gated flow explicitly enables them. Approved-memory context is user-controlled, visible, and limited to approved/edited retrieval-enabled memory.
       </div>
     </section>
