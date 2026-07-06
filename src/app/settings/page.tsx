@@ -12,6 +12,7 @@ import {
 import { AiProviderStatusPanel } from "@/components/ai/ai-provider-status-panel";
 import { ProfileSummaryCard } from "@/components/profile/profile-summary-card";
 import { Phase21JTrustSettingsPanel } from "@/components/privacy/phase21j-trust-settings-panel";
+import { Phase21LBackupRestorePanel } from "@/components/backup/phase21l-backup-restore-panel";
 import { getSettingsPrivacyDashboardDataSummary } from "@/lib/dashboard";
 import { listAppSettings, listPrivacySettings } from "@/lib/repositories";
 
@@ -78,6 +79,8 @@ export default function SettingsPage() {
             <AiProviderStatusPanel />
 
             <Phase21JTrustSettingsPanel surface="settings" />
+
+            <Phase21LBackupRestorePanel />
 
             <section className="grid gap-4 md:grid-cols-2">
               {settingsSections.map((section) => (

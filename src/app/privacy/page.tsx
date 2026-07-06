@@ -1,6 +1,7 @@
 import { AuthenticatedDashboardShell } from "@/components/dashboard";
 import { PrivacyDashboardUi } from "@/components/privacy/privacy-dashboard-ui";
 import { Phase21JTrustSettingsPanel } from "@/components/privacy/phase21j-trust-settings-panel";
+import { Phase21LBackupRestorePanel } from "@/components/backup/phase21l-backup-restore-panel";
 import { getSettingsPrivacyDashboardDataSummary } from "@/lib/dashboard";
 import { buildPrivacyDashboardViewModel } from "@/lib/privacy/privacy-dashboard-view-model";
 import {
@@ -78,6 +79,10 @@ export default function PrivacyPage() {
 
             <div className="mt-8">
               <Phase21JTrustSettingsPanel surface="privacy" />
+            </div>
+
+            <div className="mt-8">
+              <Phase21LBackupRestorePanel />
             </div>
           </>
         );
