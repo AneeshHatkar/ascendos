@@ -21,6 +21,9 @@ export type AthenaRuntimeReply = {
     readonly recentMessageCount: number;
     readonly includedRoles: readonly string[];
     readonly excludedSignals: readonly string[];
+    readonly approvedMemoryIds: readonly string[];
+    readonly blockedMemoryIds: readonly string[];
+    readonly memoryRetrievalExplanation: string;
   };
   readonly usage: {
     readonly estimatedInputTokens: number;
@@ -183,12 +186,18 @@ function createBaseReply({
   recentMessages,
   outputTokens = null,
   providerResponseId = null,
+  approvedMemoryIds = [],
+  blockedMemoryIds = [],
+  memoryRetrievalExplanation = "No approved long-term memory was included.",
 }: {
   mode: AthenaRuntimeMode;
   content: string;
   recentMessages: readonly ChatMessageRow[];
   outputTokens?: number | null;
   providerResponseId?: string | null;
+  approvedMemoryIds?: readonly string[];
+  blockedMemoryIds?: readonly string[];
+  memoryRetrievalExplanation?: string;
 }): AthenaRuntimeReply {
   const providerStatus = getAiProviderPublicStatus();
 
@@ -205,13 +214,17 @@ function createBaseReply({
       recentMessageCount: recentMessages.length,
       includedRoles: [...new Set(recentMessages.map((message) => message.role))],
       excludedSignals: [
-        "approved memory injection",
         "web/current-info browsing",
         "connector secrets",
         "voice audio",
         "private blocked data",
         "automatic tools",
+        "unapproved memory candidates",
+        "forgotten/restricted memory",
       ],
+      approvedMemoryIds: [...approvedMemoryIds],
+      blockedMemoryIds: [...blockedMemoryIds],
+      memoryRetrievalExplanation,
     },
     usage: {
       estimatedInputTokens: estimateTokens(buildVisibleConversation(recentMessages)),
@@ -225,15 +238,29 @@ function createBaseReply({
 export async function generateAthenaRuntimeReply({
   latestUserMessage,
   recentMessages,
+  approvedMemoryContextText = "",
+  approvedMemoryIds = [],
+  blockedMemoryIds = [],
+  memoryRetrievalExplanation = "No approved long-term memory was included.",
 }: {
   latestUserMessage: string;
   recentMessages: readonly ChatMessageRow[];
+  approvedMemoryContextText?: string;
+  approvedMemoryIds?: readonly string[];
+  blockedMemoryIds?: readonly string[];
+  memoryRetrievalExplanation?: string;
 }): Promise<AthenaRuntimeReply> {
   const providerStatus = getAiProviderPublicStatus();
   const visibleConversation = buildVisibleConversation(recentMessages);
   const input = [
     "Visible ascendOS conversation context:",
     visibleConversation || "No previous visible messages.",
+    "",
+    "Approved long-term memory context visible to the user:",
+    approvedMemoryContextText || "No approved long-term memory included.",
+    "",
+    "Memory retrieval transparency:",
+    memoryRetrievalExplanation,
     "",
     "Latest user message:",
     latestUserMessage,
@@ -261,6 +288,9 @@ export async function generateAthenaRuntimeReply({
       content: DISABLED_REPLY,
       recentMessages,
       outputTokens: estimateTokens(DISABLED_REPLY),
+      approvedMemoryIds,
+      blockedMemoryIds,
+      memoryRetrievalExplanation,
     });
   }
 
@@ -270,6 +300,9 @@ export async function generateAthenaRuntimeReply({
       content: MISSING_KEY_REPLY,
       recentMessages,
       outputTokens: estimateTokens(MISSING_KEY_REPLY),
+      approvedMemoryIds,
+      blockedMemoryIds,
+      memoryRetrievalExplanation,
     });
   }
 
@@ -279,6 +312,9 @@ export async function generateAthenaRuntimeReply({
       content: PROVIDER_ERROR_REPLY,
       recentMessages,
       outputTokens: estimateTokens(PROVIDER_ERROR_REPLY),
+      approvedMemoryIds,
+      blockedMemoryIds,
+      memoryRetrievalExplanation,
     });
   }
 
@@ -295,6 +331,9 @@ export async function generateAthenaRuntimeReply({
       recentMessages,
       outputTokens: estimateTokens(result.outputText),
       providerResponseId: result.id,
+      approvedMemoryIds,
+      blockedMemoryIds,
+      memoryRetrievalExplanation,
     });
   } catch {
     return createBaseReply({
@@ -302,6 +341,9 @@ export async function generateAthenaRuntimeReply({
       content: PROVIDER_ERROR_REPLY,
       recentMessages,
       outputTokens: estimateTokens(PROVIDER_ERROR_REPLY),
+      approvedMemoryIds,
+      blockedMemoryIds,
+      memoryRetrievalExplanation,
     });
   }
 }

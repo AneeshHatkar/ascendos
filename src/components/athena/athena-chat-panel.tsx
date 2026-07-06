@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import type { ChatMessageRow, ChatSessionRow } from "@/types/database";
 import type { AiProviderPublicStatus } from "@/lib/ai";
 import { AthenaSafeCardPanel } from "./athena-safe-card-panel";
+import { AthenaMemoryReviewPanel } from "./athena-memory-review-panel";
 
 type AthenaChatPanelProps = {
   readonly initialSessions: ChatSessionRow[];
@@ -332,10 +333,18 @@ export function AthenaChatPanel({
         />
       </div>
 
+      <div className="mt-5">
+        <AthenaMemoryReviewPanel
+          activeSessionId={activeSessionId}
+          latestUserMessageId={latestUserMessage?.id ?? null}
+          latestUserMessageText={latestUserMessage?.content ?? ""}
+        />
+      </div>
+
       <div className="mt-5 rounded-2xl border border-amber-300/15 bg-amber-950/15 p-4 text-sm leading-6 text-amber-100/80">
         Runtime truth: Athena chat persistence is active. Direct dashboard writes,
-        approved-memory changes, web browsing, voice capture, and tool execution are
-        still blocked unless a later confirmation-gated flow explicitly enables them.
+        web browsing, voice capture, and tool execution are
+        still blocked unless a later confirmation-gated flow explicitly enables them. Approved-memory context is user-controlled, visible, and limited to approved/edited retrieval-enabled memory.
       </div>
     </section>
   );

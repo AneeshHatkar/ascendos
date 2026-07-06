@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-import { generateAthenaRuntimeReply } from "@/lib/ai";
+import { buildAthenaApprovedMemoryContext, generateAthenaRuntimeReply } from "@/lib/ai";
 import { requireCurrentUser } from "@/lib/auth/session";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
@@ -162,9 +162,20 @@ export async function POST(request: Request) {
     );
   }
 
+  const memoryContext = await buildAthenaApprovedMemoryContext({
+    supabase,
+    user_id: user.id,
+    query: content,
+    source_chat_session_id: sessionId,
+  });
+
   const athenaReply = await generateAthenaRuntimeReply({
     latestUserMessage: content,
     recentMessages: recentMessages ?? [userMessage],
+    approvedMemoryContextText: memoryContext.contextText,
+    approvedMemoryIds: memoryContext.retrievedMemoryIds,
+    blockedMemoryIds: memoryContext.blockedMemoryIds,
+    memoryRetrievalExplanation: memoryContext.explanation,
   });
 
   const assistantMetadata = {
@@ -184,6 +195,9 @@ export async function POST(request: Request) {
       recentMessageCount: athenaReply.contextSummary.recentMessageCount,
       includedRoles: [...athenaReply.contextSummary.includedRoles],
       excludedSignals: [...athenaReply.contextSummary.excludedSignals],
+      approvedMemoryIds: [...athenaReply.contextSummary.approvedMemoryIds],
+      blockedMemoryIds: [...athenaReply.contextSummary.blockedMemoryIds],
+      memoryRetrievalExplanation: athenaReply.contextSummary.memoryRetrievalExplanation,
     },
     usage: {
       estimatedInputTokens: athenaReply.usage.estimatedInputTokens,
@@ -242,6 +256,12 @@ export async function POST(request: Request) {
       runtime_mode: athenaReply.mode,
       provider_status: athenaReply.providerStatus,
       context_summary: athenaReply.contextSummary,
+      memory_context: {
+        retrieved_memory_ids: memoryContext.retrievedMemoryIds,
+        blocked_memory_ids: memoryContext.blockedMemoryIds,
+        retrieval_explanation: memoryContext.explanation,
+        result_count: memoryContext.resultCount,
+      },
       writes_performed: athenaReply.writesPerformed,
       automatic_actions_performed: athenaReply.automaticActionsPerformed,
       hidden_memory_injected: athenaReply.hiddenMemoryInjected,
