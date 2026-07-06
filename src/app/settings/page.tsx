@@ -9,6 +9,7 @@ import {
   AuthenticatedDashboardShell,
   SettingsPrivacyFoundationPanel,
 } from "@/components/dashboard";
+import { AiProviderStatusPanel } from "@/components/ai/ai-provider-status-panel";
 import { ProfileSummaryCard } from "@/components/profile/profile-summary-card";
 import { getSettingsPrivacyDashboardDataSummary } from "@/lib/dashboard";
 import { listAppSettings, listPrivacySettings } from "@/lib/repositories";
@@ -72,6 +73,8 @@ export default function SettingsPage() {
             </section>
 
             <ProfileSummaryCard />
+
+            <AiProviderStatusPanel />
 
             <section className="grid gap-4 md:grid-cols-2">
               {settingsSections.map((section) => (
