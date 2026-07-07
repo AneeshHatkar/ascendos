@@ -6,17 +6,17 @@ This checklist is evidence for real browser behavior. Automated checks do not co
 
 ## Test environment
 
-- Date:
-- Tester:
-- Commit:
-- Browser:
-- Desktop viewport:
-- Mobile viewport:
-- Supabase mode:
-- Athena provider mode:
-- Current-info provider mode:
-- Spotify connector mode:
-- Notes:
+- Date: July 7, 2026
+- Tester: Aneesh
+- Commit: b709279
+- Browser: Safari
+- Desktop viewport: current desktop width, at least 1280 px
+- Mobile viewport: not tested yet
+- Supabase mode: configured
+- Athena provider mode: not yet verified
+- Current-info provider mode: not yet verified
+- Spotify connector mode: not yet verified
+- Notes: Manual browser smoke testing started after shell de-duplication fix.
 
 ## Evidence rules
 
@@ -35,22 +35,22 @@ For every test:
 
 | ID | Test | Expected result | Status | Evidence / notes |
 |---|---|---|---|---|
-| A1 | Open `/auth/login` | Login form renders with labels and visible focus | PENDING | |
-| A2 | Open `/auth/signup` | Signup form renders with labels and visible focus | PENDING | |
-| A3 | Submit invalid login input | Truthful error; no crash or secret detail | PENDING | |
-| A4 | Signed-out protected route | Redirect or protected empty/auth state | PENDING | |
-| A5 | Signed-in app shell | User-safe auth status shown | PENDING | |
+| A1 | Open `/auth/login` | Login form renders with labels and visible focus | PASS | `/auth/login` rendered the login form with labeled email and password inputs, visible cyan keyboard focus, a Sign in button, and signup navigation. Safari Console showed no red runtime errors; only normal development HMR connection output was present. |
+| A2 | Open `/auth/signup` | Signup form renders with labels and visible focus | PASS | `/auth/signup` rendered the Create account form with labeled email and password inputs, visible cyan keyboard focus, a Create account button, and sign-in navigation. Safari Console showed only a transient development HMR WebSocket suspension followed by successful reconnection; no application runtime error was observed. |
+| A3 | Submit invalid login input | Truthful error; no crash or secret detail | PASS | Invalid credentials were rejected with the user-safe message “Unable to sign in. Check your email and password and try again.” The login page remained stable, and no stack trace, API key, token, environment value, database detail, or internal exception was exposed. |
+| A4 | Signed-out protected route | Redirect or protected empty/auth state | PASS | Direct navigation to `/command` while signed out showed an explicit “Sign in required” protected state. Personal dashboard data was not exposed, and Login and Sign up controls were available. |
+| A5 | Signed-in app shell | User-safe auth status shown | PASS | Signed-in `/command` showed the authenticated user email and Sign out control in the topbar. One sidebar and one topbar rendered, Command content loaded in the main region, and the signed-out protected-state message was no longer present. |
 
 ## B. Global shell and navigation
 
 | ID | Test | Expected result | Status | Evidence / notes |
 |---|---|---|---|---|
-| B1 | Desktop sidebar | All route groups are visible and usable | PENDING | |
-| B2 | Mobile menu | Opens, closes, traps no content behind overlay | PENDING | |
-| B3 | Mobile route navigation | Selecting a route closes drawer | PENDING | |
-| B4 | Skip link | Keyboard focus can jump to main content | PENDING | |
-| B5 | Keyboard focus | Links/buttons show visible focus states | PENDING | |
-| B6 | Topbar states | AI/privacy/connectors/offline states are truthful | PENDING | |
+| B1 | Desktop sidebar | All route groups are visible and usable | PASS | At desktop width, the sidebar displayed Core, Career, Learning / Research, Health / Body, Life, and System. Representative routes from each group loaded successfully, `/settings` was visible under System, and active-route styling updated correctly. |
+| B2 | Mobile menu | Opens, closes, traps no content behind overlay | PASS | At 390×844, the desktop sidebar was hidden and the Menu button opened one mobile navigation drawer with a dark backdrop. The drawer included a visible Close control, no duplicate sidebar appeared, and the main page remained behind the overlay. |
+| B3 | Mobile route navigation | Selecting a route closes drawer | PASS | At 390×844, selecting Goals from the mobile navigation changed the route to `/goals`, loaded the page successfully, and automatically closed the drawer without leaving a stuck overlay or duplicate navigation. |
+| B4 | Skip link | Keyboard focus can jump to main content | PASS | On `/command`, keyboard focus revealed the “Skip to main content” link at the top-left. Activating the link moved focus into the main content region without an error. |
+| B5 | Keyboard focus | Links/buttons show visible focus states | PASS | On `/command`, keyboard navigation showed visible focus indicators on the skip link, sidebar links, Sign out, Athena, Add / Search, manual capture inputs, selectors, and proposal action controls. |
+| B6 | Topbar states | AI/privacy/connectors/offline states are truthful | PASS | On `/command`, the topbar displayed AI provider as status-gated, Privacy as manual-first, Connectors as scoped, Offline as online with zero queued and failed items, the authenticated user email, and a Sign out control. No unavailable feature was presented as configured or active. |
 
 ## C. Core routes
 

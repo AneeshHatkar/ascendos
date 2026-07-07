@@ -217,6 +217,12 @@ export const DASHBOARD_REGISTRY: DashboardRegistryItem[] = [
     description: "Data controls, consent, memory approval, export, delete, and safety boundaries.",
   },
   {
+    title: "Settings",
+    route: "/settings",
+    domain: "privacy",
+    description: "Profile, Athena preferences, privacy controls, provider status, backup, and application settings.",
+  },
+  {
     title: "Custom Trackers",
     route: "/custom-trackers",
     domain: "custom",

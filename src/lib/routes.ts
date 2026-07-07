@@ -31,6 +31,7 @@ export const CANONICAL_ROUTES = [
   "/experiments",
   "/analytics",
   "/privacy",
+  "/settings",
   "/custom-trackers",
 ] as const;
 
@@ -112,7 +113,13 @@ export const ROUTE_GROUPS = [
     id: "system",
     label: "System",
     description: "Analytics, experiments, custom trackers, privacy, export, connectors, and settings.",
-    routes: ["/experiments", "/analytics", "/privacy", "/custom-trackers"],
+    routes: [
+      "/experiments",
+      "/analytics",
+      "/privacy",
+      "/settings",
+      "/custom-trackers",
+    ],
   },
 ] as const satisfies ReadonlyArray<{
   id: string;

@@ -24,7 +24,10 @@ export async function signInWithPassword(formData: FormData): Promise<void> {
   });
 
   if (error) {
-    redirectWithAuthError("/auth/login", error.message);
+    redirectWithAuthError(
+      "/auth/login",
+      "Unable to sign in. Check your email and password and try again.",
+    );
   }
 
   redirect("/command");

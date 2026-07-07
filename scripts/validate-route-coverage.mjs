@@ -34,6 +34,7 @@ const canonicalRoutes = [
   "/experiments",
   "/analytics",
   "/privacy",
+  "/settings",
   "/custom-trackers",
 ];
 
