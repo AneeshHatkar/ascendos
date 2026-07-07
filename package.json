@@ -186,7 +186,8 @@
     "audit:phase20w": "node scripts/audit-phase-20w.mjs",
     "audit:phase20x": "node scripts/audit-phase-20x.mjs",
     "audit:phase20y": "node scripts/audit-phase-20y.mjs",
-    "audit:phase20z": "node scripts/audit-phase-20z.mjs"
+    "audit:phase20z": "node scripts/audit-phase-20z.mjs",
+    "audit:phase21n": "node scripts/audit-phase-21n.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",

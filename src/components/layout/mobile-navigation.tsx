@@ -20,10 +20,12 @@ export function MobileNavigationButton() {
         Menu
       </button>
 
-      <AppSidebar
-        mobileOpen={mobileNavOpen}
-        onClose={() => setMobileNavOpen(false)}
-      />
+      {mobileNavOpen ? (
+        <AppSidebar
+          mobileOpen
+          onClose={() => setMobileNavOpen(false)}
+        />
+      ) : null}
     </>
   );
 }
